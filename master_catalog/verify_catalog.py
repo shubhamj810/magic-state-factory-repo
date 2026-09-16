@@ -599,6 +599,7 @@ def verify_row(row, budget=None, reference=True):
     problems += typed
     if typed:
         return {}, problems
+    problems += certificate_problems(row)
 
     facts, derived_problems = derive(row["columns"], row["k"], row["N"])
     problems += derived_problems
@@ -1014,6 +1015,46 @@ def citation_problems(payload):
                              f"row {index} cites "
                              f"{', '.join(map(repr, unknown))}, which this "
                              f"catalogue's references map does not define"))
+    return problems
+
+
+CERTIFICATE_FIELDS = ("d_certified", "d_certified_is_exact", "d_certified_source")
+
+
+def certificate_problems(row):
+    """A source's distance certificate that is incomplete or says nothing true.
+
+    The certificate is not re-derived -- it exists because the sweep that would
+    re-derive it is out of reach -- so what is checked is its consistency with
+    what WAS proved here: the three fields come together; the certificate is
+    stronger than the proved floor ``d`` (otherwise it is noise); the row's own
+    distance is not already exact (an exact ``d`` leaves nothing to certify);
+    and it does not exceed a proved upper bound ``d_upper``.
+    """
+    present = [name for name in CERTIFICATE_FIELDS if name in row]
+    if not present:
+        return []
+    if len(present) != len(CERTIFICATE_FIELDS):
+        missing = [name for name in CERTIFICATE_FIELDS if name not in row]
+        return [("certificate", f"a distance certificate without "
+                                f"{', '.join(missing)}")]
+    problems = []
+    if row["d_is_exact"]:
+        problems.append(("certificate",
+                         f"d={row['d']} is proved exact here, so a certificate "
+                         f"d_certified={row['d_certified']} is either redundant "
+                         f"or contradicts it"))
+    elif row["d_certified"] <= row["d"]:
+        problems.append(("certificate",
+                         f"d_certified={row['d_certified']} is not stronger "
+                         f"than the proved floor d>={row['d']}"))
+    upper = row.get("d_upper")
+    if isinstance(upper, int) and row["d_certified"] > upper:
+        problems.append(("certificate",
+                         f"d_certified={row['d_certified']} exceeds the proved "
+                         f"upper bound d_upper={upper}"))
+    if not row["d_certified_source"].strip():
+        problems.append(("certificate", "the certificate names no source"))
     return problems
 
 

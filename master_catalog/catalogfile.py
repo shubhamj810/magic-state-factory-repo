@@ -98,8 +98,18 @@ REQUIRED_FIELDS = (
 
 #: Fields a row may carry.  Anything outside the two tuples is a field nobody
 #: documented, which is how a stale value survives a refactor.
+#: ``d_certified``, ``d_certified_is_exact`` and ``d_certified_source`` carry
+#: a distance a SOURCE certifies that this folder could not re-measure, which
+#: happens at the lengths where the sweep below ``d`` is out of reach.  The
+#: certificate is either an exact value or itself only a lower bound, and
+#: ``d_certified_is_exact`` says which, exactly as ``d_is_exact`` does for
+#: ``d``.  They never replace ``d``: ``d`` stays what was proved here, and a
+#: consumer that wants only what this folder proved can ignore all three.
+#: `verify_catalog.certificate_problems` checks that they come together and
+#: that a certificate says more than, and nothing against, what was proved.
 OPTIONAL_FIELDS = ("sk_key_note", "t_count_note", "poly_degree_note",
-                   "columns_note", "dedup_note")
+                   "columns_note", "dedup_note",
+                   "d_certified", "d_certified_is_exact", "d_certified_source")
 
 #: The JSON TYPE every documented field must have, as a small grammar:
 #: ``"int"``, ``"str"``, ``"bool"``, ``"dict"``, ``"int?"`` for "that or null",
@@ -129,6 +139,8 @@ FIELD_TYPES = {
     "discovery": "str", "strongest_claim": "str",
     "sk_key_note": "str", "t_count_note": "str", "poly_degree_note": "str",
     "columns_note": "str", "dedup_note": "str",
+    "d_certified": "int", "d_certified_is_exact": "bool",
+    "d_certified_source": "str",
     "d_is_exact": "bool", "sk_canonical_frame": "bool",
     "relabelled_into_canonical_frame": "bool",
     "columns": [["int"]], "sk_key": [["int"]],
@@ -432,7 +444,9 @@ def render_markdown(payload: dict) -> str:
     A("phase-polynomial degree. Both are exact minimisations over groups that")
     A("stop being finite in practice past `k = 6`, so above that they are blank")
     A("rather than estimated. A `d` marked `≥` is a proved floor, not a")
-    A("measured distance.")
+    A("measured distance. `cert d` is a distance the row's source certifies")
+    A("where this folder could only prove the floor; it is not re-measured")
+    A("here, and a `≥` there means the source certifies only a lower bound.")
     A("")
     references = payload.get("references") or {}
 
@@ -444,14 +458,19 @@ def render_markdown(payload: dict) -> str:
     A("does, and the work this catalogue reports it in. Full entries are under")
     A("[References](#references).")
     A("")
-    A("| # | `[[n,k,d]]` | N | gate | T | deg | discovery | regime(s) | citation |")
-    A("|---:|---|---:|---|---:|---:|---|---|---|")
+    A("| # | `[[n,k,d]]` | cert d | N | gate | T | deg | discovery | "
+      "regime(s) | citation |")
+    A("|---:|---|---:|---:|---|---:|---:|---|---|---|")
     for index, row in enumerate(rows_, 1):
         t = "—" if row["t_count"] is None else row["t_count"]
         degree = "—" if row["poly_degree"] is None else row["poly_degree"]
         d = row["d"] if row["d_is_exact"] else f"≥{row['d']}"
         gate = row["gate"] if len(row["gate"]) <= 40 else row["gate"][:37] + "…"
-        A(f"| {index} | `[[{row['n']},{row['k']},{d}]]` | {row['N']} | "
+        cert = ("—" if row.get("d_certified") is None
+                else row["d_certified"] if row.get("d_certified_is_exact")
+                else f"≥{row['d_certified']}")
+        A(f"| {index} | `[[{row['n']},{row['k']},{d}]]` | {cert} | "
+          f"{row['N']} | "
           f"`{gate}` | {t} | {degree} | {row['discovery']} | "
           f"{', '.join(row['regimes'])} | {cite(row)} |")
     A("")
@@ -488,6 +507,10 @@ def render_markdown(payload: dict) -> str:
               f"upper bound is the fault on columns {row['d_witness']}")
         else:
             A(f"- distance: proved `d >= {row['d']}`")
+        if row.get("d_certified") is not None:
+            relation = "=" if row.get("d_certified_is_exact") else ">="
+            A(f"- certified distance: `d {relation} {row['d_certified']}`, "
+              f"from {row['d_certified_source']}; not re-measured here")
         A(f"- discovery: {row['discovery']}")
         A(f"- regime: {', '.join(row['regimes'])} — {row['strongest_claim']}")
         A(f"- citation: {cite(row)}")

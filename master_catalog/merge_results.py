@@ -556,7 +556,10 @@ CIRCUIT_FIELDS = ("d", "N", "gate", "gate_human", "sk_key",
 #: moment any of them is improved.  Keep this in step with
 #: `catalogfile.OPTIONAL_FIELDS`.
 NOTE_FIELDS = ("sk_key_note", "t_count_note", "poly_degree_note",
-               "columns_note", "dedup_note")
+               "columns_note", "dedup_note",
+               # a certificate belongs to the circuit it certified, so an
+               # improvement that replaces the circuit must drop it
+               "d_certified", "d_certified_is_exact", "d_certified_source")
 
 
 def improve(incumbent, candidate, regimes):

@@ -1012,5 +1012,66 @@ class TestExactDistanceLiteral(unittest.TestCase):
 
 
 
+
+class TestDistanceCertificates(unittest.TestCase):
+    """A source's distance certificate is complete and says more than the floor."""
+
+    def setUp(self):
+        self.row = copy.deepcopy(next(r for r in CF.load()["factories"]
+                                      if not r["d_is_exact"]
+                                      and r["d_upper"] is None))
+        for name in VC.CERTIFICATE_FIELDS:
+            self.row.pop(name, None)
+
+    def certify(self, d, exact=True, source="a release"):
+        self.row.update(d_certified=d, d_certified_is_exact=exact,
+                        d_certified_source=source)
+        return VC.certificate_problems(self.row)
+
+    def test_the_shipped_catalogue_passes(self):
+        rows = CF.load()["factories"]
+        self.assertEqual([p for r in rows for p in VC.certificate_problems(r)], [])
+        self.assertTrue(any("d_certified" in r for r in rows))
+
+    def test_no_certificate_is_fine(self):
+        self.assertEqual(VC.certificate_problems(self.row), [])
+
+    def test_a_stronger_certificate_passes_either_kind(self):
+        self.assertEqual(self.certify(self.row["d"] + 1), [])
+        self.assertEqual(self.certify(self.row["d"] + 2, exact=False), [])
+
+    def test_an_incomplete_certificate(self):
+        self.row["d_certified"] = self.row["d"] + 1
+        self.assertIn("certificate", kinds(VC.certificate_problems(self.row)))
+
+    def test_a_certificate_no_stronger_than_the_floor(self):
+        self.assertIn("certificate", kinds(self.certify(self.row["d"])))
+
+    def test_a_certificate_on_an_exact_row(self):
+        self.row["d_is_exact"] = True
+        self.assertIn("certificate", kinds(self.certify(self.row["d"] + 1)))
+
+    def test_a_certificate_above_a_proved_upper_bound(self):
+        self.row["d_upper"] = self.row["d"] + 1
+        self.assertIn("certificate", kinds(self.certify(self.row["d"] + 2)))
+
+    def test_a_certificate_naming_no_source(self):
+        self.assertIn("certificate", kinds(self.certify(self.row["d"] + 1,
+                                                        source="  ")))
+
+    def test_the_exactness_flag_is_typed(self):
+        self.row.update(d_certified=self.row["d"] + 1,
+                        d_certified_is_exact="yes", d_certified_source="x")
+        self.assertIn("field-type", kinds(CF.type_problems(self.row)))
+
+    def test_a_lower_bound_certificate_renders_as_one(self):
+        payload = CF.load()
+        text = CF.render_markdown(payload)
+        for row in payload["factories"]:
+            if "d_certified" in row and not row["d_certified_is_exact"]:
+                self.assertIn(f"`d >= {row['d_certified']}`, from", text)
+                self.assertNotIn(f"`d = {row['d_certified']}`, from "
+                                 f"{row['d_certified_source']}", text)
+
 if __name__ == "__main__":
     unittest.main()
