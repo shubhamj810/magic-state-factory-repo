@@ -2,10 +2,10 @@
 """Turn ``catalog/sk_classes_r7.json`` into a ``merge_results.py`` input.
 
 One record per S_k class, in the merge tool's documented schema.  The regime
-is the census's existing one -- ``census r<=7``, "classified subject to the
-check-rank bound r <= 7" -- because that is literally what every one of these
-rows is; a new regime would be filed by `merge_results.py` at the END of the
-regime order, i.e. as the weakest claim, which is the opposite of the truth.
+is the one the master catalogue files the census under since 2026-09-16 --
+``exhaustive classification n<=54``, of which the census is a stage -- because
+a new regime would be filed by `merge_results.py` at the END of the regime
+order, i.e. as the weakest claim, which is the opposite of the truth.
 ``discovery`` is ``pre-existing`` for the same reason: a classification
 catalogue has the class.  ``file`` and ``label`` point at the row of the S_k
 catalogue that carries the witness, which is what
@@ -29,7 +29,7 @@ for r in payload["factories"]:
         "columns": r["columns"],
         "gate": r["gate"],
         "t_count": r["t_count"], "poly_degree": r["poly_degree"],
-        "regime": "census r<=7",
+        "regime": "exhaustive classification n<=54",
         "discovery": "pre-existing",
         "file": FILE,
         "label": r["gate"],

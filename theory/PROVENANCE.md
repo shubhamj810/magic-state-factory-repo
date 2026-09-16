@@ -43,6 +43,24 @@ of either enumeration algorithm.
 Only outputs with top-level `complete=true` are classification certificates.
 The CLI and catalogue builder preserve and enforce that distinction.
 
+## Complete `n <= 54` window (external)
+
+The exhaustive classification of generalised triorthogonal protocols through
+length 54 (A. Wills, S. P. Jain and S. Singh, in preparation) subsumes both
+windows above. Its enumeration, proofs and space catalogues are in its own
+repository, `AWillsQuantum/generalised_triorthogonal_classification`, and its
+Figshare dataset; none of that is re-run here.
+
+| claim | producer | certificate/check |
+|---|---|---|
+| 74 Pareto points for 62 CNOT+S output classes, `n <= 54`, exact `d_Z >= 3` | that repository's enumeration | its audit (`AUDIT_GUIDE.md` there); the witnesses alone are checked here |
+| each Pareto point's matrix, exact distance and output | [`classification/length54/pareto_frontier.json`](../classification/length54/pareto_frontier.json), byte-identical to the release (SHA-256 in its [README](../classification/length54/README.md)) | the release's `code/verify_protocols.py` passes on the copy; every circuit is re-derived from its columns by `master_catalog/verify_catalog.py` as a master-catalogue row |
+| no class the master catalogue holds with `n <= 54` beats the frontier | [`master_catalog/tests/test_master_catalog.py`](../master_catalog/tests/test_master_catalog.py) | each such row is strictly dominated by a Pareto point with the same exact distance and spectator-free output |
+
+Absence inside this window rests on that repository's audit, not on anything
+shipped here. The copy of the frontier is an existence and consistency
+statement.
+
 ## Parent-check claims
 
 The filter chain `tau_D <= mu_d <= kappa_d`, targeted solver, compatible

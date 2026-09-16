@@ -6,9 +6,10 @@ verifier for the core checks: the parity read-off, the distance enumeration and
 the width computation below are written out again here, so a mistake in one of
 them has to be made twice to go unnoticed.  It also checks the things only a
 consumer can check -- that the catalogue still contains every qualifying row of
-the three classification catalogues it inherited, that its filter is exactly
-"level 3, distance >= 3", that no class is in it twice, and that the discovery
-tag means what it says.
+the three classification catalogues it inherited and every Pareto point of the
+length-54 classification, that no other class within that window beats the
+frontier, that its filter is exactly "level 3, distance >= 3", that no class is
+in it twice, and that the discovery tag and the citations mean what they say.
 
 SCALE
 -----
@@ -41,16 +42,45 @@ import glcanon as GC                                          # noqa: E402
 import verify_catalog as VC                                   # noqa: E402
 
 MASTER = CATALOGUE / "master_catalog.json"
+#: The three catalogues the master catalogue INHERITED rather than found, all
+#: still in this repository: the exhaustive n <= 38 stage and rank-7 census of
+#: the length-54 classification, and the symmetry-SAT search.
 CATALOGUE_FILES = {
     "exhaustive n<=38": REPO / "classification" / "exhaustive_n38" / "catalog" / "classification_n38.json",
     "census r<=7": REPO / "classification" / "rank7_census" / "catalog" / "census_r7.json",
-    "search record": REPO / "symmetry_sat_search" / "catalog" / "factories.json",
+    "symmetry-SAT search": REPO / "symmetry_sat_search" / "catalog" / "factories.json",
 }
-#: The three regimes whose source files still live in this repository, and
-#: whose rows the catalogue INHERITED rather than found.  Every other regime
-#: string a row carries is inert provenance -- history, not a path -- and
+#: The length-54 classification's Pareto frontier, copied in unchanged.
+FRONTIER = REPO / "classification" / "length54" / "pareto_frontier.json"
+PARETO = "exhaustive classification n<=54 (Pareto point)"
+SAT = "symmetry-SAT search"
+#: Where a source that names a file in this repository points.  Every other
+#: ``file`` a source carries is inert provenance -- history, not a path -- and
 #: nothing here opens one.
-PRE_EXISTING = tuple(CATALOGUE_FILES)
+LOCAL_SOURCE_DIRS = ("classification/", "symmetry_sat_search/")
+#: The classification stages this repository ran itself -- every catalogue under
+#: ``classification/`` but the copied length-54 frontier: a source from one of
+#: them makes a class ``pre-existing``.
+EARLY_STAGES = "classification/"
+FRONTIER_DIR = "classification/length54/"
+#: Regimes that are not an AI search: the classification and the SAT search.
+NOT_AI = (PARETO, "exhaustive classification n<=54", SAT)
+#: The two unpublished reports the classification window is credited to.
+WILLS, JAIN = "wills2026classification", "jain2026symmetry"
+#: The Pareto points the classification's own table (Table tab:complete-pareto)
+#: attributes to published protocols, by their index in the frontier file, with
+#: the works: these, and only these, are credited to that literature alone.
+PUBLISHED_PARETO = {
+    0: ["bravyi2005universal"],             # 15T -> T
+    5: ["nezami2022classification"],        # 35T -> 2T (restriction of 35T -> 3T)
+    6: ["nezami2022classification"],        # 28T -> 2T
+    7: ["nezami2022classification"],        # 35T -> CS (restriction of 35T -> 3T)
+    9: ["nezami2022classification"],        # 35T -> 3T
+    16: ["jacinto2026exploring"],           # 47T -> CCZ
+    17: ["jacinto2026exploring"],           # 48T -> CCZ, d = 4
+    40: ["gong2026magic"],                  # 48T -> U_5, from Construction 4.21
+    64: ["gong2026magic"],                  # 48T -> U_6, from Construction 4.21
+}
 
 # the literal routines below are exponential in n and in k; these are the widest
 # rows they can be pointed at without becoming the bottleneck of the suite
@@ -70,6 +100,84 @@ def read_gate(columns, k):
             for degree in (1, 2, 3)
             for mono in itertools.combinations(range(k), degree)
             if parity(columns, mono)}
+
+
+def spectator_free(k, gate):
+    """``(q, gate')``: the gate with its spectator outputs removed.
+
+    A spectator direction ``u`` has ``tau(u, -, -) = 0``: the gate is Clifford
+    along it, so the output is the gate restricted to a complement of those
+    directions, up to CNOT+S -- the "intrinsic output" the length-54
+    classification keys on.  Computed here from the phase function itself: the
+    spectator directions from the gate's third finite difference, the Z_8
+    phase on a complement, and its monomials read back off by Mobius inversion,
+    so nothing below reuses `glcanon`'s tensor code.
+    """
+    def phase(x):
+        return sum(1 << (len(m) - 1) for m in gate
+                   if all(x >> q & 1 for q in m)) % 8
+
+    def mobius(values, support):
+        return sum((-1) ** (len(support) - bin(sub).count("1"))
+                   * values[sum(1 << support[j] for j in range(len(support))
+                                if sub >> j & 1)]
+                   for sub in range(1 << len(support))) % 8
+
+    def tau(u, v, w):
+        # third finite difference of the phase, divided by 4
+        total = 0
+        for a, b, c in itertools.product((0, 1), repeat=3):
+            total += (-1) ** (a + b + c) * phase((u if a else 0) ^ (v if b else 0)
+                                                 ^ (w if c else 0))
+        return ((-total) % 8) // 4
+
+    spectators = [u for u in range(1, 1 << k)
+                  if all(tau(u, 1 << b, 1 << c) == 0
+                         for b in range(k) for c in range(k))]
+    span, complement = [], []
+
+    def independent(vectors, v):
+        basis = []
+        for w in vectors + [v]:
+            for b in basis:
+                w = min(w, w ^ b)
+            if not w:
+                return False
+            basis.append(w)
+        return True
+    for u in spectators:
+        if independent(span, u):
+            span.append(u)
+    for a in range(k):
+        if independent(span, 1 << a):
+            span.append(1 << a)
+            complement.append(1 << a)
+    q = len(complement)
+    values = {}
+    for y in range(1 << q):
+        x = 0
+        for i in range(q):
+            if y >> i & 1:
+                x ^= complement[i]
+        values[y] = phase(x)
+    reduced = set()
+    for size in (1, 2, 3):
+        for support in itertools.combinations(range(q), size):
+            if mobius(values, support) >> (size - 1) & 1:
+                reduced.add(frozenset(support))
+    return q, reduced
+
+
+def frontier_protocols():
+    """``(protocol, columns, gate)`` for every Pareto point, read off its matrix."""
+    data = json.loads(FRONTIER.read_text())
+    out = []
+    for protocol in data["protocols"]:
+        rows = protocol["generator_matrix_rows"]
+        columns = [[i for i in range(len(rows)) if rows[i][j] == "1"]
+                   for j in range(len(rows[0]))]
+        out.append((protocol, columns, read_gate(columns, protocol["q"])))
+    return out
 
 
 def gate_to_string(wants, k):
@@ -447,32 +555,61 @@ class TestMasterCatalogue(unittest.TestCase):
                                     "catalogue")
 
     # ------------------------------------------------------------- discovery
-    def test_the_discovery_tag_is_exactly_what_the_regimes_say(self):
-        """`pre-existing` iff a classification catalogue has the class.
+    def test_the_discovery_tag_is_exactly_what_the_sources_say(self):
+        """`AI search` iff an AI search found the class and nothing earlier had.
 
-        The two values partition the rows on one question -- was this class
-        INHERITED from one of the three classification catalogues, or found by
-        a search campaign? -- so the tag is redundant with the row's `regimes`
-        and must agree with them in both directions.  Stated on the regimes
-        rather than on the corpus a row came from, because the corpora are gone
-        and new ones arrive whenever `merge_results.py` runs; the three
-        classification regimes are the fixed half of the question.
+        The two values partition the rows on one question -- was this class an
+        AI discovery? -- and the sources answer it in both directions.  It is
+        stated on the sources rather than on `regimes` because the length-54
+        classification relabels a Pareto point's earlier classification sources
+        as that Pareto point, which is right for the claim and wrong for the
+        history: a class the n <= 38 stage had in 2025 was not an AI discovery,
+        and a class an AI search found before the classification confirmed it
+        still was.
         """
         for row in self.rows:
-            regimes = set(row["regimes"])
-            inherited = bool(regimes & set(PRE_EXISTING))
+            early = any(s["regime"] == SAT
+                        or (s["file"].startswith(EARLY_STAGES)
+                            and not s["file"].startswith(FRONTIER_DIR))
+                        for s in row["sources"])
+            found = any(s["regime"] not in NOT_AI for s in row["sources"])
             with self.subTest(params=(row["n"], row["k"], row["gate"])):
                 self.assertEqual(row["discovery"],
-                                 "pre-existing" if inherited else "AI search",
-                                 f"regimes {sorted(regimes)} and discovery "
-                                 f"{row['discovery']!r} disagree")
+                                 "AI search" if found and not early
+                                 else "pre-existing",
+                                 f"sources {[s['regime'] for s in row['sources']]}"
+                                 f" and discovery {row['discovery']!r} disagree")
+
+    def test_a_pareto_point_is_never_also_filed_as_dominated(self):
+        """The two classification regimes contradict each other on one row."""
+        for row in self.rows:
+            with self.subTest(params=(row["n"], row["k"], row["gate"])):
+                self.assertFalse({PARETO, "exhaustive classification n<=54"}
+                                 <= set(row["regimes"]))
+
+    def test_regimes_are_exactly_the_sources_regimes(self):
+        """A row claims a regime exactly when one of its sources is from it."""
+        for row in self.rows:
+            with self.subTest(params=(row["n"], row["k"], row["gate"])):
+                self.assertEqual(set(row["regimes"]),
+                                 {s["regime"] for s in row["sources"]})
 
     def test_source_attribution_is_real(self):
         """Every `sources` entry must name a row that exists where it says."""
+        frontier = {f"protocol {p['index']}": p
+                    for p in json.loads(FRONTIER.read_text())["protocols"]}
         for row in self.rows:
             for source in row["sources"]:
-                if source["regime"] not in CATALOGUE_FILES:
+                if not source["file"].startswith(LOCAL_SOURCE_DIRS):
                     self.assertIsNotNone(source["provenance"])
+                    continue
+                if REPO / source["file"] == FRONTIER:
+                    with self.subTest(label=source["label"]):
+                        protocol = frontier[source["label"]]
+                        self.assertEqual(
+                            (protocol["n"], protocol["q"], protocol["S"],
+                             protocol["d_Z"]),
+                            (row["n"], row["k"], source["N"], source["d"]))
                     continue
                 with self.subTest(label=source["label"]):
                     path = REPO / source["file"]
@@ -499,15 +636,101 @@ class TestMasterCatalogue(unittest.TestCase):
                                  len(row["citations"]))
                 self.assertLessEqual(set(row["citations"]), set(references))
 
-    def test_the_classification_window_is_credited_to_both_reports(self):
-        """Every class within the length-54 window cites that classification
-        and the report this catalogue is published in."""
+    def test_a_pareto_point_is_credited_by_who_found_it(self):
+        """The 74 Pareto points, by the owner's rule.
+
+        Published before: that work alone.  Otherwise found by this project's
+        own searches too: the classification and the symmetry-and-AI report.
+        Otherwise: the classification alone.
+        """
+        seen = set()
         for row in self.rows:
-            if row["n"] <= 54:
+            if PARETO not in row["regimes"]:
+                continue
+            index, = [int(s["label"].split()[-1]) for s in row["sources"]
+                      if REPO / s["file"] == FRONTIER]
+            seen.add(index)
+            ours = any(s["regime"] != PARETO for s in row["sources"])
+            with self.subTest(index=index, params=(row["n"], row["k"])):
+                if index in PUBLISHED_PARETO:
+                    self.assertEqual(row["citations"], PUBLISHED_PARETO[index])
+                elif ours:
+                    self.assertEqual(row["citations"], [WILLS, JAIN])
+                else:
+                    self.assertEqual(row["citations"], [WILLS])
+        self.assertEqual(seen, set(range(74)))
+
+    def test_published_works_are_linked_and_unpublished_ones_are_not(self):
+        references = self.blob["references"]
+        for key, entry in references.items():
+            with self.subTest(key=key):
+                if key in (WILLS, JAIN):
+                    self.assertNotIn("url", entry)
+                else:
+                    self.assertTrue(entry["url"].startswith("https://"))
+
+    def test_the_rest_of_the_classification_window_cites_both_reports(self):
+        """Every other class within the length-54 window cites that
+        classification and the report this catalogue is published in."""
+        for row in self.rows:
+            if row["n"] <= 54 and PARETO not in row["regimes"]:
                 with self.subTest(params=(row["n"], row["k"], row["gate"])):
-                    self.assertLessEqual(
-                        {"wills2026classification", "jain2026symmetry"},
-                        set(row["citations"]))
+                    self.assertLessEqual({WILLS, JAIN}, set(row["citations"]))
+
+    # ------------------------------------------------- length-54 classification
+    def test_every_pareto_point_is_held_as_that_pareto_point(self):
+        """All 74, each on its own row with its own (n, k, d, N) and class.
+
+        Matched through this file's own parity read-off and `glcanon` -- the
+        gate the matrix deposits, compared up to a CNOT frame -- and the rows
+        tagged as Pareto points are exactly these 74.
+        """
+        tagged = [row for row in self.rows if PARETO in row["regimes"]]
+        protocols = frontier_protocols()
+        self.assertEqual(len(protocols), 74)
+        self.assertEqual(len(tagged), 74)
+        claimed = set()
+        for protocol, _columns, gate in protocols:
+            with self.subTest(index=protocol["index"]):
+                shape = (protocol["n"], protocol["q"], protocol["d_Z"],
+                         protocol["S"])
+                holders = [
+                    i for i, row in enumerate(tagged)
+                    if (row["n"], row["k"], row["d"], row["N"]) == shape
+                    and row["d_is_exact"]
+                    and GC.gl_isomorphic(row["k"], read_gate(
+                        [sorted(set(c)) for c in row["columns"]], row["k"]),
+                        gate)]
+                self.assertEqual(len(holders), 1)
+                self.assertNotIn(holders[0], claimed)
+                claimed.add(holders[0])
+
+    def test_no_other_class_in_the_window_beats_the_frontier(self):
+        """Every other row with n <= 54 is strictly dominated by a Pareto point.
+
+        Dominated means: a Pareto point with the same exact distance and the
+        same output once spectators are removed, and no more inputs and no
+        more wires, one of them fewer.  A row this fails on would be a
+        counterexample to the classification -- or a catalogue row that is
+        not the circuit it says -- and either is worth stopping for.  This is
+        also the claim the `exhaustive classification n<=54` regime makes.
+        """
+        protocols = frontier_protocols()
+        for row in self.rows:
+            if row["n"] > 54 or PARETO in row["regimes"]:
+                continue
+            with self.subTest(params=(row["n"], row["k"], row["d"], row["N"])):
+                self.assertTrue(row["d_is_exact"])
+                gate = read_gate([sorted(set(c)) for c in row["columns"]],
+                                 row["k"])
+                q, reduced = spectator_free(row["k"], gate)
+                dominating = [
+                    p for p, _c, g in protocols
+                    if p["q"] == q and p["d_Z"] == row["d"]
+                    and p["n"] <= row["n"] and p["S"] <= row["N"]
+                    and (p["n"], p["S"]) != (row["n"], row["N"])
+                    and GC.gl_isomorphic(q, g, reduced)]
+                self.assertTrue(dominating)
 
     def test_the_filter_admits_exactly_level_3_distance_3(self):
         """The one property a reader of this table relies on, on its own."""

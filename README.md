@@ -19,6 +19,7 @@ The central distinction is:
 |---|---|---|
 | [`classification/exhaustive_n38/`](classification/exhaustive_n38/) | every distance-3 factory with `n <= 38`, all check ranks | `classify.py`, `hard_parent_n31.py`, `build_catalog.py`, `plot_landscape.py` |
 | [`classification/rank7_census/`](classification/rank7_census/) | complete `r <= 7`, `n <= 44` census | `cli.py`, `rank7.py`, `build_catalog.py` |
+| [`classification/length54/`](classification/length54/) | copy of the Pareto frontier of the exhaustive length-54 classification (Wills, Jain and Singh), which subsumes the windows above | `pareto_frontier.json` |
 | [`parent_first/`](parent_first/) | analyse one check parent, target a gate, or enumerate all gates it carries | `cli.py` |
 | [`symmetry_sat_search/`](symmetry_sat_search/) | symmetry-slot and ansatz-free SAT search; verified examples catalogue | `slot_search.py`, `sat_search.py`, `exact_d4.py`, `build_catalog.py` |
 | [`master_catalog/`](master_catalog/) | the permanent collection: one table of every level-3, distance >= 3 factory held here, re-derived from columns | `verify_catalog.py`, `merge_results.py` |
@@ -35,9 +36,11 @@ Generated catalogues are deliberately separate:
 Those three keep their regimes apart on purpose. When what you want is the
 combined list rather than the distinction,
 [`master_catalog/MASTER_CATALOG.md`](master_catalog/MASTER_CATALOG.md) is the
-permanent collection: 302 `S_k` classes, the three catalogues above plus every
-search campaign merged in since, each tagged with the regime it came from and
-each re-derived from its own columns. It is checked in rather than rebuilt --
+permanent collection: 804 distinct `(n, k, d, GL(k,2) gate)` classes -- the
+three catalogues above, the 74 Pareto points of the length-54 classification
+([`classification/length54/`](classification/length54/)) and every search
+campaign merged in since -- each tagged with how it was found, credited to the
+papers that state it, and re-derived from its own columns. It is checked in rather than rebuilt --
 `master_catalog/verify_catalog.py` re-proves every row from the file itself,
 and `merge_results.py` is the only way a row gets in.
 

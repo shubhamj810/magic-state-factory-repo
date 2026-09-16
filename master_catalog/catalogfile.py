@@ -277,8 +277,11 @@ HEADER_KEYS = ("scope", "dedup_key", "regimes", "discovery", "caveat",
                "verification", "references")
 
 #: The shape of one ``references`` entry: a short in-table label and the full
-#: bibliographic line printed under "References".
+#: bibliographic line printed under "References" -- both required -- and, for a
+#: published work, the ``url`` of its DOI or arXiv page, which the table links
+#: the label to.  Unpublished works carry no ``url``.
 REFERENCE_FIELDS = ("short", "full")
+REFERENCE_OPTIONAL = ("url",)
 
 
 # --------------------------------------------------------------------- reading
@@ -386,9 +389,9 @@ def render_markdown(payload: dict) -> str:
     A("## What this table is, and is not")
     A("")
     A("It is the union of what the repository knows, on one page. It is **not** a")
-    A("uniform claim: rows come from corpora in different regimes and keep")
-    A("them, because a classified class and a search record are different kinds")
-    A("of statement.")
+    A("uniform claim: a row's regime says how its class was found and keeps")
+    A("that claim, because a Pareto point of a classification and a search")
+    A("witness are different kinds of statement.")
     A("")
     A("| regime | what a row from it means |")
     A("|---|---|")
@@ -409,13 +412,16 @@ def render_markdown(payload: dict) -> str:
     A("the retained circuit is the one with the fewest ambient qubits. `regimes`")
     A("therefore tells you the strongest claim available for that class.")
     A("")
-    A("`discovery` says whether a class was **inherited or found**: "
+    A("`discovery` says whether a class was **an AI discovery**: "
       f"**{by_discovery['AI search']}** rows are")
-    A("`AI search` — no classification catalogue has them — and "
+    A("`AI search` — found by an AI search campaign or a search release and by")
+    A("no classification stage run here or symmetry-SAT search — and "
       f"**{by_discovery['pre-existing']}** are")
-    A("`pre-existing`. A class a search campaign found that was already")
-    A("catalogued keeps `pre-existing`; it is a reproduction, and its `sources`")
-    A("shows both.")
+    A("`pre-existing`. Whether a class was new to the literature is what")
+    A("`citation` says, not `discovery`.")
+    A("A class a search campaign found that an earlier classification stage or")
+    A("the symmetry-SAT search already had keeps `pre-existing`; it is a")
+    A("reproduction, and its `sources` shows both.")
     A("")
     A("Level-2, level-4 and distance-2 circuits are outside this table by")
     A("definition: a different rotation angle, or a distance this window makes no")
@@ -451,12 +457,21 @@ def render_markdown(payload: dict) -> str:
     references = payload.get("references") or {}
 
     def cite(row):
-        return "; ".join(references[key]["short"] if key in references else key
-                         for key in row.get("citations", []))
+        labels = []
+        for key in row.get("citations", []):
+            entry = references.get(key)
+            if entry is None:
+                labels.append(key)
+            elif entry.get("url"):
+                labels.append(f"[{entry['short']}]({entry['url']})")
+            else:
+                labels.append(entry["short"])
+        return "; ".join(labels)
 
-    A("`citation` credits the class: a published work that states it where one")
-    A("does, and the work this catalogue reports it in. Full entries are under")
-    A("[References](#references).")
+    A("`citation` names the papers that credit the class. A class published")
+    A("before is credited to that work alone, linked; otherwise to the")
+    A("length-54 classification and/or the symmetry-and-AI report. Full entries")
+    A("are under [References](#references).")
     A("")
     A("| # | `[[n,k,d]]` | cert d | N | gate | T | deg | discovery | "
       "regime(s) | citation |")
@@ -472,7 +487,7 @@ def render_markdown(payload: dict) -> str:
         A(f"| {index} | `[[{row['n']},{row['k']},{d}]]` | {cert} | "
           f"{row['N']} | "
           f"`{gate}` | {t} | {degree} | {row['discovery']} | "
-          f"{', '.join(row['regimes'])} | {cite(row)} |")
+          f"{'; '.join(row['regimes'])} | {cite(row)} |")
     A("")
     A("## Circuits")
     A("")
@@ -512,7 +527,7 @@ def render_markdown(payload: dict) -> str:
             A(f"- certified distance: `d {relation} {row['d_certified']}`, "
               f"from {row['d_certified_source']}; not re-measured here")
         A(f"- discovery: {row['discovery']}")
-        A(f"- regime: {', '.join(row['regimes'])} — {row['strongest_claim']}")
+        A(f"- regime: {'; '.join(row['regimes'])} — {row['strongest_claim']}")
         A(f"- citation: {cite(row)}")
         for source in row["sources"]:
             A(f"- source: `{source['regime']}` · {source['label']} "
@@ -547,7 +562,8 @@ def render_markdown(payload: dict) -> str:
     A("")
     for key, entry in references.items():
         count = sum(1 for r in rows_ if key in r.get("citations", []))
+        link = f" <{entry['url']}>" if entry.get("url") else ""
         A(f"- <a id=\"ref-{key}\"></a>**{entry['short']}** (`{key}`, "
-          f"{count} rows) — {entry['full']}")
+          f"{count} rows) — {entry['full']}{link}")
     A("")
     return "\n".join(lines)

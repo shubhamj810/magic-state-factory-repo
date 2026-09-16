@@ -964,6 +964,31 @@ class TestCitations(unittest.TestCase):
         self.assertTrue(any("references" in detail
                             for _k, detail in VC.header_problems(self.payload)))
 
+    def test_a_reference_may_carry_an_https_link_and_nothing_else(self):
+        key = next(iter(self.payload["references"]))
+        entry = self.payload["references"][key]
+        entry["url"] = "https://doi.org/10.0/example"
+        self.assertEqual(VC.header_problems(self.payload), [])
+        for bad in ("doi.org/10.0/example", "https://", "https://doi.org/",
+                    "https://doi.org/10.1002/(SICI)1097", 42):
+            entry["url"] = bad
+            with self.subTest(url=bad):
+                self.assertTrue(any("references" in detail for _k, detail
+                                    in VC.header_problems(self.payload)))
+        entry["url"] = "https://doi.org/10.0/example"
+        entry["year"] = "2026"
+        self.assertTrue(any("references" in detail
+                            for _k, detail in VC.header_problems(self.payload)))
+
+    def test_a_linked_reference_renders_as_a_link(self):
+        payload = CF.load()
+        text = CF.render_markdown(payload)
+        for key, entry in payload["references"].items():
+            if entry.get("url"):
+                self.assertIn(f"[{entry['short']}]({entry['url']})", text)
+            else:
+                self.assertNotIn(f"[{entry['short']}](", text)
+
     def test_citations_are_typed_like_every_other_field(self):
         row = copy.deepcopy(CF.load()["factories"][0])
         row["citations"] = "jain2026symmetry"

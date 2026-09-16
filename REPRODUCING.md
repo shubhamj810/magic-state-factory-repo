@@ -248,15 +248,18 @@ which reads nothing but the file itself:
 .venv/bin/python master_catalog/verify_catalog.py
 ```
 
-Expected summary (about six minutes on a laptop; `--rows 1-20` for a quick
-slice):
+Expected summary (about fifteen minutes on one laptop core; `--rows 1-20` for a
+quick slice):
 
 ```text
-PASS: 302 rows re-derived from their columns in <time>s -- gate, check
+PASS: 804 rows re-derived from their columns in <time>s -- gate, check
 parities, distance (absence proved below d, presence witnessed at it), output
-width modulo the check span, spectator and pseudo-output freedom, T-count and
-reduced degree where computable, and no two rows are the same class and every
-row's regimes and strongest_claim resolve against the file's own header
+width modulo the check span, spectator and pseudo-output freedom, no check wire
+whose syndrome bit the others already decide, T-count and reduced degree where
+computable, and a circuit its own sources published or a note saying why not,
+and no two rows are the same GL(k,2) class, every row's regimes,
+strongest_claim and citations resolve against the file's own header, and the
+header itself is present, typed and counts the rows it has
 ```
 
 Every number is re-derived from the explicit columns rather than copied, and

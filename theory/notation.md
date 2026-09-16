@@ -121,7 +121,7 @@ which one it reports.
 | **`S_k` class** — *the classification catalogues' key* | one `(n, k, gate up to output permutation)` triple. This is the row count of the classification catalogues | those 28 witnesses are **21** `S_k` classes |
 | **`F_2` `GL(k,2)` annotation class** | one orbit of the gate's `F_2` truth table under `f -> f o M`, stored per row as an annotation, coarser than `S_k` | the same 21 collapse to **13** |
 | **CNOT+S class** — *the master catalogue's key* | one `(n, k, d, gate up to a CNOT frame and diagonal Cliffords)` tuple, decided by `master_catalog/glcanon.py`; circuits at different distances are different classes | the master catalogue's 1,750 `S_k` rows are **632** CNOT+S classes |
-| **stored representative** | a raw census/search output before any deduplication, kept for provenance | the master catalogue's 302 rows cite **667** of them in their `sources` |
+| **stored representative** | a raw census/search output before any deduplication, kept for provenance | the rank-7 census's 28 witnesses above; the master catalogue keeps every one it absorbed in its rows' `sources` |
 
 A row count is therefore an upper bound on the number of inequivalent *gates*
 and not a count of *circuits*. Maxima — largest `k`, largest `T`-count, which

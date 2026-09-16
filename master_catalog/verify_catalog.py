@@ -110,6 +110,7 @@ from __future__ import annotations
 import argparse
 import itertools
 import json
+import re
 import sys
 import tempfile
 import time
@@ -1073,6 +1074,12 @@ def row_monomials(row):
     return FC.recover_gate(FC.rows_over_columns(columns, row["N"]), row["k"])
 
 
+#: A reference link: https, a host, a path, and nothing the Markdown link
+#: syntax the table renders it in would break on -- no whitespace, brackets
+#: or parentheses.
+REFERENCE_URL = re.compile(r"https://[A-Za-z0-9.-]+\.[A-Za-z]{2,}/[^\s()<>\[\]]+")
+
+
 def header_problems(payload):
     """The header the file promises to carry, present, typed, and consistent.
 
@@ -1095,16 +1102,21 @@ def header_problems(payload):
                 problems.append(("header", "header 'references' is not an "
                                            "object"))
             elif not all(isinstance(name, str) and isinstance(entry, dict)
-                         and set(entry) == set(CF.REFERENCE_FIELDS)
+                         and set(CF.REFERENCE_FIELDS) <= set(entry)
+                         <= set(CF.REFERENCE_FIELDS + CF.REFERENCE_OPTIONAL)
                          and all(isinstance(entry[f], str) and entry[f]
                                  for f in CF.REFERENCE_FIELDS)
+                         and ("url" not in entry
+                              or (isinstance(entry["url"], str)
+                                  and REFERENCE_URL.fullmatch(entry["url"])))
                          for name, entry in entries.items()):
                 # the map IS the meaning of every row's citation keys, so an
                 # entry without a label and a full line is a citation no reader
                 # can follow
                 problems.append(("header", "header 'references' maps something "
                                            "other than names to "
-                                           "{short, full} strings"))
+                                           "{short, full} strings with an "
+                                           "optional https url"))
         elif key in ("regimes", "discovery"):
             if not isinstance(payload[key], dict):
                 problems.append(("header", f"header {key!r} is not an object"))

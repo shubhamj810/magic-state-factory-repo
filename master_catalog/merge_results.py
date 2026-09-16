@@ -59,10 +59,13 @@ Fields of a result object:
                  be a value the catalogue header's glossary defines.
   ``citations``  optional.  Keys of the header's ``references`` map crediting
                  the class -- a published work that states it, and the report
-                 this catalogue lists it in.  Omitted, an accepted row is
+                 this catalogue lists it in.  Omitted, an ACCEPTED row is
                  credited to the default works for its length
-                 (`default_citations`); an improvement adds its citations to
-                 the class's.
+                 (`default_citations`).  An improvement or a duplicate adds
+                 only the citations the record names: a class already held
+                 keeps the credit it was given, so a class credited to a
+                 published work alone is not re-credited to the defaults
+                 because a search found it again.
   ``label``, ``provenance``, ``origin``, ``file``, ``notes``
                  optional provenance strings for the row's ``sources`` entry.
                  They are INERT: nothing in this folder ever opens a path they
@@ -104,7 +107,8 @@ WHAT HAPPENS TO EACH RESULT
                    where the circuits it STORES came from, and re-merging the
                    same file must be a no-op the second time; accreting
                    provenance for a circuit that was thrown away would break
-                   both.
+                   both.  The one exception is credit: a citation the record
+                   explicitly names is added to the class.
     ``rejected``   did not verify.  The reason is printed.
 
 5.  Both catalogue files are regenerated from the merged payload by
@@ -591,7 +595,8 @@ def improve(incumbent, candidate, regimes):
         incumbent["discovery"] = "pre-existing"
     incumbent["sources"] = incumbent["sources"] + candidate["sources"]
     # Like ``sources``, credit accumulates: a class improved by a circuit from
-    # another work is still the class the first work stated.
+    # another work is still the class the first work stated.  `merge` passes
+    # only the citations a record NAMES, never the length defaults.
     incumbent["citations"] = incumbent["citations"] + [
         key for key in candidate["citations"]
         if key not in incumbent["citations"]]
@@ -615,6 +620,8 @@ def merge(payload, records, source_file: str):
         if candidate is None:
             verdicts.append((index, "rejected", None, problems))
             continue
+        brought = list(record.get("citations") or []) \
+            if isinstance(record, dict) else []
         try:
             held = find_class(rows, candidate)
         except Undecided as undecided:
@@ -645,9 +652,11 @@ def merge(payload, records, source_file: str):
             # time, and provenance accreted for a circuit that was thrown away
             # would break that.  CREDIT is different: a work that states this
             # class states it whichever circuit the catalogue keeps, so a
-            # citation the record brings is added and registered, and a record
-            # that brings none (the re-merge case) changes nothing at all.
-            for key in candidate["citations"]:
+            # citation the record NAMES is added and registered.  The defaults
+            # are not: a record that names none (the re-merge case) changes
+            # nothing at all, and a class credited to a published work alone
+            # stays credited to it alone.
+            for key in brought:
                 if key not in rows[held]["citations"]:
                     rows[held]["citations"].append(key)
                     references = payload.setdefault("references", {})
@@ -669,7 +678,8 @@ def merge(payload, records, source_file: str):
             verdicts.append((index, "accepted", candidate, None))
         else:
             was = f"N={rows[held]['N']}, d={rows[held]['d']}"
-            improve(rows[held], candidate, payload["regimes"])
+            improve(rows[held], {**candidate, "citations": brought},
+                    payload["regimes"])
             verdicts.append((index, "improved", rows[held],
                              f"was {was}, now N={candidate['N']}, "
                              f"d={candidate['d']}"))

@@ -2,7 +2,7 @@
 """Credit a classification catalogue on the master rows it certifies.
 
     python attribute_classification.py classification/rank7_census/catalog/sk_classes_r7.json \\
-        --regime "census r<=7" [--dry-run]
+        --regime "exhaustive classification n<=54" [--dry-run]
 
 WHY THIS EXISTS
 ---------------
@@ -11,13 +11,13 @@ that is a class the catalogue already holds, with a circuit no better, is a
 ``duplicate`` and changes nothing -- not the row, not its ``sources``.  That is
 the right rule for search corpora, where re-merging a file must be a no-op.
 
-A CLASSIFICATION is a different kind of statement.  When the complete
-``r <= 7, n <= 44`` S_k table says a class exists, that is the strongest claim
-the catalogue has about the class -- "classified subject to the check-rank
-bound r <= 7" -- whether or not the classification's witness circuit is the
-one the catalogue chooses to keep.  The header promises that ``regimes`` "tells
-you the strongest claim available for that class" and that ``discovery`` is
-``pre-existing`` exactly when a classification catalogue has the class
+A CLASSIFICATION is a different kind of statement.  When a complete S_k table
+in ``classification/`` -- a stage of the exhaustive length-54 classification --
+says a class exists, that is a stronger claim than any search makes about the
+class, whether or not the classification's witness circuit is the one the
+catalogue chooses to keep.  The header promises that ``regimes`` "tells you the
+strongest claim available for that class", and ``discovery`` is
+``pre-existing`` whenever such a stage has the class
 (`tests/test_master_catalog.py` enforces both).  A class first merged from a
 search campaign and later covered by a classification would break both
 promises if only the circuit rule ran.
@@ -36,8 +36,9 @@ So this tool does the provenance half only, and touches nothing else:
   * no circuit field is read or written.  ``columns``, ``N``, ``d``, the gate
     and the metrics are exactly what they were.
 
-Idempotent: a row already naming the regime is skipped, so running this twice
-is a no-op the second time.  Both catalogue files are rewritten through
+Idempotent: a row already naming the regime -- or its stronger form, a Pareto
+point of the length-54 classification for ``exhaustive classification n<=54``
+-- is skipped, so running this twice is a no-op the second time.  Both catalogue files are rewritten through
 `catalogfile.write`, deterministically, and the run exits non-zero if
 `verify_catalog.provenance_problems` reports anything afterwards.
 """
@@ -56,6 +57,14 @@ import catalogfile as CF                                  # noqa: E402
 import gatelabels as GL                                   # noqa: E402
 import glcanon as GC                                      # noqa: E402
 import verify_catalog as VC                               # noqa: E402
+
+#: A regime a row can already carry in a STRONGER form: a Pareto point of the
+#: length-54 classification is already credited to that classification, and
+#: filing it as a dominated class too would contradict its own claim.
+COVERED_BY = {
+    "exhaustive classification n<=54":
+        "exhaustive classification n<=54 (Pareto point)",
+}
 
 
 def classification_gate(rec, gate_field):
@@ -97,7 +106,8 @@ def main(argv=None):
     ap.add_argument("catalogue", type=Path,
                     help="a classification catalogue JSON with a `factories` list")
     ap.add_argument("--regime", required=True,
-                    help="the header regime this catalogue certifies, e.g. 'census r<=7'")
+                    help="the header regime this catalogue certifies, e.g. "
+                         "'exhaustive classification n<=54'")
     ap.add_argument("--gate-field", default="gate")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args(argv)
@@ -125,7 +135,7 @@ def main(argv=None):
         if id(row) in seen:
             continue
         seen.add(id(row))
-        if a.regime in row["regimes"]:
+        if a.regime in row["regimes"] or COVERED_BY.get(a.regime) in row["regimes"]:
             already += 1
             continue
         touched.append((row, rec))

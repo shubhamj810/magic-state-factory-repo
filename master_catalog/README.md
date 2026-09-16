@@ -14,7 +14,7 @@ that circuit alone.
 | [`catalogfile.py`](catalogfile.py) | reading, writing and rendering the two files; no verification logic |
 | [`attribute_classification.py`](attribute_classification.py) | credit a classification catalogue on the rows it certifies -- provenance only, no circuit field is touched; needed because a class first merged from a search and later covered by a classification is a `duplicate` to `merge_results.py`, which changes nothing |
 | [`faultcore.py`](faultcore.py), [`glcanon.py`](glcanon.py), [`skcanon.py`](skcanon.py), [`gatelabels.py`](gatelabels.py) | the primitives: fault search, the `GL(k,2)` class decision, the `S_k` frame, reading a claimed gate string |
-| [`migrations/`](migrations/) | the one-off scripts that re-keyed the catalogue on `GL(k,2)` classes and added its citations (2026-09-15), kept so the change can be re-run and read |
+| [`migrations/`](migrations/) | the one-off scripts that re-keyed the catalogue on `GL(k,2)` classes and added its citations (2026-09-15), recorded the gamma release's distance certificates and merged the length-54 classification (2026-09-16), kept so each change can be re-run and read |
 | [`reduced_degree_cache.json`](reduced_degree_cache.json) | memoised reduced-degree bounds, so re-verifying a `k = 5, 6` row is a lookup rather than a ~100 s re-search |
 | [`tests/`](tests/) | an independent re-derivation of the shipped file, plus the verifier's and merger's own suites |
 
@@ -42,8 +42,9 @@ merge_results                        imports verify_catalog, so "verified to
 
 ## What is in it
 
-Currently **632 distinct `(n, k, d, GL(k,2) gate)` classes**. Widths run
-`k = 1..162`, injection counts `n = 15..1023`, and distances `d = 3..7`.
+Currently **804 distinct `(n, k, d, GL(k,2) gate)` classes**, 217 of them with
+`n ≤ 54`. Widths run `k = 1..373`, injection counts `n = 15..1715`, and
+distances `d = 3..7`.
 
 A class is a distance together with a gate up to an invertible change of the
 output basis (a CNOT frame) and diagonal Clifford corrections — the CNOT+S
@@ -66,16 +67,32 @@ frame that was folded in — stays listed in `sources`. Exact `T`-count and
 reduced degree are CNOT-frame invariants, so they are properties of the class.
 
 Every row also credits the works that state it, in `citations`, resolved against
-the header's `references` map:
+the header's `references` map. `MASTER_CATALOG.md` prints only the papers, and
+links each published one to its DOI or arXiv page.
 
-* `n ≤ 54`: the length-54 classification (Wills, Jain and Singh) and the
-  symmetry-and-AI report (Jain, Wills and Singh), plus any published work the
-  classification's Pareto table attributes the class to;
-* `n > 54`: the published works that state the class with the same `n`, `k`,
-  distance and output gate, where there are any, and otherwise the
-  symmetry-and-AI report. The matching, entry by entry and with the place each
-  parameter set is printed, is in
-  [`migrations/literature_citations_2026_09_15.py`](migrations/literature_citations_2026_09_15.py).
+* **The 74 Pareto points of the length-54 classification** are credited by who
+  found them.
+  * **Published before.** Nine are attributed to a published protocol by the
+    classification's Pareto table (Table `tab:complete-pareto`): Bravyi & Kitaev,
+    Nezami & Haah, Jacinto et al. and Gong et al. These are credited to that
+    work **alone**.
+  * **Also found by our searches.** A Pareto point that this project's own
+    symmetry-SAT or AI searches had already found is credited to the
+    classification (Wills, Jain and Singh) **and** the symmetry-and-AI report
+    (Jain, Wills and Singh).
+  * **Everything else** is credited to the classification alone.
+* **Every other class with `n ≤ 54`** is credited to the classification and the
+  symmetry-and-AI report. A published work that states it is credited too;
+  none currently does.
+* **`n > 54`.** The published works that state the class with the same `n`,
+  `k`, distance and output gate, where there are any, and otherwise the
+  symmetry-and-AI report.
+
+The literature matching is in
+[`migrations/literature_citations_2026_09_15.py`](migrations/literature_citations_2026_09_15.py),
+entry by entry and with the place each parameter set is printed. The Pareto-point
+rules are in
+[`migrations/length54_classification_2026_09_16.py`](migrations/length54_classification_2026_09_16.py).
 
 ## The row schema
 
@@ -208,10 +225,10 @@ and merging it changes nothing.
 | `d` | optional **claim**. Never believed — see below |
 | `gate` | optional **claim**, as monomials or a `T`/`CS`/`CCZ` string |
 | `t_count`, `poly_degree` | optional **claims**, compared where the exact recomputation is feasible |
-| `regime` | optional; which corpus this came from. Default `merged results` |
+| `regime` | optional; how the result was found, in a few words (see [the regimes](#the-regimes-and-why-they-stay-apart)). Default `merged results` |
 | `strength` | optional; what a row from a **new** regime means, one sentence |
 | `discovery` | optional; `AI search` (default) or `pre-existing` |
-| `citations` | optional; keys of the header's `references` map. Omitted, an accepted row is credited to the length-54 classification and the symmetry-and-AI report when `n ≤ 54`, and to the report alone otherwise; an improvement adds its citations to the class's |
+| `citations` | optional; keys of the header's `references` map. Omitted, an **accepted** row is credited to the length-54 classification and the symmetry-and-AI report when `n ≤ 54`, and to the report alone otherwise. An improvement or a duplicate adds only the citations the record **names** — a held class keeps the credit it was given, so a class credited to a published work alone is not re-credited because a search found it again |
 | `label`, `provenance`, `origin`, `file`, `notes` | optional provenance strings — inert |
 
 Anything else in a record is a typo and rejects it: `colums` silently ignored is
@@ -238,7 +255,7 @@ a circuit merged from a field nobody read.
    |---|---|
    | `accepted` | a class the catalogue did not have. Appended |
    | `improved` | a class it had, with a better circuit. The retention rule is fewest ambient qubits, then fewest columns, then the strongest proved distance, then a proved canonical frame. The new provenance is **appended** to `sources` |
-   | `duplicate` | a class it had, with a circuit no better. **Nothing changes** — not the row, not `sources`, not the header — which is what makes re-merging a file a no-op the second time |
+   | `duplicate` | a class it had, with a circuit no better. **Nothing about the circuit or its provenance changes** — not the columns, not `sources`, not `regimes` — which is what makes re-merging a file a no-op the second time. Only a citation the record explicitly names is added |
    | `rejected` | did not verify. The reason is printed, and the exit status is 1 |
 
 Both files are then regenerated from the merged payload, deterministically, so
@@ -255,25 +272,38 @@ catalogue whose whole premise is that every field was re-derived.
 
 ## The regimes, and why they stay apart
 
-Rows keep the regime they came from, because those make claims of different
-strengths and mixing them is how a search record gets misread as a classified
-maximum:
+A row's regime says, in a few words, **how its class was found**, and each
+regime carries a claim of its own strength (`strongest_claim`, defined once in
+the header). A row keeps every regime one of its sources came from, strongest
+first, because mixing them is how a search witness gets misread as an optimum.
+The header, in order:
 
 | regime | a row from it means |
 |---|---|
-| `exhaustive n<=38` | classified: nothing else exists in that window |
-| `census r<=7` | classified subject to the check-rank bound `r ≤ 7` |
-| `search record` | best found by targeted search; **not** a maximum |
-| `AI results`, `catalogue_new` | found by an AI search campaign; a verified witness, **not** a maximum |
-| `magic-states-AI master catalogue` | merged from the AI campaign's own catalogue; a verified witness, **not** a maximum |
-| `campaign 48<n<128` | found by the targeted `48 < n < 128` campaign; a verified witness, **not** a maximum |
+| `exhaustive classification n<=54 (Pareto point)` | one of the 74 Pareto points of the exhaustive classification through length 54 ([`../classification/length54/`](../classification/length54/)): nothing with `n ≤ 54`, the same CNOT+S output and the same exact distance uses no more inputs and no more wires, with one strictly fewer |
+| `exhaustive classification n<=54` | inside that classification but not on its frontier; a Pareto point strictly dominates it (tested). The repository's exhaustive `n ≤ 38` classification and rank-7 census were stages of this classification and are credited as it |
+| `symmetry-SAT search` | found by the symmetry-slot or ansatz-free SAT search ([`../symmetry_sat_search/`](../symmetry_sat_search/)); a verified witness, **not** a maximum |
+| `AI search` | found by an AI search campaign; a verified witness, **not** a maximum |
+| `AI search: punctured r=7 simplex parents`, `AI search: multi-agent campaign 39<=n<=127` | the named AI campaigns; verified witnesses, **not** maxima |
+| `AI search (gamma frontier): …` | the pure-T distillation-exponent release, split by the construction each record names: from Wills parent codes, contraction of an existing code, logical restriction of a length-54 Pareto point, or (one row) a punctured Reed–Muller code. Verified witnesses; only the release's own frontier points are its lowest `γ` |
+| `AI search: Wills downset framework` | exact optima of one framework (arXiv:2608.24000), not maxima over all factories |
+| `AI search: pure-T width campaign n=255, 511`, `AI search: pure-T puncture caps`, `AI search: full-simplex pure-T frames` | width and cap witnesses, explicitly **not** rate records |
+| `search release 55<=n<=64` | the generalised triorthogonal public search release at lengths 55–64; a discovery archive, not a maximum |
 
-A regime a merge introduces is registered at the **end** of that order, i.e. as
-the weakest claim — a merged witness can never outrank a classification.
+The full sentence for each is in the header and on the first page of
+`MASTER_CATALOG.md`. A regime a merge introduces is registered at the **end** of
+that order, i.e. as the weakest claim — a merged witness can never outrank a
+classification.
 
-`discovery` is a different axis: `pre-existing` if one of the three
-classification catalogues has the class, `AI search` if it was found by a search
-campaign instead. A class a campaign found that was **already** catalogued keeps
+`discovery` is a different axis: was the class an **AI discovery**? It is
+`AI search` when an AI search campaign or search release found the class and
+neither a classification stage run in this repository (the `n ≤ 38`
+classification, the rank-7 census) nor the symmetry-SAT search had it, and
+`pre-existing` otherwise. It says nothing about the literature — a class a
+paper published earlier can still be `AI search`; `citations` is what credits
+the literature. A Pareto point our AI searches found before the classification
+confirmed it therefore stays `AI search`; one only the classification has is
+`pre-existing`. A class a campaign found that was **already** catalogued keeps
 `pre-existing`; it is a reproduction, and its `sources` lists both.
 
 ## The distance, and what a number in that column means
@@ -296,10 +326,11 @@ measured one.
 [`tests/`](tests/) re-does the core checks on the shipped file with its **own**
 implementations rather than importing the verifier's, so a mistake has to be
 made twice to go unnoticed. It adds what only a consumer can check: that the
-catalogue still holds every qualifying row of the three classification
-catalogues, that its filter is exactly "level 3, distance ≥ 3", that the
-`discovery` tag agrees with the regimes, and that no class is in the table
-twice. The verifier's and merger's own suites are mostly **negative** — a
+catalogue still holds every qualifying row of the three catalogues it inherited
+and every Pareto point of the length-54 classification, that no other class with
+`n ≤ 54` beats that frontier, that its filter is exactly "level 3, distance ≥ 3",
+that the `discovery` tag and the Pareto points' citations follow their rules,
+and that no class is in the table twice. The verifier's and merger's own suites are mostly **negative** — a
 verifier is worth what its rejections are worth — and cover broken check parity,
 a wrong or unreadable gate label, an inflated distance, a pseudo-output, a
 spectator output, a redundant check wire, a repeated column, a duplicate class,
@@ -322,19 +353,12 @@ or undocumented fields.
   frame and say so. Their uniqueness is decided by `glcanon.gl_isomorphic` like
   every other row's, so the dedup is sound; only the displayed labelling is
   arbitrary.
-* **Higher-distance circuits discarded before 2026-09-15.** Until then the class
-  key left out the distance, and a merge kept the circuit with fewest ambient
-  qubits, so four higher-distance circuits were dropped for narrower ones at a
-  lower distance and their columns are not in this file: `[[176,3]]` `CCZ` at
-  `d = 6` (`N = 28`), `[[255,3]]` `T^3` at `d = 5` (`N = 19`), `[[511,9]]`
-  `T^9` at `d = 6` (`N = 36`) — each still named in its row's `sources` — and
-  `[[48,3]]` `CCZ` at `d = 4` (`N = 10`, Jacinto et al.). The key now includes
-  `d`, so a re-merge of those circuits would be accepted as new rows.
 * **Hidden spectators.** The spectator and pseudo-output checks are made in the
   stored frame. A gate that, in some other CNOT frame, leaves an output untouched
   up to Cliffords (`T0·T1·CS01` is `T` on `x0 + x1` times a `CZ`) passes them;
-  80 of the 632 classes are of this kind, including rows inherited from the
-  exhaustive classification.
+  80 of the 804 classes are of this kind, 70 of them with `n ≤ 54`. None is a
+  Pareto point — those outputs are spectator-free by construction — and each of
+  the 70 is dominated by the Pareto point of its spectator-free output (tested).
 * **Repairs.** A circuit rejected for a spectator, a pseudo-output or a
   redundant check wire is not fixed on the way in. Demoting a redundant output
   to a check, or deleting a check wire the others already decide, gives a valid

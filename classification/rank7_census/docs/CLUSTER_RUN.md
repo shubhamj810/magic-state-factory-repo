@@ -88,7 +88,8 @@ Afterwards, merging into the master catalogue is
 .venv/bin/python classification/rank7_census/sk_merge_input.py > /tmp/sk_merge_input.json
 .venv/bin/python master_catalog/merge_results.py /tmp/sk_merge_input.json
 .venv/bin/python master_catalog/attribute_classification.py \
-    classification/rank7_census/catalog/sk_classes_r7.json --regime "census r<=7"
+    classification/rank7_census/catalog/sk_classes_r7.json \
+    --regime "exhaustive classification n<=54"
 .venv/bin/python master_catalog/verify_catalog.py
 .venv/bin/python -m unittest discover -s master_catalog/tests
 ```

@@ -470,6 +470,24 @@ class TestLifecycle(unittest.TestCase):
         row, = self.rows()
         self.assertEqual(row["citations"], MR.default_citations(46) + [key])
 
+    def test_a_class_credited_to_the_literature_alone_stays_so(self):
+        """Neither a better circuit nor a copy re-credits it to the defaults.
+
+        A class a published work stated before is credited to that work alone;
+        a search that finds it again, or finds it on fewer wires, has not made
+        the classification or the report its source.
+        """
+        key = next(k for k in self.payload["references"]
+                   if k not in MR.default_citations(46))
+        self.merge({"k": 1, "N": 14, "columns": wide_46(), "citations": [key]})
+        self.merge({"k": 1, "N": 14, "columns": wide_46()})
+        row, = self.rows()
+        self.assertEqual(row["citations"], [key], "a duplicate")
+        self.merge({"k": 1, "N": 10, "columns": narrow_46()})
+        row, = self.rows()
+        self.assertEqual(row["N"], 10)
+        self.assertEqual(row["citations"], [key], "an improvement")
+
     def test_merging_the_same_result_twice_is_a_no_op_the_second_time(self):
         self.merge({"k": 1, "N": 10, "columns": narrow_46()})
         before = copy.deepcopy(self.payload)
@@ -746,7 +764,8 @@ class TestRejections(unittest.TestCase):
 
     def test_a_result_may_not_redefine_an_existing_regime(self):
         self.assertIn("schema",
-                      self.reject({"k": 1, "N": 10, "regime": "search record",
+                      self.reject({"k": 1, "N": 10,
+                                   "regime": "symmetry-SAT search",
                                    "strength": "something else entirely",
                                    "columns": narrow_46()}))
 
