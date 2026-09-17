@@ -293,7 +293,7 @@ The header, in order:
 | `AI search (gamma frontier): …` | the pure-T distillation-exponent release, split by the construction each record names: from Wills parent codes, contraction of an existing code, logical restriction of a length-54 Pareto point, or (one row) a punctured Reed–Muller code. Verified witnesses; only the release's own frontier points are its lowest `γ` |
 | `AI search: Wills downset framework` | exact optima of one framework (arXiv:2608.24000), not maxima over all factories |
 | `AI search: pure-T width campaign n=255, 511`, `AI search: pure-T puncture caps`, `AI search: full-simplex pure-T frames` | width and cap witnesses, explicitly **not** rate records |
-| `search release 55<=n<=64` | the generalised triorthogonal public search release at lengths 55–64; a discovery archive, not a maximum |
+| `AI search: generalised triorthogonal search 55<=n<=64` | found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55–64; a verified witness, not a maximum |
 | `community contribution` | a protocol an outside author submitted through [`../community_contributions/`](../community_contributions/), verified here from its columns; a verified witness, not a maximum. Registered the first time one is merged |
 
 The full sentence for each is in the header and on the first page of
@@ -303,7 +303,7 @@ classification.
 
 `discovery` is a different axis, read off a row's `sources`:
 
-* `AI search` when an AI search campaign or search release is among them and no
+* `AI search` when an AI search campaign is among them and no
   classification stage run in this repository (the `n ≤ 38` classification, the
   rank-7 census), symmetry-SAT search or community contribution is. The
   length-54 classification does not count against it: a Pareto point an AI

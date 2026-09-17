@@ -1,9 +1,15 @@
 # Submissions
 
-One JSON file per submission, in the format described in
-[`../README.md`](../README.md), named `YYYY-MM-DD_surname_short-title.json`
-(the date the submission was made, the contributor's surname in lowercase, and
-a few hyphenated words, e.g. `2026-10-01_doe_cs-factories-n40.json`). A file
-stays here after it is merged: every catalogue row it contributed names it as
-its source, and it records the contributor's stated redistribution terms.
-Nothing else goes in this directory.
+Each submission gets one folder, named `YYYY-MM-DD_surname_short-title/`:
+the date of the submission, the contributor's surname in lowercase, and a few
+hyphenated words, for example `2026-10-01_doe_cs-factories-n40/`. The folder
+holds:
+
+- **the contributor's files, as sent**, in any format: papers, matrices, code,
+  notebooks, tables, notes;
+- **`catalogue_input.json`**, which the maintainers write from those files in
+  the format described in [`../README.md`](../README.md#the-catalogue-input-format).
+
+The folder stays after merging. Every catalogue row the submission contributed
+names its `catalogue_input.json` as its source, and the originals record what
+was actually submitted.

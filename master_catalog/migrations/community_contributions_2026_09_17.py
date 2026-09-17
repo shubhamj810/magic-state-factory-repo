@@ -34,11 +34,11 @@ PRE_EXISTING = ("not an AI discovery of this project: a classification stage "
                 "this repository ran, the symmetry-SAT search catalogue, the "
                 "exhaustive length-54 classification alone, or a community "
                 "contribution has this class")
-AI_SEARCH = ("found only by AI search campaigns or search releases: no "
-             "classification stage this repository ran, no symmetry-SAT search "
-             "and no community contribution is recorded among its sources (the "
-             "length-54 classification may have it too); whether it was new to "
-             "the literature is what citations says")
+AI_SEARCH = ("found only by AI search campaigns: no classification stage this "
+             "repository ran, no symmetry-SAT search and no community "
+             "contribution is recorded among its sources (the length-54 "
+             "classification may have it too); whether it was new to the "
+             "literature is what citations says")
 
 
 def main(argv=None):

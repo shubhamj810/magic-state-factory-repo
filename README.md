@@ -56,9 +56,8 @@ names the papers that credit it, linked where they are published.
 | source | what it contributes | regime(s) |
 |---|---|---|
 | **Exhaustive classification**, `n <= 54` (Wills, Jain and Singh) | every generalised triorthogonal protocol with `n <= 54` and exact `d_Z >= 3`, up to CNOT+S. Its 74 Pareto points (undominated in inputs `n` and wires `N`) are copied in [`classification/length54/`](classification/length54/); a test checks that every other class the catalogue holds in that window is dominated by one | `exhaustive classification n<=54 (Pareto point)`, `exhaustive classification n<=54` |
-| **AI-assisted search** (Jain, Wills and Singh) | AI search campaigns run in the companion repository `magic-states-AI`, from punctured simplex and Reed–Muller parents and Wills's parent codes, including the pure-T distillation-exponent (`γ`) frontier | `AI search`, `AI search: …`, `AI search (gamma frontier): …` |
+| **AI-assisted search** (Jain, Wills and Singh) | AI search campaigns run in the companion repository `magic-states-AI`, from punctured simplex and Reed–Muller parents and Wills's parent codes, including the pure-T distillation-exponent (`γ`) frontier, and the public search for generalised triorthogonal protocols at lengths 55–64 | `AI search`, `AI search: …`, `AI search (gamma frontier): …` |
 | **Symmetry-constrained SAT search** (same report) | CP-SAT searches over symmetric column orbits and ansatz-free SAT, in [`symmetry_sat_search/`](symmetry_sat_search/). Not counted as an AI discovery | `symmetry-SAT search` |
-| **Generalised triorthogonal search release**, `55 <= n <= 64` | witnesses from a public search release at lengths just beyond the classification | `search release 55<=n<=64` |
 | **Literature** | published protocols: Bravyi & Kitaev, Nezami & Haah, Haah & Hastings, Jacinto et al., Gong et al., and others | cited in the row's `citations`, linked to the DOI or arXiv page |
 | **Community contributions** | protocols from outside authors, verified here; a class new to the catalogue is cited to its contributor | `community contribution` |
 
@@ -89,30 +88,23 @@ python3 agent_context/reference/verify_factory.py --selftest
 
 ## Contributing protocols: `community_contributions/`
 
-To add a protocol, write one JSON file per submission and put it in
-[`community_contributions/submissions/`](community_contributions/submissions/).
-Each file holds:
+Protocols can be submitted **in any format**: a paper or arXiv link, matrices,
+circuits, code, a notebook, or a precise description. Send them as a folder in
+[`community_contributions/submissions/`](community_contributions/submissions/)
+by pull request, or attach or link them in an issue. Say who to credit and
+whether the protocols may be redistributed with the catalogue.
 
-- explicit circuits or generator matrices;
-- the reference to credit;
-- a short description of how the protocols were found;
-- the terms under which they may be redistributed.
+The maintainers then:
 
-The maintainers:
-
-1. verify every protocol to the same bar as a catalogue row;
-2. merge it into the master catalogue;
-3. cite the contributor on every class new to the catalogue. A class already
+1. convert the protocols into the catalogue's input format;
+2. verify every protocol to the same bar as a catalogue row, with
+   `community_contributions/check_submission.py`;
+3. merge them into the master catalogue;
+4. cite the contributor on every class new to the catalogue. A class already
    held keeps its credit.
 
-Check a submission locally first:
-
-```bash
-.venv/bin/python community_contributions/check_submission.py path/to/submission.json
-```
-
-[`community_contributions/README.md`](community_contributions/README.md) has the
-format and the process.
+[`community_contributions/README.md`](community_contributions/README.md)
+describes what to send and how the maintainers process it.
 
 ## Repository map
 

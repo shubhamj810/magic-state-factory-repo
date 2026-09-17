@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-"""Check a community submission against the master catalogue, and merge it.
+"""Check a community contribution's catalogue input file, and merge it.
 
-    python community_contributions/check_submission.py SUBMISSION.json
-    python community_contributions/check_submission.py SUBMISSION.json --catalog PATH
-    python community_contributions/check_submission.py SUBMISSION.json --write   # maintainers
+    python community_contributions/check_submission.py INPUT.json
+    python community_contributions/check_submission.py INPUT.json --catalog PATH
+    python community_contributions/check_submission.py INPUT.json --write   # maintainers
 
-A submission is ONE JSON file: who contributed it, the work it is credited to,
-how the protocols were found, the terms the data may be redistributed under,
-and the protocols themselves (the format is in ``README.md`` beside this file).
-This tool
+Contributors send protocols in any format.  The maintainers convert each
+submission into ONE JSON catalogue input file, kept in the submission's folder
+under ``submissions/``: who contributed it, the work it is credited to, how the
+protocols were found, the terms the data may be redistributed under, and the
+protocols as explicit circuits (the format is in ``README.md`` beside this
+file).  This tool
 
 1.  validates that file -- every field known, typed and filled in -- and
     converts each protocol into a `master_catalog/merge_results.py` record,
@@ -595,7 +597,7 @@ def report(submission, verdicts, cited, residue):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("submission", type=Path,
-                        help="the submission JSON file")
+                        help="the catalogue input JSON file")
     parser.add_argument("--catalog", type=Path, default=CF.CATALOG_JSON,
                         help="the catalogue JSON to check against "
                              "(default: master_catalog/master_catalog.json)")

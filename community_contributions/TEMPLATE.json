@@ -1,8 +1,8 @@
 {
  "contributor": {
-  "name": "<your name, as it should be credited>",
-  "affiliation": "<optional: your affiliation; delete the field if none>",
-  "contact": "<optional: how the maintainers can reach you; never copied into the catalogue; delete the field if none>"
+  "name": "<the contributor's name, as it should be credited>",
+  "affiliation": "<optional: the contributor's affiliation; delete the field if none>",
+  "contact": "<optional: how to reach the contributor; never copied into the catalogue; delete the field if none>"
  },
  "reference": {
   "key": "<surname2026firstword>",
@@ -11,7 +11,7 @@
   "url": "<https DOI or arXiv link of the published work; delete the field if unpublished>"
  },
  "method": "<one or two sentences: how the protocols were found>",
- "terms": "<the terms under which the maintainers may redistribute these protocols>",
+ "terms": "<the redistribution terms the contributor gave>",
  "protocols": [
   {
    "label": "<optional short name; delete the field if none>",

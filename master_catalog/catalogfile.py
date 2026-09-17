@@ -414,7 +414,7 @@ def render_markdown(payload: dict) -> str:
     A("")
     A("`discovery` says whether a class is **found only by AI search**: "
       f"**{by_discovery['AI search']}** rows are")
-    A("`AI search` — found only by AI search campaigns or search releases — and "
+    A("`AI search` — found only by AI search campaigns — and "
       f"**{by_discovery['pre-existing']}** are")
     A("`pre-existing` — a classification stage run in this repository, the")
     A("symmetry-SAT search or a community contribution has them, or the length-54")

@@ -1,57 +1,105 @@
 # Community contributions
 
 This directory is how people outside the project add magic-state distillation
-factories to the [master catalogue](../master_catalog/). You send **one JSON
-file** describing your protocols and who should be credited for them. The
-maintainers re-derive every number from the explicit circuits with the
-catalogue's own verifier, merge what verifies, and cite your work on every row
-it adds.
+factories to the [master catalogue](../master_catalog/). **Send your protocols
+in whatever form you have them.** The maintainers:
 
-## What is in scope
+1. convert them into the catalogue's format;
+2. re-derive every number from explicit circuits with the catalogue's own
+   verifier;
+3. merge what verifies;
+4. cite your work on every class that is new to the catalogue.
 
-Anything the master catalogue's bar accepts:
+## Submitting
 
-* **level-3 outputs**: the accepted action on the outputs is a diagonal
-  non-Clifford gate built from `T`, `CS` and `CCZ` factors;
-* **fault distance `d ≥ 3`**;
-* **an explicit circuit** for every protocol: the qubit support of each `T`
-  (π/4 parity) rotation, with the outputs and the postselected checks declared.
+### Any format is fine
 
-Out of scope:
+For example:
 
-* level-2 (Clifford) or level-4 and higher outputs;
-* distance-2 circuits;
-* asymptotic families or constructions with no explicit circuit — send the
-  members you want listed as explicit protocols instead;
-* claims that cannot be checked from the file, such as a distance, gate or
-  rate stated without the circuit it describes.
+* a paper, preprint or arXiv link that describes the protocols;
+* generator matrices, parity-check or stabiliser matrices, or triorthogonal
+  matrices, as text, CSV, JSON, LaTeX tables or images;
+* circuits, in any notation;
+* code or a notebook that constructs the protocols;
+* a construction described in words, precisely enough to write the circuits
+  down;
+* a mix of these, as a single file, a folder or a zip archive.
 
-The verifier also refuses circuits that deposit phase on a check wire, repeat a
-column, leave an output untouched (a spectator), count an output that is
-another output plus a stabiliser (a pseudo-output), carry a check wire whose
-syndrome bit the other checks already give, or declare wires no rotation uses.
-It does not repair them. The full bar is under "Verifying" and "Merging new
-results" in [`master_catalog/README.md`](../master_catalog/README.md).
+### Tell us, if you can
 
-## The submission file
+* **Who to credit.** Names, affiliations, and the paper if the protocols are
+  published.
+* **Redistribution terms.** Whether the protocols may be included in this
+  catalogue and redistributed with it, for example under a licence. See
+  [Data terms](#data-terms).
+* **What the protocols are,** as far as you know: the number of `T` inputs `n`,
+  outputs `k`, distance `d`, the output gate, and how they were found. The
+  maintainers check all of this themselves, so an approximate or partial
+  description is fine.
+* **A way to reach you,** if the maintainers have questions. A pull request is
+  public, so send contact details privately if you prefer.
+
+If some of this is missing, send what you have. The maintainers will ask.
+
+### What the catalogue can hold
+
+It holds protocols whose output is a diagonal non-Clifford gate built from `T`,
+`CS` and `CCZ` (level 3), with fault distance `d ≥ 3`. Each protocol must be
+writable as an explicit circuit. A family or asymptotic construction is fine to
+send: the maintainers list the explicit members they can write down. If you are
+not sure a protocol fits, send it anyway.
+
+### How to send it
+
+* **Pull request.** Add one folder,
+  `submissions/YYYY-MM-DD_surname_short-title/`, containing your files as they
+  are. Do not edit `master_catalog/`; the maintainers regenerate it.
+* **Issue.** Open an issue on the repository with your files attached or
+  linked.
+
+## What happens next
+
+The maintainers convert your submission into a catalogue input file, stored in
+your submission's folder beside your originals. They then run the checker.
+Every protocol is verified from its circuit, not from its stated parameters, and
+gets one of four verdicts:
+
+| verdict | what it means |
+|---|---|
+| `accepted` | a class the catalogue did not have. It is added and credited to your work |
+| `improved` | a class the catalogue had, and your circuit is better (fewer wires). Your circuit replaces the stored one and is recorded as a source; the class keeps the credit it already had |
+| `duplicate` | a class the catalogue had, with a circuit no better. Nothing changes |
+| `rejected` | it did not verify, for example because its distance is below 3 or it is not a factory as stated. The maintainers tell you why |
+
+Nothing is merged that the verifier would not re-derive from the circuit.
+Classes are compared up to relabelling and a change of output basis (the
+`GL(k,2)` class of the gate) at the same `n`, `k` and distance.
+
+## For maintainers
+
+### The catalogue input format
+
+A submission is converted into one JSON file,
+`submissions/<submission>/catalogue_input.json`. The contributor's original
+files stay beside it. [`TEMPLATE.json`](TEMPLATE.json) is the file to start
+from; every `<...>` value is a placeholder, and the checker refuses the file
+while any placeholder is left.
 
 A factory has `N` wires: wires `0..k-1` are the outputs and wires `k..N-1` are
 postselected checks. Each column is one `T` rotation, and `n` is the number of
-columns. Indices are 0-based throughout. [`TEMPLATE.json`](TEMPLATE.json) is a
-file to copy and fill in. Every `<...>` value is a placeholder, and the checker
-refuses the file while any placeholder is left.
+columns. Indices are 0-based throughout.
 
 | field | |
 |---|---|
-| `contributor.name` | **required.** The name you are credited under |
-| `contributor.affiliation` | optional; printed after your name in each row's provenance |
-| `contributor.contact` | optional; for the maintainers only, and never copied into the catalogue. A pull request makes it public, so leave it out if you would rather send it privately |
+| `contributor.name` | **required.** The name the contribution is credited under |
+| `contributor.affiliation` | optional; printed after the name in each row's provenance |
+| `contributor.contact` | optional; never copied into the catalogue |
 | `reference.key` | **required.** A citation key: 3–64 lowercase letters, digits, `_` or `-`, e.g. `surname2026firstword`. If the work is already listed under "References" in [`MASTER_CATALOG.md`](../master_catalog/MASTER_CATALOG.md), use that key and copy its entry exactly |
-| `reference.short` | **required.** The label for the citation column, e.g. `Doe et al. (2026)` |
-| `reference.full` | **required.** The full bibliographic line. For unpublished work, a line crediting you, e.g. `J. Doe, unpublished community contribution (2026).` |
-| `reference.url` | optional. The `https` DOI or arXiv link of a **published** work, which the citation column links to. Leave it out for unpublished work |
+| `reference.short` | **required.** The label for the citation column, e.g. `Doe et al. (2026)`; it must differ from every other work's label |
+| `reference.full` | **required.** The full bibliographic line. For unpublished work, a line crediting the contributor, e.g. `J. Doe, unpublished community contribution (2026).` |
+| `reference.url` | optional. The `https` DOI or arXiv link of a **published** work, which the citation column links to |
 | `method` | **required.** One or two sentences (at most 400 characters) on how the protocols were found |
-| `terms` | **required.** The terms under which the protocols may be redistributed (see [Data terms](#data-terms)) |
+| `terms` | **required.** The redistribution terms the contributor gave (see [Data terms](#data-terms)) |
 | `protocols` | **required.** A non-empty list of protocols, each in one of the two forms below |
 
 Each protocol gives its circuit in **exactly one** of two forms.
@@ -82,14 +130,12 @@ Both forms also take these optional fields:
 | `notes` | free text, kept in the row's source entry |
 
 Any other field is refused, so a typo cannot be silently ignored. This includes
-the fields the tool sets itself: `regime`, `strength`, `discovery`,
-`citations`, `provenance`, `origin` and `file`. The T-count and reduced degree
-are computed by the verifier.
+the fields the checker sets itself: `regime`, `strength`, `discovery`,
+`citations`, `provenance`, `origin` and `file`.
 
-The shipped example,
-[`examples/bravyi-kitaev_15-to-1.json`](examples/bravyi-kitaev_15-to-1.json),
-is a complete submission: the [[15,1,3]] protocol of Bravyi and Kitaev in
-generator-matrix form (shown here without its `notes` field).
+[`examples/bravyi-kitaev_15-to-1.json`](examples/bravyi-kitaev_15-to-1.json) is
+a complete input file for the [[15,1,3]] protocol of Bravyi and Kitaev in
+generator-matrix form (shown here without its `notes` field):
 
 ```json
 {
@@ -118,13 +164,13 @@ The same protocol in columns form:
              [1,4], [2,4], [1,2,4], [3,4], [1,3,4], [2,3,4], [1,2,3,4]]}
 ```
 
-## Checking a submission before you send it
+### Checking
 
 From the repository root, in the environment described under "Setup" in the
 [top-level README](../README.md):
 
 ```bash
-.venv/bin/python community_contributions/check_submission.py path/to/submission.json
+.venv/bin/python community_contributions/check_submission.py path/to/catalogue_input.json
 ```
 
 The checker validates the file, then merges its protocols into an in-memory
@@ -151,106 +197,98 @@ A rejected protocol is listed with its reasons, for example:
 | exit status | meaning |
 |---|---|
 | `0` | every protocol verified, whatever its verdict |
-| `1` | a protocol was rejected, or the merged catalogue failed a check: a file-level check, or a circuit the length-54 classification says cannot exist (one that improves a Pareto point, or a new or improved class with `n ≤ 54` that no Pareto point dominates) |
-| `2` | the submission is malformed (a missing, unknown or mistyped field, a placeholder, a bad link, or a reference key that clashes with the catalogue's), or the catalogue cannot be read. Nothing was merged |
+| `1` | a protocol was rejected, or the merged catalogue failed a check: a file-level check, or a circuit the length-54 classification says cannot exist (one that improves a Pareto point, or a new or improved class with `n ≤ 54` that no Pareto point strictly dominates) |
+| `2` | the input file is malformed (a missing, unknown or mistyped field, a placeholder, a bad link, or a reference key that clashes with the catalogue's), or the catalogue cannot be read. Nothing was merged |
 
-`--catalog PATH` checks against another copy of the catalogue. The verdicts are
-relative to the catalogue you check against. The maintainers re-run the check
-against the current catalogue.
+`--catalog PATH` checks against another copy of the catalogue.
 
-## How to submit
+The verifier refuses circuits that:
+* deposit phase on a check wire;
+* repeat a column;
+* leave an output untouched (a spectator);
+* count an output that is another output plus a stabiliser (a pseudo-output);
+* carry a check wire whose syndrome bit the other checks already give;
+* declare wires no rotation uses.
 
-1. Name the file `YYYY-MM-DD_surname_short-title.json` and run the checker on
-   it. Exit status `0` is what the maintainers can merge. If some protocols are
-   rejected, fix or remove them, or explain in your submission why you think
-   the verifier is wrong.
-2. Open a pull request that adds that one file under
-   [`submissions/`](submissions/), and nothing else. Do not edit
-   `master_catalog/`, because the maintainers regenerate it. Include the
-   checker's output in the description.
-3. If you cannot open a pull request, open an issue on the repository with the
-   file (attached or pasted) and the checker's output.
+It does not repair them. A repaired circuit (for example with a redundant wire
+deleted) is a different factory from the one submitted, so raise the failure
+with the contributor rather than converting a repair. The full bar is under
+"Verifying" and "Merging new results" in
+[`master_catalog/README.md`](../master_catalog/README.md).
 
-## For maintainers
+### Merging
 
-1. **Re-run the check** on the submitted file against the current catalogue:
-   `.venv/bin/python community_contributions/check_submission.py community_contributions/submissions/FILE.json`.
-2. **Review what no verifier can check.** Is the contributor who they say they
-   are, and does `method` describe how the protocols were found? Is the
-   reference right? A published work needs its correct bibliographic line and
-   its DOI or arXiv `url`. An unpublished one needs an entry crediting the
-   contributor, with no `url`. Can the catalogue be redistributed under the
-   stated `terms`? If the submission repeats or improves classes the catalogue
-   already holds, is there a reason to change their credit (see below)?
-3. **Merge:** re-run with `--write`. This rewrites
-   `master_catalog/master_catalog.json` and `MASTER_CATALOG.md`, and saves any
-   newly computed reduced-degree bounds to
-   `master_catalog/reduced_degree_cache.json`. It writes only if no protocol
-   was rejected and the merged catalogue passes the file-level checks
-   (duplicate classes, provenance, citations, header). It also refuses a circuit
-   the length-54 classification says cannot exist: one that improves a Pareto
-   point, or a new or improved class with `n ≤ 54` that no Pareto point strictly
-   dominates. It refuses to merge a
-   file from outside `community_contributions/submissions/` into the master
-   catalogue, because each merged row's source entry names the file.
-4. **Verify:** run `.venv/bin/python master_catalog/verify_catalog.py`,
-   `.venv/bin/python -m unittest discover -s master_catalog/tests` and
-   `.venv/bin/python -m unittest discover -s community_contributions/tests`.
-5. **Commit** the submission file and the regenerated catalogue together.
+1. **Convert** the submission into
+   `submissions/<submission>/catalogue_input.json`. Keep the contributor's
+   originals in the same folder, unchanged.
+2. **Check** it:
+   `.venv/bin/python community_contributions/check_submission.py community_contributions/submissions/<submission>/catalogue_input.json`.
+   Resolve rejections with the contributor.
+3. **Review what no verifier can check.**
+   * Is the credit right? A published work needs its correct bibliographic line
+     and its DOI or arXiv `url`; an unpublished one needs an entry crediting the
+     contributor, with no `url`.
+   * Does `method` describe how the protocols were found?
+   * May the protocols be redistributed under the stated `terms`?
+4. **Merge:** re-run with `--write`.
+   * **What it rewrites:** `master_catalog/master_catalog.json` and
+     `MASTER_CATALOG.md`. Any newly computed reduced-degree bounds are saved to
+     `master_catalog/reduced_degree_cache.json`.
+   * **When it writes nothing:**
+     * a protocol was rejected;
+     * the merged catalogue fails a file-level check (duplicate classes,
+       provenance, citations, header);
+     * a circuit is one the length-54 classification says cannot exist;
+     * the input file is outside `community_contributions/submissions/` — every
+       merged row's source entry names this file.
+5. **Verify:**
+   * `.venv/bin/python master_catalog/verify_catalog.py`
+   * `.venv/bin/python -m unittest discover -s master_catalog/tests`
+   * `.venv/bin/python -m unittest discover -s community_contributions/tests`
+6. **Commit** the submission folder and the regenerated catalogue together.
 
-Classes are deduplicated on `(n, k, d, GL(k,2) class of the gate)`, and each
-protocol gets one verdict:
+### How contributions are credited
 
-| verdict | what it means for the catalogue |
-|---|---|
-| `accepted` | a class the catalogue did not have. Appended and credited to the submission's reference |
-| `improved` | a class it had, with a better circuit (fewer wires `N`, then the tie-breaks in the master catalogue README). The circuit is replaced, and the submission is appended to `sources` and its regime to `regimes`. **The class keeps its citations**, and its `discovery` becomes `pre-existing` (a community contribution is not an AI discovery) |
-| `duplicate` | a class it had, with a circuit no better. **Nothing changes**: not the circuit, its provenance or its citations |
-| `rejected` | did not verify. The reasons are printed, and `--write` writes nothing |
-
-**A class already held keeps its credit.** The catalogue credits a class
-published earlier to that work alone, and a Pareto point of the length-54
-classification by who found it. So the checker credits the submission's
-reference only on classes the catalogue did not have. If a submission
-establishes that a held class should also credit it, the maintainers make that
-change separately, as a reviewed migration in `master_catalog/migrations/`. A
-reference that ends up crediting no class is not added to the header.
-
-## How contributions are credited
-
-Every row a submission adds carries the four items below. A row it improves
-gets the regime and the source entry, but keeps its citations.
+Every row a contribution adds carries:
 
 * **a citation** of `reference.key`. A published work's entry has its DOI or
   arXiv `url`, and the citation column of `MASTER_CATALOG.md` links to it. An
   unpublished contribution's entry credits the contributor and has no `url`;
 * **the regime `community contribution`**: contributed by an outside author
-  and verified here from its explicit columns. It is a verified witness, not a
-  maximum, and is placed at the weakest end of the header's regime order;
-* **`discovery: pre-existing`** on a new class: not an AI discovery of this
-  project;
-* **a source entry**: `file` is the submission's path, `label` is the
-  protocol's label, `origin` is the contributor's name, and `provenance` is
+  and verified here from its explicit columns; a verified witness, not a
+  maximum;
+* **`discovery: pre-existing`**: not an AI discovery of this project;
+* **a source entry**: `file` is the input file's path, `label` is the protocol's
+  label, `origin` is the contributor's name, and `provenance` is
   `community contribution by NAME (AFFILIATION): METHOD`, followed by the
   protocol's label if it has one.
 
-`contact` and `terms` are not copied into the catalogue. They stay in the
-submission file, which remains in `submissions/`.
+A row a contribution improves gets the regime and the source entry, and keeps
+its citations. **A class already held keeps its credit.** The catalogue credits
+a published class to that work alone, and a Pareto point of the length-54
+classification by who found it. So the checker credits a contribution's
+reference only on classes the catalogue did not have. If a contribution shows
+that a held class should also credit it, the maintainers make that change
+separately, as a reviewed migration in `master_catalog/migrations/`. A reference
+that ends up crediting no class is not added to the header.
+
+`contact` and `terms` are not copied into the catalogue. They stay in the input
+file, in the submission's folder.
 
 ## Data terms
 
-State in `terms` the terms under which the maintainers may redistribute your
-protocols as part of this catalogue, for example the licence you release them
-under or your permission to include them. A submission without redistribution
-terms the maintainers can accept is not merged. If the protocols are someone
-else's published work, say so and cite that work in `reference`.
+The maintainers can only include protocols they may redistribute with the
+catalogue. Contributors should say so: for example, the licence they release the
+protocols under, or their permission to include them. Protocols that are someone
+else's published work are cited to that work. The terms the contributor gives
+are recorded in the input file's `terms`.
 
 ## Files
 
 | file | |
 |---|---|
-| [`check_submission.py`](check_submission.py) | validates a submission, checks it against the catalogue, and with `--write` merges it |
-| [`TEMPLATE.json`](TEMPLATE.json) | a submission to copy and fill in |
-| [`submissions/`](submissions/) | one file per submission, kept after merging |
-| [`examples/`](examples/) | a complete, correct submission (a `duplicate` against the shipped catalogue) |
+| [`submissions/`](submissions/) | one folder per submission: the contributor's files as sent, and the maintainers' `catalogue_input.json` |
+| [`check_submission.py`](check_submission.py) | validates a catalogue input file, checks it against the catalogue, and with `--write` merges it |
+| [`TEMPLATE.json`](TEMPLATE.json) | a catalogue input file to copy and fill in |
+| [`examples/`](examples/) | a complete, correct input file (a `duplicate` against the catalogue) |
 | [`tests/`](tests/) | the checker's tests: `.venv/bin/python -m unittest discover -s community_contributions/tests` |

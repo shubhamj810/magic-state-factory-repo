@@ -290,7 +290,8 @@ files byte-identically.
 
 ## 8. Community contributions and the agent context pack
 
-A contributed protocol file is checked against the master catalogue without
+Contributions arrive in any format and are converted by the maintainers into a
+catalogue input file, which is checked against the master catalogue without
 writing anything:
 
 ```bash

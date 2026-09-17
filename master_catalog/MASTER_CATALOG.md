@@ -34,7 +34,7 @@ witness are different kinds of statement.
 | `AI search (gamma frontier): punctured Reed-Muller code` (1 rows) | a punctured Reed-Muller code found by the gamma sub-1000 AI campaign (RM(3,10) punctured at 123 points), filed with the pure-T distillation-exponent frontier (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum |
 | `AI search: Wills downset framework` (2 rows) | verified witness from the 2026-09-14 wills_downset_theory campaign in magic-states-AI, which solved the arXiv:2608.24000 downset framework EXACTLY at every n <= 1000; the d=7 and d=8 rows are proved optima of that framework, not merely best-found, but the framework is one family and they are not maxima over all factories |
 | `AI search: pure-T width campaign n=255, 511` (2 rows) | new [[n,k,d]] classes at n=255 and n=511 (the n=511 one the first at d=3 there) -- pure disjoint T^k, verified from columns. NOT rate records: both are strictly dominated by direct sums of the catalogued [[127,23,3]] (rho 5.5217) -- 2 copies give [[254,46,3]] and 4 give [[508,92,3]], each with FEWER inputs and MORE outputs than the row here. Beating the derived baseline needs k>=47 at n=255 and k>=93 at n=511. |
-| `search release 55<=n<=64` (79 rows) | verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum |
+| `AI search: generalised triorthogonal search 55<=n<=64` (79 rows) | found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum |
 | `AI search: pure-T puncture caps` (2 rows) | cap witnesses, NOT records. Each ATTAINS a proved maximum puncture count for its ambient size at d=6, making that bound exact rather than an upper bound: m=8 gives [[248,8,6]] and m=9 gives [[496,16,6]], both with n/t = 31 exactly, hence gamma = log(31)/log(6) = 1.9165 independent of m. Filed as evidence that these cells are closed, not as frontier points -- the d=6 pure-T bar is gamma 1.063146. |
 | `AI search: full-simplex pure-T frames` (2 rows) | widest pure-T frames held at n=511. DOMINATED on rate by the derived direct-sum baseline [[508,92,3]] = 4 x [[127,23,3]], rho = 508/92 = 5.5217. These are WIDTH points, explicitly NOT rate records: beating the baseline at n=511 needs k >= 93. |
 
@@ -52,7 +52,7 @@ the retained circuit is the one with the fewest ambient qubits. `regimes`
 therefore tells you the strongest claim available for that class.
 
 `discovery` says whether a class is **found only by AI search**: **624** rows are
-`AI search` — found only by AI search campaigns or search releases — and **180** are
+`AI search` — found only by AI search campaigns — and **180** are
 `pre-existing` — a classification stage run in this repository, the
 symmetry-SAT search or a community contribution has them, or the length-54
 classification alone does. A class both an AI search and the length-54
@@ -312,20 +312,20 @@ report. Full entries are under [References](#references).
 | 220 | `[[55,4,3]]` | — | 11 | `0+123` | 7 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
 | 221 | `[[55,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
 | 222 | `[[55,5,3]]` | — | 12 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
-| 223 | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 11 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 224 | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+12+13+14+23+2…` | 9 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 225 | `[[55,6,3]]` | — | 13 | `0+2+4+01+02+03+14+012+013+014+015+023…` | 9 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 226 | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+01+02+12+14+23+34+012+013+0…` | 9 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 227 | `[[55,6,3]]` | — | 13 | `0+1+2+4+5+01+04+012+013+023+024+025+0…` | 9 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 228 | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 9 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 229 | `[[55,6,3]]` | — | 13 | `0+1+2+3+5+01+02+03+15+25+35+045+124+1…` | 7 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
+| 223 | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 224 | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+12+13+14+23+2…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 225 | `[[55,6,3]]` | — | 13 | `0+2+4+01+02+03+14+012+013+014+015+023…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 226 | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+01+02+12+14+23+34+012+013+0…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 227 | `[[55,6,3]]` | — | 13 | `0+1+2+4+5+01+04+012+013+023+024+025+0…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 228 | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 229 | `[[55,6,3]]` | — | 13 | `0+1+2+3+5+01+02+03+15+25+35+045+124+1…` | 7 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
 | 230 | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
 | 231 | `[[55,7,3]]` | — | 14 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
 | 232 | `[[56,2,3]]` | — | 9 | `01` | 3 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
 | 233 | `[[56,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
-| 234 | `[[56,5,4]]` | — | 13 | `012+034` | 11 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 235 | `[[56,6,3]]` | — | 13 | `0+3+4+5+01+02+23+24+25+34+35+45+012+0…` | 8 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 236 | `[[56,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+12+13+14+15+23+…` | 10 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
+| 234 | `[[56,5,4]]` | — | 13 | `012+034` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 235 | `[[56,6,3]]` | — | 13 | `0+3+4+5+01+02+23+24+25+34+35+45+012+0…` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 236 | `[[56,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+12+13+14+15+23+…` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
 | 237 | `[[56,6,3]]` | — | 13 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
 | 238 | `[[56,8,3]]` | — | 15 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
 | 239 | `[[57,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
@@ -334,77 +334,77 @@ report. Full entries are under [References](#references).
 | 242 | `[[58,6,3]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
 | 243 | `[[59,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
 | 244 | `[[59,5,3]]` | — | 12 | `01+234` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 245 | `[[59,5,3]]` | — | 12 | `0+01+23+012+023+134` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 246 | `[[59,5,3]]` | — | 12 | `0+01+012+134` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 247 | `[[59,5,3]]` | — | 12 | `0+01+34+012+234` | 7 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 248 | `[[59,5,3]]` | — | 12 | `0+01+24+023` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 249 | `[[59,5,3]]` | — | 12 | `0+12+34+012+013+024+123` | 10 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 250 | `[[59,5,3]]` | — | 12 | `0+13+24+012+013+024+123` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 251 | `[[59,5,3]]` | — | 12 | `0+13+012+134` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
+| 245 | `[[59,5,3]]` | — | 12 | `0+01+23+012+023+134` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 246 | `[[59,5,3]]` | — | 12 | `0+01+012+134` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 247 | `[[59,5,3]]` | — | 12 | `0+01+34+012+234` | 7 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 248 | `[[59,5,3]]` | — | 12 | `0+01+24+023` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 249 | `[[59,5,3]]` | — | 12 | `0+12+34+012+013+024+123` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 250 | `[[59,5,3]]` | — | 12 | `0+13+24+012+013+024+123` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 251 | `[[59,5,3]]` | — | 12 | `0+13+012+134` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
 | 252 | `[[59,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
 | 253 | `[[59,5,3]]` | — | 16 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
-| 254 | `[[59,6,3]]` | — | 13 | `0+1+2+4+5+01+02+24+25+012+013+014+015…` | 11 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 255 | `[[59,6,3]]` | — | 13 | `0+1+2+3+4+01+02+04+13+23+34+012+013+0…` | 11 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 256 | `[[59,6,3]]` | — | 13 | `0+01+12+13+14+15+23+24+25+34+35+45+02…` | 7 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
+| 254 | `[[59,6,3]]` | — | 13 | `0+1+2+4+5+01+02+24+25+012+013+014+015…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 255 | `[[59,6,3]]` | — | 13 | `0+1+2+3+4+01+02+04+13+23+34+012+013+0…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 256 | `[[59,6,3]]` | — | 13 | `0+01+12+13+14+15+23+24+25+34+35+45+02…` | 7 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
 | 257 | `[[59,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 258 | `[[59,7,3]]` | — | 14 | `0+1+2+3+4+5+6` | — | — | AI search | AI search; search release 55<=n<=64 | Jain et al. (2026) |
+| 258 | `[[59,7,3]]` | — | 14 | `0+1+2+3+4+5+6` | — | — | AI search | AI search; AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
 | 259 | `[[60,1,4]]` | — | 10 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
 | 260 | `[[60,2,4]]` | — | 11 | `0+1` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
 | 261 | `[[60,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
 | 262 | `[[60,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
-| 263 | `[[60,5,3]]` | — | 12 | `01+34+012+034` | 8 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 264 | `[[60,5,3]]` | — | 12 | `01+012+234` | 9 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 265 | `[[60,5,3]]` | — | 12 | `0+01+34+012+013+124` | 8 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 266 | `[[60,5,3]]` | — | 12 | `0+01+34+012+023+124` | 10 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 267 | `[[60,5,3]]` | — | 12 | `0+01+34+012+023+234` | 8 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 268 | `[[60,5,3]]` | — | 12 | `0+01+012+034` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 269 | `[[60,5,3]]` | — | 12 | `0+01+34+012+123` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 270 | `[[60,5,3]]` | — | 12 | `0+01+23+012+134` | 10 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 271 | `[[60,5,3]]` | — | 12 | `0+01+34+012+134` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 272 | `[[60,5,3]]` | — | 12 | `0+01+012+234` | 9 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 273 | `[[60,5,3]]` | — | 12 | `0+01+34+012` | 8 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 274 | `[[60,5,3]]` | — | 12 | `0+01+023+124` | 10 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 275 | `[[60,5,3]]` | — | 12 | `0+01+34+023+124` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 276 | `[[60,5,3]]` | — | 12 | `0+01+24+023+234` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 277 | `[[60,5,3]]` | — | 12 | `0+01+24+123` | 8 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 278 | `[[60,5,3]]` | — | 12 | `0+12+34+012+013+024+034` | 9 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 279 | `[[60,5,3]]` | — | 12 | `0+12+34+012+013+024` | 10 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 280 | `[[60,5,3]]` | — | 12 | `0+12+34+012+013` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 281 | `[[60,5,3]]` | — | 12 | `0+34+012+013+124` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 282 | `[[60,5,3]]` | — | 12 | `0+13+012+034+123` | 10 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 283 | `[[60,5,3]]` | — | 12 | `0+13+24+012+034` | 10 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 284 | `[[60,5,3]]` | — | 12 | `0+13+24+012+123` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 285 | `[[60,5,3]]` | — | 12 | `0+34+012+123` | 8 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 286 | `[[60,5,3]]` | — | 12 | `0+13+012+234` | 10 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 287 | `[[60,5,3]]` | — | 12 | `0+34+012+134` | 8 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 288 | `[[60,5,3]]` | — | 12 | `0+34+012` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 289 | `[[60,5,3]]` | — | 12 | `0+12+134` | 8 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 290 | `[[60,6,3]]` | — | 13 | `01+02+03+05+12+23+24+25+012+013+014+0…` | 12 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 291 | `[[60,6,3]]` | — | 13 | `01+02+03+04+05+012+013+014+123+124+13…` | 10 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 292 | `[[60,6,3]]` | — | 13 | `01+05+23+24+012+013+014+023+024+025+0…` | 8 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 293 | `[[60,6,3]]` | — | 13 | `0+3+4+01+02+03+04+13+14+23+24+34+35+4…` | 10 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 294 | `[[60,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+05+12+13+14+15+…` | 8 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 295 | `[[60,6,3]]` | — | 13 | `0+3+5+01+02+03+04+05+13+15+23+25+34+4…` | 12 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 296 | `[[60,6,3]]` | — | 13 | `0+1+2+3+4+01+02+05+12+15+25+35+45+012…` | 9 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 297 | `[[60,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+12+13+14+15+24+…` | 10 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 298 | `[[60,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+12+13+14+15+25+…` | 10 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 299 | `[[60,6,3]]` | — | 13 | `0+1+2+4+5+01+02+03+13+15+23+34+35+012…` | 10 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 300 | `[[60,6,3]]` | — | 13 | `0+1+2+01+02+03+14+24+34+35+45+012+013…` | 8 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 301 | `[[60,6,3]]` | — | 13 | `0+1+3+4+5+01+02+05+12+15+23+24+25+012…` | 10 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 302 | `[[60,6,3]]` | — | 13 | `0+01+02+03+04+05+012+013+024+123+125+…` | 10 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 303 | `[[60,6,3]]` | — | 13 | `0+1+4+01+04+15+25+45+012+013+023+024+…` | 8 | 2 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 304 | `[[60,6,3]]` | — | 13 | `0+4+5+01+02+03+12+13+14+15+23+24+25+3…` | 8 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 305 | `[[60,6,3]]` | — | 13 | `0+1+4+23+012+013+014+025+035+125+135+…` | 8 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
+| 263 | `[[60,5,3]]` | — | 12 | `01+34+012+034` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 264 | `[[60,5,3]]` | — | 12 | `01+012+234` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 265 | `[[60,5,3]]` | — | 12 | `0+01+34+012+013+124` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 266 | `[[60,5,3]]` | — | 12 | `0+01+34+012+023+124` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 267 | `[[60,5,3]]` | — | 12 | `0+01+34+012+023+234` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 268 | `[[60,5,3]]` | — | 12 | `0+01+012+034` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 269 | `[[60,5,3]]` | — | 12 | `0+01+34+012+123` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 270 | `[[60,5,3]]` | — | 12 | `0+01+23+012+134` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 271 | `[[60,5,3]]` | — | 12 | `0+01+34+012+134` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 272 | `[[60,5,3]]` | — | 12 | `0+01+012+234` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 273 | `[[60,5,3]]` | — | 12 | `0+01+34+012` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 274 | `[[60,5,3]]` | — | 12 | `0+01+023+124` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 275 | `[[60,5,3]]` | — | 12 | `0+01+34+023+124` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 276 | `[[60,5,3]]` | — | 12 | `0+01+24+023+234` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 277 | `[[60,5,3]]` | — | 12 | `0+01+24+123` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 278 | `[[60,5,3]]` | — | 12 | `0+12+34+012+013+024+034` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 279 | `[[60,5,3]]` | — | 12 | `0+12+34+012+013+024` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 280 | `[[60,5,3]]` | — | 12 | `0+12+34+012+013` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 281 | `[[60,5,3]]` | — | 12 | `0+34+012+013+124` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 282 | `[[60,5,3]]` | — | 12 | `0+13+012+034+123` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 283 | `[[60,5,3]]` | — | 12 | `0+13+24+012+034` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 284 | `[[60,5,3]]` | — | 12 | `0+13+24+012+123` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 285 | `[[60,5,3]]` | — | 12 | `0+34+012+123` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 286 | `[[60,5,3]]` | — | 12 | `0+13+012+234` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 287 | `[[60,5,3]]` | — | 12 | `0+34+012+134` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 288 | `[[60,5,3]]` | — | 12 | `0+34+012` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 289 | `[[60,5,3]]` | — | 12 | `0+12+134` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 290 | `[[60,6,3]]` | — | 13 | `01+02+03+05+12+23+24+25+012+013+014+0…` | 12 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 291 | `[[60,6,3]]` | — | 13 | `01+02+03+04+05+012+013+014+123+124+13…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 292 | `[[60,6,3]]` | — | 13 | `01+05+23+24+012+013+014+023+024+025+0…` | 8 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 293 | `[[60,6,3]]` | — | 13 | `0+3+4+01+02+03+04+13+14+23+24+34+35+4…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 294 | `[[60,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+05+12+13+14+15+…` | 8 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 295 | `[[60,6,3]]` | — | 13 | `0+3+5+01+02+03+04+05+13+15+23+25+34+4…` | 12 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 296 | `[[60,6,3]]` | — | 13 | `0+1+2+3+4+01+02+05+12+15+25+35+45+012…` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 297 | `[[60,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+12+13+14+15+24+…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 298 | `[[60,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+12+13+14+15+25+…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 299 | `[[60,6,3]]` | — | 13 | `0+1+2+4+5+01+02+03+13+15+23+34+35+012…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 300 | `[[60,6,3]]` | — | 13 | `0+1+2+01+02+03+14+24+34+35+45+012+013…` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 301 | `[[60,6,3]]` | — | 13 | `0+1+3+4+5+01+02+05+12+15+23+24+25+012…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 302 | `[[60,6,3]]` | — | 13 | `0+01+02+03+04+05+012+013+024+123+125+…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 303 | `[[60,6,3]]` | — | 13 | `0+1+4+01+04+15+25+45+012+013+023+024+…` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 304 | `[[60,6,3]]` | — | 13 | `0+4+5+01+02+03+12+13+14+15+23+24+25+3…` | 8 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 305 | `[[60,6,3]]` | — | 13 | `0+1+4+23+012+013+014+025+035+125+135+…` | 8 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
 | 306 | `[[60,6,3]]` | — | 13 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
-| 307 | `[[60,7,3]]` | — | 14 | `0+2+4+01+02+03+04+05+12+14+16+23+25+2…` | — | — | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 308 | `[[60,7,3]]` | — | 14 | `0+01+02+03+04+12+13+23+45+56+012+013+…` | — | — | AI search | search release 55<=n<=64 | Jain et al. (2026) |
+| 307 | `[[60,7,3]]` | — | 14 | `0+2+4+01+02+03+04+05+12+14+16+23+25+2…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 308 | `[[60,7,3]]` | — | 14 | `0+01+02+03+04+12+13+23+45+56+012+013+…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
 | 309 | `[[60,8,3]]` | — | 15 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
 | 310 | `[[61,3,3]]` | — | 16 | `0+1+2` | 3 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
 | 311 | `[[61,7,3]]` | — | 15 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
 | 312 | `[[62,4,3]]` | — | 12 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
-| 313 | `[[62,6,3]]` | — | 16 | `0+1+2+3+4+01+02+03+04+05+12+13+14+15+…` | 11 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
+| 313 | `[[62,6,3]]` | — | 16 | `0+1+2+3+4+01+02+03+04+05+12+13+14+15+…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
 | 314 | `[[62,6,3]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
-| 315 | `[[62,7,3]]` | — | 17 | `0+01+02+03+04+05+06+012+013+014+015+0…` | — | — | AI search | search release 55<=n<=64 | Jain et al. (2026) |
+| 315 | `[[62,7,3]]` | — | 17 | `0+01+02+03+04+05+06+012+013+014+015+0…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
 | 316 | `[[62,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
 | 317 | `[[63,2,3]]` | — | 8 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
 | 318 | `[[63,3,3]]` | — | 9 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
@@ -418,19 +418,19 @@ report. Full entries are under [References](#references).
 | 326 | `[[63,5,3]]` | — | 11 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
 | 327 | `[[63,6,3]]` | — | 12 | `01+23+45` | 9 | 2 | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
 | 328 | `[[63,6,3]]` | — | 12 | `012+345` | 13 | 3 | AI search | AI search | Jain et al. (2026) |
-| 329 | `[[63,6,3]]` | — | 16 | `0+1+2+3+5+01+02+25+012+013+014+023+02…` | 11 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 330 | `[[63,6,3]]` | — | 16 | `0+1+2+3+4+5+01+02+04+12+13+14+15+23+2…` | 12 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 331 | `[[63,6,3]]` | — | 16 | `0+1+2+3+4+01+02+12+14+23+012+013+024+…` | 10 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 332 | `[[63,6,3]]` | — | 16 | `0+2+3+4+01+14+23+24+012+013+045+145+2…` | 10 | 3 | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 333 | `[[63,7,3]]` | — | 17 | `0+12+13+14+15+26+36+46+56+123+124+125…` | — | — | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 334 | `[[63,7,3]]` | — | 17 | `0+12+13+26+36+45+123+124+125+134+145+…` | — | — | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 335 | `[[63,7,3]]` | — | 17 | `0+12+13+14+15+16+123+124+125+136+146+…` | — | — | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 336 | `[[63,7,3]]` | — | 17 | `0+12+35+56+123+134+135+145+146+234+23…` | — | — | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 337 | `[[63,7,3]]` | — | 17 | `0+12+34+123+134+135+145+146+236+245` | — | — | AI search | search release 55<=n<=64 | Jain et al. (2026) |
+| 329 | `[[63,6,3]]` | — | 16 | `0+1+2+3+5+01+02+25+012+013+014+023+02…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 330 | `[[63,6,3]]` | — | 16 | `0+1+2+3+4+5+01+02+04+12+13+14+15+23+2…` | 12 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 331 | `[[63,6,3]]` | — | 16 | `0+1+2+3+4+01+02+12+14+23+012+013+024+…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 332 | `[[63,6,3]]` | — | 16 | `0+2+3+4+01+14+23+24+012+013+045+145+2…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 333 | `[[63,7,3]]` | — | 17 | `0+12+13+14+15+26+36+46+56+123+124+125…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 334 | `[[63,7,3]]` | — | 17 | `0+12+13+26+36+45+123+124+125+134+145+…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 335 | `[[63,7,3]]` | — | 17 | `0+12+13+14+15+16+123+124+125+136+146+…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 336 | `[[63,7,3]]` | — | 17 | `0+12+35+56+123+134+135+145+146+234+23…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 337 | `[[63,7,3]]` | — | 17 | `0+12+34+123+134+135+145+146+236+245` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
 | 338 | `[[63,7,3]]` | — | 13 | `0+123+456` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
 | 339 | `[[63,7,3]]` | — | 13 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
-| 340 | `[[63,8,3]]` | — | 18 | `0+12+123+145+146+157+245+267` | — | — | AI search | search release 55<=n<=64 | Jain et al. (2026) |
-| 341 | `[[63,8,3]]` | — | 18 | `0+12+46+123+145+267+346` | — | — | AI search | search release 55<=n<=64 | Jain et al. (2026) |
+| 340 | `[[63,8,3]]` | — | 18 | `0+12+123+145+146+157+245+267` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 341 | `[[63,8,3]]` | — | 18 | `0+12+46+123+145+267+346` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
 | 342 | `[[63,8,3]]` | — | 14 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
 | 343 | `[[63,9,3]]` | — | 15 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
 | 344 | `[[63,10,3]]` | — | 16 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
@@ -5587,9 +5587,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 334 (`record 334 of the released catalogue, stored length 55`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 334 (`record 334 of the released catalogue, stored length 55`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5602,9 +5602,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 266 (`record 266 of the released catalogue, stored length 55`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 266 (`record 266 of the released catalogue, stored length 55`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5617,9 +5617,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 697 (`record 697 of the released catalogue, stored length 55`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 697 (`record 697 of the released catalogue, stored length 55`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5632,9 +5632,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 148 (`record 148 of the released catalogue, stored length 56, redundant zero column dropped`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 148 (`record 148 of the released catalogue, stored length 56, redundant zero column dropped`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5647,9 +5647,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 406 (`record 406 of the released catalogue, stored length 55`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 406 (`record 406 of the released catalogue, stored length 55`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5662,9 +5662,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 441 (`record 441 of the released catalogue, stored length 55`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 441 (`record 441 of the released catalogue, stored length 55`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5677,9 +5677,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 91 (`record 91 of the released catalogue, stored length 56, redundant zero column dropped`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 91 (`record 91 of the released catalogue, stored length 56, redundant zero column dropped`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5755,9 +5755,9 @@ readable copy of exactly these rows.
 - `N = 13` (5 outputs + 8 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 4, 5]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 52 (`record 52 of the released catalogue, stored length 56`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 52 (`record 52 of the released catalogue, stored length 56`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5770,9 +5770,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 12, 16]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 750 (`record 750 of the released catalogue, stored length 56`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 750 (`record 750 of the released catalogue, stored length 56`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5785,9 +5785,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 20, 21]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 141 (`record 141 of the released catalogue, stored length 56`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 141 (`record 141 of the released catalogue, stored length 56`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5915,9 +5915,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 84 (`record 84 of the released catalogue, stored length 60, redundant zero column dropped`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 84 (`record 84 of the released catalogue, stored length 60, redundant zero column dropped`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5930,9 +5930,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 41 (`record 41 of the released catalogue, stored length 60, redundant zero column dropped`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 41 (`record 41 of the released catalogue, stored length 60, redundant zero column dropped`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5945,9 +5945,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 16 (`record 16 of the released catalogue, stored length 60, redundant zero column dropped`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 16 (`record 16 of the released catalogue, stored length 60, redundant zero column dropped`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5960,9 +5960,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 38 (`record 38 of the released catalogue, stored length 60, redundant zero column dropped`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 38 (`record 38 of the released catalogue, stored length 60, redundant zero column dropped`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5975,9 +5975,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 69 (`record 69 of the released catalogue, stored length 60, redundant zero column dropped`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 69 (`record 69 of the released catalogue, stored length 60, redundant zero column dropped`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -5990,9 +5990,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 88 (`record 88 of the released catalogue, stored length 60, redundant zero column dropped`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 88 (`record 88 of the released catalogue, stored length 60, redundant zero column dropped`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6005,9 +6005,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 32 (`record 32 of the released catalogue, stored length 60, redundant zero column dropped`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 32 (`record 32 of the released catalogue, stored length 60, redundant zero column dropped`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6050,9 +6050,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 13, 14]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 558 (`record 558 of the released catalogue, stored length 60, redundant zero column dropped`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 558 (`record 558 of the released catalogue, stored length 60, redundant zero column dropped`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6065,9 +6065,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 703 (`record 703 of the released catalogue, stored length 60, redundant zero column dropped`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 703 (`record 703 of the released catalogue, stored length 60, redundant zero column dropped`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6080,9 +6080,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 6]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 712 (`record 712 of the released catalogue, stored length 60, redundant zero column dropped`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 712 (`record 712 of the released catalogue, stored length 60, redundant zero column dropped`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6110,10 +6110,10 @@ readable copy of exactly these rows.
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
 - discovery: AI search
-- regime: AI search; search release 55<=n<=64 — found by an AI search campaign; a verified witness, not a maximum
+- regime: AI search; AI search: generalised triorthogonal search 55<=n<=64 — found by an AI search campaign; a verified witness, not a maximum
 - citation: Jain et al. (2026)
 - source: `AI search` · msAI:16e3add7dcc34a57 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
-- source: `search release 55<=n<=64` · release record 69012 (`record 69012 of the released catalogue, stored length 60, redundant zero column dropped`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 69012 (`record 69012 of the released catalogue, stored length 60, redundant zero column dropped`)
 - note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 - note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 
@@ -6195,9 +6195,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 78 (`record 78 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 78 (`record 78 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6210,9 +6210,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 34 (`record 34 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 34 (`record 34 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6225,9 +6225,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 51 (`record 51 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 51 (`record 51 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6240,9 +6240,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 30 (`record 30 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 30 (`record 30 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6255,9 +6255,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 63 (`record 63 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 63 (`record 63 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6270,9 +6270,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 7]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 59 (`record 59 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 59 (`record 59 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6285,9 +6285,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 21 (`record 21 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 21 (`record 21 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6300,9 +6300,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 47 (`record 47 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 47 (`record 47 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6315,9 +6315,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 9]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 23 (`record 23 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 23 (`record 23 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6330,9 +6330,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 36 (`record 36 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 36 (`record 36 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6345,9 +6345,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 19 (`record 19 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 19 (`record 19 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6360,9 +6360,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 9, 10]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 27 (`record 27 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 27 (`record 27 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6375,9 +6375,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 25 (`record 25 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 25 (`record 25 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6390,9 +6390,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 7, 8]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 61 (`record 61 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 61 (`record 61 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6405,9 +6405,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 8 (`record 8 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 8 (`record 8 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6420,9 +6420,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 71 (`record 71 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 71 (`record 71 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6435,9 +6435,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 7]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 67 (`record 67 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 67 (`record 67 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6450,9 +6450,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 81 (`record 81 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 81 (`record 81 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6465,9 +6465,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 49 (`record 49 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 49 (`record 49 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6480,9 +6480,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 56 (`record 56 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 56 (`record 56 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6495,9 +6495,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 65 (`record 65 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 65 (`record 65 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6510,9 +6510,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 74 (`record 74 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 74 (`record 74 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6525,9 +6525,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 12 (`record 12 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 12 (`record 12 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6540,9 +6540,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 4]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 44 (`record 44 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 44 (`record 44 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6555,9 +6555,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 14 (`record 14 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 14 (`record 14 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6570,9 +6570,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 10 (`record 10 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 10 (`record 10 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6585,9 +6585,9 @@ readable copy of exactly these rows.
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 2 (`record 2 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 2 (`record 2 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6600,9 +6600,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 12, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 15, 17]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 275 (`record 275 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 275 (`record 275 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6615,9 +6615,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 138 (`record 138 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 138 (`record 138 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6630,9 +6630,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 241 (`record 241 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 241 (`record 241 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6645,9 +6645,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 10]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 619 (`record 619 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 619 (`record 619 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6660,9 +6660,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 6]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 570 (`record 570 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 570 (`record 570 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6675,9 +6675,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 12, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 263 (`record 263 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 263 (`record 263 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6690,9 +6690,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 199 (`record 199 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 199 (`record 199 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6705,9 +6705,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 353 (`record 353 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 353 (`record 353 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6720,9 +6720,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 535 (`record 535 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 535 (`record 535 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6735,9 +6735,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 496 (`record 496 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 496 (`record 496 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6750,9 +6750,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 523 (`record 523 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 523 (`record 523 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6765,9 +6765,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 7, 9]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 364 (`record 364 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 364 (`record 364 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6780,9 +6780,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 542 (`record 542 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 542 (`record 542 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6795,9 +6795,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 10]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 399 (`record 399 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 399 (`record 399 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6810,9 +6810,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 439 (`record 439 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 439 (`record 439 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6825,9 +6825,9 @@ readable copy of exactly these rows.
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 480 (`record 480 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 480 (`record 480 of the released catalogue, stored length 60`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6854,9 +6854,9 @@ readable copy of exactly these rows.
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 9]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 41701 (`record 41701 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 41701 (`record 41701 of the released catalogue, stored length 60`)
 - note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 - note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 
@@ -6870,9 +6870,9 @@ readable copy of exactly these rows.
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 80466 (`record 80466 of the released catalogue, stored length 60`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 80466 (`record 80466 of the released catalogue, stored length 60`)
 - note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 - note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 
@@ -6946,9 +6946,9 @@ readable copy of exactly these rows.
 - `N = 16` (6 outputs + 10 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 153 (`record 153 of the released catalogue, stored length 62`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 153 (`record 153 of the released catalogue, stored length 62`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -6976,9 +6976,9 @@ readable copy of exactly these rows.
 - `N = 17` (7 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 69315 (`record 69315 of the released catalogue, stored length 62`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 69315 (`record 69315 of the released catalogue, stored length 62`)
 - note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 - note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 
@@ -7214,9 +7214,9 @@ readable copy of exactly these rows.
 - `N = 16` (6 outputs + 10 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 614 (`record 614 of the released catalogue, stored length 63`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 614 (`record 614 of the released catalogue, stored length 63`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -7229,9 +7229,9 @@ readable copy of exactly these rows.
 - `N = 16` (6 outputs + 10 checks), exact minimal T-count 12, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 482 (`record 482 of the released catalogue, stored length 63`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 482 (`record 482 of the released catalogue, stored length 63`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -7244,9 +7244,9 @@ readable copy of exactly these rows.
 - `N = 16` (6 outputs + 10 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 662 (`record 662 of the released catalogue, stored length 63`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 662 (`record 662 of the released catalogue, stored length 63`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -7259,9 +7259,9 @@ readable copy of exactly these rows.
 - `N = 16` (6 outputs + 10 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 111 (`record 111 of the released catalogue, stored length 63`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 111 (`record 111 of the released catalogue, stored length 63`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
 ```text
@@ -7274,9 +7274,9 @@ readable copy of exactly these rows.
 - `N = 17` (7 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 80612 (`record 80612 of the released catalogue, stored length 63`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 80612 (`record 80612 of the released catalogue, stored length 63`)
 - note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 - note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 
@@ -7290,9 +7290,9 @@ readable copy of exactly these rows.
 - `N = 17` (7 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 1756 (`record 1756 of the released catalogue, stored length 63`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 1756 (`record 1756 of the released catalogue, stored length 63`)
 - note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 - note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 
@@ -7306,9 +7306,9 @@ readable copy of exactly these rows.
 - `N = 17` (7 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 80758 (`record 80758 of the released catalogue, stored length 63`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 80758 (`record 80758 of the released catalogue, stored length 63`)
 - note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 - note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 
@@ -7322,9 +7322,9 @@ readable copy of exactly these rows.
 - `N = 17` (7 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 44385 (`record 44385 of the released catalogue, stored length 63`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 44385 (`record 44385 of the released catalogue, stored length 63`)
 - note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 - note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 
@@ -7338,9 +7338,9 @@ readable copy of exactly these rows.
 - `N = 17` (7 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 78226 (`record 78226 of the released catalogue, stored length 63`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 78226 (`record 78226 of the released catalogue, stored length 63`)
 - note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 - note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 
@@ -7391,9 +7391,9 @@ readable copy of exactly these rows.
 - `N = 18` (8 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 81033 (`record 81033 of the released catalogue, stored length 63`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 81033 (`record 81033 of the released catalogue, stored length 63`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -7407,9 +7407,9 @@ readable copy of exactly these rows.
 - `N = 18` (8 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: search release 55<=n<=64 — verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum
+- regime: AI search: generalised triorthogonal search 55<=n<=64 — found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `search release 55<=n<=64` · release record 80913 (`record 80913 of the released catalogue, stored length 63`)
+- source: `AI search: generalised triorthogonal search 55<=n<=64` · release record 80913 (`record 80913 of the released catalogue, stored length 63`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
