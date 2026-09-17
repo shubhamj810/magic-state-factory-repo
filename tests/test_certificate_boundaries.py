@@ -84,8 +84,8 @@ class TestCensusCertificate(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        rank7 = _module("classification/rank7_census", "rank7")
-        cls.build_catalog = _module("classification/rank7_census", "build_catalog")
+        rank7 = _module("classification/legacy/rank7_census", "rank7")
+        cls.build_catalog = _module("classification/legacy/rank7_census", "build_catalog")
         cls.window = rank7.WINDOW_NMAX
         cls.count_parents = staticmethod(rank7.count_parents)
         with tempfile.TemporaryDirectory() as tmp:
@@ -193,10 +193,10 @@ class TestExhaustiveInputPasses(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.build_catalog = _module("classification/exhaustive_n38", "build_catalog")
+        cls.build_catalog = _module("classification/legacy/exhaustive_n38", "build_catalog")
         files = sorted(p for p in cls.build_catalog.RESULTS.glob("*.json")
                        if "certificate" not in p.name)
-        assert files, "no result passes in classification/exhaustive_n38/results"
+        assert files, "no result passes in classification/legacy/exhaustive_n38/results"
         # `factories` is emptied rather than carried: validate_inputs never reads
         # the rows (build_catalog re-derives each one later), and deep-copying
         # tens of thousands of them once per mutation would dominate the runtime.
@@ -394,6 +394,12 @@ class TestMasterCatalogueRow(unittest.TestCase):
                 "discovery": "whether a classification catalogue already had "
                              "the class; provenance, and checked against the "
                              "regimes by master_catalog/tests instead",
+                "citations": "which papers credit the class: a curation "
+                             "decision nothing derivable from columns can "
+                             "confirm or refute; that every key resolves "
+                             "against the header is a FILE-level check "
+                             "(verify_catalog.citation_problems), and the "
+                             "crediting rules are pinned by master_catalog/tests",
                 "sources": "where the circuit came from -- inert history, not "
                            "paths: nothing in the folder opens one, and a row "
                            "is true or false on its columns alone",
@@ -620,7 +626,7 @@ class TestShardCoverage(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.rowspace = _module("classification/exhaustive_n38", "classify_rowspace")
+        cls.rowspace = _module("classification/legacy/exhaustive_n38", "classify_rowspace")
         tasks = cls.rowspace.manifest_tasks(sorted(cls.rowspace.ROWSPACE_NS), 8)
         cls.tasks = tasks
         cls.baseline = {

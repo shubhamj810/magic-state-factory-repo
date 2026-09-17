@@ -1,9 +1,11 @@
 # Master catalogue
 
-The owner's permanent collection of factory results: one table of **every
-Clifford level-3, distance ≥ 3 factory** this repository holds, with every row
-carrying its own explicit circuit and every published number re-derivable from
-that circuit alone.
+**This directory is the repository's database.** It holds the permanent
+collection of factory protocols: one table of **every Clifford level-3, distance
+≥ 3 factory** this repository holds. Every row carries its own explicit circuit,
+and every published number can be re-derived from that circuit alone. Rows come
+from the exhaustive length-54 classification, the AI-assisted searches, the
+literature and [community contributions](../community_contributions/).
 
 | file | contents |
 |---|---|
@@ -14,7 +16,7 @@ that circuit alone.
 | [`catalogfile.py`](catalogfile.py) | reading, writing and rendering the two files; no verification logic |
 | [`attribute_classification.py`](attribute_classification.py) | credit a classification catalogue on the rows it certifies -- provenance only, no circuit field is touched; needed because a class first merged from a search and later covered by a classification is a `duplicate` to `merge_results.py`, which changes nothing |
 | [`faultcore.py`](faultcore.py), [`glcanon.py`](glcanon.py), [`skcanon.py`](skcanon.py), [`gatelabels.py`](gatelabels.py) | the primitives: fault search, the `GL(k,2)` class decision, the `S_k` frame, reading a claimed gate string |
-| [`migrations/`](migrations/) | the one-off scripts that re-keyed the catalogue on `GL(k,2)` classes and added its citations (2026-09-15), recorded the gamma release's distance certificates and merged the length-54 classification (2026-09-16), kept so each change can be re-run and read |
+| [`migrations/`](migrations/) | the one-off scripts that made structural changes to the file (keying on `GL(k,2)` classes, citations, distance certificates, the length-54 classification, source paths, header wording), kept so each can be re-run and read |
 | [`reduced_degree_cache.json`](reduced_degree_cache.json) | memoised reduced-degree bounds, so re-verifying a `k = 5, 6` row is a lookup rather than a ~100 s re-search |
 | [`tests/`](tests/) | an independent re-derivation of the shipped file, plus the verifier's and merger's own suites |
 
@@ -42,7 +44,7 @@ merge_results                        imports verify_catalog, so "verified to
 
 ## What is in it
 
-Currently **804 distinct `(n, k, d, GL(k,2) gate)` classes**, 217 of them with
+**804 distinct `(n, k, d, GL(k,2) gate)` classes**, 217 of them with
 `n ≤ 54`. Widths run `k = 1..373`, injection counts `n = 15..1715`, and
 distances `d = 3..7`.
 
@@ -51,10 +53,9 @@ output basis (a CNOT frame) and diagonal Clifford corrections — the CNOT+S
 output equivalence of the length-54 classification. Two circuits at the same
 distance whose gates differ only by such a frame, `T0·T1` and `T0·CS01` for
 example, prepare the same magic state and are one row. Circuits at different
-distances are always different rows. This is coarser than the `S_k` key (output permutations only) that the
-classification catalogues use, and that the catalogue itself used until
-2026-09-15, when [`migrations/gl_dedup_2026_09_15.py`](migrations/gl_dedup_2026_09_15.py)
-folded 1,750 `S_k` rows into 632 classes. [`glcanon.py`](glcanon.py) decides the
+distances are always different rows. This is coarser than the `S_k` key (output
+permutations only) that the legacy classification catalogues use: one class can
+hold several `S_k` classes. [`glcanon.py`](glcanon.py) decides the
 relation from the gate's third finite difference, a symmetric trilinear form
 that transforms covariantly and vanishes exactly on Cliffords; see
 [`theory/02_classification.md`](../theory/02_classification.md) for why it is not
@@ -62,8 +63,8 @@ the `F_2` truth-table `gl_class` annotation of the classification catalogues.
 
 The retained circuit for a class is the one with the fewest ambient qubits,
 relabelled into its `S_k`-canonical output frame so the columns shown deposit
-exactly the `gate` shown. Every contributing source — including those of every
-frame that was folded in — stays listed in `sources`. Exact `T`-count and
+exactly the `gate` shown. Every contributing source, in any frame, is listed in
+`sources`. Exact `T`-count and
 reduced degree are CNOT-frame invariants, so they are properties of the class.
 
 Every row also credits the works that state it, in `citations`, resolved against
@@ -72,12 +73,12 @@ links each published one to its DOI or arXiv page.
 
 * **The 74 Pareto points of the length-54 classification** are credited by who
   found them.
-  * **Published before.** Nine are attributed to a published protocol by the
+  * **In the literature.** Nine are attributed to a published protocol by the
     classification's Pareto table (Table `tab:complete-pareto`): Bravyi & Kitaev,
     Nezami & Haah, Jacinto et al. and Gong et al. These are credited to that
     work **alone**.
   * **Also found by our searches.** A Pareto point that this project's own
-    symmetry-SAT or AI searches had already found is credited to the
+    symmetry-SAT or AI searches also found is credited to the
     classification (Wills, Jain and Singh) **and** the symmetry-and-AI report
     (Jain, Wills and Singh).
   * **Everything else** is credited to the classification alone.
@@ -87,6 +88,11 @@ links each published one to its DOI or arXiv page.
 * **`n > 54`.** The published works that state the class with the same `n`,
   `k`, distance and output gate, where there are any, and otherwise the
   symmetry-and-AI report.
+* **A community contribution** that brings a new class is credited to the
+  contributor's own reference. A published work is linked; an unpublished one
+  credits the contributor without a link. A contribution that repeats or
+  improves a class already held does not change that class's credit. See
+  [`../community_contributions/README.md`](../community_contributions/README.md).
 
 The literature matching is in
 [`migrations/literature_citations_2026_09_15.py`](migrations/literature_citations_2026_09_15.py),
@@ -125,10 +131,9 @@ is also the list of what gets checked.
 
 **Provenance is inert.** `sources` and
 `relabelled_into_canonical_frame` record where a class came from and how it
-arrived, in strings and a flag, several of which name source directories this
-folder no longer has. Nothing in this folder ever opens a path one of them
-mentions or computes with the flag: a row is true or false on its columns
-alone, and its history is history.
+arrived, in strings and a flag, several of which name directories outside this
+repository. Nothing in this folder ever opens a path one of them mentions or
+computes with the flag: a row is true or false on its columns alone.
 
 `k` is the one thing that is read rather than derived, because the output/check
 split is a **declaration**: the same columns with a different `k` are a
@@ -281,7 +286,7 @@ The header, in order:
 | regime | a row from it means |
 |---|---|
 | `exhaustive classification n<=54 (Pareto point)` | one of the 74 Pareto points of the exhaustive classification through length 54 ([`../classification/length54/`](../classification/length54/)): nothing with `n ≤ 54`, the same CNOT+S output and the same exact distance uses no more inputs and no more wires, with one strictly fewer |
-| `exhaustive classification n<=54` | inside that classification but not on its frontier; a Pareto point strictly dominates it (tested). The repository's exhaustive `n ≤ 38` classification and rank-7 census were stages of this classification and are credited as it |
+| `exhaustive classification n<=54` | inside that classification but not on its frontier; a Pareto point strictly dominates it (tested). The repository's exhaustive `n ≤ 38` classification and rank-7 census are stages of this classification and are credited as it; their directories are in `classification/legacy/` |
 | `symmetry-SAT search` | found by the symmetry-slot or ansatz-free SAT search ([`../symmetry_sat_search/`](../symmetry_sat_search/)); a verified witness, **not** a maximum |
 | `AI search` | found by an AI search campaign; a verified witness, **not** a maximum |
 | `AI search: punctured r=7 simplex parents`, `AI search: multi-agent campaign 39<=n<=127` | the named AI campaigns; verified witnesses, **not** maxima |
@@ -289,22 +294,27 @@ The header, in order:
 | `AI search: Wills downset framework` | exact optima of one framework (arXiv:2608.24000), not maxima over all factories |
 | `AI search: pure-T width campaign n=255, 511`, `AI search: pure-T puncture caps`, `AI search: full-simplex pure-T frames` | width and cap witnesses, explicitly **not** rate records |
 | `search release 55<=n<=64` | the generalised triorthogonal public search release at lengths 55–64; a discovery archive, not a maximum |
+| `community contribution` | a protocol an outside author submitted through [`../community_contributions/`](../community_contributions/), verified here from its columns; a verified witness, not a maximum. Registered the first time one is merged |
 
 The full sentence for each is in the header and on the first page of
 `MASTER_CATALOG.md`. A regime a merge introduces is registered at the **end** of
 that order, i.e. as the weakest claim — a merged witness can never outrank a
 classification.
 
-`discovery` is a different axis: was the class an **AI discovery**? It is
-`AI search` when an AI search campaign or search release found the class and
-neither a classification stage run in this repository (the `n ≤ 38`
-classification, the rank-7 census) nor the symmetry-SAT search had it, and
-`pre-existing` otherwise. It says nothing about the literature — a class a
-paper published earlier can still be `AI search`; `citations` is what credits
-the literature. A Pareto point our AI searches found before the classification
-confirmed it therefore stays `AI search`; one only the classification has is
-`pre-existing`. A class a campaign found that was **already** catalogued keeps
-`pre-existing`; it is a reproduction, and its `sources` lists both.
+`discovery` is a different axis, read off a row's `sources`:
+
+* `AI search` when an AI search campaign or search release is among them and no
+  classification stage run in this repository (the `n ≤ 38` classification, the
+  rank-7 census), symmetry-SAT search or community contribution is. The
+  length-54 classification does not count against it: a Pareto point an AI
+  search also found is `AI search`;
+* `pre-existing` otherwise — including a class only the length-54
+  classification has.
+
+Sources carry no dates, so the tag says which finders are on record, not who
+was first. A community circuit that improves a class adds a source; a duplicate
+adds none. The tag says nothing about the literature — a published class can be
+`AI search`; `citations` credits the literature.
 
 ## The distance, and what a number in that column means
 
@@ -318,16 +328,16 @@ measured one.
 
 | module | what it does | pinned against |
 |---|---|---|
-| [`faultcore.py`](faultcore.py) | bit-level gate read-off, output structure, fault search at the scale the catalogue reaches (`n` to 1023, `k` to 162) | the literal `C(k,3)` / `C(n,4)` enumerations kept beside the verifier in [`verify_catalog.py`](verify_catalog.py), on every circuit small enough for both |
+| [`faultcore.py`](faultcore.py) | bit-level gate read-off, output structure, fault search at the scale the catalogue reaches (`n` to 1715, `k` to 373) | the literal `C(k,3)` / `C(n,4)` enumerations kept beside the verifier in [`verify_catalog.py`](verify_catalog.py), on every circuit small enough for both |
 | [`glcanon.py`](glcanon.py) | the `GL(k,2)` class decision: tensor, invariants and a budgeted search | a literal enumeration of `GL(k,2)` on `Z_8` truth tables in [`tests/test_glcanon.py`](tests/test_glcanon.py) — every pair at `k = 2, 3`, random pairs at `k = 4`, and all 9,999,360 frames of `GL(5,2)` for a pair whose invariants agree |
-| [`skcanon.py`](skcanon.py) | the `S_k` frame at widths where `k!` is not a loop | `classification/exhaustive_n38/dedup.py`, on 1,200 random gates |
+| [`skcanon.py`](skcanon.py) | the `S_k` frame at widths where `k!` is not a loop | `classification/legacy/exhaustive_n38/dedup.py`, on 1,200 random gates |
 | `factorylib/verification.py` | the repository's standalone verifier, sharing no code with any search or catalogue here | run as a third opinion on every circuit within its reach |
 
 [`tests/`](tests/) re-does the core checks on the shipped file with its **own**
 implementations rather than importing the verifier's, so a mistake has to be
 made twice to go unnoticed. It adds what only a consumer can check: that the
-catalogue still holds every qualifying row of the three catalogues it inherited
-and every Pareto point of the length-54 classification, that no other class with
+catalogue holds every qualifying row of the legacy `n ≤ 38` classification and
+rank-7 census catalogues and of the symmetry-SAT catalogue, and every Pareto point of the length-54 classification, that no other class with
 `n ≤ 54` beats that frontier, that its filter is exactly "level 3, distance ≥ 3",
 that the `discovery` tag and the Pareto points' citations follow their rules,
 and that no class is in the table twice. The verifier's and merger's own suites are mostly **negative** — a

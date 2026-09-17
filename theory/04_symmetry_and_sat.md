@@ -176,8 +176,8 @@ ansatz exploits during the search.
 ## A record is not a classified maximum
 
 Say it plainly, because the catalogues sit side by side and invite the
-confusion. A row from [`../classification/exhaustive_n38/`](../classification/exhaustive_n38/)
-or [`../classification/rank7_census/`](../classification/rank7_census/) is a
+confusion. A row from [`../classification/legacy/exhaustive_n38/`](../classification/legacy/exhaustive_n38/)
+or [`../classification/legacy/rank7_census/`](../classification/legacy/rank7_census/) is a
 statement that nothing else exists in that window. A row from this directory is
 the best that a particular search found, and there are three distinct strengths
 among them:

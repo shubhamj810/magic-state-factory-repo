@@ -220,7 +220,7 @@ a positive control — is re-verified before being returned rather than trusted.
 
 ## Where else this machinery runs
 
-[`../classification/rank7_census/`](../classification/rank7_census/) ships the
+[`../classification/legacy/rank7_census/`](../classification/legacy/rank7_census/) ships the
 same [`factorylib/parent.py`](../factorylib/parent.py) implementation and drives it across its entire outer enumeration: for every
 marked `RM(3,7)` geometry it builds the parent, then calls `classify_gates` to
 enumerate every compatible subspace and read off its phase, deduplicated either
@@ -228,6 +228,6 @@ under `GL(k,2)` or under `S_k`. So the census is exactly this parent-first
 pipeline run over a complete outer list rather than over one parent of interest.
 Use [`../parent_first/cli.py`](../parent_first/cli.py) — `analyze`, `target`,
 `gates` — to interrogate a single parent, and
-[`../classification/rank7_census/cli.py`](../classification/rank7_census/cli.py)
+[`../classification/legacy/rank7_census/cli.py`](../classification/legacy/rank7_census/cli.py)
 to run the sweep. The methodology write-up is
 [`docs/PARENT_CHECK_FIRST.md`](../parent_first/docs/PARENT_CHECK_FIRST.md).

@@ -101,19 +101,19 @@ gives a smaller, completeness-safe representative run for invariant results.
 The data parser provides a global certificate: after correcting the one known
 weight-64 stabilizer typo, the 3,486 orbit sizes sum to `2^64`, the number of
 words in `RM(3,7)`. See
-[`../../classification/rank7_census/data/README.md`](../../classification/rank7_census/data/README.md).
+[`../../classification/legacy/rank7_census/data/README.md`](../../classification/legacy/rank7_census/data/README.md).
 
 ## Reproduction levels
 
 The per-parent commands are this directory's [`../cli.py`](../cli.py); the
 `r <= 7` outer enumeration and the bundled orbit table live in
-[`../../classification/rank7_census/`](../../classification/rank7_census/) and
+[`../../classification/legacy/rank7_census/`](../../classification/legacy/rank7_census/) and
 are driven by its own `cli.py`. Every command below is run from the repository
 root, so none of them depends on the one before it.
 
 ```bash
 # Data and parser only.
-.venv/bin/python classification/rank7_census/cli.py data-check
+.venv/bin/python classification/legacy/rank7_census/cli.py data-check
 
 # One known parent: cheap screens, exact target, then a small gate list.
 .venv/bin/python parent_first/cli.py analyze --factory 51,5,3 --cheap-only
@@ -122,15 +122,15 @@ root, so none of them depends on the one before it.
   --dedup gl --node-budget 0 --orbit-budget 0
 
 # Constrained outer run suitable for a laptop/CI smoke test.
-.venv/bin/python classification/rank7_census/cli.py census \
+.venv/bin/python classification/legacy/rank7_census/cli.py census \
   --class-index 306 --max-parents 2 --kmax 2 --allow-incomplete \
-  --output classification/rank7_census/results/r7_smoke.json
+  --output classification/legacy/rank7_census/results/r7_smoke.json
 
 # Full selected enumeration (cluster scale; no search budgets).
-.venv/bin/python classification/rank7_census/cli.py census \
+.venv/bin/python classification/legacy/rank7_census/cli.py census \
   --mode all --kmax 7 --dedup gl \
   --node-budget 0 --orbit-budget 0 --checkpoint-every 1 \
-  --output classification/rank7_census/results/r7_full_gl.json
+  --output classification/legacy/rank7_census/results/r7_full_gl.json
 ```
 
 The last command is intentionally available but not claimed to be cheap.

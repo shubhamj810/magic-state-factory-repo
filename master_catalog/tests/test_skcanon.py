@@ -1,6 +1,6 @@
 """`skcanon` against the upstream `S_k` key it has to reproduce.
 
-The dedup key is defined in `classification/exhaustive_n38/dedup.py` as the
+The dedup key is defined in `classification/legacy/exhaustive_n38/dedup.py` as the
 lexicographic minimum over all `k!` relabellings of the gate's monomial set.
 `skcanon` computes the same thing three ways -- a closed form for disjoint
 covers, brute force through `k = 9`, and a branch and bound above it -- because
@@ -23,7 +23,7 @@ CATALOGUE = HERE.parent
 REPO = CATALOGUE.parent
 sys.path.insert(0, str(CATALOGUE))
 sys.path.insert(0, str(REPO))
-sys.path.insert(0, str(REPO / "classification" / "exhaustive_n38"))
+sys.path.insert(0, str(REPO / "classification" / "legacy" / "exhaustive_n38"))
 
 import skcanon as SK                                            # noqa: E402
 from dedup import sk_canonical as upstream_key, sk_name         # noqa: E402

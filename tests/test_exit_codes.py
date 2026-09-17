@@ -11,7 +11,7 @@ a budget cap, a capped enumeration, or an unproven optimum is not, and exits
 nonzero unless the caller explicitly asked for a partial run.
 
 Only fast commands are here.  The slower contracts are unit-tested where they
-live: `hard_parent_n31.py --kmax 4` in `classification/exhaustive_n38/tests`,
+live: `hard_parent_n31.py --kmax 4` in `classification/legacy/exhaustive_n38/tests`,
 the shard merge in the same place, and the capped automorphism run in
 `symmetry_sat_search/tests`.
 """
@@ -51,14 +51,14 @@ class TestExitCodes(unittest.TestCase):
         """The documented smoke run is deliberately incomplete."""
         with tempfile.TemporaryDirectory() as tmp:
             self.run_cli(
-                ROOT / "classification" / "rank7_census" / "cli.py", "census",
+                ROOT / "classification" / "legacy" / "rank7_census" / "cli.py", "census",
                 "--class-index", 306, "--max-parents", 1, "--kmax", 1,
                 "--output", Path(tmp) / "census.json", expect=1)
 
     def test_a_capped_census_exits_zero_when_that_was_asked_for(self):
         with tempfile.TemporaryDirectory() as tmp:
             completed = self.run_cli(
-                ROOT / "classification" / "rank7_census" / "cli.py", "census",
+                ROOT / "classification" / "legacy" / "rank7_census" / "cli.py", "census",
                 "--class-index", 306, "--max-parents", 1, "--kmax", 1,
                 "--allow-incomplete",
                 "--output", Path(tmp) / "census.json", expect=0)
@@ -67,7 +67,7 @@ class TestExitCodes(unittest.TestCase):
 
     def test_the_orbit_table_check_exits_zero(self):
         """A control: the boundary is 'unanswered', not 'ran at all'."""
-        self.run_cli(ROOT / "classification" / "rank7_census" / "cli.py",
+        self.run_cli(ROOT / "classification" / "legacy" / "rank7_census" / "cli.py",
                      "data-check", expect=0)
 
     # ------------------------------------------------------- slot search

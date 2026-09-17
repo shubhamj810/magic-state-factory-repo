@@ -7,7 +7,7 @@ the output qubits (`theory/02_classification.md`, relation 1).  A CNOT frame
 change is a different circuit and keeps its own row; the ``GL(k,2)`` class is
 strictly coarser and is only ever an annotation.  None of that changes here.
 
-What changes is ``k``.  `classification/exhaustive_n38/dedup.py` computes the key
+What changes is ``k``.  `classification/legacy/exhaustive_n38/dedup.py` computes the key
 by minimising over all ``k!`` relabellings, which is exact and instant at the
 ``k <= 6`` those catalogues reach and is 1e289 permutations at the ``k = 162``
 this catalogue's widest rows reach.  This module keeps the same definition and

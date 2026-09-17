@@ -7,8 +7,8 @@ reproducible classifications are compared and interpreted together.
 
 It merges
 
-  ../../classification/exhaustive_n38/catalog/classification_n38.json
-  ../../classification/rank7_census/catalog/census_r7.json
+  ../../classification/legacy/exhaustive_n38/catalog/classification_n38.json
+  ../../classification/legacy/rank7_census/catalog/census_r7.json
   ../../symmetry_sat_search/catalog/factories.json
 
 and plots them keyed by phase-polynomial degree (marker SHAPE) and exact
@@ -39,10 +39,10 @@ excluded row on stdout.
 Banding, by how strong the claim behind each region is:
 
   n <= 38  green   exhaustive quotient classification, EVERY check count r
-                   (classification/exhaustive_n38); the dotted diagonal
+                   (classification/legacy/exhaustive_n38); the dotted diagonal
                    n + k = 38 is the edge of that window
   n <= 44  blue    exhaustive census for r <= 7 check qubits
-                   (classification/rank7_census)
+                   (classification/legacy/rank7_census)
   n >  44  plain   targeted search only -- best known, NOT a classified maximum
                    (symmetry_sat_search)
 
@@ -84,8 +84,8 @@ HERE = Path(__file__).resolve().parent
 PDF_METADATA = {"CreationDate": None}
 REPO = HERE.parent.parent
 
-N38 = REPO / "classification" / "exhaustive_n38" / "catalog" / "classification_n38.json"
-R7 = REPO / "classification" / "rank7_census" / "catalog" / "census_r7.json"
+N38 = REPO / "classification" / "legacy" / "exhaustive_n38" / "catalog" / "classification_n38.json"
+R7 = REPO / "classification" / "legacy" / "rank7_census" / "catalog" / "census_r7.json"
 SEARCH = REPO / "symmetry_sat_search" / "catalog" / "factories.json"
 
 REGIME_EXHAUSTIVE = "exhaustive n<=38"

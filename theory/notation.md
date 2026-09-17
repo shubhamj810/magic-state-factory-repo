@@ -47,7 +47,7 @@ Always `tau_D <= mu_d <= kappa_d`, and each inequality can be strict.
 | symbol | relation | role |
 | --- | --- | --- |
 | `S_k` | permute the `k` output wires | **the classification catalogues' key**: same circuit, relabelled |
-| CNOT+S (`GL(k,2)` on the `Z_8` phase) | change the output basis, modulo diagonal Cliffords | a different written phase polynomial but the **same magic state**; **the master catalogue's key** since 2026-09-15, decided by `master_catalog/glcanon.py` |
+| CNOT+S (`GL(k,2)` on the `Z_8` phase) | change the output basis, modulo diagonal Cliffords | a different written phase polynomial but the **same magic state**; **the master catalogue's key**, decided by `master_catalog/glcanon.py` |
 | `F_2` truth-table `GL(k,2)` | substitution `f -> f o M` on the gate read as a Boolean function over `F_2` | stored in the classification catalogues as an annotation (`gl_class` / `gate_gl_canonical`); coarser than `S_k` but NOT the magic-state relation (it separates `0+1` from `0+01`); `\|GL(k,2)\| = 6, 168, 20160, 9999360` for `k = 2..5` |
 
 Row counts under `S_k` are representation-dependent upper bounds on the number
@@ -120,7 +120,7 @@ which one it reports.
 | **witness** (circuit) | one explicit column list. Two witnesses can realise the same gate in different output labellings, or even be byte-identical under different labels | the rank-7 census stores **28** T-count-5 witnesses |
 | **`S_k` class** — *the classification catalogues' key* | one `(n, k, gate up to output permutation)` triple. This is the row count of the classification catalogues | those 28 witnesses are **21** `S_k` classes |
 | **`F_2` `GL(k,2)` annotation class** | one orbit of the gate's `F_2` truth table under `f -> f o M`, stored per row as an annotation, coarser than `S_k` | the same 21 collapse to **13** |
-| **CNOT+S class** — *the master catalogue's key* | one `(n, k, d, gate up to a CNOT frame and diagonal Cliffords)` tuple, decided by `master_catalog/glcanon.py`; circuits at different distances are different classes | the master catalogue's 1,750 `S_k` rows are **632** CNOT+S classes |
+| **CNOT+S class** — *the master catalogue's key* | one `(n, k, d, gate up to a CNOT frame and diagonal Cliffords)` tuple, decided by `master_catalog/glcanon.py`; circuits at different distances are different classes | the rank-7 census's 21 T-count-5 `S_k` classes are **2** CNOT+S classes, the two `[[43,k,3]]` master-catalogue rows with T-count 5 |
 | **stored representative** | a raw census/search output before any deduplication, kept for provenance | the rank-7 census's 28 witnesses above; the master catalogue keeps every one it absorbed in its rows' `sources` |
 
 A row count is therefore an upper bound on the number of inequivalent *gates*

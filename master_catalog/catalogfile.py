@@ -412,16 +412,15 @@ def render_markdown(payload: dict) -> str:
     A("the retained circuit is the one with the fewest ambient qubits. `regimes`")
     A("therefore tells you the strongest claim available for that class.")
     A("")
-    A("`discovery` says whether a class was **an AI discovery**: "
+    A("`discovery` says whether a class is **found only by AI search**: "
       f"**{by_discovery['AI search']}** rows are")
-    A("`AI search` — found by an AI search campaign or a search release and by")
-    A("no classification stage run here or symmetry-SAT search — and "
+    A("`AI search` — found only by AI search campaigns or search releases — and "
       f"**{by_discovery['pre-existing']}** are")
-    A("`pre-existing`. Whether a class was new to the literature is what")
-    A("`citation` says, not `discovery`.")
-    A("A class a search campaign found that an earlier classification stage or")
-    A("the symmetry-SAT search already had keeps `pre-existing`; it is a")
-    A("reproduction, and its `sources` shows both.")
+    A("`pre-existing` — a classification stage run in this repository, the")
+    A("symmetry-SAT search or a community contribution has them, or the length-54")
+    A("classification alone does. A class both an AI search and the length-54")
+    A("classification found is `AI search`. Whether a class was new to the")
+    A("literature is what `citation` says, not `discovery`.")
     A("")
     A("Level-2, level-4 and distance-2 circuits are outside this table by")
     A("definition: a different rotation angle, or a distance this window makes no")
@@ -468,10 +467,11 @@ def render_markdown(payload: dict) -> str:
                 labels.append(entry["short"])
         return "; ".join(labels)
 
-    A("`citation` names the papers that credit the class. A class published")
-    A("before is credited to that work alone, linked; otherwise to the")
-    A("length-54 classification and/or the symmetry-and-AI report. Full entries")
-    A("are under [References](#references).")
+    A("`citation` names the papers that credit the class. A class in the")
+    A("published literature is credited to that work alone, linked; a class a")
+    A("community contribution brought, to its contributor's work; every other")
+    A("class, to the length-54 classification and/or the symmetry-and-AI")
+    A("report. Full entries are under [References](#references).")
     A("")
     A("| # | `[[n,k,d]]` | cert d | N | gate | T | deg | discovery | "
       "regime(s) | citation |")

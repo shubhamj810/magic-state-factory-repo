@@ -3,8 +3,8 @@
 `S_k` -- the gate up to a permutation of the output qubits -- is the dedup key
 every catalogue here is built on, and it is implemented four times:
 
-    classification/exhaustive_n38/dedup.py      the catalogue key
-    classification/rank7_census/build_catalog.py
+    classification/legacy/exhaustive_n38/dedup.py      the catalogue key
+    classification/legacy/rank7_census/build_catalog.py
     symmetry_sat_search/verify_catalog.py
     factorylib/parent.py                        the shared parent model
 
@@ -54,8 +54,8 @@ def _load(relative: str, alias: str):
     return module
 
 
-DEDUP = _load("classification/exhaustive_n38/dedup.py", "sk_dedup")
-CENSUS = _load("classification/rank7_census/build_catalog.py", "sk_census")
+DEDUP = _load("classification/legacy/exhaustive_n38/dedup.py", "sk_dedup")
+CENSUS = _load("classification/legacy/rank7_census/build_catalog.py", "sk_census")
 SEARCH = _load("symmetry_sat_search/verify_catalog.py", "sk_search")
 from factorylib.parent import sk_canonical as parent_sk          # noqa: E402
 
@@ -66,8 +66,8 @@ CATALOGUE = (("exhaustive_n38/dedup", DEDUP.sk_canonical),
 
 #: Catalogue files whose stored gates are also fed through every implementation.
 SOURCES = (
-    "classification/exhaustive_n38/catalog/classification_n38.json",
-    "classification/rank7_census/catalog/census_r7.json",
+    "classification/legacy/exhaustive_n38/catalog/classification_n38.json",
+    "classification/legacy/rank7_census/catalog/census_r7.json",
     "master_catalog/master_catalog.json",
 )
 

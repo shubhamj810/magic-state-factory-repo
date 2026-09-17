@@ -19,8 +19,8 @@ It also rejects a circuit whose declared width is inflated — whose output rows
 are linearly dependent modulo the check span. One output CNOT turns a dependent
 row into a check-span vector, which carries no monomial of any degree, so the
 circuit is really a narrower factory with an idle `|+>` spectator attached: same
-`n`, same distance, same exact T-count, more wires. Five such rows were removed
-from this file when the check was added:
+`n`, same distance, same exact T-count, more wires. The builder rejects such
+rows. Five examples, each with the narrower circuit that dominates it:
 
 | row | effective width | dominated by |
 |---|---|---|
@@ -30,18 +30,15 @@ from this file when the check was added:
 | `[[8,4,2]]` `CCZ123.CCZ124.CCZ134` | 3 | `[[8,3,2]]` `CCZ`, also T-count 7 |
 | `[[12,6,2]]` `CCZ123.CCZ124.CCZ125.CCZ135.CCZ136` | 5 | `[[12,5,2]]`, also T-count 11 |
 
-The dominating circuit is in the catalogue in every case, so nothing was lost:
-each removed row was the same resource on wider output registers.
+The dominating circuit is in the catalogue in every case: each wide row is the
+same resource on a wider output register.
 
-Three further rows were **merged** rather than removed. The analytic `T`, `CS`
-and `CCZ` simplex circuits at `[[14,1,2]]`, `[[12,2,2]]` and `[[8,3,2]]` turned
-out to be byte-identical to their ansatz-free CP-SAT rediscoveries, which had
-been catalogued separately as `T (N=4)`, `CS (N=4)` and `CCZ (N=4)`. Each pair
-is now one row whose `provenance` records both routes — the closed form and the
-independent search that found the same circuit. That is worth knowing about a
-circuit, but it is one circuit, so it is one row.
+The analytic `T`, `CS` and `CCZ` simplex circuits at `[[14,1,2]]`, `[[12,2,2]]`
+and `[[8,3,2]]` are byte-identical to their ansatz-free CP-SAT rediscoveries, so
+each is one row whose `provenance` records both routes — the closed form and
+the independent search that found the same circuit.
 
-The builder enforces both rules now: it rejects a second copy of a circuit
+The builder enforces both rules: it rejects a second copy of a circuit
 already present at the same level, `k` and distance, and it requires labels to
 be unique, since labels are how rows are referenced from the catalogue, the
 figures and the theory notes.

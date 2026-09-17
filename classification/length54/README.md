@@ -14,7 +14,7 @@ Triorthogonal Codes through Length 54*, in preparation).
 `pareto_frontier.json` is **byte-identical** to `data/protocols/pareto_frontier.json`
 in the classification's code and theory delivery,
 `AWillsQuantum/generalised_triorthogonal_classification`, at commit
-`9de3c553ed6658e29e504866a04b08702cfeb248` (2026-09-15). Its SHA-256,
+`9de3c553ed6658e29e504866a04b08702cfeb248`. Its SHA-256,
 `5f60bbd546769a71dbadbe97992b091fabc77b8c20b1697d869dc0c1484d7e95`, is the one
 that delivery's `MANIFEST.json` records. The delivery's own witness verifier,
 `code/verify_protocols.py`, passes on this copy.

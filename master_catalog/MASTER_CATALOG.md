@@ -33,10 +33,10 @@ witness are different kinds of statement.
 | `AI search (gamma frontier): logical restriction of a length-54 Pareto point` (11 rows) | a restriction to fewer logical rows of a Pareto point of the length-54 classification, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows |
 | `AI search (gamma frontier): punctured Reed-Muller code` (1 rows) | a punctured Reed-Muller code found by the gamma sub-1000 AI campaign (RM(3,10) punctured at 123 points), filed with the pure-T distillation-exponent frontier (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum |
 | `AI search: Wills downset framework` (2 rows) | verified witness from the 2026-09-14 wills_downset_theory campaign in magic-states-AI, which solved the arXiv:2608.24000 downset framework EXACTLY at every n <= 1000; the d=7 and d=8 rows are proved optima of that framework, not merely best-found, but the framework is one family and they are not maxima over all factories |
-| `AI search: pure-T width campaign n=255, 511` (2 rows) | new [[n,k,d]] classes at n=255 and n=511 (the n=511 one the first at d=3 there) -- pure disjoint T^k, verified from columns. NOT rate records: CORRECTION 2026-09-15, both are strictly dominated by direct sums of the catalogued [[127,23,3]] (rho 5.5217) -- 2 copies give [[254,46,3]] and 4 give [[508,92,3]], each with FEWER inputs and MORE outputs than the row here. Beating the derived baseline needs k>=47 at n=255 and k>=93 at n=511. |
+| `AI search: pure-T width campaign n=255, 511` (2 rows) | new [[n,k,d]] classes at n=255 and n=511 (the n=511 one the first at d=3 there) -- pure disjoint T^k, verified from columns. NOT rate records: both are strictly dominated by direct sums of the catalogued [[127,23,3]] (rho 5.5217) -- 2 copies give [[254,46,3]] and 4 give [[508,92,3]], each with FEWER inputs and MORE outputs than the row here. Beating the derived baseline needs k>=47 at n=255 and k>=93 at n=511. |
 | `search release 55<=n<=64` (79 rows) | verified witness from the generalised triorthogonal public search release at lengths 55-64; a discovery archive, not a maximum |
 | `AI search: pure-T puncture caps` (2 rows) | cap witnesses, NOT records. Each ATTAINS a proved maximum puncture count for its ambient size at d=6, making that bound exact rather than an upper bound: m=8 gives [[248,8,6]] and m=9 gives [[496,16,6]], both with n/t = 31 exactly, hence gamma = log(31)/log(6) = 1.9165 independent of m. Filed as evidence that these cells are closed, not as frontier points -- the d=6 pure-T bar is gamma 1.063146. |
-| `AI search: full-simplex pure-T frames` (2 rows) | widest pure-T frames held at n=511 (81 before 2026-09-15). DOMINATED on rate by the derived direct-sum baseline [[508,92,3]] = 4 x [[127,23,3]], rho = 508/92 = 5.5217 (an earlier revision of this string quoted 5.5543, which is 511/92 -- the ratio of a different circuit than the one named; corrected 2026-09-15). These are WIDTH points, explicitly NOT rate records: beating the baseline at n=511 needs k >= 93. |
+| `AI search: full-simplex pure-T frames` (2 rows) | widest pure-T frames held at n=511. DOMINATED on rate by the derived direct-sum baseline [[508,92,3]] = 4 x [[127,23,3]], rho = 508/92 = 5.5217. These are WIDTH points, explicitly NOT rate records: beating the baseline at n=511 needs k >= 93. |
 
 A **class** is `(n, k, d, gate)` with the gate taken up to an invertible
 change of the output basis (a CNOT frame, `GL(k,2)`) and diagonal Clifford
@@ -51,14 +51,13 @@ row** here, with every contributing source listed in its `sources` field;
 the retained circuit is the one with the fewest ambient qubits. `regimes`
 therefore tells you the strongest claim available for that class.
 
-`discovery` says whether a class was **an AI discovery**: **624** rows are
-`AI search` — found by an AI search campaign or a search release and by
-no classification stage run here or symmetry-SAT search — and **180** are
-`pre-existing`. Whether a class was new to the literature is what
-`citation` says, not `discovery`.
-A class a search campaign found that an earlier classification stage or
-the symmetry-SAT search already had keeps `pre-existing`; it is a
-reproduction, and its `sources` shows both.
+`discovery` says whether a class is **found only by AI search**: **624** rows are
+`AI search` — found only by AI search campaigns or search releases — and **180** are
+`pre-existing` — a classification stage run in this repository, the
+symmetry-SAT search or a community contribution has them, or the length-54
+classification alone does. A class both an AI search and the length-54
+classification found is `AI search`. Whether a class was new to the
+literature is what `citation` says, not `discovery`.
 
 Level-2, level-4 and distance-2 circuits are outside this table by
 definition: a different rotation angle, or a distance this window makes no
@@ -83,10 +82,11 @@ measured distance. `cert d` is a distance the row's source certifies
 where this folder could only prove the floor; it is not re-measured
 here, and a `≥` there means the source certifies only a lower bound.
 
-`citation` names the papers that credit the class. A class published
-before is credited to that work alone, linked; otherwise to the
-length-54 classification and/or the symmetry-and-AI report. Full entries
-are under [References](#references).
+`citation` names the papers that credit the class. A class in the
+published literature is credited to that work alone, linked; a class a
+community contribution brought, to its contributor's work; every other
+class, to the length-54 classification and/or the symmetry-and-AI
+report. Full entries are under [References](#references).
 
 | # | `[[n,k,d]]` | cert d | N | gate | T | deg | discovery | regime(s) | citation |
 |---:|---|---:|---:|---|---:|---:|---|---|---|
@@ -12084,7 +12084,7 @@ readable copy of exactly these rows.
 - `N = 51` (43 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
 - discovery: AI search
-- regime: AI search: pure-T width campaign n=255, 511 — new [[n,k,d]] classes at n=255 and n=511 (the n=511 one the first at d=3 there) -- pure disjoint T^k, verified from columns. NOT rate records: CORRECTION 2026-09-15, both are strictly dominated by direct sums of the catalogued [[127,23,3]] (rho 5.5217) -- 2 copies give [[254,46,3]] and 4 give [[508,92,3]], each with FEWER inputs and MORE outputs than the row here. Beating the derived baseline needs k>=47 at n=255 and k>=93 at n=511.
+- regime: AI search: pure-T width campaign n=255, 511 — new [[n,k,d]] classes at n=255 and n=511 (the n=511 one the first at d=3 there) -- pure disjoint T^k, verified from columns. NOT rate records: both are strictly dominated by direct sums of the catalogued [[127,23,3]] (rho 5.5217) -- 2 copies give [[254,46,3]] and 4 give [[508,92,3]], each with FEWER inputs and MORE outputs than the row here. Beating the derived baseline needs k>=47 at n=255 and k>=93 at n=511.
 - citation: Jain et al. (2026)
 - source: `AI search: pure-T width campaign n=255, 511` · msAI:c97941c549f0f533 (`merged from magic-states-AI/master_catalogue/master_catalogue.jsonl; the submitting file was a run scratchpad (/private/tmp/claude-501/-Users-shubhamjain-Documents-Claude-remote-magic-states-AI/25937cc1-0367-40c1-acc9-031067b831d4/scratchpad/msai_255_511.jsonl) and is not a path this repository or any other keeps`)
 - note (T-count): not computed: exact minimisation is over GL(43,2) and a punctured RM(43-4,43) coset, neither feasible at k=43
@@ -13029,7 +13029,7 @@ readable copy of exactly these rows.
 - `N = 90` (81 outputs + 9 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
 - discovery: AI search
-- regime: AI search: pure-T width campaign n=255, 511 — new [[n,k,d]] classes at n=255 and n=511 (the n=511 one the first at d=3 there) -- pure disjoint T^k, verified from columns. NOT rate records: CORRECTION 2026-09-15, both are strictly dominated by direct sums of the catalogued [[127,23,3]] (rho 5.5217) -- 2 copies give [[254,46,3]] and 4 give [[508,92,3]], each with FEWER inputs and MORE outputs than the row here. Beating the derived baseline needs k>=47 at n=255 and k>=93 at n=511.
+- regime: AI search: pure-T width campaign n=255, 511 — new [[n,k,d]] classes at n=255 and n=511 (the n=511 one the first at d=3 there) -- pure disjoint T^k, verified from columns. NOT rate records: both are strictly dominated by direct sums of the catalogued [[127,23,3]] (rho 5.5217) -- 2 copies give [[254,46,3]] and 4 give [[508,92,3]], each with FEWER inputs and MORE outputs than the row here. Beating the derived baseline needs k>=47 at n=255 and k>=93 at n=511.
 - citation: Jain et al. (2026)
 - source: `AI search: pure-T width campaign n=255, 511` · msAI:666908d25bcb8172 (`merged from magic-states-AI/master_catalogue/master_catalogue.jsonl; the submitting file was a run scratchpad (/private/tmp/claude-501/-Users-shubhamjain-Documents-Claude-remote-magic-states-AI/25937cc1-0367-40c1-acc9-031067b831d4/scratchpad/msai_255_511.jsonl) and is not a path this repository or any other keeps`)
 - note (T-count): not computed: exact minimisation is over GL(81,2) and a punctured RM(81-4,81) coset, neither feasible at k=81
@@ -13043,7 +13043,7 @@ readable copy of exactly these rows.
 - `N = 94` (85 outputs + 9 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: AI search: full-simplex pure-T frames — widest pure-T frames held at n=511 (81 before 2026-09-15). DOMINATED on rate by the derived direct-sum baseline [[508,92,3]] = 4 x [[127,23,3]], rho = 508/92 = 5.5217 (an earlier revision of this string quoted 5.5543, which is 511/92 -- the ratio of a different circuit than the one named; corrected 2026-09-15). These are WIDTH points, explicitly NOT rate records: beating the baseline at n=511 needs k >= 93.
+- regime: AI search: full-simplex pure-T frames — widest pure-T frames held at n=511. DOMINATED on rate by the derived direct-sum baseline [[508,92,3]] = 4 x [[127,23,3]], rho = 508/92 = 5.5217. These are WIDTH points, explicitly NOT rate records: beating the baseline at n=511 needs k >= 93.
 - citation: Jain et al. (2026)
 - source: `AI search: full-simplex pure-T frames` · 1 (`magic-states-AI campaigns/2026-09-15_255_511_rate. gab64 Gabidulin scaffold at r=9 plus rows supplied by the T-R1 reduction (a partial LINE spread of the relaxed rank-6 frame), the full 21-line spread and no search at all (tools/linebuild.py). Supersedes nothing; the campaign's own [[255,43,3]] and [[511,81,3]] predecessors remain valid factories and remain dominated.`)
 - note (T-count): not computed: exact minimisation is over GL(85,2) and a punctured RM(85-4,85) coset, neither feasible at k=85
@@ -13057,7 +13057,7 @@ readable copy of exactly these rows.
 - `N = 98` (89 outputs + 9 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: AI search: full-simplex pure-T frames — widest pure-T frames held at n=511 (81 before 2026-09-15). DOMINATED on rate by the derived direct-sum baseline [[508,92,3]] = 4 x [[127,23,3]], rho = 508/92 = 5.5217 (an earlier revision of this string quoted 5.5543, which is 511/92 -- the ratio of a different circuit than the one named; corrected 2026-09-15). These are WIDTH points, explicitly NOT rate records: beating the baseline at n=511 needs k >= 93.
+- regime: AI search: full-simplex pure-T frames — widest pure-T frames held at n=511. DOMINATED on rate by the derived direct-sum baseline [[508,92,3]] = 4 x [[127,23,3]], rho = 508/92 = 5.5217. These are WIDTH points, explicitly NOT rate records: beating the baseline at n=511 needs k >= 93.
 - citation: Jain et al. (2026)
 - source: `AI search: full-simplex pure-T frames` · 0 (`magic-states-AI campaigns/2026-09-15_255_511_rate. gab64 Gabidulin scaffold at r=9 plus rows supplied by the T-R1 reduction (a partial LINE spread of the relaxed rank-6 frame), finished with 10 generic Phi-drop-1 rows (tools/hybrid.py, 15-line seed, certificate cap 91). Supersedes nothing; the campaign's own [[255,43,3]] and [[511,81,3]] predecessors remain valid factories and remain dominated.`)
 - note (T-count): not computed: exact minimisation is over GL(89,2) and a punctured RM(89-4,89) coset, neither feasible at k=89

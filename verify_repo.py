@@ -23,11 +23,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 SUITES = (
-    ("exhaustive n<=38", ROOT / "classification" / "exhaustive_n38"),
-    ("rank r<=7", ROOT / "classification" / "rank7_census"),
+    ("legacy: exhaustive n<=38", ROOT / "classification" / "legacy" / "exhaustive_n38"),
+    ("legacy: rank r<=7", ROOT / "classification" / "legacy" / "rank7_census"),
     ("parent check", ROOT / "parent_first"),
     ("symmetry and SAT", ROOT / "symmetry_sat_search"),
     ("master catalogue", ROOT / "master_catalog"),
+    ("community contributions", ROOT / "community_contributions"),
     ("acceptance boundaries", ROOT),
 )
 

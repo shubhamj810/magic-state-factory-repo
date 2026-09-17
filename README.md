@@ -1,55 +1,139 @@
-# Magic-state factory classification and search
+# Magic-state factory protocols: a verified catalogue
 
-This repository contains reproducible code and explicit circuit data for
-classifying and finding magic-state distillation factories. A factory is stored
-as a list of parity-rotation columns: qubits `0..k-1` are logical outputs and
-the remaining qubits are postselected checks. Its parameters `[[n,k,d]]` are
-the number of noisy rotations, number of outputs, and circuit distance.
+This repository is a **catalogue of magic-state distillation factory
+protocols**. Each is stored as an explicit circuit, and every number published
+about a circuit is re-derived from that circuit, never taken on trust. A distance
+a source certifies but that could not be re-measured is printed separately and
+marked as such. The protocols come from:
 
-The central distinction is:
+- an **exhaustive classification** of every protocol with up to 54 inputs;
+- **AI-assisted and symmetry-constrained searches** for larger and better ones;
+- the **published literature**;
+- **community contributions** from outside authors, verified to the same bar.
 
-- A **classification** enumerates a complete window. A missing entry is a
-  proved nonexistence result within that window.
-- A **search catalogue** contains verified witnesses. A missing entry means
-  only that no example is recorded here.
+## The database: `master_catalog/`
+
+**[`master_catalog/master_catalog.json`](master_catalog/master_catalog.json) is
+the database.** Every row is one factory class and carries its own circuit. It
+also records how the class was found, where it came from, and which papers to
+cite. [`master_catalog/MASTER_CATALOG.md`](master_catalog/MASTER_CATALOG.md) is
+a generated, human-readable view of the same rows.
+[`master_catalog/README.md`](master_catalog/README.md) documents the schema, the
+verification bar and the merge process.
+
+A factory consumes `n` noisy `T` states and outputs `k` magic qubits. Its
+circuit is a list of parity-rotation `columns` over `N` wires: wires `0..k-1`
+are the outputs and the rest are postselected checks. `d` is the circuit's
+fault distance.
+
+The catalogue holds **804 classes**:
+
+- `n = 15..1715`, `k = 1..373`, `d = 3..7`;
+- 217 classes with `n <= 54`, including all 74 Pareto points of the length-54
+  classification.
+
+```bash
+.venv/bin/python master_catalog/verify_catalog.py          # re-derive every row from its columns
+.venv/bin/python master_catalog/merge_results.py new.json  # verify and merge new results
+```
+
+### One row per magic state: the `GL(k,2)` key
+
+The catalogue deduplicates on **`(n, k, d, gate up to GL(k,2))`**, the CNOT+S
+output equivalence. Two circuits at the same distance are one row when their
+output gates differ only by an invertible change of the output basis (a CNOT
+frame) and diagonal Clifford corrections. Such circuits prepare the same magic
+state: `T0·T1` and `T0·CS01` are one class. Circuits at different distances are
+always different rows.
+[`master_catalog/glcanon.py`](master_catalog/glcanon.py) decides the relation;
+[`theory/02_classification.md`](theory/02_classification.md) explains it.
+
+## Where the protocols come from
+
+Each row's **regime** says briefly how the class was found. Its **citation**
+names the papers that credit it, linked where they are published.
+
+| source | what it contributes | regime(s) |
+|---|---|---|
+| **Exhaustive classification**, `n <= 54` (Wills, Jain and Singh) | every generalised triorthogonal protocol with `n <= 54` and exact `d_Z >= 3`, up to CNOT+S. Its 74 Pareto points (undominated in inputs `n` and wires `N`) are copied in [`classification/length54/`](classification/length54/); a test checks that every other class the catalogue holds in that window is dominated by one | `exhaustive classification n<=54 (Pareto point)`, `exhaustive classification n<=54` |
+| **AI-assisted search** (Jain, Wills and Singh) | AI search campaigns run in the companion repository `magic-states-AI`, from punctured simplex and Reed–Muller parents and Wills's parent codes, including the pure-T distillation-exponent (`γ`) frontier | `AI search`, `AI search: …`, `AI search (gamma frontier): …` |
+| **Symmetry-constrained SAT search** (same report) | CP-SAT searches over symmetric column orbits and ansatz-free SAT, in [`symmetry_sat_search/`](symmetry_sat_search/). Not counted as an AI discovery | `symmetry-SAT search` |
+| **Generalised triorthogonal search release**, `55 <= n <= 64` | witnesses from a public search release at lengths just beyond the classification | `search release 55<=n<=64` |
+| **Literature** | published protocols: Bravyi & Kitaev, Nezami & Haah, Haah & Hastings, Jacinto et al., Gong et al., and others | cited in the row's `citations`, linked to the DOI or arXiv page |
+| **Community contributions** | protocols from outside authors, verified here; a class new to the catalogue is cited to its contributor | `community contribution` |
+
+A published class is credited to its paper. The rest
+of the credit rules are in [`master_catalog/README.md`](master_catalog/README.md).
+
+## Context for AI agents: `agent_context/`
+
+[`agent_context/`](agent_context/) is a self-contained briefing pack for an agent
+(or a person) continuing the search. It covers:
+
+- the data model and metrics;
+- the rules learned from real mistakes;
+- what is closed by theorem and what is still open;
+- the verification contract;
+- search techniques and their measured costs;
+- the history of every campaign, and the baselines a new result must beat.
+
+It was written alongside the AI campaigns in `magic-states-AI` and imported
+here. The catalogue says *which* factories exist; the pack says what is known,
+what has been tried, and what will fool you. Start with
+[`agent_context/README.md`](agent_context/README.md). Its stdlib verifier runs
+anywhere:
+
+```bash
+python3 agent_context/reference/verify_factory.py --selftest
+```
+
+## Contributing protocols: `community_contributions/`
+
+To add a protocol, write one JSON file per submission and put it in
+[`community_contributions/submissions/`](community_contributions/submissions/).
+Each file holds:
+
+- explicit circuits or generator matrices;
+- the reference to credit;
+- a short description of how the protocols were found;
+- the terms under which they may be redistributed.
+
+The maintainers:
+
+1. verify every protocol to the same bar as a catalogue row;
+2. merge it into the master catalogue;
+3. cite the contributor on every class new to the catalogue. A class already
+   held keeps its credit.
+
+Check a submission locally first:
+
+```bash
+.venv/bin/python community_contributions/check_submission.py path/to/submission.json
+```
+
+[`community_contributions/README.md`](community_contributions/README.md) has the
+format and the process.
 
 ## Repository map
 
-| path | purpose | main entry points |
-|---|---|---|
-| [`classification/exhaustive_n38/`](classification/exhaustive_n38/) | every distance-3 factory with `n <= 38`, all check ranks | `classify.py`, `hard_parent_n31.py`, `build_catalog.py`, `plot_landscape.py` |
-| [`classification/rank7_census/`](classification/rank7_census/) | complete `r <= 7`, `n <= 44` census | `cli.py`, `rank7.py`, `build_catalog.py` |
-| [`classification/length54/`](classification/length54/) | copy of the Pareto frontier of the exhaustive length-54 classification (Wills, Jain and Singh), which subsumes the windows above | `pareto_frontier.json` |
-| [`parent_first/`](parent_first/) | analyse one check parent, target a gate, or enumerate all gates it carries | `cli.py` |
-| [`symmetry_sat_search/`](symmetry_sat_search/) | symmetry-slot and ansatz-free SAT search; verified examples catalogue | `slot_search.py`, `sat_search.py`, `exact_d4.py`, `build_catalog.py` |
-| [`master_catalog/`](master_catalog/) | the permanent collection: one table of every level-3, distance >= 3 factory held here, re-derived from columns | `verify_catalog.py`, `merge_results.py` |
-| [`factorylib/`](factorylib/) | shared solver-independent parent model, verification, and gate metrics | imported by the four workflows |
-| [`theory/`](theory/) | mathematical notes, result provenance, and cross-cutting figures | `01_factories_and_distance.md`, `PROVENANCE.md`, `figures/landscape_all.py` |
-| [`tests/`](tests/) | what this repository would ACCEPT as a result: a mutation sweep over every acceptance boundary, and the exit-code contract | `mutation.py`, `test_certificate_boundaries.py` |
-
-Generated catalogues are deliberately separate:
-
-- [`classification_n38.json`](classification/exhaustive_n38/catalog/classification_n38.json): 74 `S_k`-deduplicated classes in the complete `n <= 38` window.
-- [`census_r7.json`](classification/rank7_census/catalog/census_r7.json): the T-count-5 frontier from the complete `r <= 7`, `n <= 44` census.
-- [`factories.json`](symmetry_sat_search/catalog/factories.json): 57 verified examples found analytically or by slot/SAT search.
-
-Those three keep their regimes apart on purpose. When what you want is the
-combined list rather than the distinction,
-[`master_catalog/MASTER_CATALOG.md`](master_catalog/MASTER_CATALOG.md) is the
-permanent collection: 804 distinct `(n, k, d, GL(k,2) gate)` classes -- the
-three catalogues above, the 74 Pareto points of the length-54 classification
-([`classification/length54/`](classification/length54/)) and every search
-campaign merged in since -- each tagged with how it was found, credited to the
-papers that state it, and re-derived from its own columns. It is checked in rather than rebuilt --
-`master_catalog/verify_catalog.py` re-proves every row from the file itself,
-and `merge_results.py` is the only way a row gets in.
+| path | purpose |
+|---|---|
+| [`master_catalog/`](master_catalog/) | **the database**, its verifier, merge tool and one-off migrations |
+| [`classification/length54/`](classification/length54/) | the length-54 classification's Pareto frontier (byte-identical copy, CC BY 4.0) |
+| [`symmetry_sat_search/`](symmetry_sat_search/) | symmetry-slot and ansatz-free SAT search engines and their verified examples |
+| [`parent_first/`](parent_first/) | analyse one check parent, target a gate, or enumerate the gates it carries |
+| [`agent_context/`](agent_context/) | the context pack for agents continuing the search |
+| [`community_contributions/`](community_contributions/) | how outside authors submit protocols, and the tool that checks them |
+| [`factorylib/`](factorylib/) | shared parent model, verification and gate metrics |
+| [`theory/`](theory/) | mathematical notes, result provenance and figures |
+| [`tests/`](tests/) | what the repository would accept as a result: a mutation sweep over every acceptance boundary, and the exit-code contract |
 
 ## Setup
 
-Use a fresh Python 3.12 environment: that is the only version the suite has been
-run on here, so it is the only one claimed. The direct-dependency pins avoid the
-NumPy/binary-extension ABI conflicts commonly caused by installing OR-Tools in
-an existing Conda base environment.
+Use a fresh Python 3.12 environment; it is the only version the suite has been
+run on. The pinned direct dependencies avoid the NumPy/binary-extension ABI
+conflicts that installing OR-Tools into an existing Conda base environment
+commonly causes.
 
 ```bash
 python3.12 -m venv .venv
@@ -57,90 +141,32 @@ python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 ```
 
-## Verify the shipped repository
+## Verify the repository
 
 ```bash
 .venv/bin/python verify_repo.py
 ```
 
-This runs every test suite in the repository, printing the number of tests it
-discovered and ran: independent input-table checks, two classification paths on
-the small ladder, exact circuit re-verification,
-parent-filter tests, small solver optima, symmetry-group reconstruction, and --
-in [`tests/`](tests/) -- a mutation sweep over the boundaries that decide which
-search output may become a published result at all. A missing
-or broken solver dependency, a skipped test, or a suite that collected nothing is
-reported as a failure rather than hidden.
-
-Each workflow directory also has a `selfcheck.py` that runs its own tests and
-prints one plain-language verdict for that directory alone — useful after
-changing something local:
+This runs every test suite and prints how many tests each discovered and ran. A
+missing solver dependency, a skipped test, or a suite that collected nothing is
+reported as a failure rather than hidden. The full row-by-row re-verification of
+the database is separate:
 
 ```bash
-.venv/bin/python classification/exhaustive_n38/selfcheck.py
-.venv/bin/python classification/rank7_census/selfcheck.py
-.venv/bin/python parent_first/selfcheck.py
-.venv/bin/python symmetry_sat_search/selfcheck.py
-```
-
-To rebuild every inexpensive generated artifact:
-
-```bash
-.venv/bin/python classification/exhaustive_n38/build_catalog.py
-.venv/bin/python classification/exhaustive_n38/plot_landscape.py
-.venv/bin/python classification/rank7_census/build_catalog.py
-.venv/bin/python symmetry_sat_search/build_catalog.py
-.venv/bin/python symmetry_sat_search/verify_catalog.py
-.venv/bin/python symmetry_sat_search/symmetry_groups.py
-.venv/bin/python symmetry_sat_search/rebuild_from_groups.py
-.venv/bin/python theory/figures/landscape_all.py
 .venv/bin/python master_catalog/verify_catalog.py
 ```
 
-See [`REPRODUCING.md`](REPRODUCING.md) for the exhaustive searches, expected
-outputs, runtimes, and checkpoint rules.
-
-The `n <= 38` classification and every verification, rebuild and figure above
-run in minutes on a laptop; no cluster is required for any of them. The `r <= 7`
-census is the exception and is cluster-scale: its 9,088 marked geometries take
-many core-hours, which is why the maximality half of that result is a recorded
-certificate rather than something this repository re-derives on demand. What
-*is* local there is the outer enumeration — the orbit table's `2^64`
-completeness identity and the geometry count — plus re-verification of every
-shipped circuit.
-
-## Headline certified results
-
-- The `n <= 38` classification contains 74 distinct `(n,k,S_k gate)` classes,
-  all with explicit circuits. No pure `CCZ` occurs, proving the distance-3
-  lower bound `n >= 39` for `CCZ`. The largest genuine output width is `k=5`,
-  occurring uniquely at `[[31,5,3]]`; no `k=6` factory exists in the window.
-- In the complete `r <= 7`, `n <= 44` census, the maximum exact minimal
-  T-count is 5, attained only at `n=43`, by 21 distinct `S_k` classes — every
-  one with an explicit verified circuit.
-- The search catalogue contains 57 explicit circuits, one per distinct circuit. Every row has its output
-  gate and fault distance re-derived from columns, and every circuit can be
-  regenerated from its stored automorphism group and column-orbit
-  representatives.
-
-## Deduplication convention
-
-Classification rows use the `S_k` action: output-qubit permutations only. A
-coarser `GL(k,2)` annotation is stored where relevant, but it is not the
-catalogue key. This preserves distinct circuit output frames while removing
-mere renamings. The formal discussion and regression examples are in
-[`classification/exhaustive_n38/dedup.py`](classification/exhaustive_n38/dedup.py).
+It takes about fifteen minutes on one core.
+[`REPRODUCING.md`](REPRODUCING.md) has every rebuild and search command, with
+expected outputs and runtimes.
 
 ## Data and provenance
 
-The Gillot–Langevin `RM(3,7)` orbit table is third-party data preserved
-unchanged under [`classification/rank7_census/data/`](classification/rank7_census/data/).
-Its checksum and the `2^64` orbit-sum completeness certificate are tested.
-See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and
-[`theory/PROVENANCE.md`](theory/PROVENANCE.md).
-
-Search provenance is retained per circuit in
-[`symmetry_sat_search/examples/found_factories.json`](symmetry_sat_search/examples/found_factories.json).
-Historical campaign scripts and raw stdout logs are intentionally not part of
-the publishable repository; the stable search engines and every verified
-explicit circuit are.
+- **The length-54 frontier** is copied unmodified from the classification's own
+  delivery. Its commit and SHA-256 are in
+  [`classification/length54/README.md`](classification/length54/README.md).
+- **Third-party data** the repository uses is listed, with its terms, in
+  [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+- **Per-row provenance** is in each row's `sources`: the file, record and
+  construction every circuit came from. Where each claim is certified is mapped
+  in [`theory/PROVENANCE.md`](theory/PROVENANCE.md).

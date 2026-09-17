@@ -22,9 +22,9 @@ specific SAT run completed with an optimal/UNSAT certificate.
 | [`selfcheck.py`](selfcheck.py) | run this directory's tests and print one verdict |
 | [`tests/`](tests/) | small solver optima plus catalogue and group reconstruction checks |
 
-There are no historical campaign wrappers or raw stdout archives. Stable
-engine CLIs replace one-off drivers, and every publishable witness is preserved
-as an explicit circuit in `examples/found_factories.json` with its provenance.
+The directory holds stable engine CLIs, not campaign wrappers or raw solver
+output, and every publishable witness is an explicit circuit in
+`examples/found_factories.json` with its provenance.
 
 ## Slot search
 

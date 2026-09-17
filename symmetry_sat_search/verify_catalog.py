@@ -82,7 +82,7 @@ gate_metrics._DEG_SAMPLES = 20_000
 def sk_canonical(k, mons):
     """S_k-canonical encoding of a monomial set (output permutations only).
 
-    The same key as ../classification/exhaustive_n38/dedup.py::sk_canonical,
+    The same key as ../classification/legacy/exhaustive_n38/dedup.py::sk_canonical,
     re-implemented here so this directory depends on nothing outside itself.
     Used only to compare a derived gate against a stored one up to output
     relabelling.

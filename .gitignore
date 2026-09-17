@@ -4,8 +4,9 @@ __pycache__/
 .DS_Store
 
 # Row-space audit shards: large and reproducible from classify_rowspace.py
-# (see exhaustive_n38/docs/SHARDING.md); only the merged catalogue is kept.
-classification/exhaustive_n38/results/shards/
+# (see classification/legacy/exhaustive_n38/docs/SHARDING.md); only the merged
+# catalogue is kept.
+classification/legacy/exhaustive_n38/results/shards/
 
 # A capped symmetry_groups.py run writes its partial result beside the catalogue
 # under this name rather than replacing it; it is diagnostic output, not a table.
@@ -13,8 +14,8 @@ symmetry_sat_search/catalog/*.incomplete.json
 
 # Scratch output from exploratory runs. Curated/certificate inputs are checked
 # in under stable names; local solver output stays out of the repository.
-classification/rank7_census/results/*.tmp
-classification/rank7_census/results/census_*.json
+classification/legacy/rank7_census/results/*.tmp
+classification/legacy/rank7_census/results/census_*.json
 parent_first/results/
 symmetry_sat_search/results/*
 !symmetry_sat_search/results/README.md
@@ -26,4 +27,4 @@ master_catalog/REFACTOR/
 
 # The length-48 catalogue is shipped gzipped (136 MB raw, over GitHub's file limit);
 # a local gunzip of it must not be committed.
-classification/n48/length48_catalogue.json
+classification/legacy/n48/length48_catalogue.json

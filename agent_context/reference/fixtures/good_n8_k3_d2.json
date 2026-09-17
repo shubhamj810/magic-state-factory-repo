@@ -1,0 +1,44 @@
+{
+ "columns": [
+  [
+   0,
+   1,
+   2,
+   3
+  ],
+  [
+   0,
+   1,
+   3
+  ],
+  [
+   0,
+   2,
+   3
+  ],
+  [
+   0,
+   3
+  ],
+  [
+   1,
+   2,
+   3
+  ],
+  [
+   1,
+   3
+  ],
+  [
+   2,
+   3
+  ],
+  [
+   3
+  ]
+ ],
+ "k": 3,
+ "d": 2,
+ "gate": "CCZ0,1,2",
+ "_note": "HEALTHY. [[8,3,2]], the smallest non-Clifford factory that exists. Every check must pass and d must come out exactly 2 with A_2 = 28."
+}

@@ -33,7 +33,7 @@ CATALOGUE = HERE.parent
 REPO = CATALOGUE.parents[0]
 sys.path.insert(0, str(CATALOGUE))
 sys.path.insert(0, str(REPO))
-sys.path.insert(0, str(REPO / "classification" / "exhaustive_n38"))
+sys.path.insert(0, str(REPO / "classification" / "legacy" / "exhaustive_n38"))
 
 from dedup import sk_canonical                                # noqa: E402
 import skcanon as SK                                          # noqa: E402
@@ -46,8 +46,8 @@ MASTER = CATALOGUE / "master_catalog.json"
 #: still in this repository: the exhaustive n <= 38 stage and rank-7 census of
 #: the length-54 classification, and the symmetry-SAT search.
 CATALOGUE_FILES = {
-    "exhaustive n<=38": REPO / "classification" / "exhaustive_n38" / "catalog" / "classification_n38.json",
-    "census r<=7": REPO / "classification" / "rank7_census" / "catalog" / "census_r7.json",
+    "exhaustive n<=38": REPO / "classification" / "legacy" / "exhaustive_n38" / "catalog" / "classification_n38.json",
+    "census r<=7": REPO / "classification" / "legacy" / "rank7_census" / "catalog" / "census_r7.json",
     "symmetry-SAT search": REPO / "symmetry_sat_search" / "catalog" / "factories.json",
 }
 #: The length-54 classification's Pareto frontier, copied in unchanged.
@@ -63,8 +63,11 @@ LOCAL_SOURCE_DIRS = ("classification/", "symmetry_sat_search/")
 #: them makes a class ``pre-existing``.
 EARLY_STAGES = "classification/"
 FRONTIER_DIR = "classification/length54/"
-#: Regimes that are not an AI search: the classification and the SAT search.
-NOT_AI = (PARETO, "exhaustive classification n<=54", SAT)
+#: The regime `community_contributions/check_submission.py` merges under.
+COMMUNITY = "community contribution"
+#: Regimes that are not an AI search: the classification, the SAT search and a
+#: community contribution.
+NOT_AI = (PARETO, "exhaustive classification n<=54", SAT, COMMUNITY)
 #: The two unpublished reports the classification window is credited to.
 WILLS, JAIN = "wills2026classification", "jain2026symmetry"
 #: The Pareto points the classification's own table (Table tab:complete-pareto)
@@ -556,10 +559,13 @@ class TestMasterCatalogue(unittest.TestCase):
 
     # ------------------------------------------------------------- discovery
     def test_the_discovery_tag_is_exactly_what_the_sources_say(self):
-        """`AI search` iff an AI search found the class and nothing earlier had.
+        """`AI search` iff the only finders the sources record are AI searches.
 
-        The two values partition the rows on one question -- was this class an
-        AI discovery? -- and the sources answer it in both directions.  It is
+        Any other recorded finder -- a classification stage this repository
+        ran, the symmetry-SAT search, or a community contribution -- makes the
+        class `pre-existing`.  The sources carry no dates, so this is a
+        statement about who is on record, not who was first, and the sources
+        answer it in both directions.  It is
         stated on the sources rather than on `regimes` because the length-54
         classification relabels a Pareto point's earlier classification sources
         as that Pareto point, which is right for the claim and wrong for the
@@ -568,7 +574,9 @@ class TestMasterCatalogue(unittest.TestCase):
         still was.
         """
         for row in self.rows:
-            early = any(s["regime"] == SAT
+            # a finder other than an AI search: the SAT search, a community
+            # contribution, or a classification stage this repository ran
+            early = any(s["regime"] in (SAT, COMMUNITY)
                         or (s["file"].startswith(EARLY_STAGES)
                             and not s["file"].startswith(FRONTIER_DIR))
                         for s in row["sources"])
@@ -661,19 +669,31 @@ class TestMasterCatalogue(unittest.TestCase):
         self.assertEqual(seen, set(range(74)))
 
     def test_published_works_are_linked_and_unpublished_ones_are_not(self):
+        """Every work the literature migrations credit carries its link; the two
+        unpublished reports carry none.  A community contribution's entry may
+        go either way -- linked when the contributor's work is published."""
         references = self.blob["references"]
+        for key in (WILLS, JAIN):
+            if key in references:
+                self.assertNotIn("url", references[key])
+        # a contributor's own work may be unpublished: exempt only the keys no
+        # row credits except rows a community contribution brought or improved
+        elsewhere = {key for row in self.rows if COMMUNITY not in row["regimes"]
+                     for key in row["citations"]}
         for key, entry in references.items():
+            if key in (WILLS, JAIN) or key not in elsewhere:
+                continue
             with self.subTest(key=key):
-                if key in (WILLS, JAIN):
-                    self.assertNotIn("url", entry)
-                else:
-                    self.assertTrue(entry["url"].startswith("https://"))
+                self.assertTrue(entry["url"].startswith("https://"))
 
     def test_the_rest_of_the_classification_window_cites_both_reports(self):
         """Every other class within the length-54 window cites that
-        classification and the report this catalogue is published in."""
+        classification and the report this catalogue is published in -- except
+        a class a community contribution brought, which is credited to the
+        contributor's work."""
         for row in self.rows:
-            if row["n"] <= 54 and PARETO not in row["regimes"]:
+            brought = COMMUNITY in row["regimes"] and WILLS not in row["citations"]
+            if row["n"] <= 54 and PARETO not in row["regimes"] and not brought:
                 with self.subTest(params=(row["n"], row["k"], row["gate"])):
                     self.assertLessEqual({WILLS, JAIN}, set(row["citations"]))
 

@@ -4,8 +4,8 @@
 reads more than one code directory, which is why it lives in `theory/` rather
 than in any of them. It merges
 
-- [`../../classification/exhaustive_n38/catalog/classification_n38.json`](../../classification/exhaustive_n38/catalog/classification_n38.json)
-- [`../../classification/rank7_census/catalog/census_r7.json`](../../classification/rank7_census/catalog/census_r7.json)
+- [`../../classification/legacy/exhaustive_n38/catalog/classification_n38.json`](../../classification/legacy/exhaustive_n38/catalog/classification_n38.json)
+- [`../../classification/legacy/rank7_census/catalog/census_r7.json`](../../classification/legacy/rank7_census/catalog/census_r7.json)
 - [`../../symmetry_sat_search/catalog/factories.json`](../../symmetry_sat_search/catalog/factories.json)
 
 and writes two figures:
@@ -50,13 +50,12 @@ classified class.
 The script also prints a note if a search record ever sits inside an exhaustive
 band at an `(n, k)` cell no classified class occupies — which would need
 explaining, since the band claims nothing else exists there. **With the
-catalogues as currently built it prints nothing:** the one row that used to
-trigger it, a `[[15,2,3]]` with gate `0+1+01`, was a *lift-degenerate* circuit
-(its two output rows equal modulo the check span, so one CNOT leaves the second
-output idle — the `[[15,1,3]]` on a spare wire, exact `T`-count 1 either way).
-The search builder now rejects inflated widths of that kind, so the green band's
-claim needs no caveat. The check stays in the script because a future addition
-could reintroduce one.
+shipped catalogues it prints nothing.** A lift-degenerate circuit would trigger
+it — for example a `[[15,2,3]]` with gate `0+1+01`, whose two output rows are
+equal modulo the check span, so one CNOT leaves the second output idle (the
+`[[15,1,3]]` on a spare wire, exact `T`-count 1 either way). The search builder
+rejects inflated widths of that kind, and the check stays in the script as a
+guard.
 
 ## Encoding
 
@@ -66,7 +65,7 @@ could reintroduce one.
   usually lower than the largest gate arity in the written gate string — in the
   `n ≤ 38` window no class reaches reduced degree 3 at all, though 28 of the 74
   have a `CCZ` in their phase polynomial. The sibling figure
-  [`../../classification/exhaustive_n38/catalog/landscape_n38.png`](../../classification/exhaustive_n38/catalog/landscape_n38.png)
+  [`../../classification/legacy/exhaustive_n38/catalog/landscape_n38.png`](../../classification/legacy/exhaustive_n38/catalog/landscape_n38.png)
   colours by that written arity instead, which is why its markers differ.
 - **Colour** is the exact minimal `T`-count (Amy–Mosca / Reed–Muller
   minimum-weight `Z_8` coset), on the `turbo` ramp discretised by a

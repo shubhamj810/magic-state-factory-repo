@@ -1,7 +1,7 @@
 # The two complete windows
 
-Theory behind [`../classification/exhaustive_n38/`](../classification/exhaustive_n38/)
-and [`../classification/rank7_census/`](../classification/rank7_census/).
+Theory behind [`../classification/legacy/exhaustive_n38/`](../classification/legacy/exhaustive_n38/)
+and [`../classification/legacy/rank7_census/`](../classification/legacy/rank7_census/).
 Both directories answer the target-agnostic question — *which gates exist at
 all* at distance 3 — rather than "can we build gate `X`", and both are complete
 inside a stated window. The windows are complementary cuts through the same
@@ -9,11 +9,17 @@ space:
 
 | directory | window | outer input | what is closed |
 | --- | --- | --- | --- |
-| [`exhaustive_n38`](../classification/exhaustive_n38/) | `n <= 38`, **every** check rank | Kasami-Tokura / Nezami-Haah affine class tables | every injection count up to 38 |
-| [`rank7_census`](../classification/rank7_census/) | `r <= 7`, **any** `n <= 44` | Gillot-Langevin `RM(3,7)` orbit table | every check rank up to 7 |
+| [`exhaustive_n38`](../classification/legacy/exhaustive_n38/) | `n <= 38`, **every** check rank | Kasami-Tokura / Nezami-Haah affine class tables | every injection count up to 38 |
+| [`rank7_census`](../classification/legacy/rank7_census/) | `r <= 7`, **any** `n <= 44` | Gillot-Langevin `RM(3,7)` orbit table | every check rank up to 7 |
 
 Neither contains the other, and the `[[31,5,3]]` output-width certificate below
 uses both at once.
+
+Both are legacy stages: the exhaustive classification of generalised
+triorthogonal protocols through `n <= 54`
+([`../classification/length54/`](../classification/length54/)) supersedes
+them, and they are kept for reproducibility and provenance
+([`../classification/legacy/README.md`](../classification/legacy/README.md)).
 
 ## The outer input is a Reed-Muller classification
 
@@ -24,7 +30,7 @@ therefore classifying Reed-Muller codewords up to a change of check basis, and
 that is a solved problem in two different regimes.
 
 **By weight.**
-[`nezami_haah_reps.py`](../classification/exhaustive_n38/nezami_haah_reps.py) is
+[`nezami_haah_reps.py`](../classification/legacy/exhaustive_n38/nezami_haah_reps.py) is
 the entire external input to the `n <= 38` classification; everything else in
 that directory is derived from it by computation. The Kasami-Tokura /
 Nezami-Haah tables list every affine class of weight below `2.5 * d_min = 40`,
@@ -37,7 +43,8 @@ weight  16 -> n = 15,16    24 -> 23,24    28 -> 27,28    30 -> 29,30
 ```
 
 with 1, 1, 2, 1, 10, 1, 14 and 8 classes respectively. Weight 40 — that is,
-`n = 39, 40` — would need the separate length-40 classification and is
+`n = 39, 40` — would need the separate length-40 classification
+([`../classification/legacy/n40/`](../classification/legacy/n40/)) and is
 deliberately absent: asking for `n >= 39` raises an error rather than silently
 returning a partial answer. Transcription from the published notebook is the
 one place a silent error could enter, so it is checked three ways
@@ -46,7 +53,7 @@ class counts per weight) by `tests/test_reps.py`.
 
 **By rank.** For `r <= 7` the relevant code is `RM(3,7)`, whose 3,486
 `AGL(7,2)` orbit representatives Gillot and Langevin computed; the table ships
-as [`data/B-0-3-7.dat`](../classification/rank7_census/data/B-0-3-7.dat). Of
+as [`data/B-0-3-7.dat`](../classification/legacy/rank7_census/data/B-0-3-7.dat). Of
 those, 71 have nonzero weight at most 44 and are therefore relevant. One sweep
 of `RM(3,7)` covers ranks 4, 5, 6 and 7 together: a rank-`r'` parent has
 indicator in `RM(r'-4, r')`, and embedding into `F_2^7` multiplies it by one
@@ -64,7 +71,7 @@ indicator polynomial equals 1. A check parent is a set of `n` distinct nonzero
 points. Turning one into the other requires choosing which point of the support
 becomes the origin, and that choice is not free — different origins give
 genuinely different parents.
-[`marking.py`](../classification/exhaustive_n38/marking.py) does it in two
+[`marking.py`](../classification/legacy/exhaustive_n38/marking.py) does it in two
 cases:
 
 - `marked_even` (`n = |S|` even): the origin lies outside the support, so the
@@ -120,7 +127,7 @@ B_j(a, b) = < a, b AND h_j >
 
 all vanish. Compatible frames are exactly the cliques of the compatibility graph
 on `V \ {0}`, which is how
-[`classify.py`](../classification/exhaustive_n38/classify.py) enumerates them.
+[`classify.py`](../classification/legacy/exhaustive_n38/classify.py) enumerates them.
 Because each `B_j` is bilinear, compatibility is closed under XOR, so a clique
 spans a compatible *subspace*; the parent-first engine exploits this and
 enumerates subspaces by canonical row-reduced augmentation instead, so that two
@@ -136,7 +143,7 @@ with the classifier on purpose.
 
 The single most misreadable thing about these catalogues is what "the same
 factory" means. Three distinct relations are in play, and
-[`dedup.py`](../classification/exhaustive_n38/dedup.py) keeps them apart.
+[`dedup.py`](../classification/legacy/exhaustive_n38/dedup.py) keeps them apart.
 
 **1. Permuting the outputs — `S_k`. This is the key of the classification
 catalogues.** Sending output `i` to `sigma(i)` permutes the variables of the
@@ -166,7 +173,7 @@ of the output basis and diagonal Clifford corrections, the CNOT+S output
 equivalence of the length-54 classification — is decided by
 [`master_catalog/glcanon.py`](../master_catalog/glcanon.py) through the gate's
 third finite difference, a symmetric trilinear form that is covariant under the
-frame change and vanishes exactly on Cliffords. **Since 2026-09-15 it is the key
+frame change and vanishes exactly on Cliffords. **It is the key
 of the master catalogue**, together with the distance — `(n, k, d, gate up to
 CNOT+S)` — so the two `[[28,2,3]]` frames are one master row, while circuits for
 one gate at different distances stay separate rows.
@@ -202,7 +209,7 @@ set is partitioned, and are the same under both keys.
 
 ## The one hard parent
 
-[`classify.py`](../classification/exhaustive_n38/classify.py) finishes every
+[`classify.py`](../classification/legacy/exhaustive_n38/classify.py) finishes every
 marked parent in the `n <= 38` ladder without a budget hit except one:
 weight-32 class 0 marked odd, which is the set of all 31 nonzero points of
 `F_2^5`. That parent is maximally symmetric — every invertible `5 x 5` matrix
@@ -211,7 +218,7 @@ over `F_2` permutes the nonzero points, so its automorphism group is all of
 enumeration over the `2^11 - 1 = 2047` nonzero quotient points revisits the same
 gate millions of times.
 
-[`hard_parent_n31.py`](../classification/exhaustive_n38/hard_parent_n31.py) uses
+[`hard_parent_n31.py`](../classification/legacy/exhaustive_n38/hard_parent_n31.py) uses
 the symmetry instead of fighting it. A qubit relabelling by `M` in `GL(5,2)` is
 a physical relabelling: it permutes the 31 columns, preserves the check code,
 and leaves the logical gate invariant — which the module checks rather than
@@ -279,7 +286,7 @@ So the catalogue is complete for magic **content** — which gates are achievabl
 at each `n`, the largest genuine output width, the largest exact T-count — and
 incomplete only for circuit **representations** in which an output is
 Clifford-equivalent to an idle spectator.
-[`classify.py`](../classification/exhaustive_n38/classify.py) already discards
+[`classify.py`](../classification/legacy/exhaustive_n38/classify.py) already discards
 frames with a *manifestly* idle output, so this is the same policy one Clifford
 deeper rather than a different one.
 
@@ -288,7 +295,7 @@ represent these frames: the gate of such a frame depends on which lift of a
 quotient point you pick, so it is not a function of `V`, and the descent
 argument that makes the quotient search complete is precisely the statement that
 gates *are* functions of `V`. Reaching them requires the row space
-([`classify_rowspace.py`](../classification/exhaustive_n38/classify_rowspace.py),
+([`classify_rowspace.py`](../classification/legacy/exhaustive_n38/classify_rowspace.py),
 which enumerates frames independent in `R(C)` rather than in `V`, and doubles as
 an independent cross-check of the quotient engine) or raw column-level search.
 And if you are counting distinct *circuits* rather than distinct resources — say
@@ -302,7 +309,7 @@ carries no monomial of any degree.
 ## What the classifications prove
 
 **At `n <= 38`, every check rank**
-([`CLASSIFICATION_N38.md`](../classification/exhaustive_n38/catalog/CLASSIFICATION_N38.md)):
+([`CLASSIFICATION_N38.md`](../classification/legacy/exhaustive_n38/catalog/CLASSIFICATION_N38.md)):
 74 distinct `(n, k, S_k`-gate`)` classes, all with explicit verified circuits —
 22 `T`-only, 24 `CS`-level, 28 `CCZ`-level.
 
@@ -315,7 +322,7 @@ carries no monomial of any degree.
 
 The width ceiling is certified by splitting the parents by effective check rank
 and using both directories
-([`docs/N38_K56_CERTIFICATE.md`](../classification/exhaustive_n38/docs/N38_K56_CERTIFICATE.md)).
+([`docs/N38_K56_CERTIFICATE.md`](../classification/legacy/exhaustive_n38/docs/N38_K56_CERTIFICATE.md)).
 At effective rank at most 7, the complete `RM(3,7)` census over all 9,088 marked
 origins shows compatible dimension 5 occurs only at `n = 31` (992 compatible
 5-spaces there, collapsing to one `S_5` gate class) and that there are no
@@ -340,7 +347,7 @@ linear, quadratic or cubic content whatsoever. Hence **every distance-`>= 4`
 factory with a nontrivial level-3 target has at least seven checks.**
 
 **At `r <= 7`, `n <= 44`**
-([`CENSUS_R7.md`](../classification/rank7_census/catalog/CENSUS_R7.md)): running
+([`CENSUS_R7.md`](../classification/legacy/rank7_census/catalog/CENSUS_R7.md)): running
 the full inner audit — every compatible output subspace, then its phase, rather
 than a list of named targets — over the 634-representative covering list gives
 1,337 compatible six-spaces, 8 seven-spaces (all with nonzero phase radical, so

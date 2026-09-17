@@ -4,7 +4,7 @@ Every command below is launched from the repository root, and the paths in them
 are root-relative -- `.venv/bin/python` included -- so they do not work unchanged
 from elsewhere. What *is* independent of the working directory is the code: every
 script resolves its data and its sibling modules relative to its own file, so
-`/somewhere/else/.venv/bin/python /path/to/repo/classification/exhaustive_n38/build_catalog.py`
+`/somewhere/else/.venv/bin/python /path/to/repo/classification/legacy/exhaustive_n38/build_catalog.py`
 finds the right inputs. Only the shell paths need adjusting.
 
 ## 1. Create the environment
@@ -34,17 +34,23 @@ PASS: all <N> tests in every repository suite ran, with no skips and no failures
 Anything else — a failure, a skip, or a suite that collected no tests — is
 reported as a failure and exits nonzero.
 
-Five of the six suites check that the published results are right. The sixth,
+Five of the seven suites check that the published results are right. One
+tests the community-contribution checker. The seventh,
 [`tests/`](tests/), checks what this repository would ACCEPT as a result: it
 mutates every field of a real accepted artifact — a census certificate, a shipped
 input pass, a catalogue row — and requires each mutation to be rejected, declared
 harmless with a reason, or named as one that only a rerun could refute. See
 [`tests/README.md`](tests/README.md).
 
-## 3. Complete `n <= 38` classification
+## 3. Complete `n <= 38` classification (legacy)
+
+This stage and the census in section 4 are legacy: the exhaustive length-54
+classification ([`classification/length54/`](classification/length54/))
+supersedes both, and they are kept for reproducibility and provenance (see
+[`classification/legacy/README.md`](classification/legacy/README.md)).
 
 Inputs are the classified supports in
-[`nezami_haah_reps.py`](classification/exhaustive_n38/nezami_haah_reps.py).
+[`nezami_haah_reps.py`](classification/legacy/exhaustive_n38/nezami_haah_reps.py).
 `marking.py` turns every support and origin into a check parent. `classify.py`
 exhausts compatible output frames in `R(C)/C`, verifies explicit circuits, and
 writes one result file per pass when that pass finishes -- it does not
@@ -56,24 +62,24 @@ budget writes `complete: false` and exits nonzero, and the builder rejects it.
 
 ```bash
 # Every length, output width through three (roughly two minutes on this machine)
-.venv/bin/python classification/exhaustive_n38/classify.py \
+.venv/bin/python classification/legacy/exhaustive_n38/classify.py \
   --kmax 3 --tag k3
 
 # Width four away from the exceptional n=31 parent
-.venv/bin/python classification/exhaustive_n38/classify.py \
+.venv/bin/python classification/legacy/exhaustive_n38/classify.py \
   --ns 15 16 23 24 27 28 29 30 32 33 34 35 36 37 38 \
   --kmax 4 --tag k4_easy
 
 # The remaining n=31 parents
-.venv/bin/python classification/exhaustive_n38/classify.py \
+.venv/bin/python classification/legacy/exhaustive_n38/classify.py \
   --ns 31 --kmax 4 --skip-classes 0 --tag k4_n31_rest
 
 # The maximally symmetric n=31 parent, collapsed by GL(5,2)
-.venv/bin/python classification/exhaustive_n38/hard_parent_n31.py --kmax 5
+.venv/bin/python classification/legacy/exhaustive_n38/hard_parent_n31.py --kmax 5
 
 # Consolidate, re-verify, and plot
-.venv/bin/python classification/exhaustive_n38/build_catalog.py
-.venv/bin/python classification/exhaustive_n38/plot_landscape.py
+.venv/bin/python classification/legacy/exhaustive_n38/build_catalog.py
+.venv/bin/python classification/legacy/exhaustive_n38/plot_landscape.py
 ```
 
 Expected catalogue result:
@@ -91,7 +97,7 @@ deposit exactly its stored `gate` string — the builder compares the two as
 strings and aborts on any mismatch.
 
 The generated files are
-`classification/exhaustive_n38/catalog/classification_n38.json`,
+`classification/legacy/exhaustive_n38/catalog/classification_n38.json`,
 `CLASSIFICATION_N38.md`, and `landscape_n38.{png,pdf}`.
 
 ### Independent row-space audit
@@ -101,28 +107,28 @@ row space rather than `R(C)/C`. Nothing shipped depends on it; it exists so the
 two enumerators can be compared:
 
 ```bash
-.venv/bin/python classification/exhaustive_n38/classify_rowspace.py manifest
+.venv/bin/python classification/legacy/exhaustive_n38/classify_rowspace.py manifest
 ```
 
 The fast test suite compares both algorithms on the small ladder. To run the
 comparison over the whole ladder, split it with the `manifest`/`task`/`merge`
 subcommands — sizing and measured costs are in
-[`docs/SHARDING.md`](classification/exhaustive_n38/docs/SHARDING.md). No cluster
+[`docs/SHARDING.md`](classification/legacy/exhaustive_n38/docs/SHARDING.md). No cluster
 is needed for anything this repository ships.
 
-## 4. Complete `r <= 7`, `n <= 44` census
+## 4. Complete `r <= 7`, `n <= 44` census (legacy)
 
 First verify the external orbit table. The orbit sizes must sum to exactly
 `2^64`; this is the outer-enumeration completeness certificate.
 
 ```bash
-.venv/bin/python classification/rank7_census/cli.py data-check
+.venv/bin/python classification/legacy/rank7_census/cli.py data-check
 ```
 
 Interactive smoke run (deliberately incomplete):
 
 ```bash
-.venv/bin/python classification/rank7_census/cli.py census \
+.venv/bin/python classification/legacy/rank7_census/cli.py census \
   --class-index 306 --max-parents 2 --kmax 2 --allow-incomplete \
   --output /tmp/census_smoke.json
 ```
@@ -136,10 +142,10 @@ which is what keeps a capped run from passing for a census in a cluster job.
 Full cluster-scale census:
 
 ```bash
-.venv/bin/python classification/rank7_census/cli.py census \
+.venv/bin/python classification/legacy/rank7_census/cli.py census \
   --mode all --nmax 44 --kmax 4 --dedup symmetric \
   --node-budget 0 --orbit-budget 0 --checkpoint-every 1 \
-  --output classification/rank7_census/results/census_r7_all.json
+  --output classification/legacy/rank7_census/results/census_r7_all.json
 ```
 
 This visits all `71 x 128 = 9,088` marked geometries and may take many
@@ -149,7 +155,7 @@ core-hours. Writes are atomic and checkpointed. Only a final top-level
 Rebuild the shipped frontier catalogue:
 
 ```bash
-.venv/bin/python classification/rank7_census/build_catalog.py
+.venv/bin/python classification/legacy/rank7_census/build_catalog.py
 ```
 
 ## 5. Parent-check workflow
@@ -223,7 +229,7 @@ campaign descriptor rather than a named gate):
 
 Search output is experimental until an explicit circuit is deliberately added
 to [`examples/found_factories.json`](symmetry_sat_search/examples/found_factories.json).
-That single file replaces historical campaign logs and fragmented run files.
+That single file is the complete record of the search examples.
 
 Rebuild and independently verify the curated catalogue:
 
@@ -282,7 +288,32 @@ report names every result as accepted, improved, duplicate or rejected. Merging
 an empty file, or a file of circuits the catalogue already holds, rewrites both
 files byte-identically.
 
-## 8. Figures
+## 8. Community contributions and the agent context pack
+
+A contributed protocol file is checked against the master catalogue without
+writing anything:
+
+```bash
+.venv/bin/python community_contributions/check_submission.py community_contributions/examples/bravyi-kitaev_15-to-1.json
+```
+
+The example is the Bravyi–Kitaev `[[15,1,3]]` protocol. The catalogue already
+holds it, so its one verdict is `duplicate` and the exit status is 0.
+[`community_contributions/README.md`](community_contributions/README.md) covers
+the format, the exit codes and the maintainers' `--write` merge.
+
+The context pack for agents ships a standard-library verifier with real
+fixtures:
+
+```bash
+python3 agent_context/reference/verify_factory.py --selftest
+```
+
+Its `check_claims.py` re-derives the pack's prose figures from the
+`magic-states-AI` corpus file `master_catalogue.jsonl`, which is not in this
+repository. See [`agent_context/README.md`](agent_context/README.md).
+
+## 9. Figures
 
 ```bash
 .venv/bin/python theory/figures/landscape_all.py

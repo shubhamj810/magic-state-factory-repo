@@ -44,8 +44,8 @@ There are four code directories, implementing three different strategies
 against the same feasible set.
 
 **Classify everything in a window.**
-[`../classification/exhaustive_n38/`](../classification/exhaustive_n38/) and
-[`../classification/rank7_census/`](../classification/rank7_census/) each close
+[`../classification/legacy/exhaustive_n38/`](../classification/legacy/exhaustive_n38/) and
+[`../classification/legacy/rank7_census/`](../classification/legacy/rank7_census/) each close
 a complete window and are complementary cuts through the same space. The first
 fixes the injection count and closes *every* check rank: for each classified
 Kasami-Tokura / Nezami-Haah check-support class up to `n = 38` it enumerates
@@ -54,6 +54,10 @@ the gate. The second fixes the check rank and closes *every* length up to
 `n = 44`: rank-at-most-7 check supports are exactly the codewords of `RM(3,7)`,
 which Gillot and Langevin have classified, so sweeping their orbit table and
 auditing the inner problem on each marked geometry settles `r <= 7` outright.
+Both are legacy stages, superseded by the exhaustive classification of
+generalised triorthogonal protocols through `n <= 54`, whose Pareto frontier is
+copied in [`../classification/length54/`](../classification/length54/); see
+[`../classification/legacy/README.md`](../classification/legacy/README.md).
 
 **Filter a parent, then solve.** [`../parent_first/`](../parent_first/) does not
 enumerate anything by itself. It takes one check parent and computes the
@@ -80,8 +84,8 @@ and produces the distance-3, 4 and 5 records in the catalogue.
 | note | explains | code |
 | --- | --- | --- |
 | [`01_factories_and_distance.md`](01_factories_and_distance.md) | the shared object: columns, phase polynomial, level, the factory condition, the punctured simplex, circuit distance, the finite-geometry picture, the two reported gate metrics | all four directories |
-| [`02_classification.md`](02_classification.md) | the two complete windows, the quotient trick, marking, the `S_k` key versus CNOT frames versus `GL(k,2)`, and the precise scope of the quotient method | [`../classification/exhaustive_n38/`](../classification/exhaustive_n38/), [`../classification/rank7_census/`](../classification/rank7_census/) |
-| [`03_parent_first.md`](03_parent_first.md) | the colored quotient, the `kappa`/`mu`/`tau` chain, why the ordering pays, and what a budget hit does and does not certify | [`../parent_first/`](../parent_first/), reused by [`../classification/rank7_census/`](../classification/rank7_census/) |
+| [`02_classification.md`](02_classification.md) | the two complete windows, the quotient trick, marking, the `S_k` key versus CNOT frames versus `GL(k,2)`, and the precise scope of the quotient method | [`../classification/legacy/exhaustive_n38/`](../classification/legacy/exhaustive_n38/), [`../classification/legacy/rank7_census/`](../classification/legacy/rank7_census/) |
+| [`03_parent_first.md`](03_parent_first.md) | the colored quotient, the `kappa`/`mu`/`tau` chain, why the ordering pays, and what a budget hit does and does not certify | [`../parent_first/`](../parent_first/), reused by [`../classification/legacy/rank7_census/`](../classification/legacy/rank7_census/) |
 | [`04_symmetry_and_sat.md`](04_symmetry_and_sat.md) | ansatz-free column SAT, the slot ansatz and its distance rules, and the recovered automorphism groups | [`../symmetry_sat_search/`](../symmetry_sat_search/) |
 | [`notation.md`](notation.md) | symbols, gate strings, geometry tags, distance conventions | all four directories |
 | [`PROVENANCE.md`](PROVENANCE.md) | where every published number comes from: the run or derivation behind each quoted factory, and how strong that makes it | all four directories |
@@ -94,8 +98,8 @@ other note assumes the column picture and the geometry/phase split. After that
 the notes are independent, and each one points at the module whose docstring
 carries the implementation detail — the docstrings are the primary source and
 are written to be read. The catalogues
-([`../classification/exhaustive_n38/catalog/CLASSIFICATION_N38.md`](../classification/exhaustive_n38/catalog/CLASSIFICATION_N38.md),
-[`../classification/rank7_census/catalog/CENSUS_R7.md`](../classification/rank7_census/catalog/CENSUS_R7.md),
+([`../classification/legacy/exhaustive_n38/catalog/CLASSIFICATION_N38.md`](../classification/legacy/exhaustive_n38/catalog/CLASSIFICATION_N38.md),
+[`../classification/legacy/rank7_census/catalog/CENSUS_R7.md`](../classification/legacy/rank7_census/catalog/CENSUS_R7.md),
 [`../symmetry_sat_search/catalog/FACTORY_CATALOG.md`](../symmetry_sat_search/catalog/FACTORY_CATALOG.md))
 are generated, never hand-edited, and every row ships explicit columns that a
 standard-library verifier re-checks from scratch. The one habit worth forming

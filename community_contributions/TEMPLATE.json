@@ -1,0 +1,38 @@
+{
+ "contributor": {
+  "name": "<your name, as it should be credited>",
+  "affiliation": "<optional: your affiliation; delete the field if none>",
+  "contact": "<optional: how the maintainers can reach you; never copied into the catalogue; delete the field if none>"
+ },
+ "reference": {
+  "key": "<surname2026firstword>",
+  "short": "<in-table label, e.g. Surname et al. (2026)>",
+  "full": "<the full bibliographic line, or: A. Surname, unpublished community contribution (2026).>",
+  "url": "<https DOI or arXiv link of the published work; delete the field if unpublished>"
+ },
+ "method": "<one or two sentences: how the protocols were found>",
+ "terms": "<the terms under which the maintainers may redistribute these protocols>",
+ "protocols": [
+  {
+   "label": "<optional short name; delete the field if none>",
+   "k": 1,
+   "N": 5,
+   "columns": [[0, 1], [0, 2], [0, 1, 2], [0, 3], [0, 1, 3], [0, 2, 3], [0, 1, 2, 3], [4], [1, 4], [2, 4], [1, 2, 4], [3, 4], [1, 3, 4], [2, 3, 4], [1, 2, 3, 4]],
+   "d": 3,
+   "gate": "T0",
+   "notes": "<optional free text; delete the field if none>"
+  },
+  {
+   "label": "<optional short name; delete the field if none>",
+   "generator_matrix_rows": [
+    "111111100000000",
+    "101010101010101",
+    "011001100110011",
+    "000111100001111",
+    "000000011111111"
+   ],
+   "q": 1,
+   "d": 3
+  }
+ ]
+}

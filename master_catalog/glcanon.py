@@ -36,7 +36,7 @@ and ``CS^dagger``, are one gate, which is exactly the parity read-off of
 `faultcore.recover_gate`.
 
 This is NOT the ``gl_class`` annotation of
-``classification/exhaustive_n38/dedup.py``, which orbits the gate's XOR (``F_2``)
+``classification/legacy/exhaustive_n38/dedup.py``, which orbits the gate's XOR (``F_2``)
 truth table and so separates ``0+1`` from ``0+01``.  Phases live in ``Z_8``:
 substituting ``x1 -> x0 + x1`` (a CNOT) into the phase ``x0 + x1`` of ``T0.T1``
 gives ``x0 + (x0 + x1 - 2 x0 x1) = 2 x0 + x1 - 2 x0 x1``, which is ``T1.CS01``

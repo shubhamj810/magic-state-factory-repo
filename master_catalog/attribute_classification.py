@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Credit a classification catalogue on the master rows it certifies.
 
-    python attribute_classification.py classification/rank7_census/catalog/sk_classes_r7.json \\
+    python attribute_classification.py classification/legacy/rank7_census/catalog/sk_classes_r7.json \\
         --regime "exhaustive classification n<=54" [--dry-run]
 
 WHY THIS EXISTS
