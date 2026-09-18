@@ -1,0 +1,189 @@
+{
+  "replay": "campaigns/2026-09-18_graph_gluing_d3_graphs/reports/upstream_bundle/witnesses/graph_bipartite_n684_k132_d3.json",
+  "n": 684,
+  "k": 132,
+  "N": 168,
+  "V_ex": 132,
+  "rho": 5.181818181818182,
+  "gamma_rho": 1.497485520602237,
+  "d_exact": 3,
+  "A3": 5760,
+  "A3_div_k": 43.63636363636363,
+  "harmful_by_weight": {
+    "1": 0,
+    "2": 0,
+    "3": 5760
+  },
+  "factory_condition": true,
+  "pure_T": true,
+  "independent_outputs": true,
+  "redundant_checks": 0
+}
+{
+  "replay": "campaigns/2026-09-18_graph_gluing_d3_graphs/reports/upstream_bundle/witnesses/graph_complete_n399_k77_d3.json",
+  "n": 399,
+  "k": 77,
+  "N": 98,
+  "V_ex": 77,
+  "rho": 5.181818181818182,
+  "gamma_rho": 1.497485520602237,
+  "d_exact": 3,
+  "A3": 3395,
+  "A3_div_k": 44.09090909090909,
+  "harmful_by_weight": {
+    "1": 0,
+    "2": 0,
+    "3": 3395
+  },
+  "factory_condition": true,
+  "pure_T": true,
+  "independent_outputs": true,
+  "redundant_checks": 0
+}
+{
+  "replay": "campaigns/2026-09-18_graph_gluing_d3_graphs/reports/upstream_bundle/witnesses/graph_complete_n960_k184_d3.json",
+  "n": 960,
+  "k": 184,
+  "N": 212,
+  "V_ex": 184,
+  "rho": 5.217391304347826,
+  "gamma_rho": 1.5037129512320282,
+  "d_exact": 3,
+  "A3": 18032,
+  "A3_div_k": 98.0,
+  "harmful_by_weight": {
+    "1": 0,
+    "2": 0,
+    "3": 18032
+  },
+  "factory_condition": true,
+  "pure_T": true,
+  "independent_outputs": true,
+  "redundant_checks": 0
+}
+{
+  "replay": "campaigns/2026-09-18_graph_gluing_d3_graphs/reports/upstream_bundle/witnesses/graph_dependent_ports_bipartite_n880_k176_d3.json",
+  "n": 880,
+  "k": 176,
+  "N": 209,
+  "V_ex": 176,
+  "rho": 5.0,
+  "gamma_rho": 1.4649735207179269,
+  "d_exact": 3,
+  "A3": 6896,
+  "A3_div_k": 39.18181818181818,
+  "harmful_by_weight": {
+    "1": 0,
+    "2": 0,
+    "3": 6896
+  },
+  "factory_condition": true,
+  "pure_T": true,
+  "independent_outputs": true,
+  "redundant_checks": 0
+}
+{
+  "replay": "campaigns/2026-09-18_graph_gluing_d3_graphs/reports/upstream_bundle/witnesses/graph_dependent_ports_complete_n495_k99_d3.json",
+  "n": 495,
+  "k": 99,
+  "N": 118,
+  "V_ex": 99,
+  "rho": 5.0,
+  "gamma_rho": 1.4649735207179269,
+  "d_exact": 3,
+  "A3": 3971,
+  "A3_div_k": 40.111111111111114,
+  "harmful_by_weight": {
+    "1": 0,
+    "2": 0,
+    "3": 3971
+  },
+  "factory_condition": true,
+  "pure_T": true,
+  "independent_outputs": true,
+  "redundant_checks": 0
+}
+{
+  "replay": "campaigns/2026-09-18_graph_gluing_d3_graphs/reports/upstream_bundle/witnesses/graph_heterogeneous_n255_k47_d3.json",
+  "n": 255,
+  "k": 47,
+  "N": 62,
+  "V_ex": 47,
+  "rho": 5.425531914893617,
+  "gamma_rho": 1.5393200685007564,
+  "d_exact": 3,
+  "A3": 1995,
+  "A3_div_k": 42.4468085106383,
+  "harmful_by_weight": {
+    "1": 0,
+    "2": 0,
+    "3": 1995
+  },
+  "factory_condition": true,
+  "pure_T": true,
+  "independent_outputs": true,
+  "redundant_checks": 0
+}
+{
+  "replay": "campaigns/2026-09-18_graph_gluing_d3_graphs/reports/upstream_bundle/witnesses/graph_low_prefactor_n909_k171_d3.json",
+  "n": 909,
+  "k": 171,
+  "N": 225,
+  "V_ex": 171,
+  "rho": 5.315789473684211,
+  "gamma_rho": 1.5207198707928626,
+  "d_exact": 3,
+  "A3": 2005,
+  "A3_div_k": 11.725146198830409,
+  "harmful_by_weight": {
+    "1": 0,
+    "2": 0,
+    "3": 2005
+  },
+  "factory_condition": true,
+  "pure_T": true,
+  "independent_outputs": true,
+  "redundant_checks": 0
+}
+{
+  "replay": "campaigns/2026-09-18_graph_gluing_d3_graphs/reports/upstream_bundle/witnesses/graph_path_n252_k46_d3.json",
+  "n": 252,
+  "k": 46,
+  "N": 59,
+  "V_ex": 46,
+  "rho": 5.478260869565218,
+  "gamma_rho": 1.5481236725326084,
+  "d_exact": 3,
+  "A3": 5208,
+  "A3_div_k": 113.21739130434783,
+  "harmful_by_weight": {
+    "1": 0,
+    "2": 0,
+    "3": 5208
+  },
+  "factory_condition": true,
+  "pure_T": true,
+  "independent_outputs": true,
+  "redundant_checks": 0
+}
+{
+  "replay": "campaigns/2026-09-18_graph_gluing_d3_graphs/reports/upstream_bundle/witnesses/graph_path_n502_k92_d3.json",
+  "n": 502,
+  "k": 92,
+  "N": 117,
+  "V_ex": 92,
+  "rho": 5.456521739130435,
+  "gamma_rho": 1.544504426306572,
+  "d_exact": 3,
+  "A3": 10292,
+  "A3_div_k": 111.8695652173913,
+  "harmful_by_weight": {
+    "1": 0,
+    "2": 0,
+    "3": 10292
+  },
+  "factory_condition": true,
+  "pure_T": true,
+  "independent_outputs": true,
+  "redundant_checks": 0
+}

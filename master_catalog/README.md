@@ -49,11 +49,12 @@ merge_results                        imports verify_catalog, so "verified to
 `n ≤ 54`. Widths run `k = 1..373`, injection counts `n = 15..1715`, and
 distances `d = 3..7`.
 
-The [Astra graph-factory import](imports/2026-09-18_astra_d3/README.md) adds nine
-exact-distance-three pure-T witnesses, including `[[495,99,3]]` and
-`[[880,176,3]]` at five inputs per output. The bundle includes every witness,
-its seed circuits, construction provenance, and a self-contained reconstruction
-script.
+The [graph-gluing import](imports/2026-09-18_graph_gluing_d3/README.md) holds
+nine exact-distance-three pure-T witnesses built by gluing catalogued small
+factories along a graph of paired-column contractions, including `[[495,99,3]]`
+and `[[880,176,3]]` at five inputs per output. The bundle includes every
+witness, its seed circuits, construction provenance, and a self-contained
+reconstruction script.
 
 A class is a distance together with a gate up to an invertible change of the
 output basis (a CNOT frame) and diagonal Clifford corrections — the CNOT+S

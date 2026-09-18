@@ -37,7 +37,7 @@ witness are different kinds of statement.
 | `AI search: generalised triorthogonal search 55<=n<=64` (79 rows) | found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55-64; a verified witness, not a maximum |
 | `AI search: pure-T puncture caps` (2 rows) | cap witnesses, NOT records. Each ATTAINS a proved maximum puncture count for its ambient size at d=6, making that bound exact rather than an upper bound: m=8 gives [[248,8,6]] and m=9 gives [[496,16,6]], both with n/t = 31 exactly, hence gamma = log(31)/log(6) = 1.9165 independent of m. Filed as evidence that these cells are closed, not as frontier points -- the d=6 pure-T bar is gamma 1.063146. |
 | `AI search: full-simplex pure-T frames` (2 rows) | widest pure-T frames held at n=511. DOMINATED on rate by the derived direct-sum baseline [[508,92,3]] = 4 x [[127,23,3]], rho = 508/92 = 5.5217. These are WIDTH points, explicitly NOT rate records: beating the baseline at n=511 needs k >= 93. |
-| `Astra graph-gluing search` (9 rows) | Explicit graph-glued pure-T witness; exact distance verified from columns; no optimality claim. |
+| `AI search: graph gluing` (9 rows) | found by an AI search that glues catalogued small factories along a graph of paired-column contractions; exact distance verified from columns; a verified witness, not a maximum |
 
 A **class** is `(n, k, d, gate)` with the gate taken up to an invertible
 change of the output basis (a CNOT frame, `GL(k,2)`) and diagonal Clifford
@@ -717,7 +717,7 @@ report. Full entries are under [References](#references).
 | 624 | `[[225,35,3]]` | — | 43 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
 | 625 | `[[228,2,4]]` | — | 12 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
 | 626 | `[[248,8,6]]` | — | 53 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search: pure-T puncture caps | Jain et al. (2026) |
-| 627 | `[[252,46,3]]` | — | 59 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | Astra graph-gluing search | Jain et al. (2026) |
+| 627 | `[[252,46,3]]` | — | 59 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
 | 628 | `[[255,1,5]]` | — | 17 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
 | 629 | `[[255,2,5]]` | — | 18 | `0+1` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
 | 630 | `[[255,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | AI search | AI search | Jain et al. (2026) |
@@ -736,7 +736,7 @@ report. Full entries are under [References](#references).
 | 643 | `[[255,40,3]]` | — | 48 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
 | 644 | `[[255,41,3]]` | — | 49 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
 | 645 | `[[255,43,3]]` | — | 51 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: pure-T width campaign n=255, 511 | Jain et al. (2026) |
-| 646 | `[[255,47,3]]` | — | 62 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | Astra graph-gluing search | Jain et al. (2026) |
+| 646 | `[[255,47,3]]` | — | 62 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
 | 647 | `[[256,6,6]]` | — | 23 | `012+345` | 13 | 3 | AI search | AI search | Jain et al. (2026) |
 | 648 | `[[256,9,4]]` | — | 24 | `012+013+014+015+023+024+026+035+036+0…` | — | — | AI search | AI search | Jain et al. (2026) |
 | 649 | `[[256,11,6]]` | — | 35 | `0,1,2+0,1,3+0,1,4+0,1,5+0,1,6+0,1,7+0…` | — | — | AI search | AI search | Jain et al. (2026) |
@@ -759,7 +759,7 @@ report. Full entries are under [References](#references).
 | 666 | `[[360,86,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
 | 667 | `[[360,88,3]]` | — | 99 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
 | 668 | `[[386,94,3]]` | — | 105 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 669 | `[[399,77,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | Astra graph-gluing search | Jain et al. (2026) |
+| 669 | `[[399,77,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
 | 670 | `[[404,100,3]]` | — | 111 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
 | 671 | `[[405,101,3]]` | — | 112 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
 | 672 | `[[406,100,3]]` | — | 112 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
@@ -783,10 +783,10 @@ report. Full entries are under [References](#references).
 | 690 | `[[431,81,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
 | 691 | `[[432,80,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
 | 692 | `[[460,116,3]]` | — | 128 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 693 | `[[495,99,3]]` | — | 118 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | Astra graph-gluing search | Jain et al. (2026) |
+| 693 | `[[495,99,3]]` | — | 118 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
 | 694 | `[[496,16,6]]` | — | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | AI search | AI search: pure-T puncture caps | Jain et al. (2026) |
 | 695 | `[[496,36,4]]` | — | 47 | `0,1,2+0,1,7+0,1,8+0,1,9+0,1,11+0,1,12…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 696 | `[[502,92,3]]` | — | 117 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | Astra graph-gluing search | Jain et al. (2026) |
+| 696 | `[[502,92,3]]` | — | 117 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
 | 697 | `[[508,132,3]]` | — | 143 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
 | 698 | `[[511,1,5]]` | — | 19 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
 | 699 | `[[511,2,5]]` | — | 20 | `0+1` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
@@ -816,7 +816,7 @@ report. Full entries are under [References](#references).
 | 723 | `[[606,162,3]]` | — | 174 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
 | 724 | `[[655,177,3]]` | — | 189 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
 | 725 | `[[679,185,3]]` | — | 197 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 726 | `[[684,132,3]]` | — | 168 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | Astra graph-gluing search | Jain et al. (2026) |
+| 726 | `[[684,132,3]]` | — | 168 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
 | 727 | `[[691,189,3]]` | — | 201 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
 | 728 | `[[702,194,3]]` | — | 205 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
 | 729 | `[[715,197,3]]` | — | 209 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
@@ -847,7 +847,7 @@ report. Full entries are under [References](#references).
 | 754 | `[[872,152,4]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
 | 755 | `[[879,145,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
 | 756 | `[[880,144,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 757 | `[[880,176,3]]` | — | 209 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | Astra graph-gluing search | Jain et al. (2026) |
+| 757 | `[[880,176,3]]` | — | 209 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
 | 758 | `[[887,137,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
 | 759 | `[[896,128,6]]` | — | 189 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
 | 760 | `[[901,123,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): punctured Reed-Muller code | Jain et al. (2026) |
@@ -858,7 +858,7 @@ report. Full entries are under [References](#references).
 | 765 | `[[907,117,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
 | 766 | `[[908,116,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
 | 767 | `[[909,115,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 768 | `[[909,171,3]]` | — | 225 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | Astra graph-gluing search | Jain et al. (2026) |
+| 768 | `[[909,171,3]]` | — | 225 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
 | 769 | `[[910,114,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
 | 770 | `[[911,113,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
 | 771 | `[[912,112,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
@@ -866,7 +866,7 @@ report. Full entries are under [References](#references).
 | 773 | `[[936,88,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
 | 774 | `[[937,87,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
 | 775 | `[[959,65,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 776 | `[[960,184,3]]` | — | 212 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | Astra graph-gluing search | Jain et al. (2026) |
+| 776 | `[[960,184,3]]` | — | 212 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
 | 777 | `[[988,36,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: Wills downset framework | Jain et al. (2026) |
 | 778 | `[[998,26,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: Wills downset framework | Jain et al. (2026) |
 | 779 | `[[1023,1,5]]` | — | 21 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
@@ -11865,9 +11865,9 @@ readable copy of exactly these rows.
 - `N = 59` (46 outputs + 13 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
 - discovery: AI search
-- regime: Astra graph-gluing search — Explicit graph-glued pure-T witness; exact distance verified from columns; no optimality claim.
+- regime: AI search: graph gluing — found by an AI search that glues catalogued small factories along a graph of paired-column contractions; exact distance verified from columns; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `Astra graph-gluing search` · Astra graph [[252,46,3]] (`{"construction": {"edges": [[0, 1]], "operation": "simple-graph gluing; dependent ports permitted only with full verification", "port_pairs_original_indices": [[0, 127]], "port_syndromes": null, "scope": "new construction in this analysis; publication novelty unestablished", "seed_ids": ["1fba2b1a6f8a44b0", "1fba2b1a6f8a44b0"]}, "original_file": "Astra suggestions/verified/graph_path_n252_k46_d3.json"}`)
+- source: `AI search: graph gluing` · graph gluing [[252,46,3]] (`AI search: graph gluing -- two [[127,23,3]] glued along K2 by 1 paired-column contraction(s) (independent ports); construction and witness in master_catalog/imports/2026-09-18_graph_gluing_d3/witnesses/graph_path_n252_k46_d3.json`)
 - note (T-count): not computed: exact minimisation is over GL(46,2) and a punctured RM(46-4,46) coset, neither feasible at k=46
 - note (reduced degree): not computed: exact minimisation is over GL(46,2) and a punctured RM(46-4,46) coset, neither feasible at k=46
 
@@ -12122,9 +12122,9 @@ readable copy of exactly these rows.
 - `N = 62` (47 outputs + 15 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 38]
 - discovery: AI search
-- regime: Astra graph-gluing search — Explicit graph-glued pure-T witness; exact distance verified from columns; no optimality claim.
+- regime: AI search: graph gluing — found by an AI search that glues catalogued small factories along a graph of paired-column contractions; exact distance verified from columns; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `Astra graph-gluing search` · Astra graph [[255,47,3]] (`{"construction": {"assignment_seed": 0, "comparison": "Meets the September 15 n=255, k>=47, d=3 target. Not the overall rate winner.", "edges": [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [2, 3], [2, 4], [2, 5], [2, 6], [3, 4], [3, 5], [3, 6], [4, 5], [4, 6], [5, 6]], "operation": "simple-graph gluing; dependent ports permitted only with full verification", "port_pairs_original_indices": [[17, 98], [18, 161], [41, 224], [6, 262], [35, 277], [1, 292], [80, 132], [81, 230], [64, 252], [104, 269], [69, 282], [167, 190], [144, 255], [127, 275], [143, 290], [207, 253], [195, 270], [206, 285], [254, 268], [260, 283], [267, 284]], "port_syndromes": [[8, 32, 1, 2, 4, 16], [4, 8, 32, 16, 1, 2], [4, 2, 1, 32, 16, 8], [4, 1, 16, 32, 2, 8], [9, 1, 5, 3, 7, 11], [9, 7, 11, 5, 3, 1], [9, 1, 11, 5, 3, 7]], "scope": "new construction in this analysis; publication novelty unestablished", "seed_ids": ["06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "270e26d6f1fa54c6", "270e26d6f1fa54c6", "270e26d6f1fa54c6"], "tool": "tools/heterogeneous_graphs.py"}, "original_file": "Astra suggestions/verified/graph_heterogeneous_n255_k47_d3.json"}`)
+- source: `AI search: graph gluing` · graph gluing [[255,47,3]] (`AI search: graph gluing -- four [[63,11,3]] and three [[15,1,3]] glued along K7 by 21 paired-column contraction(s) (dependent ports); construction and witness in master_catalog/imports/2026-09-18_graph_gluing_d3/witnesses/graph_heterogeneous_n255_k47_d3.json`)
 - note (T-count): not computed: exact minimisation is over GL(47,2) and a punctured RM(47-4,47) coset, neither feasible at k=47
 - note (reduced degree): not computed: exact minimisation is over GL(47,2) and a punctured RM(47-4,47) coset, neither feasible at k=47
 
@@ -12446,9 +12446,9 @@ readable copy of exactly these rows.
 - `N = 98` (77 outputs + 21 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 38]
 - discovery: AI search
-- regime: Astra graph-gluing search — Explicit graph-glued pure-T witness; exact distance verified from columns; no optimality claim.
+- regime: AI search: graph gluing — found by an AI search that glues catalogued small factories along a graph of paired-column contractions; exact distance verified from columns; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `Astra graph-gluing search` · Astra graph [[399,77,3]] (`{"construction": {"edges": [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [2, 3], [2, 4], [2, 5], [2, 6], [3, 4], [3, 5], [3, 6], [4, 5], [4, 6], [5, 6]], "operation": "simple-graph gluing; dependent ports permitted only with full verification", "port_pairs_original_indices": [[41, 104], [6, 167], [35, 230], [17, 293], [1, 356], [18, 419], [69, 132], [98, 195], [80, 258], [64, 321], [81, 384], [161, 224], [143, 287], [127, 350], [144, 413], [206, 269], [190, 332], [207, 395], [253, 316], [270, 379], [333, 396]], "port_syndromes": null, "scope": "new construction in this analysis; publication novelty unestablished", "seed_ids": ["06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828"]}, "original_file": "Astra suggestions/verified/graph_complete_n399_k77_d3.json"}`)
+- source: `AI search: graph gluing` · graph gluing [[399,77,3]] (`AI search: graph gluing -- seven [[63,11,3]] glued along K7 by 21 paired-column contraction(s) (independent ports); construction and witness in master_catalog/imports/2026-09-18_graph_gluing_d3/witnesses/graph_complete_n399_k77_d3.json`)
 - note (T-count): not computed: exact minimisation is over GL(77,2) and a punctured RM(77-4,77) coset, neither feasible at k=77
 - note (reduced degree): not computed: exact minimisation is over GL(77,2) and a punctured RM(77-4,77) coset, neither feasible at k=77
 
@@ -12782,9 +12782,9 @@ readable copy of exactly these rows.
 - `N = 118` (99 outputs + 19 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 38]
 - discovery: AI search
-- regime: Astra graph-gluing search — Explicit graph-glued pure-T witness; exact distance verified from columns; no optimality claim.
+- regime: AI search: graph gluing — found by an AI search that glues catalogued small factories along a graph of paired-column contractions; exact distance verified from columns; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `Astra graph-gluing search` · Astra graph [[495,99,3]] (`{"construction": {"edges": [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [0, 7], [0, 8], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [1, 7], [1, 8], [2, 3], [2, 4], [2, 5], [2, 6], [2, 7], [2, 8], [3, 4], [3, 5], [3, 6], [3, 7], [3, 8], [4, 5], [4, 6], [4, 7], [4, 8], [5, 6], [5, 7], [5, 8], [6, 7], [6, 8], [7, 8]], "operation": "simple-graph gluing; dependent ports permitted only with full verification", "port_pairs_original_indices": [[7, 124], [1, 129], [18, 207], [12, 253], [61, 329], [45, 439], [14, 486], [3, 522], [66, 133], [75, 203], [70, 259], [81, 376], [108, 396], [64, 455], [77, 549], [140, 234], [187, 264], [144, 333], [127, 423], [171, 453], [138, 565], [192, 255], [201, 322], [190, 381], [250, 502], [196, 518], [270, 316], [297, 392], [266, 442], [313, 516], [318, 379], [360, 448], [327, 505], [390, 459], [385, 507], [444, 511]], "port_syndromes": [[18, 16, 32, 27, 24, 40, 63, 54], [24, 54, 27, 18, 32, 40, 16, 63], [54, 18, 63, 24, 32, 16, 40, 27], [32, 63, 40, 54, 27, 16, 24, 18], [16, 18, 27, 54, 32, 40, 63, 24], [63, 24, 32, 18, 16, 54, 40, 27], [24, 32, 40, 54, 63, 16, 27, 18], [40, 63, 27, 24, 16, 18, 32, 54], [32, 40, 24, 63, 27, 16, 54, 18]], "scope": "new construction in this analysis; publication novelty unestablished", "seed_ids": ["06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828"]}, "original_file": "Astra suggestions/verified/graph_dependent_ports_complete_n495_k99_d3.json"}`)
+- source: `AI search: graph gluing` · graph gluing [[495,99,3]] (`AI search: graph gluing -- nine [[63,11,3]] glued along K9 by 36 paired-column contraction(s) (dependent ports); construction and witness in master_catalog/imports/2026-09-18_graph_gluing_d3/witnesses/graph_dependent_ports_complete_n495_k99_d3.json`)
 - note (T-count): not computed: exact minimisation is over GL(99,2) and a punctured RM(99-4,99) coset, neither feasible at k=99
 - note (reduced degree): not computed: exact minimisation is over GL(99,2) and a punctured RM(99-4,99) coset, neither feasible at k=99
 
@@ -12825,9 +12825,9 @@ readable copy of exactly these rows.
 - `N = 117` (92 outputs + 25 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
 - discovery: AI search
-- regime: Astra graph-gluing search — Explicit graph-glued pure-T witness; exact distance verified from columns; no optimality claim.
+- regime: AI search: graph gluing — found by an AI search that glues catalogued small factories along a graph of paired-column contractions; exact distance verified from columns; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `Astra graph-gluing search` · Astra graph [[502,92,3]] (`{"construction": {"edges": [[0, 1], [1, 2], [2, 3]], "operation": "simple-graph gluing; dependent ports permitted only with full verification", "port_pairs_original_indices": [[0, 127], [129, 254], [256, 381]], "port_syndromes": null, "scope": "new construction in this analysis; publication novelty unestablished", "seed_ids": ["1fba2b1a6f8a44b0", "1fba2b1a6f8a44b0", "1fba2b1a6f8a44b0", "1fba2b1a6f8a44b0"]}, "original_file": "Astra suggestions/verified/graph_path_n502_k92_d3.json"}`)
+- source: `AI search: graph gluing` · graph gluing [[502,92,3]] (`AI search: graph gluing -- four [[127,23,3]] glued along a path of four factories by 3 paired-column contraction(s) (independent ports); construction and witness in master_catalog/imports/2026-09-18_graph_gluing_d3/witnesses/graph_path_n502_k92_d3.json`)
 - note (T-count): not computed: exact minimisation is over GL(92,2) and a punctured RM(92-4,92) coset, neither feasible at k=92
 - note (reduced degree): not computed: exact minimisation is over GL(92,2) and a punctured RM(92-4,92) coset, neither feasible at k=92
 
@@ -13236,9 +13236,9 @@ readable copy of exactly these rows.
 - `N = 168` (132 outputs + 36 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 38]
 - discovery: AI search
-- regime: Astra graph-gluing search — Explicit graph-glued pure-T witness; exact distance verified from columns; no optimality claim.
+- regime: AI search: graph gluing — found by an AI search that glues catalogued small factories along a graph of paired-column contractions; exact distance verified from columns; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `Astra graph-gluing search` · Astra graph [[684,132,3]] (`{"construction": {"edges": [[0, 6], [0, 7], [0, 8], [0, 9], [0, 10], [0, 11], [1, 6], [1, 7], [1, 8], [1, 9], [1, 10], [1, 11], [2, 6], [2, 7], [2, 8], [2, 9], [2, 10], [2, 11], [3, 6], [3, 7], [3, 8], [3, 9], [3, 10], [3, 11], [4, 6], [4, 7], [4, 8], [4, 9], [4, 10], [4, 11], [5, 6], [5, 7], [5, 8], [5, 9], [5, 10], [5, 11]], "operation": "simple-graph gluing; dependent ports permitted only with full verification", "port_pairs_original_indices": [[41, 419], [6, 482], [35, 545], [17, 608], [1, 671], [18, 734], [104, 384], [69, 447], [98, 510], [80, 573], [64, 636], [81, 699], [167, 413], [132, 476], [161, 539], [143, 602], [127, 665], [144, 728], [230, 395], [195, 458], [224, 521], [206, 584], [190, 647], [207, 710], [293, 379], [258, 442], [287, 505], [269, 568], [253, 631], [270, 694], [356, 396], [321, 459], [350, 522], [332, 585], [316, 648], [333, 711]], "port_syndromes": null, "scope": "new construction in this analysis; publication novelty unestablished", "seed_ids": ["06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828"]}, "original_file": "Astra suggestions/verified/graph_bipartite_n684_k132_d3.json"}`)
+- source: `AI search: graph gluing` · graph gluing [[684,132,3]] (`AI search: graph gluing -- twelve [[63,11,3]] glued along K6,6 by 36 paired-column contraction(s) (independent ports); construction and witness in master_catalog/imports/2026-09-18_graph_gluing_d3/witnesses/graph_bipartite_n684_k132_d3.json`)
 - note (T-count): not computed: exact minimisation is over GL(132,2) and a punctured RM(132-4,132) coset, neither feasible at k=132
 - note (reduced degree): not computed: exact minimisation is over GL(132,2) and a punctured RM(132-4,132) coset, neither feasible at k=132
 
@@ -13675,9 +13675,9 @@ readable copy of exactly these rows.
 - `N = 209` (176 outputs + 33 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 38]
 - discovery: AI search
-- regime: Astra graph-gluing search — Explicit graph-glued pure-T witness; exact distance verified from columns; no optimality claim.
+- regime: AI search: graph gluing — found by an AI search that glues catalogued small factories along a graph of paired-column contractions; exact distance verified from columns; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `Astra graph-gluing search` · Astra graph [[880,176,3]] (`{"construction": {"edges": [[0, 8], [0, 9], [0, 10], [0, 11], [0, 12], [0, 13], [0, 14], [0, 15], [1, 8], [1, 9], [1, 10], [1, 11], [1, 12], [1, 13], [1, 14], [1, 15], [2, 8], [2, 9], [2, 10], [2, 11], [2, 12], [2, 13], [2, 14], [2, 15], [3, 8], [3, 9], [3, 10], [3, 11], [3, 12], [3, 13], [3, 14], [3, 15], [4, 8], [4, 9], [4, 10], [4, 11], [4, 12], [4, 13], [4, 14], [4, 15], [5, 8], [5, 9], [5, 10], [5, 11], [5, 12], [5, 13], [5, 14], [5, 15], [6, 8], [6, 9], [6, 10], [6, 11], [6, 12], [6, 13], [6, 14], [6, 15], [7, 8], [7, 9], [7, 10], [7, 11], [7, 12], [7, 13], [7, 14], [7, 15]], "operation": "simple-graph gluing; dependent ports permitted only with full verification", "port_pairs_original_indices": [[7, 522], [1, 628], [18, 642], [12, 738], [61, 801], [45, 826], [14, 889], [3, 946], [124, 549], [66, 570], [75, 675], [70, 754], [81, 774], [108, 831], [64, 896], [77, 990], [129, 565], [133, 579], [140, 648], [187, 705], [144, 817], [127, 837], [171, 900], [138, 959], [207, 518], [203, 568], [234, 691], [192, 696], [201, 763], [190, 833], [250, 894], [196, 952], [253, 516], [259, 612], [264, 631], [255, 711], [270, 759], [297, 820], [266, 883], [313, 957], [329, 505], [376, 574], [333, 644], [322, 707], [316, 768], [318, 880], [360, 943], [327, 963], [439, 507], [396, 581], [423, 637], [381, 694], [392, 770], [379, 822], [390, 885], [385, 948], [486, 511], [455, 585], [453, 633], [502, 700], [442, 757], [448, 864], [459, 927], [444, 1006]], "port_syndromes": [[18, 16, 32, 27, 24, 40, 63, 54], [24, 54, 27, 18, 32, 40, 16, 63], [54, 18, 63, 24, 32, 16, 40, 27], [32, 63, 40, 54, 27, 16, 24, 18], [16, 18, 27, 54, 32, 40, 63, 24], [63, 24, 32, 18, 16, 54, 40, 27], [24, 32, 40, 54, 63, 16, 27, 18], [40, 63, 27, 24, 16, 18, 32, 54], [32, 40, 24, 63, 27, 16, 54, 18], [24, 54, 27, 16, 40, 18, 63, 32], [27, 40, 32, 24, 16, 63, 18, 54], [40, 24, 27, 54, 32, 63, 16, 18], [40, 32, 24, 18, 54, 27, 63, 16], [18, 27, 32, 63, 16, 24, 54, 40], [18, 63, 32, 27, 16, 24, 54, 40], [16, 40, 63, 18, 27, 32, 54, 24]], "scope": "new construction in this analysis; publication novelty unestablished", "seed_ids": ["06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828", "06803716bc802828"]}, "original_file": "Astra suggestions/verified/graph_dependent_ports_bipartite_n880_k176_d3.json"}`)
+- source: `AI search: graph gluing` · graph gluing [[880,176,3]] (`AI search: graph gluing -- sixteen [[63,11,3]] glued along K8,8 by 64 paired-column contraction(s) (dependent ports); construction and witness in master_catalog/imports/2026-09-18_graph_gluing_d3/witnesses/graph_dependent_ports_bipartite_n880_k176_d3.json`)
 - note (T-count): not computed: exact minimisation is over GL(176,2) and a punctured RM(176-4,176) coset, neither feasible at k=176
 - note (reduced degree): not computed: exact minimisation is over GL(176,2) and a punctured RM(176-4,176) coset, neither feasible at k=176
 
@@ -13830,9 +13830,9 @@ readable copy of exactly these rows.
 - `N = 225` (171 outputs + 54 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 48]
 - discovery: AI search
-- regime: Astra graph-gluing search — Explicit graph-glued pure-T witness; exact distance verified from columns; no optimality claim.
+- regime: AI search: graph gluing — found by an AI search that glues catalogued small factories along a graph of paired-column contractions; exact distance verified from columns; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `Astra graph-gluing search` · Astra graph [[909,171,3]] (`{"construction": {"edges": [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [0, 7], [0, 8], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [1, 7], [1, 8], [2, 3], [2, 4], [2, 5], [2, 6], [2, 7], [2, 8], [3, 4], [3, 5], [3, 6], [3, 7], [3, 8], [4, 5], [4, 6], [4, 7], [4, 8], [5, 6], [5, 7], [5, 8], [6, 7], [6, 8], [7, 8]], "operation": "simple-graph gluing; dependent ports permitted only with full verification", "port_pairs_original_indices": [[4, 113], [6, 222], [24, 331], [30, 440], [35, 549], [43, 658], [82, 767], [83, 876], [115, 224], [133, 333], [139, 442], [144, 551], [152, 660], [191, 769], [192, 878], [242, 351], [248, 460], [253, 569], [261, 678], [300, 787], [301, 896], [357, 466], [362, 575], [370, 684], [409, 793], [410, 902], [471, 580], [479, 689], [518, 798], [519, 907], [588, 697], [627, 806], [628, 915], [736, 845], [737, 954], [846, 955]], "port_syndromes": [[962, 811, 31, 785, 841, 521, 564, 406], [962, 811, 31, 785, 841, 521, 564, 406], [962, 811, 31, 785, 841, 521, 564, 406], [962, 811, 31, 785, 841, 521, 564, 406], [962, 811, 31, 785, 841, 521, 564, 406], [962, 811, 31, 785, 841, 521, 564, 406], [962, 811, 31, 785, 841, 521, 564, 406], [962, 811, 31, 785, 841, 521, 564, 406], [962, 811, 31, 785, 841, 521, 564, 406]], "scope": "new construction in this analysis; publication novelty unestablished", "seed_ids": ["032b274e708e9d80", "032b274e708e9d80", "032b274e708e9d80", "032b274e708e9d80", "032b274e708e9d80", "032b274e708e9d80", "032b274e708e9d80", "032b274e708e9d80", "032b274e708e9d80"]}, "original_file": "Astra suggestions/verified/graph_low_prefactor_n909_k171_d3.json"}`)
+- source: `AI search: graph gluing` · graph gluing [[909,171,3]] (`AI search: graph gluing -- nine [[109,19,3]] glued along K9 by 36 paired-column contraction(s) (dependent ports); construction and witness in master_catalog/imports/2026-09-18_graph_gluing_d3/witnesses/graph_low_prefactor_n909_k171_d3.json`)
 - note (T-count): not computed: exact minimisation is over GL(171,2) and a punctured RM(171-4,171) coset, neither feasible at k=171
 - note (reduced degree): not computed: exact minimisation is over GL(171,2) and a punctured RM(171-4,171) coset, neither feasible at k=171
 
@@ -13942,9 +13942,9 @@ readable copy of exactly these rows.
 - `N = 212` (184 outputs + 28 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
-- regime: Astra graph-gluing search — Explicit graph-glued pure-T witness; exact distance verified from columns; no optimality claim.
+- regime: AI search: graph gluing — found by an AI search that glues catalogued small factories along a graph of paired-column contractions; exact distance verified from columns; a verified witness, not a maximum
 - citation: Jain et al. (2026)
-- source: `Astra graph-gluing search` · Astra graph [[960,184,3]] (`{"construction": {"edges": [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [0, 7], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [1, 7], [2, 3], [2, 4], [2, 5], [2, 6], [2, 7], [3, 4], [3, 5], [3, 6], [3, 7], [4, 5], [4, 6], [4, 7], [5, 6], [5, 7], [6, 7]], "operation": "simple-graph gluing; dependent ports permitted only with full verification", "port_pairs_original_indices": [[0, 127], [2, 254], [6, 381], [125, 508], [123, 635], [124, 762], [113, 889], [129, 256], [133, 383], [252, 510], [250, 637], [251, 764], [240, 891], [260, 387], [379, 514], [377, 641], [378, 768], [367, 895], [506, 633], [504, 760], [505, 887], [494, 1014], [631, 758], [632, 885], [621, 1012], [759, 886], [748, 1013], [875, 1002]], "port_syndromes": null, "scope": "new construction in this analysis; publication novelty unestablished", "seed_ids": ["1fba2b1a6f8a44b0", "1fba2b1a6f8a44b0", "1fba2b1a6f8a44b0", "1fba2b1a6f8a44b0", "1fba2b1a6f8a44b0", "1fba2b1a6f8a44b0", "1fba2b1a6f8a44b0", "1fba2b1a6f8a44b0"]}, "original_file": "Astra suggestions/verified/graph_complete_n960_k184_d3.json"}`)
+- source: `AI search: graph gluing` · graph gluing [[960,184,3]] (`AI search: graph gluing -- eight [[127,23,3]] glued along K8 by 28 paired-column contraction(s) (independent ports); construction and witness in master_catalog/imports/2026-09-18_graph_gluing_d3/witnesses/graph_complete_n960_k184_d3.json`)
 - note (T-count): not computed: exact minimisation is over GL(184,2) and a punctured RM(184-4,184) coset, neither feasible at k=184
 - note (reduced degree): not computed: exact minimisation is over GL(184,2) and a punctured RM(184-4,184) coset, neither feasible at k=184
 
