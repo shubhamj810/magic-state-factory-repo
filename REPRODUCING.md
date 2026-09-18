@@ -251,14 +251,14 @@ through `merge_results.py`. So what there is to reproduce is the VERIFICATION,
 which reads nothing but the file itself:
 
 ```bash
-.venv/bin/python master_catalog/verify_catalog.py
+.venv/bin/python master_catalog/verify_catalog.py            # every row, ~15 min on one core
+.venv/bin/python master_catalog/verify_catalog.py --changed  # rows that differ from HEAD, seconds
 ```
 
-Expected summary (about fifteen minutes on one laptop core; `--rows 1-20` for a
-quick slice):
+Expected summary of the full run (`--rows 1-20` for a quick slice):
 
 ```text
-PASS: 804 rows re-derived from their columns in <time>s -- gate, check
+PASS: <N> rows re-derived from their columns in <time>s -- gate, check
 parities, distance (absence proved below d, presence witnessed at it), output
 width modulo the check span, spectator and pseudo-output freedom, no check wire
 whose syndrome bit the others already decide, T-count and reduced degree where
@@ -286,7 +286,9 @@ Each incoming circuit is verified to the same bar as a shipped row --
 not afterwards confirm -- then deduplicated against the catalogue, and the
 report names every result as accepted, improved, duplicate or rejected. Merging
 an empty file, or a file of circuits the catalogue already holds, rewrites both
-files byte-identically.
+files byte-identically. A merge re-verifies no existing row and takes seconds
+plus the cost of verifying the new circuits; `verify_catalog.py --changed`
+then re-derives exactly the rows it changed.
 
 ## 8. Community contributions and the agent context pack
 

@@ -33,8 +33,9 @@ The catalogue holds **804 classes**:
   classification.
 
 ```bash
-.venv/bin/python master_catalog/verify_catalog.py          # re-derive every row from its columns
-.venv/bin/python master_catalog/merge_results.py new.json  # verify and merge new results
+.venv/bin/python master_catalog/verify_catalog.py            # re-derive every row from its columns
+.venv/bin/python master_catalog/merge_results.py new.json    # verify and merge new results (seconds)
+.venv/bin/python master_catalog/verify_catalog.py --changed  # re-verify just the rows a merge changed
 ```
 
 ### One row per magic state: the `GL(k,2)` key
@@ -148,7 +149,8 @@ the database is separate:
 .venv/bin/python master_catalog/verify_catalog.py
 ```
 
-It takes about fifteen minutes on one core.
+It takes about fifteen minutes on one core; `--changed` re-verifies only the
+rows that differ from the committed catalogue, in seconds.
 [`REPRODUCING.md`](REPRODUCING.md) has every rebuild and search command, with
 expected outputs and runtimes.
 

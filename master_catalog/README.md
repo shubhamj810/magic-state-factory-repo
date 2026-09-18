@@ -21,7 +21,8 @@ literature and [community contributions](../community_contributions/).
 | [`tests/`](tests/) | an independent re-derivation of the shipped file, plus the verifier's and merger's own suites |
 
 ```bash
-.venv/bin/python master_catalog/verify_catalog.py            # all rows, plus the file-level checks
+.venv/bin/python master_catalog/verify_catalog.py            # all rows, plus the file-level checks (~15 min)
+.venv/bin/python master_catalog/verify_catalog.py --changed  # only the rows that differ from HEAD, plus the file-level checks (seconds)
 .venv/bin/python master_catalog/verify_catalog.py --rows 1-20
 .venv/bin/python master_catalog/merge_results.py new.json    # see "Merging" below
 .venv/bin/python -m unittest discover -s master_catalog/tests
@@ -44,9 +45,15 @@ merge_results                        imports verify_catalog, so "verified to
 
 ## What is in it
 
-**804 distinct `(n, k, d, GL(k,2) gate)` classes**, 217 of them with
+**813 distinct `(n, k, d, GL(k,2) gate)` classes**, 217 of them with
 `n ≤ 54`. Widths run `k = 1..373`, injection counts `n = 15..1715`, and
 distances `d = 3..7`.
+
+The [Astra graph-factory import](imports/2026-09-18_astra_d3/README.md) adds nine
+exact-distance-three pure-T witnesses, including `[[495,99,3]]` and
+`[[880,176,3]]` at five inputs per output. The bundle includes every witness,
+its seed circuits, construction provenance, and a self-contained reconstruction
+script.
 
 A class is a distance together with a gate up to an invertible change of the
 output basis (a CNOT frame) and diagonal Clifford corrections — the CNOT+S
@@ -142,8 +149,18 @@ different factory, or none.
 ## Verifying
 
 ```bash
-.venv/bin/python master_catalog/verify_catalog.py
+.venv/bin/python master_catalog/verify_catalog.py              # every row
+.venv/bin/python master_catalog/verify_catalog.py --changed    # the rows a merge changed
 ```
+
+The full run re-derives all rows and takes about fifteen minutes on one core;
+the time is in the few large-`n`, high-distance rows. After a merge, `--changed`
+re-derives only the rows whose circuit differs from the catalogue committed at
+`HEAD` (or at `--changed REF`, or in a file with `--baseline PATH`) and runs the
+whole-file checks below over everything, which takes seconds. A row is
+unchanged when a committed row equals it on every field other than provenance
+(`regimes`, `discovery`, `strongest_claim`, `sources`, `citations`), since
+nothing the row-level checks compute reads those.
 
 For every row, from `columns`, `k` and `N` alone:
 
@@ -265,7 +282,10 @@ a circuit merged from a field nobody read.
 
 Both files are then regenerated from the merged payload, deterministically, so
 an unchanged catalogue is rewritten **byte-identically** and a real change shows
-up as a minimal diff rather than a reformat of twelve megabytes.
+up as a minimal diff rather than a reformat of twelve megabytes. Regenerating
+takes about two seconds; no existing row is re-verified by a merge. Afterwards,
+`verify_catalog.py --changed` re-derives exactly the rows the merge added or
+improved and re-runs the whole-file checks, in seconds.
 
 **A claim is checked, never believed, and only a *disproved* claim rejects.** A
 `d` claimed above what an explicit witness allows rejects the record — a wrong
@@ -366,7 +386,7 @@ or undocumented fields.
 * **Hidden spectators.** The spectator and pseudo-output checks are made in the
   stored frame. A gate that, in some other CNOT frame, leaves an output untouched
   up to Cliffords (`T0·T1·CS01` is `T` on `x0 + x1` times a `CZ`) passes them;
-  80 of the 804 classes are of this kind, 70 of them with `n ≤ 54`. None is a
+  80 of the 813 classes are of this kind, 70 of them with `n ≤ 54`. None is a
   Pareto point — those outputs are spectator-free by construction — and each of
   the 70 is dominated by the Pareto point of its spectator-free output (tested).
 * **Repairs.** A circuit rejected for a spectator, a pseudo-output or a

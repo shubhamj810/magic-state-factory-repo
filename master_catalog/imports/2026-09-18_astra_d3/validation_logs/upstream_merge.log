@@ -1,0 +1,13 @@
+merging 9 result(s) from master_catalog/imports/2026-09-18_astra_d3/factories.json into master_catalog.json (804 classes)
+  accepted   result 0: [[684,132,3]] N=168 0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+1 (a class the catalogue did not have)
+  accepted   result 1: [[399,77,3]] N=98 0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+1 (a class the catalogue did not have)
+  accepted   result 2: [[960,184,3]] N=212 0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+1 (a class the catalogue did not have)
+  accepted   result 3: [[880,176,3]] N=209 0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+1 (a class the catalogue did not have)
+  accepted   result 4: [[495,99,3]] N=118 0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+1 (a class the catalogue did not have)
+  accepted   result 5: [[255,47,3]] N=62 0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+1 (a class the catalogue did not have)
+  accepted   result 6: [[909,171,3]] N=225 0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+1 (a class the catalogue did not have)
+  accepted   result 7: [[252,46,3]] N=59 0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+1 (a class the catalogue did not have)
+  accepted   result 8: [[502,92,3]] N=117 0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+1 (a class the catalogue did not have)
+
+9 result(s): 9 accepted, 0 improved, 0 duplicate, 0 rejected
+catalogue: 804 -> 813 classes

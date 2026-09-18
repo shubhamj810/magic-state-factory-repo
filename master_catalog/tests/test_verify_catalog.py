@@ -20,9 +20,12 @@ The good-row half is kept deliberately small: the full 444-row run is
 `verify_catalog.py` itself, which takes minutes, and duplicating it here would
 make the suite too slow to run often enough to matter.
 """
+import contextlib
 import copy
+import io
 import itertools
 import json
+import shutil
 import sys
 import tempfile
 import time
@@ -1097,6 +1100,61 @@ class TestDistanceCertificates(unittest.TestCase):
                 self.assertIn(f"`d >= {row['d_certified']}`, from", text)
                 self.assertNotIn(f"`d = {row['d_certified']}`, from "
                                  f"{row['d_certified_source']}", text)
+
+
+class TestChangedRows(unittest.TestCase):
+    """`--changed`: re-verify what a merge changed, and nothing it did not."""
+
+    def setUp(self):
+        self.payload = CF.load()
+        self.baseline = copy.deepcopy(self.payload)
+
+    def test_an_unchanged_catalogue_has_no_changed_rows(self):
+        self.assertEqual(VC.changed_rows(self.payload, self.baseline), [])
+
+    def test_new_and_altered_circuits_are_found_by_position(self):
+        rows = self.payload["factories"]
+        rows[2]["N"] += 1                         # a circuit field
+        rows.insert(5, copy.deepcopy(self.baseline["factories"][0]))
+        rows[5]["n"] += 1
+        self.assertEqual(VC.changed_rows(self.payload, self.baseline), [3, 6])
+
+    def test_a_provenance_only_change_is_not_a_changed_circuit(self):
+        rows = self.payload["factories"]
+        rows[7]["citations"] = list(rows[7]["citations"]) + ["nobody2099"]
+        rows[7]["regimes"] = ["some regime"]
+        rows[7]["sources"] = []
+        rows[7]["discovery"] = "AI search"
+        rows[7]["strongest_claim"] = "x"
+        self.assertEqual(VC.changed_rows(self.payload, self.baseline), [])
+
+    def test_a_reordered_catalogue_has_no_changed_rows(self):
+        self.payload["factories"].reverse()
+        self.assertEqual(VC.changed_rows(self.payload, self.baseline), [])
+
+    def test_the_command_line_verifies_only_the_changed_rows(self):
+        """Row 1 ([[15,1,3]]) is absent from the baseline, so it alone is
+        re-derived; the file-level passes still run over the whole file."""
+        directory = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, directory)
+        del self.baseline["factories"][0]
+        self.baseline["n_classes"] -= 1
+        base = directory / "base.json"
+        base.write_text(CF.serialise(self.baseline), encoding="utf-8")
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            code = VC.main(["--baseline", str(base), "--quiet"])
+        text = out.getvalue()
+        self.assertEqual(code, 0, text)
+        self.assertIn(f"1 of {len(self.payload['factories'])} rows differ", text)
+        self.assertIn("rows 1\n", text)
+        self.assertIn("PASS: 1 rows", text)
+        self.assertIn("no two rows are the same GL(k,2) class", text)
+
+    def test_the_scopes_exclude_one_another(self):
+        with self.assertRaises(SystemExit):
+            with contextlib.redirect_stdout(io.StringIO()):
+                VC.main(["--rows", "1", "--changed"])
 
 if __name__ == "__main__":
     unittest.main()

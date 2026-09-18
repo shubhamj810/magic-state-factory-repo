@@ -242,7 +242,9 @@ with the contributor rather than converting a repair. The full bar is under
      * the input file is outside `community_contributions/submissions/` — every
        merged row's source entry names this file.
 5. **Verify:**
-   * `.venv/bin/python master_catalog/verify_catalog.py`
+   * `.venv/bin/python master_catalog/verify_catalog.py --changed` (the rows
+     the merge changed, plus the whole-file checks; the flag-less full run
+     takes about fifteen minutes)
    * `.venv/bin/python -m unittest discover -s master_catalog/tests`
    * `.venv/bin/python -m unittest discover -s community_contributions/tests`
 6. **Commit** the submission folder and the regenerated catalogue together.

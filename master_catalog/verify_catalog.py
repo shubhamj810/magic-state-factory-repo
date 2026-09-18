@@ -1156,14 +1156,44 @@ def header_problems(payload):
     return problems
 
 
-def verify_catalog(payload, budget=None, verbose=True, indices=None):
+#: The fields that say where a row came from and who credits it.  Changing
+#: them changes nothing a row's columns are checked against, so a row that
+#: differs from a baseline only here has not changed as a CIRCUIT.
+PROVENANCE_FIELDS = ("regimes", "discovery", "strongest_claim", "sources",
+                     "citations")
+
+
+def changed_rows(payload, baseline):
+    """1-based indices of the rows of ``payload`` not in ``baseline`` as circuits.
+
+    A row counts as unchanged when some baseline row equals it on every field
+    but `PROVENANCE_FIELDS`.  Everything `verify_row` checks is derived from
+    the other fields, so those are exactly the rows a re-verification after a
+    merge has to look at; the file-level passes, which do read provenance, run
+    over the whole file regardless.
+    """
+    def circuit(row):
+        return json.dumps({name: value for name, value in row.items()
+                           if name not in PROVENANCE_FIELDS}, sort_keys=True)
+    known = {circuit(row) for row in baseline["factories"]}
+    return [index for index, row in enumerate(payload["factories"], 1)
+            if circuit(row) not in known]
+
+
+def verify_catalog(payload, budget=None, verbose=True, indices=None,
+                   file_level=None):
     """Verify every row (or a slice of them) plus the file-level checks.
 
     Returns ``(failures, checked)``: ``failures`` is a list of
     ``(index, row, problems)``, ``checked`` the number of rows examined.
+    ``file_level`` says whether the whole-file passes run; by default they run
+    exactly when every row is verified, and a caller verifying only the rows
+    that changed asks for them explicitly.
     """
     rows = payload["factories"]
     wanted = range(1, len(rows) + 1) if indices is None else indices
+    if file_level is None:
+        file_level = indices is None
     failures, checked = [], 0
     for index in wanted:
         row = rows[index - 1]
@@ -1184,7 +1214,7 @@ def verify_catalog(payload, budget=None, verbose=True, indices=None):
             print(f"ok    {index:>4}. {tag:<18} "
                   f"{str(field('gate'))[:40]:<40} "
                   f"{time.time() - started:6.2f}s", flush=True)
-    if indices is None:
+    if file_level:
         for kind, detail in (duplicate_class_problems(rows)
                              + provenance_problems(payload)
                              + citation_problems(payload)
@@ -1194,13 +1224,39 @@ def verify_catalog(payload, budget=None, verbose=True, indices=None):
     return failures, checked
 
 
+def _committed_catalogue(path, ref):
+    """The catalogue at ``ref`` in the repository holding ``path``."""
+    import subprocess
+    path = Path(path).resolve()
+    try:
+        top = subprocess.run(["git", "-C", str(path.parent), "rev-parse",
+                              "--show-toplevel"], capture_output=True,
+                             text=True, check=True).stdout.strip()
+        relative = path.relative_to(Path(top).resolve()).as_posix()
+        blob = subprocess.run(["git", "-C", top, "show", f"{ref}:{relative}"],
+                              capture_output=True, text=True, check=True).stdout
+    except (subprocess.CalledProcessError, ValueError, OSError) as error:
+        detail = getattr(error, "stderr", "") or str(error)
+        raise SystemExit(f"cannot read {path.name} at {ref}: {detail.strip()}")
+    return json.loads(blob)
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--catalog", type=Path, default=CF.CATALOG_JSON,
                         help="the catalogue JSON to verify")
     parser.add_argument("--rows", default=None,
                         help="a 1-based slice, e.g. 1-20 or 7; the file-level "
-                             "duplicate check is skipped when this is given")
+                             "checks are skipped when this is given")
+    parser.add_argument("--changed", nargs="?", const="HEAD", default=None,
+                        metavar="REF",
+                        help="verify only the rows whose circuit differs from "
+                             "the catalogue committed at REF (default HEAD), "
+                             "plus the file-level checks over the whole file: "
+                             "what a merge can have changed")
+    parser.add_argument("--baseline", type=Path, default=None,
+                        help="like --changed, against this catalogue file "
+                             "instead of a commit")
     parser.add_argument("--quiet", action="store_true",
                         help="print only failures and the summary")
     args = parser.parse_args(argv)
@@ -1208,7 +1264,22 @@ def main(argv=None):
     payload = CF.load(args.catalog)
     total = len(payload["factories"])
     indices = None
+    scoped = sum(1 for flag in (args.rows, args.changed, args.baseline) if flag)
+    if scoped > 1:
+        raise SystemExit("--rows, --changed and --baseline exclude one another")
+    file_level = True
+    against = None
+    if args.changed or args.baseline:
+        baseline = (CF.load(args.baseline) if args.baseline
+                    else _committed_catalogue(args.catalog, args.changed))
+        against = str(args.baseline) if args.baseline else args.changed
+        indices = changed_rows(payload, baseline)
+        print(f"{len(indices)} of {total} rows differ as circuits from the "
+              f"catalogue at {against}"
+              + (f": rows {', '.join(map(str, indices))}" if indices else ""),
+              flush=True)
     if args.rows:
+        file_level = False
         first, _, last = args.rows.partition("-")
         try:
             low, high = int(first), int(last or first)
@@ -1226,10 +1297,11 @@ def main(argv=None):
         indices = range(low, high + 1)
 
     started = time.time()
-    print(f"verifying {len(indices) if indices else total} of {total} rows of "
-          f"{args.catalog.name}", flush=True)
+    print(f"verifying {total if indices is None else len(indices)} of {total} "
+          f"rows of {args.catalog.name}"
+          + ("" if file_level else " (row-level checks only)"), flush=True)
     failures, checked = verify_catalog(payload, verbose=not args.quiet,
-                                       indices=indices)
+                                       indices=indices, file_level=file_level)
     elapsed = time.time() - started
     if failures:
         print(f"\nFAILED: {len(failures)} problem(s) over {checked} rows "
@@ -1243,10 +1315,13 @@ def main(argv=None):
           f"syndrome bit the others already decide, T-count and reduced "
           f"degree where computable, and a circuit its own sources published "
           f"or a note saying why not"
-          + ("" if indices else ", and no two rows are the same GL(k,2) class, "
+          + (f" (the rows that differ from {against}; every other row is "
+             f"byte-identical as a circuit to one already verified there)"
+             if against else "")
+          + (", and no two rows are the same GL(k,2) class, "
              "every row's regimes, strongest_claim and citations resolve "
              "against the file's own header, and the header itself is "
-             "present, typed and counts the rows it has"))
+             "present, typed and counts the rows it has" if file_level else ""))
     return 0
 
 

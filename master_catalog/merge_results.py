@@ -715,6 +715,9 @@ def report(verdicts, before, after, wrote):
           + ", ".join(f"{counts[name]} {name}" for name in counts))
     print(f"catalogue: {before} -> {after} classes"
           + ("" if wrote else " (nothing written: --dry-run)"))
+    if wrote and (counts["accepted"] or counts["improved"]):
+        print("next: master_catalog/verify_catalog.py --changed  re-verifies "
+              "exactly the rows this merge changed, plus the file-level checks")
     return 1 if counts["rejected"] else 0
 
 
