@@ -65,6 +65,16 @@ names the papers that credit it, linked where they are published.
 A published class is credited to its paper. The rest
 of the credit rules are in [`master_catalog/README.md`](master_catalog/README.md).
 
+### Distance-2 factories
+
+This catalogue holds `d ≥ 3` only. Distance-2 factories, and the
+borrowed-identity search that finds them at every level of the Clifford
+hierarchy, are in
+[`shraggy/Magic_state_factory_search`](https://github.com/shraggy/Magic_state_factory_search)
+(S. Singh, C. Gidney and C. Jones, *Borrowed Identities: Malleable Distillation
+Factories and a Unified Numerical Search*,
+[arXiv:2606.28518](https://arxiv.org/abs/2606.28518)).
+
 ## Context for AI agents: `agent_context/`
 
 [`agent_context/`](agent_context/) is a self-contained briefing pack for an agent
