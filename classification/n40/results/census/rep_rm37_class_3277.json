@@ -1,0 +1,782 @@
+{
+ "source": "census",
+ "rep_id": "rm37_class_3277",
+ "m": 7,
+ "note": "RM(3,7) affine orbit class 3277, one origin per stabiliser orbit",
+ "input_sha256": "07ead6fb7809c4f249b3a6b6e4f895b5d1d43fbbc3606cccbe0c3bcb3fa75846",
+ "engine": "factorylib.parent (Parent.from_points at the parent's own ambient rank; compatible_subspaces uncapped) + orbit-memoised S_k classification with the minimum-a3 witness per class (landscape.classify_landscape)",
+ "dedup": "symmetric",
+ "kmax": null,
+ "distance": 3,
+ "node_budget_per_parent": 0,
+ "orbit_budget_per_gate": 0,
+ "n_geometries_expected": 3,
+ "n_geometries": 3,
+ "complete": true,
+ "max_kappa": 2,
+ "max_mu": 2,
+ "n_entries": 4,
+ "n_classes": 4,
+ "entries_by_n_k": {
+  "27,1": 1,
+  "28,1": 1,
+  "28,2": 2
+ },
+ "geometries": [
+  {
+   "n": 27,
+   "origin": 7,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 28,
+   "origin": 0,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 63,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 2,
+   "quadric_degeneracy": 9,
+   "t3": 56,
+   "mu": 2,
+   "subspaces_visited": 4,
+   "distinct_orbits": 3,
+   "distinct_members": 5,
+   "n_gates": 3,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     1,
+     28
+    ],
+    [
+     2,
+     56
+    ],
+    [
+     3,
+     56
+    ]
+   ]
+  }
+ ],
+ "factories": [
+  {
+   "n": 27,
+   "k": 1,
+   "r": 7,
+   "N": 8,
+   "distance": 3,
+   "gate": "T0",
+   "canonical_key": [
+    [
+     0
+    ]
+   ],
+   "wants": [
+    [
+     0
+    ]
+   ],
+   "a3": 29,
+   "a3_max": 29,
+   "n_subspaces": 1,
+   "columns": [
+    [
+     0,
+     4
+    ],
+    [
+     0,
+     5
+    ],
+    [
+     0,
+     4,
+     5
+    ],
+    [
+     0,
+     6
+    ],
+    [
+     0,
+     4,
+     6
+    ],
+    [
+     0,
+     5,
+     6
+    ],
+    [
+     0,
+     1,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     2,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     1,
+     2,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     1,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     7
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     4,
+     5,
+     7
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     4,
+     6,
+     7
+    ],
+    [
+     5,
+     6,
+     7
+    ],
+    [
+     1,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     2,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     1,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   ],
+   "origin": 7,
+   "ambient_rank": 7,
+   "n_geometries_carrying": 1,
+   "index": 0
+  },
+  {
+   "n": 28,
+   "k": 1,
+   "r": 7,
+   "N": 8,
+   "distance": 3,
+   "gate": "T0",
+   "canonical_key": [
+    [
+     0
+    ]
+   ],
+   "wants": [
+    [
+     0
+    ]
+   ],
+   "a3": 28,
+   "a3_max": 28,
+   "n_subspaces": 2,
+   "columns": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     1,
+     3
+    ],
+    [
+     0,
+     2,
+     3
+    ],
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     4,
+     5,
+     6
+    ],
+    [
+     1,
+     7
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     1,
+     2,
+     7
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     1,
+     3,
+     7
+    ],
+    [
+     2,
+     3,
+     7
+    ],
+    [
+     1,
+     2,
+     3,
+     7
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     4,
+     5,
+     7
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     4,
+     6,
+     7
+    ],
+    [
+     5,
+     6,
+     7
+    ],
+    [
+     4,
+     5,
+     6,
+     7
+    ]
+   ],
+   "origin": 63,
+   "ambient_rank": 7,
+   "n_geometries_carrying": 1,
+   "index": 1
+  },
+  {
+   "n": 28,
+   "k": 2,
+   "r": 7,
+   "N": 9,
+   "distance": 3,
+   "gate": "T0.CS01",
+   "canonical_key": [
+    [
+     0
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "wants": [
+    [
+     0
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "a3": 56,
+   "a3_max": 56,
+   "n_subspaces": 1,
+   "columns": [
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     1,
+     2,
+     4
+    ],
+    [
+     1,
+     3,
+     4
+    ],
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     1,
+     5
+    ],
+    [
+     0,
+     1,
+     6
+    ],
+    [
+     0,
+     1,
+     5,
+     6
+    ],
+    [
+     0,
+     1,
+     7
+    ],
+    [
+     0,
+     1,
+     5,
+     7
+    ],
+    [
+     0,
+     1,
+     6,
+     7
+    ],
+    [
+     0,
+     1,
+     5,
+     6,
+     7
+    ],
+    [
+     2,
+     8
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     2,
+     3,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     2,
+     4,
+     8
+    ],
+    [
+     3,
+     4,
+     8
+    ],
+    [
+     2,
+     3,
+     4,
+     8
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     6,
+     8
+    ],
+    [
+     5,
+     6,
+     8
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     5,
+     7,
+     8
+    ],
+    [
+     6,
+     7,
+     8
+    ],
+    [
+     5,
+     6,
+     7,
+     8
+    ]
+   ],
+   "origin": 63,
+   "ambient_rank": 7,
+   "n_geometries_carrying": 1,
+   "index": 2
+  },
+  {
+   "n": 28,
+   "k": 2,
+   "r": 7,
+   "N": 9,
+   "distance": 3,
+   "gate": "T0.T1",
+   "canonical_key": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "wants": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "a3": 56,
+   "a3_max": 56,
+   "n_subspaces": 1,
+   "columns": [
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     1,
+     2,
+     4
+    ],
+    [
+     1,
+     3,
+     4
+    ],
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5
+    ],
+    [
+     0,
+     6
+    ],
+    [
+     0,
+     5,
+     6
+    ],
+    [
+     0,
+     7
+    ],
+    [
+     0,
+     5,
+     7
+    ],
+    [
+     0,
+     6,
+     7
+    ],
+    [
+     0,
+     5,
+     6,
+     7
+    ],
+    [
+     2,
+     8
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     2,
+     3,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     2,
+     4,
+     8
+    ],
+    [
+     3,
+     4,
+     8
+    ],
+    [
+     2,
+     3,
+     4,
+     8
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     6,
+     8
+    ],
+    [
+     5,
+     6,
+     8
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     5,
+     7,
+     8
+    ],
+    [
+     6,
+     7,
+     8
+    ],
+    [
+     5,
+     6,
+     7,
+     8
+    ]
+   ],
+   "origin": 63,
+   "ambient_rank": 7,
+   "n_geometries_carrying": 1,
+   "index": 3
+  }
+ ],
+ "seconds": 0.0
+}

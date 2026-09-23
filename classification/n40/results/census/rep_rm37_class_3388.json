@@ -1,0 +1,240 @@
+{
+ "source": "census",
+ "rep_id": "rm37_class_3388",
+ "m": 7,
+ "note": "RM(3,7) affine orbit class 3388, one origin per stabiliser orbit",
+ "input_sha256": "07ead6fb7809c4f249b3a6b6e4f895b5d1d43fbbc3606cccbe0c3bcb3fa75846",
+ "engine": "factorylib.parent (Parent.from_points at the parent's own ambient rank; compatible_subspaces uncapped) + orbit-memoised S_k classification with the minimum-a3 witness per class (landscape.classify_landscape)",
+ "dedup": "symmetric",
+ "kmax": null,
+ "distance": 3,
+ "node_budget_per_parent": 0,
+ "orbit_budget_per_gate": 0,
+ "n_geometries_expected": 3,
+ "n_geometries": 3,
+ "complete": true,
+ "max_kappa": 1,
+ "max_mu": 1,
+ "n_entries": 1,
+ "n_classes": 1,
+ "entries_by_n_k": {
+  "23,1": 1
+ },
+ "geometries": [
+  {
+   "n": 23,
+   "origin": 7,
+   "ambient_rank": 7,
+   "check_rank": 6,
+   "kappa": 1,
+   "quadric_degeneracy": 5,
+   "t3": 31,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     31
+    ]
+   ]
+  },
+  {
+   "n": 24,
+   "origin": 0,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 0,
+   "quadric_degeneracy": 11,
+   "t3": 0,
+   "mu": 0,
+   "subspaces_visited": 0,
+   "distinct_orbits": 0,
+   "distinct_members": 0,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 24,
+   "origin": 1,
+   "ambient_rank": 7,
+   "check_rank": 6,
+   "kappa": 1,
+   "quadric_degeneracy": 4,
+   "t3": 32,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  }
+ ],
+ "factories": [
+  {
+   "n": 23,
+   "k": 1,
+   "r": 6,
+   "N": 8,
+   "distance": 3,
+   "gate": "T0",
+   "canonical_key": [
+    [
+     0
+    ]
+   ],
+   "wants": [
+    [
+     0
+    ]
+   ],
+   "a3": 31,
+   "a3_max": 31,
+   "n_subspaces": 1,
+   "columns": [
+    [
+     0,
+     4
+    ],
+    [
+     0,
+     5
+    ],
+    [
+     0,
+     2,
+     4,
+     5
+    ],
+    [
+     0,
+     3,
+     4,
+     5
+    ],
+    [
+     0,
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     0,
+     6
+    ],
+    [
+     0,
+     4,
+     6
+    ],
+    [
+     0,
+     5,
+     6
+    ],
+    [
+     0,
+     2,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     7
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     2,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     2,
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     4,
+     6,
+     7
+    ],
+    [
+     5,
+     6,
+     7
+    ],
+    [
+     2,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   ],
+   "origin": 7,
+   "ambient_rank": 7,
+   "n_geometries_carrying": 1,
+   "index": 0
+  }
+ ],
+ "seconds": 0.0
+}

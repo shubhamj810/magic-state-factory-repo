@@ -1,0 +1,154 @@
+{
+  "scope": "RESTRICTED distance-3 check-parent-first run (mode=all, kmax=7, class_indices=[3472], origins=[7]); a subset of the r<=7, n<=44 window, not a certificate for it",
+  "data_name": "B-0-3-7.dat",
+  "data_sha256": "07ead6fb7809c4f249b3a6b6e4f895b5d1d43fbbc3606cccbe0c3bcb3fa75846",
+  "mode": "all",
+  "dedup": "symmetric",
+  "kmax": 7,
+  "restrictions": {
+    "mode": "all",
+    "nmax": 44,
+    "kmax": 7,
+    "class_indices": [
+      3472
+    ],
+    "origins": [
+      7
+    ],
+    "max_parents": null
+  },
+  "covers_full_window": false,
+  "geometries_expected": null,
+  "node_budget_per_parent": null,
+  "orbit_budget_per_gate": null,
+  "data_integrity": {
+    "classes": 3486,
+    "expected_classes": 3486,
+    "max_degree": 3,
+    "orbit_size_sum": 18446744073709551616,
+    "expected_orbit_size_sum": 18446744073709551616,
+    "corrected_class_indices": [
+      3485
+    ],
+    "valid": true
+  },
+  "complete": false,
+  "geometries": [
+    {
+      "class_index": 3472,
+      "origin": 7,
+      "weight": 16,
+      "n": 15,
+      "rank": 4,
+      "kappa": 1,
+      "quadric_degeneracy": 0,
+      "gate_search_complete": true,
+      "n_gates": 1,
+      "subspaces_visited": 1
+    }
+  ],
+  "factories": [
+    {
+      "n": 15,
+      "r": 4,
+      "N": 5,
+      "distance": 3,
+      "class_index": 3472,
+      "origin": 7,
+      "k": 1,
+      "gate": "T0",
+      "canonical_key": [
+        [
+          0
+        ]
+      ],
+      "dedup": "S_k",
+      "orbit_complete": true,
+      "wants": [
+        [
+          0
+        ]
+      ],
+      "columns": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          0,
+          4,
+          5,
+          6
+        ],
+        [
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          4,
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          4,
+          6,
+          7
+        ],
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ]
+      ]
+    }
+  ],
+  "processed_parents": 1,
+  "rank_counts": {
+    "4": 1
+  },
+  "stopped_by_max_parents": false,
+  "untruncated": true,
+  "incomplete_reasons": [
+    "the sweep was restricted (see `restrictions`), so it covers a subset of the r<=7, n<=44 window"
+  ]
+}

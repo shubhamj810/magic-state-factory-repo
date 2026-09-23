@@ -1,0 +1,12 @@
+source length44: 508 representative(s), 5 shards, 5 to run (239100 geometries), 2 workers, kmax=none, input sha256 dc0c36005f127f314deabf61915030d616d4b065ac58604f06a14c66df66847e
+    shard 1/5: 1028/49858 geometries, 79s
+    shard 1/5: 1799/49858 geometries, 141s
+    shard 1/5: 3341/49858 geometries, 203s
+    shard 1/5: 3855/49858 geometries, 271s
+    shard 1/5: 5911/49858 geometries, 401s
+    shard 1/5: 6168/49858 geometries, 486s
+    shard 1/5: 7710/49858 geometries, 596s
+    shard 1/5: 8224/49858 geometries, 703s
+    shard 1/5: 8738/49858 geometries, 770s
+/opt/homebrew/Cellar/python@3.12/3.12.6/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

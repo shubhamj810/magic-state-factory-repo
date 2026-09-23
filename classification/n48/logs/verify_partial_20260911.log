@@ -1,0 +1,36 @@
+classification_n41_48.json: 4207 classes; engine: classify48.py (factorylib.parent + n40/landscape orbit-memoised S_k classification with the minimum-a3 witness per class), no budget, no width cap
+WARNING: the catalogue is a PARTIAL build: not swept ['rm37_w48'], with coverage gaps ['length48']
+  .. 200/4207 classes, 366 witnesses, 3s
+  .. 400/4207 classes, 838 witnesses, 6s
+  .. 600/4207 classes, 1154 witnesses, 17s
+  .. 800/4207 classes, 1354 witnesses, 42s
+  .. 1000/4207 classes, 1697 witnesses, 49s
+  .. 1200/4207 classes, 2052 witnesses, 53s
+  .. 1400/4207 classes, 2252 witnesses, 69s
+  .. 1600/4207 classes, 2483 witnesses, 91s
+  .. 1800/4207 classes, 2815 witnesses, 96s
+  .. 2000/4207 classes, 3196 witnesses, 100s
+  .. 2200/4207 classes, 3532 witnesses, 105s
+  .. 2400/4207 classes, 3950 witnesses, 109s
+  .. 2600/4207 classes, 4281 witnesses, 112s
+  .. 2800/4207 classes, 4622 witnesses, 116s
+  .. 3000/4207 classes, 4822 witnesses, 120s
+  .. 3200/4207 classes, 5022 witnesses, 124s
+  .. 3400/4207 classes, 5222 witnesses, 128s
+  .. 3600/4207 classes, 5422 witnesses, 133s
+  .. 3800/4207 classes, 5622 witnesses, 137s
+  .. 4000/4207 classes, 5822 witnesses, 141s
+  .. 4200/4207 classes, 6022 witnesses, 145s
+correctness: 4207 primary witnesses checked by two independent routes, 6029 (class, rank) witnesses re-verified with a3 recounted; distance histogram {3: 4199, 4: 8}; 1267 classes at more than one rank, 420 whose best circuit is not the fewest-check one
+WARNING: source length48: 62998 of 15566440 geometries are NOT classified: 62931 in 2 shard(s) with no result file (211 representatives) and 67 geometries the engine gave up on (listed).  Every other geometry is classified completely; the catalogue is exact on those and silent on these.
+WARNING: source rm37_w48 was not swept
+coverage: 5 sources, 16111221 markings classified, every representative at every marking the source lists; 62998 markings declared NOT classified, the declaration accounts for every one
+rank-7 census overlap: 835 census classes at n = 41 .. 44; 835 classes here with r <= 7 -- identical
+census landscape at n = 43, 44: 835 (class, rank) minimum-a3 entries; 835 here at r <= 7 -- identical
+classes by (n, best rank): n=41 r=8: 89, n=41 r=9: 34, n=41 r=10: 1, n=42 r=8: 26, n=42 r=9: 5, n=43 r=7: 531, n=43 r=8: 135, n=44 r=7: 111, n=44 r=8: 58, n=45 r=8: 592, n=45 r=9: 1, n=45 r=10: 2, n=46 r=8: 160, n=46 r=9: 1, n=46 r=10: 8, n=47 r=8: 249, n=47 r=9: 128, n=48 r=8: 2008, n=48 r=9: 58, n=48 r=10: 10
+WARNING: 7 master-catalogue rows at n = 41 .. 48 are not classes here (n, k, r, gate): [(47, 4, 6, '01+23'), (47, 4, 6, '0+1+23'), (47, 4, 6, '0+1+2+3'), (47, 5, 6, '0+1+4+01+04+14+012+013+023+024+124+234'), (47, 5, 6, '0+1+2+3+4'), (47, 6, 6, '0+1+2+3+01+02+03+12+13+23+012+013+014+015+023+024+025+034+035+045+123+124+125+145'), (48, 4, 6, '01+23')]
+master catalogue: 854 of 861 rows at n = 41 .. 48 are classes here; 316 of them carry a circuit with larger a3 than the best here
+combined n <= 48 table: 4600 classes = 393 (n <= 40) + 4207 (n = 41 .. 48)
+
+RESULT: PASS with 4 warning(s) (partial build)  [272s]
+exit 0

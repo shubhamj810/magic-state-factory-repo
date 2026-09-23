@@ -1,0 +1,130 @@
+{
+ "rep_id": "rm37_class_3470",
+ "note": "RM(3,7) affine orbit class 3470: a+abc; stabiliser order 31708938240; one origin per stabiliser orbit of origins",
+ "m": 6,
+ "support": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  47
+ ],
+ "geometries": [
+  {
+   "n": 47,
+   "origin": 0,
+   "check_rank": 6,
+   "kappa": 21,
+   "t3": null,
+   "form_ranks": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    6
+   ],
+   "max_combined_form_rank": 12,
+   "mu_upper_bound": 15,
+   "compatible_pair_fraction_sampled": 0.01535,
+   "safe_dims_sampled": [
+    15,
+    16
+   ],
+   "width2_subspaces_estimate": 11251668991,
+   "build_seconds": 3.1
+  },
+  {
+   "n": 48,
+   "origin": 48,
+   "check_rank": 6,
+   "kappa": 21,
+   "t3": null,
+   "form_ranks": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    12
+   ],
+   "max_combined_form_rank": 12,
+   "mu_upper_bound": 15,
+   "compatible_pair_fraction_sampled": 0.01615,
+   "safe_dims_sampled": [
+    15,
+    16
+   ],
+   "width2_subspaces_estimate": 11838075192,
+   "build_seconds": 3.2
+  },
+  {
+   "n": 48,
+   "origin": "lift",
+   "check_rank": 7,
+   "kappa": 20,
+   "t3": null,
+   "form_ranks": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    6,
+    6
+   ],
+   "max_combined_form_rank": 12,
+   "mu_upper_bound": 14,
+   "compatible_pair_fraction_sampled": 0.00965,
+   "safe_dims_sampled": [
+    13,
+    14
+   ],
+   "width2_subspaces_estimate": 1768381201,
+   "build_seconds": 1.5
+  }
+ ]
+}

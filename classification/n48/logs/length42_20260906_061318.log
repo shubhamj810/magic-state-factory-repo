@@ -1,0 +1,3 @@
+source length42: 86 representative(s), 1 shards, 1 to run (41558 geometries), 2 workers, kmax=none, input sha256 36db2fd08cb345145cb9a8e57fe64a8ec04fb14a675234f1cb003e19c75ec460
+[1/1] shard 1: 86 reps (m=8..11), 41558 geometries, 1185 entries, max kappa 8, max mu 5, 36.2s  | 0.6 min elapsed, ~0 min left
+done: 1 shard(s), 41558 geometries in 36s

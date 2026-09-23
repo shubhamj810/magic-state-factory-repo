@@ -1,0 +1,23 @@
+source rm37_w44: 35 representative(s), 1 shards, 1 to run (474 geometries), 2 workers, kmax=none, input sha256 07ead6fb7809c4f249b3a6b6e4f895b5d1d43fbbc3606cccbe0c3bcb3fa75846
+    shard 1/1: 182/474 geometries, 60s
+    shard 1/1: 266/474 geometries, 121s
+    shard 1/1: 274/474 geometries, 183s
+    shard 1/1: 335/474 geometries, 340s
+    shard 1/1: 339/474 geometries, 431s
+    shard 1/1: 342/474 geometries, 518s
+    shard 1/1: 392/474 geometries, 594s
+    shard 1/1: 394/474 geometries, 655s
+    shard 1/1: 397/474 geometries, 814s
+    shard 1/1: 399/474 geometries, 885s
+    shard 1/1: 401/474 geometries, 953s
+    shard 1/1: 404/474 geometries, 1047s
+    shard 1/1: 406/474 geometries, 1170s
+    shard 1/1: 408/474 geometries, 1311s
+    shard 1/1: 410/474 geometries, 1401s
+    shard 1/1: 411/474 geometries, 1465s
+    shard 1/1: 413/474 geometries, 1658s
+    shard 1/1: 415/474 geometries, 1724s
+    shard 1/1: 430/474 geometries, 1784s
+    shard 1/1: 474/474 geometries, 2172s
+[1/1] shard 1: 35 reps (m=7..7), 474 geometries, 5484 entries, max kappa 12, max mu 7, 2172.5s  | 36.2 min elapsed, ~0 min left
+done: 1 shard(s), 474 geometries in 2173s

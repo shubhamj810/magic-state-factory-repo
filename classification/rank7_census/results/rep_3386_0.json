@@ -1,0 +1,60 @@
+{
+  "scope": "RESTRICTED distance-3 check-parent-first run (mode=all, kmax=7, class_indices=[3386], origins=[0]); a subset of the r<=7, n<=44 window, not a certificate for it",
+  "data_name": "B-0-3-7.dat",
+  "data_sha256": "07ead6fb7809c4f249b3a6b6e4f895b5d1d43fbbc3606cccbe0c3bcb3fa75846",
+  "mode": "all",
+  "dedup": "symmetric",
+  "kmax": 7,
+  "restrictions": {
+    "mode": "all",
+    "nmax": 44,
+    "kmax": 7,
+    "class_indices": [
+      3386
+    ],
+    "origins": [
+      0
+    ],
+    "max_parents": null
+  },
+  "covers_full_window": false,
+  "geometries_expected": null,
+  "node_budget_per_parent": null,
+  "orbit_budget_per_gate": null,
+  "data_integrity": {
+    "classes": 3486,
+    "expected_classes": 3486,
+    "max_degree": 3,
+    "orbit_size_sum": 18446744073709551616,
+    "expected_orbit_size_sum": 18446744073709551616,
+    "corrected_class_indices": [
+      3485
+    ],
+    "valid": true
+  },
+  "complete": false,
+  "geometries": [
+    {
+      "class_index": 3386,
+      "origin": 0,
+      "weight": 40,
+      "n": 40,
+      "rank": 7,
+      "kappa": 12,
+      "quadric_degeneracy": 7,
+      "gate_search_complete": true,
+      "n_gates": 0,
+      "subspaces_visited": 114543
+    }
+  ],
+  "factories": [],
+  "processed_parents": 1,
+  "rank_counts": {
+    "7": 1
+  },
+  "stopped_by_max_parents": false,
+  "untruncated": true,
+  "incomplete_reasons": [
+    "the sweep was restricted (see `restrictions`), so it covers a subset of the r<=7, n<=44 window"
+  ]
+}

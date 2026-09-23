@@ -1,0 +1,5 @@
+{
+  "_comment": "Check parent of the catalogued [[15,1,3]] factory, written in the 'points' shape: the 15 nonzero points of F_2^4, one per parity-T injection, in the column order of catalog_factories.json. Keys other than 'points' and 'ambient_rank' are ignored by cli.py.",
+  "points": [1, 2, 4, 8, 3, 5, 9, 6, 10, 12, 7, 11, 13, 14, 15],
+  "ambient_rank": 4
+}

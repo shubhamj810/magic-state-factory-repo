@@ -1,0 +1,2652 @@
+{
+ "source": "n38",
+ "rep_id": "w32_c1_m6",
+ "m": 6,
+ "note": "((1, 2), (3,))",
+ "input_sha256": "6a3823eb2c9139cb77ef8a47d44fc85de8fa5de6044e559d8bd3d2710e341df7",
+ "engine": "factorylib.parent (Parent.from_points at the parent's own ambient rank; compatible_subspaces uncapped) + orbit-memoised S_k classification with the minimum-a3 witness per class (landscape.classify_landscape)",
+ "dedup": "symmetric",
+ "kmax": null,
+ "distance": 3,
+ "node_budget_per_parent": 0,
+ "orbit_budget_per_gate": 0,
+ "n_geometries_expected": 65,
+ "n_geometries": 65,
+ "complete": true,
+ "max_kappa": 7,
+ "max_mu": 4,
+ "n_entries": 4,
+ "n_classes": 4,
+ "entries_by_n_k": {
+  "31,1": 1,
+  "31,2": 1,
+  "31,3": 1,
+  "31,4": 1
+ },
+ "geometries": [
+  {
+   "n": 31,
+   "origin": 3,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 4,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 5,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 6,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 11,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 12,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 13,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 14,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 19,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 20,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 21,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 22,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 27,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 28,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 29,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 30,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 35,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 36,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 37,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 38,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 43,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 44,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 45,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 46,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 51,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 52,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 53,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 54,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 59,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 60,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 61,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 31,
+   "origin": 62,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 3,
+   "t3": 91,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 7,
+   "distinct_members": 29,
+   "n_gates": 4,
+   "gate_search_complete": true,
+   "seconds": 0.03,
+   "classes": [
+    [
+     0,
+     43
+    ],
+    [
+     1,
+     59
+    ],
+    [
+     2,
+     83
+    ],
+    [
+     3,
+     91
+    ]
+   ]
+  },
+  {
+   "n": 32,
+   "origin": 0,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 1,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 2,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 7,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 8,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 9,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 10,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 15,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 16,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 17,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 18,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 23,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 24,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 25,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 26,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 31,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 32,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 33,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 34,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 39,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 40,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 41,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 42,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 47,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 48,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 49,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 50,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 55,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 56,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 57,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 58,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": 63,
+   "ambient_rank": 6,
+   "check_rank": 6,
+   "kappa": 7,
+   "quadric_degeneracy": 2,
+   "t3": 64,
+   "mu": 4,
+   "subspaces_visited": 672,
+   "distinct_orbits": 4,
+   "distinct_members": 4,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.02,
+   "classes": []
+  },
+  {
+   "n": 32,
+   "origin": "lift",
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 6,
+   "quadric_degeneracy": 9,
+   "t3": 0,
+   "mu": 3,
+   "subspaces_visited": 157,
+   "distinct_orbits": 3,
+   "distinct_members": 3,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  }
+ ],
+ "factories": [
+  {
+   "n": 31,
+   "k": 1,
+   "r": 6,
+   "N": 7,
+   "distance": 3,
+   "gate": "T0",
+   "canonical_key": [
+    [
+     0
+    ]
+   ],
+   "wants": [
+    [
+     0
+    ]
+   ],
+   "a3": 43,
+   "a3_max": 91,
+   "n_subspaces": 2048,
+   "columns": [
+    [
+     1
+    ],
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     1,
+     2,
+     4
+    ],
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     5
+    ],
+    [
+     0,
+     1,
+     5
+    ],
+    [
+     0,
+     1,
+     2,
+     5
+    ],
+    [
+     2,
+     3,
+     5
+    ],
+    [
+     0,
+     4,
+     5
+    ],
+    [
+     0,
+     1,
+     4,
+     5
+    ],
+    [
+     1,
+     2,
+     4,
+     5
+    ],
+    [
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     6
+    ],
+    [
+     0,
+     1,
+     6
+    ],
+    [
+     0,
+     1,
+     2,
+     6
+    ],
+    [
+     2,
+     3,
+     6
+    ],
+    [
+     0,
+     4,
+     6
+    ],
+    [
+     0,
+     1,
+     4,
+     6
+    ],
+    [
+     1,
+     2,
+     4,
+     6
+    ],
+    [
+     2,
+     3,
+     4,
+     6
+    ],
+    [
+     0,
+     5,
+     6
+    ],
+    [
+     1,
+     5,
+     6
+    ],
+    [
+     0,
+     1,
+     2,
+     5,
+     6
+    ],
+    [
+     2,
+     3,
+     5,
+     6
+    ],
+    [
+     4,
+     5,
+     6
+    ],
+    [
+     1,
+     4,
+     5,
+     6
+    ],
+    [
+     1,
+     2,
+     4,
+     5,
+     6
+    ],
+    [
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   ],
+   "origin": 5,
+   "ambient_rank": 6,
+   "n_geometries_carrying": 32,
+   "index": 0
+  },
+  {
+   "n": 31,
+   "k": 2,
+   "r": 6,
+   "N": 8,
+   "distance": 3,
+   "gate": "T0.T1.CS01",
+   "canonical_key": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "wants": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "a3": 59,
+   "a3_max": 91,
+   "n_subspaces": 10752,
+   "columns": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     2,
+     3
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     5
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     2,
+     3,
+     5
+    ],
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     6
+    ],
+    [
+     0,
+     1,
+     2,
+     6
+    ],
+    [
+     0,
+     1,
+     2,
+     3,
+     6
+    ],
+    [
+     3,
+     4,
+     6
+    ],
+    [
+     0,
+     1,
+     5,
+     6
+    ],
+    [
+     0,
+     2,
+     5,
+     6
+    ],
+    [
+     1,
+     2,
+     3,
+     5,
+     6
+    ],
+    [
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     7
+    ],
+    [
+     0,
+     1,
+     2,
+     7
+    ],
+    [
+     0,
+     1,
+     2,
+     3,
+     7
+    ],
+    [
+     3,
+     4,
+     7
+    ],
+    [
+     0,
+     1,
+     5,
+     7
+    ],
+    [
+     0,
+     2,
+     5,
+     7
+    ],
+    [
+     1,
+     2,
+     3,
+     5,
+     7
+    ],
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     0,
+     1,
+     6,
+     7
+    ],
+    [
+     1,
+     2,
+     6,
+     7
+    ],
+    [
+     0,
+     2,
+     3,
+     6,
+     7
+    ],
+    [
+     3,
+     4,
+     6,
+     7
+    ],
+    [
+     5,
+     6,
+     7
+    ],
+    [
+     2,
+     5,
+     6,
+     7
+    ],
+    [
+     2,
+     3,
+     5,
+     6,
+     7
+    ],
+    [
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   ],
+   "origin": 5,
+   "ambient_rank": 6,
+   "n_geometries_carrying": 32,
+   "index": 1
+  },
+  {
+   "n": 31,
+   "k": 3,
+   "r": 6,
+   "N": 9,
+   "distance": 3,
+   "gate": "T0.T1.T2.CS01.CS02.CS12.CCZ012",
+   "canonical_key": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "wants": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "a3": 83,
+   "a3_max": 91,
+   "n_subspaces": 3584,
+   "columns": [
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     3,
+     4
+    ],
+    [
+     1,
+     4,
+     5
+    ],
+    [
+     0,
+     1,
+     6
+    ],
+    [
+     0,
+     1,
+     3,
+     6
+    ],
+    [
+     1,
+     3,
+     4,
+     6
+    ],
+    [
+     1,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     7
+    ],
+    [
+     0,
+     3,
+     7
+    ],
+    [
+     1,
+     3,
+     4,
+     7
+    ],
+    [
+     1,
+     4,
+     5,
+     7
+    ],
+    [
+     0,
+     2,
+     6,
+     7
+    ],
+    [
+     0,
+     2,
+     3,
+     6,
+     7
+    ],
+    [
+     1,
+     3,
+     4,
+     6,
+     7
+    ],
+    [
+     1,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     1,
+     8
+    ],
+    [
+     1,
+     3,
+     8
+    ],
+    [
+     3,
+     4,
+     8
+    ],
+    [
+     4,
+     5,
+     8
+    ],
+    [
+     1,
+     2,
+     6,
+     8
+    ],
+    [
+     1,
+     2,
+     3,
+     6,
+     8
+    ],
+    [
+     3,
+     4,
+     6,
+     8
+    ],
+    [
+     4,
+     5,
+     6,
+     8
+    ],
+    [
+     2,
+     7,
+     8
+    ],
+    [
+     2,
+     3,
+     7,
+     8
+    ],
+    [
+     3,
+     4,
+     7,
+     8
+    ],
+    [
+     4,
+     5,
+     7,
+     8
+    ],
+    [
+     6,
+     7,
+     8
+    ],
+    [
+     3,
+     6,
+     7,
+     8
+    ],
+    [
+     3,
+     4,
+     6,
+     7,
+     8
+    ],
+    [
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   ],
+   "origin": 5,
+   "ambient_rank": 6,
+   "n_geometries_carrying": 32,
+   "index": 2
+  },
+  {
+   "n": 31,
+   "k": 4,
+   "r": 6,
+   "N": 10,
+   "distance": 3,
+   "gate": "T0.T1.T2.T3.CS01.CS02.CS03.CS12.CS13.CS23.CCZ012.CCZ013.CCZ023.CCZ123",
+   "canonical_key": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     1,
+     3
+    ],
+    [
+     0,
+     2,
+     3
+    ],
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "wants": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     1,
+     3
+    ],
+    [
+     0,
+     2,
+     3
+    ],
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "a3": 91,
+   "a3_max": 91,
+   "n_subspaces": 96,
+   "columns": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     4,
+     5
+    ],
+    [
+     0,
+     5,
+     6
+    ],
+    [
+     1,
+     2,
+     7
+    ],
+    [
+     1,
+     2,
+     4,
+     7
+    ],
+    [
+     0,
+     4,
+     5,
+     7
+    ],
+    [
+     0,
+     5,
+     6,
+     7
+    ],
+    [
+     0,
+     1,
+     8
+    ],
+    [
+     0,
+     1,
+     4,
+     8
+    ],
+    [
+     0,
+     4,
+     5,
+     8
+    ],
+    [
+     0,
+     5,
+     6,
+     8
+    ],
+    [
+     1,
+     3,
+     7,
+     8
+    ],
+    [
+     1,
+     3,
+     4,
+     7,
+     8
+    ],
+    [
+     0,
+     4,
+     5,
+     7,
+     8
+    ],
+    [
+     0,
+     5,
+     6,
+     7,
+     8
+    ],
+    [
+     0,
+     2,
+     9
+    ],
+    [
+     0,
+     2,
+     4,
+     9
+    ],
+    [
+     4,
+     5,
+     9
+    ],
+    [
+     5,
+     6,
+     9
+    ],
+    [
+     2,
+     3,
+     7,
+     9
+    ],
+    [
+     2,
+     3,
+     4,
+     7,
+     9
+    ],
+    [
+     4,
+     5,
+     7,
+     9
+    ],
+    [
+     5,
+     6,
+     7,
+     9
+    ],
+    [
+     0,
+     3,
+     8,
+     9
+    ],
+    [
+     0,
+     3,
+     4,
+     8,
+     9
+    ],
+    [
+     4,
+     5,
+     8,
+     9
+    ],
+    [
+     5,
+     6,
+     8,
+     9
+    ],
+    [
+     7,
+     8,
+     9
+    ],
+    [
+     4,
+     7,
+     8,
+     9
+    ],
+    [
+     4,
+     5,
+     7,
+     8,
+     9
+    ],
+    [
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   ],
+   "origin": 5,
+   "ambient_rank": 6,
+   "n_geometries_carrying": 32,
+   "index": 3
+  }
+ ],
+ "seconds": 0.1
+}

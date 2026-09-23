@@ -1,0 +1,32 @@
+  length42: 86 representatives, 41558 geometries all complete; max kappa 8, max frame width 5, 155 classes, 240 (class, rank) entries [0s]
+  length44: 508 representatives, 239100 geometries all complete; max kappa 12, max frame width 6, 345 classes, 581 (class, rank) entries [5s]
+  rm37_w44: 35 representatives, 474 geometries all complete; max kappa 12, max frame width 7, 835 classes, 835 (class, rank) entries [25s]
+  length46: 1015 representatives, 326647 geometries all complete; max kappa 10, max frame width 7, 764 classes, 1031 (class, rank) entries [31s]
+  - shard_0298.json.gz: complete=False
+  - shard_0298.json.gz: length48_m8_class_02234 has 1 failed geometries: OrbitTooLarge: k=6 orbit of a 17-monomial gate exceeds 150000 members
+  - shard_0298.json.gz: length48_m8_class_02234 complete=False
+  - shard_0298.json.gz: length48_m8_class_02239 has 1 failed geometries: OrbitTooLarge: k=6 orbit of a 20-monomial gate exceeds 150000 members
+  - shard_0298.json.gz: length48_m8_class_02239 complete=False
+  - shard_0299.json.gz: complete=False
+  - shard_0299.json.gz: length48_m8_class_05269 has 1 failed geometries: OrbitTooLarge: k=6 orbit of a 10-monomial gate exceeds 150000 members
+  - shard_0299.json.gz: length48_m8_class_05269 complete=False
+  - shard_0300.json.gz: complete=False
+  - shard_0300.json.gz: length48_m8_class_08693 has 1 failed geometries: OrbitTooLarge: k=6 orbit of a 15-monomial gate exceeds 150000 members
+  - shard_0300.json.gz: length48_m8_class_08693 complete=False
+  - shard_0301.json.gz: complete=False
+  - shard_0301.json.gz: length48_m8_class_09343 has 1 failed geometries: OrbitTooLarge: k=6 orbit of a 15-monomial gate exceeds 150000 members
+  - shard_0301.json.gz: length48_m8_class_09343 complete=False
+  - shard_0301.json.gz: length48_m8_class_09354 has 1 failed geometries: OrbitTooLarge: k=6 orbit of a 15-monomial gate exceeds 150000 members
+  - shard_0301.json.gz: length48_m8_class_09354 complete=False
+  - shard_0301.json.gz: length48_m8_class_09356 has 1 failed geometries: OrbitTooLarge: k=6 orbit of a 27-monomial gate exceeds 150000 members
+  - shard_0301.json.gz: length48_m8_class_09356 complete=False
+  - shard_0301.json.gz: length48_m8_class_09653 has 1 failed geometries: OrbitTooLarge: k=6 orbit of a 10-monomial gate exceeds 150000 members
+  - shard_0301.json.gz: length48_m8_class_09653 complete=False
+  length48: INCLUDED WITH COVERAGE GAPS -- 62998 of 15566440 geometries are NOT classified: 62931 in 2 shard(s) with no result file (211 representatives) and 67 geometries the engine gave up on (listed).  Every other geometry is classified completely; the catalogue is exact on those and silent on these.
+  length48: 28776 representatives, 15503442 geometries classified, 62998 not; max kappa 10, max frame width 7, 2453 classes, 3342 (class, rank) entries [343s]
+  - rm37_w48: shard 1/1 (rm37_class_1038 .. rm37_class_986, 1870 geometries) has no result file
+  rm37_w48: nothing swept yet; SKIPPED (partial build)
+4207 distinct (n, k, S_k gate) classes: n=41: 124, n=42: 31, n=43: 666, n=44: 169, n=45: 595, n=46: 169, n=47: 377, n=48: 2076; 6029 (class, rank) witnesses, every one re-verified (factorylib.verification, distance exact to weight 4; a3 recounted) [metrics 61s]; reduced degree pending for 1794 classes (metrics48.py)
+wrote classification_n41_48.json, CLASSIFICATION_N41_48.md, witnesses/: 4207 classes, 1267 at more than one rank, 420 whose best circuit is not the fewest-check one
+wrote classification_upto_n48.json and CLASSIFICATION_UPTO_N48.md: 4600 classes (393 from n <= 40)
+exit 0

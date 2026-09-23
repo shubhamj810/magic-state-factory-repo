@@ -1,0 +1,28 @@
+source length44: 508 representative(s), 5 shards, 5 to run (239100 geometries), 2 workers, kmax=none, input sha256 dc0c36005f127f314deabf61915030d616d4b065ac58604f06a14c66df66847e
+    shard 1/5: 1285/49858 geometries, 72s
+    shard 1/5: 4883/49858 geometries, 134s
+    shard 1/5: 6168/49858 geometries, 235s
+    shard 1/5: 7710/49858 geometries, 330s
+    shard 1/5: 8224/49858 geometries, 412s
+    shard 1/5: 11565/49858 geometries, 509s
+    shard 1/5: 14649/49858 geometries, 647s
+    shard 1/5: 15420/49858 geometries, 727s
+    shard 1/5: 22616/49858 geometries, 788s
+    shard 1/5: 34952/49858 geometries, 848s
+    shard 1/5: 46517/49858 geometries, 915s
+[1/5] shard 1: 194 reps (m=8..8), 49858 geometries, 6049 entries, max kappa 10, max mu 6, 973.0s  | 16.2 min elapsed, ~62 min left
+    shard 2/5: 9252/49837 geometries, 61s
+    shard 2/5: 29298/49837 geometries, 122s
+    shard 2/5: 29555/49837 geometries, 251s
+    shard 2/5: 29812/49837 geometries, 321s
+    shard 2/5: 30326/49837 geometries, 412s
+    shard 2/5: 31097/49837 geometries, 486s
+    shard 2/5: 31611/49837 geometries, 616s
+    shard 2/5: 32896/49837 geometries, 678s
+    shard 2/5: 42910/49837 geometries, 739s
+    shard 2/5: 49837/49837 geometries, 1661s
+[2/5] shard 2: 173 reps (m=8..9), 49837 geometries, 3961 entries, max kappa 12, max mu 6, 1661.5s  | 43.9 min elapsed, ~61 min left
+[3/5] shard 3: 82 reps (m=9..10), 49234 geometries, 1490 entries, max kappa 7, max mu 5, 42.8s  | 44.6 min elapsed, ~27 min left
+[4/5] shard 4: 41 reps (m=10..11), 49193 geometries, 256 entries, max kappa 5, max mu 4, 11.8s  | 44.8 min elapsed, ~9 min left
+[5/5] shard 5: 18 reps (m=11..12), 40978 geometries, 103 entries, max kappa 4, max mu 3, 8.0s  | 45.0 min elapsed, ~0 min left
+done: 5 shard(s), 239100 geometries in 2698s

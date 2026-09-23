@@ -1,0 +1,22 @@
+classification_n41_48.json: 1754 classes; engine: classify48.py (factorylib.parent + n40/landscape orbit-memoised S_k classification with the minimum-a3 witness per class), no budget, no width cap
+FAIL: the catalogue is a PARTIAL build
+  .. 200/1754 classes, 366 witnesses, 3s
+  .. 400/1754 classes, 838 witnesses, 6s
+  .. 600/1754 classes, 1154 witnesses, 19s
+  .. 800/1754 classes, 1354 witnesses, 49s
+  .. 1000/1754 classes, 1697 witnesses, 58s
+  .. 1200/1754 classes, 2052 witnesses, 62s
+  .. 1400/1754 classes, 2252 witnesses, 82s
+  .. 1600/1754 classes, 2483 witnesses, 108s
+correctness: 1754 primary witnesses checked by two independent routes, 2687 (class, rank) witnesses re-verified with a3 recounted; distance histogram {3: 1754}; 557 classes at more than one rank, 245 whose best circuit is not the fewest-check one
+FAIL: source length48 was not swept
+FAIL: source rm37_w48 was not swept
+coverage: 4 sources, 607779 markings, every representative at every marking the source lists
+rank-7 census overlap: 835 census classes at n = 41 .. 44; 835 classes here with r <= 7 -- identical
+census landscape at n = 43, 44: 835 (class, rank) minimum-a3 entries; 835 here at r <= 7 -- identical
+classes by (n, best rank): n=41 r=8: 89, n=41 r=9: 34, n=41 r=10: 1, n=42 r=8: 26, n=42 r=9: 5, n=43 r=7: 531, n=43 r=8: 135, n=44 r=7: 111, n=44 r=8: 58, n=45 r=8: 592, n=45 r=9: 1, n=45 r=10: 2, n=46 r=8: 160, n=46 r=9: 1, n=46 r=10: 8
+FAIL: 18 master-catalogue rows at n = 41 .. 48 are not classes here: [(47, 1, '0', ['magic-states-AI master catalogue']), (47, 3, '012', ['search record', 'AI results', 'catalogue_new']), (47, 3, '0+1+2', ['catalogue_new']), (47, 4, '01+23', ['campaign 39<=n<=127']), (47, 4, '0+123', ['campaign 39<=n<=127']), (47, 4, '0+1+23', ['campaign 39<=n<=127'])]
+master catalogue: 843 of 861 rows at n = 41 .. 48 are classes here; 309 of them carry a circuit with larger a3 than the best here
+combined n <= 48 table: 2147 classes = 393 (n <= 40) + 1754 (n = 41 .. 48)
+
+RESULT: 4 FAILURES  [227s]

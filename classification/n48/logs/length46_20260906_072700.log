@@ -1,0 +1,37 @@
+source length46: 1015 representative(s), 7 shards, 7 to run (326647 geometries), 2 workers, kmax=none, input sha256 8b09212590d336b692ad4e5b883dc5494b61ca5566fa086a89c19d9f9ed34eaa
+    shard 1/7: 13878/49858 geometries, 61s
+    shard 1/7: 29812/49858 geometries, 124s
+    shard 1/7: 40349/49858 geometries, 184s
+    shard 1/7: 49858/49858 geometries, 326s
+[1/7] shard 1: 194 reps (m=8..8), 49858 geometries, 4782 entries, max kappa 7, max mu 7, 325.8s  | 5.4 min elapsed, ~30 min left
+    shard 2/7: 24672/49858 geometries, 72s
+    shard 2/7: 44975/49858 geometries, 132s
+[2/7] shard 2: 194 reps (m=8..8), 49858 geometries, 4543 entries, max kappa 8, max mu 6, 165.3s  | 8.2 min elapsed, ~19 min left
+    shard 3/7: 12593/49858 geometries, 70s
+    shard 3/7: 31097/49858 geometries, 130s
+[3/7] shard 3: 194 reps (m=8..8), 49858 geometries, 5483 entries, max kappa 7, max mu 6, 172.6s  | 11.1 min elapsed, ~13 min left
+    shard 4/7: 30326/49858 geometries, 60s
+    shard 4/7: 31354/49858 geometries, 163s
+    shard 4/7: 32125/49858 geometries, 260s
+    shard 4/7: 33153/49858 geometries, 363s
+    shard 4/7: 34438/49858 geometries, 438s
+    shard 4/7: 37008/49858 geometries, 501s
+    shard 4/7: 37779/49858 geometries, 573s
+    shard 4/7: 41377/49858 geometries, 634s
+    shard 4/7: 45489/49858 geometries, 696s
+    shard 4/7: 49858/49858 geometries, 780s
+[4/7] shard 4: 194 reps (m=8..8), 49858 geometries, 8417 entries, max kappa 10, max mu 7, 780.0s  | 24.1 min elapsed, ~15 min left
+    shard 5/7: 5397/49858 geometries, 60s
+    shard 5/7: 13878/49858 geometries, 122s
+    shard 5/7: 17990/49858 geometries, 184s
+    shard 5/7: 20046/49858 geometries, 251s
+    shard 5/7: 24672/49858 geometries, 311s
+    shard 5/7: 27499/49858 geometries, 385s
+    shard 5/7: 49601/49858 geometries, 445s
+    shard 5/7: 49858/49858 geometries, 1184s
+[5/7] shard 5: 194 reps (m=8..8), 49858 geometries, 7329 entries, max kappa 10, max mu 7, 1184.3s  | 43.9 min elapsed, ~14 min left
+    shard 6/7: 10001/48678 geometries, 65s
+    shard 6/7: 48678/48678 geometries, 2002s
+[6/7] shard 6: 38 reps (m=8..11), 48678 geometries, 1595 entries, max kappa 8, max mu 7, 2002.0s  | 77.2 min elapsed, ~7 min left
+[7/7] shard 7: 7 reps (m=11..13), 28679 geometries, 60 entries, max kappa 3, max mu 3, 6.0s  | 77.3 min elapsed, ~0 min left
+done: 7 shard(s), 326647 geometries in 4640s

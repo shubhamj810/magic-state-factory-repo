@@ -1,0 +1,4 @@
+{'n': 47, 'origin': 0, 'check_rank': 6, 'kappa': 21, 't3': None, 'form_ranks': [12, 12, 12, 12, 12, 6], 'max_combined_form_rank': 12, 'mu_upper_bound': 15, 'compatible_pair_fraction_sampled': 0.01535, 'safe_dims_sampled': [15, 16], 'width2_subspaces_estimate': 11251668991, 'build_seconds': 3.1}
+{'n': 48, 'origin': 48, 'check_rank': 6, 'kappa': 21, 't3': None, 'form_ranks': [12, 12, 12, 12, 12, 12], 'max_combined_form_rank': 12, 'mu_upper_bound': 15, 'compatible_pair_fraction_sampled': 0.01615, 'safe_dims_sampled': [15, 16], 'width2_subspaces_estimate': 11838075192, 'build_seconds': 3.2}
+{'n': 48, 'origin': 'lift', 'check_rank': 7, 'kappa': 20, 't3': None, 'form_ranks': [12, 12, 12, 12, 12, 6, 6], 'max_combined_form_rank': 12, 'mu_upper_bound': 14, 'compatible_pair_fraction_sampled': 0.00965, 'safe_dims_sampled': [13, 14], 'width2_subspaces_estimate': 1768381201, 'build_seconds': 1.5}
+wrote docs/open_rank6_bounds.json

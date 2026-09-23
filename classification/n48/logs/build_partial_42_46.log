@@ -1,0 +1,31 @@
+  length42: 86 representatives, 41558 geometries, all complete; max kappa 8, max frame width 5, 155 classes, 240 (class, rank) entries [0s]
+  length44: 508 representatives, 239100 geometries, all complete; max kappa 12, max frame width 6, 345 classes, 581 (class, rank) entries [5s]
+  - rm37_w44: shard 1/1 (rm37_class_1050 .. rm37_class_968) has no result file
+  rm37_w44: 1 problem(s); SKIPPED (partial build)
+  length46: 1015 representatives, 326647 geometries, all complete; max kappa 10, max frame width 7, 764 classes, 1031 (class, rank) entries [33s]
+  - length48: shard 1/315 (length48_m8_class_00001 .. length48_m8_class_00194) has no result file
+  - length48: shard 2/315 (length48_m8_class_00195 .. length48_m8_class_00388) has no result file
+  - length48: shard 3/315 (length48_m8_class_00389 .. length48_m8_class_00582) has no result file
+  - length48: shard 4/315 (length48_m8_class_00583 .. length48_m8_class_00776) has no result file
+  - length48: shard 5/315 (length48_m8_class_00777 .. length48_m8_class_00970) has no result file
+  - length48: shard 6/315 (length48_m8_class_00971 .. length48_m8_class_01164) has no result file
+  - length48: shard 7/315 (length48_m8_class_01165 .. length48_m8_class_01358) has no result file
+  - length48: shard 8/315 (length48_m8_class_01359 .. length48_m8_class_01552) has no result file
+  - length48: shard 9/315 (length48_m8_class_01553 .. length48_m8_class_01746) has no result file
+  - length48: shard 10/315 (length48_m8_class_01747 .. length48_m8_class_01940) has no result file
+  - length48: shard 11/315 (length48_m8_class_01941 .. length48_m8_class_02134) has no result file
+  - length48: shard 12/315 (length48_m8_class_02135 .. length48_m8_class_02328) has no result file
+  - length48: shard 13/315 (length48_m8_class_02329 .. length48_m8_class_02522) has no result file
+  - length48: shard 14/315 (length48_m8_class_02523 .. length48_m8_class_02716) has no result file
+  - length48: shard 15/315 (length48_m8_class_02717 .. length48_m8_class_02910) has no result file
+  - length48: shard 16/315 (length48_m8_class_02911 .. length48_m8_class_03104) has no result file
+  - length48: shard 17/315 (length48_m8_class_03105 .. length48_m8_class_03298) has no result file
+  - length48: shard 18/315 (length48_m8_class_03299 .. length48_m8_class_03492) has no result file
+  - length48: shard 19/315 (length48_m8_class_03493 .. length48_m8_class_03686) has no result file
+  - length48: shard 20/315 (length48_m8_class_03687 .. length48_m8_class_03880) has no result file
+  length48: 315 problem(s); SKIPPED (partial build)
+  - rm37_w48: shard 1/1 (rm37_class_1038 .. rm37_class_986) has no result file
+  rm37_w48: 1 problem(s); SKIPPED (partial build)
+1264 distinct (n, k, S_k gate) classes: n=41: 124, n=42: 31, n=43: 287, n=44: 58, n=45: 595, n=46: 169; 1852 (class, rank) witnesses, every one re-verified (factorylib.verification, distance exact to weight 4; a3 recounted) [metrics 10s]
+wrote classification_n41_48.json, CLASSIFICATION_N41_48.md, witnesses/: 1264 classes, 363 at more than one rank, 52 whose best circuit is not the fewest-check one
+wrote classification_upto_n48.json and CLASSIFICATION_UPTO_N48.md: 1657 classes (393 from n <= 40)

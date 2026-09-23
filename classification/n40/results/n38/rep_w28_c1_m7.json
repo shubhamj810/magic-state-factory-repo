@@ -1,0 +1,3072 @@
+{
+ "source": "n38",
+ "rep_id": "w28_c1_m7",
+ "m": 7,
+ "note": "((1, 2, 3), (4, 5, 6))",
+ "input_sha256": "6a3823eb2c9139cb77ef8a47d44fc85de8fa5de6044e559d8bd3d2710e341df7",
+ "engine": "factorylib.parent (Parent.from_points at the parent's own ambient rank; compatible_subspaces uncapped) + orbit-memoised S_k classification with the minimum-a3 witness per class (landscape.classify_landscape)",
+ "dedup": "symmetric",
+ "kmax": null,
+ "distance": 3,
+ "node_budget_per_parent": 0,
+ "orbit_budget_per_gate": 0,
+ "n_geometries_expected": 129,
+ "n_geometries": 129,
+ "complete": true,
+ "max_kappa": 2,
+ "max_mu": 2,
+ "n_entries": 4,
+ "n_classes": 4,
+ "entries_by_n_k": {
+  "27,1": 1,
+  "28,1": 1,
+  "28,2": 2
+ },
+ "geometries": [
+  {
+   "n": 27,
+   "origin": 7,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 15,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 23,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 31,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 39,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 47,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 55,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 56,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 57,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 58,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 59,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 60,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 61,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 62,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 71,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 79,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 87,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 95,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 103,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 111,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 119,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 120,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 121,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 122,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 123,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 124,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 125,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 27,
+   "origin": 126,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 9,
+   "t3": 29,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 1,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     0,
+     29
+    ]
+   ]
+  },
+  {
+   "n": 28,
+   "origin": 0,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 1,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 2,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 3,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 4,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 5,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 6,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 8,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 9,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 10,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 11,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 12,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 13,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 14,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 16,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 17,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 18,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 19,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 20,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 21,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 22,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 24,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 25,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 26,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 27,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 28,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 29,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 30,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 32,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 33,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 34,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 35,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 36,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 37,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 38,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 40,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 41,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 42,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 43,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 44,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 45,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 46,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 48,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 49,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 50,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 51,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 52,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 53,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 54,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 63,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 2,
+   "quadric_degeneracy": 9,
+   "t3": 56,
+   "mu": 2,
+   "subspaces_visited": 4,
+   "distinct_orbits": 3,
+   "distinct_members": 5,
+   "n_gates": 3,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     1,
+     28
+    ],
+    [
+     2,
+     56
+    ],
+    [
+     3,
+     56
+    ]
+   ]
+  },
+  {
+   "n": 28,
+   "origin": 64,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 65,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 66,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 67,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 68,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 69,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 70,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 72,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 73,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 74,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 75,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 76,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 77,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 78,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 80,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 81,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 82,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 83,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 84,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 85,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 86,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 88,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 89,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 90,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 91,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 92,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 93,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 94,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 96,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 97,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 98,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 99,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 100,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 101,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 102,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 104,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 105,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 106,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 107,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 108,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 109,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 110,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 112,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 113,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 114,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 115,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 116,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 117,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 118,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 1,
+   "quadric_degeneracy": 8,
+   "t3": 24,
+   "mu": 1,
+   "subspaces_visited": 1,
+   "distinct_orbits": 1,
+   "distinct_members": 1,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  },
+  {
+   "n": 28,
+   "origin": 127,
+   "ambient_rank": 7,
+   "check_rank": 7,
+   "kappa": 2,
+   "quadric_degeneracy": 9,
+   "t3": 56,
+   "mu": 2,
+   "subspaces_visited": 4,
+   "distinct_orbits": 3,
+   "distinct_members": 5,
+   "n_gates": 3,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": [
+    [
+     1,
+     28
+    ],
+    [
+     2,
+     56
+    ],
+    [
+     3,
+     56
+    ]
+   ]
+  },
+  {
+   "n": 28,
+   "origin": "lift",
+   "ambient_rank": 8,
+   "check_rank": 8,
+   "kappa": 0,
+   "quadric_degeneracy": 16,
+   "t3": 0,
+   "mu": 0,
+   "subspaces_visited": 0,
+   "distinct_orbits": 0,
+   "distinct_members": 0,
+   "n_gates": 0,
+   "gate_search_complete": true,
+   "seconds": 0.0,
+   "classes": []
+  }
+ ],
+ "factories": [
+  {
+   "n": 27,
+   "k": 1,
+   "r": 7,
+   "N": 8,
+   "distance": 3,
+   "gate": "T0",
+   "canonical_key": [
+    [
+     0
+    ]
+   ],
+   "wants": [
+    [
+     0
+    ]
+   ],
+   "a3": 29,
+   "a3_max": 29,
+   "n_subspaces": 28,
+   "columns": [
+    [
+     0,
+     4
+    ],
+    [
+     0,
+     5
+    ],
+    [
+     0,
+     4,
+     5
+    ],
+    [
+     0,
+     6
+    ],
+    [
+     0,
+     4,
+     6
+    ],
+    [
+     0,
+     5,
+     6
+    ],
+    [
+     0,
+     1,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     2,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     1,
+     2,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     1,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     7
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     4,
+     5,
+     7
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     4,
+     6,
+     7
+    ],
+    [
+     5,
+     6,
+     7
+    ],
+    [
+     1,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     2,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     1,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   ],
+   "origin": 7,
+   "ambient_rank": 7,
+   "n_geometries_carrying": 28,
+   "index": 0
+  },
+  {
+   "n": 28,
+   "k": 1,
+   "r": 7,
+   "N": 8,
+   "distance": 3,
+   "gate": "T0",
+   "canonical_key": [
+    [
+     0
+    ]
+   ],
+   "wants": [
+    [
+     0
+    ]
+   ],
+   "a3": 28,
+   "a3_max": 28,
+   "n_subspaces": 4,
+   "columns": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     1,
+     3
+    ],
+    [
+     0,
+     2,
+     3
+    ],
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     4,
+     5,
+     6
+    ],
+    [
+     1,
+     7
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     1,
+     2,
+     7
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     1,
+     3,
+     7
+    ],
+    [
+     2,
+     3,
+     7
+    ],
+    [
+     1,
+     2,
+     3,
+     7
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     4,
+     5,
+     7
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     4,
+     6,
+     7
+    ],
+    [
+     5,
+     6,
+     7
+    ],
+    [
+     4,
+     5,
+     6,
+     7
+    ]
+   ],
+   "origin": 63,
+   "ambient_rank": 7,
+   "n_geometries_carrying": 2,
+   "index": 1
+  },
+  {
+   "n": 28,
+   "k": 2,
+   "r": 7,
+   "N": 9,
+   "distance": 3,
+   "gate": "T0.CS01",
+   "canonical_key": [
+    [
+     0
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "wants": [
+    [
+     0
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "a3": 56,
+   "a3_max": 56,
+   "n_subspaces": 2,
+   "columns": [
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     1,
+     2,
+     4
+    ],
+    [
+     1,
+     3,
+     4
+    ],
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     1,
+     5
+    ],
+    [
+     0,
+     1,
+     6
+    ],
+    [
+     0,
+     1,
+     5,
+     6
+    ],
+    [
+     0,
+     1,
+     7
+    ],
+    [
+     0,
+     1,
+     5,
+     7
+    ],
+    [
+     0,
+     1,
+     6,
+     7
+    ],
+    [
+     0,
+     1,
+     5,
+     6,
+     7
+    ],
+    [
+     2,
+     8
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     2,
+     3,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     2,
+     4,
+     8
+    ],
+    [
+     3,
+     4,
+     8
+    ],
+    [
+     2,
+     3,
+     4,
+     8
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     6,
+     8
+    ],
+    [
+     5,
+     6,
+     8
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     5,
+     7,
+     8
+    ],
+    [
+     6,
+     7,
+     8
+    ],
+    [
+     5,
+     6,
+     7,
+     8
+    ]
+   ],
+   "origin": 63,
+   "ambient_rank": 7,
+   "n_geometries_carrying": 2,
+   "index": 2
+  },
+  {
+   "n": 28,
+   "k": 2,
+   "r": 7,
+   "N": 9,
+   "distance": 3,
+   "gate": "T0.T1",
+   "canonical_key": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "wants": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "a3": 56,
+   "a3_max": 56,
+   "n_subspaces": 2,
+   "columns": [
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     1,
+     2,
+     4
+    ],
+    [
+     1,
+     3,
+     4
+    ],
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     5
+    ],
+    [
+     0,
+     6
+    ],
+    [
+     0,
+     5,
+     6
+    ],
+    [
+     0,
+     7
+    ],
+    [
+     0,
+     5,
+     7
+    ],
+    [
+     0,
+     6,
+     7
+    ],
+    [
+     0,
+     5,
+     6,
+     7
+    ],
+    [
+     2,
+     8
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     2,
+     3,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     2,
+     4,
+     8
+    ],
+    [
+     3,
+     4,
+     8
+    ],
+    [
+     2,
+     3,
+     4,
+     8
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     6,
+     8
+    ],
+    [
+     5,
+     6,
+     8
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     5,
+     7,
+     8
+    ],
+    [
+     6,
+     7,
+     8
+    ],
+    [
+     5,
+     6,
+     7,
+     8
+    ]
+   ],
+   "origin": 63,
+   "ambient_rank": 7,
+   "n_geometries_carrying": 2,
+   "index": 3
+  }
+ ],
+ "seconds": 0.0
+}

@@ -1,0 +1,23 @@
+# Environment for this repository.  Verified on CPython 3.12, which is the only
+# version the test suite has been run on -- no other is claimed.
+#
+# These are DIRECT dependency pins, not a lock file: transitive dependencies
+# (and pip itself) resolve to whatever is current, so two installs months apart
+# are not byte-identical environments.  The pins exist to prevent the failure
+# that actually bites -- NumPy/binary-extension ABI mismatches in OR-Tools'
+# pandas dependency -- not to reconstruct an exact tree.  For that, generate a
+# constraints file from a known-good install:
+#
+#     .venv/bin/python -m pip freeze > constraints.txt
+#     .venv/bin/python -m pip install -r requirements.txt -c constraints.txt
+#
+# Create a fresh virtual environment; do not install this file into a
+# pre-existing Conda base environment.
+numpy==1.26.4
+pandas==2.2.3
+ortools==9.11.4210
+matplotlib==3.8.4
+
+# Optional alternative backends for symmetry_sat_search/sat_search.py:
+# python-sat>=1.8.dev0
+# pycryptosat>=5.11
