@@ -179,12 +179,12 @@ for each protocol and **writes nothing**. For the example it prints:
 
 ```text
 checking community_contributions/examples/bravyi-kitaev_15-to-1.json: 1 protocol(s) from magic-state-factories maintainers (worked example), credited to bravyi2005universal
-against master_catalog/master_catalog.json (804 classes)
+against master_catalog/master_catalog.json (813 classes)
 
   duplicate  protocol 0 (15-to-1): [[15,1,3]] N=5 T0 -- already held as N=5, d=3; nothing is stored, and the class keeps the credit it already had (bravyi2005universal)
 
 1 protocol(s): 0 accepted, 0 improved, 1 duplicate, 0 rejected
-catalogue: 804 -> 804 classes (nothing written: this was a check; maintainers merge with --write)
+catalogue: 813 -> 813 classes (nothing written: this was a check; maintainers merge with --write)
 ```
 
 A rejected protocol is listed with its reasons, for example:

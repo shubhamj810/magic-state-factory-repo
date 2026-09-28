@@ -26,7 +26,7 @@ circuit is a list of parity-rotation `columns` over `N` wires: wires `0..k-1`
 are the outputs and the rest are postselected checks. `d` is the circuit's
 fault distance.
 
-The catalogue holds **804 classes**:
+The catalogue holds **813 classes**:
 
 - `n = 15..1715`, `k = 1..373`, `d = 3..7`;
 - 217 classes with `n <= 54`, including all 74 Pareto points of the length-54
