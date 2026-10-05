@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magic State Factory Catalog</title>
+<meta name="description" content="A searchable database of verified magic-state distillation factories: every circuit stored explicitly, every figure of merit re-derived from it.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Magic State Factory Catalog">
+<meta property="og:description" content="A searchable database of verified magic-state distillation factories: every circuit stored explicitly, every figure of merit re-derived from it.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="inner">
+  <a class="wordmark" href="index.html">Magic State Factory Catalog</a>
+  <nav aria-label="site">
+    <a href="search.html">Search</a>
+    <a href="#parameters">Parameters</a>
+    <a href="#about">About &amp; cite</a>
+    <a href="https://github.com/shubhamj810/magic-state-factory-repo">GitHub</a>
+    <button id="theme-toggle" type="button">theme</button>
+  </nav>
+</div></header>
+
+<main id="main">
+  <section class="hero">
+    <h1>Magic State Factory Catalog</h1>
+    <p class="lede">A searchable database of <strong id="hero-count">verified</strong>
+    magic-state distillation factories. Each one is stored as an explicit circuit,
+    and every number shown about it &mdash; distance, gate, T-count, distillation
+    exponent &mdash; is re-derived from that circuit rather than taken on trust.</p>
+
+    <form class="searchbar big" role="search" action="search.html" method="get">
+      <label class="sr-only" for="hero-q">Search the catalogue</label>
+      <input id="hero-q" name="q" type="search" autocomplete="off" spellcheck="false"
+             placeholder="Search: CCZ012, [[49, 1, 5]], k=2 t<=4, Haah …">
+      <button type="submit" class="btn primary">Search</button>
+    </form>
+    <p class="quick small" aria-label="example searches">
+      <span class="muted">Try:</span>
+      <a href="search.html?pure=1">pure T<sup>&otimes;k</sup></a>
+      <a href="search.html?has=ccz">gates with CCZ</a>
+      <a href="search.html?kmin=1&amp;kmax=1">single output (k = 1)</a>
+      <a href="search.html?d=5,6,7">distance 5 or more</a>
+      <a href="search.html?known=1&amp;sort=t_count">lowest T-count</a>
+      <a href="search.html?sort=gamma_rho">best &gamma;<sub>&rho;</sub></a>
+      <a href="search.html?disc=pre-existing">from classification &amp; literature</a>
+    </p>
+  </section>
+
+  <div class="statbar" id="stats"></div>
+
+  <h2 id="best">The best in the catalogue</h2>
+  <p class="small muted">Ranked on &gamma;<sub>&rho;</sub> = log(n/V<sub>ex</sub>)/log d,
+  where V<sub>ex</sub> is the number of T states one run actually yields
+  (T and CS count one, CCZ two). <strong>Lower is better.</strong> Gates whose
+  terms overlap have no well-defined V<sub>ex</sub> and are left out of the ranking.</p>
+
+  <div class="headline" id="headline-stats"></div>
+
+  <h3>Least &gamma;<sub>&rho;</sub> at each distance</h3>
+  <div class="records" id="record-cards"></div>
+
+  <h2 id="frontier">The &gamma;<sub>&rho;</sub> frontier</h2>
+  <p class="small muted">Every parameter set plotted against the number of noisy
+  inputs it consumes, with the running best drawn over it.</p>
+  <div id="frontier-plot"></div>
+
+  <h2 id="parameters">Browse by parameters</h2>
+  <p class="small muted">One row per distinct <span class="mono">[[n, k, d]]</span>.
+  Open a row to see every inequivalent output gate realised at those parameters.
+  For anything finer, use <a href="search.html">search</a>.</p>
+
+  <div class="toolbar">
+    <label class="sr-only" for="filter">Filter parameter sets</label>
+    <input id="filter" type="search" placeholder="filter…  e.g. 15  or  k=3  or  d>=5" size="34">
+    <label class="sr-only" for="dfilter">Distance</label>
+    <select id="dfilter"><option value="">every distance</option></select>
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="table-wrap">
+    <table id="table">
+      <caption class="sr-only">Parameter sets in the catalogue. Click a column header to sort.</caption>
+      <thead><tr>
+        <th data-key="order" data-type="number" scope="col">[[n, k, d]]</th>
+        <th class="num" data-key="n" data-type="number" scope="col">n</th>
+        <th class="num" data-key="k" data-type="number" scope="col">k</th>
+        <th class="num" data-key="d" data-type="number" scope="col">d</th>
+        <th class="num" data-key="count" data-type="number" scope="col">gates</th>
+        <th class="num" data-key="gamma_rho" data-type="number" scope="col" title="best log(n/V_ex)/log d at these parameters">best &gamma;<sub>&rho;</sub></th>
+        <th class="num" data-key="gamma" data-type="number" scope="col" title="log(n/k)/log d">&gamma;</th>
+        <th class="num" data-key="rate" data-type="number" scope="col">rate k/n</th>
+        <th class="num" data-key="best_t_count" data-type="number" scope="col">best T-count</th>
+        <th class="num" data-key="N_min" data-type="number" scope="col">min N</th>
+      </tr></thead>
+      <tbody id="body"></tbody>
+    </table>
+  </div>
+  <div id="pager"></div>
+
+  <h2 id="reading">How to read an entry</h2>
+  <div class="panel prose">
+    <p>A <strong>factory</strong> is a circuit of <code>n</code> &pi;/4 parity
+    rotations on <code>N = k + r</code> wires. Each rotation consumes one noisy
+    T state. The first <code>k</code> wires are <strong>outputs</strong>; the
+    other <code>r</code> are <strong>checks</strong>, measured and postselected
+    on. Stack the rotations into a binary matrix &mdash; one row per wire, one
+    column per rotation &mdash; and that matrix is the whole circuit. The gate it
+    deposits on the outputs is read off the row overlaps, and the circuit is a
+    valid factory exactly when no phase lands on a check wire.</p>
+    <dl class="glossary">
+      <dt>n</dt><dd>rotations, i.e. noisy T states consumed per run</dd>
+      <dt>k</dt><dd>output wires, indexed 0&hellip;k&minus;1</dd>
+      <dt>d</dt><dd>circuit distance: the least number of faulty rotations that is both undetected and damaging. <em>Exact</em> means proved and witnessed; otherwise it is a proved lower bound</dd>
+      <dt>N, r</dt><dd>total wires, and the r = N &minus; k postselected checks</dd>
+      <dt>T-count</dt><dd>exact minimal T-count of the deposited gate, where computable</dd>
+      <dt>&gamma;</dt><dd>log(n/k)/log d &mdash; the yield exponent counted in output wires</dd>
+      <dt>&gamma;<sub>T</sub></dt><dd>log(n/T-count)/log d &mdash; the same, counted in T-cost</dd>
+      <dt>&gamma;<sub>&rho;</sub></dt><dd>log(n/V<sub>ex</sub>)/log d &mdash; counted in extractable T states; the fair comparison across gates. Lower is better for all three</dd>
+    </dl>
+    <p><strong>One row per magic state.</strong> Two circuits with the same
+    <code>n</code>, <code>k</code> and <code>d</code> are one row when their output
+    gates differ only by an invertible change of output basis and diagonal
+    Clifford corrections (the <code>GL(k,2)</code>, or CNOT+S, equivalence):
+    they prepare the same magic state, so <code>T0&middot;T1</code> and
+    <code>T0&middot;CS01</code> are one class. The stored circuit is one
+    representative. Circuits at different distances are always different rows.</p>
+  </div>
+
+  <h2 id="about">About, citing and contributing</h2>
+  <div class="about-grid">
+    <div class="panel">
+      <h3>Where the factories come from</h3>
+      <ul class="plain">
+        <li><strong>Exhaustive classification</strong> of every generalised
+        triorthogonal protocol with up to 54 inputs (Wills, Jain and Singh).</li>
+        <li><strong>AI-assisted and symmetry-constrained SAT searches</strong> for
+        larger and better protocols (Jain, Wills and Singh).</li>
+        <li><strong>The published literature</strong>, credited to its papers.</li>
+        <li><strong>Community contributions</strong>, verified to the same bar.</li>
+      </ul>
+      <p class="small muted">Each row records the regime that found it and the
+      papers that credit it; both are searchable.</p>
+    </div>
+    <div class="panel">
+      <h3>How to cite</h3>
+      <p class="small">If you use a factory, cite the papers listed on its page.
+      For the catalogue itself:</p>
+      <ol class="refs small" id="cite-list"></ol>
+      <p class="small">and the repository,
+      <a href="https://github.com/shubhamj810/magic-state-factory-repo">github.com/shubhamj810/magic-state-factory-repo</a>.</p>
+    </div>
+    <div class="panel">
+      <h3>Download</h3>
+      <ul class="plain small">
+        <li><a href="data/factories.csv" download>factories.csv</a> &mdash; one row per factory, every figure of merit, no circuits</li>
+        <li><a href="data/index.json" download>index.json</a> &mdash; the same as JSON, with the reference table</li>
+        <li><a id="full-catalog" href="https://github.com/shubhamj810/magic-state-factory-repo/blob/main/master_catalog/master_catalog.json">master_catalog.json</a> &mdash; the full database, circuits included</li>
+      </ul>
+      <p class="small muted">Search results and single circuits can be exported
+      from their own pages.</p>
+    </div>
+    <div class="panel">
+      <h3>Contribute a factory</h3>
+      <p class="small">Protocols can be submitted in any format &mdash; a paper,
+      matrices, code or a notebook. They are verified to the same bar as every
+      row here and credited to their authors.</p>
+      <p class="small"><a href="https://github.com/shubhamj810/magic-state-factory-repo/tree/main/community_contributions">How to submit</a>
+      &middot; <a href="https://github.com/shubhamj810/magic-state-factory-repo/issues/new">open an issue</a></p>
+    </div>
+  </div>
+</main>
+
+<footer class="site"><div class="inner">
+  <span>Every number is re-derived from the factory&rsquo;s own circuit by
+  <a href="https://github.com/shubhamj810/magic-state-factory-repo/blob/main/master_catalog/verify_catalog.py"><code>verify_catalog.py</code></a>.</span>
+  <span id="data-stamp"></span>
+</div></footer>
+
+<script src="js/catalog.js"></script>
+<script src="js/highlights.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

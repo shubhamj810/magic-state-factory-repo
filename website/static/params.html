@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gates at these parameters — Magic State Factory Catalog</title>
+<meta name="description" content="Every inequivalent output gate the catalogue holds at one [[n, k, d]].">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="inner">
+  <a class="wordmark" href="index.html">Magic State Factory Catalog</a>
+  <nav aria-label="site">
+    <a href="search.html">Search</a>
+    <a href="index.html#parameters">Parameters</a>
+    <a href="index.html#about">About &amp; cite</a>
+    <a href="https://github.com/shubhamj810/magic-state-factory-repo">GitHub</a>
+    <button id="theme-toggle" type="button">theme</button>
+  </nav>
+</div></header>
+
+<main id="main">
+  <nav class="crumbs" aria-label="breadcrumb"><span><a href="index.html#parameters">Parameters</a></span><span id="crumb"></span></nav>
+  <h1 id="heading">&hellip;</h1>
+  <p class="lede" id="blurb"></p>
+
+  <div class="statbar" id="stats"></div>
+
+  <h2>Output gates</h2>
+  <p class="small muted">One row per inequivalent output gate at these
+  parameters. Click a gate to open its circuit.</p>
+
+  <div class="toolbar">
+    <label class="sr-only" for="filter">Filter gates</label>
+    <input id="filter" type="search" placeholder="filter gates…  e.g. CCZ" size="30">
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="table-wrap">
+    <table id="table">
+      <caption class="sr-only">Output gates at these parameters. Click a column header to sort.</caption>
+      <thead><tr>
+        <th data-key="gate_human" data-type="text" scope="col">output gate</th>
+        <th class="num" data-key="terms" data-type="number" scope="col">terms</th>
+        <th class="num" data-key="t_count" data-type="number" scope="col">T-count</th>
+        <th class="num" data-key="poly_degree" data-type="number" scope="col">poly deg</th>
+        <th class="num" data-key="gamma_rho" data-type="number" scope="col">&gamma;<sub>&rho;</sub></th>
+        <th class="num" data-key="gamma_t" data-type="number" scope="col">&gamma;<sub>T</sub></th>
+        <th class="num" data-key="N" data-type="number" scope="col">N</th>
+        <th data-key="d_is_exact" data-type="text" scope="col">distance</th>
+        <th data-key="cite_text" data-type="text" scope="col">cited</th>
+      </tr></thead>
+      <tbody id="body"></tbody>
+    </table>
+  </div>
+
+  <div class="panel" style="margin-top:22px">
+    <h3 style="margin-top:0">Why these are different factories</h3>
+    <p class="small">Every circuit listed here consumes the same n, protects the
+    same k outputs and reaches the same distance d. They differ in <em>what they
+    deposit</em>: no two gates on this page are related by a change of output
+    basis and Clifford corrections, so each row prepares a genuinely different
+    magic state at the same price.</p>
+  </div>
+
+  <p class="small muted" id="neighbours" style="margin-top:22px"></p>
+</main>
+
+<footer class="site"><div class="inner">
+  <span>Every number is re-derived from the factory&rsquo;s own circuit.</span>
+  <span id="data-stamp"></span>
+</div></footer>
+
+<script src="js/catalog.js"></script>
+<script src="js/query.js"></script>
+<script src="js/params.js"></script>
+</body>
+</html>

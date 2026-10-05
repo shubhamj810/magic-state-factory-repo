@@ -28,3 +28,7 @@ master_catalog/REFACTOR/
 # The length-48 catalogue is shipped gzipped (136 MB raw, over GitHub's file limit);
 # a local gunzip of it must not be committed.
 classification/legacy/n48/length48_catalogue.json
+
+# The built website: generated from master_catalog.json by website/build_site.py,
+# and rebuilt by the Pages workflow on every deploy.
+website/_site/

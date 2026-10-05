@@ -11,6 +11,12 @@ marked as such. The protocols come from:
 - the **published literature**;
 - **community contributions** from outside authors, verified to the same bar.
 
+**Browse and search it online:
+<https://shubhamj810.github.io/magic-state-factory-repo/>** &mdash; filter by
+parameters, output gate, T-count, distillation exponent, discovery regime or
+cited paper, open any factory's matrix, and export what you find. The site is
+built from `master_catalog.json` on every push; see [`website/`](website/).
+
 ## The database: `master_catalog/`
 
 **[`master_catalog/master_catalog.json`](master_catalog/master_catalog.json) is
@@ -129,6 +135,7 @@ describes what to send and how the maintainers process it.
 | [`community_contributions/`](community_contributions/) | how outside authors submit protocols, and the tool that checks them |
 | [`factorylib/`](factorylib/) | shared parent model, verification and gate metrics |
 | [`theory/`](theory/) | mathematical notes, result provenance and figures |
+| [`website/`](website/) | the searchable website, built from `master_catalog.json` and deployed to GitHub Pages |
 | [`tests/`](tests/) | what the repository would accept as a result: a mutation sweep over every acceptance boundary, and the exit-code contract |
 
 ## Setup

@@ -1,0 +1,85 @@
+# Build the catalogue website from master_catalog.json and publish it to
+# GitHub Pages: https://shubhamj810.github.io/magic-state-factory-repo/
+#
+# One-time setup: Settings -> Pages -> Build and deployment -> Source:
+# "GitHub Actions".  After that, every push to main that touches the catalogue
+# or the website redeploys it.
+#
+#   master_catalog/master_catalog.json --build_site.py--> website/_site --> Pages
+#
+# Only website/_site is published -- the built pages and their JSON -- never the
+# rest of the repository.
+name: Website
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - master_catalog/master_catalog.json
+      - website/**
+      - .github/workflows/pages.yml
+  pull_request:
+    paths:
+      - master_catalog/master_catalog.json
+      - website/**
+      - .github/workflows/pages.yml
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Verify every page, not a sample (about 10 minutes)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # the site footer names the catalogue's last commit
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build the site from the master catalogue
+        run: python website/build_site.py
+
+      - name: Build tests
+        working-directory: website
+        run: python -m unittest discover -s tests -v
+
+      - name: Install the browser for the site check
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "playwright>=1.40"
+          python -m playwright install --with-deps chromium
+
+      - name: Every page renders and every link resolves
+        run: python website/verify_site.py ${{ inputs.full && '--full' || '' }}
+
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: website/_site
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

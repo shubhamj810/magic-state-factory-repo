@@ -1,0 +1,365 @@
+#!/usr/bin/env python3
+"""Does the website actually work?  Drive a real browser over the built site.
+
+    python website/build_site.py
+    python website/verify_site.py            # sampled: every page shape, ~1 min
+    python website/verify_site.py --full     # every parameter set and factory
+
+Needs `pip install playwright && playwright install chromium`; the rest of the
+repository does not, which is why this is not part of `verify_repo.py`.
+
+The pages build themselves from JSON in the browser, so a link that resolves is
+not evidence that the page it lands on RENDERED.  This script asserts on the
+DOM that comes out, against numbers it computes itself from `data/index.json`
+and the per-factory files:
+
+    index.html    stat bar, the paged [[n,k,d]] table, its links
+    search.html   result counts for a set of URL searches, each recomputed here
+                  in Python, the typed-query syntax, and the CSV export
+    params.html   one row per factory at those parameters, each linking on
+    factory.html  N matrix rows, the first k marked output and the rest check,
+                  row weights equal to the columns', every panel non-empty,
+                  and the references the catalogue cites
+
+Plus, on every page visited: no console error, no failed request, no
+`undefined` / `NaN` / `[object Object]` in the text.
+
+    exit 0  the website works        exit 1  it does not; the report says where
+"""
+from __future__ import annotations
+
+import argparse
+import contextlib
+import functools
+import http.server
+import json
+import random
+import socket
+import sys
+import threading
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+DEFAULT_SITE = HERE / "_site"
+
+
+class _Quiet(http.server.SimpleHTTPRequestHandler):
+    def log_message(self, *args):
+        pass
+
+
+@contextlib.contextmanager
+def serve(directory: Path):
+    """The built site on a free port, for as long as the block runs."""
+    with socket.socket() as probe:
+        probe.bind(("127.0.0.1", 0))
+        port = probe.getsockname()[1]
+    handler = functools.partial(_Quiet, directory=str(directory))
+    server = http.server.ThreadingHTTPServer(("127.0.0.1", port), handler)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        yield f"http://127.0.0.1:{port}"
+    finally:
+        server.shutdown()
+        server.server_close()
+
+
+class Failures(list):
+    def check(self, condition, message):
+        if not condition:
+            self.append(message)
+        return bool(condition)
+
+
+class _Watcher:
+    """Console errors and failed requests are failures, not warnings.
+
+    Handlers are registered ONCE and read a mutable label: Playwright never
+    unsubscribes them, so per-navigation handlers would report the next page's
+    error under a stale name.
+    """
+
+    def __init__(self, page, failures):
+        self.failures = failures
+        self.where = "(before any page)"
+        self.expect_errors = False
+        page.on("console", lambda m: m.type == "error" and self._note(f"console error: {m.text}"))
+        page.on("pageerror", lambda e: self._note(f"page error: {e}"))
+        page.on("requestfailed", lambda r: self._note(f"request failed: {r.url}"))
+        page.on("response", lambda r: r.status >= 400 and self._note(f"HTTP {r.status} for {r.url}"))
+
+    def _note(self, message):
+        if not self.expect_errors:
+            self.failures.append(f"{self.where}: {message}")
+
+    def at(self, where, expect_errors=False):
+        self.where = where
+        self.expect_errors = expect_errors
+
+
+def _ghosts(page, failures, where):
+    body = page.inner_text("body")
+    for ghost in ("undefined", "NaN", "[object Object]"):
+        if ghost in body:
+            failures.append(f"{where}: the rendered page contains {ghost!r}")
+
+
+# ------------------------------------------------- searches, recomputed here
+def _monomials(gate: str, k: int) -> set[tuple[int, ...]]:
+    out = set()
+    for token in gate.split("+") if gate else []:
+        wires = token.split(",") if "," in token else ([token] if k > 10 else list(token))
+        out.add(tuple(sorted(int(w) for w in wires)))
+    return out
+
+
+def searches(factories: list[dict], references: dict) -> list[tuple[str, int]]:
+    """``(query string, expected count)`` -- each count computed independently."""
+    def haystack(f):
+        shorts = "; ".join(references[c]["short"] if c in references else c
+                           for c in f["citations"])
+        return " ".join([f["id"], f["gate_human"], " ".join(f["regimes"]),
+                         f["discovery"] or "", shorts, " ".join(f["citations"])]).lower()
+    count = lambda pred: sum(1 for f in factories if pred(f))  # noqa: E731
+    return [
+        ("", len(factories)),
+        ("d=5", count(lambda f: f["d"] == 5)),
+        ("d=6,7&exact=1", count(lambda f: f["d"] in (6, 7) and f["d_is_exact"])),
+        ("has=ccz", count(lambda f: f["ccz_terms"] > 0)),
+        ("has=cs,ccz", count(lambda f: f["cs_terms"] > 0 and f["ccz_terms"] > 0)),
+        ("pure=1", count(lambda f: f["pure_t"])),
+        ("kmin=2&kmax=4&nmax=60", count(lambda f: 2 <= f["k"] <= 4 and f["n"] <= 60)),
+        ("tmax=4", count(lambda f: f["t_count"] is not None and f["t_count"] <= 4)),
+        ("grmax=1.2", count(lambda f: f["gamma_rho"] is not None and f["gamma_rho"] <= 1.2)),
+        ("disc=pre-existing", count(lambda f: f["discovery"] == "pre-existing")),
+        ("cite=haah2018codes", count(lambda f: "haah2018codes" in f["citations"])),
+        ("regime=symmetry-SAT%20search", count(lambda f: "symmetry-SAT search" in f["regimes"])),
+        # the typed syntax
+        ("q=CCZ012", count(lambda f: (0, 1, 2) in _monomials(f["gate"], f["k"]))),
+        ("q=%5B%5B15%2C%201%2C%203%5D%5D", count(lambda f: (f["n"], f["k"], f["d"]) == (15, 1, 3))),
+        ("q=k%3D2%20t%3C%3D4", count(lambda f: f["k"] == 2 and f["t_count"] is not None
+                                       and f["t_count"] <= 4)),
+        ("q=N%3C10", count(lambda f: f["N"] < 10)),
+        ("q=n%3C10", count(lambda f: f["n"] < 10)),
+        ("q=CS%20d%3E%3D4", count(lambda f: f["cs_terms"] > 0 and f["d"] >= 4)),
+        ("q=pure%20exact", count(lambda f: f["pure_t"] and f["d_is_exact"])),
+        ("q=haah", count(lambda f: "haah" in haystack(f))),
+        ("q=graph%20gluing", count(lambda f: "graph" in haystack(f) and "gluing" in haystack(f))),
+    ]
+
+
+def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
+    from playwright.sync_api import sync_playwright
+
+    index = json.loads((site / "data" / "index.json").read_text())
+    factories, parameters = index["factories"], index["parameters"]
+    failures = Failures()
+    stats = {"pages": 0, "factories": 0, "searches": 0}
+    rng = random.Random(seed)
+
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        context = browser.new_context(accept_downloads=True)
+        page = context.new_page()
+        watcher = _Watcher(page, failures)
+
+        def visit(url, where, selector, timeout=20000):
+            watcher.at(where)
+            page.goto(base + "/" + url, wait_until="networkidle")
+            page.wait_for_selector(selector, timeout=timeout)
+            stats["pages"] += 1
+
+        # ---------------------------------------------------------- landing
+        visit("", "index.html", "#body tr")
+        rows = page.query_selector_all("#body tr")
+        failures.check(len(rows) == min(50, len(parameters)),
+                       f"index.html shows {len(rows)} rows on page 1, expected "
+                       f"{min(50, len(parameters))}")
+        count = page.inner_text("#count")
+        failures.check(f"{len(parameters)} of {len(parameters)}" in count,
+                       f"index.html count reads {count!r}")
+        stat_values = [e.inner_text() for e in page.query_selector_all(".statbar .value")]
+        failures.check(str(len(factories)) in stat_values,
+                       f"index.html stat bar lacks the factory count ({stat_values})")
+        failures.check(page.query_selector("#frontier-plot svg") is not None,
+                       "index.html: the frontier plot did not render")
+        failures.check(len(page.query_selector_all("#record-cards a.record")) == len(index["ranges"]["d"]),
+                       "index.html: not one record card per distance")
+        failures.check(len(page.query_selector_all("#cite-list li")) >= 1,
+                       "index.html: the how-to-cite list is empty")
+        _ghosts(page, failures, "index.html")
+        page.click('#pager button[data-page="2"]')
+        failures.check("page 2 of" in page.inner_text("#count"),
+                       "index.html: the pager did not move to page 2")
+        page.fill("#filter", "k=1 d=3")
+        expected = sum(1 for p in parameters if p["k"] == 1 and p["d"] == 3)
+        failures.check(page.inner_text("#count").startswith(f"{expected} of"),
+                       f"index.html filter 'k=1 d=3' reads {page.inner_text('#count')!r}, "
+                       f"expected {expected}")
+        hrefs = [a.get_attribute("href") for a in page.query_selector_all("#body a[href]")]
+        failures.check(hrefs and all(h.startswith("params.html?") for h in hrefs),
+                       "index.html has a row link that does not go to params.html")
+        # the landing search box submits into search.html
+        page.fill("#hero-q", "CCZ")
+        page.click(".searchbar.big button[type=submit]")
+        page.wait_for_selector("#body tr")
+        failures.check("search.html" in page.url and "q=CCZ" in page.url,
+                       f"the landing search box went to {page.url}")
+
+        # ----------------------------------------------------------- search
+        for query, expected in searches(factories, index.get("references") or {}):
+            visit(f"search.html?{query}", f"search.html?{query}", "#count strong, #body td.empty")
+            stats["searches"] += 1
+            shown = page.inner_text("#count")
+            failures.check(shown.startswith(f"{expected} of {len(factories)}"),
+                           f"search.html?{query}: reads {shown!r}, expected {expected}")
+            _ghosts(page, failures, f"search.html?{query}")
+        # a search survives the URL: set controls, reload, same count
+        visit("search.html", "search.html (controls)", "#count strong")
+        page.check('input[name="d"][value="4"]')
+        page.check("#exact")
+        page.wait_for_timeout(300)
+        after = page.inner_text("#count")
+        page.reload(wait_until="networkidle")
+        page.wait_for_selector("#count strong")
+        failures.check(page.inner_text("#count") == after and "d=4" in page.url,
+                       f"search.html: state did not survive a reload ({page.url})")
+        with page.expect_download() as info:
+            page.click("#export-csv")
+        lines = Path(info.value.path()).read_text().strip().splitlines()
+        wanted = sum(1 for f in factories if f["d"] == 4 and f["d_is_exact"])
+        failures.check(len(lines) == wanted + 1,
+                       f"search.html: CSV export has {len(lines) - 1} rows, expected {wanted}")
+        # sorting by a header puts the least gamma_rho first
+        visit("search.html?sort=gamma_rho", "search.html sorted", "#body tr")
+        best = min(f["gamma_rho"] for f in factories if f["gamma_rho"] is not None)
+        first = page.inner_text("#body tr:first-child td:nth-child(5)")
+        failures.check(first == f"{best:.3f}",
+                       f"search.html?sort=gamma_rho: first row shows {first}, least is {best:.3f}")
+
+        # ----------------------------------------------------------- params
+        wanted_params = parameters if full else rng.sample(parameters, min(sample, len(parameters)))
+        for edge in (parameters[0], parameters[-1],
+                     max(parameters, key=lambda p: p["k"]),
+                     max(parameters, key=lambda p: p["count"])):
+            if edge not in wanted_params:
+                wanted_params.append(edge)
+        linked: set[str] = set()
+        for p in wanted_params:
+            where = f"params.html [[{p['n']},{p['k']},{p['d']}]]"
+            visit(f"params.html?n={p['n']}&k={p['k']}&d={p['d']}", where, "#body tr")
+            links = [a.get_attribute("href") for a in page.query_selector_all("#body td.gate a[href]")]
+            failures.check(len(links) == p["count"],
+                           f"{where}: {len(links)} gate links for {p['count']} factories")
+            heading = page.inner_text("#heading")
+            failures.check(f"[[{p['n']}, {p['k']}, {p['d']}]]" in heading,
+                           f"{where}: heading is {heading!r}")
+            _ghosts(page, failures, where)
+            for href in links:
+                if not href or not href.startswith("factory.html?id="):
+                    failures.append(f"{where}: bad gate link {href!r}")
+                else:
+                    linked.add(href.split("id=", 1)[1])
+
+        # ---------------------------------------------------------- factory
+        by_id = {f["id"]: f for f in factories}
+        targets = sorted(linked)
+        if not full:
+            # always include the widest circuit and one with every reference kind
+            targets += [max(factories, key=lambda f: f["n"] * f["N"])["id"]]
+            targets += [f["id"] for f in factories if "haah2018codes" in f["citations"]][:1]
+            targets = sorted(set(targets))
+        for fid in targets:
+            if fid not in by_id:
+                failures.append(f"a params page linked to unknown factory {fid}")
+                continue
+            record = json.loads((site / "data" / "factories" / f"{fid}.json").read_text())
+            where = f"factory.html {fid}"
+            visit(f"factory.html?id={fid}", where, "table.matrix tbody tr", timeout=40000)
+            stats["factories"] += 1
+            k, N, n = (record["parameters"][key] for key in ("k", "N", "n"))
+            matrix_rows = page.query_selector_all("table.matrix tbody tr")
+            failures.check(len(matrix_rows) == N, f"{where}: {len(matrix_rows)} matrix rows, N = {N}")
+            failures.check(len(page.query_selector_all("table.matrix tbody tr.out")) == k,
+                           f"{where}: output rows marked != k = {k}")
+            failures.check(len(page.query_selector_all("table.matrix tbody tr.chk")) == N - k,
+                           f"{where}: check rows marked != r = {N - k}")
+            weights = [0] * N
+            for column in record["circuit"]["columns"]:
+                for wire in column:
+                    weights[wire] += 1
+            for q in {0, N - 1}:
+                bits = matrix_rows[q].query_selector("td.bits").inner_text()
+                failures.check(len(bits) == n, f"{where}: row {q} is {len(bits)} wide, n = {n}")
+                failures.check(bits.count("1") == weights[q],
+                               f"{where}: row {q} has {bits.count('1')} ones, columns give {weights[q]}")
+            for section in ("#metric-grid", "#gate-panel", "#distance-panel",
+                            "#references-panel", "#provenance-panel"):
+                element = page.query_selector(section)
+                failures.check(element is not None and element.inner_text().strip(),
+                               f"{where}: {section} is empty")
+            refs = page.query_selector_all("#references-panel ol.refs li")
+            failures.check(len(refs) == len(record["references"]),
+                           f"{where}: {len(refs)} references shown, record cites "
+                           f"{len(record['references'])}")
+            failures.check(page.query_selector('#crumbs a[href^="params.html"]') is not None,
+                           f"{where}: no breadcrumb back to params.html")
+            _ghosts(page, failures, where)
+
+        # one export from a factory page, checked cell by cell
+        small = factories[0]["id"]
+        visit(f"factory.html?id={small}", "factory.html export", "table.matrix tbody tr")
+        with page.expect_download() as info:
+            page.click("#download-csv")
+        record = json.loads((site / "data" / "factories" / f"{small}.json").read_text())
+        lines = Path(info.value.path()).read_text().strip().splitlines()
+        ones = sum(line.split(",")[2:].count("1") for line in lines[1:])
+        failures.check(len(lines) == record["parameters"]["N"] + 1 and
+                       ones == sum(len(c) for c in record["circuit"]["columns"]),
+                       f"factory.html {small}: matrix CSV does not match the columns")
+
+        # ------------------------------------------- graceful failures
+        for url, expect in (("params.html?n=999999&k=1&d=3", "Nothing catalogued"),
+                            ("factory.html?id=nope", "Could not load"),
+                            ("factory.html", "Could not load")):
+            watcher.at(url, expect_errors=True)
+            page.goto(f"{base}/{url}", wait_until="networkidle")
+            stats["pages"] += 1
+            failures.check(expect.lower() in page.inner_text("body").lower(),
+                           f"{url}: expected a graceful {expect!r} message")
+
+        browser.close()
+    return failures, stats
+
+
+def main(argv=None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__,
+                                     formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--site", type=Path, default=DEFAULT_SITE, help="the built site")
+    parser.add_argument("--full", action="store_true",
+                        help="visit every parameter set and every factory (slow)")
+    parser.add_argument("--sample", type=int, default=12,
+                        help="parameter sets to sample when not --full (default 12)")
+    parser.add_argument("--seed", type=int, default=0, help="sampling seed")
+    arguments = parser.parse_args(argv)
+    if not (arguments.site / "data" / "index.json").exists():
+        print(f"no built site at {arguments.site}; run website/build_site.py first")
+        return 1
+
+    with serve(arguments.site) as base:
+        failures, stats = verify(arguments.site, base, full=arguments.full,
+                                 sample=arguments.sample, seed=arguments.seed)
+    print(f"visited {stats['pages']} pages, ran {stats['searches']} searches, "
+          f"checked {stats['factories']} factory pages")
+    if failures:
+        print(f"\nFAILED -- {len(failures)} problem(s):")
+        for failure in failures:
+            print(f"  · {failure}")
+        return 1
+    print("\nOK -- every page rendered and every link resolved.")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
