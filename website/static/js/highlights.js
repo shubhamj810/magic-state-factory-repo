@@ -75,7 +75,7 @@
       var best = bestBy(usable, "gamma_rho");
       if (!best) return "";
       var widest = maxBy(usable, "v_ex_best");
-      return '<a class="record d' + group.d + '" href="' + href(best) + '">' +
+      return '<a class="record" href="' + href(best) + '">' +
         '<span class="d">d = ' + group.d + "</span>" +
         '<span class="g">&gamma;<sub>&rho;</sub> ' + C.num(best.gamma_rho, 4) + "</span>" +
         '<span class="p">' + C.escapeHtml(label(best)) + "</span>" +
@@ -113,165 +113,140 @@
 
   /* ------------------------------------------------------------- the plot */
 
-  /* gamma against n, log-x, one mark per parameter set, coloured by d, with the
-   * running best-gamma staircase drawn over it.  Inline SVG: no dependency, no
-   * network, and it renders from a file:// copy as readily as from a server. */
+  /* SMALL MULTIPLES: one panel per distance, on shared axes.  Within a panel
+   * every comparable parameter set is a grey point and the running best
+   * gamma_rho as n grows -- the frontier -- is one accent-coloured staircase.
+   * Position (which panel) carries the distance, so no colour legend is
+   * needed, the frontiers do not tangle, and shared axes keep the panels
+   * directly comparable.  Inline SVG: no dependency, nothing to load. */
+  var panels = [];                       /* [{d, pts, svg}] for the hover layer */
+  var W = 380, H = 236, L = 44, R = 12, T = 30, B = 34;
+
   function plot(parameters) {
-    var skipped = parameters.length;
     var pts = parameters.filter(function (r) {
       return r.comparable && r.gamma_rho !== null && r.gamma_rho !== undefined &&
              !Number.isNaN(r.gamma_rho) && r.n > 0;
     });
-    skipped -= pts.length;
+    var skipped = parameters.length - pts.length;
     if (pts.length < 2) return "";
-
-    var W = 760, H = 320, L = 52, R = 14, T = 16, B = 40;
-    var iw = W - L - R, ih = H - T - B;
 
     var xs = pts.map(function (p) { return Math.log10(p.n); });
     var ys = pts.map(function (p) { return p.gamma_rho; });
-    var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs);
-    var y0 = Math.min.apply(null, ys), y1 = Math.max.apply(null, ys);
-    /* pad so marks are not clipped by the axes */
-    var padY = (y1 - y0) * 0.06 || 0.1;
-    y0 -= padY; y1 += padY;
+    var x0 = Math.min.apply(null, xs) - 0.04, x1 = Math.max.apply(null, xs) + 0.04;
+    var y0 = Math.min(0.95, Math.min.apply(null, ys) - 0.05), y1 = Math.max.apply(null, ys) + 0.08;
+    var iw = W - L - R, ih = H - T - B;
+    function X(n) { return L + (Math.log10(n) - x0) / (x1 - x0) * iw; }
+    function Y(g) { return T + ih - (g - y0) / (y1 - y0) * ih; }
 
-    function X(n) { return L + (Math.log10(n) - x0) / ((x1 - x0) || 1) * iw; }
-    function Y(g) { return T + ih - (g - y0) / ((y1 - y0) || 1) * ih; }
+    panels = [];
+    var html = byDistance(pts).map(function (group) {
+      var rows = group.rows.slice().sort(function (a, b) { return a.n - b.n || a.gamma_rho - b.gamma_rho; });
+      var run = Infinity, stair = [];
+      rows.forEach(function (p) { if (p.gamma_rho < run) { run = p.gamma_rho; stair.push(p); } });
+      var best = stair[stair.length - 1];
+      var parts = [];
 
-    var parts = [];
-
-    /* gamma = 1 is the line the whole subject is trying to cross; draw it if
-     * it is in range, so its absence is as visible as its presence. */
-    var unity = "";
-    if (y0 <= 1 && 1 <= y1) {
-      unity = '<line class="unity" x1="' + L + '" y1="' + Y(1).toFixed(1) +
-              '" x2="' + (W - R) + '" y2="' + Y(1).toFixed(1) + '"/>' +
-              '<text class="unity-t" x="' + (L + 6) + '" y="' + (Y(1) - 6).toFixed(1) +
-              '">&gamma;<tspan baseline-shift="sub">&rho;</tspan> = 1</text>';
-    }
-
-    /* y gridlines at sensible gamma values */
-    var gridStep = (y1 - y0) > 1.5 ? 0.5 : (y1 - y0) > 0.6 ? 0.25 : 0.1;
-    var gy = Math.ceil(y0 / gridStep) * gridStep;
-    for (; gy <= y1; gy += gridStep) {
-      parts.push('<line class="grid" x1="' + L + '" y1="' + Y(gy).toFixed(1) +
-                 '" x2="' + (W - R) + '" y2="' + Y(gy).toFixed(1) + '"/>');
-      parts.push('<text class="ax" x="' + (L - 8) + '" y="' + (Y(gy) + 3.5).toFixed(1) +
-                 '" text-anchor="end">' + gy.toFixed(2) + "</text>");
-    }
-
-    /* x ticks at decades and half-decades present in the data */
-    [10, 20, 50, 100, 200, 500, 1000, 2000].forEach(function (n) {
-      if (Math.log10(n) < x0 - 0.02 || Math.log10(n) > x1 + 0.02) return;
-      parts.push('<line class="grid" x1="' + X(n).toFixed(1) + '" y1="' + T +
-                 '" x2="' + X(n).toFixed(1) + '" y2="' + (T + ih) + '"/>');
-      parts.push('<text class="ax" x="' + X(n).toFixed(1) + '" y="' + (T + ih + 16) +
-                 '" text-anchor="middle">' + n + "</text>");
-    });
-
-    /* the best-gamma staircase: sweep n upward, drop whenever a better gamma
-     * appears.  This is the catalogue's actual frontier. */
-    var sorted = pts.slice().sort(function (a, b) { return a.n - b.n; });
-    var run = Infinity, stair = [];
-    sorted.forEach(function (p) {
-      if (p.gamma_rho < run) { run = p.gamma_rho; stair.push(p); }
-    });
-    if (stair.length > 1) {
-      var path = "";
-      stair.forEach(function (p, i) {
-        var x = X(p.n).toFixed(1), y = Y(p.gamma_rho).toFixed(1);
-        path += i === 0 ? "M" + x + "," + y
-                        : "H" + x + "V" + y;   /* step down, not a diagonal */
+      for (var gy = Math.ceil(y0 * 2) / 2; gy <= y1; gy += 0.5) {
+        parts.push('<line class="grid" x1="' + L + '" y1="' + Y(gy).toFixed(1) + '" x2="' + (W - R) +
+                   '" y2="' + Y(gy).toFixed(1) + '"/>');
+        parts.push('<text class="ax" x="' + (L - 6) + '" y="' + (Y(gy) + 3.5).toFixed(1) +
+                   '" text-anchor="end">' + gy.toFixed(1) + "</text>");
+      }
+      [20, 50, 100, 200, 500, 1000].forEach(function (n) {
+        if (Math.log10(n) < x0 || Math.log10(n) > x1) return;
+        parts.push('<line class="tick" x1="' + X(n).toFixed(1) + '" y1="' + (T + ih) + '" x2="' +
+                   X(n).toFixed(1) + '" y2="' + (T + ih + 4) + '"/>');
+        parts.push('<text class="ax" x="' + X(n).toFixed(1) + '" y="' + (T + ih + 15) +
+                   '" text-anchor="middle">' + n + "</text>");
       });
-      path += "H" + (W - R);
-      parts.push('<path class="stair" d="' + path + '"/>');
-    }
-
-    /* the marks, drawn after the grid so they sit on top */
-    pts.forEach(function (p, i) {
-      p._x = X(p.n); p._y = Y(p.gamma_rho);
-      parts.push('<circle class="pt d' + p.d + '" data-i="' + i + '" cx="' + p._x.toFixed(1) +
-                 '" cy="' + p._y.toFixed(1) + '" r="4"/>');
-    });
-
-    /* the frontier points again, larger, so the staircase corners read */
-    stair.forEach(function (p) {
-      p._corner = true;
-      parts.push('<circle class="corner" cx="' + X(p.n).toFixed(1) +
-                 '" cy="' + Y(p.gamma_rho).toFixed(1) + '" r="5.5"/>');
-    });
-
-    var swatches = byDistance(pts).map(function (g) {
-      return '<span class="key"><span class="dot d' + g.d + '"></span>d = ' + g.d + "</span>";
+      parts.push('<line class="axis" x1="' + L + '" y1="' + (T + ih) + '" x2="' + (W - R) + '" y2="' + (T + ih) + '"/>');
+      if (y0 <= 1 && 1 <= y1) {
+        parts.push('<line class="unity" x1="' + L + '" y1="' + Y(1).toFixed(1) + '" x2="' + (W - R) +
+                   '" y2="' + Y(1).toFixed(1) + '"/>');
+      }
+      rows.forEach(function (p) {
+        p._x = X(p.n); p._y = Y(p.gamma_rho); p._front = stair.indexOf(p) >= 0;
+      });
+      if (stair.length) {
+        var path = "";
+        stair.forEach(function (p, i) {
+          path += (i === 0 ? "M" : "H" + p._x.toFixed(1) + "V") + (i === 0 ? p._x.toFixed(1) + "," : "") + p._y.toFixed(1);
+        });
+        path += "H" + (W - R);
+        parts.push('<path class="stair" d="' + path + '"/>');
+      }
+      rows.forEach(function (p, i) {
+        parts.push('<circle class="pt' + (p._front ? " front" : "") + '" data-i="' + i + '" cx="' +
+                   p._x.toFixed(1) + '" cy="' + p._y.toFixed(1) + '" r="' + (p._front ? 3.6 : 2.6) + '"/>');
+      });
+      parts.push('<text class="ptitle" x="' + L + '" y="16">d = ' + group.d + "</text>");
+      parts.push('<text class="psub" x="' + (W - R) + '" y="16" text-anchor="end">best ' +
+                 C.num(best.gamma_rho, 3) + " at " + C.escapeHtml(label(best)) + " · " + rows.length +
+                 (rows.length === 1 ? " set" : " sets") + "</text>");
+      panels.push({ d: group.d, pts: rows });
+      return '<svg class="panel-svg" data-panel="' + (panels.length - 1) + '" viewBox="0 0 ' + W + " " + H +
+        '" role="img" aria-label="gamma_rho against n at distance ' + group.d + ": " + rows.length +
+        " parameter sets, best " + C.num(best.gamma_rho, 3) + " at " + label(best) + '">' + parts.join("") + "</svg>";
     }).join("");
 
-    lastPoints = pts;
     return '<figure class="plot">' +
       '<div class="plot-tip" id="plot-tip" role="status"></div>' +
-      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" ' +
-      'aria-label="Yield exponent gamma against circuit length n, one mark per parameter set.">' +
-      parts.join("") + unity +
-      '<text class="ax-t" x="' + (L + iw / 2) + '" y="' + (H - 6) +
-      '" text-anchor="middle">n &mdash; rotations consumed (log scale)</text>' +
-      '<text class="ax-t" transform="translate(14,' + (T + ih / 2) +
-      ') rotate(-90)" text-anchor="middle">&gamma;<tspan baseline-shift="sub">&rho;</tspan></text>' +
-      "</svg>" +
-      '<figcaption class="small muted">' + swatches +
-      '<span class="key"><span class="stair-key"></span><span>best &gamma;<sub>&rho;</sub> so far</span></span>' +
-      "<br>Hover a point for its parameters, click to open it. The staircase is the catalogue&rsquo;s " +
-      "&gamma;<sub>&rho;</sub> frontier: it can only fall, and each corner is a circuit no " +
-      "shorter circuit beats." +
+      '<div class="panels">' + html + "</div>" +
+      '<figcaption>Each panel is one distance. Horizontal: n, the noisy T states a ' +
+      "factory consumes (log scale, shared). Vertical: &gamma;<sub>&rho;</sub>, lower is better (shared). " +
+      '<span class="key"><span class="key-dot"></span><span>a parameter set</span></span>' +
+      '<span class="key"><span class="stair-key"></span><span>best &gamma;<sub>&rho;</sub> so far as n grows</span></span>' +
+      '<span class="key"><span class="unity-key"></span><span>&gamma;<sub>&rho;</sub> = 1</span></span>' +
+      "<br>Hover a point for its parameters; click to open it." +
       (skipped ? " " + skipped + " parameter set" + (skipped === 1 ? " is" : "s are") +
-                 " not plotted: their gates have overlapping monomials, so no " +
-                 "extractable T count exists and no rate claim can be made from them."
-               : "") +
+                 " not plotted: their gates have overlapping terms, so no extractable T count exists." : "") +
       "</figcaption></figure>";
   }
 
   /* ------------------------------------------------------- plot hover layer */
-  var lastPoints = [];
-
-  /* One tooltip, following the nearest point within 18 px -- a hit area much
-   * bigger than the 4 px mark, so the plot is usable with a trackpad. */
+  /* One tooltip for the figure, following the nearest point (within 16 px) of
+   * whichever panel the pointer is over -- a hit area far bigger than a mark. */
   function wirePlot(figure) {
-    var svg = figure.querySelector("svg"), tip = figure.querySelector(".plot-tip");
-    if (!svg || !tip) return;
-    var circles = svg.querySelectorAll("circle.pt"), hot = null;
-    function nearest(event) {
-      var box = svg.getBoundingClientRect(), vb = svg.viewBox.baseVal;
-      var sx = vb.width / box.width, sy = vb.height / box.height;
-      var x = (event.clientX - box.left) * sx, y = (event.clientY - box.top) * sy;
-      var best = null, bestD = Infinity;
-      lastPoints.forEach(function (p, i) {
-        var dx = p._x - x, dy = p._y - y, dd = dx * dx + dy * dy;
-        if (dd < bestD) { bestD = dd; best = i; }
+    var tip = figure.querySelector(".plot-tip");
+    var hot = null;
+    function clear() {
+      if (hot) { hot.classList.remove("hot"); hot = null; }
+      tip.classList.remove("on");
+    }
+    figure.querySelectorAll("svg.panel-svg").forEach(function (svg) {
+      var panel = panels[Number(svg.getAttribute("data-panel"))];
+      var circles = svg.querySelectorAll("circle.pt");
+      function nearest(event) {
+        var box = svg.getBoundingClientRect(), sx = W / box.width, sy = H / box.height;
+        var x = (event.clientX - box.left) * sx, y = (event.clientY - box.top) * sy;
+        var best = null, bestD = Infinity;
+        panel.pts.forEach(function (p, i) {
+          var dd = (p._x - x) * (p._x - x) + (p._y - y) * (p._y - y);
+          if (dd < bestD) { bestD = dd; best = i; }
+        });
+        return Math.sqrt(bestD) / sx <= 16 ? best : null;
+      }
+      svg.addEventListener("mousemove", function (event) {
+        var i = nearest(event);
+        if (i === null) { clear(); svg.style.cursor = ""; return; }
+        var p = panel.pts[i], c = circles[i];
+        if (hot !== c) { if (hot) hot.classList.remove("hot"); hot = c; c.classList.add("hot"); }
+        var box = svg.getBoundingClientRect(), fig = figure.getBoundingClientRect();
+        tip.style.left = (box.left - fig.left + p._x * box.width / W) + "px";
+        tip.style.top = (box.top - fig.top + p._y * box.height / H) + "px";
+        tip.innerHTML = "<b>" + C.escapeHtml(label(p)) + "</b>" +
+          '<div class="row"><span>&gamma;<sub>&rho;</sub></span><span>' + C.num(p.gamma_rho, 4) + "</span></div>" +
+          '<div class="row"><span>V<sub>ex</sub></span><span>' + p.v_ex_best + "</span></div>" +
+          '<div class="row"><span>gates</span><span>' + p.count + "</span></div>" +
+          (p._front ? '<div class="hint">on the frontier</div>' : "");
+        tip.classList.add("on");
+        svg.style.cursor = "pointer";
       });
-      return Math.sqrt(bestD) / sx <= 18 ? best : null;
-    }
-    function show(i) {
-      if (hot !== null && circles[hot]) { circles[hot].classList.remove("hot"); circles[hot].setAttribute("r", "4"); }
-      hot = i;
-      if (i === null) { tip.classList.remove("on"); svg.style.cursor = ""; return; }
-      var p = lastPoints[i], c = circles[i];
-      c.classList.add("hot"); c.setAttribute("r", "6.5");
-      var box = svg.getBoundingClientRect(), fig = figure.getBoundingClientRect(), vb = svg.viewBox.baseVal;
-      tip.style.left = (box.left - fig.left + p._x * box.width / vb.width) + "px";
-      tip.style.top = (box.top - fig.top + p._y * box.height / vb.height) + "px";
-      tip.innerHTML = "<b>" + C.escapeHtml(label(p)) + "</b>" +
-        '<div class="row"><span>&gamma;<sub>&rho;</sub></span><span>' + C.num(p.gamma_rho, 4) + "</span></div>" +
-        '<div class="row"><span>V<sub>ex</sub></span><span>' + p.v_ex_best + "</span></div>" +
-        '<div class="row"><span>gates</span><span>' + p.count + "</span></div>" +
-        (p._corner ? '<div class="hint">on the frontier</div>' : "") +
-        '<div class="hint">click to open</div>';
-      tip.classList.add("on");
-      svg.style.cursor = "pointer";
-    }
-    svg.addEventListener("mousemove", function (event) { show(nearest(event)); });
-    svg.addEventListener("mouseleave", function () { show(null); });
-    svg.addEventListener("click", function (event) {
-      var i = nearest(event);
-      if (i !== null) global.location.href = href(lastPoints[i]);
+      svg.addEventListener("mouseleave", clear);
+      svg.addEventListener("click", function (event) {
+        var i = nearest(event);
+        if (i !== null) global.location.href = href(panel.pts[i]);
+      });
     });
   }
 

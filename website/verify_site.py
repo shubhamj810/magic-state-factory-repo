@@ -41,6 +41,8 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DEFAULT_SITE = HERE / "_site"
+#: the catalogue's own GL(k,2) decision, used to check the browser's answers
+sys.path.insert(0, str(HERE.parent / "master_catalog"))
 
 
 class _Quiet(http.server.SimpleHTTPRequestHandler):
@@ -340,6 +342,46 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
             failures.check(page.query_selector('#crumbs a[href^="params.html"]') is not None,
                            f"{where}: no breadcrumb back to params.html")
             _ghosts(page, failures, where)
+
+        # ------------------------------------------- the CNOT + S tool, cross-checked
+        import glcanon
+
+        def monos(gate, k):
+            return [tuple(int(w) for w in (t.split(",") if "," in t else ([t] if k > 10 else list(t))))
+                    for t in gate.split("+")] if gate else []
+
+        same_k = [f for f in factories if f["k"] == 3]
+        source = same_k[0]
+        other = next(f for f in same_k[1:]
+                     if glcanon.gl_isomorphic(3, monos(source["gate"], 3), monos(f["gate"], 3)) is False)
+        where = f"factory.html {source['id']} (CNOT + S tool)"
+        visit(f"factory.html?id={source['id']}", where, "table.matrix tbody tr")
+        page.fill("#tf-target", other["gate_human"])
+        page.click("#tf-check")
+        page.wait_for_selector(".tf-verdict")
+        failures.check("Not reachable" in page.inner_text(".tf-verdict"),
+                       f"{where}: {other['gate_human']} is not GL-equivalent, page says "
+                       f"{page.inner_text('.tf-verdict')[:80]!r}")
+        page.wait_for_function("!/Looking/.test(document.getElementById('tf-elsewhere').textContent)",
+                               timeout=60000)
+        listed = [a.get_attribute("href").split("id=", 1)[1]
+                  for a in page.query_selector_all("#tf-elsewhere a[href^='factory.html']")]
+        by = {f["id"]: f for f in factories}
+        failures.check(listed, f"{where}: no catalogued factory listed for {other['gate_human']}")
+        for fid in listed:
+            failures.check(glcanon.gl_isomorphic(3, monos(by[fid]["gate"], 3), monos(other["gate"], 3)) is True,
+                           f"{where}: lists {fid}, which does not produce {other['gate_human']}")
+        for attempt in range(3):
+            page.click("#tf-random")
+            page.wait_for_selector(".tf-verdict.ok")
+            target = page.input_value("#tf-target")
+            parsed = [tuple(int(ch) for ch in (tok[3:] if tok.startswith("CCZ") else tok[2:] if tok.startswith("CS")
+                                               else tok[1:])) for tok in target.split("·")]
+            failures.check(glcanon.gl_isomorphic(3, monos(source["gate"], 3), parsed) is True,
+                           f"{where}: random gate {target} is not GL-equivalent in Python")
+            text = page.inner_text("#tf-result")
+            failures.check("Same gate" in text or "Checked by brute force on all 8 basis states" in text,
+                           f"{where}: no verified construction for {target}")
 
         # one export from a factory page, checked cell by cell
         small = factories[0]["id"]

@@ -26,28 +26,27 @@
     function count(test) { return f.filter(test).length; }
     var PARETO = "exhaustive classification n<=54 (Pareto point)";
     var list = [
-      ["t-amber", "T", "Pure T<sup>⊗k</sup>", "search.html?pure=1",
+      ["Pure T<sup>⊗k</sup>", "search.html?pure=1",
        count(function (r) { return r.pure_t; }), "k independent T states from one circuit"],
-      ["t-rose", "CCZ", "Gates with CCZ", "search.html?has=ccz",
+      ["Gates with CCZ", "search.html?has=ccz",
        count(function (r) { return r.ccz_terms > 0; }), "Toffoli-type magic, three outputs at a time"],
-      ["t-teal", "CS", "Gates with CS", "search.html?has=cs",
+      ["Gates with CS", "search.html?has=cs",
        count(function (r) { return r.cs_terms > 0; }), "controlled-S terms on pairs of outputs"],
-      ["t-blue", "d≥5", "Distance 5 or more", "search.html?d=5,6,7",
+      ["Distance 5 or more", "search.html?d=5,6,7",
        count(function (r) { return r.d >= 5; }), "the strongest error suppression catalogued"],
-      ["t-indigo", "★", "Pareto-optimal, n ≤ 54", "search.html?regime=" + encodeURIComponent(PARETO),
+      ["Pareto-optimal, n ≤ 54", "search.html?regime=" + encodeURIComponent(PARETO),
        count(function (r) { return r.regimes.indexOf(PARETO) >= 0; }), "undominated in inputs and wires by the exhaustive classification"],
-      ["t-violet", "AI", "Found by AI search", "search.html?disc=" + encodeURIComponent("AI search"),
+      ["Found by AI search", "search.html?disc=" + encodeURIComponent("AI search"),
        count(function (r) { return r.discovery === "AI search"; }), "classes no classification or SAT search had"],
-      ["t-green", "≡", "From the literature", "search.html?lit=1",
+      ["From the literature", "search.html?lit=1",
        count(Q.isLiterature), "credited to a published paper"],
-      ["t-sky", "γ", "Best yield, γ<sub>ρ</sub> ≤ 1.2", "search.html?grmax=1.2&sort=gamma_rho",
+      ["Best yield, γ<sub>ρ</sub> ≤ 1.2", "search.html?grmax=1.2&sort=gamma_rho",
        count(function (r) { return r.gamma_rho !== null && r.gamma_rho <= 1.2; }), "the frontier of the distillation exponent"]
     ];
     return list.map(function (t) {
-      return '<a class="tile ' + t[0] + '" href="' + t[3] + '">' +
-        '<span class="ico" aria-hidden="true">' + t[1] + "</span>" +
-        "<span><span class=\"t\">" + t[2] + '<span class="c">' + t[4] + "</span></span>" +
-        '<span class="s">' + t[5] + "</span></span></a>";
+      return '<a class="tile" href="' + t[1] + '">' +
+        '<span class="t"><span>' + t[0] + '</span><span class="c">' + t[2] + "</span></span>" +
+        '<span class="s">' + t[3] + "</span></a>";
     }).join("");
   }
 
@@ -59,7 +58,7 @@
     record.circuit.columns.forEach(function (col, j) {
       col.forEach(function (w) { if (w < N) on[w][j] = 1; });
     });
-    var cell = 20, gap = 4, lab = 58, step = cell + gap;
+    var cell = 20, gap = 3, lab = 58, step = cell + gap;
     var W = lab + n * step - gap, H = N * step - gap;
     var parts = [];
     for (q = 0; q < N; q++) {
@@ -68,14 +67,8 @@
                  (q * step + cell * 0.72) + '">' + (out ? "out " : "check ") + q + "</text>");
       for (var j = 0; j < n; j++) {
         var x = lab + j * step, y = q * step;
-        if (on[q][j]) {
-          var delay = (((q * 7 + j * 3) % 11) * 0.37).toFixed(2);
-          parts.push('<rect class="on ' + (out ? "cell-out" : "cell-chk") + '" x="' + x + '" y="' + y +
-                     '" width="' + cell + '" height="' + cell + '" rx="4" style="--delay:' + delay + 's"/>');
-        } else {
-          parts.push('<rect class="cell-zero" x="' + x + '" y="' + y + '" width="' + cell +
-                     '" height="' + cell + '" rx="4"/>');
-        }
+        parts.push('<rect class="' + (on[q][j] ? (out ? "cell-out" : "cell-chk") : "cell-zero") +
+                   '" x="' + x + '" y="' + y + '" width="' + cell + '" height="' + cell + '" rx="1.5"/>');
       }
     }
     return '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="' + N + " by " + n +

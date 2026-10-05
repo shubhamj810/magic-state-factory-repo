@@ -14,7 +14,7 @@
     <h1 id="heading">&hellip;</h1>
     <p class="lede" id="blurb"></p>
     <nav class="jump" aria-label="on this page"><a href="#matrix">Circuit</a><a href="#metrics">Figures of merit</a>
-    <a href="#gate">Gate</a><a href="#distance">Distance</a><a href="#references">References</a>
+    <a href="#gate">Gate</a><a href="#transform">CNOT + S</a><a href="#distance">Distance</a><a href="#references">References</a>
     <a href="#provenance">Provenance</a></nav>
   </div>
 </section>
@@ -48,6 +48,21 @@
   <h2 id="gate">Output gate</h2>
   <div class="panel" id="gate-panel" style="margin-top:14px"></div>
 
+  <h2 id="transform">Reach another gate with CNOT + S</h2>
+  <div class="panel" id="transform-panel" style="margin-top:14px">
+    <p class="small muted" id="tf-intro">Any gate obtained from this one by a change of output basis
+    (a CNOT circuit on the outputs) and diagonal Clifford corrections (S, Z, CZ) prepares the
+    same magic state, so this factory makes it too. Type a target gate on these outputs: if it is
+    reachable, the circuit that gets there is constructed and checked on every basis state.</p>
+    <form class="tf-row" id="tf-form" autocomplete="off">
+      <label class="sr-only" for="tf-target">Target gate</label>
+      <input id="tf-target" type="text" spellcheck="false" placeholder="e.g. T0·CS01   or   0+01">
+      <button type="submit" class="btn primary" id="tf-check">Check and construct</button>
+      <button type="button" class="btn" id="tf-random" title="fill in this gate after a random change of output basis">Random equivalent gate</button>
+    </form>
+    <div id="tf-result" aria-live="polite"></div>
+  </div>
+
   <h2 id="distance">Distance</h2>
   <div class="panel" id="distance-panel" style="margin-top:14px"></div>
 
@@ -70,6 +85,8 @@
 <!--#footer-->
 
 <script src="js/catalog.js"></script>
+<script src="js/glequiv.js"></script>
+<script src="js/transform.js"></script>
 <script src="js/factory.js"></script>
 </body>
 </html>

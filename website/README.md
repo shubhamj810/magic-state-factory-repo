@@ -38,21 +38,45 @@ the build stitches them in. `PAGE` names the nav link to mark as current; add
 `nosearch` to drop the header's search box. The build also writes the
 catalogue commit into the footer.
 
-The look comes from [`static/css/style.css`](static/css/style.css). Every
-colour there is a token on `:root`, and dark mode is a separate palette rather
-than an automatic inversion. Some colours carry meaning and are used the same
-way everywhere:
-- **Output wires** are amber and **check wires** are teal: in the matrix, the
-  hero, and the legends.
-- **Distance** `d = 3…7` is a single-hue blue ramp, light to dark. Distance is
-  ordered, so one hue fits it; five unrelated colours in a scatter would not
-  stay distinguishable. The ramp was checked with an ordinal palette validator
-  against both card surfaces: monotone lightness, visible step gaps, and a
-  light end that clears the surface.
-- The **γ_ρ frontier** is the one highlight colour on the plot.
+The look comes from [`static/css/style.css`](static/css/style.css): IBM Plex
+Sans and Mono, flat surfaces, hairline borders, 4 px corners and one accent
+blue. There are no gradients, glows, shadows on cards or accent bars. Every
+colour is a token on `:root`, and dark mode is a separate palette rather than
+an automatic inversion. Colour is used only where it carries meaning:
+- **Output wires** are amber and **check wires** are teal, in the matrix, the
+  hero and the logo.
+- **Distance** `d = 3…7` is a single-hue blue ramp on the small distance dots,
+  checked as an ordinal ramp against both surfaces.
+- **The frontier plot** is small multiples, one panel per distance on shared
+  axes. Points are grey and the frontier staircase is the accent, so position
+  rather than colour tells the distances apart.
 
 `n` and `N` are different parameters, so the stylesheet never uses
 `text-transform`.
+
+## The CNOT + S tool on each factory page
+
+Two output gates prepare the same magic state when a CNOT circuit on the
+outputs and diagonal Clifford corrections (S, Z, CZ) turn one into the other.
+That is the catalogue's own deduplication relation, the `GL(k,2)` key. Each
+factory page lets you type a target gate and get one of three answers:
+- **reachable**, with the circuit that does it;
+- **not reachable**, with the catalogued factories that do produce that gate;
+- **undecided**, when the search runs out of budget or k > 16.
+
+[`static/js/glequiv.js`](static/js/glequiv.js) decides the question with a port
+of [`master_catalog/glcanon.py`](../master_catalog/glcanon.py): the cubic form's
+labels, then a bounded basis search. It then constructs the answer:
+- the CNOT circuit for `A⁻¹`, by Gaussian elimination;
+- the leftover diagonal Clifford, by a Möbius transform over Z₄.
+
+Both are checked by brute force on all 2^k basis states before anything is
+shown. Running out of search budget is reported as undecided, never as an answer.
+
+The port was checked against the Python on the catalogue:
+- 4,000 same-k pairs of rows, k ≤ 6: 4,000 agree, none undecided;
+- every row with k ≤ 8 after a random change of output basis: all recognised,
+  and all constructions pass.
 
 ## What the build adds, and what it does not
 
@@ -111,6 +135,9 @@ rendered page against counts it computes itself:
 - 22 searches;
 - the CSV export;
 - the hero matrix, the explore-tile counts and the plot tooltip;
+- the CNOT + S tool, against `master_catalog/glcanon.py`: an inequivalent target is
+  refused, every factory it lists instead really is equivalent, and random
+  equivalent targets come back with a construction checked on every basis state;
 - the matrix's output and check rows and its row weights;
 - each factory's references.
 

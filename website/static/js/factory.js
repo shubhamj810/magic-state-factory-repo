@@ -267,6 +267,8 @@
           '</summary><pre class="raw">' + C.escapeHtml(JSON.stringify(sources, null, 1)) + "</pre></details>"
         : "");
 
+    if (window.Transform) window.Transform.mount(record);
+
     var shallow = JSON.parse(JSON.stringify(record));
     shallow.circuit = { columns: "[" + p.n + " columns — shown as the matrix above]" };
     document.getElementById("raw").textContent = JSON.stringify(shallow, null, 2);

@@ -263,7 +263,7 @@ def render_pages(out: Path, stamp: dict) -> None:
                      f'commit/{commit}"><code>{commit}</code></a>' if commit else "")
                   + (f" ({date})" if date else "") + ".")
     footer = (TEMPLATES / "footer.html").read_text(encoding="utf-8") \
-        .replace("{{logo}}", logo.replace('id="lg"', 'id="lg-foot"').replace("url(#lg)", "url(#lg-foot)")) \
+        .replace("{{logo}}", logo) \
         .replace("{{stamp}}", stamp_html)
     marker = re.compile(r"<!--#header ?([^>]*)-->")
     for page in out.glob("*.html"):

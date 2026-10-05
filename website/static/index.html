@@ -14,8 +14,8 @@
 <section class="hero">
   <div class="inner">
     <div class="hero-copy">
-      <p class="eyebrow"><span class="dot"></span>Open database &middot; Clifford level-3 distillation</p>
-      <h1>Magic State <span class="grad">Factory Catalog</span></h1>
+      <p class="eyebrow">Open database &middot; Clifford level-3 magic-state distillation</p>
+      <h1>Magic State Factory Catalog</h1>
       <p class="lede">A searchable database of <strong id="hero-count">verified</strong>
       magic-state distillation factories. Each is stored as an explicit circuit,
       and every number shown &mdash; distance, gate, T-count, distillation
@@ -53,8 +53,7 @@
 
 <main id="main">
   <h2 id="explore">Explore the catalogue</h2>
-  <p class="section-intro">Jump straight into a slice of the database. Every
-  tile is a search you can refine.</p>
+  <p class="section-intro">Common starting points. Each opens a search you can refine.</p>
   <div class="tiles" id="tiles"></div>
 
   <h2 id="best">The best in the catalogue</h2>
@@ -68,9 +67,8 @@
   <div class="records" id="record-cards"></div>
 
   <h2 id="frontier">The &gamma;<sub>&rho;</sub> frontier</h2>
-  <p class="section-intro">Every parameter set against the number of noisy
-  inputs it consumes, coloured by distance, with the running best drawn over
-  it. Hover a point for its parameters; click to open it.</p>
+  <p class="section-intro">How the best achievable &gamma;<sub>&rho;</sub> falls as
+  a factory is allowed more noisy inputs, one panel per distance on shared axes.</p>
   <div id="frontier-plot"></div>
 
   <h2 id="parameters">Browse by parameters</h2>
@@ -137,8 +135,8 @@
 
   <h2 id="about">About, citing and contributing</h2>
   <div class="about-grid">
-    <div class="panel" style="--tint:#7c3aed">
-      <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>Where the factories come from</h3>
+    <div class="panel">
+      <h3>Where the factories come from</h3>
       <ul class="plain">
         <li><strong>Exhaustive classification</strong> of every generalised
         triorthogonal protocol with up to 54 inputs (Wills, Jain and Singh).</li>
@@ -148,24 +146,24 @@
         <li><strong>Community contributions</strong>, verified to the same bar.</li>
       </ul>
     </div>
-    <div class="panel" style="--tint:#4f46e5">
-      <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h4v4H7zM13 7h4v4h-4z"/><path d="M9 11c0 3-1 5-3 6M15 11c0 3-1 5-3 6"/></svg></span>How to cite</h3>
+    <div class="panel">
+      <h3>How to cite</h3>
       <p class="small">If you use a factory, cite the papers listed on its page.
       For the catalogue itself:</p>
       <ol class="refs small" id="cite-list"></ol>
       <p class="small">and the repository,
       <a href="https://github.com/shubhamj810/magic-state-factory-repo">github.com/shubhamj810/magic-state-factory-repo</a>.</p>
     </div>
-    <div class="panel" style="--tint:#0d9488">
-      <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span>Download</h3>
+    <div class="panel">
+      <h3>Download</h3>
       <ul class="plain small">
         <li><a href="data/factories.csv" download>factories.csv</a> &mdash; one row per factory, every figure of merit</li>
         <li><a href="data/index.json" download>index.json</a> &mdash; the same as JSON, with the reference table</li>
         <li><a id="full-catalog" href="https://github.com/shubhamj810/magic-state-factory-repo/blob/main/master_catalog/master_catalog.json">master_catalog.json</a> &mdash; the full database, circuits included</li>
       </ul>
     </div>
-    <div class="panel" style="--tint:#d97706">
-      <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span>Contribute a factory</h3>
+    <div class="panel">
+      <h3>Contribute a factory</h3>
       <p class="small">Protocols can be submitted in any format &mdash; a paper,
       matrices, code or a notebook. They are verified to the same bar as every
       row here and credited to their authors.</p>
