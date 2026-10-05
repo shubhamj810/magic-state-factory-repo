@@ -68,7 +68,9 @@ COMMUNITY = "community contribution"
 #: Regimes that are not an AI search: the classification, the SAT search and a
 #: community contribution.
 NOT_AI = (PARETO, "exhaustive classification n<=54", SAT, COMMUNITY)
-#: The two unpublished reports the classification window is credited to.
+#: The two reports the classification window is credited to: the length-54
+#: classification (arXiv:2609.30860) and the still-unpublished symmetry-and-AI
+#: report.
 WILLS, JAIN = "wills2026classification", "jain2026symmetry"
 #: The Pareto points the classification's own table (Table tab:complete-pareto)
 #: attributes to published protocols, by their index in the frontier file, with
@@ -669,19 +671,21 @@ class TestMasterCatalogue(unittest.TestCase):
         self.assertEqual(seen, set(range(74)))
 
     def test_published_works_are_linked_and_unpublished_ones_are_not(self):
-        """Every work the literature migrations credit carries its link; the two
-        unpublished reports carry none.  A community contribution's entry may
-        go either way -- linked when the contributor's work is published."""
+        """Every published work a row credits carries its link -- including the
+        length-54 classification, now on the arXiv; the unpublished
+        symmetry-and-AI report carries none.  A community contribution's entry
+        may go either way -- linked when the contributor's work is published."""
         references = self.blob["references"]
-        for key in (WILLS, JAIN):
-            if key in references:
-                self.assertNotIn("url", references[key])
+        if JAIN in references:
+            self.assertNotIn("url", references[JAIN])
+        self.assertEqual(references[WILLS].get("url"),
+                         "https://arxiv.org/abs/2609.30860")
         # a contributor's own work may be unpublished: exempt only the keys no
         # row credits except rows a community contribution brought or improved
         elsewhere = {key for row in self.rows if COMMUNITY not in row["regimes"]
                      for key in row["citations"]}
         for key, entry in references.items():
-            if key in (WILLS, JAIN) or key not in elsewhere:
+            if key == JAIN or key not in elsewhere:
                 continue
             with self.subTest(key=key):
                 self.assertTrue(entry["url"].startswith("https://"))

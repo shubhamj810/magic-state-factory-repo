@@ -162,8 +162,9 @@ DEFAULT_REFERENCES = {
     "wills2026classification": {
         "short": "Wills et al. (2026)",
         "full": "A. Wills, S. P. Jain, and S. Singh, \"Classification of "
-                "Generalised Triorthogonal Codes through Length 54\" (2026), "
-                "in preparation.",
+                "Generalised Triorthogonal Codes through Length 54,\" "
+                "arXiv:2609.30860 (2026).",
+        "url": "https://arxiv.org/abs/2609.30860",
     },
     "jain2026symmetry": {
         "short": "Jain et al. (2026)",

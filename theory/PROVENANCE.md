@@ -46,7 +46,8 @@ The CLI and catalogue builder preserve and enforce that distinction.
 ## Complete `n <= 54` window (external)
 
 The exhaustive classification of generalised triorthogonal protocols through
-length 54 (A. Wills, S. P. Jain and S. Singh, in preparation) subsumes both
+length 54 (A. Wills, S. P. Jain and S. Singh,
+[arXiv:2609.30860](https://arxiv.org/abs/2609.30860)) subsumes both
 windows above. Its enumeration, proofs and space catalogues are in its own
 repository, `AWillsQuantum/generalised_triorthogonal_classification`, and its
 Figshare dataset; none of that is re-run here.

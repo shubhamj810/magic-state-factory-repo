@@ -3,7 +3,7 @@
 A copy of the Pareto frontier from the exhaustive classification of
 generalised triorthogonal protocols with `n <= 54` and exact `d_Z >= 3`
 (A. Wills, S. P. Jain and S. Singh, *Classification of Generalised
-Triorthogonal Codes through Length 54*, in preparation).
+Triorthogonal Codes through Length 54*, [arXiv:2609.30860](https://arxiv.org/abs/2609.30860)).
 
 | file | contents |
 |---|---|

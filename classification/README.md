@@ -6,7 +6,7 @@ classification stages, which the length-54 classification supersedes.
 
 | directory | complete window | published catalogue |
 |---|---|---|
-| [`length54/`](length54/) | the exhaustive classification of generalised triorthogonal protocols through `n <= 54`, exact `d_Z >= 3` (Wills, Jain and Singh) — a copy of its data, not its code | its 74 Pareto points for 62 CNOT+S output classes |
+| [`length54/`](length54/) | the exhaustive classification of generalised triorthogonal protocols through `n <= 54`, exact `d_Z >= 3` (Wills, Jain and Singh, [arXiv:2609.30860](https://arxiv.org/abs/2609.30860)) — a copy of its data, not its code | its 74 Pareto points for 62 CNOT+S output classes |
 | [`legacy/exhaustive_n38/`](legacy/exhaustive_n38/) | legacy: every check rank, `n <= 38`, distance 3 | 74 `S_k` classes |
 | [`legacy/rank7_census/`](legacy/rank7_census/) | legacy: effective check rank `r <= 7`, `n <= 44`, distance 3 | 21 T-count-5 frontier classes |
 | [`legacy/n40/`](legacy/n40/) | legacy: every check rank, `n = 39, 40`, distance 3 | `S_k` classes with their best-error-coefficient witnesses |

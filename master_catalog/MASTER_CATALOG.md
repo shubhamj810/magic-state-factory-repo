@@ -92,222 +92,222 @@ report. Full entries are under [References](#references).
 | # | `[[n,k,d]]` | cert d | N | gate | T | deg | discovery | regime(s) | citation |
 |---:|---|---:|---:|---|---:|---:|---|---|---|
 | 1 | `[[15,1,3]]` | — | 5 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Bravyi & Kitaev (2005)](https://doi.org/10.1103/PhysRevA.71.022316) |
-| 2 | `[[23,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 3 | `[[27,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 4 | `[[28,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
+| 2 | `[[23,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 3 | `[[27,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 4 | `[[28,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
 | 5 | `[[28,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437) |
-| 6 | `[[29,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 7 | `[[30,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 8 | `[[30,2,3]]` | — | 10 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 9 | `[[31,1,3]]` | — | 6 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 10 | `[[31,2,3]]` | — | 7 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 11 | `[[31,3,3]]` | — | 8 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 12 | `[[31,4,3]]` | — | 9 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 13 | `[[31,5,3]]` | — | 10 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 14 | `[[32,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 15 | `[[32,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 16 | `[[33,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 17 | `[[34,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 18 | `[[34,2,3]]` | — | 10 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 19 | `[[35,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
+| 6 | `[[29,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 7 | `[[30,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 8 | `[[30,2,3]]` | — | 10 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 9 | `[[31,1,3]]` | — | 6 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 10 | `[[31,2,3]]` | — | 7 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 11 | `[[31,3,3]]` | — | 8 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 12 | `[[31,4,3]]` | — | 9 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 13 | `[[31,5,3]]` | — | 10 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 14 | `[[32,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 15 | `[[32,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 16 | `[[33,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 17 | `[[34,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 18 | `[[34,2,3]]` | — | 10 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 19 | `[[35,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
 | 20 | `[[35,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437) |
-| 21 | `[[35,2,3]]` | — | 8 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
+| 21 | `[[35,2,3]]` | — | 8 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
 | 22 | `[[35,2,3]]` | — | 8 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); AI search | [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437) |
-| 23 | `[[35,3,3]]` | — | 9 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
+| 23 | `[[35,3,3]]` | — | 9 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
 | 24 | `[[35,3,3]]` | — | 9 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437) |
-| 25 | `[[36,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 26 | `[[36,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 27 | `[[36,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 28 | `[[36,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 29 | `[[36,3,3]]` | — | 9 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); AI search | Wills et al. (2026); Jain et al. (2026) |
-| 30 | `[[36,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 31 | `[[36,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 32 | `[[36,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 33 | `[[37,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 34 | `[[37,2,3]]` | — | 10 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 35 | `[[37,3,3]]` | — | 11 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 36 | `[[38,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 37 | `[[38,2,3]]` | — | 10 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 38 | `[[38,2,3]]` | — | 10 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 39 | `[[38,3,3]]` | — | 11 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 40 | `[[38,3,3]]` | — | 11 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 41 | `[[38,4,3]]` | — | 12 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 42 | `[[39,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 43 | `[[39,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 44 | `[[39,2,3]]` | — | 8 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 45 | `[[39,2,3]]` | — | 8 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 46 | `[[39,3,3]]` | — | 9 | `01+02+12` | 3 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 47 | `[[39,3,3]]` | — | 9 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 48 | `[[39,3,3]]` | — | 9 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 49 | `[[39,3,3]]` | — | 9 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 50 | `[[39,4,3]]` | — | 10 | `01+02+03+13+23+012+123` | 3 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 51 | `[[39,4,3]]` | — | 10 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 52 | `[[39,4,3]]` | — | 10 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 53 | `[[39,4,3]]` | — | 10 | `0+1+2+3+01` | 3 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 54 | `[[39,5,3]]` | — | 11 | `01+02+03+04+012+013+014+023+024+034` | 3 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 55 | `[[39,5,3]]` | — | 11 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 56 | `[[39,5,3]]` | — | 11 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 57 | `[[39,5,3]]` | — | 11 | `0+1+2+3+4+01+23` | 3 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 58 | `[[39,6,3]]` | — | 12 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 59 | `[[39,6,3]]` | — | 12 | `0+1+2+3+4+5+01+23+45` | 3 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 60 | `[[40,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 61 | `[[40,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 62 | `[[40,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 63 | `[[40,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 64 | `[[40,3,3]]` | — | 9 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 65 | `[[40,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 66 | `[[40,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 67 | `[[40,4,3]]` | — | 11 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 68 | `[[40,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 69 | `[[40,5,3]]` | — | 12 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 70 | `[[41,1,3]]` | — | 9 | `0` | 1 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 71 | `[[42,2,3]]` | — | 12 | `0+1` | 2 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 72 | `[[43,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 73 | `[[43,2,3]]` | — | 9 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 74 | `[[43,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 75 | `[[43,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 76 | `[[43,3,3]]` | — | 10 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 77 | `[[43,3,3]]` | — | 10 | `01+02+12` | 3 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 78 | `[[43,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 79 | `[[43,3,3]]` | — | 10 | `0+01+02` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 80 | `[[43,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 81 | `[[43,3,3]]` | — | 10 | `0+12` | 4 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | Wills et al. (2026); Jain et al. (2026) |
-| 82 | `[[43,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 83 | `[[43,4,3]]` | — | 11 | `01+02+03+13+23+012+123` | 3 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 84 | `[[43,4,3]]` | — | 11 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 85 | `[[43,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 86 | `[[43,4,3]]` | — | 11 | `0+1+2+3+01` | 3 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 87 | `[[43,4,3]]` | — | 11 | `0+12+13` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 88 | `[[43,5,3]]` | — | 12 | `01+02+03+04+012+013+014+023+024+034` | 3 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 89 | `[[43,5,3]]` | — | 12 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 90 | `[[43,5,3]]` | — | 12 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 91 | `[[43,5,3]]` | — | 12 | `0+1+2+3+4+01+23` | 3 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 92 | `[[43,6,3]]` | — | 13 | `01+02+03+04+05+012+013+014+015+023+02…` | 3 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 93 | `[[43,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 94 | `[[43,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+12+34+35+45+012+345` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 95 | `[[43,6,3]]` | — | 13 | `0+1+2+3+4+5+01+23+45` | 3 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 96 | `[[43,7,3]]` | — | 14 | `0+1+2+3+4+5+6+01+02+12+34+56+012` | — | — | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 97 | `[[44,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 98 | `[[44,2,3]]` | — | 9 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 99 | `[[44,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 100 | `[[44,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 101 | `[[44,3,3]]` | — | 10 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 102 | `[[44,3,3]]` | — | 10 | `01+02+12` | 3 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 103 | `[[44,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 104 | `[[44,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 105 | `[[44,3,3]]` | — | 10 | `0+12` | 4 | 2 | pre-existing | exhaustive classification n<=54; AI search: multi-agent campaign 39<=n<=127 | Wills et al. (2026); Jain et al. (2026) |
-| 106 | `[[44,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 107 | `[[44,4,3]]` | — | 11 | `01+02+03+13+23+012+123` | 3 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 108 | `[[44,4,3]]` | — | 11 | `01+02+13+23` | 4 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 109 | `[[44,4,3]]` | — | 11 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 110 | `[[44,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 111 | `[[44,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 112 | `[[44,5,3]]` | — | 12 | `01+02+03+04+012+034` | 4 | 2 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 113 | `[[44,5,3]]` | — | 12 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 114 | `[[44,5,3]]` | — | 12 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 115 | `[[44,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 116 | `[[44,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+12+34+35+45+012+345` | 2 | 1 | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 117 | `[[44,7,3]]` | — | 14 | `0+1+2+3+4+5+6+01+02+03+12+13+23+45+46…` | — | — | pre-existing | exhaustive classification n<=54 | Wills et al. (2026); Jain et al. (2026) |
-| 118 | `[[45,1,3]]` | — | 9 | `0` | 1 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 119 | `[[45,2,3]]` | — | 10 | `01` | 3 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Wills et al. (2026); Jain et al. (2026) |
-| 120 | `[[45,2,3]]` | — | 10 | `0+1` | 2 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 121 | `[[45,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 122 | `[[46,1,3]]` | — | 9 | `0` | 1 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 123 | `[[46,2,3]]` | — | 10 | `0+1` | 2 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 124 | `[[47,1,3]]` | — | 7 | `0` | 1 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 125 | `[[47,2,3]]` | — | 8 | `0+1` | 2 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | Wills et al. (2026); Jain et al. (2026) |
+| 25 | `[[36,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 26 | `[[36,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 27 | `[[36,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 28 | `[[36,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 29 | `[[36,3,3]]` | — | 9 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 30 | `[[36,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 31 | `[[36,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 32 | `[[36,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 33 | `[[37,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 34 | `[[37,2,3]]` | — | 10 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 35 | `[[37,3,3]]` | — | 11 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 36 | `[[38,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 37 | `[[38,2,3]]` | — | 10 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 38 | `[[38,2,3]]` | — | 10 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 39 | `[[38,3,3]]` | — | 11 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 40 | `[[38,3,3]]` | — | 11 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 41 | `[[38,4,3]]` | — | 12 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 42 | `[[39,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 43 | `[[39,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 44 | `[[39,2,3]]` | — | 8 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 45 | `[[39,2,3]]` | — | 8 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 46 | `[[39,3,3]]` | — | 9 | `01+02+12` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 47 | `[[39,3,3]]` | — | 9 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 48 | `[[39,3,3]]` | — | 9 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 49 | `[[39,3,3]]` | — | 9 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 50 | `[[39,4,3]]` | — | 10 | `01+02+03+13+23+012+123` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 51 | `[[39,4,3]]` | — | 10 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 52 | `[[39,4,3]]` | — | 10 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 53 | `[[39,4,3]]` | — | 10 | `0+1+2+3+01` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 54 | `[[39,5,3]]` | — | 11 | `01+02+03+04+012+013+014+023+024+034` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 55 | `[[39,5,3]]` | — | 11 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 56 | `[[39,5,3]]` | — | 11 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 57 | `[[39,5,3]]` | — | 11 | `0+1+2+3+4+01+23` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 58 | `[[39,6,3]]` | — | 12 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 59 | `[[39,6,3]]` | — | 12 | `0+1+2+3+4+5+01+23+45` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 60 | `[[40,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 61 | `[[40,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 62 | `[[40,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 63 | `[[40,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 64 | `[[40,3,3]]` | — | 9 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 65 | `[[40,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 66 | `[[40,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 67 | `[[40,4,3]]` | — | 11 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 68 | `[[40,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 69 | `[[40,5,3]]` | — | 12 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 70 | `[[41,1,3]]` | — | 9 | `0` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 71 | `[[42,2,3]]` | — | 12 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 72 | `[[43,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 73 | `[[43,2,3]]` | — | 9 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 74 | `[[43,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 75 | `[[43,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 76 | `[[43,3,3]]` | — | 10 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 77 | `[[43,3,3]]` | — | 10 | `01+02+12` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 78 | `[[43,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 79 | `[[43,3,3]]` | — | 10 | `0+01+02` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 80 | `[[43,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 81 | `[[43,3,3]]` | — | 10 | `0+12` | 4 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 82 | `[[43,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 83 | `[[43,4,3]]` | — | 11 | `01+02+03+13+23+012+123` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 84 | `[[43,4,3]]` | — | 11 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 85 | `[[43,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 86 | `[[43,4,3]]` | — | 11 | `0+1+2+3+01` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 87 | `[[43,4,3]]` | — | 11 | `0+12+13` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 88 | `[[43,5,3]]` | — | 12 | `01+02+03+04+012+013+014+023+024+034` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 89 | `[[43,5,3]]` | — | 12 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 90 | `[[43,5,3]]` | — | 12 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 91 | `[[43,5,3]]` | — | 12 | `0+1+2+3+4+01+23` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 92 | `[[43,6,3]]` | — | 13 | `01+02+03+04+05+012+013+014+015+023+02…` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 93 | `[[43,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 94 | `[[43,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+12+34+35+45+012+345` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 95 | `[[43,6,3]]` | — | 13 | `0+1+2+3+4+5+01+23+45` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 96 | `[[43,7,3]]` | — | 14 | `0+1+2+3+4+5+6+01+02+12+34+56+012` | — | — | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 97 | `[[44,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 98 | `[[44,2,3]]` | — | 9 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 99 | `[[44,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 100 | `[[44,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 101 | `[[44,3,3]]` | — | 10 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 102 | `[[44,3,3]]` | — | 10 | `01+02+12` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 103 | `[[44,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 104 | `[[44,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 105 | `[[44,3,3]]` | — | 10 | `0+12` | 4 | 2 | pre-existing | exhaustive classification n<=54; AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 106 | `[[44,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 107 | `[[44,4,3]]` | — | 11 | `01+02+03+13+23+012+123` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 108 | `[[44,4,3]]` | — | 11 | `01+02+13+23` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 109 | `[[44,4,3]]` | — | 11 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 110 | `[[44,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 111 | `[[44,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 112 | `[[44,5,3]]` | — | 12 | `01+02+03+04+012+034` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 113 | `[[44,5,3]]` | — | 12 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 114 | `[[44,5,3]]` | — | 12 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 115 | `[[44,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 116 | `[[44,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+12+34+35+45+012+345` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 117 | `[[44,7,3]]` | — | 14 | `0+1+2+3+4+5+6+01+02+03+12+13+23+45+46…` | — | — | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 118 | `[[45,1,3]]` | — | 9 | `0` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 119 | `[[45,2,3]]` | — | 10 | `01` | 3 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 120 | `[[45,2,3]]` | — | 10 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 121 | `[[45,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 122 | `[[46,1,3]]` | — | 9 | `0` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 123 | `[[46,2,3]]` | — | 10 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 124 | `[[47,1,3]]` | — | 7 | `0` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 125 | `[[47,2,3]]` | — | 8 | `0+1` | 2 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
 | 126 | `[[47,3,3]]` | — | 9 | `012` | 7 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Jacinto et al. (2026)](https://arxiv.org/abs/2606.07734) |
-| 127 | `[[47,3,3]]` | — | 9 | `0+01+012` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 128 | `[[47,3,3]]` | — | 9 | `0+012` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 129 | `[[47,3,3]]` | — | 9 | `0+12` | 4 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 130 | `[[47,3,3]]` | — | 9 | `0+1+2` | 3 | 1 | AI search | AI search; AI search (gamma frontier): logical restriction of a length-54 Pareto point | Wills et al. (2026); Jain et al. (2026) |
-| 131 | `[[47,4,3]]` | — | 10 | `01+23+012` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 132 | `[[47,4,3]]` | — | 10 | `01+023` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 133 | `[[47,4,3]]` | — | 10 | `01+23` | 6 | 2 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | Wills et al. (2026); Jain et al. (2026) |
-| 134 | `[[47,4,3]]` | — | 10 | `0+01+23+012+123` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 135 | `[[47,4,3]]` | — | 10 | `0+01+023` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 136 | `[[47,4,3]]` | — | 10 | `0+01+23+023` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 137 | `[[47,4,3]]` | — | 10 | `0+01+123` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 138 | `[[47,4,3]]` | — | 10 | `0+13+012+123` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 139 | `[[47,4,3]]` | — | 10 | `0+13+012` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 140 | `[[47,4,3]]` | — | 10 | `0+12+123` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 141 | `[[47,4,3]]` | — | 10 | `0+123` | 7 | 3 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | Wills et al. (2026); Jain et al. (2026) |
-| 142 | `[[47,4,3]]` | — | 10 | `0+1+23` | 5 | 2 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | Wills et al. (2026); Jain et al. (2026) |
-| 143 | `[[47,4,3]]` | — | 10 | `0+1+2+3` | 4 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 144 | `[[47,5,3]]` | — | 11 | `012+034` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 145 | `[[47,5,3]]` | — | 11 | `0+1+4+01+04+14+012+013+023+024+124+234` | 10 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 146 | `[[47,5,3]]` | — | 11 | `0+012+034` | 10 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 147 | `[[47,5,3]]` | — | 11 | `0+12+34+012+034` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 148 | `[[47,5,3]]` | — | 11 | `0+12+012+134` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 149 | `[[47,5,3]]` | — | 11 | `0+1+2+3+4` | 5 | 1 | AI search | exhaustive classification n<=54 (Pareto point); AI search | Wills et al. (2026); Jain et al. (2026) |
-| 150 | `[[47,6,3]]` | — | 12 | `0+1+2+3+01+02+03+12+13+23+012+013+014…` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search | Wills et al. (2026); Jain et al. (2026) |
-| 151 | `[[48,1,3]]` | — | 8 | `0` | 1 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | Wills et al. (2026); Jain et al. (2026) |
-| 152 | `[[48,1,4]]` | — | 11 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 153 | `[[48,2,3]]` | — | 14 | `0+1` | 2 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 154 | `[[48,2,4]]` | — | 10 | `01` | 3 | 2 | AI search | exhaustive classification n<=54 (Pareto point); AI search | Wills et al. (2026); Jain et al. (2026) |
-| 155 | `[[48,3,3]]` | — | 9 | `012` | 7 | 3 | AI search | AI search: punctured r=7 simplex parents | Wills et al. (2026); Jain et al. (2026) |
-| 156 | `[[48,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | Wills et al. (2026); Jain et al. (2026) |
-| 157 | `[[48,3,4]]` | — | 11 | `01+02+012` | 3 | 2 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
+| 127 | `[[47,3,3]]` | — | 9 | `0+01+012` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 128 | `[[47,3,3]]` | — | 9 | `0+012` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 129 | `[[47,3,3]]` | — | 9 | `0+12` | 4 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 130 | `[[47,3,3]]` | — | 9 | `0+1+2` | 3 | 1 | AI search | AI search; AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 131 | `[[47,4,3]]` | — | 10 | `01+23+012` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 132 | `[[47,4,3]]` | — | 10 | `01+023` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 133 | `[[47,4,3]]` | — | 10 | `01+23` | 6 | 2 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 134 | `[[47,4,3]]` | — | 10 | `0+01+23+012+123` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 135 | `[[47,4,3]]` | — | 10 | `0+01+023` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 136 | `[[47,4,3]]` | — | 10 | `0+01+23+023` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 137 | `[[47,4,3]]` | — | 10 | `0+01+123` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 138 | `[[47,4,3]]` | — | 10 | `0+13+012+123` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 139 | `[[47,4,3]]` | — | 10 | `0+13+012` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 140 | `[[47,4,3]]` | — | 10 | `0+12+123` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 141 | `[[47,4,3]]` | — | 10 | `0+123` | 7 | 3 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 142 | `[[47,4,3]]` | — | 10 | `0+1+23` | 5 | 2 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 143 | `[[47,4,3]]` | — | 10 | `0+1+2+3` | 4 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 144 | `[[47,5,3]]` | — | 11 | `012+034` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 145 | `[[47,5,3]]` | — | 11 | `0+1+4+01+04+14+012+013+023+024+124+234` | 10 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 146 | `[[47,5,3]]` | — | 11 | `0+012+034` | 10 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 147 | `[[47,5,3]]` | — | 11 | `0+12+34+012+034` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 148 | `[[47,5,3]]` | — | 11 | `0+12+012+134` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 149 | `[[47,5,3]]` | — | 11 | `0+1+2+3+4` | 5 | 1 | AI search | exhaustive classification n<=54 (Pareto point); AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 150 | `[[47,6,3]]` | — | 12 | `0+1+2+3+01+02+03+12+13+23+012+013+014…` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 151 | `[[48,1,3]]` | — | 8 | `0` | 1 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 152 | `[[48,1,4]]` | — | 11 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 153 | `[[48,2,3]]` | — | 14 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 154 | `[[48,2,4]]` | — | 10 | `01` | 3 | 2 | AI search | exhaustive classification n<=54 (Pareto point); AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 155 | `[[48,3,3]]` | — | 9 | `012` | 7 | 3 | AI search | AI search: punctured r=7 simplex parents | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 156 | `[[48,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 157 | `[[48,3,4]]` | — | 11 | `01+02+012` | 3 | 2 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
 | 158 | `[[48,3,4]]` | — | 10 | `012` | 7 | 3 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Jacinto et al. (2026)](https://arxiv.org/abs/2606.07734) |
-| 159 | `[[48,4,3]]` | — | 10 | `01+23` | 6 | 2 | pre-existing | symmetry-SAT search; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 160 | `[[48,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 161 | `[[48,4,4]]` | — | 12 | `01+02+03+012+013+023` | 3 | 2 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 162 | `[[48,5,3]]` | — | 11 | `01+23+012+023+134` | 10 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 163 | `[[48,5,3]]` | — | 11 | `01+34+012+023+234` | 9 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 164 | `[[48,5,3]]` | — | 11 | `01+012+034` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 165 | `[[48,5,3]]` | — | 11 | `01+34+012+234` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
+| 159 | `[[48,4,3]]` | — | 10 | `01+23` | 6 | 2 | pre-existing | symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 160 | `[[48,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 161 | `[[48,4,4]]` | — | 12 | `01+02+03+012+013+023` | 3 | 2 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 162 | `[[48,5,3]]` | — | 11 | `01+23+012+023+134` | 10 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 163 | `[[48,5,3]]` | — | 11 | `01+34+012+023+234` | 9 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 164 | `[[48,5,3]]` | — | 11 | `01+012+034` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 165 | `[[48,5,3]]` | — | 11 | `01+34+012+234` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
 | 166 | `[[48,5,3]]` | — | 11 | `01+023+124` | 11 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Gong et al. (2026)](https://arxiv.org/abs/2608.09727) |
-| 167 | `[[48,5,3]]` | — | 11 | `01+24+023` | 9 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 168 | `[[48,5,3]]` | — | 12 | `0+01+23+234` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 169 | `[[48,5,4]]` | — | 12 | `012+034` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 170 | `[[48,6,3]]` | — | 12 | `01+35+012+023+034+145+235` | 12 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 171 | `[[48,6,3]]` | — | 12 | `01+012+034+135` | 12 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 172 | `[[48,6,3]]` | — | 12 | `01+35+012+034+235` | 10 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
+| 167 | `[[48,5,3]]` | — | 11 | `01+24+023` | 9 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 168 | `[[48,5,3]]` | — | 12 | `0+01+23+234` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 169 | `[[48,5,4]]` | — | 12 | `012+034` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 170 | `[[48,6,3]]` | — | 12 | `01+35+012+023+034+145+235` | 12 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 171 | `[[48,6,3]]` | — | 12 | `01+012+034+135` | 12 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 172 | `[[48,6,3]]` | — | 12 | `01+35+012+034+235` | 10 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
 | 173 | `[[48,6,3]]` | — | 12 | `01+023+024+035+123+145` | 15 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Gong et al. (2026)](https://arxiv.org/abs/2608.09727) |
-| 174 | `[[48,6,3]]` | — | 12 | `01+24+023+145` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 175 | `[[48,7,3]]` | — | 13 | `01+012+034+035+046+134+156` | — | — | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 176 | `[[48,7,3]]` | — | 13 | `01+35+012+034+156+235` | — | — | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 177 | `[[49,1,5]]` | — | 12 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 178 | `[[49,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 179 | `[[50,4,3]]` | — | 14 | `0+1+2+3` | 4 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 180 | `[[51,1,3]]` | — | 8 | `0` | 1 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | Wills et al. (2026); Jain et al. (2026) |
-| 181 | `[[51,2,3]]` | — | 9 | `0+1` | 2 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | Wills et al. (2026); Jain et al. (2026) |
-| 182 | `[[51,3,3]]` | — | 16 | `0+1+2` | 3 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 183 | `[[51,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Wills et al. (2026); Jain et al. (2026) |
-| 184 | `[[51,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | Wills et al. (2026); Jain et al. (2026) |
-| 185 | `[[51,5,3]]` | — | 12 | `01+34+012` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 186 | `[[51,5,3]]` | — | 12 | `01+234` | 9 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 187 | `[[51,5,3]]` | — | 12 | `0+01+24+012+013+024+134` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 188 | `[[51,5,3]]` | — | 12 | `0+01+34+012+034` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 189 | `[[51,5,3]]` | — | 12 | `0+01+234` | 8 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 190 | `[[51,5,3]]` | — | 12 | `0+12+34+012+013+123` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 191 | `[[51,5,3]]` | — | 12 | `0+12+012+034` | 9 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 192 | `[[51,5,3]]` | — | 12 | `0+12+012+034+134` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 193 | `[[51,5,3]]` | — | 12 | `0+12+34+012` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 194 | `[[51,5,3]]` | — | 12 | `0+1+2+3+4` | 5 | 1 | pre-existing | symmetry-SAT search; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 195 | `[[51,6,3]]` | — | 13 | `0+12+34+012+345` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 196 | `[[51,6,3]]` | — | 13 | `0+12+012+345` | 9 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 197 | `[[52,1,3]]` | — | 8 | `0` | 1 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | Wills et al. (2026); Jain et al. (2026) |
-| 198 | `[[52,1,4]]` | — | 10 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | Wills et al. (2026); Jain et al. (2026) |
-| 199 | `[[52,2,3]]` | — | 9 | `01` | 3 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Wills et al. (2026); Jain et al. (2026) |
-| 200 | `[[52,2,3]]` | — | 9 | `0+1` | 2 | 1 | AI search | AI search; AI search (gamma frontier): logical restriction of a length-54 Pareto point | Wills et al. (2026); Jain et al. (2026) |
-| 201 | `[[52,2,4]]` | — | 11 | `0+1+01` | 1 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 202 | `[[52,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | Wills et al. (2026); Jain et al. (2026) |
-| 203 | `[[52,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 204 | `[[52,5,3]]` | — | 12 | `0+01+24+023+124` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 205 | `[[52,5,3]]` | — | 12 | `0+13+24+012+013+024` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 206 | `[[52,5,3]]` | — | 12 | `0+12+34+012+123` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 207 | `[[52,5,3]]` | — | 12 | `0+13+24+012` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 208 | `[[52,5,3]]` | — | 12 | `0+12+34+123` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 209 | `[[52,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 210 | `[[52,5,3]]` | — | 12 | `0+1+2+3+4` | 5 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | Wills et al. (2026); Jain et al. (2026) |
-| 211 | `[[52,6,3]]` | — | 13 | `0+01+23+45+123+145` | 8 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 212 | `[[52,6,3]]` | — | 13 | `0+1+2+3+4+5` | 6 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 213 | `[[53,1,5]]` | — | 11 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point) | Wills et al. (2026) |
-| 214 | `[[53,3,3]]` | — | 17 | `0+1+2` | 3 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 215 | `[[53,5,3]]` | — | 13 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 216 | `[[54,2,3]]` | — | 10 | `0+1` | 2 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
-| 217 | `[[54,4,3]]` | — | 12 | `0+1+2+3` | 4 | 1 | AI search | AI search | Wills et al. (2026); Jain et al. (2026) |
+| 174 | `[[48,6,3]]` | — | 12 | `01+24+023+145` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 175 | `[[48,7,3]]` | — | 13 | `01+012+034+035+046+134+156` | — | — | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 176 | `[[48,7,3]]` | — | 13 | `01+35+012+034+156+235` | — | — | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 177 | `[[49,1,5]]` | — | 12 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 178 | `[[49,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 179 | `[[50,4,3]]` | — | 14 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 180 | `[[51,1,3]]` | — | 8 | `0` | 1 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 181 | `[[51,2,3]]` | — | 9 | `0+1` | 2 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 182 | `[[51,3,3]]` | — | 16 | `0+1+2` | 3 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 183 | `[[51,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 184 | `[[51,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 185 | `[[51,5,3]]` | — | 12 | `01+34+012` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 186 | `[[51,5,3]]` | — | 12 | `01+234` | 9 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 187 | `[[51,5,3]]` | — | 12 | `0+01+24+012+013+024+134` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 188 | `[[51,5,3]]` | — | 12 | `0+01+34+012+034` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 189 | `[[51,5,3]]` | — | 12 | `0+01+234` | 8 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 190 | `[[51,5,3]]` | — | 12 | `0+12+34+012+013+123` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 191 | `[[51,5,3]]` | — | 12 | `0+12+012+034` | 9 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 192 | `[[51,5,3]]` | — | 12 | `0+12+012+034+134` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 193 | `[[51,5,3]]` | — | 12 | `0+12+34+012` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 194 | `[[51,5,3]]` | — | 12 | `0+1+2+3+4` | 5 | 1 | pre-existing | symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 195 | `[[51,6,3]]` | — | 13 | `0+12+34+012+345` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 196 | `[[51,6,3]]` | — | 13 | `0+12+012+345` | 9 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 197 | `[[52,1,3]]` | — | 8 | `0` | 1 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 198 | `[[52,1,4]]` | — | 10 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 199 | `[[52,2,3]]` | — | 9 | `01` | 3 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 200 | `[[52,2,3]]` | — | 9 | `0+1` | 2 | 1 | AI search | AI search; AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 201 | `[[52,2,4]]` | — | 11 | `0+1+01` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 202 | `[[52,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 203 | `[[52,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 204 | `[[52,5,3]]` | — | 12 | `0+01+24+023+124` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 205 | `[[52,5,3]]` | — | 12 | `0+13+24+012+013+024` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 206 | `[[52,5,3]]` | — | 12 | `0+12+34+012+123` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 207 | `[[52,5,3]]` | — | 12 | `0+13+24+012` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 208 | `[[52,5,3]]` | — | 12 | `0+12+34+123` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 209 | `[[52,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 210 | `[[52,5,3]]` | — | 12 | `0+1+2+3+4` | 5 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 211 | `[[52,6,3]]` | — | 13 | `0+01+23+45+123+145` | 8 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 212 | `[[52,6,3]]` | — | 13 | `0+1+2+3+4+5` | 6 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 213 | `[[53,1,5]]` | — | 11 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 214 | `[[53,3,3]]` | — | 17 | `0+1+2` | 3 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 215 | `[[53,5,3]]` | — | 13 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 216 | `[[54,2,3]]` | — | 10 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 217 | `[[54,4,3]]` | — | 12 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
 | 218 | `[[55,3,3]]` | — | 10 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
 | 219 | `[[55,3,3]]` | — | 16 | `0+1+2` | 3 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
 | 220 | `[[55,4,3]]` | — | 11 | `0+123` | 7 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
@@ -946,7 +946,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`quotient_catalog_k3`)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:32`)
 - source: `exhaustive classification n<=54` · 0 (`RM(3,7) orbit class 3388, origin 7; census_shard_08.json`)
@@ -962,7 +962,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`quotient_catalog_k3`)
 - source: `AI search` · T0 (`factory_records/findings_ccz.jsonl:47`)
 - source: `AI search` · T0 (`factory_records/findings_ccz · catalogue.jsonl:33`)
@@ -980,7 +980,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`quotient_catalog_k3`)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:38`)
 - source: `exhaustive classification n<=54` · 0 (`RM(3,7) orbit class 3277, origin 63; census_shard_09.json`)
@@ -1019,7 +1019,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`quotient_catalog_k3`)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:39`)
 
@@ -1034,7 +1034,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`quotient_catalog_k3`)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:42`)
 
@@ -1049,7 +1049,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1 (`frontier_campaign · catalogue.jsonl:41`)
 - source: `exhaustive classification n<=54` · 0+01 (`quotient_catalog_k3`)
@@ -1066,7 +1066,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`quotient_catalog_k3`)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:47`)
 - source: `exhaustive classification n<=54` · 0 (`RM(3,7) orbit class 3363, origin 7; census_shard_08.json`)
@@ -1082,7 +1082,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+01 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1.CS01 (`frontier_campaign · catalogue.jsonl:46`)
 - source: `exhaustive classification n<=54` · 0+1+01 (`RM(3,7) orbit class 3363, origin 7; census_shard_08.json`)
@@ -1098,7 +1098,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01+02+12+012 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1.T2.CS01.CS02.CS12.CCZ012 (`frontier_campaign · catalogue.jsonl:45`)
 - source: `exhaustive classification n<=54` · 0+1+2+01+02+12+012 (`RM(3,7) orbit class 3363, origin 7; census_shard_08.json`)
@@ -1114,7 +1114,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+02+03+12+13+23+012+013+023+123 (`hard_parent_n31`)
 - source: `AI search` · T0.T1.T2.T3.CS01.CS02.CS03.CS12.CS13.CS23.CCZ012.CCZ013.CCZ023.CCZ123 (`frontier_campaign · catalogue.jsonl:44`)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+02+03+12+13+23+012+013+023+123 (`RM(3,7) orbit class 3481, origin 3; census_shard_08.json`)
@@ -1130,7 +1130,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234 (`hard_parent_n31`)
 - source: `AI search` · T0.T1.T2.T3.T4.CS01.CS02.CS03.CS04.CS12.CS13.CS14.CS23.CS24.CS34.CCZ012.CCZ013.CCZ014.CCZ023.CCZ024.CCZ034.CCZ123.CCZ124.CCZ134.CCZ234 (`frontier_campaign · catalogue.jsonl:43`)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234 (`RM(3,7) orbit class 3481, origin 3; census_shard_08.json`)
@@ -1146,7 +1146,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 7, 10]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`quotient_catalog_k3`)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:50`)
 - source: `exhaustive classification n<=54` · 0 (`RM(3,7) orbit class 2646, origin 3; census_shard_11.json`)
@@ -1162,7 +1162,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 7, 10]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1 (`frontier_campaign · catalogue.jsonl:49`)
 - source: `exhaustive classification n<=54` · 0+1 (`RM(3,7) orbit class 2646, origin 3; census_shard_11.json`)
@@ -1181,7 +1181,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`quotient_catalog_k3`)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:51`)
 
@@ -1196,7 +1196,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`quotient_catalog_k3`)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:54`)
 
@@ -1211,7 +1211,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1 (`frontier_campaign · catalogue.jsonl:53`)
 - source: `exhaustive classification n<=54` · 0+01 (`quotient_catalog_k3`)
@@ -1228,7 +1228,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`quotient_catalog_k3`)
 - source: `AI search` · T0 (`factory_records/findings_ccz.jsonl:37`)
 - source: `AI search` · T0 (`ai_campaign/circuits/n35_k1_d3_tau1_parent(r=9,n=35)_it11.json`)
@@ -1273,7 +1273,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+01 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1.CS01 (`ai_campaign/circuits/n35_k2_d3_tau1_parent(r=9,n=35)_it11.json`)
 - source: `AI search` · T0.T1.CS01 (`frontier_campaign · catalogue.jsonl:77`)
@@ -1316,7 +1316,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01+02+12+012 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1.T2.CS01.CS02.CS12.CCZ012 (`ai_campaign/circuits/n35_k3_d3_tau1_parent(r=9,n=35)_it11.json`)
 - source: `AI search` · T0.T1.T2.CS01.CS02.CS12.CCZ012 (`frontier_campaign · catalogue.jsonl:64`)
@@ -1381,7 +1381,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 11]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`quotient_catalog_k3`)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:104`)
 - source: `exhaustive classification n<=54` · 0 (`RM(3,7) orbit class 1350, origin 3; census_shard_09.json`)
@@ -1397,7 +1397,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01 (`quotient_catalog_k3`)
 - source: `AI search` · CS01 (`factory_records/findings_ccz.jsonl:34`)
 - source: `AI search` · CS01 (`factory_records/findings_ccz · catalogue.jsonl:99`)
@@ -1415,7 +1415,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 11]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+01 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1.CS01 (`frontier_campaign · catalogue.jsonl:102`)
 - source: `exhaustive classification n<=54` · 0+1+01 (`RM(3,7) orbit class 1350, origin 11; census_shard_09.json`)
@@ -1431,7 +1431,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 11]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1 (`frontier_campaign · catalogue.jsonl:101`)
 - source: `exhaustive classification n<=54` · 0+1 (`RM(3,7) orbit class 1350, origin 3; census_shard_09.json`)
@@ -1450,7 +1450,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point); AI search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54 (Pareto point)` · 01+02 (`quotient_catalog_k3`)
 - source: `AI search` · CS02.CS12 (`frontier_campaign · catalogue.jsonl:92`)
 - source: `exhaustive classification n<=54 (Pareto point)` · 01+02 (`RM(3,7) orbit class 3432, origin 69; rep_3432_69.json`)
@@ -1475,7 +1475,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 11]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01+02+12+012 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1.T2.CS01.CS02.CS12.CCZ012 (`frontier_campaign · catalogue.jsonl:97`)
 - source: `exhaustive classification n<=54` · 0+1+2+01+02+12+012 (`RM(3,7) orbit class 3270, origin 15; census_shard_09.json`)
@@ -1491,7 +1491,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 11]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1.T2.CS12 (`frontier_campaign · catalogue.jsonl:96`)
 - source: `exhaustive classification n<=54` · 0+1+2+01 (`RM(3,7) orbit class 1350, origin 11; census_shard_09.json`)
@@ -1516,7 +1516,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 11]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+23 (`quotient_catalog_k4_easy`)
 - source: `AI search` · T0.T1.T2.T3.CS03.CS12 (`frontier_campaign · catalogue.jsonl:87`)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+23 (`RM(3,7) orbit class 3270, origin 15; census_shard_09.json`)
@@ -1550,7 +1550,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`quotient_catalog_k3`)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:107`)
 
@@ -1565,7 +1565,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+01 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1.CS01 (`frontier_campaign · catalogue.jsonl:106`)
 
@@ -1580,7 +1580,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01+02+12+012 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1.T2.CS01.CS02.CS12.CCZ012 (`frontier_campaign · catalogue.jsonl:105`)
 
@@ -1595,7 +1595,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`quotient_catalog_k3`)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:123`)
 
@@ -1610,7 +1610,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+01 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1.CS01 (`frontier_campaign · catalogue.jsonl:122`)
 
@@ -1625,7 +1625,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1 (`frontier_campaign · catalogue.jsonl:121`)
 - source: `exhaustive classification n<=54` · 0+01 (`quotient_catalog_k3`)
@@ -1642,7 +1642,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01+02+12+012 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1.T2.CS01.CS02.CS12.CCZ012 (`frontier_campaign · catalogue.jsonl:118`)
 
@@ -1657,7 +1657,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01 (`quotient_catalog_k3`)
 - source: `AI search` · T0.T1.T2.CS01 (`frontier_campaign · catalogue.jsonl:117`)
 - source: `exhaustive classification n<=54` · 0+01+02+012 (`quotient_catalog_k3`)
@@ -1678,7 +1678,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+23 (`quotient_catalog_k4_easy`)
 - source: `AI search` · T0.T1.T2.T3.CS02.CS13 (`frontier_campaign · catalogue.jsonl:112`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+012+013+023 (`quotient_catalog_k4_easy`)
@@ -1705,7 +1705,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`RM(3,7) orbit class 2600, origin 7; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 
@@ -1720,7 +1720,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01 (`RM(3,7) orbit class 2600, origin 9; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 01 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 
@@ -1735,7 +1735,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+01 (`RM(3,7) orbit class 2600, origin 7; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+1+01 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 
@@ -1750,7 +1750,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1 (`RM(3,7) orbit class 2600, origin 9; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+1 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 - source: `exhaustive classification n<=54` · 0+01 (`RM(3,7) orbit class 2600, origin 9; census_shard_08.json`)
@@ -1767,7 +1767,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01+02+12 (`RM(3,7) orbit class 3143, origin 9; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 01+02+12 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 - source: `exhaustive classification n<=54` · 01+02+012 (`RM(3,7) orbit class 3143, origin 9; census_shard_08.json`)
@@ -1784,7 +1784,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01+02+12+012 (`RM(3,7) orbit class 2600, origin 7; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+1+2+01+02+12+012 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 
@@ -1799,7 +1799,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01 (`RM(3,7) orbit class 3143, origin 9; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+1+2+01 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+012 (`RM(3,7) orbit class 3143, origin 9; census_shard_08.json`)
@@ -1820,7 +1820,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:8b0b7f0563e46186 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 - source: `exhaustive classification n<=54` · 0+1+2 (`RM(3,7) orbit class 2600, origin 9; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+12+012 (`RM(3,7) orbit class 2600, origin 9; census_shard_08.json`)
@@ -1847,7 +1847,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01+02+03+13+23+012+123 (`RM(3,7) orbit class 3143, origin 9; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 01+02+03+13+23+012+123 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 - source: `exhaustive classification n<=54` · 01+02+03+012+013+023 (`RM(3,7) orbit class 3143, origin 9; census_shard_08.json`)
@@ -1866,7 +1866,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+02+03+12+13+23+012+013+023+123 (`RM(3,7) orbit class 3143, origin 1; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+02+03+12+13+23+012+013+023+123 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 
@@ -1881,7 +1881,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+23 (`RM(3,7) orbit class 3143, origin 9; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+23 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+012+013+023 (`RM(3,7) orbit class 3143, origin 9; census_shard_08.json`)
@@ -1908,7 +1908,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01 (`RM(3,7) orbit class 3143, origin 9; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+12+13+012+013+023+123 (`RM(3,7) orbit class 3143, origin 9; census_shard_08.json`)
@@ -1973,7 +1973,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01+02+03+04+012+013+014+023+024+034 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 - source: `exhaustive classification n<=54` · 01+02+03+14+24+34+012+013+014+023+024+034+124+134+234 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 - source: `exhaustive classification n<=54` · 01+02+03+04+14+24+34+012+013+023+124+134+234 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
@@ -1990,7 +1990,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234 (`RM(3,7) orbit class 3143, origin 1; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 
@@ -2005,7 +2005,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+01+02+12+34+012 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+012+013+014+023+024+034 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+03+04+12+13+14+012+013+014+023+024+034+123+124+134 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
@@ -2028,7 +2028,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+01+23 (`RM(3,7) orbit class 3143, origin 9; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+01+23 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+12+13+14+012+013+014+023+024+034+123+124+134 (`RM(3,7) orbit class 3143, origin 9; census_shard_08.json`)
@@ -2177,7 +2177,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+5+01+02+03+04+05+12+13+14+15+23+24+25+34+35+45+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 
 ```text
@@ -2191,7 +2191,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+5+01+23+45 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+05+12+13+14+15+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+05+12+13+14+25+35+45+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+235+245+345 (`RM(3,7) orbit class 3386, origin 1; rep_3386_1.json`)
@@ -2352,7 +2352,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 15, 18]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`RM(3,7) orbit class 2600, origin 1; census_shard_08.json`)
 
 ```text
@@ -2366,7 +2366,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01 (`RM(3,7) orbit class 3386, origin 7; rep_3386_7.json`)
 
 ```text
@@ -2380,7 +2380,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+01 (`RM(3,7) orbit class 2600, origin 1; census_shard_08.json`)
 
 ```text
@@ -2394,7 +2394,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:10c2b1955df11399 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 - source: `exhaustive classification n<=54` · 0+1 (`RM(3,7) orbit class 2600, origin 1; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+01 (`RM(3,7) orbit class 2600, origin 1; census_shard_08.json`)
@@ -2410,7 +2410,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01+02 (`RM(3,7) orbit class 3386, origin 7; rep_3386_7.json`)
 - source: `exhaustive classification n<=54` · 01+012 (`RM(3,7) orbit class 3386, origin 7; rep_3386_7.json`)
 - source: `exhaustive classification n<=54` · 01+02+12+012 (`RM(3,7) orbit class 3386, origin 7; rep_3386_7.json`)
@@ -2426,7 +2426,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 26, 28]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01+02+12+012 (`RM(3,7) orbit class 2600, origin 3; census_shard_08.json`)
 
 ```text
@@ -2440,7 +2440,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01 (`RM(3,7) orbit class 2600, origin 1; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+012 (`RM(3,7) orbit class 2600, origin 1; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+12+012 (`RM(3,7) orbit class 2600, origin 1; census_shard_08.json`)
@@ -2457,7 +2457,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+02+03+12+13+23+012+013+023+123 (`RM(3,7) orbit class 3143, origin 8; census_shard_08.json`)
 
 ```text
@@ -2471,7 +2471,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+23 (`RM(3,7) orbit class 2600, origin 3; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+012+013+023 (`RM(3,7) orbit class 2600, origin 3; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+03+12+13+012+013+023+123 (`RM(3,7) orbit class 2600, origin 3; census_shard_08.json`)
@@ -2491,7 +2491,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+01+02+12+34+012 (`RM(3,7) orbit class 3143, origin 8; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+012+013+014+023+024+034 (`RM(3,7) orbit class 3143, origin 8; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+03+04+12+13+14+012+013+014+023+024+034+123+124+134 (`RM(3,7) orbit class 3143, origin 8; census_shard_08.json`)
@@ -2514,7 +2514,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:7174093b24c8e94a (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 
 ```text
@@ -2528,7 +2528,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:848ebd03254b2575 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 
 ```text
@@ -2542,7 +2542,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 16]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:84b5044ca9223d43 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 - source: `exhaustive classification n<=54` · 0 (`RM(3,7) orbit class 2990, origin 3; census_shard_04.json`)
 
@@ -2557,7 +2557,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 17]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:f3885d478c1bff35 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 - source: `exhaustive classification n<=54` · 01 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 
@@ -2572,7 +2572,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+01 (`RM(3,7) orbit class 2990, origin 3; census_shard_04.json`)
 
 ```text
@@ -2586,7 +2586,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 0+01 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 
@@ -2601,7 +2601,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01+02 (`RM(3,7) orbit class 2936, origin 3; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 01+012 (`RM(3,7) orbit class 2936, origin 3; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 01+02+12+012 (`RM(3,7) orbit class 2936, origin 3; census_shard_06.json`)
@@ -2617,7 +2617,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01+02+12 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 01+02+012 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 
@@ -2632,7 +2632,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01+02+12+012 (`RM(3,7) orbit class 2990, origin 3; census_shard_04.json`)
 
 ```text
@@ -2646,7 +2646,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54 (Pareto point)` · 0+01+02 (`RM(3,7) all-origin census witness rank7_w44_result-39 (n43-t5-04); high_tcount_subframes_REPS.json`)
 - source: `exhaustive classification n<=54 (Pareto point)` · 0+01+012 (`RM(3,7) orbit class 2936, origin 3; high_tcount_subframes_REPS.json`)
 - source: `symmetry-SAT search` · T0 . CS01 . CCZ012 (`explicit circuit from ansatz-free SAT; archived result: t5_43_3_3.json`)
@@ -2670,7 +2670,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+012 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+12+012 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
@@ -2687,7 +2687,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search: multi-agent campaign 39<=n<=127` · 12 (`actor-1, round 2, campaigns/2026-09-01_39to127_broad. Parent: an r = 7 punctured simplex at n = 43, one of six legal translates of the campaign's reports/points_r7_n43.json (work/actor-1/tools/translate_parents.py; every translate re-checked against all degree-<=3 parities). Search: campaigns/2026-08-31_48to128/tools/simplex_general.py --r 7 --gate T,CS --tail 64 (>= dim R(C), so the whole legal s`)
 - source: `exhaustive classification n<=54 (Pareto point)` · 0+12 (`RM(3,7) orbit class 2936, origin 3; census_shard_06.json`)
 - source: `exhaustive classification n<=54 (Pareto point)` · 0+1+2+01+02+012 (`RM(3,7) orbit class 2936, origin 3; census_shard_06.json`)
@@ -2709,7 +2709,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:0b1d606b6b066da1 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 - source: `AI search` · msAI:813f0c7c7ed3fbd3 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 - source: `exhaustive classification n<=54` · 0+1+2 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
@@ -2731,7 +2731,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01+02+03+13+23+012+123 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 01+02+03+012+013+023 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 01+02+13+23+012+013+023+123 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
@@ -2747,7 +2747,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+02+03+12+13+23+012+013+023+123 (`RM(3,7) orbit class 2990, origin 3; census_shard_04.json`)
 
 ```text
@@ -2761,7 +2761,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+23 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+012+013+023 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+03+12+13+012+013+023+123 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
@@ -2781,7 +2781,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+12+13+012+013+023+123 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+03+012+013+023 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
@@ -2820,7 +2820,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54 (Pareto point)` · 0+12+13 (`RM(3,7) orbit class 2936, origin 3; census_shard_06.json`)
 - source: `exhaustive classification n<=54 (Pareto point)` · 0+1+2+3+01+02+03+12+012+013+023+123 (`RM(3,7) orbit class 2936, origin 3; census_shard_06.json`)
 - source: `exhaustive classification n<=54 (Pareto point)` · 0+1+2+3+01+02+03+12+13+012+013+023 (`RM(3,7) orbit class 2936, origin 3; census_shard_06.json`)
@@ -2891,7 +2891,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 12, 20]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01+02+03+04+012+013+014+023+024+034 (`RM(3,7) orbit class 2978, origin 0; rep_2978_0.json`)
 - source: `exhaustive classification n<=54` · 01+02+03+14+24+34+012+013+014+023+024+034+124+134+234 (`RM(3,7) orbit class 2978, origin 0; rep_2978_0.json`)
 - source: `exhaustive classification n<=54` · 01+02+03+04+14+24+34+012+013+023+124+134+234 (`RM(3,7) orbit class 2978, origin 0; rep_2978_0.json`)
@@ -2908,7 +2908,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234 (`RM(3,7) orbit class 2990, origin 3; census_shard_04.json`)
 
 ```text
@@ -2922,7 +2922,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 15, 17]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+01+02+12+34+012 (`RM(3,7) orbit class 2978, origin 0; rep_2978_0.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+012+013+014+023+024+034 (`RM(3,7) orbit class 2978, origin 0; rep_2978_0.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+03+04+12+13+14+012+013+014+023+024+034+123+124+134 (`RM(3,7) orbit class 2978, origin 0; rep_2978_0.json`)
@@ -2945,7 +2945,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+01+23 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+12+13+14+012+013+014+023+024+034+123+124+134 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+12+13+24+34+012+013+014+023+024+034+123+124+134+234 (`RM(3,7) orbit class 2936, origin 0; census_shard_06.json`)
@@ -3026,7 +3026,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01+02+03+04+05+012+013+014+015+023+024+025+034+035+045 (`RM(3,7) orbit class 2978, origin 60; rep_2978_60.json`)
 - source: `exhaustive classification n<=54` · 01+02+03+04+15+25+35+45+012+013+014+015+023+024+025+034+035+045+125+135+145+235+245+345 (`RM(3,7) orbit class 2978, origin 60; rep_2978_60.json`)
 - source: `exhaustive classification n<=54` · 01+02+03+14+15+24+25+34+35+012+013+014+015+023+024+025+034+035+124+125+134+135+145+234+235+245+345 (`RM(3,7) orbit class 2978, origin 60; rep_2978_60.json`)
@@ -3046,7 +3046,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+5+01+02+03+04+05+12+13+14+15+23+24+25+34+35+45+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345 (`RM(3,7) orbit class 2614, origin 26; rep_2614_26.json`)
 
 ```text
@@ -3060,7 +3060,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+5+01+02+12+34+35+45+012+345 (`RM(3,7) orbit class 2978, origin 60; rep_2978_60.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+05+012+013+014+015+023+024+025+034+035+045 (`RM(3,7) orbit class 2978, origin 60; rep_2978_60.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+03+04+05+12+13+14+15+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145 (`RM(3,7) orbit class 2978, origin 60; rep_2978_60.json`)
@@ -3087,7 +3087,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 12, 20]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+5+01+23+45 (`RM(3,7) orbit class 2978, origin 0; rep_2978_0.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+05+12+13+14+15+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145 (`RM(3,7) orbit class 2978, origin 0; rep_2978_0.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+05+12+13+14+25+35+45+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+235+245+345 (`RM(3,7) orbit class 2978, origin 0; rep_2978_0.json`)
@@ -3248,7 +3248,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+5+6+01+02+12+34+56+012 (`RM(3,7) orbit class 2978, origin 60; rep_2978_60.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+05+06+12+13+14+15+16+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156 (`RM(3,7) orbit class 2978, origin 60; rep_2978_60.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+05+06+12+13+14+15+26+36+46+56+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156+236+246+256+346+356+456 (`RM(3,7) orbit class 2978, origin 60; rep_2978_60.json`)
@@ -3550,7 +3550,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
 
 ```text
@@ -3564,7 +3564,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01 (`RM(3,7) orbit class 2936, origin 15; census_shard_06.json`)
 
 ```text
@@ -3578,7 +3578,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+01 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
 
 ```text
@@ -3592,7 +3592,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:5f45c515ad1451fb (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 - source: `exhaustive classification n<=54` · 0+1 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
 - source: `exhaustive classification n<=54` · 0+01 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
@@ -3608,7 +3608,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01+02 (`RM(3,7) orbit class 2936, origin 15; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 01+012 (`RM(3,7) orbit class 2936, origin 15; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 01+02+12+012 (`RM(3,7) orbit class 2936, origin 15; census_shard_06.json`)
@@ -3624,7 +3624,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01+02+12 (`RM(3,7) orbit class 2936, origin 15; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 01+02+012 (`RM(3,7) orbit class 2936, origin 15; census_shard_06.json`)
 
@@ -3639,7 +3639,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01+02+12+012 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
 
 ```text
@@ -3653,7 +3653,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+01 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+012 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+12+012 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
@@ -3670,7 +3670,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 7]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54; AI search: multi-agent campaign 39<=n<=127 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search: multi-agent campaign 39<=n<=127` · 13 (`actor-1, round 2, campaigns/2026-09-01_39to127_broad. Parent: the CATALOGUE's own rank-7 parent at n = 44, recovered from [[44,4,3]] T^4 class_fingerprint 0a3b56c9 by reducing its check block to 7 independent rows and reading each column's syndrome off in that basis (work/actor-1/tools/parent_from_record.py), then translated (translate_parents.py); legality re-checked against all degree-<=3 pariti`)
 - source: `exhaustive classification n<=54` · 0+12 (`RM(3,7) orbit class 2633, origin 5; census_shard_07.json`)
 - source: `exhaustive classification n<=54` · 0+1+2+01+02+012 (`RM(3,7) orbit class 2633, origin 5; census_shard_07.json`)
@@ -3691,7 +3691,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2 (`RM(3,7) orbit class 2633, origin 5; census_shard_07.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+12+012 (`RM(3,7) orbit class 2633, origin 5; census_shard_07.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+012 (`RM(3,7) orbit class 2633, origin 5; census_shard_07.json`)
@@ -3711,7 +3711,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01+02+03+13+23+012+123 (`RM(3,7) orbit class 1050, origin 3; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 01+02+03+012+013+023 (`RM(3,7) orbit class 1050, origin 3; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 01+02+13+23+012+013+023+123 (`RM(3,7) orbit class 1050, origin 3; census_shard_08.json`)
@@ -3727,7 +3727,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01+02+13+23 (`RM(3,7) orbit class 2936, origin 15; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 01+012+013 (`RM(3,7) orbit class 2936, origin 15; census_shard_06.json`)
 - source: `exhaustive classification n<=54` · 01+02+012+013+023 (`RM(3,7) orbit class 2936, origin 15; census_shard_06.json`)
@@ -3750,7 +3750,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+02+03+12+13+23+012+013+023+123 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
 
 ```text
@@ -3764,7 +3764,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+01+23 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+012+013+023 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+03+12+13+012+013+023+123 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
@@ -3784,7 +3784,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `symmetry-SAT search` · T0 . T1 . T2 . T3 (`explicit circuit from ansatz-free SAT; archived result: beyond_cyclic_symmetric.json`)
 - source: `AI search` · T0.T1.T2.T3 (`factory_records/reproductions/n44_k4_d3_tau4_T0-T1-T2-T3.json`)
 - source: `AI search` · T^4 (`ai_campaign/circuits/n44_k4_d3_tau4_P70_it01.json`)
@@ -3868,7 +3868,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 01+02+03+04+012+034 (`RM(3,7) orbit class 1050, origin 3; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 01+012+013+014 (`RM(3,7) orbit class 1050, origin 3; census_shard_08.json`)
 - source: `exhaustive classification n<=54` · 01+02+012+013+014+023+024 (`RM(3,7) orbit class 1050, origin 3; census_shard_08.json`)
@@ -3905,7 +3905,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
 
 ```text
@@ -3919,7 +3919,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+01+02+12+34+012 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+012+013+014+023+024+034 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+03+04+12+13+14+012+013+014+023+024+034+123+124+134 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
@@ -3942,7 +3942,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+5+01+02+03+04+05+12+13+14+15+23+24+25+34+35+45+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345 (`RM(3,7) orbit class 2614, origin 123; rep_2614_123.json`)
 
 ```text
@@ -3956,7 +3956,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+5+01+02+12+34+35+45+012+345 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+05+012+013+014+015+023+024+025+034+035+045 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+03+04+05+12+13+14+15+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145 (`RM(3,7) orbit class 2990, origin 1; census_shard_04.json`)
@@ -3983,7 +3983,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 — found within the exhaustive classification through length 54 but not one of its Pareto points: a Pareto point with the same output class (after removing spectator outputs) and the same exact distance strictly dominates it, which tests/test_master_catalog.py checks -- a verified witness, not an optimum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `exhaustive classification n<=54` · 0+1+2+3+4+5+6+01+02+03+12+13+23+45+46+56+012+013+023+123+456 (`RM(3,7) orbit class 2614, origin 123; rep_2614_123.json`)
 - source: `exhaustive classification n<=54` · 0+01+02+03+04+05+06+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056 (`RM(3,7) orbit class 2614, origin 123; rep_2614_123.json`)
 - source: `exhaustive classification n<=54` · 0+1+01+02+03+04+05+06+12+13+14+15+16+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156 (`RM(3,7) orbit class 2614, origin 123; rep_2614_123.json`)
@@ -4016,7 +4016,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · T0 (`factory_records/findings_ccz.jsonl:48`)
 - source: `AI search` · T0 (`factory_records/findings_ccz · catalogue.jsonl:140`)
 
@@ -4031,7 +4031,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
 - discovery: AI search
 - regime: AI search: multi-agent campaign 39<=n<=127 — found by the 39 <= n <= 127 multi-actor AI campaign (three Opus 5 actors, two conferring Fable 5 reviewers, three rounds, 2026-09-01); a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search: multi-agent campaign 39<=n<=127` · 14 (`actor-1, round 3, campaigns/2026-09-01_39to127_broad. n = 45 is unreachable at r <= 7 (the mod-4 obstruction), so the parent is a check-rank-8 one recovered from a CATALOGUED row by work/actor-1/tools/parent_from_record.py: reduce the check block of a d >= 3 class to independent rows and read each column's syndrome in that basis. Six such parents at n = 45 (ids 2010c75a, 0ee8fb2e, cfebf4b2, 7c64e1`)
 
 ```text
@@ -4045,7 +4045,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 25]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:051fd77f610d44c7 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 - source: `AI search` · msAI:7c64e10ae565208a (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 
@@ -4060,7 +4060,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 28]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:0d2de1bb2ecb379b (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 - source: `AI search` · msAI:0d3af92867f80dd2 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 - source: `AI search` · msAI:0ee8fb2ee778d239 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
@@ -4076,7 +4076,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 35]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:00238b5b1003fe41 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 
 ```text
@@ -4090,7 +4090,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 19]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:0bdc0e424f39b01c (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 
 ```text
@@ -4104,7 +4104,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:0cf3e7f32614abb5 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 - source: `AI search` · msAI:14b49021da5f34b1 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 
@@ -4119,7 +4119,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
 - regime: AI search (gamma frontier): logical restriction of a length-54 Pareto point — a restriction to fewer logical rows of a Pareto point of the length-54 classification, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search (gamma frontier): logical restriction of a length-54 Pareto point` · logical_restriction_10_47_2_3_5e5a207675 (`gamma frontier release record logical_restriction_10_47_2_3_5e5a207675 (source catalogue id logical_restriction_10_47_2_3_5e5a207675); construction: New verified T-to-T construction; matrix 5e5a207675e21058...; the release states d=3 (exact), gamma=2.873625621808279 (exact)`)
 
 ```text
@@ -4151,7 +4151,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 13 (`Pareto point 13 of the length-54 classification: output class Q3_0000000000000068 (T1CS12CS13), (n, S, d_Z) = (47, 9, 3), leading error coefficient 253; the outputs are its 3 logical rows`)
 
 ```text
@@ -4165,7 +4165,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 15 (`Pareto point 15 of the length-54 classification: output class Q3_0000000000000048 (T1CCZ123), (n, S, d_Z) = (47, 9, 3), leading error coefficient 231; the outputs are its 3 logical rows`)
 
 ```text
@@ -4179,7 +4179,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 10 (`Pareto point 10 of the length-54 classification: output class Q3_000000000000000c (T tensor CS), (n, S, d_Z) = (47, 9, 3), leading error coefficient 235; the outputs are its 3 logical rows`)
 
 ```text
@@ -4193,7 +4193,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
 - regime: AI search; AI search (gamma frontier): logical restriction of a length-54 Pareto point — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · T0.T1.T2 (`frontier_campaign · catalogue.jsonl:147`)
 - source: `AI search` · T0.T1.T2 (`frontier_campaign · catalogue.jsonl:148`)
 - source: `AI search` · T0.T1.T2 (`frontier_campaign · catalogue.jsonl:149`)
@@ -4210,7 +4210,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 29 (`Pareto point 29 of the length-54 classification: output class Q4_0000000000002120 (CS12CS13CS24), (n, S, d_Z) = (47, 10, 3), leading error coefficient 255; the outputs are its 4 logical rows`)
 
 ```text
@@ -4224,7 +4224,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 27 (`Pareto point 27 of the length-54 classification: output class Q4_0000000000000c00 (CS12CCZ134), (n, S, d_Z) = (47, 10, 3), leading error coefficient 262; the outputs are its 4 logical rows`)
 
 ```text
@@ -4238,7 +4238,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: AI search
 - regime: exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search: multi-agent campaign 39<=n<=127` · 15 (`actor-1, round 1, campaigns/2026-09-01_39to127_broad. Parent: an r=6 punctured simplex, one of the 1953 legal n=47 column sets (a single autocorrelation class; work/actor-1/tools/parents6.py). Search: campaigns/2026-08-31_48to128/tools/simplex_general.py --r 6 --tail 100 --restarts 24 --coset-cap 80 --node-cap 6000. Verified by this campaign's tools/verify.py --distance 3 --require-disjoint.`)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 28 (`Pareto point 28 of the length-54 classification: output class Q4_0000000000000120 (CS^(tensor 2)), (n, S, d_Z) = (47, 10, 3), leading error coefficient 257; the outputs are its 4 logical rows`)
 
@@ -4253,7 +4253,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 31 (`Pareto point 31 of the length-54 classification: output class Q4_00000000000011e0 (T1T2CS12CS13CS24), (n, S, d_Z) = (47, 10, 3), leading error coefficient 264; the outputs are its 4 logical rows`)
 
 ```text
@@ -4267,7 +4267,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 26 (`Pareto point 26 of the length-54 classification: output class Q4_0000000000000c80 (T1CS12CCZ134), (n, S, d_Z) = (47, 10, 3), leading error coefficient 253; the outputs are its 4 logical rows`)
 
 ```text
@@ -4281,7 +4281,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 30 (`Pareto point 30 of the length-54 classification: output class Q4_00000000000021a0 (T1CS12CS13CS24), (n, S, d_Z) = (47, 10, 3), leading error coefficient 254; the outputs are its 4 logical rows`)
 
 ```text
@@ -4295,7 +4295,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 24 (`Pareto point 24 of the length-54 classification: output class Q4_00000000000004c0 (T tensor (T1CCZ123)), (n, S, d_Z) = (47, 10, 3), leading error coefficient 253; the outputs are its 4 logical rows`)
 
 ```text
@@ -4309,7 +4309,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 23 (`Pareto point 23 of the length-54 classification: output class Q4_00000000000010e0 (T tensor (T1CS12CS13)), (n, S, d_Z) = (47, 10, 3), leading error coefficient 255; the outputs are its 4 logical rows`)
 
 ```text
@@ -4323,7 +4323,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 32 (`Pareto point 32 of the length-54 classification: output class Q4_00000000000010a0 (T1CS23CCZ124), (n, S, d_Z) = (47, 10, 3), leading error coefficient 255; the outputs are its 4 logical rows`)
 
 ```text
@@ -4337,7 +4337,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 21 (`Pareto point 21 of the length-54 classification: output class Q4_00000000000000e0 (T tensor (CS12CS13)), (n, S, d_Z) = (47, 10, 3), leading error coefficient 271; the outputs are its 4 logical rows`)
 
 ```text
@@ -4351,7 +4351,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: AI search
 - regime: exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search: multi-agent campaign 39<=n<=127` · 16 (`actor-1, round 1, campaigns/2026-09-01_39to127_broad. Parent: an r=6 punctured simplex, one of the 1953 legal n=47 column sets (a single autocorrelation class; work/actor-1/tools/parents6.py). Search: campaigns/2026-08-31_48to128/tools/simplex_general.py --r 6 --tail 100 --restarts 24 --coset-cap 80 --node-cap 6000. Verified by campaigns/2026-09-01_39to127_broad/tools/verify.py --distance 3 --requ`)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 25 (`Pareto point 25 of the length-54 classification: output class Q4_00000000000000c0 (T tensor CCZ), (n, S, d_Z) = (47, 10, 3), leading error coefficient 259; the outputs are its 4 logical rows`)
 
@@ -4366,7 +4366,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
 - discovery: AI search
 - regime: exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search: multi-agent campaign 39<=n<=127` · 17 (`actor-1, round 1, campaigns/2026-09-01_39to127_broad. Parent: an r=6 punctured simplex, one of the 1953 legal n=47 column sets. Search: campaigns/2026-08-31_48to128/tools/simplex_general.py --r 6 --tail 100 --restarts 40 --coset-cap 150 --node-cap 25000. Verified by this campaign's tools/verify.py --distance 3 --require-disjoint.`)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 20 (`Pareto point 20 of the length-54 classification: output class Q4_00000000000001a0 (T^(tensor 2) tensor CS), (n, S, d_Z) = (47, 10, 3), leading error coefficient 254; the outputs are its 4 logical rows`)
 
@@ -4381,7 +4381,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 18]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `symmetry-SAT search` · T0 . T1 . T2 . T3 (`explicit circuit from ansatz-free SAT; archived result: slot_ansatz_k4_c9sub3.json`)
 - source: `AI search` · T^4 (`ai_campaign/circuits/n47_k4_d3_tau4_P60_it06.json`)
 - source: `AI search` · T0.T1.T2.T3 (`ai_campaign/circuits/n47_k4_d3_tau4_parent-target(n=47,kappa=21)_it12.json`)
@@ -4400,7 +4400,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 46 (`Pareto point 46 of the length-54 classification: output class Q5_0000000000600000 (CCZ145CCZ235), (n, S, d_Z) = (47, 11, 3), leading error coefficient 260; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4415,7 +4415,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `symmetry-SAT search` · T0 . T1 . T4 . CS01 . CS04 . CS14 . CCZ012 . CCZ013 . CCZ023 . CCZ024 . CCZ124 . CCZ234 (`explicit circuit from ansatz-free SAT; archived result: t10_47_5_3.json`)
 - source: `AI search` · T0.T1.T4.CS01.CS04.CS14.CCZ012.CCZ013.CCZ023.CCZ024.CCZ124.CCZ234 (`factory_records/reproductions/n47_k5_d3_tau10_T0-T1-T4-CS01-CS04-CS14-CCZ012-CCZ.json`)
 - source: `AI search` · T0.T1.T4.CS01.CS04.CS14.CCZ012.CCZ013.CCZ023.CCZ024.CCZ124.CCZ234 (`ai_campaign/circuits/n47_k5_d3_tau10_parent-target(n=47,kappa=21)_it12.json`)
@@ -4433,7 +4433,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 48 (`Pareto point 48 of the length-54 classification: output class Q5_0000000000604000 (T5CCZ145CCZ235), (n, S, d_Z) = (47, 11, 3), leading error coefficient 255; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4448,7 +4448,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 49 (`Pareto point 49 of the length-54 classification: output class Q5_0000000000604120 (T5CS14CS23CCZ145CCZ235), (n, S, d_Z) = (47, 11, 3), leading error coefficient 275; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4463,7 +4463,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 55 (`Pareto point 55 of the length-54 classification: output class Q5_0000000001004c00 (T tensor (T1CS12CCZ134)), (n, S, d_Z) = (47, 11, 3), leading error coefficient 275; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4478,7 +4478,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
 - regime: exhaustive classification n<=54 (Pareto point); AI search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · T0.T1.T2.T3.T4 (`factory_records/headline/n47_k5_d3_T5.json`)
 - source: `AI search` · T0.T1.T2.T3.T4 (`ai_campaign/circuits/n47_k5_d3_tau5_parent-target(n=47,kappa=21)_it12.json`)
 - source: `AI search` · T^5 (`factory_records/findings_tm.jsonl:5`)
@@ -4497,7 +4497,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point); symmetry-SAT search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `symmetry-SAT search` · T0 . T2 . T3 . T4 . CS02 . CS03 . CS04 . CS23 . CS24 . CS34 . CCZ012 . CCZ014 . CCZ015 . CCZ023 . CCZ024 . CCZ025 . CCZ034 . CCZ045 . CCZ123 . CCZ124 . CCZ125 . CCZ234 . CCZ235 . CCZ245 (`explicit circuit from ansatz-free SAT; archived result: ccz47_relabel_k6_t11.json`)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 69 (`Pareto point 69 of the length-54 classification: output class Q6_0000000002600000 (T tensor (CCZ145CCZ235)), (n, S, d_Z) = (47, 12, 3), leading error coefficient 275; the outputs are its 6 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 2,000,000 random frames
@@ -4513,7 +4513,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 4]
 - discovery: AI search
 - regime: AI search (gamma frontier): logical restriction of a length-54 Pareto point — a restriction to fewer logical rows of a Pareto point of the length-54 classification, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search (gamma frontier): logical restriction of a length-54 Pareto point` · logical_restriction_37_48_1_3_234a19ef77 (`gamma frontier release record logical_restriction_37_48_1_3_234a19ef77 (source catalogue id logical_restriction_37_48_1_3_234a19ef77); construction: New verified T-to-T construction; matrix 234a19ef774d75b6...; the release states d=3 (exact), gamma=3.5237190142858297 (exact)`)
 
 ```text
@@ -4527,7 +4527,7 @@ readable copy of exactly these rows.
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 6, 7]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `symmetry-SAT search` · T0 (`explicit circuit from ansatz-free SAT; archived result: bh49_automorphism_seeded.json`)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:250`)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 2 (`Pareto point 2 of the length-54 classification: output class Q1_0000000000000001 (T), (n, S, d_Z) = (48, 11, 4), leading error coefficient 143; the outputs are its 1 logical rows`)
@@ -4543,7 +4543,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:41ba22afb024ef5a (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 
 ```text
@@ -4557,7 +4557,7 @@ readable copy of exactly these rows.
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 9]
 - discovery: AI search
 - regime: exhaustive classification n<=54 (Pareto point); AI search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · CS01 (`factory_records/headline/n48_k2_d4_CS.json`)
 - source: `AI search` · CS (`ai_campaign/circuits/n48_k2_d4_tau3_P90_it02.json`)
 - source: `AI search` · CS01 (`ai_campaign/circuits/n48_k2_d4_tau3_parent(r=6,n=48)_it11.json`)
@@ -4576,7 +4576,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
 - discovery: AI search
 - regime: AI search: punctured r=7 simplex parents — found by the 48 < n < 128 AI campaigns, from punctured r=7 simplex parents with free-row appending; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search: punctured r=7 simplex parents` · 11 (`n48_ccz1_VALIDATION_not_a_record.json[0]`)
 
 ```text
@@ -4590,7 +4590,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 7]
 - discovery: AI search
 - regime: AI search (gamma frontier): logical restriction of a length-54 Pareto point — a restriction to fewer logical rows of a Pareto point of the length-54 classification, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search (gamma frontier): logical restriction of a length-54 Pareto point` · logical_restriction_37_48_3_3_0b4c333bcb (`gamma frontier release record logical_restriction_37_48_3_3_0b4c333bcb (source catalogue id logical_restriction_37_48_3_3_0b4c333bcb); construction: New verified T-to-T construction; matrix 0b4c333bcb186120...; the release states d=3 (exact), gamma=2.5237190142858297 (exact)`)
 
 ```text
@@ -4604,7 +4604,7 @@ readable copy of exactly these rows.
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · CS01.CS02.CCZ012 (`factory_records/records/n48_k3_d4_tau3_CS01-CS02-CCZ012.json`)
 - source: `AI search` · CS01.CS02.CCZ012 (`ai_campaign/circuits/n48_k3_d4_tau3_parent(r=6,n=48)_it11.json`)
 - source: `AI search` · CS01.CS02.CCZ012 (`factory_records/records · catalogue.jsonl:246`)
@@ -4636,7 +4636,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 6]
 - discovery: pre-existing
 - regime: symmetry-SAT search; AI search — found by the symmetry-slot or ansatz-free SAT search (symmetry_sat_search/); a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `symmetry-SAT search` · CS01 . CS23 (`explicit circuit from ansatz-free SAT; archived result: cs01_cs23_48_4_3.json`)
 - source: `AI search` · CS01.CS23 (`factory_records/reproductions/n48_k4_d3_tau6_CS01-CS23.json`)
 - source: `AI search` · CS01.CS23 (`ai_campaign/circuits/n48_k4_d3_tau6_parent-target(n=48,kappa=21)_it12.json`)
@@ -4654,7 +4654,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · T^4 (`factory_records/findings_tm.jsonl:9`)
 - source: `AI search` · T0.T1.T2.T3 (`factory_records/findings_tm · catalogue.jsonl:151`)
 
@@ -4669,7 +4669,7 @@ readable copy of exactly these rows.
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · CS01.CS02.CS03.CCZ012.CCZ013.CCZ023 (`factory_records/records/n48_k4_d4_tau3_CS01-CS02-CS03-CCZ012-CCZ013-CCZ02.json`)
 - source: `AI search` · CS01.CS02.CS03.CCZ012.CCZ013.CCZ023 (`ai_campaign/circuits/n48_k4_d4_tau3_parent(r=6,n=48)_it11.json`)
 - source: `AI search` · CS01.CS02.CS03.CCZ012.CCZ013.CCZ023 (`factory_records/records · catalogue.jsonl:245`)
@@ -4686,7 +4686,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 51 (`Pareto point 51 of the length-54 classification: output class Q5_0000000000612400 (CS25CS34CCZ145CCZ234CCZ235), (n, S, d_Z) = (48, 11, 3), leading error coefficient 248; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4701,7 +4701,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 53 (`Pareto point 53 of the length-54 classification: output class Q5_000000000088a400 (CS12CS34CCZ135CCZ245), (n, S, d_Z) = (48, 11, 3), leading error coefficient 236; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4716,7 +4716,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 52 (`Pareto point 52 of the length-54 classification: output class Q5_0000000000640000 (CS45CCZ145CCZ235), (n, S, d_Z) = (48, 11, 3), leading error coefficient 256; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4731,7 +4731,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 38 (`Pareto point 38 of the length-54 classification: output class Q5_000000000008a400 (CS15CS34CCZ125CCZ234), (n, S, d_Z) = (48, 11, 3), leading error coefficient 256; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4761,7 +4761,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 17, 33]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 42 (`Pareto point 42 of the length-54 classification: output class Q5_0000000000210400 (CS25CS34CCZ145), (n, S, d_Z) = (48, 11, 3), leading error coefficient 248; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4776,7 +4776,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 4]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 37 (`Pareto point 37 of the length-54 classification: output class Q5_000000000000e400 (T^(tensor 2) tensor (CS12CS13)), (n, S, d_Z) = (48, 12, 3), leading error coefficient 140; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4791,7 +4791,7 @@ readable copy of exactly these rows.
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 47 (`Pareto point 47 of the length-54 classification: output class Q5_0000000000600000 (CCZ145CCZ235), (n, S, d_Z) = (48, 12, 4), leading error coefficient 3120; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4806,7 +4806,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 63 (`Pareto point 63 of the length-54 classification: output class Q6_0000001310640000 (CS12CS34CCZ125CCZ135CCZ136CCZ246CCZ345), (n, S, d_Z) = (48, 12, 3), leading error coefficient 240; the outputs are its 6 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4821,7 +4821,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 68 (`Pareto point 68 of the length-54 classification: output class Q6_0000001441000000 (CS12CCZ123CCZ145CCZ246), (n, S, d_Z) = (48, 12, 3), leading error coefficient 256; the outputs are its 6 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4836,7 +4836,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 67 (`Pareto point 67 of the length-54 classification: output class Q6_0000000c09040000 (CS12CS34CCZ125CCZ136CCZ345), (n, S, d_Z) = (48, 12, 3), leading error coefficient 256; the outputs are its 6 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4866,7 +4866,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 66 (`Pareto point 66 of the length-54 classification: output class Q6_0000000210440000 (CS12CS34CCZ135CCZ246), (n, S, d_Z) = (48, 12, 3), leading error coefficient 252; the outputs are its 6 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -4881,7 +4881,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 73 (`Pareto point 73 of the length-54 classification: output class Q7_0650806000000000 (CS12CCZ123CCZ145CCZ146CCZ157CCZ245CCZ267), (n, S, d_Z) = (48, 13, 3), leading error coefficient 256; the outputs are its 7 logical rows`)
 - note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 - note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
@@ -4897,7 +4897,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 72 (`Pareto point 72 of the length-54 classification: output class Q7_0048206040000000 (CS12CS34CCZ125CCZ136CCZ247CCZ345), (n, S, d_Z) = (48, 13, 3), leading error coefficient 256; the outputs are its 7 logical rows`)
 - note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 - note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
@@ -4913,7 +4913,7 @@ readable copy of exactly these rows.
 - distance: exactly 5, witnessed by the fault on columns [3, 20, 26, 27, 28]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `symmetry-SAT search` · T0 (`explicit circuit from ansatz-free SAT; archived result: bh49_automorphism_seeded.json`)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:346`)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 4 (`Pareto point 4 of the length-54 classification: output class Q1_0000000000000001 (T), (n, S, d_Z) = (49, 12, 5), leading error coefficient 1819; the outputs are its 1 logical rows`)
@@ -4929,7 +4929,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 10]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:6399b22453c6ff61 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 - source: `AI search` · msAI:b40e544c769730e7 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 
@@ -4944,7 +4944,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · T^4 (`ai_campaign/circuits/n50_k4_d3_tau4_C7_S3_it07.json`)
 - source: `AI search` · T^4 (`ai_campaign/circuits/n50_k4_d3_tau4_C7_S4_it07.json`)
 - source: `AI search` · T0.T1.T2.T3 (`ai_campaign/circuits · catalogue.jsonl:152`)
@@ -4961,7 +4961,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
 - discovery: AI search
 - regime: AI search (gamma frontier): logical restriction of a length-54 Pareto point — a restriction to fewer logical rows of a Pareto point of the length-54 classification, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search (gamma frontier): logical restriction of a length-54 Pareto point` · logical_restriction_36_51_1_3_0a1bf2058b (`gamma frontier release record logical_restriction_36_51_1_3_0a1bf2058b (source catalogue id logical_restriction_36_51_1_3_0a1bf2058b); construction: New verified T-to-T construction; matrix 0a1bf2058b0247b7...; the release states d=3 (exact), gamma=3.5789019231625656 (exact)`)
 
 ```text
@@ -4975,7 +4975,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
 - discovery: AI search
 - regime: AI search (gamma frontier): logical restriction of a length-54 Pareto point — a restriction to fewer logical rows of a Pareto point of the length-54 classification, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search (gamma frontier): logical restriction of a length-54 Pareto point` · logical_restriction_36_51_2_3_011f652575 (`gamma frontier release record logical_restriction_36_51_2_3_011f652575 (source catalogue id logical_restriction_36_51_2_3_011f652575); construction: New verified T-to-T construction; matrix 011f6525755c434e...; the release states d=3 (exact), gamma=2.9479721695911083 (exact)`)
 
 ```text
@@ -4989,7 +4989,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 10]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:e374e3856c5a198e (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 
 ```text
@@ -5003,7 +5003,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
 - regime: AI search: multi-agent campaign 39<=n<=127 — found by the 39 <= n <= 127 multi-actor AI campaign (three Opus 5 actors, two conferring Fable 5 reviewers, three rounds, 2026-09-01); a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search: multi-agent campaign 39<=n<=127` · 19 (`actor-2 sweep7cs.py r=7 parent#0 n=51 target=CS,T,T tail=None nodes=247`)
 
 ```text
@@ -5017,7 +5017,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: AI search
 - regime: AI search (gamma frontier): logical restriction of a length-54 Pareto point — a restriction to fewer logical rows of a Pareto point of the length-54 classification, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search (gamma frontier): logical restriction of a length-54 Pareto point` · logical_restriction_44_51_4_3_044471faf3 (`gamma frontier release record logical_restriction_44_51_4_3_044471faf3 (source catalogue id logical_restriction_44_51_4_3_044471faf3); construction: New verified T-to-T construction; matrix 044471faf3336f54...; the release states d=3 (exact), gamma=2.3170424160196506 (exact)`)
 
 ```text
@@ -5031,7 +5031,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 39 (`Pareto point 39 of the length-54 classification: output class Q5_0000000000090400 (CS tensor (CS12CS13)), (n, S, d_Z) = (51, 12, 3), leading error coefficient 170; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5046,7 +5046,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 35 (`Pareto point 35 of the length-54 classification: output class Q5_000000000000a000 (CS tensor CCZ), (n, S, d_Z) = (51, 12, 3), leading error coefficient 193; the outputs are its 5 logical rows`)
 
 ```text
@@ -5060,7 +5060,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 60 (`Pareto point 60 of the length-54 classification: output class Q5_0000000001494c00 (T^(tensor 2) tensor (T1CS12CS13)), (n, S, d_Z) = (51, 12, 3), leading error coefficient 165; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5075,7 +5075,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 58 (`Pareto point 58 of the length-54 classification: output class Q5_0000000001094400 (T5CS25CS34CCZ125CCZ345), (n, S, d_Z) = (51, 12, 3), leading error coefficient 173; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5090,7 +5090,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 36 (`Pareto point 36 of the length-54 classification: output class Q5_000000000000e000 (T^(tensor 2) tensor CCZ), (n, S, d_Z) = (51, 12, 3), leading error coefficient 182; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5105,7 +5105,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 59 (`Pareto point 59 of the length-54 classification: output class Q5_0000000001406120 (T tensor (T1CS12CS13CS24)), (n, S, d_Z) = (51, 12, 3), leading error coefficient 170; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5120,7 +5120,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 56 (`Pareto point 56 of the length-54 classification: output class Q5_0000000001084400 (T5CS34CCZ125CCZ345), (n, S, d_Z) = (51, 12, 3), leading error coefficient 192; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5135,7 +5135,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 57 (`Pareto point 57 of the length-54 classification: output class Q5_0000000001084c00 (T^(tensor 2) tensor (T1CCZ123)), (n, S, d_Z) = (51, 12, 3), leading error coefficient 184; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5150,7 +5150,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 44 (`Pareto point 44 of the length-54 classification: output class Q5_0000000000404120 (T^(tensor 3) tensor CS), (n, S, d_Z) = (51, 12, 3), leading error coefficient 162; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5165,7 +5165,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 17]
 - discovery: pre-existing
 - regime: symmetry-SAT search; AI search — found by the symmetry-slot or ansatz-free SAT search (symmetry_sat_search/); a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `symmetry-SAT search` · T0 . T1 . T2 . T3 . T4 (`explicit circuit from ansatz-free SAT; archived result: t5_51_5_3.json`)
 - source: `AI search` · T0.T1.T2.T3.T4 (`ai_campaign/circuits/n51_k5_d3_tau5_parent-target(n=51,kappa=16)_it12.json`)
 - source: `AI search` · T^5 (`factory_records/findings_tm.jsonl:10`)
@@ -5183,7 +5183,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 65 (`Pareto point 65 of the length-54 classification: output class Q6_0000004002090400 (T^(tensor 3) tensor (CS12CS13)), (n, S, d_Z) = (51, 13, 3), leading error coefficient 173; the outputs are its 6 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5198,7 +5198,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 70 (`Pareto point 70 of the length-54 classification: output class Q6_000000040200a000 (T^(tensor 3) tensor CCZ), (n, S, d_Z) = (51, 13, 3), leading error coefficient 193; the outputs are its 6 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5213,7 +5213,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
 - discovery: AI search
 - regime: AI search (gamma frontier): logical restriction of a length-54 Pareto point — a restriction to fewer logical rows of a Pareto point of the length-54 classification, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search (gamma frontier): logical restriction of a length-54 Pareto point` · logical_restriction_33_52_1_3_18bc314fcc (`gamma frontier release record logical_restriction_33_52_1_3_18bc314fcc (source catalogue id logical_restriction_33_52_1_3_18bc314fcc); construction: New verified T-to-T construction; matrix 18bc314fcc8fd37a...; the release states d=3 (exact), gamma=3.5965770266157073 (exact)`)
 
 ```text
@@ -5227,7 +5227,7 @@ readable copy of exactly these rows.
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 6, 51]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `symmetry-SAT search` · T0 (`explicit circuit from ansatz-free SAT; archived result: beyond_cyclic_symmetric.json`)
 - source: `symmetry-SAT search` · T0 (`explicit circuit from ansatz-free SAT; archived result: slot_ansatz_subgroup_extras.json`)
 - source: `AI search` · T0 (`ai_campaign/circuits · catalogue.jsonl:253`)
@@ -5244,7 +5244,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 18]
 - discovery: AI search
 - regime: AI search: multi-agent campaign 39<=n<=127 — found by the 39 <= n <= 127 multi-actor AI campaign (three Opus 5 actors, two conferring Fable 5 reviewers, three rounds, 2026-09-01); a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search: multi-agent campaign 39<=n<=127` · 20 (`actor-2 item3.py r=7 DISTINCT parent#0 n=52 target=CS tail=None nodes=2`)
 
 ```text
@@ -5258,7 +5258,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
 - discovery: AI search
 - regime: AI search; AI search (gamma frontier): logical restriction of a length-54 Pareto point — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:62df6f87f45b78f0 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 - source: `AI search (gamma frontier): logical restriction of a length-54 Pareto point` · logical_restriction_33_52_2_3_039070a45a (`gamma frontier release record logical_restriction_33_52_2_3_039070a45a (source catalogue id logical_restriction_33_52_2_3_039070a45a); construction: New verified T-to-T construction; matrix 039070a45a43ef55...; the release states d=3 (exact), gamma=2.96564727304425 (exact)`)
 
@@ -5273,7 +5273,7 @@ readable copy of exactly these rows.
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 51]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · T0.T1.CS01 (`factory_records/records/n52_k2_d4_tau1_T0-T1-CS01.json`)
 - source: `AI search` · T0.T1.CS01 (`ai_campaign/circuits/n52_k2_d4_tau1_parent-target(n=52,kappa=4)_it12.json`)
 - source: `AI search` · T0.T1.CS01 (`factory_records/records · catalogue.jsonl:251`)
@@ -5289,7 +5289,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
 - discovery: AI search
 - regime: AI search (gamma frontier): logical restriction of a length-54 Pareto point — a restriction to fewer logical rows of a Pareto point of the length-54 classification, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search (gamma frontier): logical restriction of a length-54 Pareto point` · logical_restriction_33_52_3_3_02291b10e6 (`gamma frontier release record logical_restriction_33_52_3_3_02291b10e6 (source catalogue id logical_restriction_33_52_3_3_02291b10e6); construction: New verified T-to-T construction; matrix 02291b10e6b5c58e...; the release states d=3 (exact), gamma=2.5965770266157073 (exact)`)
 
 ```text
@@ -5303,7 +5303,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · T^4 (`ai_campaign/circuits/n52_k4_d3_tau4_S3_S3_S3_it07.json`)
 - source: `AI search` · T0.T1.T2.T3 (`ai_campaign/circuits · catalogue.jsonl:156`)
 - source: `AI search` · msAI:b00bee735338736c (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
@@ -5319,7 +5319,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 43 (`Pareto point 43 of the length-54 classification: output class Q5_0000000000216400 (T5CS25CS34CCZ145CCZ234), (n, S, d_Z) = (52, 12, 3), leading error coefficient 164; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5334,7 +5334,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 61 (`Pareto point 61 of the length-54 classification: output class Q5_0000000001604120 (T tensor (T1T2CS12CS13CS24)), (n, S, d_Z) = (52, 12, 3), leading error coefficient 169; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5349,7 +5349,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 45 (`Pareto point 45 of the length-54 classification: output class Q5_0000000000406120 (T5CS14CS23CCZ234CCZ235), (n, S, d_Z) = (52, 12, 3), leading error coefficient 170; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5364,7 +5364,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 54 (`Pareto point 54 of the length-54 classification: output class Q5_0000000001004120 (T5CS14CS23CCZ345), (n, S, d_Z) = (52, 12, 3), leading error coefficient 173; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5379,7 +5379,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 34 (`Pareto point 34 of the length-54 classification: output class Q5_0000000000006120 (T tensor (CS12CS13CS24)), (n, S, d_Z) = (52, 12, 3), leading error coefficient 174; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5394,7 +5394,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 33 (`Pareto point 33 of the length-54 classification: output class Q5_0000000000004120 (T tensor CS^(tensor 2)), (n, S, d_Z) = (52, 12, 3), leading error coefficient 173; the outputs are its 5 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5409,7 +5409,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 4]
 - discovery: AI search
 - regime: AI search (gamma frontier): logical restriction of a length-54 Pareto point — a restriction to fewer logical rows of a Pareto point of the length-54 classification, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search (gamma frontier): logical restriction of a length-54 Pareto point` · logical_restriction_71_52_5_3_296cdb24ab (`gamma frontier release record logical_restriction_71_52_5_3_296cdb24ab (source catalogue id logical_restriction_71_52_5_3_296cdb24ab); construction: New verified T-to-T construction; matrix 296cdb24abda4e67...; the release states d=3 (exact), gamma=2.1316035058977802 (exact)`)
 
 ```text
@@ -5423,7 +5423,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 62 (`Pareto point 62 of the length-54 classification: output class Q6_000000000a08a400 (T tensor (T5CS14CS23CCZ145CCZ235)), (n, S, d_Z) = (52, 13, 3), leading error coefficient 176; the outputs are its 6 logical rows`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
@@ -5438,7 +5438,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 4]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · classified_direct_protocol_71_52_6_3 (`gamma frontier release record classified_direct_protocol_71_52_6_3 (source catalogue id classified_direct_protocol_71_52_6_3); construction: Supplied generalized triorthogonal classification, with a verified product-T logical basis; matrix 312909e9c712e420...; the release states d=3 (exact), gamma=1.9656472730442498 (exact)`)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 71 (`Pareto point 71 of the length-54 classification: output class Q6_000000400a08a400 (T^(tensor 6)), (n, S, d_Z) = (52, 13, 3), leading error coefficient 200; the outputs are its 6 logical rows`)
 
@@ -5453,7 +5453,7 @@ readable copy of exactly these rows.
 - distance: exactly 5, witnessed by the fault on columns [20, 24, 26, 27, 36]
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point) — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: Wills et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860)
 - source: `exhaustive classification n<=54 (Pareto point)` · classified_direct_protocol_03_53_1_5 (`gamma frontier release record classified_direct_protocol_03_53_1_5 (source catalogue id classified_direct_protocol_03_53_1_5); construction: Product-T basis recovered from supplied generalized triorthogonal classification; matrix 9699d55ab25d526c...; the release states d=5 (exact), gamma=2.4668810662894636 (exact)`)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 3 (`Pareto point 3 of the length-54 classification: output class Q1_0000000000000001 (T), (n, S, d_Z) = (53, 11, 5), leading error coefficient 3149; the outputs are its 1 logical rows`)
 
@@ -5468,7 +5468,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 10]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:467e35b75cc0b3c6 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 
 ```text
@@ -5482,7 +5482,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:9046f866bf07e8bd (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 
 ```text
@@ -5496,7 +5496,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 10]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:75115e5eacce8c68 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 
 ```text
@@ -5510,7 +5510,7 @@ readable copy of exactly these rows.
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
-- citation: Wills et al. (2026); Jain et al. (2026)
+- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026)
 - source: `AI search` · msAI:4eb735b61e0d8ab8 (`magic-states-AI/master_catalogue/master_catalogue.jsonl`)
 
 ```text
@@ -14463,7 +14463,7 @@ readable copy of exactly these rows.
 
 ## References
 
-- <a id="ref-wills2026classification"></a>**Wills et al. (2026)** (`wills2026classification`, 208 rows) — A. Wills, S. P. Jain, and S. Singh, "Classification of Generalised Triorthogonal Codes through Length 54" (2026), in preparation.
+- <a id="ref-wills2026classification"></a>**Wills et al. (2026)** (`wills2026classification`, 208 rows) — A. Wills, S. P. Jain, and S. Singh, "Classification of Generalised Triorthogonal Codes through Length 54," arXiv:2609.30860 (2026). <https://arxiv.org/abs/2609.30860>
 - <a id="ref-jain2026symmetry"></a>**Jain et al. (2026)** (`jain2026symmetry`, 727 rows) — S. P. Jain, A. Wills, and S. Singh, "Symmetry and AI-assisted discovery of magic-state factories" (2026), in preparation.
 - <a id="ref-bravyi2005universal"></a>**Bravyi & Kitaev (2005)** (`bravyi2005universal`, 1 rows) — S. Bravyi and A. Kitaev, "Universal quantum computation with ideal Clifford gates and noisy ancillas," Phys. Rev. A 71, 022316 (2005). <https://doi.org/10.1103/PhysRevA.71.022316>
 - <a id="ref-nezami2022classification"></a>**Nezami & Haah (2022)** (`nezami2022classification`, 4 rows) — S. Nezami and J. Haah, "Classification of small triorthogonal codes," Phys. Rev. A 106, 012437 (2022). <https://doi.org/10.1103/PhysRevA.106.012437>
