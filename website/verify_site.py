@@ -114,6 +114,10 @@ def _monomials(gate: str, k: int) -> set[tuple[int, ...]]:
     return out
 
 
+#: the project's own two reports; "from the literature" means citing another paper
+OWN = ("wills2026classification", "jain2026symmetry")
+
+
 def searches(factories: list[dict], references: dict) -> list[tuple[str, int]]:
     """``(query string, expected count)`` -- each count computed independently."""
     def haystack(f):
@@ -145,6 +149,7 @@ def searches(factories: list[dict], references: dict) -> list[tuple[str, int]]:
         ("q=CS%20d%3E%3D4", count(lambda f: f["cs_terms"] > 0 and f["d"] >= 4)),
         ("q=pure%20exact", count(lambda f: f["pure_t"] and f["d_is_exact"])),
         ("q=haah", count(lambda f: "haah" in haystack(f))),
+        ("lit=1", count(lambda f: any(c not in OWN for c in f["citations"]))),
         ("q=graph%20gluing", count(lambda f: "graph" in haystack(f) and "gluing" in haystack(f))),
     ]
 
@@ -189,6 +194,34 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         failures.check(len(page.query_selector_all("#cite-list li")) >= 1,
                        "index.html: the how-to-cite list is empty")
         _ghosts(page, failures, "index.html")
+        # the hero draws the 15-to-1 factory from its own record: N x n cells
+        bk = next((f for f in factories if (f["n"], f["k"], f["d"]) == (15, 1, 3)), None)
+        if bk:
+            page.wait_for_selector("#hm-svg rect")
+            cells = len(page.query_selector_all("#hm-svg rect"))
+            failures.check(cells == bk["N"] * bk["n"],
+                           f"index.html: hero matrix has {cells} cells, expected {bk['N'] * bk['n']}")
+        # every explore tile's count, recomputed here
+        tile_counts = [int(e.inner_text()) for e in page.query_selector_all("#tiles a.tile .c")]
+        wanted_tiles = [
+            sum(f["pure_t"] for f in factories),
+            sum(f["ccz_terms"] > 0 for f in factories),
+            sum(f["cs_terms"] > 0 for f in factories),
+            sum(f["d"] >= 5 for f in factories),
+            sum("exhaustive classification n<=54 (Pareto point)" in f["regimes"] for f in factories),
+            sum(f["discovery"] == "AI search" for f in factories),
+            sum(any(c not in OWN for c in f["citations"]) for f in factories),
+            sum(f["gamma_rho"] is not None and f["gamma_rho"] <= 1.2 for f in factories),
+        ]
+        failures.check(tile_counts == wanted_tiles,
+                       f"index.html: tile counts {tile_counts}, expected {wanted_tiles}")
+        # hovering a plot point shows its parameters
+        point = page.query_selector_all("#frontier-plot circle.pt")[0]
+        point.scroll_into_view_if_needed()
+        box = point.bounding_box()
+        page.mouse.move(box["x"] + box["width"] / 2, box["y"] + box["height"] / 2)
+        failures.check("[[" in page.inner_text("#plot-tip"),
+                       "index.html: hovering a plot point shows no tooltip")
         page.click('#pager button[data-page="2"]')
         failures.check("page 2 of" in page.inner_text("#count"),
                        "index.html: the pager did not move to page 2")
@@ -217,8 +250,9 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
             _ghosts(page, failures, f"search.html?{query}")
         # a search survives the URL: set controls, reload, same count
         visit("search.html", "search.html (controls)", "#count strong")
-        page.check('input[name="d"][value="4"]')
-        page.check("#exact")
+        # the toggles are pills: a checkbox inside a label, so click the label
+        page.click('label.pill:has(input[name="d"][value="4"])')
+        page.click("label.pill:has(#exact)")
         page.wait_for_timeout(300)
         after = page.inner_text("#count")
         page.reload(wait_until="networkidle")

@@ -75,7 +75,7 @@
       var best = bestBy(usable, "gamma_rho");
       if (!best) return "";
       var widest = maxBy(usable, "v_ex_best");
-      return '<a class="record" href="' + href(best) + '">' +
+      return '<a class="record d' + group.d + '" href="' + href(best) + '">' +
         '<span class="d">d = ' + group.d + "</span>" +
         '<span class="g">&gamma;<sub>&rho;</sub> ' + C.num(best.gamma_rho, 4) + "</span>" +
         '<span class="p">' + C.escapeHtml(label(best)) + "</span>" +
@@ -189,26 +189,26 @@
     }
 
     /* the marks, drawn after the grid so they sit on top */
-    pts.forEach(function (p) {
-      parts.push('<circle class="pt d' + p.d + '" cx="' + X(p.n).toFixed(1) +
-                 '" cy="' + Y(p.gamma_rho).toFixed(1) + '" r="3">' +
-                 "<title>" + C.escapeHtml(label(p)) + "  gamma_rho " +
-                 C.num(p.gamma_rho, 4) + ", V_ex " + p.v_ex_best + "</title></circle>");
+    pts.forEach(function (p, i) {
+      p._x = X(p.n); p._y = Y(p.gamma_rho);
+      parts.push('<circle class="pt d' + p.d + '" data-i="' + i + '" cx="' + p._x.toFixed(1) +
+                 '" cy="' + p._y.toFixed(1) + '" r="4"/>');
     });
 
     /* the frontier points again, larger, so the staircase corners read */
     stair.forEach(function (p) {
+      p._corner = true;
       parts.push('<circle class="corner" cx="' + X(p.n).toFixed(1) +
-                 '" cy="' + Y(p.gamma_rho).toFixed(1) + '" r="4.5"><title>frontier: ' +
-                 C.escapeHtml(label(p)) + "  gamma_rho " + C.num(p.gamma_rho, 4) +
-                 "</title></circle>");
+                 '" cy="' + Y(p.gamma_rho).toFixed(1) + '" r="5.5"/>');
     });
 
     var swatches = byDistance(pts).map(function (g) {
       return '<span class="key"><span class="dot d' + g.d + '"></span>d = ' + g.d + "</span>";
     }).join("");
 
+    lastPoints = pts;
     return '<figure class="plot">' +
+      '<div class="plot-tip" id="plot-tip" role="status"></div>' +
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" ' +
       'aria-label="Yield exponent gamma against circuit length n, one mark per parameter set.">' +
       parts.join("") + unity +
@@ -218,8 +218,8 @@
       ') rotate(-90)" text-anchor="middle">&gamma;<tspan baseline-shift="sub">&rho;</tspan></text>' +
       "</svg>" +
       '<figcaption class="small muted">' + swatches +
-      '<span class="key"><span class="stair-key"></span>best &gamma;<sub>&rho;</sub> so far</span>' +
-      " &mdash; hover a mark for its parameters. The staircase is the catalogue&rsquo;s " +
+      '<span class="key"><span class="stair-key"></span><span>best &gamma;<sub>&rho;</sub> so far</span></span>' +
+      "<br>Hover a point for its parameters, click to open it. The staircase is the catalogue&rsquo;s " +
       "&gamma;<sub>&rho;</sub> frontier: it can only fall, and each corner is a circuit no " +
       "shorter circuit beats." +
       (skipped ? " " + skipped + " parameter set" + (skipped === 1 ? " is" : "s are") +
@@ -227,6 +227,52 @@
                  "extractable T count exists and no rate claim can be made from them."
                : "") +
       "</figcaption></figure>";
+  }
+
+  /* ------------------------------------------------------- plot hover layer */
+  var lastPoints = [];
+
+  /* One tooltip, following the nearest point within 18 px -- a hit area much
+   * bigger than the 4 px mark, so the plot is usable with a trackpad. */
+  function wirePlot(figure) {
+    var svg = figure.querySelector("svg"), tip = figure.querySelector(".plot-tip");
+    if (!svg || !tip) return;
+    var circles = svg.querySelectorAll("circle.pt"), hot = null;
+    function nearest(event) {
+      var box = svg.getBoundingClientRect(), vb = svg.viewBox.baseVal;
+      var sx = vb.width / box.width, sy = vb.height / box.height;
+      var x = (event.clientX - box.left) * sx, y = (event.clientY - box.top) * sy;
+      var best = null, bestD = Infinity;
+      lastPoints.forEach(function (p, i) {
+        var dx = p._x - x, dy = p._y - y, dd = dx * dx + dy * dy;
+        if (dd < bestD) { bestD = dd; best = i; }
+      });
+      return Math.sqrt(bestD) / sx <= 18 ? best : null;
+    }
+    function show(i) {
+      if (hot !== null && circles[hot]) { circles[hot].classList.remove("hot"); circles[hot].setAttribute("r", "4"); }
+      hot = i;
+      if (i === null) { tip.classList.remove("on"); svg.style.cursor = ""; return; }
+      var p = lastPoints[i], c = circles[i];
+      c.classList.add("hot"); c.setAttribute("r", "6.5");
+      var box = svg.getBoundingClientRect(), fig = figure.getBoundingClientRect(), vb = svg.viewBox.baseVal;
+      tip.style.left = (box.left - fig.left + p._x * box.width / vb.width) + "px";
+      tip.style.top = (box.top - fig.top + p._y * box.height / vb.height) + "px";
+      tip.innerHTML = "<b>" + C.escapeHtml(label(p)) + "</b>" +
+        '<div class="row"><span>&gamma;<sub>&rho;</sub></span><span>' + C.num(p.gamma_rho, 4) + "</span></div>" +
+        '<div class="row"><span>V<sub>ex</sub></span><span>' + p.v_ex_best + "</span></div>" +
+        '<div class="row"><span>gates</span><span>' + p.count + "</span></div>" +
+        (p._corner ? '<div class="hint">on the frontier</div>' : "") +
+        '<div class="hint">click to open</div>';
+      tip.classList.add("on");
+      svg.style.cursor = "pointer";
+    }
+    svg.addEventListener("mousemove", function (event) { show(nearest(event)); });
+    svg.addEventListener("mouseleave", function () { show(null); });
+    svg.addEventListener("click", function (event) {
+      var i = nearest(event);
+      if (i !== null) global.location.href = href(lastPoints[i]);
+    });
   }
 
   /* ------------------------------------------------------------------ mount */
@@ -242,6 +288,8 @@
       var node = document.getElementById(id);
       if (node) node.innerHTML = slots[id];
     });
+    var figure = document.querySelector("#frontier-plot figure.plot");
+    if (figure) wirePlot(figure);
   }
 
   global.Highlights = { mount: mount };

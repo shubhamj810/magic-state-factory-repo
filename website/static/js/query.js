@@ -15,6 +15,13 @@
   "use strict";
 
   var ARITY = { t: 1, cs: 2, ccz: 3 };
+  /* The project's own two reports.  A row "from the literature" cites some
+   * OTHER paper -- a published protocol this catalogue credits. */
+  var OWN = ["wills2026classification", "jain2026symmetry"];
+
+  function isLiterature(row) {
+    return row.citations.some(function (c) { return OWN.indexOf(c) < 0; });
+  }
 
   function monomialKeys(gate, k) {
     var keys = new Set();
@@ -106,7 +113,7 @@
     q: "text", nmin: "int", nmax: "int", kmin: "int", kmax: "int",
     d: "list", exact: "bool", has: "list", pure: "bool",
     tmax: "int", known: "bool", grmax: "float",
-    disc: "text", regime: "text", cite: "text",
+    disc: "text", regime: "text", cite: "text", lit: "bool",
     sort: "text", dir: "int", page: "int", size: "int"
   };
 
@@ -160,6 +167,7 @@
     if (state.disc) add(function (r) { return r.discovery === state.disc; });
     if (state.regime) add(function (r) { return r.regimes.indexOf(state.regime) >= 0; });
     if (state.cite) add(function (r) { return r.citations.indexOf(state.cite) >= 0; });
+    if (state.lit) add(isLiterature);
     return {
       rows: rows.filter(function (r) {
         for (var i = 0; i < tests.length; i++) if (!tests[i](r)) return false;
@@ -171,6 +179,7 @@
 
   global.Query = {
     monomialKeys: monomialKeys,
+    isLiterature: isLiterature,
     prepare: prepare,
     parse: parse,
     filter: filter,

@@ -1,87 +1,84 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--#head-->
 <title>Search factories — Magic State Factory Catalog</title>
 <meta name="description" content="Search every verified magic-state distillation factory by parameters, output gate, T-count, distillation exponent, discovery method and citation.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<a class="skip" href="#results">Skip to results</a>
-<header class="site"><div class="inner">
-  <a class="wordmark" href="index.html">Magic State Factory Catalog</a>
-  <nav aria-label="site">
-    <a href="search.html" aria-current="page">Search</a>
-    <a href="index.html#parameters">Parameters</a>
-    <a href="index.html#about">About &amp; cite</a>
-    <a href="https://github.com/shubhamj810/magic-state-factory-repo">GitHub</a>
-    <button id="theme-toggle" type="button">theme</button>
-  </nav>
-</div></header>
+<!--#header search nosearch-->
 
-<main class="wide">
-  <h1>Search factories</h1>
-  <p class="lede">Every factory in the catalogue, one row each. Narrow it down with
-  the filters, or type into the search box &mdash; the URL keeps your search, so
-  a result list can be shared as a link.</p>
+<section class="page-head">
+  <div class="inner">
+    <h1>Search factories</h1>
+    <p class="lede">Every factory in the catalogue, one row each. Filter on the
+    left or type a query &mdash; the URL keeps your search, so results can be
+    shared as a link.</p>
+    <form id="search-form" class="searchbar" role="search" onsubmit="return false">
+      <label class="sr-only" for="q">Search</label>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" name="q" type="search" autocomplete="off" spellcheck="false"
+             placeholder="e.g.  CCZ012   [[49, 1, 5]]   k=2 t<=4   d>=5   Haah">
+      <button type="button" id="reset" class="btn">Reset</button>
+    </form>
+    <details class="syntax">
+      <summary>What can I type?</summary>
+      <table class="syntax-table">
+        <tr><td><code>[[49, 1, 5]]</code></td><td>exactly these parameters</td></tr>
+        <tr><td><code>n&lt;=100</code> <code>k=2</code> <code>d&gt;=5</code> <code>N&lt;12</code> <code>r=4</code></td><td>a parameter compared with a number &mdash; <code>n</code> and <code>N</code> are different</td></tr>
+        <tr><td><code>t&lt;=4</code> <code>deg=2</code> <code>g&lt;1.3</code></td><td>T-count, phase-polynomial degree, &gamma;<sub>&rho;</sub></td></tr>
+        <tr><td><code>T0</code> <code>CS01</code> <code>CCZ012</code> <code>CCZ10,11,12</code></td><td>the gate contains this exact term (commas once an index reaches 10)</td></tr>
+        <tr><td><code>T</code> <code>CS</code> <code>CCZ</code></td><td>the gate contains at least one term of this kind</td></tr>
+        <tr><td><code>pure</code> <code>exact</code></td><td>pure T<sup>&otimes;k</sup> gates; exact distance only</td></tr>
+        <tr><td>anything else</td><td>matched against the gate, the id, the discovery regime and the cited papers</td></tr>
+      </table>
+      <p>Words combine with AND.</p>
+    </details>
+  </div>
+</section>
 
-  <form id="search-form" class="searchbar" role="search" onsubmit="return false">
-    <label class="sr-only" for="q">Search</label>
-    <input id="q" name="q" type="search" autocomplete="off" spellcheck="false"
-           placeholder="e.g.  CCZ012   [[49, 1, 5]]   k=2 t<=4   d>=5   Haah">
-    <button type="button" id="reset" class="btn">reset</button>
-  </form>
-  <details class="syntax small muted">
-    <summary>What can I type?</summary>
-    <table class="syntax-table">
-      <tr><td><code>[[49, 1, 5]]</code></td><td>exactly these parameters</td></tr>
-      <tr><td><code>n&lt;=100</code> <code>k=2</code> <code>d&gt;=5</code> <code>N&lt;12</code> <code>r=4</code></td><td>a parameter compared with a number &mdash; <code>n</code> and <code>N</code> are different</td></tr>
-      <tr><td><code>t&lt;=4</code> <code>deg=2</code> <code>g&lt;1.3</code></td><td>T-count, phase-polynomial degree, &gamma;<sub>&rho;</sub></td></tr>
-      <tr><td><code>T0</code> <code>CS01</code> <code>CCZ012</code> <code>CCZ10,11,12</code></td><td>the gate contains this exact term (use commas when an index is 10 or more)</td></tr>
-      <tr><td><code>T</code> <code>CS</code> <code>CCZ</code></td><td>the gate contains at least one term of this kind</td></tr>
-      <tr><td><code>pure</code> <code>exact</code></td><td>pure T<sup>&otimes;k</sup> gates; exact distance only</td></tr>
-      <tr><td>anything else</td><td>matched against the gate, the id, the discovery regime and the cited papers</td></tr>
-    </table>
-    <p>Terms combine with AND.</p>
-  </details>
-
+<main id="main" class="wide">
   <div class="search-layout">
     <details class="filters" id="filters" open>
-      <summary>Filters</summary>
+      <summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Filters</summary>
       <fieldset>
-        <legend>Parameters</legend>
-        <div class="range"><label for="nmin">n</label>
-          <input id="nmin" type="number" min="1" inputmode="numeric" placeholder="min" aria-label="n minimum">
-          <span>to</span>
-          <input id="nmax" type="number" min="1" inputmode="numeric" placeholder="max" aria-label="n maximum"></div>
-        <div class="range"><label for="kmin">k</label>
-          <input id="kmin" type="number" min="1" inputmode="numeric" placeholder="min" aria-label="k minimum">
-          <span>to</span>
-          <input id="kmax" type="number" min="1" inputmode="numeric" placeholder="max" aria-label="k maximum"></div>
-        <div class="checks" id="d-checks" role="group" aria-label="distance d"></div>
-        <label class="check"><input type="checkbox" id="exact"> exact distance only</label>
+        <legend>Distance</legend>
+        <div class="pills" id="d-checks" role="group" aria-label="distance d"></div>
+        <div class="pills" style="margin-top:6px">
+          <label class="pill"><input type="checkbox" id="exact"> exact only</label>
+        </div>
       </fieldset>
       <fieldset>
         <legend>Output gate</legend>
-        <div class="checks" role="group" aria-label="gate contains">
-          <label class="check"><input type="checkbox" name="has" value="t"> has T</label>
-          <label class="check"><input type="checkbox" name="has" value="cs"> has CS</label>
-          <label class="check"><input type="checkbox" name="has" value="ccz"> has CCZ</label>
+        <div class="pills" role="group" aria-label="gate contains">
+          <label class="pill"><input type="checkbox" name="has" value="t"><span class="sym">T</span> has T</label>
+          <label class="pill"><input type="checkbox" name="has" value="cs"><span class="sym">CS</span> has CS</label>
+          <label class="pill"><input type="checkbox" name="has" value="ccz"><span class="sym">CCZ</span> has CCZ</label>
+          <label class="pill"><input type="checkbox" id="pure"> pure T<sup>&otimes;k</sup></label>
         </div>
-        <label class="check"><input type="checkbox" id="pure"> pure T<sup>&otimes;k</sup> only</label>
       </fieldset>
       <fieldset>
-        <legend>Cost</legend>
-        <div class="range"><label for="tmax">T-count &le;</label>
+        <legend>Size</legend>
+        <div class="range"><label for="nmin">n</label>
+          <input id="nmin" type="number" min="1" inputmode="numeric" placeholder="min" aria-label="n minimum">
+          <span>–</span>
+          <input id="nmax" type="number" min="1" inputmode="numeric" placeholder="max" aria-label="n maximum"></div>
+        <div class="range"><label for="kmin">k</label>
+          <input id="kmin" type="number" min="1" inputmode="numeric" placeholder="min" aria-label="k minimum">
+          <span>–</span>
+          <input id="kmax" type="number" min="1" inputmode="numeric" placeholder="max" aria-label="k maximum"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Cost and yield</legend>
+        <div class="range"><label class="wide" for="tmax">T-count &le;</label>
           <input id="tmax" type="number" min="1" inputmode="numeric" placeholder="any"></div>
-        <label class="check"><input type="checkbox" id="known"> T-count known</label>
-        <div class="range"><label for="grmax">&gamma;<sub>&rho;</sub> &le;</label>
+        <div class="range"><label class="wide" for="grmax">&gamma;<sub>&rho;</sub> &le;</label>
           <input id="grmax" type="number" min="0" step="0.05" inputmode="decimal" placeholder="any"></div>
+        <div class="pills"><label class="pill"><input type="checkbox" id="known"> T-count known</label></div>
       </fieldset>
       <fieldset>
         <legend>Origin</legend>
+        <div class="pills"><label class="pill"><input type="checkbox" id="lit"> from the literature</label></div>
         <label class="stack" for="disc">discovery
           <select id="disc"><option value="">any</option></select></label>
         <label class="stack" for="regime">regime
@@ -94,15 +91,15 @@
     <section class="results" id="results" aria-live="polite">
       <div class="toolbar">
         <span class="count" id="count">loading&hellip;</span>
+        <span class="spacer"></span>
         <label class="small muted" for="size">show</label>
         <select id="size" aria-label="rows per page">
           <option value="25">25</option><option value="50" selected>50</option>
           <option value="100">100</option><option value="0">all</option>
         </select>
-        <span class="spacer"></span>
-        <button type="button" class="btn" id="copy-link">copy link</button>
-        <button type="button" class="btn" id="export-csv">download CSV</button>
-        <button type="button" class="btn" id="export-json">download JSON</button>
+        <button type="button" class="btn" id="copy-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg>Copy link</button>
+        <button type="button" class="btn" id="export-csv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>CSV</button>
+        <button type="button" class="btn" id="export-json"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>JSON</button>
       </div>
 
       <div class="table-wrap">
@@ -127,11 +124,7 @@
   </div>
 </main>
 
-<footer class="site"><div class="inner">
-  <span>Every number is re-derived from the factory&rsquo;s own circuit by
-  <a href="https://github.com/shubhamj810/magic-state-factory-repo/blob/main/master_catalog/verify_catalog.py"><code>verify_catalog.py</code></a>.</span>
-  <span id="data-stamp"></span>
-</div></footer>
+<!--#footer-->
 
 <script src="js/catalog.js"></script>
 <script src="js/query.js"></script>

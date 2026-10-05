@@ -120,6 +120,26 @@ class TheBuiltSite(unittest.TestCase):
                     continue          # 404.html uses absolute Pages paths
                 self.assertTrue((self.out / target).exists(), f"{page.name} -> {target}")
 
+    def test_every_page_has_the_shared_chrome(self):
+        current = {"search.html": "Search", "params.html": "Browse", "factory.html": "Browse"}
+        for page in self.out.glob("*.html"):
+            if page.name == "404.html":
+                continue                  # standalone: served at any depth
+            text = page.read_text(encoding="utf-8")
+            with self.subTest(page=page.name):
+                self.assertNotIn("<!--#", text)
+                self.assertEqual(text.count('<header class="site">'), 1)
+                self.assertEqual(text.count('<footer class="site">'), 1)
+                self.assertIn('href="css/style.css"', text)
+                self.assertNotIn("data-page=", text)
+                marked = re.findall(r'aria-current="page">([^<]+)<', text)
+                self.assertEqual(marked, [current[page.name]] if page.name in current else [])
+
+    def test_the_footer_names_the_catalogue_commit(self):
+        stamp = self.index["source"]
+        if stamp.get("commit"):
+            self.assertIn(stamp["commit"], (self.out / "index.html").read_text(encoding="utf-8"))
+
     def test_nojekyll(self):
         self.assertTrue((self.out / ".nojekyll").exists())
 

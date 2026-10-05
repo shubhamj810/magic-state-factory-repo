@@ -80,9 +80,12 @@
   }
 
   function distanceTag(row) {
+    var dot = '<span class="dot d' + row.d + '"></span>';
     return row.d_is_exact
-      ? '<span class="tag exact" title="proved: no harmful fault below d, one exhibited at d">d = ' + row.d + " exact</span>"
-      : '<span class="tag floor" title="proved floor: no harmful fault below d, none exhibited at d">d &ge; ' + row.d + "</span>";
+      ? '<span class="tag exact" title="proved: no harmful fault below d, one exhibited at d">' + dot +
+        "d = " + row.d + " exact</span>"
+      : '<span class="tag floor" title="proved floor: no harmful fault below d, none exhibited at d">' + dot +
+        "d &ge; " + row.d + "</span>";
   }
 
   /* One citation from the catalogue's reference table, linked when it can be. */
@@ -171,12 +174,15 @@
     }
     var button = document.getElementById("theme-toggle");
     if (!button) return;
+    var SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+    var MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>';
     function label() {
       var explicit = document.documentElement.getAttribute("data-theme");
       var dark = explicit ? explicit === "dark"
                           : global.matchMedia && global.matchMedia("(prefers-color-scheme: dark)").matches;
-      button.textContent = dark ? "light" : "dark";
+      button.innerHTML = dark ? SUN : MOON;
       button.setAttribute("aria-label", "switch to " + (dark ? "light" : "dark") + " theme");
+      button.title = "switch to " + (dark ? "light" : "dark") + " theme";
     }
     label();
     button.addEventListener("click", function () {
@@ -298,16 +304,6 @@
       ">next ›</button></nav>";
   }
 
-  function footerSource(index) {
-    var node = document.getElementById("data-stamp");
-    if (!node || !index || !index.source) return;
-    var s = index.source;
-    node.innerHTML = "Data: <a href=\"" + CATALOG_FILE + "\">master_catalog.json</a>" +
-      (s.commit ? ' at <a href="' + REPO + "/commit/" + escapeHtml(s.commit) + '"><code>' +
-                  escapeHtml(s.commit) + "</code></a>" : "") +
-      (s.date ? " (" + escapeHtml(s.date) + ")" : "") + ".";
-  }
-
   global.Catalog = {
     DATA: DATA, REPO: REPO, CATALOG_FILE: CATALOG_FILE, CATALOG_RAW: CATALOG_RAW,
     loadIndex: loadIndex,
@@ -332,16 +328,12 @@
     sortRows: sortRows,
     sortable: sortable,
     clickableRows: clickableRows,
-    pagerHtml: pagerHtml,
-    footerSource: footerSource
+    pagerHtml: pagerHtml
   };
 
   document.addEventListener("DOMContentLoaded", function () {
     initTheme();
-    /* Only pages that read the index anyway carry the stamp; a factory page
-     * must not download the whole index just to print a commit hash. */
-    if (document.getElementById("data-stamp")) {
-      loadIndex().then(footerSource, function () { /* the page reports its own failure */ });
-    }
+    /* The footer's data stamp is written by build_site.py, so no page
+     * downloads the index just to print a commit hash. */
   });
 }(window));

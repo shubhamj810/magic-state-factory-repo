@@ -29,6 +29,31 @@ python website/build_site.py
 python -m http.server -d website/_site 8000      # open http://localhost:8000/
 ```
 
+## Layout and design
+
+`static/` holds the pages, stylesheet and scripts. `templates/` holds what
+every page shares: the `<head>`, the header and the footer. A page marks their
+places with `<!--#head-->`, `<!--#header PAGE-->` and `<!--#footer-->`, and
+the build stitches them in. `PAGE` names the nav link to mark as current; add
+`nosearch` to drop the header's search box. The build also writes the
+catalogue commit into the footer.
+
+The look comes from [`static/css/style.css`](static/css/style.css). Every
+colour there is a token on `:root`, and dark mode is a separate palette rather
+than an automatic inversion. Some colours carry meaning and are used the same
+way everywhere:
+- **Output wires** are amber and **check wires** are teal: in the matrix, the
+  hero, and the legends.
+- **Distance** `d = 3…7` is a single-hue blue ramp, light to dark. Distance is
+  ordered, so one hue fits it; five unrelated colours in a scatter would not
+  stay distinguishable. The ramp was checked with an ordinal palette validator
+  against both card surfaces: monotone lightness, visible step gaps, and a
+  light end that clears the surface.
+- The **γ_ρ frontier** is the one highlight colour on the plot.
+
+`n` and `N` are different parameters, so the stylesheet never uses
+`text-transform`.
+
 ## What the build adds, and what it does not
 
 It copies `n`, `k`, `d`, `N`, the gate, the T-count, the degree, the distance
@@ -83,8 +108,9 @@ python website/verify_site.py --full                 # every parameter set and f
 It is the only part of the repository that does, which is why `verify_repo.py`
 does not run it. It loads every page shape in headless Chromium and checks the
 rendered page against counts it computes itself:
-- 21 searches;
+- 22 searches;
 - the CSV export;
+- the hero matrix, the explore-tile counts and the plot tooltip;
 - the matrix's output and check rows and its row weights;
 - each factory's references.
 

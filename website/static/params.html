@@ -1,35 +1,26 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--#head-->
 <title>Gates at these parameters — Magic State Factory Catalog</title>
 <meta name="description" content="Every inequivalent output gate the catalogue holds at one [[n, k, d]].">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site"><div class="inner">
-  <a class="wordmark" href="index.html">Magic State Factory Catalog</a>
-  <nav aria-label="site">
-    <a href="search.html">Search</a>
-    <a href="index.html#parameters">Parameters</a>
-    <a href="index.html#about">About &amp; cite</a>
-    <a href="https://github.com/shubhamj810/magic-state-factory-repo">GitHub</a>
-    <button id="theme-toggle" type="button">theme</button>
-  </nav>
-</div></header>
+<!--#header browse-->
+
+<section class="page-head narrow">
+  <div class="inner">
+    <nav class="crumbs" aria-label="breadcrumb"><span><a href="index.html">Home</a></span><span><a href="index.html#parameters">Parameters</a></span><span id="crumb"></span></nav>
+    <h1 id="heading" class="mono-h">&hellip;</h1>
+    <p class="lede" id="blurb"></p>
+  </div>
+</section>
 
 <main id="main">
-  <nav class="crumbs" aria-label="breadcrumb"><span><a href="index.html#parameters">Parameters</a></span><span id="crumb"></span></nav>
-  <h1 id="heading">&hellip;</h1>
-  <p class="lede" id="blurb"></p>
-
   <div class="statbar" id="stats"></div>
 
   <h2>Output gates</h2>
-  <p class="small muted">One row per inequivalent output gate at these
+  <p class="section-intro">One row per inequivalent output gate at these
   parameters. Click a gate to open its circuit.</p>
 
   <div class="toolbar">
@@ -58,20 +49,20 @@
 
   <div class="panel" style="margin-top:22px">
     <h3 style="margin-top:0">Why these are different factories</h3>
-    <p class="small">Every circuit listed here consumes the same n, protects the
-    same k outputs and reaches the same distance d. They differ in <em>what they
-    deposit</em>: no two gates on this page are related by a change of output
-    basis and Clifford corrections, so each row prepares a genuinely different
-    magic state at the same price.</p>
+    <p class="small muted">Every circuit listed here consumes the same n, protects
+    the same k outputs and reaches the same distance d. They differ in <em>what
+    they deposit</em>: no two gates on this page are related by a change of
+    output basis and Clifford corrections, so each row prepares a genuinely
+    different magic state at the same price.</p>
   </div>
 
-  <p class="small muted" id="neighbours" style="margin-top:22px"></p>
+  <div class="panel" id="neighbours-panel" style="margin-top:14px" hidden>
+    <h3 style="margin-top:0">Nearby parameters</h3>
+    <p class="small" id="neighbours"></p>
+  </div>
 </main>
 
-<footer class="site"><div class="inner">
-  <span>Every number is re-derived from the factory&rsquo;s own circuit.</span>
-  <span id="data-stamp"></span>
-</div></footer>
+<!--#footer-->
 
 <script src="js/catalog.js"></script>
 <script src="js/query.js"></script>

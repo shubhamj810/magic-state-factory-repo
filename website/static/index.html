@@ -1,77 +1,82 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--#head-->
 <title>Magic State Factory Catalog</title>
 <meta name="description" content="A searchable database of verified magic-state distillation factories: every circuit stored explicitly, every figure of merit re-derived from it.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Magic State Factory Catalog">
 <meta property="og:description" content="A searchable database of verified magic-state distillation factories: every circuit stored explicitly, every figure of merit re-derived from it.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site"><div class="inner">
-  <a class="wordmark" href="index.html">Magic State Factory Catalog</a>
-  <nav aria-label="site">
-    <a href="search.html">Search</a>
-    <a href="#parameters">Parameters</a>
-    <a href="#about">About &amp; cite</a>
-    <a href="https://github.com/shubhamj810/magic-state-factory-repo">GitHub</a>
-    <button id="theme-toggle" type="button">theme</button>
-  </nav>
-</div></header>
+<!--#header nosearch-->
+
+<section class="hero">
+  <div class="inner">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span>Open database &middot; Clifford level-3 distillation</p>
+      <h1>Magic State <span class="grad">Factory Catalog</span></h1>
+      <p class="lede">A searchable database of <strong id="hero-count">verified</strong>
+      magic-state distillation factories. Each is stored as an explicit circuit,
+      and every number shown &mdash; distance, gate, T-count, distillation
+      exponent &mdash; is re-derived from that circuit, never taken on trust.</p>
+
+      <form class="searchbar big" role="search" action="search.html" method="get">
+        <label class="sr-only" for="hero-q">Search the catalogue</label>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="hero-q" name="q" type="search" autocomplete="off" spellcheck="false"
+               placeholder="Try CCZ012, [[49, 1, 5]], k=2 t<=4, Haah …">
+        <button type="submit" class="btn primary">Search</button>
+      </form>
+      <p class="quick" aria-label="example searches">
+        <span class="label">Popular:</span>
+        <a href="search.html?pure=1">pure T<sup>&otimes;k</sup></a>
+        <a href="search.html?has=ccz">with CCZ</a>
+        <a href="search.html?kmin=1&amp;kmax=1">single output</a>
+        <a href="search.html?d=5,6,7">distance &ge; 5</a>
+        <a href="search.html?sort=gamma_rho">best &gamma;<sub>&rho;</sub></a>
+      </p>
+    </div>
+
+    <figure class="hero-matrix" id="hero-matrix" aria-label="The 15-to-1 factory as a binary matrix">
+      <div class="hm-head"><span>A factory is a binary matrix</span><strong id="hm-label">[[15, 1, 3]]</strong></div>
+      <div id="hm-svg"></div>
+      <figcaption>Rows are wires, columns are the &pi;/4 rotations that consume
+      noisy T states. <span class="k-out">Output</span> rows carry the protected
+      magic state; <span class="k-chk">check</span> rows are measured and
+      postselected. <a id="hm-link" href="search.html?q=%5B%5B15%2C1%2C3%5D%5D">Open this factory &rarr;</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="inner stats-wrap"><div class="statbar" id="stats"></div></div>
 
 <main id="main">
-  <section class="hero">
-    <h1>Magic State Factory Catalog</h1>
-    <p class="lede">A searchable database of <strong id="hero-count">verified</strong>
-    magic-state distillation factories. Each one is stored as an explicit circuit,
-    and every number shown about it &mdash; distance, gate, T-count, distillation
-    exponent &mdash; is re-derived from that circuit rather than taken on trust.</p>
-
-    <form class="searchbar big" role="search" action="search.html" method="get">
-      <label class="sr-only" for="hero-q">Search the catalogue</label>
-      <input id="hero-q" name="q" type="search" autocomplete="off" spellcheck="false"
-             placeholder="Search: CCZ012, [[49, 1, 5]], k=2 t<=4, Haah …">
-      <button type="submit" class="btn primary">Search</button>
-    </form>
-    <p class="quick small" aria-label="example searches">
-      <span class="muted">Try:</span>
-      <a href="search.html?pure=1">pure T<sup>&otimes;k</sup></a>
-      <a href="search.html?has=ccz">gates with CCZ</a>
-      <a href="search.html?kmin=1&amp;kmax=1">single output (k = 1)</a>
-      <a href="search.html?d=5,6,7">distance 5 or more</a>
-      <a href="search.html?known=1&amp;sort=t_count">lowest T-count</a>
-      <a href="search.html?sort=gamma_rho">best &gamma;<sub>&rho;</sub></a>
-      <a href="search.html?disc=pre-existing">from classification &amp; literature</a>
-    </p>
-  </section>
-
-  <div class="statbar" id="stats"></div>
+  <h2 id="explore">Explore the catalogue</h2>
+  <p class="section-intro">Jump straight into a slice of the database. Every
+  tile is a search you can refine.</p>
+  <div class="tiles" id="tiles"></div>
 
   <h2 id="best">The best in the catalogue</h2>
-  <p class="small muted">Ranked on &gamma;<sub>&rho;</sub> = log(n/V<sub>ex</sub>)/log d,
+  <p class="section-intro">Ranked on &gamma;<sub>&rho;</sub> = log(n/V<sub>ex</sub>)/log d,
   where V<sub>ex</sub> is the number of T states one run actually yields
   (T and CS count one, CCZ two). <strong>Lower is better.</strong> Gates whose
-  terms overlap have no well-defined V<sub>ex</sub> and are left out of the ranking.</p>
-
+  terms overlap have no well-defined V<sub>ex</sub> and are left out.</p>
   <div class="headline" id="headline-stats"></div>
 
   <h3>Least &gamma;<sub>&rho;</sub> at each distance</h3>
   <div class="records" id="record-cards"></div>
 
   <h2 id="frontier">The &gamma;<sub>&rho;</sub> frontier</h2>
-  <p class="small muted">Every parameter set plotted against the number of noisy
-  inputs it consumes, with the running best drawn over it.</p>
+  <p class="section-intro">Every parameter set against the number of noisy
+  inputs it consumes, coloured by distance, with the running best drawn over
+  it. Hover a point for its parameters; click to open it.</p>
   <div id="frontier-plot"></div>
 
   <h2 id="parameters">Browse by parameters</h2>
-  <p class="small muted">One row per distinct <span class="mono">[[n, k, d]]</span>.
-  Open a row to see every inequivalent output gate realised at those parameters.
-  For anything finer, use <a href="search.html">search</a>.</p>
+  <p class="section-intro">One row per distinct <span class="mono">[[n, k, d]]</span>.
+  Open a row to see every inequivalent output gate at those parameters. For
+  anything finer, use <a href="search.html">search</a>.</p>
 
   <div class="toolbar">
     <label class="sr-only" for="filter">Filter parameter sets</label>
@@ -88,7 +93,7 @@
         <th data-key="order" data-type="number" scope="col">[[n, k, d]]</th>
         <th class="num" data-key="n" data-type="number" scope="col">n</th>
         <th class="num" data-key="k" data-type="number" scope="col">k</th>
-        <th class="num" data-key="d" data-type="number" scope="col">d</th>
+        <th data-key="d" data-type="number" scope="col">d</th>
         <th class="num" data-key="count" data-type="number" scope="col">gates</th>
         <th class="num" data-key="gamma_rho" data-type="number" scope="col" title="best log(n/V_ex)/log d at these parameters">best &gamma;<sub>&rho;</sub></th>
         <th class="num" data-key="gamma" data-type="number" scope="col" title="log(n/k)/log d">&gamma;</th>
@@ -132,8 +137,8 @@
 
   <h2 id="about">About, citing and contributing</h2>
   <div class="about-grid">
-    <div class="panel">
-      <h3>Where the factories come from</h3>
+    <div class="panel" style="--tint:#7c3aed">
+      <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>Where the factories come from</h3>
       <ul class="plain">
         <li><strong>Exhaustive classification</strong> of every generalised
         triorthogonal protocol with up to 54 inputs (Wills, Jain and Singh).</li>
@@ -142,29 +147,25 @@
         <li><strong>The published literature</strong>, credited to its papers.</li>
         <li><strong>Community contributions</strong>, verified to the same bar.</li>
       </ul>
-      <p class="small muted">Each row records the regime that found it and the
-      papers that credit it; both are searchable.</p>
     </div>
-    <div class="panel">
-      <h3>How to cite</h3>
+    <div class="panel" style="--tint:#4f46e5">
+      <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h4v4H7zM13 7h4v4h-4z"/><path d="M9 11c0 3-1 5-3 6M15 11c0 3-1 5-3 6"/></svg></span>How to cite</h3>
       <p class="small">If you use a factory, cite the papers listed on its page.
       For the catalogue itself:</p>
       <ol class="refs small" id="cite-list"></ol>
       <p class="small">and the repository,
       <a href="https://github.com/shubhamj810/magic-state-factory-repo">github.com/shubhamj810/magic-state-factory-repo</a>.</p>
     </div>
-    <div class="panel">
-      <h3>Download</h3>
+    <div class="panel" style="--tint:#0d9488">
+      <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span>Download</h3>
       <ul class="plain small">
-        <li><a href="data/factories.csv" download>factories.csv</a> &mdash; one row per factory, every figure of merit, no circuits</li>
+        <li><a href="data/factories.csv" download>factories.csv</a> &mdash; one row per factory, every figure of merit</li>
         <li><a href="data/index.json" download>index.json</a> &mdash; the same as JSON, with the reference table</li>
         <li><a id="full-catalog" href="https://github.com/shubhamj810/magic-state-factory-repo/blob/main/master_catalog/master_catalog.json">master_catalog.json</a> &mdash; the full database, circuits included</li>
       </ul>
-      <p class="small muted">Search results and single circuits can be exported
-      from their own pages.</p>
     </div>
-    <div class="panel">
-      <h3>Contribute a factory</h3>
+    <div class="panel" style="--tint:#d97706">
+      <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span>Contribute a factory</h3>
       <p class="small">Protocols can be submitted in any format &mdash; a paper,
       matrices, code or a notebook. They are verified to the same bar as every
       row here and credited to their authors.</p>
@@ -174,13 +175,10 @@
   </div>
 </main>
 
-<footer class="site"><div class="inner">
-  <span>Every number is re-derived from the factory&rsquo;s own circuit by
-  <a href="https://github.com/shubhamj810/magic-state-factory-repo/blob/main/master_catalog/verify_catalog.py"><code>verify_catalog.py</code></a>.</span>
-  <span id="data-stamp"></span>
-</div></footer>
+<!--#footer-->
 
 <script src="js/catalog.js"></script>
+<script src="js/query.js"></script>
 <script src="js/highlights.js"></script>
 <script src="js/index.js"></script>
 </body>

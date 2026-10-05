@@ -42,8 +42,9 @@
     /* ------------------------------------------------ populate the controls */
     index.ranges.d.forEach(function (d) {
       var label = document.createElement("label");
-      label.className = "check";
-      label.innerHTML = '<input type="checkbox" name="d" value="' + d + '"> d = ' + d;
+      label.className = "pill";
+      label.innerHTML = '<input type="checkbox" name="d" value="' + d + '"><span class="dot d' + d +
+                        '"></span>d = ' + d;
       $("d-checks").appendChild(label);
     });
     var discCounts = counted(all, function (r) { return r.discovery; });
@@ -70,7 +71,7 @@
       ["nmin", "nmax", "kmin", "kmax", "tmax", "grmax"].forEach(function (key) {
         $(key).value = state[key] === undefined ? "" : state[key];
       });
-      ["exact", "pure", "known"].forEach(function (key) { $(key).checked = !!state[key]; });
+      ["exact", "pure", "known", "lit"].forEach(function (key) { $(key).checked = !!state[key]; });
       document.querySelectorAll('input[name="d"]').forEach(function (box) {
         box.checked = (state.d || []).indexOf(box.value) >= 0;
       });
@@ -92,7 +93,7 @@
       });
       var g = parseFloat($("grmax").value);
       if (!Number.isNaN(g)) next.grmax = g;
-      ["exact", "pure", "known"].forEach(function (key) { if ($(key).checked) next[key] = true; });
+      ["exact", "pure", "known", "lit"].forEach(function (key) { if ($(key).checked) next[key] = true; });
       next.d = [].map.call(document.querySelectorAll('input[name="d"]:checked'), function (b) { return b.value; });
       next.has = [].map.call(document.querySelectorAll('input[name="has"]:checked'), function (b) { return b.value; });
       ["disc", "regime", "cite"].forEach(function (key) { if ($(key).value) next[key] = $(key).value; });
@@ -122,7 +123,7 @@
         '<td class="num">' + C.num(f.gamma_rho) + "</td>" +
         '<td class="num">' + C.num(f.gamma) + "</td>" +
         "<td>" + C.distanceTag(f) + "</td>" +
-        '<td><span class="tag ' + (f.discovery === "AI search" ? "ai" : "") + '" title="' +
+        '<td><span class="tag ' + (f.discovery === "AI search" ? "ai" : "pre") + '" title="' +
           C.escapeHtml(f.regimes.join("\n")) + '">' + C.escapeHtml(f.discovery || "—") + "</span></td>" +
         '<td class="small cites">' + C.escapeHtml(f.cite_text || "—") + "</td></tr>";
     }

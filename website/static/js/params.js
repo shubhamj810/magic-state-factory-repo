@@ -112,7 +112,10 @@
         (sameKd.length > 12 ? ' · <a href="search.html?kmin=' + k + "&kmax=" + k + "&d=" + d +
                               '">all ' + sameKd.length + "</a>" : ""));
     }
-    document.getElementById("neighbours").innerHTML = parts.join("<br>");
+    if (parts.length) {
+      document.getElementById("neighbours").innerHTML = parts.join("<br>");
+      document.getElementById("neighbours-panel").hidden = false;
+    }
   }).catch(function (error) {
     C.fail(document.querySelector("main"), error);
   });

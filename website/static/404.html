@@ -5,18 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Not found — Magic State Factory Catalog</title>
 <link rel="icon" href="/magic-state-factory-repo/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&amp;family=JetBrains+Mono:wght@400..700&amp;display=swap">
 <link rel="stylesheet" href="/magic-state-factory-repo/css/style.css">
 </head>
 <body>
-<header class="site"><div class="inner">
-  <a class="wordmark" href="/magic-state-factory-repo/">Magic State Factory Catalog</a>
-</div></header>
-<main>
-  <h1>Page not found</h1>
-  <p class="lede">There is no page at this address. Factories are opened by id,
-  e.g. <code>factory.html?id=n0015-k001-d3-…</code>.</p>
-  <p><a class="btn primary" href="/magic-state-factory-repo/search.html">Search the catalogue</a>
-  <a class="btn" href="/magic-state-factory-repo/">Home</a></p>
-</main>
+<section class="hero" style="min-height:100vh;display:grid;align-items:center">
+  <div class="inner" style="grid-template-columns:1fr">
+    <div>
+      <p class="eyebrow"><span class="dot"></span>404</p>
+      <h1>This page is <span class="grad">not in the catalogue</span></h1>
+      <p class="lede">There is nothing at this address. Factories are opened by
+      id &mdash; the easiest way to find one is to search.</p>
+      <form class="searchbar big" role="search" action="/magic-state-factory-repo/search.html" method="get">
+        <label class="sr-only" for="q404">Search the catalogue</label>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q404" name="q" type="search" placeholder="Search factories…" autocomplete="off">
+        <button type="submit" class="btn primary">Search</button>
+      </form>
+      <p class="quick"><a href="/magic-state-factory-repo/">&larr; Back to the catalogue</a></p>
+    </div>
+  </div>
+</section>
 </body>
 </html>

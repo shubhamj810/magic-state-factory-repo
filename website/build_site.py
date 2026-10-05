@@ -34,6 +34,7 @@ import csv
 import hashlib
 import json
 import math
+import re
 import shutil
 import subprocess
 import sys
@@ -44,6 +45,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 CATALOG = ROOT / "master_catalog" / "master_catalog.json"
 STATIC = HERE / "static"
+TEMPLATES = HERE / "templates"
 DEFAULT_OUT = HERE / "_site"
 
 INDEX_VERSION = "2.0"
@@ -242,6 +244,48 @@ def source_stamp(catalog_path: Path) -> dict:
     return {"commit": commit or None, "date": date or None}
 
 
+def render_pages(out: Path, stamp: dict) -> None:
+    """Stitch the shared head, header and footer into every page.
+
+    A page marks where they go with ``<!--#head-->``, ``<!--#header PAGE-->``
+    and ``<!--#footer-->``.  ``PAGE`` names the nav link to mark current; a
+    page that has its own search box adds ``nosearch`` to drop the header's.
+    The footer's data stamp is written here, so no page fetches the index just
+    to print a commit hash.
+    """
+    logo = (TEMPLATES / "logo.svg").read_text(encoding="utf-8").strip()
+    head = (TEMPLATES / "head.html").read_text(encoding="utf-8").strip()
+    header = (TEMPLATES / "header.html").read_text(encoding="utf-8").replace("{{logo}}", logo)
+    commit, date = stamp.get("commit"), stamp.get("date")
+    stamp_html = ('Data: <a href="https://github.com/shubhamj810/magic-state-factory-repo/'
+                  'blob/main/master_catalog/master_catalog.json">master_catalog.json</a>'
+                  + (f' at <a href="https://github.com/shubhamj810/magic-state-factory-repo/'
+                     f'commit/{commit}"><code>{commit}</code></a>' if commit else "")
+                  + (f" ({date})" if date else "") + ".")
+    footer = (TEMPLATES / "footer.html").read_text(encoding="utf-8") \
+        .replace("{{logo}}", logo.replace('id="lg"', 'id="lg-foot"').replace("url(#lg)", "url(#lg-foot)")) \
+        .replace("{{stamp}}", stamp_html)
+    marker = re.compile(r"<!--#header ?([^>]*)-->")
+    for page in out.glob("*.html"):
+        text = page.read_text(encoding="utf-8")
+        if "<!--#" not in text:
+            continue
+        def stitched(match):
+            words = match.group(1).split()
+            html = header
+            if "nosearch" in words:
+                html = re.sub(r"\s*<!--search-->.*?<!--/search-->", "", html, flags=re.S)
+            html = html.replace("<!--search-->", "").replace("<!--/search-->", "")
+            for word in words:
+                html = html.replace(f'data-page="{word}"', 'aria-current="page"')
+            return re.sub(r' data-page="[a-z]+"', "", html).strip()
+        text = marker.sub(stitched, text)
+        text = text.replace("<!--#head-->", head).replace("<!--#footer-->", footer.strip())
+        if "<!--#" in text:
+            raise ValueError(f"{page.name}: an unknown template marker is left")
+        page.write_text(text, encoding="utf-8")
+
+
 def build(out: Path, catalog_path: Path = CATALOG) -> dict:
     catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
     summaries, records = [], []
@@ -291,6 +335,7 @@ def build(out: Path, catalog_path: Path = CATALOG) -> dict:
         for s in summaries:
             writer.writerow(["; ".join(s[f]) if isinstance(s[f], list) else s[f]
                              for f in CSV_FIELDS])
+    render_pages(out, index["source"])
     # GitHub Pages runs Jekyll unless told not to, and Jekyll drops _-prefixed paths.
     (out / ".nojekyll").write_text("", encoding="utf-8")
     return index

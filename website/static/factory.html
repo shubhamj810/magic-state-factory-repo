@@ -1,68 +1,64 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--#head-->
 <title>Factory — Magic State Factory Catalog</title>
 <meta name="description" content="One verified magic-state distillation factory: its binary matrix, output gate, distance, T-count, distillation exponents and references.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site"><div class="inner">
-  <a class="wordmark" href="index.html">Magic State Factory Catalog</a>
-  <nav aria-label="site">
-    <a href="search.html">Search</a>
-    <a href="index.html#parameters">Parameters</a>
-    <a href="index.html#about">About &amp; cite</a>
-    <a href="https://github.com/shubhamj810/magic-state-factory-repo">GitHub</a>
-    <button id="theme-toggle" type="button">theme</button>
-  </nav>
-</div></header>
+<!--#header browse-->
+
+<section class="page-head">
+  <div class="inner">
+    <nav class="crumbs" id="crumbs" aria-label="breadcrumb"><span><a href="index.html">Home</a></span><span><a href="index.html#parameters">Parameters</a></span></nav>
+    <h1 id="heading">&hellip;</h1>
+    <p class="lede" id="blurb"></p>
+    <nav class="jump" aria-label="on this page"><a href="#matrix">Circuit</a><a href="#metrics">Figures of merit</a>
+    <a href="#gate">Gate</a><a href="#distance">Distance</a><a href="#references">References</a>
+    <a href="#provenance">Provenance</a></nav>
+  </div>
+</section>
 
 <main id="main" class="wide">
-  <nav class="crumbs" id="crumbs" aria-label="breadcrumb"><span><a href="index.html#parameters">Parameters</a></span></nav>
-  <h1 id="heading">&hellip;</h1>
-  <p class="lede" id="blurb"></p>
-  <p class="jump small"><a href="#matrix">circuit</a> · <a href="#metrics">figures of merit</a> ·
-  <a href="#gate">gate</a> · <a href="#distance">distance</a> · <a href="#references">references</a> ·
-  <a href="#provenance">provenance</a></p>
-
-  <h2 id="matrix">The circuit</h2>
-  <p class="small muted" id="matrix-caption"></p>
-  <ul class="legend">
-    <li><span class="swatch out" aria-hidden="true"></span>output wires &mdash; the k protected qubits</li>
-    <li><span class="swatch chk" aria-hidden="true"></span>check wires &mdash; measured and postselected</li>
-    <li><span class="mono">1</span>&nbsp;= this wire is in this rotation&rsquo;s support</li>
-  </ul>
-  <div class="matrix-wrap" id="matrix-wrap" tabindex="0" role="region" aria-label="binary matrix, scrollable"></div>
+  <h2 id="matrix" style="margin-top:8px">The circuit</h2>
+  <p class="section-intro" id="matrix-caption"></p>
+  <div class="matrix-bar">
+    <ul class="legend">
+      <li><span class="swatch out" aria-hidden="true"></span>output wires &mdash; the k protected qubits</li>
+      <li><span class="swatch chk" aria-hidden="true"></span>check wires &mdash; measured and postselected</li>
+    </ul>
+    <div class="seg" role="group" aria-label="matrix view">
+      <button type="button" id="view-cells" aria-pressed="true">Cells</button>
+      <button type="button" id="view-digits" aria-pressed="false">0 / 1</button>
+    </div>
+  </div>
+  <div class="matrix-wrap cells" id="matrix-wrap" tabindex="0" role="region" aria-label="binary matrix, scrollable"></div>
   <div class="toolbar export" id="export">
-    <span class="small muted">Export this circuit:</span>
-    <button type="button" class="btn" id="copy-columns" title="the columns as a JSON list of wire lists — the catalogue's own format">copy columns</button>
-    <button type="button" class="btn" id="copy-numpy" title="the N × n matrix as a numpy array literal">copy as numpy</button>
-    <button type="button" class="btn" id="download-csv">matrix CSV</button>
-    <a class="btn" id="download-json" download>record JSON</a>
+    <span class="label">Export</span>
+    <button type="button" class="btn" id="copy-columns" title="the columns as a JSON list of wire lists — the catalogue's own format">Copy columns</button>
+    <button type="button" class="btn" id="copy-numpy" title="the N × n matrix as a numpy array literal">Copy as numpy</button>
+    <button type="button" class="btn" id="download-csv">Matrix CSV</button>
+    <a class="btn" id="download-json" download>Record JSON</a>
   </div>
   <p class="small muted" id="matrix-note"></p>
 
   <h2 id="metrics">Parameters and figures of merit</h2>
-  <div class="metrics" id="metric-grid"></div>
+  <div class="metrics" id="metric-grid" style="margin-top:14px"></div>
 
   <h2 id="gate">Output gate</h2>
-  <div class="panel" id="gate-panel"></div>
+  <div class="panel" id="gate-panel" style="margin-top:14px"></div>
 
   <h2 id="distance">Distance</h2>
-  <div class="panel" id="distance-panel"></div>
+  <div class="panel" id="distance-panel" style="margin-top:14px"></div>
 
   <h2 id="references">References</h2>
-  <div class="panel" id="references-panel"></div>
+  <div class="panel" id="references-panel" style="margin-top:14px"></div>
 
   <h2 id="provenance">Provenance</h2>
-  <div class="panel" id="provenance-panel"></div>
+  <div class="panel" id="provenance-panel" style="margin-top:14px"></div>
 
   <h2>Raw record</h2>
-  <div class="panel">
+  <div class="panel" style="margin-top:14px">
     <details>
       <summary>Show the JSON this page is built from</summary>
       <pre class="raw" id="raw"></pre>
@@ -71,9 +67,7 @@
   </div>
 </main>
 
-<footer class="site"><div class="inner">
-  <span>Every number on this page follows from the matrix above and from k.</span>
-</div></footer>
+<!--#footer-->
 
 <script src="js/catalog.js"></script>
 <script src="js/factory.js"></script>

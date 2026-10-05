@@ -86,11 +86,11 @@
     return html + "</tbody></table>";
   }
 
-  function metric(key, value, note, empty) {
+  function metric(key, value, note, empty, highlight) {
     var shown = C.blank(value) || value === "—" || value === ""
       ? '<span class="v none">' + (empty || "not computed") + "</span>"
       : '<span class="v">' + C.escapeHtml(value) + "</span>";
-    return '<div class="cell"><span class="k">' + key + "</span>" +
+    return '<div class="cell' + (highlight ? " key-metric" : "") + '"><span class="k">' + key + "</span>" +
       shown + (note ? '<span class="note">' + note + "</span>" : "") + "</div>";
   }
 
@@ -108,6 +108,7 @@
     document.title = gate.human.slice(0, 40) + " at " + label + " — Magic State Factory Catalog";
     document.getElementById("heading").textContent = short;
     document.getElementById("crumbs").innerHTML =
+      '<span><a href="index.html">Home</a></span>' +
       '<span><a href="index.html#parameters">Parameters</a></span>' +
       '<span><a href="' + C.paramsHref(p.n, p.k, p.d) + '">' + C.escapeHtml(label) + "</a></span>" +
       '<span class="mono">' + C.escapeHtml(record.id) + "</span>";
@@ -115,7 +116,24 @@
       "A <strong>" + C.escapeHtml(label) + "</strong> factory on <strong>" + p.N +
       "</strong> wires: <strong>" + p.k + "</strong> output " + (p.k === 1 ? "wire" : "wires") +
       " and <strong>" + p.r + "</strong> postselected " + (p.r === 1 ? "check" : "checks") +
-      ", consuming <strong>" + p.n + "</strong> noisy T states as π/4 parity rotations.";
+      ", consuming <strong>" + p.n + "</strong> noisy T states as π/4 parity rotations." +
+      '<span class="pills" style="margin-top:10px">' +
+      C.distanceTag({ d: p.d, d_is_exact: record.distance.is_exact }) + " " +
+      (record.provenance && record.provenance.discovery
+        ? '<span class="tag ' + (record.provenance.discovery === "AI search" ? "ai" : "pre") + '">' +
+          C.escapeHtml(record.provenance.discovery) + "</span> " : "") +
+      ((gate.monomials || []).length === p.k && (gate.monomials || []).every(function (t) { return t.length === 1; })
+        ? '<span class="tag pure">pure T</span>' : "") + "</span>";
+
+    /* Cells (filled squares) or digits: the same DOM, two stylesheets. */
+    var wrap = document.getElementById("matrix-wrap");
+    [["view-cells", true], ["view-digits", false]].forEach(function (pair) {
+      document.getElementById(pair[0]).addEventListener("click", function () {
+        wrap.classList.toggle("cells", pair[1]);
+        document.getElementById("view-cells").setAttribute("aria-pressed", String(pair[1]));
+        document.getElementById("view-digits").setAttribute("aria-pressed", String(!pair[1]));
+      });
+    });
 
     /* ------------------------------------------------------------ matrix */
     document.getElementById("matrix-caption").innerHTML =
@@ -160,18 +178,18 @@
       metric("k — outputs", p.k) +
       metric("d — distance", p.d, record.distance.is_exact
              ? "exact: proved clean below d, witnessed at d"
-             : "a proved floor: no harmful fault below d, none exhibited at d") +
+             : "a proved floor: no harmful fault below d, none exhibited at d", null, true) +
       metric("N — wires", p.N) +
       metric("r — checks", p.r) +
       metric("T-count", m.t_count, "exact minimal T-count of the deposited gate" +
-             (C.blank(m.t_count) ? "; not computable at this width" : "")) +
+             (C.blank(m.t_count) ? "; not computable at this width" : ""), null, true) +
       metric("phase-polynomial degree", m.poly_degree,
              "minimised over the output CNOT frame") +
       metric("V<sub>ex</sub>", m.v_ex, C.blank(m.v_ex)
              ? "has no value here: the gate's terms overlap, so no T-state yield is well defined"
              : "T states one run yields: T and CS count 1, CCZ 2", "not defined") +
       metric("γ<sub>ρ</sub> = log(n/V<sub>ex</sub>)/log d", C.num(m.gamma_rho, 4),
-             "the fair yield exponent across gates. Lower is better.", "not defined") +
+             "the fair yield exponent across gates. Lower is better.", "not defined", true) +
       metric("γ = log(n/k)/log d", C.num(m.gamma, 4),
              "distilling to error ε costs O(log<sup>γ</sup>(1/ε)) inputs, counted in output wires") +
       metric("γ<sub>T</sub> = log(n/T)/log d", C.num(m.gamma_t, 4), "the same, counted in T-cost") +
@@ -183,10 +201,12 @@
     var kinds = { 1: 0, 2: 0, 3: 0 };
     (gate.monomials || []).forEach(function (t) { kinds[t.length] += 1; });
     document.getElementById("gate-panel").innerHTML =
+      '<div class="gate-terms">' +
+        '<span class="term"><b>' + kinds[1] + "</b> T</span>" +
+        '<span class="term"><b>' + kinds[2] + "</b> CS</span>" +
+        '<span class="term"><b>' + kinds[3] + "</b> CCZ</span>" +
+        '<span class="term">on <b>' + p.k + "</b> output " + (p.k === 1 ? "wire" : "wires") + "</span></div>" +
       "<p><strong>As gates:</strong> <code class=\"wrap\">" + C.escapeHtml(gate.human) + "</code></p>" +
-      '<p class="small">' + kinds[1] + " T, " + kinds[2] + " CS and " + kinds[3] +
-      " CCZ " + ((gate.monomials || []).length === 1 ? "term" : "terms") + " on " + p.k +
-      " output " + (p.k === 1 ? "wire" : "wires") + ".</p>" +
       "<p><strong>As monomials:</strong> <code class=\"wrap\">" + C.escapeHtml(gate.string) + "</code>" +
       ' <span class="small muted">&mdash; output wires per term, terms separated by +</span></p>' +
       '<p class="small muted">This row stands for its whole class: every gate reachable from ' +
