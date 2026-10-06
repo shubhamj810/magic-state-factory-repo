@@ -300,6 +300,7 @@ def stitch(out: Path, files, stamp: dict, depth: int) -> None:
     footer = (TEMPLATES / "footer.html").read_text(encoding="utf-8") \
         .replace("{{logo}}", logo) \
         .replace("{{stamp}}", stamp_html)
+    version = asset_version(out)
     marker = re.compile(r"<!--#header ?([^>]*)-->")
     root = "../" * depth or "./"
     head_here = head.replace("<!--#root-->", f'<meta name="site-root" content="{root}">')
@@ -320,7 +321,23 @@ def stitch(out: Path, files, stamp: dict, depth: int) -> None:
         text = text.replace("<!--#head-->", head_here).replace("<!--#footer-->", footer.strip())
         if "<!--#" in text:
             raise ValueError(f"{page.name}: an unknown template marker is left")
+        text = _ASSET.sub(lambda m: f"{m.group(1)}?v={version}{m.group(2)}", text)
         page.write_text(relocate(text, depth), encoding="utf-8")
+
+
+_ASSET = re.compile(r'(\b(?:href|src)="(?:css|js)/[\w.-]+\.(?:css|js))(")')
+
+
+def asset_version(out: Path) -> str:
+    """A hash of the stylesheet and scripts, appended to their URLs.
+
+    GitHub Pages lets browsers keep a file for ten minutes; a new hash makes
+    every page ask for the new file at once, so a page and its scripts never
+    come from different builds."""
+    digest = hashlib.sha256()
+    for path in sorted((out / "css").glob("*.css")) + sorted((out / "js").glob("*.js")):
+        digest.update(path.name.encode() + b"\0" + path.read_bytes())
+    return digest.hexdigest()[:8]
 
 
 _RELATIVE = re.compile(r'(\b(?:href|src|action|data-href)=")(?!https?:|/|#|mailto:|data:|javascript:)')

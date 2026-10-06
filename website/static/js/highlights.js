@@ -77,11 +77,6 @@
     });
   }
 
-  function certNote(row) {
-    return row.certified ? '<span class="cert-note">distance certified by its source' +
-      (row.lower_bound ? " as a lower bound" : "") + "</span>" : "";
-  }
-
   function label(row) {             /* plain text, for SVG titles and aria labels */
     return "\u27e6" + row.n + ", " + row.k + ", " + row.d + "\u27e7";
   }
@@ -115,13 +110,20 @@
       })[0];
       var link = holder ? C.factoryHref(holder.id) : href(best);
       return '<tr class="clickable" data-href="' + link + '">' +
-        "<td>" + C.tex("d" + (best.lower_bound ? "\\ge " : "=") + group.d) + "</td>" +
         '<td><a href="' + link + '">' + C.paramsTex(best.n, best.k, best.d) + "</a></td>" +
-        '<td class="num">' + C.num(best.gamma_rho, 4) + "</td>" +
-        '<td class="num">' + best.v_ex_best + "</td>" +
-        '<td class="small muted">' + (best.certified ? "distance certified by its source" +
-          (best.lower_bound ? " as a lower bound" : "") : "") + "</td></tr>";
+        '<td class="num">' + C.num(best.gamma_rho, 4) + "</td>" + countCell(best) + "</tr>";
     }).join("");
+  }
+
+  /* k is already in the parameters; V_ex is not, so only the gamma_rho view
+   * gives it a column. */
+  function countCell(row) {
+    return M === METRICS.gamma ? "" : '<td class="num">' + row.v_ex_best + "</td>";
+  }
+
+  function tableHead() {
+    return '<tr><th scope="col">parameters</th><th class="num" scope="col">' + C.tex(M.sym) + "</th>" +
+      (M === METRICS.gamma ? "" : '<th class="num" scope="col">' + C.tex(M.count) + "</th>") + "</tr>";
   }
 
   /* --------------------------------------------------------- the headline */
@@ -137,11 +139,11 @@
         '<span class="t">' + title + "</span>" +
         '<span class="v">' + value + "</span>" +
         (row ? '<a class="l" href="' + href(row) + '">' + C.paramsTex(row.n, row.k, row.d) + "</a>" : "") +
-        (note ? '<span class="n">' + note + "</span>" : "") + (row ? certNote(row) : "") +
+        (note ? '<span class="n">' + note + "</span>" : "") +
         "</div>";
     }
     return cell("lowest " + C.tex(M.sym), C.tex(M.sym + "=" + C.num(best.gamma_rho, 4)), best,
-                C.tex(M.count + "=" + best.v_ex_best) + " " + M.countText) +
+                M === METRICS.gamma ? "" : C.tex(M.count + "=" + best.v_ex_best) + " " + M.countText) +
            cell("most " + M.countText, C.tex(M.count + "=" + widest.v_ex_best), widest, "") +
            cell("highest distance", C.tex("d" + (deepest.lower_bound ? "\\ge " : "=") + deepest.d), deepest, "");
   }
@@ -226,9 +228,9 @@
 
     var tableRows = panels.map(function (panel) {
       return panel.stair.map(function (p) {
-        return '<tr class="clickable" data-href="' + href(p) + '"><td>' + C.tex("d" + (p.lower_bound ? "\\ge " : "=") + panel.d) +
-          '</td><td class="num">' + p.n + '</td><td><a href="' + href(p) + '">' + C.paramsTex(p.n, p.k, p.d) + "</a></td>" +
-          '<td class="num">' + C.num(p.gamma_rho, 4) + '</td><td class="num">' + p.v_ex_best + "</td></tr>";
+        return '<tr class="clickable" data-href="' + href(p) + '"><td><a href="' + href(p) + '">' +
+          C.paramsTex(p.n, p.k, p.d) + "</a></td>" +
+          '<td class="num">' + C.num(p.gamma_rho, 4) + "</td>" + countCell(p) + "</tr>";
       }).join("");
     }).join("");
     return '<figure class="plot">' +
@@ -240,11 +242,9 @@
         '<button type="button" class="btn" id="plot-png">PNG</button></div>' +
       '<div class="plot-tip" id="plot-tip" role="status"></div>' +
       '<div class="panels">' + html + "</div>" +
-      '<div class="table-wrap plot-table" hidden><table><caption class="sr-only">The frontier points: ' +
-        "each lowers the best " + (M === METRICS.gamma ? "gamma" : "gamma_rho") + " at its distance.</caption><thead><tr><th scope=\"col\">distance</th>" +
-        '<th class="num" scope="col">' + C.tex("n") + '</th><th scope="col">parameters</th>' +
-        '<th class="num" scope="col">' + C.tex(M.sym) + '</th><th class="num" scope="col">' + C.tex(M.count) +
-        "</th></tr></thead><tbody>" + tableRows + "</tbody></table></div>" +
+      '<div class="table-wrap plot-table" hidden><table><caption class="sr-only">The frontier points, by distance: ' +
+        "each lowers the best " + (M === METRICS.gamma ? "gamma" : "gamma_rho") + " at its distance.</caption><thead>" + tableHead() +
+        "</thead><tbody>" + tableRows + "</tbody></table></div>" +
       "<figcaption>Inputs " + C.tex("n") + " on a log scale against " + C.tex(M.sym) +
       ", on axes shared by all panels. " +
       '<span class="key"><span class="key-dot"></span><span>parameter set</span></span>' +
@@ -340,6 +340,10 @@
       document.getElementById(pair[0]).addEventListener("click", function () {
         panelsNode.hidden = pair[1];
         tableNode.hidden = !pair[1];
+        /* set display too: the panel grid's own display would otherwise
+         * override [hidden] wherever the stylesheet lacks the rule for it */
+        panelsNode.style.display = pair[1] ? "none" : "";
+        tableNode.style.display = pair[1] ? "" : "none";
         document.getElementById("plot-view-plot").setAttribute("aria-pressed", String(!pair[1]));
         document.getElementById("plot-view-table").setAttribute("aria-pressed", String(pair[1]));
       });
@@ -379,10 +383,8 @@
     if (node) node.innerHTML = headline(p);
     var records = document.querySelector("#record-cards tbody");
     if (records) records.innerHTML = recordCards(p, index.factories || []);
-    var countHead = document.getElementById("rec-count-h");
-    if (countHead) countHead.innerHTML = C.tex(M.count);
-    var symHead = document.getElementById("rec-sym-h");
-    if (symHead) symHead.innerHTML = C.tex(M.sym);
+    var recordsHead = document.querySelector("#record-cards thead");
+    if (recordsHead) recordsHead.innerHTML = tableHead();
     var intro = document.getElementById("best-intro");
     if (intro) {
       intro.innerHTML = metric === "gamma"

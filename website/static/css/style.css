@@ -588,7 +588,6 @@ footer.site code { color: #dfe3fa; }
 .community p { margin: 0; flex: 1 1 300px; font: 16px/1.5 var(--serif); color: var(--hero-text); }
 .btn.ghost { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.45); }
 .btn.ghost:hover { border-color: #fff; background: rgba(255, 255, 255, 0.06); }
-.cert-note { display: block; font-size: 12px; color: var(--text-dim); margin-top: 4px; font-style: italic; }
 
 /* ------------------------------------------------------- factory pages */
 .label-h { font-family: var(--mono); font-weight: 500; letter-spacing: -0.01em; }
@@ -689,3 +688,5 @@ tr.preview .swatch { display: inline-block; width: 10px; height: 10px; border-ra
 [hidden] { display: none !important; }
 .best-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
 .best-head h2 { margin-bottom: 6px; }
+.records-wrap, .plot-table { width: fit-content; max-width: 100%; }
+.records-table, .plot-table table { width: auto; min-width: min(100%, 420px); }

@@ -145,7 +145,8 @@ class TheBuiltSite(unittest.TestCase):
                 self.assertNotIn("<!--#", text)
                 self.assertEqual(text.count('<header class="site">'), 1)
                 self.assertEqual(text.count('<footer class="site">'), 1)
-                self.assertIn('href="css/style.css"', text)
+                self.assertRegex(text, r'href="css/style\.css\?v=[0-9a-f]{8}"')
+                self.assertNotRegex(text, r'(?:href|src)="(?:css|js)/[^"?]+"')   # every asset is versioned
                 self.assertNotIn("data-page=", text)
                 marked = re.findall(r'aria-current="page">([^<]+)<', text)
                 self.assertEqual(marked, [current[page.name]] if page.name in current else [])
