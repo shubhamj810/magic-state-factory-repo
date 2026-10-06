@@ -226,13 +226,24 @@
         " parameter sets, best " + C.num(best.gamma_rho, 3) + " at " + label(best) + '">' + parts.join("") + "</svg>";
     }).join("");
 
-    var tableRows = panels.map(function (panel) {
-      return panel.stair.map(function (p) {
-        return '<tr class="clickable" data-href="' + href(p) + '"><td><a href="' + href(p) + '">' +
+    var tableRows = [];
+    panels.forEach(function (panel) {
+      panel.stair.forEach(function (p) {
+        tableRows.push('<tr class="clickable" data-href="' + href(p) + '"><td><a href="' + href(p) + '">' +
           C.paramsTex(p.n, p.k, p.d) + "</a></td>" +
-          '<td class="num">' + C.num(p.gamma_rho, 4) + "</td>" + countCell(p) + "</tr>";
-      }).join("");
-    }).join("");
+          '<td class="num">' + C.num(p.gamma_rho, 4) + "</td>" + countCell(p) + "</tr>");
+      });
+    });
+    /* The frontier is a long, narrow list, so it is cut into side-by-side
+     * blocks that read down, then across, in order of distance then n. */
+    var BLOCKS = 3, per = Math.ceil(tableRows.length / BLOCKS), blocks = [];
+    for (var b = 0; b < tableRows.length; b += per) {
+      blocks.push('<div class="table-wrap"><table>' +
+        (b ? "" : '<caption class="sr-only">The frontier points, by distance: each lowers the best ' +
+                  (M === METRICS.gamma ? "gamma" : "gamma_rho") + " at its distance.</caption>") +
+        "<thead>" + tableHead() + "</thead><tbody>" + tableRows.slice(b, b + per).join("") +
+        "</tbody></table></div>");
+    }
     return '<figure class="plot">' +
       '<div class="plot-bar">' +
         '<div class="seg" role="group" aria-label="view"><button type="button" id="plot-view-plot" aria-pressed="true">Plot</button>' +
@@ -242,9 +253,7 @@
         '<button type="button" class="btn" id="plot-png">PNG</button></div>' +
       '<div class="plot-tip" id="plot-tip" role="status"></div>' +
       '<div class="panels">' + html + "</div>" +
-      '<div class="table-wrap plot-table" hidden><table><caption class="sr-only">The frontier points, by distance: ' +
-        "each lowers the best " + (M === METRICS.gamma ? "gamma" : "gamma_rho") + " at its distance.</caption><thead>" + tableHead() +
-        "</thead><tbody>" + tableRows + "</tbody></table></div>" +
+      '<div class="plot-table" hidden>' + blocks.join("") + "</div>" +
       "<figcaption>Inputs " + C.tex("n") + " on a log scale against " + C.tex(M.sym) +
       ", on axes shared by all panels. " +
       '<span class="key"><span class="key-dot"></span><span>parameter set</span></span>' +
@@ -348,7 +357,7 @@
         document.getElementById("plot-view-table").setAttribute("aria-pressed", String(pair[1]));
       });
     });
-    C.clickableRows(tableNode.querySelector("tbody"));
+    C.clickableRows(tableNode);
     document.getElementById("plot-svg").addEventListener("click", function () {
       C.download("gamma-rho-frontier.svg", composedSvg(figure), "image/svg+xml");
     });
@@ -388,9 +397,10 @@
     var intro = document.getElementById("best-intro");
     if (intro) {
       intro.innerHTML = metric === "gamma"
-        ? "Lowest " + C.tex("\\gamma=\\log(n/k)/\\log d") + " among pure " + C.tex("T^{\\otimes k}") + " factories. " + '<a href="about.html#numbers">What this measures</a>'
+        ? "Lowest " + C.tex("\\gamma=\\log(n/k)/\\log d") + " among pure " + C.tex("T^{\\otimes k}") + " factories, " +
+          "with one row per distance in the table. " + '<a href="about.html#numbers">What this measures</a>'
         : "Lowest " + C.tex("\\gamma_\\rho=\\log(n/V_{\\mathrm{ex}})/\\log d") + " across every gate, " +
-          "counting the T states a run yields. " + '<a href="about.html#numbers">What this measures</a>';
+          "counting the T states a run yields, with one row per distance in the table. " + '<a href="about.html#numbers">What this measures</a>';
     }
     var plotNode = document.getElementById("frontier-plot");
     if (plotNode) plotNode.innerHTML = plot(p);

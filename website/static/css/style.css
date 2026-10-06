@@ -688,5 +688,8 @@ tr.preview .swatch { display: inline-block; width: 10px; height: 10px; border-ra
 [hidden] { display: none !important; }
 .best-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
 .best-head h2 { margin-bottom: 6px; }
-.records-wrap, .plot-table { width: fit-content; max-width: 100%; }
-.records-table, .plot-table table { width: auto; min-width: min(100%, 420px); }
+.records-wrap { width: fit-content; max-width: 100%; }
+.records-table { width: auto; min-width: min(100%, 420px); }
+.plot-table { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 32px; align-items: start; }
+.plot-table table { width: 100%; }
+@media (max-width: 900px) { .plot-table { grid-template-columns: 1fr; } }
