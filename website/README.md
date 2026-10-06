@@ -57,8 +57,11 @@ Each factory page has:
 The search page shows each active filter as a removable chip, and counts how many
 results each filter value would give. A column chooser hides or shows columns
 (T-count is off by default), and every row can preview its matrix inline. `/`
-focuses the search box on any page. The frontier plot switches to a table of its
-frontier points and exports to SVG and PNG.
+focuses the search box on any page. The landing page ranks by γ among pure
+T⊗k factories by default, and by γ_ρ across every gate at the flip of a
+switch; the best-factories figures, the records table and the frontier all
+follow it. The frontier plot switches to a table of its frontier points and
+exports to SVG and PNG.
 [`CITATION.cff`](../CITATION.cff) at the repository root gives GitHub's
 "Cite this repository" button and describes releases archived on Zenodo.
 
@@ -125,7 +128,7 @@ only these, each a one-line function of fields the catalogue already verified:
 | `gamma` | `log(n/k) / log d` |
 | `gamma_t` | `log(n/T-count) / log d` |
 | `V_ex` | T states one run yields: T and CS count 1, CCZ 2, and **undefined** when the gate's terms share an output |
-| `gamma_rho` | `log(n/V_ex) / log d`; the landing page ranks on this |
+| `gamma_rho` | `log(n/V_ex) / log d`; the landing page can rank on this |
 
 It also checks every row on the way through. The build fails if any of these
 does not hold:
@@ -178,7 +181,8 @@ rendered page against counts it computes itself:
 - the CSV export;
 - the hero matrix, the plot tooltip, and that KaTeX typeset the maths;
 - the search chips, a filter count, the column chooser and an inline preview;
-- the frontier table against the frontier recomputed in Python, and that the SVG
+- the frontier table, under both rankings, against the frontier recomputed in
+  Python, that Plot and Table each hide the other, and that the SVG
   export holds every plotted point;
 - a proved upper bound on a factory page;
 - the new addresses: old links redirect, and a factory page renders its title

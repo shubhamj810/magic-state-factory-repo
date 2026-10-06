@@ -51,6 +51,13 @@ class _Quiet(http.server.SimpleHTTPRequestHandler):
         pass
 
 
+def _ranked_value(p, metric):
+    """What the landing page ranks a parameter set on (see highlights.js)."""
+    if metric == "gamma":
+        return p["gamma_claim"] if p.get("has_pure") else None
+    return p["gamma_rho_claim"]
+
+
 @contextlib.contextmanager
 def serve(directory: Path):
     """The built site on a free port, for as long as the block runs."""
@@ -197,13 +204,18 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
                        "index.html: KaTeX did not load, so the maths is shown as TeX source")
         failures.check(page.query_selector("#frontier-plot svg") is not None,
                        "index.html: the frontier plot did not render")
-        claimed = {p["d_claim"] for p in parameters if p["comparable"]}
-        failures.check(len(page.query_selector_all("#record-cards tbody tr")) == len(claimed),
-                       f"index.html: expected one record card per claimed distance {sorted(claimed)}")
-        best_claim = min((p for p in parameters if p["gamma_rho_claim"] is not None),
-                         key=lambda p: p["gamma_rho_claim"])
-        failures.check(f"{best_claim['gamma_rho_claim']:.4f}" in page.inner_text("#headline-stats"),
-                       f"index.html: headline does not show the best claim {best_claim['gamma_rho_claim']:.4f}")
+        # the landmarks rank by gamma over pure T^k (default) or gamma_rho over all gates
+        for metric, button in (("gamma", None), ("rho", "#metric-switch [data-metric=rho]")):
+            if button:
+                page.click(button)
+            ranked = [p for p in parameters if _ranked_value(p, metric) is not None]
+            claimed = {p["d_claim"] for p in ranked}
+            failures.check(len(page.query_selector_all("#record-cards tbody tr")) == len(claimed),
+                           f"index.html [{metric}]: expected one record row per claimed distance {sorted(claimed)}")
+            best_claim = min(_ranked_value(p, metric) for p in ranked)
+            failures.check(f"{best_claim:.4f}" in page.inner_text("#headline-stats"),
+                           f"index.html [{metric}]: headline does not show the best claim {best_claim:.4f}")
+        page.click("#metric-switch [data-metric=gamma]")
         failures.check(page.query_selector("#cite-list") is None or
                        len(page.query_selector_all("#cite-list li")) >= 1,
                        "index.html: the how-to-cite list is empty")
@@ -425,19 +437,25 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
 
         # ------------------------------------------ the frontier: table and export
         visit("", "index.html plot tools", "#frontier-plot svg")
-        stairs = 0
-        for dc in {p["d_claim"] for p in parameters if p["comparable"]}:
-            pts = sorted((p for p in parameters if p["comparable"] and p["d_claim"] == dc
-                          and p["gamma_rho_claim"] is not None),
-                         key=lambda p: (p["n"], p["gamma_rho_claim"]))
-            best = float("inf")
-            for p in pts:
-                if p["gamma_rho_claim"] < best:
-                    best, stairs = p["gamma_rho_claim"], stairs + 1
-        page.click("#plot-view-table")
-        rows_shown = len(page.query_selector_all(".plot-table tbody tr"))
-        failures.check(rows_shown == stairs,
-                       f"index.html: the frontier table has {rows_shown} rows, the frontier has {stairs} points")
+        for metric in ("rho", "gamma"):
+            page.click(f"#metric-switch [data-metric={metric}]")
+            stairs = 0
+            ranked = [p for p in parameters if _ranked_value(p, metric) is not None]
+            for dc in {p["d_claim"] for p in ranked}:
+                best = float("inf")
+                for p in sorted((p for p in ranked if p["d_claim"] == dc),
+                                key=lambda p: (p["n"], _ranked_value(p, metric))):
+                    if _ranked_value(p, metric) < best:
+                        best, stairs = _ranked_value(p, metric), stairs + 1
+            page.click("#plot-view-table")
+            rows_shown = len(page.query_selector_all(".plot-table tbody tr"))
+            failures.check(rows_shown == stairs,
+                           f"index.html [{metric}]: the frontier table has {rows_shown} rows, the frontier has {stairs} points")
+            failures.check(page.is_visible(".plot-table") and not page.is_visible("#frontier-plot .panels"),
+                           f"index.html [{metric}]: the Table view does not replace the plot")
+            page.click("#plot-view-plot")
+            failures.check(page.is_visible("#frontier-plot .panels") and not page.is_visible(".plot-table"),
+                           f"index.html [{metric}]: the Plot view does not replace the table")
         with page.expect_download() as info:
             page.click("#plot-svg")
         from xml.etree import ElementTree

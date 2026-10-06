@@ -49,23 +49,28 @@
 </section>
 
 <main id="main">
-  <h2 id="best">Best factories</h2>
-  <p class="section-intro">Lowest <span class="tex">\gamma_\rho</span>, the input overhead per
-  extractable T state. <a href="about.html#numbers">What this measures</a></p>
+  <div class="best-head">
+    <h2 id="best">Best factories</h2>
+    <div class="seg" id="metric-switch" role="group" aria-label="rank by">
+      <button type="button" data-metric="gamma" aria-pressed="true">pure <span class="tex">T^{\otimes k}</span>, <span class="tex">\gamma</span></button>
+      <button type="button" data-metric="rho" aria-pressed="false">all gates, <span class="tex">\gamma_\rho</span></button>
+    </div>
+  </div>
+  <p class="section-intro" id="best-intro"></p>
   <div class="headline" id="headline-stats"></div>
   <div class="table-wrap records-wrap">
     <table class="records-table" id="record-cards">
       <caption class="sr-only">The lowest gamma_rho at each distance.</caption>
       <thead><tr><th scope="col"><span class="tex">d</span></th><th scope="col">factory</th>
-      <th class="num" scope="col"><span class="tex">\gamma_\rho</span></th>
-      <th class="num" scope="col"><span class="tex">V_{\mathrm{ex}}</span></th><th scope="col"></th></tr></thead>
+      <th class="num" scope="col" id="rec-sym-h"><span class="tex">\gamma</span></th>
+      <th class="num" scope="col" id="rec-count-h"><span class="tex">k</span></th><th scope="col"></th></tr></thead>
       <tbody></tbody>
     </table>
   </div>
 
   <h2 id="frontier">Frontier</h2>
-  <p class="section-intro">The lowest <span class="tex">\gamma_\rho</span> with at most
-  <span class="tex">n</span> inputs, by distance.</p>
+  <p class="section-intro">The lowest <span id="frontier-sym"><span class="tex">\gamma</span></span> with at most
+  <span class="tex">n</span> inputs, by distance. The switch above chooses the measure.</p>
   <div id="frontier-plot"></div>
 
   <h2 id="parameters">Browse by parameters</h2>

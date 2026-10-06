@@ -248,6 +248,8 @@ def parameter_groups(factories: list[dict]) -> list[dict]:
                                    if m["d_cert"] == d_claim), True) if d_claim > d else None,
             "gamma_claim": exponent(n, k, d_claim),
             "gamma_rho_claim": min(claims) if claims else None,
+            # the landing page can also rank by plain gamma, among pure T^k gates only
+            "has_pure": any(m["pure_t"] for m in members),
             "N_min": min(m["N"] for m in members),
             "ids": [m["id"] for m in members],
         })

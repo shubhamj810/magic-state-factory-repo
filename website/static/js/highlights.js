@@ -6,17 +6,19 @@
  * hand-maintained, so a landmark cannot drift out of step with the catalogue it
  * describes: reseed the data, rebuild the index, and these move with it.
  *
- * These rank on gamma_rho = log(n/V_ex)/log(d), NOT on gamma = log(n/k)/log(d),
- * and the distinction is the whole reason this file is careful.  gamma counts
- * output WIRES, so it is not comparable between gates: a CCZ occupies three
- * wires and is worth two T states, which flatters it by half again, and a gate
- * whose monomials OVERLAP has no extractable T count at all.  Ranked on gamma
- * the catalogue's apparent champion is a CCZ web at gamma 0.80 -- a number that
- * cannot be compared with anything and must never be quoted as a record.
- * Ranked honestly on gamma_rho the leader is a pure-T circuit at 1.0566.
+ * A switch picks the ranking, and the distinction is the whole reason this
+ * file is careful.  gamma = log(n/k)/log(d) counts output WIRES, so it is not
+ * comparable between gates: a CCZ occupies three wires and is worth two T
+ * states, which flatters it by half again.  Ranked on gamma over every gate the
+ * apparent champion is a CCZ web at 0.80 -- a number that must never be quoted
+ * as a record.  So the two rankings are:
  *
- * So: parameter sets whose gates overlap are excluded from every landmark here,
- * and the plot says how many it dropped and why.  LOWER IS BETTER throughout.
+ *   gamma     (default)  only parameter sets holding a pure T^k gate, where k
+ *                        wires are k T states and gamma is unambiguous;
+ *   gamma_rho            log(n/V_ex)/log(d) over every gate, excluding those
+ *                        whose monomials OVERLAP (they have no V_ex).
+ *
+ * Whatever is excluded, the plot says how many and why.  LOWER IS BETTER.
  */
 (function (global) {
   "use strict";
@@ -52,11 +54,25 @@
     return C.paramsHref(row.n, row.k, row.d_verified || row.d);
   }
 
-  function claims(parameters) {
+  /* The two rankings the landing page offers.  Each fills the same fields the
+   * code below reads -- `gamma_rho` (the value ranked), `v_ex_best` (the count
+   * beside it) and `comparable` -- so only the wording depends on the choice.
+   *   gamma : log(n/k)/log d, among parameter sets holding a pure T^k gate,
+   *           where it is unambiguous and equals gamma_rho;
+   *   rho   : log(n/V_ex)/log d, across every gate with a defined V_ex. */
+  var METRICS = {
+    gamma: { sym: "\\gamma", count: "k", countText: "outputs" },
+    rho: { sym: "\\gamma_\\rho", count: "V_{\\mathrm{ex}}", countText: "T states per run" }
+  };
+  var M = METRICS.gamma;
+
+  function claims(parameters, metric) {
     return parameters.map(function (p) {
+      var value = metric === "gamma" ? (p.has_pure ? p.gamma_claim : null) : p.gamma_rho_claim;
       return Object.assign({}, p, {
-        d_verified: p.d, d: p.d_claim, gamma_rho: p.gamma_rho_claim, certified: p.d_claim_certified,
-        lower_bound: p.d_claim_certified && p.d_claim_exact === false
+        d_verified: p.d, d: p.d_claim, gamma_rho: value, comparable: value !== null && value !== undefined,
+        v_ex_best: metric === "gamma" ? p.k : p.v_ex_best,
+        certified: p.d_claim_certified, lower_bound: p.d_claim_certified && p.d_claim_exact === false
       });
     });
   }
@@ -94,7 +110,8 @@
       /* the factory in that parameter set that holds the record */
       var holder = factories.filter(function (f) {
         return f.n === best.n && f.k === best.k && f.d === best.d_verified &&
-               f.gamma_rho_claim !== null && Math.abs(f.gamma_rho_claim - best.gamma_rho) < 1e-12;
+               (M === METRICS.gamma ? f.pure_t && Math.abs(f.gamma_claim - best.gamma_rho) < 1e-12
+                                    : f.gamma_rho_claim !== null && Math.abs(f.gamma_rho_claim - best.gamma_rho) < 1e-12);
       })[0];
       var link = holder ? C.factoryHref(holder.id) : href(best);
       return '<tr class="clickable" data-href="' + link + '">' +
@@ -123,9 +140,9 @@
         (note ? '<span class="n">' + note + "</span>" : "") + (row ? certNote(row) : "") +
         "</div>";
     }
-    return cell("least " + C.tex(C.TEX.gr), C.tex(C.TEX.gr + "=" + C.num(best.gamma_rho, 4)), best,
-                C.tex(C.TEX.vex + "=" + best.v_ex_best) + " T states per run") +
-           cell("most T states per run", C.tex(C.TEX.vex + "=" + widest.v_ex_best), widest, "") +
+    return cell("lowest " + C.tex(M.sym), C.tex(M.sym + "=" + C.num(best.gamma_rho, 4)), best,
+                C.tex(M.count + "=" + best.v_ex_best) + " " + M.countText) +
+           cell("most " + M.countText, C.tex(M.count + "=" + widest.v_ex_best), widest, "") +
            cell("highest distance", C.tex("d" + (deepest.lower_bound ? "\\ge " : "=") + deepest.d), deepest, "");
   }
 
@@ -203,7 +220,7 @@
                  (rows.length === 1 ? " set" : " sets") + "</text>");
       panels.push({ d: group.d, pts: rows, stair: stair });
       return '<svg class="panel-svg" data-panel="' + (panels.length - 1) + '" viewBox="0 0 ' + W + " " + H +
-        '" role="img" aria-label="gamma_rho against n at distance ' + group.d + ": " + rows.length +
+        '" role="img" aria-label="' + (M === METRICS.gamma ? "gamma" : "gamma_rho") + ' against n at distance ' + group.d + ": " + rows.length +
         " parameter sets, best " + C.num(best.gamma_rho, 3) + " at " + label(best) + '">' + parts.join("") + "</svg>";
     }).join("");
 
@@ -224,18 +241,19 @@
       '<div class="plot-tip" id="plot-tip" role="status"></div>' +
       '<div class="panels">' + html + "</div>" +
       '<div class="table-wrap plot-table" hidden><table><caption class="sr-only">The frontier points: ' +
-        "each lowers the best gamma_rho at its distance.</caption><thead><tr><th scope=\"col\">distance</th>" +
+        "each lowers the best " + (M === METRICS.gamma ? "gamma" : "gamma_rho") + " at its distance.</caption><thead><tr><th scope=\"col\">distance</th>" +
         '<th class="num" scope="col">' + C.tex("n") + '</th><th scope="col">parameters</th>' +
-        '<th class="num" scope="col">' + C.tex(C.TEX.gr) + '</th><th class="num" scope="col">' + C.tex(C.TEX.vex) +
+        '<th class="num" scope="col">' + C.tex(M.sym) + '</th><th class="num" scope="col">' + C.tex(M.count) +
         "</th></tr></thead><tbody>" + tableRows + "</tbody></table></div>" +
-      "<figcaption>Inputs " + C.tex("n") + " on a log scale against " + C.tex(C.TEX.gr) +
+      "<figcaption>Inputs " + C.tex("n") + " on a log scale against " + C.tex(M.sym) +
       ", on axes shared by all panels. " +
       '<span class="key"><span class="key-dot"></span><span>parameter set</span></span>' +
-      '<span class="key"><span class="stair-key"></span><span>lowest ' + C.tex(C.TEX.gr) + " up to this " + C.tex("n") + '</span></span>' +
-      '<span class="key"><span class="unity-key"></span><span>' + C.tex(C.TEX.gr + "=1") + '</span></span>' +
+      '<span class="key"><span class="stair-key"></span><span>lowest ' + C.tex(M.sym) + " up to this " + C.tex("n") + '</span></span>' +
+      '<span class="key"><span class="unity-key"></span><span>' + C.tex(M.sym + "=1") + '</span></span>' +
       "<br>Hover over a point for details, or click it to open." +
-      (skipped ? " " + skipped + " parameter set" + (skipped === 1 ? " is" : "s are") +
-                 " left out because their gates have no " + C.tex(C.TEX.vex) + "." : "") +
+      (skipped ? " " + skipped + " parameter set" + (skipped === 1 ? " is" : "s are") + " left out because " +
+                 (M === METRICS.gamma ? "they hold no pure " + C.tex("T^{\\otimes k}") + " gate."
+                                      : "their gates have no " + C.tex(C.TEX.vex) + ".") : "") +
       "</figcaption></figure>";
   }
 
@@ -271,8 +289,8 @@
         tip.style.left = (box.left - fig.left + p._x * box.width / W) + "px";
         tip.style.top = (box.top - fig.top + p._y * box.height / H) + "px";
         tip.innerHTML = "<b>" + C.paramsTex(p.n, p.k, p.d) + "</b>" +
-          '<div class="row"><span>' + C.tex(C.TEX.gr) + "</span><span>" + C.num(p.gamma_rho, 4) + "</span></div>" +
-          '<div class="row"><span>' + C.tex(C.TEX.vex) + "</span><span>" + p.v_ex_best + "</span></div>" +
+          '<div class="row"><span>' + C.tex(M.sym) + "</span><span>" + C.num(p.gamma_rho, 4) + "</span></div>" +
+          '<div class="row"><span>' + C.tex(M.count) + "</span><span>" + p.v_ex_best + "</span></div>" +
           '<div class="row"><span>gates</span><span>' + p.count + "</span></div>" +
           (p._front ? '<div class="hint">on the frontier</div>' : "") +
           (p.certified ? '<div class="hint">distance certified by its source</div>' : "");
@@ -312,7 +330,7 @@
       out += '<g transform="translate(' + (i % per) * W + "," + Math.floor(i / per) * H + ')">' + clone.innerHTML + "</g>";
     });
     out += '<text x="8" y="' + (rows * H + 17) + '" style="font:11px sans-serif;fill:' + ink + '">' +
-      "gamma_rho frontier by distance. Magic State Factory Catalog, " + new Date().toISOString().slice(0, 10) + "</text></svg>";
+      (M === METRICS.gamma ? "gamma (pure T^k)" : "gamma_rho") + " frontier by distance. Magic State Factory Catalog, " + new Date().toISOString().slice(0, 10) + "</text></svg>";
     return out;
   }
 
@@ -354,24 +372,46 @@
 
   /* ------------------------------------------------------------------ mount */
 
-  function mount(index) {
-    var p = claims(index.parameters || []);
-    var slots = {
-      "headline-stats": headline(p),
-      "record-cards": null,
-      "frontier-plot": plot(p)
-    };
-    Object.keys(slots).forEach(function (id) {
-      var node = document.getElementById(id);
-      if (node && slots[id] !== null) node.innerHTML = slots[id];
-    });
+  function draw(index, metric) {
+    M = METRICS[metric];
+    var p = claims(index.parameters || [], metric);
+    var node = document.getElementById("headline-stats");
+    if (node) node.innerHTML = headline(p);
     var records = document.querySelector("#record-cards tbody");
-    if (records) {
-      records.innerHTML = recordCards(p, index.factories || []);
-      C.clickableRows(records);
+    if (records) records.innerHTML = recordCards(p, index.factories || []);
+    var countHead = document.getElementById("rec-count-h");
+    if (countHead) countHead.innerHTML = C.tex(M.count);
+    var symHead = document.getElementById("rec-sym-h");
+    if (symHead) symHead.innerHTML = C.tex(M.sym);
+    var intro = document.getElementById("best-intro");
+    if (intro) {
+      intro.innerHTML = metric === "gamma"
+        ? "Lowest " + C.tex("\\gamma=\\log(n/k)/\\log d") + " among pure " + C.tex("T^{\\otimes k}") + " factories. " + '<a href="about.html#numbers">What this measures</a>'
+        : "Lowest " + C.tex("\\gamma_\\rho=\\log(n/V_{\\mathrm{ex}})/\\log d") + " across every gate, " +
+          "counting the T states a run yields. " + '<a href="about.html#numbers">What this measures</a>';
     }
+    var plotNode = document.getElementById("frontier-plot");
+    if (plotNode) plotNode.innerHTML = plot(p);
+    var frontierSym = document.getElementById("frontier-sym");
+    if (frontierSym) frontierSym.innerHTML = C.tex(M.sym);
     var figure = document.querySelector("#frontier-plot figure.plot");
     if (figure) { wirePlot(figure); wireTools(figure); C.renderTex(figure); }
+  }
+
+  function mount(index) {
+    var records = document.querySelector("#record-cards tbody");
+    if (records) C.clickableRows(records);
+    var current = "gamma";
+    draw(index, current);
+    document.querySelectorAll("#metric-switch button[data-metric]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        current = b.getAttribute("data-metric");
+        document.querySelectorAll("#metric-switch button").forEach(function (x) {
+          x.setAttribute("aria-pressed", String(x === b));
+        });
+        draw(index, current);
+      });
+    });
   }
 
   global.Highlights = { mount: mount };
