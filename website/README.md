@@ -13,8 +13,9 @@ master_catalog/master_catalog.json          813 rows, columns included
             |  website/build_site.py         standard library only, ~1 s
             v
 website/_site/                               (git-ignored; built in CI)
-  index.html          landing: search, best factories, frontier, parameter table
-  about.html          what the numbers mean, how each is obtained, labels, citing, data, contributing
+  index.html          landing: search, what the catalogue offers, best factories, frontier, parameter table
+  about.html          what the numbers mean, how each is obtained, citing, data
+  contribute.html     a step-by-step guide to contributing, ending with an email address
   search.html         every factory: filters, typed queries, sort, CSV/JSON export
   f/<label>/          one static page per factory, e.g. f/15.1.3.a/
   p/<n>.<k>.<d>/      one static page per parameter set, e.g. p/15.1.3/
@@ -71,8 +72,9 @@ exports to SVG and PNG.
 every page shares: the `<head>`, the header and the footer. A page marks their
 places with `<!--#head-->`, `<!--#header PAGE-->` and `<!--#footer-->`, and
 the build stitches them in. `PAGE` names the nav link to mark as current; add
-`nosearch` to drop the header's search box. The build also writes the
-catalogue commit into the footer.
+`nosearch` to drop the header's search box. The build also appends a hash of
+the stylesheet and scripts to their URLs, so a deploy is never mixed with a
+browser's cached copy. The catalogue commit is recorded in `data/index.json`.
 
 The look comes from [`static/css/style.css`](static/css/style.css). Headings
 and prose are set in Source Serif 4. Tables and controls use IBM Plex Sans with

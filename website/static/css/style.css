@@ -484,7 +484,7 @@ ol.refs { margin: 0; padding-left: 22px; font-size: 14px; }
 ol.refs li { margin-bottom: 10px; }
 ol.refs li::marker { color: var(--text-dim); }
 pre.raw { margin: 0; padding: 14px; overflow-x: auto; font-size: 12px;
-          background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; }
+          background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius); }
 details > summary { cursor: pointer; font-size: 13.5px; color: var(--brand); font-weight: 500; }
 details[open] > summary { margin-bottom: 10px; }
 code.wrap { word-break: break-all; white-space: normal; background: var(--surface-2); padding: 1px 5px; border-radius: 4px; }
@@ -525,9 +525,6 @@ footer.site a:hover { color: #fff; }
 footer.site ul { list-style: none; margin: 0; padding: 0; }
 footer.site li { margin-bottom: 6px; }
 footer.site .brand { margin-bottom: 10px; }
-footer.site .fine { grid-column: 1 / -1; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 18px;
-                    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-size: 12.5px; }
-footer.site code { color: #dfe3fa; }
 
 /* ------------------------------------------------------------ responsive */
 @media (max-width: 1000px) {
@@ -622,14 +619,14 @@ main.guide { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 48
 nav.toc { position: sticky; top: 84px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; padding-top: 52px; }
 nav.toc a { color: var(--text-dim); }
 nav.toc a:hover { color: var(--brand); }
-main.guide .prose { max-width: 68ch; }
+main.guide .prose { max-width: 68ch; min-width: 0; }  /* lets a wide <pre> scroll inside, not the page */
 main.guide .prose p, main.guide .prose li { font-size: 16.5px; line-height: 1.65; }
 main.guide h2:first-child { margin-top: 24px; }
 
 @media (max-width: 1000px) {
   .entry-grid { grid-template-columns: 1fr; gap: 0; }
   aside.side { position: static; border-top: 1px solid var(--border); margin-top: 32px; }
-  main.guide { grid-template-columns: 1fr; gap: 0; }
+  main.guide { grid-template-columns: minmax(0, 1fr); gap: 0; }
   nav.toc { position: static; flex-direction: row; flex-wrap: wrap; gap: 6px 14px; padding-top: 8px; }
 }
 
@@ -693,3 +690,18 @@ tr.preview .swatch { display: inline-block; width: 10px; height: 10px; border-ra
 .plot-table { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 32px; align-items: start; }
 .plot-table table { width: 100%; }
 @media (max-width: 900px) { .plot-table { grid-template-columns: 1fr; } }
+
+/* the landing page's summary of what the catalogue offers: a plain list in
+ * three columns, hairlines only */
+dl.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 32px; margin: 0 0 44px; }
+dl.features > div { padding: 14px 0 16px; border-top: 1px solid var(--border); }
+dl.features dt { font-weight: 600; font-size: 14.5px; color: var(--text); margin-bottom: 4px; }
+dl.features dd { margin: 0; font: 15.5px/1.55 var(--serif); color: var(--text-dim); }
+@media (max-width: 900px) { dl.features { grid-template-columns: 1fr; } }
+/* contribute.html: numbered steps */
+ol.steps { list-style: none; counter-reset: step; padding: 0; margin: 0; }
+ol.steps > li { counter-increment: step; position: relative; padding: 0 0 6px 40px; }
+ol.steps > li > h2 { margin-top: 30px; position: relative; }
+ol.steps > li > h2::before { content: counter(step); position: absolute; left: -40px; top: 0.1em; width: 26px; height: 26px;
+  border: 1px solid var(--border); border-radius: var(--radius); font: 600 14px/24px var(--sans);
+  text-align: center; color: var(--text-dim); }

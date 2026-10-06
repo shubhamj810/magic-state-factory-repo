@@ -275,31 +275,21 @@ def source_stamp(catalog_path: Path) -> dict:
     return {"commit": commit or None, "date": date or None}
 
 
-def render_pages(out: Path, stamp: dict) -> None:
-    stitch(out, list(out.glob("*.html")), stamp, depth=0)
+def render_pages(out: Path) -> None:
+    stitch(out, list(out.glob("*.html")), depth=0)
 
 
-def stitch(out: Path, files, stamp: dict, depth: int) -> None:
+def stitch(out: Path, files, depth: int) -> None:
     """Stitch the shared head, header and footer into every page.
 
     A page marks where they go with ``<!--#head-->``, ``<!--#header PAGE-->``
     and ``<!--#footer-->``.  ``PAGE`` names the nav link to mark current; a
     page that has its own search box adds ``nosearch`` to drop the header's.
-    The footer's data stamp is written here, so no page fetches the index just
-    to print a commit hash.
     """
     logo = (TEMPLATES / "logo.svg").read_text(encoding="utf-8").strip()
     head = (TEMPLATES / "head.html").read_text(encoding="utf-8").strip()
     header = (TEMPLATES / "header.html").read_text(encoding="utf-8").replace("{{logo}}", logo)
-    commit, date = stamp.get("commit"), stamp.get("date")
-    stamp_html = ('Data: <a href="https://github.com/shubhamj810/magic-state-factory-repo/'
-                  'blob/main/master_catalog/master_catalog.json">master_catalog.json</a>'
-                  + (f' at <a href="https://github.com/shubhamj810/magic-state-factory-repo/'
-                     f'commit/{commit}"><code>{commit}</code></a>' if commit else "")
-                  + (f" ({date})" if date else "") + ".")
-    footer = (TEMPLATES / "footer.html").read_text(encoding="utf-8") \
-        .replace("{{logo}}", logo) \
-        .replace("{{stamp}}", stamp_html)
+    footer = (TEMPLATES / "footer.html").read_text(encoding="utf-8").replace("{{logo}}", logo)
     version = asset_version(out)
     marker = re.compile(r"<!--#header ?([^>]*)-->")
     root = "../" * depth or "./"
@@ -393,10 +383,10 @@ def render_entries(out: Path, index: dict, records: list) -> None:
         target = out / path / "index.html"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(text, encoding="utf-8")
-    stitch(out, [out / path / "index.html" for path, _ in pages], index["source"], depth=2)
+    stitch(out, [out / path / "index.html" for path, _ in pages], depth=2)
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for path in ["", "search.html", "about.html"] + [path for path, _ in pages]:
+    for path in ["", "search.html", "about.html", "contribute.html"] + [path for path, _ in pages]:
         sitemap.append(f"  <url><loc>{P.SITE}{path}</loc></url>")
     sitemap.append("</urlset>")
     (out / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
@@ -454,7 +444,7 @@ def build(out: Path, catalog_path: Path = CATALOG) -> dict:
         for s in summaries:
             writer.writerow(["; ".join(s[f]) if isinstance(s[f], list) else s[f]
                              for f in CSV_FIELDS])
-    render_pages(out, index["source"])
+    render_pages(out)
     render_entries(out, index, records)
     # GitHub Pages runs Jekyll unless told not to, and Jekyll drops _-prefixed paths.
     (out / ".nojekyll").write_text("", encoding="utf-8")

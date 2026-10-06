@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--#head-->
+<title>Contribute · Magic State Factory Catalog</title>
+<meta name="description" content="How to add a magic-state factory to the catalogue: send it in any format, and it is verified from its circuit and credited to you.">
+</head>
+<body>
+<!--#header contribute-->
+
+<section class="page-head narrow">
+  <div class="inner">
+    <h1>Contribute a factory</h1>
+    <p class="lede">The catalogue grows with its community. Send a factory in whatever form
+    you have it. We check it from its circuit and credit you on every class it adds.</p>
+  </div>
+</section>
+
+<main id="main" class="guide">
+  <nav class="toc" aria-label="on this page">
+    <a href="#check">Check the catalogue</a><a href="#gather">Gather what you have</a>
+    <a href="#credit">Say who to credit</a><a href="#send">Send it</a>
+    <a href="#next">What happens next</a><a href="#format">Format it yourself</a>
+    <a href="#email">Or email</a>
+  </nav>
+
+  <div class="prose">
+    <ol class="steps">
+      <li>
+        <h2 id="check">Check the catalogue</h2>
+        <p><a href="search.html">Search</a> for your parameters, for example
+        <a href="search.html?q=%5B%5B49%2C1%2C5%5D%5D"><code>[[49, 1, 5]]</code></a>, or for your
+        gate, such as <a href="search.html?q=CCZ012"><code>CCZ012</code></a>. A factory that is
+        already here still counts if yours needs fewer wires. If in doubt, send it.</p>
+      </li>
+      <li>
+        <h2 id="gather">Gather what you have</h2>
+        <p>Any format works. For example:</p>
+        <ul>
+          <li>a paper or arXiv link;</li>
+          <li>generator, parity-check or triorthogonal matrices, as text, CSV, LaTeX or an image;</li>
+          <li>circuits in any notation;</li>
+          <li>code or a notebook that builds the factories;</li>
+          <li>a construction described in words, precisely enough to write the circuit down.</li>
+        </ul>
+        <p>The catalogue holds factories whose output is a diagonal gate built from T, CS and
+        CCZ, with distance at least 3, written as an explicit circuit. A family is fine. We
+        list the members we can write down.</p>
+      </li>
+      <li>
+        <h2 id="credit">Say who to credit</h2>
+        <ul>
+          <li>Names and affiliations, and the paper if the work is published.</li>
+          <li>Whether we may include and redistribute the factories, for example under a licence.</li>
+          <li>What you believe they are: <span class="tex">n</span>, <span class="tex">k</span>,
+          <span class="tex">d</span> and the gate. We measure all of it, so a rough guess is fine.</li>
+          <li>A way to reach you with questions.</li>
+        </ul>
+        <p>Send what you have. We will ask about the rest.</p>
+      </li>
+      <li>
+        <h2 id="send">Send it</h2>
+        <p><strong>Pull request.</strong> Add one folder to the
+        <a href="https://github.com/shubhamj810/magic-state-factory-repo">repository</a>, named
+        <code class="wrap">community_contributions/submissions/YYYY-MM-DD_surname_short-title/</code>, holding
+        your files as they are. Leave <code>master_catalog/</code> alone. We regenerate it.</p>
+        <p><strong>Issue.</strong> <a href="https://github.com/shubhamj810/magic-state-factory-repo/issues/new">Open an issue</a>
+        and attach or link your files.</p>
+      </li>
+      <li>
+        <h2 id="next">What happens next</h2>
+        <p>We convert your files into the catalogue's input format and re-derive every number
+        from the circuit. Stated parameters are never taken on trust. Each factory gets one
+        verdict.</p>
+        <dl class="glossary">
+          <dt>accepted</dt><dd>A class the catalogue did not have. It is added and cited to your work.</dd>
+          <dt>improved</dt><dd>A class it had, and your circuit uses fewer wires. Yours replaces the stored one.</dd>
+          <dt>duplicate</dt><dd>A class it had, with a circuit no better. Nothing changes.</dd>
+          <dt>rejected</dt><dd>It did not verify, for example its distance is below 3. We tell you why.</dd>
+        </dl>
+        <p>Classes are compared up to relabelling and a change of output basis by CNOT and S
+        gates, at the same <span class="tex">n</span>, <span class="tex">k</span> and
+        <span class="tex">d</span>.</p>
+      </li>
+      <li>
+        <h2 id="format">Format it yourself, if you like</h2>
+        <p>This step is optional. A factory has <span class="tex">N</span> wires. Wires
+        <span class="tex">0</span> to <span class="tex">k-1</span> are outputs and the rest are
+        checks. Each column lists the wires one <span class="tex">\pi/4</span> rotation acts on.
+        The 15-to-1 factory of Bravyi and Kitaev reads:</p>
+<pre class="raw code">{"k": 1, "N": 5, "d": 3, "gate": "T0",
+ "columns": [[0,1], [0,2], [0,1,2], [0,3], [0,1,3], [0,2,3], [0,1,2,3], [4],
+             [1,4], [2,4], [1,2,4], [3,4], [1,3,4], [2,3,4], [1,2,3,4]]}</pre>
+        <p>A generator matrix works too. Start from
+        <a href="https://github.com/shubhamj810/magic-state-factory-repo/blob/main/community_contributions/TEMPLATE.json"><code>TEMPLATE.json</code></a>,
+        then check the file against the catalogue. The check writes nothing.</p>
+<pre class="raw code">python community_contributions/check_submission.py path/to/catalogue_input.json</pre>
+        <p>The <a href="https://github.com/shubhamj810/magic-state-factory-repo/tree/main/community_contributions">full guide</a>
+        lists every field.</p>
+      </li>
+      <li>
+        <h2 id="email">Or just email</h2>
+        <p>If none of this suits you, email your factories to
+        <a href="mailto:shubhamj810@gmail.com">shubhamj810@gmail.com</a>.</p>
+      </li>
+    </ol>
+  </div>
+</main>
+
+<!--#footer-->
+
+<script src="js/catalog.js"></script>
+</body>
+</html>

@@ -136,7 +136,7 @@ class TheBuiltSite(unittest.TestCase):
 
     def test_every_page_has_the_shared_chrome(self):
         current = {"search.html": "Search", "params.html": "Browse", "factory.html": "Browse",
-                   "about.html": "About"}
+                   "about.html": "About", "contribute.html": "Contribute"}
         for page in self.out.glob("*.html"):
             if page.name == "404.html":
                 continue                  # standalone: served at any depth
@@ -151,10 +151,22 @@ class TheBuiltSite(unittest.TestCase):
                 marked = re.findall(r'aria-current="page">([^<]+)<', text)
                 self.assertEqual(marked, [current[page.name]] if page.name in current else [])
 
-    def test_the_footer_names_the_catalogue_commit(self):
+    def test_the_index_records_the_catalogue_commit_and_the_footer_does_not(self):
         stamp = self.index["source"]
+        footer = (self.out / "index.html").read_text(encoding="utf-8").split('<footer class="site">')[1]
+        self.assertNotIn("verify_catalog.py", footer)
         if stamp.get("commit"):
-            self.assertIn(stamp["commit"], (self.out / "index.html").read_text(encoding="utf-8"))
+            self.assertNotIn(stamp["commit"], footer)
+            self.assertIn(stamp["commit"], (self.out / "data" / "index.json").read_text(encoding="utf-8"))
+
+    def test_the_contribute_page_ends_with_the_email(self):
+        text = (self.out / "contribute.html").read_text(encoding="utf-8")
+        steps = text.split('<ol class="steps">')[1].split("</ol>")[0]
+        self.assertIn('href="mailto:shubhamj810@gmail.com"', steps.split("<li>")[-1])
+        for page in self.out.glob("*.html"):
+            body = page.read_text(encoding="utf-8")
+            with self.subTest(page=page.name):   # every Contribute link leads to the tutorial
+                self.assertNotRegex(body, r'href="[^"]*community_contributions"[^>]*>Contribute')
 
     def test_every_factory_and_parameter_set_has_a_static_page(self):
         for f in self.index["factories"]:
@@ -183,7 +195,7 @@ class TheBuiltSite(unittest.TestCase):
 
     def test_the_sitemap_lists_every_page(self):
         sitemap = (self.out / "sitemap.xml").read_text(encoding="utf-8")
-        self.assertEqual(sitemap.count("<loc>"), 3 + len(self.index["factories"]) + len(self.index["parameters"]))
+        self.assertEqual(sitemap.count("<loc>"), 4 + len(self.index["factories"]) + len(self.index["parameters"]))
 
     def test_nojekyll(self):
         self.assertTrue((self.out / ".nojekyll").exists())

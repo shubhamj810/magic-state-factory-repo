@@ -502,6 +502,19 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         failures.check(len(about.query_selector_all("#cite-list li")) >= 1,
                        "about.html: the how-to-cite list is empty")
 
+        # ------------------------------------------- the contribute tutorial
+        visit("contribute.html", "contribute.html", "ol.steps > li")
+        steps = page.query_selector_all("ol.steps > li")
+        failures.check(len(steps) >= 5 and steps[-1].query_selector('a[href="mailto:shubhamj810@gmail.com"]'),
+                       "contribute.html: the last step is not the email address")
+        failures.check(not page.query_selector_all(".tex-fallback"),
+                       "contribute.html: KaTeX did not typeset the maths")
+        for href in {a.get_attribute("href") for a in page.query_selector_all("main a[href]")}:
+            if href.startswith(("http", "mailto:", "#")):
+                continue
+            target = site / href.split("?")[0].split("#")[0]
+            failures.check(target.exists(), f"contribute.html: the link {href} leads nowhere")
+
         # ------------------------------------------- graceful failures
         for url, expect in (("params.html?n=999999&k=1&d=3", "Nothing catalogued"),
                             ("factory.html?id=nope", "Could not load"),
