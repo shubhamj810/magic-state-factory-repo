@@ -371,7 +371,7 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
             failures.check(glcanon.gl_isomorphic(3, monos(source["gate"], 3), parsed) is True,
                            f"{where}: random gate {target} is not GL-equivalent in Python")
             text = page.inner_text("#tf-result")
-            failures.check("Same gate" in text or "Checked by brute force on all 8 basis states" in text,
+            failures.check("Same gate" in text or "Checked on all 8 basis states" in text,
                            f"{where}: no verified construction for {target}")
 
         # one export from a factory page, checked cell by cell

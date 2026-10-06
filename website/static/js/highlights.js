@@ -80,7 +80,7 @@
         '<span class="g">' + C.tex(C.TEX.gr + "=" + C.num(best.gamma_rho, 4)) + "</span>" +
         '<span class="p">' + C.paramsTex(best.n, best.k, best.d) + "</span>" +
         '<span class="meta">' + C.tex(C.TEX.vex + "=" + best.v_ex_best) +
-        " &middot; " + usable.length + " of " + group.rows.length + " comparable</span></a>";
+        "</span></a>";
     }).join("");
   }
 
@@ -101,11 +101,9 @@
         "</div>";
     }
     return cell("least " + C.tex(C.TEX.gr), C.tex(C.TEX.gr + "=" + C.num(best.gamma_rho, 4)), best,
-                "with " + C.tex(C.TEX.vex + "=" + best.v_ex_best) + " extractable T states") +
-           cell("most magic states from one circuit", C.tex(C.TEX.vex + "=" + widest.v_ex_best), widest,
-                "extractable T states per run") +
-           cell("greatest distance", C.tex("d=" + deepest.d), deepest,
-                "least weight of an undetectable, damaging fault");
+                C.tex(C.TEX.vex + "=" + best.v_ex_best) + " T states per run") +
+           cell("most T states per run", C.tex(C.TEX.vex + "=" + widest.v_ex_best), widest, "") +
+           cell("highest distance", C.tex("d=" + deepest.d), deepest, "");
   }
 
   /* ------------------------------------------------------------- the plot */
@@ -189,14 +187,14 @@
     return '<figure class="plot">' +
       '<div class="plot-tip" id="plot-tip" role="status"></div>' +
       '<div class="panels">' + html + "</div>" +
-      '<figcaption>Each panel is one distance. Horizontal: ' + C.tex("n") + ", the noisy T states a " +
-      "factory consumes (log scale, shared). Vertical: " + C.tex(C.TEX.gr) + ", lower is better (shared). " +
-      '<span class="key"><span class="key-dot"></span><span>a parameter set</span></span>' +
-      '<span class="key"><span class="stair-key"></span><span>best ' + C.tex(C.TEX.gr) + " so far as " + C.tex("n") + ' grows</span></span>' +
+      "<figcaption>Inputs " + C.tex("n") + " on a log scale against " + C.tex(C.TEX.gr) +
+      ", on axes shared by all panels. " +
+      '<span class="key"><span class="key-dot"></span><span>parameter set</span></span>' +
+      '<span class="key"><span class="stair-key"></span><span>lowest ' + C.tex(C.TEX.gr) + " up to this " + C.tex("n") + '</span></span>' +
       '<span class="key"><span class="unity-key"></span><span>' + C.tex(C.TEX.gr + "=1") + '</span></span>' +
-      "<br>Hover a point for its parameters; click to open it." +
+      "<br>Hover over a point for details, or click it to open." +
       (skipped ? " " + skipped + " parameter set" + (skipped === 1 ? " is" : "s are") +
-                 " not plotted: their gates have overlapping terms, so no extractable T count exists." : "") +
+                 " left out because their gates have no " + C.tex(C.TEX.vex) + "." : "") +
       "</figcaption></figure>";
   }
 

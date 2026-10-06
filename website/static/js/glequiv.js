@@ -56,7 +56,7 @@
     tokens.forEach(function (tok) {
       if (/^(I|id|1)$/i.test(tok)) return;
       var m = /^(CCZ|CS|T)?(\d+(?:,\d+)*)$/i.exec(tok);
-      if (!m) throw new Error("cannot read “" + tok + "” — use T0, CS01, CCZ012 (commas once an index reaches 10)");
+      if (!m) throw new Error("cannot read “" + tok + "”. Write terms like T0, CS01 or CCZ012, with commas once an index reaches 10");
       var name = m[1] ? m[1].toUpperCase() : null;
       var digits = m[2];
       var arity = name === "T" ? 1 : name === "CS" ? 2 : name === "CCZ" ? 3 : null;
@@ -180,7 +180,7 @@
     for (var i = 0; i < k; i++) standard.push(1 << i);
     if (sameTensor(TL, TR)) return { status: "equal", basis: standard, images: standard.slice() };
     if (coarse(k, TL) !== coarse(k, TR)) {
-      return { status: "no", reason: "the ranks of the two gates' cubic forms differ — an invariant of every CNOT + S change" };
+      return { status: "no", reason: "the two gates' cubic forms have different ranks, and CNOT and S circuits preserve that rank" };
     }
     if (k > LABEL_K_CAP) {
       return { status: "undecided", reason: "with more than " + LABEL_K_CAP + " outputs only identical gates are decided in the browser" };
@@ -194,7 +194,7 @@
     var keys = Object.keys(countL).concat(Object.keys(countR));
     for (var q = 0; q < keys.length; q++) {
       if (countL[keys[q]] !== countR[keys[q]]) {
-        return { status: "no", reason: "the two gates' vector-label profiles differ — an invariant of every CNOT + S change" };
+        return { status: "no", reason: "the two gates differ in an invariant that CNOT and S circuits preserve" };
       }
     }
     var byLabel = {};
@@ -260,7 +260,7 @@
       if (e.message === "budget") return { status: "undecided", reason: "the search ran out of its work budget" };
       throw e;
     }
-    if (!images) return { status: "no", reason: "an exhaustive search found no change of output basis that matches the two gates" };
+    if (!images) return { status: "no", reason: "an exhaustive search found no change of output basis that relates them" };
     return { status: "found", basis: basis, images: images };
   }
 

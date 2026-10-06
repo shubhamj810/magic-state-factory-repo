@@ -11,11 +11,18 @@ marked as such. The protocols come from:
 - the **published literature**;
 - **community contributions** from outside authors, verified to the same bar.
 
-**Browse and search it online:
-<https://shubhamj810.github.io/magic-state-factory-repo/>** &mdash; filter by
-parameters, output gate, T-count, distillation exponent, discovery regime or
-cited paper, open any factory's matrix, and export what you find. The site is
-built from `master_catalog.json` on every push; see [`website/`](website/).
+**Browse and search it at
+<https://shubhamj810.github.io/magic-state-factory-repo/>.** You can filter by
+parameters, output gate, T-count, overhead exponent, origin or cited paper,
+and open any factory's circuit. The site is rebuilt from
+`master_catalog.json` on every push (see [`website/`](website/)).
+
+**Contribute a factory.** This catalogue is a community effort. Send factories
+in any format, such as a paper, matrices, code or a notebook, as a pull request
+to [`community_contributions/submissions/`](community_contributions/submissions/)
+or attached to an issue. We verify each one to the same standard as the rest of
+the catalogue and credit you on every class it adds. See
+[`community_contributions/`](community_contributions/) for details.
 
 ## The database: `master_catalog/`
 

@@ -586,3 +586,10 @@ footer.site code { color: #dfe3fa; }
 .tf-gates code.g { font-size: 12px; padding: 1px 6px; background: var(--surface-2); border: 1px solid var(--border);
                    border-radius: var(--radius-sm); white-space: nowrap; }
 .tf-check { margin-top: 6px; }
+
+/* the community call in the hero */
+.community { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 26px;
+             padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.12); }
+.community p { margin: 0; flex: 1 1 300px; font: 16px/1.5 var(--serif); color: var(--hero-text); }
+.btn.ghost { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.45); }
+.btn.ghost:hover { border-color: #fff; background: rgba(255, 255, 255, 0.06); }

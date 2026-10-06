@@ -30,7 +30,7 @@
       return f.n === n && f.k === k && f.d === d;
     });
 
-    document.title = label + " — Magic State Factory Catalog";
+    document.title = label + " · Magic State Factory Catalog";
     document.getElementById("crumb").innerHTML = C.paramsTex(n, k, d);
     document.getElementById("heading").innerHTML = C.paramsTex(n, k, d);
 
@@ -47,10 +47,9 @@
     }
 
     document.getElementById("blurb").innerHTML =
-      members.length + (members.length === 1 ? " factory" : " inequivalent factories") +
-      " consuming " + C.tex("n=" + n) + " noisy T states to protect " +
-      C.tex("k=" + k) + " output " + (k === 1 ? "wire" : "wires") +
-      " at distance " + C.tex("d=" + d) + ".";
+      (members.length === 1 ? "One factory" : members.length + " inequivalent factories") +
+      " with " + C.tex("n=" + n) + " inputs, " + C.tex("k=" + k) + " " +
+      (k === 1 ? "output" : "outputs") + " and distance " + C.tex("d=" + d) + ".";
     document.getElementById("stats").innerHTML = statbar(members);
 
     var body = document.getElementById("body");

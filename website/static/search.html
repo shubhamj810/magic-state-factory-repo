@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <!--#head-->
-<title>Search factories — Magic State Factory Catalog</title>
-<meta name="description" content="Search every verified magic-state distillation factory by parameters, output gate, T-count, distillation exponent, discovery method and citation.">
+<title>Search factories · Magic State Factory Catalog</title>
+<meta name="description" content="Search magic-state factories by parameters, output gate, T-count, overhead exponent, discovery method and citation.">
 </head>
 <body>
 <!--#header search nosearch-->
@@ -11,9 +11,8 @@
 <section class="page-head">
   <div class="inner">
     <h1>Search factories</h1>
-    <p class="lede">Every factory in the catalogue, one row each. Filter on the
-    left or type a query &mdash; the URL keeps your search, so results can be
-    shared as a link.</p>
+    <p class="lede">Filter on the left or type a query. The address bar keeps your
+    search, so you can share it as a link.</p>
     <form id="search-form" class="searchbar" role="search" onsubmit="return false">
       <label class="sr-only" for="q">Search</label>
       <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
@@ -25,12 +24,12 @@
       <summary>What can I type?</summary>
       <table class="syntax-table">
         <tr><td><code>[[49, 1, 5]]</code></td><td>exactly these parameters</td></tr>
-        <tr><td><code>n&lt;=100</code> <code>k=2</code> <code>d&gt;=5</code> <code>N&lt;12</code> <code>r=4</code></td><td>a parameter compared with a number &mdash; <code>n</code> and <code>N</code> are different</td></tr>
+        <tr><td><code>n&lt;=100</code> <code>k=2</code> <code>d&gt;=5</code> <code>N&lt;12</code> <code>r=4</code></td><td>compare a parameter with a number (<code>n</code> and <code>N</code> differ)</td></tr>
         <tr><td><code>t&lt;=4</code> <code>deg=2</code> <code>g&lt;1.3</code></td><td>T-count, phase-polynomial degree, <span class="tex">\gamma_\rho</span></td></tr>
-        <tr><td><code>T0</code> <code>CS01</code> <code>CCZ012</code> <code>CCZ10,11,12</code></td><td>the gate contains this exact term (commas once an index reaches 10)</td></tr>
-        <tr><td><code>T</code> <code>CS</code> <code>CCZ</code></td><td>the gate contains at least one term of this kind</td></tr>
+        <tr><td><code>T0</code> <code>CS01</code> <code>CCZ012</code> <code>CCZ10,11,12</code></td><td>the gate contains this term (use commas once an index reaches 10)</td></tr>
+        <tr><td><code>T</code> <code>CS</code> <code>CCZ</code></td><td>the gate contains a term of this kind</td></tr>
         <tr><td><code>pure</code> <code>exact</code></td><td>pure <span class="tex">T^{\otimes k}</span> gates; exact distance only</td></tr>
-        <tr><td>anything else</td><td>matched against the gate, the id, the discovery regime and the cited papers</td></tr>
+        <tr><td>anything else</td><td>matched against the gate, id, discovery method and cited papers</td></tr>
       </table>
       <p>Words combine with AND.</p>
     </details>
@@ -110,7 +109,7 @@
             <th data-key="gate_human" data-type="text" scope="col">output gate</th>
             <th class="num" data-key="N" data-type="number" scope="col"><span class="tex">N</span></th>
             <th class="num" data-key="t_count" data-type="number" scope="col">T-count</th>
-            <th class="num" data-key="gamma_rho" data-type="number" scope="col" title="log(n/V_ex)/log d — lower is better"><span class="tex">\gamma_\rho</span></th>
+            <th class="num" data-key="gamma_rho" data-type="number" scope="col" title="log(n/V_ex)/log d, lower is better"><span class="tex">\gamma_\rho</span></th>
             <th class="num" data-key="gamma" data-type="number" scope="col" title="log(n/k)/log d"><span class="tex">\gamma</span></th>
             <th data-key="d_is_exact" data-type="text" scope="col">distance</th>
             <th data-key="discovery" data-type="text" scope="col">found by</th>

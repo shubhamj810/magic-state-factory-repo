@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <!--#head-->
-<title>Gates at these parameters — Magic State Factory Catalog</title>
+<title>Gates at these parameters · Magic State Factory Catalog</title>
 <meta name="description" content="Every inequivalent output gate the catalogue holds at one [[n, k, d]].">
 </head>
 <body>
@@ -20,8 +20,7 @@
   <div class="statbar" id="stats"></div>
 
   <h2>Output gates</h2>
-  <p class="section-intro">One row per inequivalent output gate at these
-  parameters. Click a gate to open its circuit.</p>
+  <p class="section-intro">One row per inequivalent gate. Click a gate to open its circuit.</p>
 
   <div class="toolbar">
     <label class="sr-only" for="filter">Filter gates</label>
@@ -48,12 +47,10 @@
   </div>
 
   <div class="panel" style="margin-top:22px">
-    <h3 style="margin-top:0">Why these are different factories</h3>
-    <p class="small muted">Every circuit listed here consumes the same n, protects
-    the same k outputs and reaches the same distance d. They differ in <em>what
-    they deposit</em>: no two gates on this page are related by a change of
-    output basis and Clifford corrections, so each row prepares a genuinely
-    different magic state at the same price.</p>
+    <h3 style="margin-top:0">Why several gates</h3>
+    <p class="small muted">These factories share <span class="tex">n</span>, <span class="tex">k</span>
+    and <span class="tex">d</span> but prepare different magic states. No CNOT circuit with
+    S, Z and CZ corrections turns one of these gates into another.</p>
   </div>
 
   <div class="panel" id="neighbours-panel" style="margin-top:14px" hidden>

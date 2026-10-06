@@ -1,4 +1,4 @@
-/* The "Reach another gate with CNOT + S" panel on factory.html.
+/* The "Convert the output with CNOT and S" panel on factory.html.
  *
  *   target gate (typed)  --GLEquiv.transform-->  witness A, or a proof of "no"
  *                        --GLEquiv.construct-->  CNOT circuit + S/Z/CZ, checked
@@ -67,7 +67,7 @@
       .concat(circuit.singles.map(function (s) { return (s.power === 1 ? "S" : s.power === 2 ? "Z" : "S†") + " on " + s.q; }))
       .concat(circuit.czs.map(function (p) { return "CZ " + p[0] + "," + p[1]; }));
     return items.length ? items.map(function (t) { return '<code class="g">' + C.escapeHtml(t) + "</code>"; }).join(" ")
-                        : '<span class="muted">nothing — the gates are already equal</span>';
+                        : '<span class="muted">nothing, the gates are already equal</span>';
   }
 
   function mount(record) {
@@ -75,8 +75,8 @@
     var input = $("tf-target"), out = $("tf-result");
     if (!input) return;
     if (k > G.LABEL_K_CAP) {
-      $("tf-intro").innerHTML += ' <strong>This factory has ' + k + " outputs; in the browser only identical " +
-        "gates are decided above " + G.LABEL_K_CAP + ".</strong>";
+      $("tf-intro").innerHTML += " <strong>With " + k + " outputs, only identical gates can be " +
+        "checked in the browser. The limit is " + G.LABEL_K_CAP + ".</strong>";
       $("tf-random").disabled = true;
     }
 
@@ -106,23 +106,19 @@
         var gates = circuit.cnots.length + circuit.singles.length + circuit.czs.length;
         if (!gates) {
           out.innerHTML = '<p class="tf-verdict ok"><strong>✓ Same gate.</strong> ' + C.gateTex(name) +
-            " is what this factory already deposits, up to diagonal Clifford corrections that do " +
-            "not change the magic state. Nothing to apply.</p>";
+            " is already this factory's gate, up to Clifford corrections. Nothing to apply.</p>";
           return;
         }
         out.innerHTML =
-          '<p class="tf-verdict ok"><strong>✓ Reachable.</strong> This factory produces ' +
-          C.gateTex(name) + ": apply, on its " + k + " output" + (k === 1 ? "" : "s") + ", " +
+          '<p class="tf-verdict ok"><strong>✓ Reachable.</strong> Apply ' +
           circuit.cnots.length + " CNOT" + (circuit.cnots.length === 1 ? "" : "s") + " and then " +
           (circuit.singles.length + circuit.czs.length) + " Clifford correction" +
-          (circuit.singles.length + circuit.czs.length === 1 ? "" : "s") + ".</p>" +
+          (circuit.singles.length + circuit.czs.length === 1 ? "" : "s") + " to the outputs to get " +
+          C.gateTex(name) + ".</p>" +
           diagram(k, circuit) +
           '<p class="tf-gates">' + gateList(circuit) + "</p>" +
-          '<p class="small muted tf-check">Checked by brute force on all ' + circuit.checked +
-          " basis states: the CNOT circuit sends every " + C.tex("\\lvert x\\rangle") + " to " +
-          C.tex("\\lvert A^{-1}x\\rangle") + ", and the " +
-          "phase of the transformed gate equals the target's exactly (mod 8, up to a global phase)" +
-          " — " + ms + " ms.</p>" +
+          '<p class="small muted tf-check">Checked on all ' + circuit.checked + " basis states. The " +
+          "converted gate matches the target exactly, up to a global phase (" + ms + " ms).</p>" +
           '<p><button type="button" class="btn" id="tf-copy">Copy as Qiskit</button></p>';
         var copy = $("tf-copy");
         if (copy) copy.addEventListener("click", function (event) { C.copy(qiskit(k, circuit, name), event.currentTarget); });
@@ -131,10 +127,10 @@
       out.innerHTML =
         '<p class="tf-verdict ' + (verdict.status === "no" ? "no" : "maybe") + '"><strong>' +
         (verdict.status === "no" ? "✗ Not reachable" : "? Undecided") + ".</strong> " +
-        (verdict.status === "no" ? "No CNOT + S circuit turns this factory's output into "
+        (verdict.status === "no" ? "No CNOT and S circuit turns this factory's gate into "
                                  : "Could not decide whether this factory reaches ") +
         C.gateTex(name) + ": " + C.escapeHtml(verdict.reason) + ".</p>" +
-        '<div id="tf-elsewhere" class="small muted">Looking for factories in the catalogue that produce it…</div>';
+        '<div id="tf-elsewhere" class="small muted">Looking for factories that produce it…</div>';
       setTimeout(function () { elsewhere(k, target, name); }, 30);
     }
 
@@ -153,11 +149,11 @@
         if (!node) return;
         node.className = "small";
         node.innerHTML = hits.length
-          ? "Catalogued factories that produce " + C.gateTex(name) + " (up to CNOT + S), fewest inputs first: " +
+          ? "Factories that produce it, fewest inputs first: " +
             hits.slice(0, 12).map(function (f) {
               return '<a href="' + C.factoryHref(f.id) + '">' + C.paramsTex(f.n, f.k, f.d) + "</a>";
             }).join(" · ") + (hits.length > 12 ? " and " + (hits.length - 12) + " more" : "") + "."
-          : "No factory in the catalogue with " + k + " outputs produces " + C.gateTex(name) +
+          : "No factory in the catalogue with " + k + " outputs produces it" +
             (undecided ? " (" + undecided + " comparisons undecided)" : "") + ".";
       });
     }

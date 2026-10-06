@@ -105,7 +105,7 @@
     var label = C.params(p.n, p.k, p.d);
     var short = gate.human.length > 90 ? gate.human.slice(0, 90) + "…" : gate.human;
 
-    document.title = gate.human.slice(0, 40) + " at " + label + " — Magic State Factory Catalog";
+    document.title = gate.human.slice(0, 40) + " at " + label + " · Magic State Factory Catalog";
     document.getElementById("heading").innerHTML = C.gateTex(short.replace(/…$/, "..."));
     document.getElementById("crumbs").innerHTML =
       '<span><a href="index.html">Home</a></span>' +
@@ -137,17 +137,14 @@
 
     /* ------------------------------------------------------------ matrix */
     document.getElementById("matrix-caption").innerHTML =
-      "The <strong>" + p.N + " × " + p.n + "</strong> binary matrix. Row = wire, " +
-      'column = rotation, <span class="mono">1</span> = that wire is in that ' +
-      "rotation's support. The count beside each wire is its row weight." +
-      (p.n > 120 ? " The matrix scrolls sideways." : "");
+      "The " + C.tex(p.N + "\\times" + p.n) + " matrix. Rows are wires and columns are rotations. " +
+      "A 1 means the wire takes part in the rotation, and the number beside each wire is its row weight." +
+      (p.n > 120 ? " Scroll sideways to see every column." : "");
     document.getElementById("matrix-wrap").innerHTML = renderMatrix(record);
     document.getElementById("matrix-note").innerHTML =
-      "The gate is read off the output rows: a degree-1 monomial for every " +
-      "output row of odd weight, a degree-2 monomial for every pair of output " +
-      "rows with odd overlap, a degree-3 monomial for every odd triple overlap. " +
-      "It is a valid factory because every such parity that touches a " +
-      "<em>check</em> row is even.";
+      "The gate is read off the output rows. An output row of odd weight gives a T, a pair of " +
+      "output rows with odd overlap gives a CS, and an odd triple overlap gives a CCZ. The circuit " +
+      "is a valid factory because every such parity that touches a check row is even.";
 
     /* ------------------------------------------------------------ export */
     var base = "factory-" + record.id;
@@ -174,29 +171,24 @@
 
     /* ----------------------------------------------------------- metrics */
     document.getElementById("metric-grid").innerHTML =
-      metric(C.tex("n") + " — inputs", p.n, "noisy T states consumed per run") +
-      metric(C.tex("k") + " — outputs", p.k) +
-      metric(C.tex("d") + " — distance", p.d, record.distance.is_exact
-             ? "exact: proved clean below d, witnessed at d"
-             : "a proved floor: no harmful fault below d, none exhibited at d", null, true) +
-      metric(C.tex("N") + " — wires", p.N) +
-      metric(C.tex("r") + " — checks", p.r) +
-      metric("T-count", m.t_count, "exact minimal T-count of the deposited gate" +
-             (C.blank(m.t_count) ? "; not computable at this width" : ""), null, true) +
-      metric("phase-polynomial degree", m.poly_degree,
-             "minimised over the output CNOT frame") +
+      metric("inputs " + C.tex("n"), p.n, "Noisy T states per run.") +
+      metric("outputs " + C.tex("k"), p.k) +
+      metric("distance " + C.tex("d"), p.d, record.distance.is_exact
+             ? "Exact, proved and witnessed." : "A proved lower bound.", null, true) +
+      metric("wires " + C.tex("N"), p.N) +
+      metric("checks " + C.tex("r"), p.r) +
+      metric("T-count", m.t_count, "Minimal T-count of the output gate." +
+             (C.blank(m.t_count) ? " Not computable at this width." : ""), null, true) +
+      metric("phase-polynomial degree", m.poly_degree, "Minimised over changes of output basis.") +
       metric(C.tex(C.TEX.vex), m.v_ex, C.blank(m.v_ex)
-             ? "has no value here: the gate's terms overlap, so no T-state yield is well defined"
-             : "T states one run yields: T and CS count 1, CCZ 2", "not defined") +
+             ? "Undefined, because the gate's terms overlap."
+             : "T states per run. CCZ counts as two.", "not defined") +
       metric(C.tex(C.TEX.grDef), C.num(m.gamma_rho, 4),
-             "the fair yield exponent across gates. Lower is better.", "not defined", true) +
-      metric(C.tex(C.TEX.gDef), C.num(m.gamma, 4),
-             "distilling to error " + C.tex("\\varepsilon") + " costs " + C.tex("O(\\log^{\\gamma}(1/\\varepsilon))") +
-             " inputs, counted in output wires") +
-      metric(C.tex(C.TEX.gtDef), C.num(m.gamma_t, 4), "the same, counted in T-cost") +
-      metric("rate " + C.tex("k/n"), C.num(m.rate, 5), "outputs per input, ignoring error suppression") +
-      metric("effective width", m.effective_width,
-             "rank of the output rows modulo the check span; equals k for a genuine width-k factory");
+             "Overhead per extractable T state. Lower is better.", "not defined", true) +
+      metric(C.tex(C.TEX.gDef), C.num(m.gamma, 4), "Overhead per output qubit.") +
+      metric(C.tex(C.TEX.gtDef), C.num(m.gamma_t, 4), "Overhead per unit of T-count.") +
+      metric("rate " + C.tex("k/n"), C.num(m.rate, 5), "Outputs per input.") +
+      metric("effective width", m.effective_width, "Rank of the output rows modulo the check rows.");
 
     /* -------------------------------------------------------------- gate */
     var kinds = { 1: 0, 2: 0, 3: 0 };
@@ -210,10 +202,9 @@
       "<p><strong>As gates:</strong> " + (gate.human.length <= 1500 ? C.gateTex(gate.human)
         : '<code class="wrap">' + C.escapeHtml(gate.human) + "</code>") + "</p>" +
       "<p><strong>As monomials:</strong> <code class=\"wrap\">" + C.escapeHtml(gate.string) + "</code>" +
-      ' <span class="small muted">&mdash; output wires per term, terms separated by +</span></p>' +
-      '<p class="small muted">This row stands for its whole class: every gate reachable from ' +
-      "this one by a CNOT change of output basis and diagonal Clifford corrections " +
-      "prepares the same magic state and is the same row. " +
+ ' <span class="small muted">(output wires per term, separated by +)</span></p>' +
+      '<p class="small muted">This row stands for every gate that a CNOT circuit and S, Z and CZ ' +
+      "gates on the outputs can reach from this one. They all prepare the same magic state. " +
       (gate.sk_canonical_frame
         ? "The wires are shown in the " + C.tex("S_k") + "-canonical frame."
         : "The wires are shown in the labelling of the stored circuit.") + "</p>";
@@ -222,31 +213,29 @@
     var distance = record.distance;
     document.getElementById("distance-panel").innerHTML =
       "<p>" + (distance.is_exact
-        ? "<strong>" + C.tex("d=" + distance.d) + ", exact.</strong> Every fault of weight below " +
-          distance.d + " was enumerated and none is both undetectable and damaging, and an explicit fault of weight " +
-          distance.d + " is."
-        : "<strong>" + C.tex("d\\ge " + distance.d) + ", a floor.</strong> Every fault of weight below " +
-          distance.d + " was enumerated and none is harmful; no witness at " + distance.d +
-          " has been exhibited, so the true distance may be larger.") + "</p>" +
+        ? "<strong>" + C.tex("d=" + distance.d) + ", exact.</strong> No fault of weight below " +
+          distance.d + " is both undetectable and damaging. One of weight " + distance.d + " is."
+        : "<strong>" + C.tex("d\\ge " + distance.d) + ", a lower bound.</strong> No fault of weight below " +
+          distance.d + " is both undetectable and damaging. None of weight " + distance.d +
+          " has been found, so the true distance may be larger.") + "</p>" +
       (!C.blank(distance.upper)
-        ? '<p class="small">An explicit harmful fault of weight <strong>' + distance.upper +
-          "</strong> exists" + (distance.witness ? ", at columns <code>" +
-          C.escapeHtml(JSON.stringify(distance.witness)) + "</code>" : "") + ".</p>"
+        ? '<p class="small">A damaging fault of weight ' + distance.upper +
+          (distance.witness ? " sits on columns <code>" +
+          C.escapeHtml(JSON.stringify(distance.witness)) + "</code>" : " exists") + ".</p>"
         : "") +
-      '<p class="small muted">A fault is a set of columns; it is undetectable when ' +
-      "their check syndromes XOR to zero, and damaging when their output parts do not. " +
-      "The distance is the least weight of a fault that is both.</p>";
+      '<p class="small muted">A fault is a set of faulty columns. It is undetectable when their ' +
+      "check parts cancel, and damaging when their output parts do not.</p>";
 
     /* -------------------------------------------------------- references */
     var references = record.references || [];
     document.getElementById("references-panel").innerHTML =
       (references.length
-        ? '<p class="small muted" style="margin-top:0">If you use this factory, cite:</p>' +
+        ? '<p class="small muted" style="margin-top:0">If you use this factory, please cite</p>' +
           '<ol class="refs">' + references.map(function (r) {
             return "<li>" + C.referenceHtml(r) + "</li>";
           }).join("") + "</ol>" +
           '<p class="small" style="margin:12px 0 0">' + references.map(function (r) {
-            return '<a href="search.html?cite=' + encodeURIComponent(r.key) + '">every factory citing ' +
+            return '<a href="search.html?cite=' + encodeURIComponent(r.key) + '">All factories citing ' +
                    C.escapeHtml(r.short || r.key) + "</a>";
           }).join(" · ") + "</p>"
         : '<p class="muted">No reference is recorded for this factory.</p>');
@@ -272,7 +261,7 @@
     if (window.Transform) window.Transform.mount(record);
 
     var shallow = JSON.parse(JSON.stringify(record));
-    shallow.circuit = { columns: "[" + p.n + " columns — shown as the matrix above]" };
+    shallow.circuit = { columns: "[" + p.n + " columns, shown as the matrix above]" };
     document.getElementById("raw").textContent = JSON.stringify(shallow, null, 2);
     document.getElementById("source-line").innerHTML =
       'Source: <a href="' + C.CATALOG_FILE + '">master_catalog.json</a>, ' +
