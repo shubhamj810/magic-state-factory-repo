@@ -49,8 +49,8 @@
     return C.paramsHref(row.n, row.k, row.d);
   }
 
-  function label(row) {
-    return "[[" + row.n + ", " + row.k + ", " + row.d + "]]";
+  function label(row) {             /* plain text, for SVG titles and aria labels */
+    return "\u27e6" + row.n + ", " + row.k + ", " + row.d + "\u27e7";
   }
 
   function byDistance(parameters) {
@@ -76,13 +76,11 @@
       if (!best) return "";
       var widest = maxBy(usable, "v_ex_best");
       return '<a class="record" href="' + href(best) + '">' +
-        '<span class="d">d = ' + group.d + "</span>" +
-        '<span class="g">&gamma;<sub>&rho;</sub> ' + C.num(best.gamma_rho, 4) + "</span>" +
-        '<span class="p">' + C.escapeHtml(label(best)) + "</span>" +
-        '<span class="meta">V<sub>ex</sub> ' + best.v_ex_best +
-        " &middot; " + usable.length + " of " + group.rows.length + " comparable" +
-        (widest ? " &middot; best V<sub>ex</sub> " + widest.v_ex_best : "") +
-        "</span></a>";
+        '<span class="d">' + C.tex("d=" + group.d) + "</span>" +
+        '<span class="g">' + C.tex(C.TEX.gr + "=" + C.num(best.gamma_rho, 4)) + "</span>" +
+        '<span class="p">' + C.paramsTex(best.n, best.k, best.d) + "</span>" +
+        '<span class="meta">' + C.tex(C.TEX.vex + "=" + best.v_ex_best) +
+        " &middot; " + usable.length + " of " + group.rows.length + " comparable</span></a>";
     }).join("");
   }
 
@@ -98,17 +96,16 @@
       return '<div class="head-stat">' +
         '<span class="t">' + title + "</span>" +
         '<span class="v">' + value + "</span>" +
-        (row ? '<a class="l" href="' + href(row) + '">' +
-               C.escapeHtml(label(row)) + "</a>" : "") +
+        (row ? '<a class="l" href="' + href(row) + '">' + C.paramsTex(row.n, row.k, row.d) + "</a>" : "") +
         (note ? '<span class="n">' + note + "</span>" : "") +
         "</div>";
     }
-    return cell("least &gamma;<sub>&rho;</sub>", C.num(best.gamma_rho, 4), best,
-                "log(n/V<sub>ex</sub>)/log(d) &mdash; V<sub>ex</sub> = " + best.v_ex_best) +
-           cell("most magic states", "V<sub>ex</sub> = " + widest.v_ex_best, widest,
-                "extractable T states from one circuit") +
-           cell("greatest distance", "d = " + deepest.d, deepest,
-                "least weight of an undetectable fault");
+    return cell("least " + C.tex(C.TEX.gr), C.tex(C.TEX.gr + "=" + C.num(best.gamma_rho, 4)), best,
+                "with " + C.tex(C.TEX.vex + "=" + best.v_ex_best) + " extractable T states") +
+           cell("most magic states from one circuit", C.tex(C.TEX.vex + "=" + widest.v_ex_best), widest,
+                "extractable T states per run") +
+           cell("greatest distance", C.tex("d=" + deepest.d), deepest,
+                "least weight of an undetectable, damaging fault");
   }
 
   /* ------------------------------------------------------------- the plot */
@@ -179,7 +176,7 @@
         parts.push('<circle class="pt' + (p._front ? " front" : "") + '" data-i="' + i + '" cx="' +
                    p._x.toFixed(1) + '" cy="' + p._y.toFixed(1) + '" r="' + (p._front ? 3.6 : 2.6) + '"/>');
       });
-      parts.push('<text class="ptitle" x="' + L + '" y="16">d = ' + group.d + "</text>");
+      parts.push('<text class="ptitle" x="' + L + '" y="16"><tspan class="mi">d</tspan> = ' + group.d + "</text>");
       parts.push('<text class="psub" x="' + (W - R) + '" y="16" text-anchor="end">best ' +
                  C.num(best.gamma_rho, 3) + " at " + C.escapeHtml(label(best)) + " · " + rows.length +
                  (rows.length === 1 ? " set" : " sets") + "</text>");
@@ -192,11 +189,11 @@
     return '<figure class="plot">' +
       '<div class="plot-tip" id="plot-tip" role="status"></div>' +
       '<div class="panels">' + html + "</div>" +
-      '<figcaption>Each panel is one distance. Horizontal: n, the noisy T states a ' +
-      "factory consumes (log scale, shared). Vertical: &gamma;<sub>&rho;</sub>, lower is better (shared). " +
+      '<figcaption>Each panel is one distance. Horizontal: ' + C.tex("n") + ", the noisy T states a " +
+      "factory consumes (log scale, shared). Vertical: " + C.tex(C.TEX.gr) + ", lower is better (shared). " +
       '<span class="key"><span class="key-dot"></span><span>a parameter set</span></span>' +
-      '<span class="key"><span class="stair-key"></span><span>best &gamma;<sub>&rho;</sub> so far as n grows</span></span>' +
-      '<span class="key"><span class="unity-key"></span><span>&gamma;<sub>&rho;</sub> = 1</span></span>' +
+      '<span class="key"><span class="stair-key"></span><span>best ' + C.tex(C.TEX.gr) + " so far as " + C.tex("n") + ' grows</span></span>' +
+      '<span class="key"><span class="unity-key"></span><span>' + C.tex(C.TEX.gr + "=1") + '</span></span>' +
       "<br>Hover a point for its parameters; click to open it." +
       (skipped ? " " + skipped + " parameter set" + (skipped === 1 ? " is" : "s are") +
                  " not plotted: their gates have overlapping terms, so no extractable T count exists." : "") +
@@ -234,9 +231,9 @@
         var box = svg.getBoundingClientRect(), fig = figure.getBoundingClientRect();
         tip.style.left = (box.left - fig.left + p._x * box.width / W) + "px";
         tip.style.top = (box.top - fig.top + p._y * box.height / H) + "px";
-        tip.innerHTML = "<b>" + C.escapeHtml(label(p)) + "</b>" +
-          '<div class="row"><span>&gamma;<sub>&rho;</sub></span><span>' + C.num(p.gamma_rho, 4) + "</span></div>" +
-          '<div class="row"><span>V<sub>ex</sub></span><span>' + p.v_ex_best + "</span></div>" +
+        tip.innerHTML = "<b>" + C.paramsTex(p.n, p.k, p.d) + "</b>" +
+          '<div class="row"><span>' + C.tex(C.TEX.gr) + "</span><span>" + C.num(p.gamma_rho, 4) + "</span></div>" +
+          '<div class="row"><span>' + C.tex(C.TEX.vex) + "</span><span>" + p.v_ex_best + "</span></div>" +
           '<div class="row"><span>gates</span><span>' + p.count + "</span></div>" +
           (p._front ? '<div class="hint">on the frontier</div>' : "");
         tip.classList.add("on");

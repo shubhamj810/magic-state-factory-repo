@@ -61,6 +61,46 @@
     return "[[" + n + ", " + k + ", " + d + "]]";
   }
 
+  /* ----------------------------------------------------------------- maths */
+  /* Every symbol on the site is typeset by KaTeX, so it reads like the papers
+   * it comes from; if KaTeX failed to load, the TeX source is shown instead. */
+  var TEX = {
+    gr: "\\gamma_\\rho", g: "\\gamma", gt: "\\gamma_T", vex: "V_{\\mathrm{ex}}",
+    pure: "T^{\\otimes k}",
+    grDef: "\\gamma_\\rho = \\log(n/V_{\\mathrm{ex}})/\\log d",
+    gDef: "\\gamma = \\log(n/k)/\\log d",
+    gtDef: "\\gamma_T = \\log(n/T)/\\log d"
+  };
+
+  function tex(source) {
+    if (global.katex) {
+      try { return global.katex.renderToString(String(source), { throwOnError: false }); } catch (e) { /* fall through */ }
+    }
+    return '<span class="tex-fallback">' + escapeHtml(source) + "</span>";
+  }
+
+  function paramsTex(n, k, d) {
+    return tex("[\\![" + n + ",\\," + k + ",\\," + d + "]\\!]");
+  }
+
+  /* "T0·CS01·CCZ012" -> T_0 . CS_{01} . CCZ_{012}, breakable after each dot */
+  function gateTex(human) {
+    var text = String(human || ""), more = /\.\.\.$/.test(text);
+    if (more) text = text.slice(0, -3);
+    var terms = text.split("·").filter(Boolean).map(function (tok) {
+      var m = /^(CCZ|CS|T)(.*)$/.exec(tok);
+      return m ? "\\mathrm{" + m[1] + "}_{" + m[2] + "}" : "\\mathrm{" + tok.replace(/[^A-Za-z0-9,]/g, "") + "}";
+    });
+    return tex(terms.join("\\cdot ") + (more ? "\\cdots" : ""));
+  }
+
+  function renderTex(root) {
+    (root || document).querySelectorAll(".tex:not([data-tex])").forEach(function (el) {
+      el.setAttribute("data-tex", el.textContent);
+      el.innerHTML = tex(el.textContent);
+    });
+  }
+
   function paramsHref(n, k, d) {
     return "params.html?n=" + n + "&k=" + k + "&d=" + d;
   }
@@ -312,6 +352,11 @@
     num: num,
     integer: integer,
     params: params,
+    TEX: TEX,
+    tex: tex,
+    paramsTex: paramsTex,
+    gateTex: gateTex,
+    renderTex: renderTex,
     paramsHref: paramsHref,
     factoryHref: factoryHref,
     escapeHtml: escapeHtml,
@@ -333,6 +378,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     initTheme();
+    renderTex(document);
     /* The footer's data stamp is written by build_site.py, so no page
      * downloads the index just to print a commit hash. */
   });

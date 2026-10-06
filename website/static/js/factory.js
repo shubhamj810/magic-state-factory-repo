@@ -106,17 +106,17 @@
     var short = gate.human.length > 90 ? gate.human.slice(0, 90) + "…" : gate.human;
 
     document.title = gate.human.slice(0, 40) + " at " + label + " — Magic State Factory Catalog";
-    document.getElementById("heading").textContent = short;
+    document.getElementById("heading").innerHTML = C.gateTex(short.replace(/…$/, "..."));
     document.getElementById("crumbs").innerHTML =
       '<span><a href="index.html">Home</a></span>' +
       '<span><a href="index.html#parameters">Parameters</a></span>' +
-      '<span><a href="' + C.paramsHref(p.n, p.k, p.d) + '">' + C.escapeHtml(label) + "</a></span>" +
+      '<span><a href="' + C.paramsHref(p.n, p.k, p.d) + '">' + C.paramsTex(p.n, p.k, p.d) + "</a></span>" +
       '<span class="mono">' + C.escapeHtml(record.id) + "</span>";
     document.getElementById("blurb").innerHTML =
-      "A <strong>" + C.escapeHtml(label) + "</strong> factory on <strong>" + p.N +
-      "</strong> wires: <strong>" + p.k + "</strong> output " + (p.k === 1 ? "wire" : "wires") +
-      " and <strong>" + p.r + "</strong> postselected " + (p.r === 1 ? "check" : "checks") +
-      ", consuming <strong>" + p.n + "</strong> noisy T states as π/4 parity rotations." +
+      "A " + C.paramsTex(p.n, p.k, p.d) + " factory on " + C.tex("N=" + p.N) +
+      " wires: " + C.tex("k=" + p.k) + " output " + (p.k === 1 ? "wire" : "wires") +
+      " and " + C.tex("r=" + p.r) + " postselected " + (p.r === 1 ? "check" : "checks") +
+      ", consuming " + C.tex("n=" + p.n) + " noisy T states as " + C.tex("\\pi/4") + " parity rotations." +
       '<span class="pills" style="margin-top:10px">' +
       C.distanceTag({ d: p.d, d_is_exact: record.distance.is_exact }) + " " +
       (record.provenance && record.provenance.discovery
@@ -174,26 +174,27 @@
 
     /* ----------------------------------------------------------- metrics */
     document.getElementById("metric-grid").innerHTML =
-      metric("n — inputs", p.n, "noisy T states consumed per run") +
-      metric("k — outputs", p.k) +
-      metric("d — distance", p.d, record.distance.is_exact
+      metric(C.tex("n") + " — inputs", p.n, "noisy T states consumed per run") +
+      metric(C.tex("k") + " — outputs", p.k) +
+      metric(C.tex("d") + " — distance", p.d, record.distance.is_exact
              ? "exact: proved clean below d, witnessed at d"
              : "a proved floor: no harmful fault below d, none exhibited at d", null, true) +
-      metric("N — wires", p.N) +
-      metric("r — checks", p.r) +
+      metric(C.tex("N") + " — wires", p.N) +
+      metric(C.tex("r") + " — checks", p.r) +
       metric("T-count", m.t_count, "exact minimal T-count of the deposited gate" +
              (C.blank(m.t_count) ? "; not computable at this width" : ""), null, true) +
       metric("phase-polynomial degree", m.poly_degree,
              "minimised over the output CNOT frame") +
-      metric("V<sub>ex</sub>", m.v_ex, C.blank(m.v_ex)
+      metric(C.tex(C.TEX.vex), m.v_ex, C.blank(m.v_ex)
              ? "has no value here: the gate's terms overlap, so no T-state yield is well defined"
              : "T states one run yields: T and CS count 1, CCZ 2", "not defined") +
-      metric("γ<sub>ρ</sub> = log(n/V<sub>ex</sub>)/log d", C.num(m.gamma_rho, 4),
+      metric(C.tex(C.TEX.grDef), C.num(m.gamma_rho, 4),
              "the fair yield exponent across gates. Lower is better.", "not defined", true) +
-      metric("γ = log(n/k)/log d", C.num(m.gamma, 4),
-             "distilling to error ε costs O(log<sup>γ</sup>(1/ε)) inputs, counted in output wires") +
-      metric("γ<sub>T</sub> = log(n/T)/log d", C.num(m.gamma_t, 4), "the same, counted in T-cost") +
-      metric("rate k/n", C.num(m.rate, 5), "outputs per input, ignoring error suppression") +
+      metric(C.tex(C.TEX.gDef), C.num(m.gamma, 4),
+             "distilling to error " + C.tex("\\varepsilon") + " costs " + C.tex("O(\\log^{\\gamma}(1/\\varepsilon))") +
+             " inputs, counted in output wires") +
+      metric(C.tex(C.TEX.gtDef), C.num(m.gamma_t, 4), "the same, counted in T-cost") +
+      metric("rate " + C.tex("k/n"), C.num(m.rate, 5), "outputs per input, ignoring error suppression") +
       metric("effective width", m.effective_width,
              "rank of the output rows modulo the check span; equals k for a genuine width-k factory");
 
@@ -206,24 +207,25 @@
         '<span class="term"><b>' + kinds[2] + "</b> CS</span>" +
         '<span class="term"><b>' + kinds[3] + "</b> CCZ</span>" +
         '<span class="term">on <b>' + p.k + "</b> output " + (p.k === 1 ? "wire" : "wires") + "</span></div>" +
-      "<p><strong>As gates:</strong> <code class=\"wrap\">" + C.escapeHtml(gate.human) + "</code></p>" +
+      "<p><strong>As gates:</strong> " + (gate.human.length <= 1500 ? C.gateTex(gate.human)
+        : '<code class="wrap">' + C.escapeHtml(gate.human) + "</code>") + "</p>" +
       "<p><strong>As monomials:</strong> <code class=\"wrap\">" + C.escapeHtml(gate.string) + "</code>" +
       ' <span class="small muted">&mdash; output wires per term, terms separated by +</span></p>' +
       '<p class="small muted">This row stands for its whole class: every gate reachable from ' +
       "this one by a CNOT change of output basis and diagonal Clifford corrections " +
       "prepares the same magic state and is the same row. " +
       (gate.sk_canonical_frame
-        ? "The wires are shown in the S<sub>k</sub>-canonical frame."
+        ? "The wires are shown in the " + C.tex("S_k") + "-canonical frame."
         : "The wires are shown in the labelling of the stored circuit.") + "</p>";
 
     /* ---------------------------------------------------------- distance */
     var distance = record.distance;
     document.getElementById("distance-panel").innerHTML =
       "<p>" + (distance.is_exact
-        ? "<strong>d = " + distance.d + ", exact.</strong> Every fault of weight below " +
+        ? "<strong>" + C.tex("d=" + distance.d) + ", exact.</strong> Every fault of weight below " +
           distance.d + " was enumerated and none is both undetectable and damaging, and an explicit fault of weight " +
           distance.d + " is."
-        : "<strong>d ≥ " + distance.d + ", a floor.</strong> Every fault of weight below " +
+        : "<strong>" + C.tex("d\\ge " + distance.d) + ", a floor.</strong> Every fault of weight below " +
           distance.d + " was enumerated and none is harmful; no witness at " + distance.d +
           " has been exhibited, so the true distance may be larger.") + "</p>" +
       (!C.blank(distance.upper)

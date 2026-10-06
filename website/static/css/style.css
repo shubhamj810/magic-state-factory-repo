@@ -51,6 +51,7 @@
   --radius-sm: 3px;
   --sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --serif: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -101,13 +102,26 @@ a { color: var(--brand); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 2px; }
 code, .mono { font-family: var(--mono); font-size: 0.92em; }
 p { margin: 0 0 14px; }
-h1 { font: 600 34px/1.15 var(--sans); letter-spacing: -0.02em; margin: 0 0 8px; }
-h2 { font: 600 21px/1.3 var(--sans); letter-spacing: -0.01em; margin: 48px 0 6px; }
+h1 { font: 600 36px/1.15 var(--serif); letter-spacing: -0.01em; margin: 0 0 8px; }
+h2 { font: 600 25px/1.3 var(--serif); letter-spacing: -0.005em; margin: 52px 0 8px; }
 h3 { font: 600 14px/1.35 var(--sans); margin: 24px 0 10px; color: var(--text); }
-.lede { font-size: 17px; color: var(--text-dim); max-width: 70ch; }
+.lede { font: 19px/1.55 var(--serif); color: var(--text-dim); max-width: 68ch; }
 .muted { color: var(--text-dim); }
 .small { font-size: 13.5px; }
-.section-intro { color: var(--text-dim); font-size: 14.5px; margin: 0 0 18px; max-width: 80ch; }
+.section-intro { color: var(--text-dim); font: 16.5px/1.6 var(--serif); margin: 0 0 18px; max-width: 76ch; }
+/* prose reads in the serif; tables, controls and labels stay in the sans */
+.prose, .panel > p, .panel li, figure.plot figcaption, .about-grid p, .about-grid li, footer.site p,
+.hero-matrix figcaption { font-family: var(--serif); }
+.prose { font-size: 16.5px; line-height: 1.65; }
+.panel > p, .panel li { font-size: 15.5px; line-height: 1.6; }
+.panel > p.small, .panel li.small, .about-grid .small, ul.plain.small li { font-size: 15px; }
+
+/* ---------------------------------------------------------------- maths */
+.katex { font-size: 1.1em; line-height: 1.2; }
+td .katex, th .katex, .pill .katex, .tag .katex, .filters .katex { font-size: 1.04em; }
+.head-stat .v .katex { font-size: 1em; }
+.katex-display { margin: 0.6em 0; }
+.tex-fallback { font-family: var(--serif); font-style: italic; }
 
 .inner { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
 main { max-width: 1200px; margin: 0 auto; padding: 8px 28px 80px; }
@@ -164,8 +178,8 @@ header.site nav a.gh svg { width: 16px; height: 16px; }
 .hero .inner { position: relative; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
                gap: 56px; align-items: center; max-width: 1200px; }
 .eyebrow { font-size: 13px; font-weight: 500; color: var(--hero-dim); margin: 0 0 14px; letter-spacing: 0.02em; }
-.hero h1 { font-size: 44px; line-height: 1.1; letter-spacing: -0.02em; color: #fff; font-weight: 600; margin-bottom: 16px; }
-.hero .lede { color: var(--hero-dim); font-size: 17px; max-width: 56ch; }
+.hero h1 { font: 600 50px/1.08 var(--serif); letter-spacing: -0.015em; color: #fff; margin-bottom: 18px; }
+.hero .lede { color: var(--hero-dim); font-size: 19px; max-width: 54ch; }
 .hero .lede strong { color: #fff; font-weight: 600; }
 
 .searchbar { display: flex; gap: 8px; margin: 22px 0 12px; max-width: 760px; position: relative; }
@@ -210,7 +224,7 @@ header.site nav a.gh svg { width: 16px; height: 16px; }
            border-bottom: 1px solid var(--border); }
 .statbar .stat { padding: 20px 20px 18px 0; }
 .statbar .stat + .stat { padding-left: 20px; border-left: 1px solid var(--border); }
-.statbar .value { font: 600 26px/1.15 var(--sans); letter-spacing: -0.01em; display: block; font-variant-numeric: tabular-nums; }
+.statbar .value { font: 400 26px/1.2 var(--serif); display: block; font-variant-numeric: lining-nums; }
 .statbar .label { font-size: 13px; color: var(--text-dim); }
 main .statbar { border: 1px solid var(--border); border-radius: var(--radius); }
 main .statbar .stat { padding-left: 18px; }
@@ -246,13 +260,13 @@ a.tile:hover .t { color: var(--brand); }
 .page-head { background: var(--surface-2); border-bottom: 1px solid var(--border); padding: 24px 0 20px; margin-bottom: 24px; }
 .page-head .inner { max-width: 1440px; }
 .page-head.narrow .inner { max-width: 1200px; }
-.page-head h1 { font-size: 30px; font-weight: 600; }
+.page-head h1 { font-size: 34px; }
 .page-head .lede { margin-bottom: 0; }
 .crumbs { display: flex; flex-wrap: wrap; align-items: center; font-size: 13px; color: var(--muted);
           margin-bottom: 10px; }
 .crumbs a { color: var(--text-dim); }
 .crumbs a:hover { color: var(--brand); }
-.crumbs span + span::before { content: "›"; margin: 0 8px; opacity: 0.6; }
+.crumbs > span + span::before { content: "›"; margin: 0 8px; opacity: 0.6; }
 .crumbs .mono { font-size: 12.5px; }
 
 /* ---------------------------------------------------------------- tables */
@@ -284,10 +298,11 @@ tbody tr:last-child td { border-bottom: none; }
 tbody tr.clickable { cursor: pointer; transition: background .1s; }
 tbody tr.clickable:hover { background: color-mix(in srgb, var(--brand) 6%, var(--surface)); }
 tbody tr.clickable:hover td.params a, tbody tr.clickable:hover td.gate a { text-decoration: underline; }
-td.num, th.num { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; }
-td.gate { font-family: var(--mono); font-size: 12.5px; min-width: 230px; overflow-wrap: normal; word-break: normal; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums lining-nums; }
+td.num { font-size: 14px; }
+td.gate { font-size: 14px; min-width: 230px; overflow-wrap: normal; word-break: normal; }
 td.gate a { color: var(--text); }
-td.params { font-family: var(--mono); font-weight: 600; white-space: nowrap; font-size: 13px; }
+td.params { white-space: nowrap; font-size: 14px; }
 td.cites { white-space: nowrap; color: var(--text-dim); }
 .empty { padding: 44px 16px; text-align: center; color: var(--text-dim); }
 
@@ -363,9 +378,8 @@ label.pill .sym { font: 600 11px var(--mono); }
 .head-stat { padding: 18px 20px; }
 .head-stat + .head-stat { border-left: 1px solid var(--border); }
 .head-stat .t { display: block; font-size: 13px; color: var(--text-dim); margin-bottom: 4px; }
-.head-stat .v { display: block; font: 600 30px/1.1 var(--sans); letter-spacing: -0.01em; color: var(--text);
-                font-variant-numeric: tabular-nums; }
-.head-stat .l { display: inline-block; font: 500 13.5px var(--mono); margin-top: 8px; }
+.head-stat .v { display: block; font: 400 27px/1.2 var(--serif); color: var(--text); }
+.head-stat .l { display: inline-block; font-size: 15px; margin-top: 6px; }
 .head-stat .n { display: block; font-size: 12.5px; color: var(--text-dim); margin-top: 4px; }
 
 .records { display: grid; margin: 0 0 8px; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
@@ -373,9 +387,9 @@ label.pill .sym { font: 600 11px var(--mono); }
 a.record { display: block; padding: 14px 16px; color: var(--text); background: var(--surface);
            border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 a.record:hover { text-decoration: none; background: var(--surface-2); }
-a.record .d { display: block; font-size: 13px; font-weight: 600; color: var(--text-dim); }
-a.record .g { display: block; font: 600 22px/1.2 var(--sans); margin: 4px 0 2px; font-variant-numeric: tabular-nums; }
-a.record .p { display: block; font: 500 13px var(--mono); color: var(--brand); }
+a.record .d { display: block; font-size: 14px; color: var(--text-dim); }
+a.record .g { display: block; font: 400 19px/1.3 var(--serif); margin: 4px 0 2px; }
+a.record .p { display: block; font-size: 14.5px; color: var(--brand); }
 a.record .meta { display: block; font-size: 12px; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
 
 /* ------------------------------------------------------------- the plot */
@@ -388,8 +402,9 @@ figure.plot figcaption { padding: 10px 0 0; font-size: 13px; color: var(--text-d
 .plot .grid, .panels .grid { stroke: var(--border); stroke-width: 1; }
 .panels .axis { stroke: var(--border-strong); stroke-width: 1; }
 .panels .tick { stroke: var(--border-strong); stroke-width: 1; }
-.panels .ax { fill: var(--muted); font: 10px var(--mono); }
-.panels .ptitle { fill: var(--text); font: 600 13px var(--sans); }
+.panels .ax { fill: var(--muted); font: 10.5px var(--sans); font-variant-numeric: tabular-nums; }
+.panels .ptitle { fill: var(--text); font: 15px KaTeX_Main, var(--serif); }
+.panels .mi { font-family: KaTeX_Math, var(--serif); font-style: italic; }
 .panels .psub { fill: var(--text-dim); font: 11px var(--sans); }
 .panels .unity { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 4 3; }
 .panels .stair { fill: none; stroke: var(--brand); stroke-width: 1.75; }
@@ -405,9 +420,9 @@ figure.plot figcaption { padding: 10px 0 0; font-size: 13px; color: var(--text-d
             border-radius: var(--radius); padding: 7px 10px; font-size: 12.5px; line-height: 1.5; box-shadow: var(--shadow-lg);
             transform: translate(-50%, calc(-100% - 10px)); opacity: 0; }
 .plot-tip.on { opacity: 1; }
-.plot-tip b { font-family: var(--mono); font-weight: 500; }
+.plot-tip b { font-weight: 400; }
 .plot-tip .row { display: flex; justify-content: space-between; gap: 14px; color: var(--text-dim); }
-.plot-tip .row span:last-child { color: var(--text); font-family: var(--mono); }
+.plot-tip .row span:last-child { color: var(--text); font-variant-numeric: tabular-nums; }
 .plot-tip .hint { color: var(--muted); font-size: 11.5px; margin-top: 2px; }
 
 /* ------------------------------------------------------------------ matrix */
@@ -462,7 +477,7 @@ tr.chk td.bits b { color: var(--check); }
                  border-bottom: 1px solid var(--border); }
 .metrics .cell.key-metric { background: var(--surface-2); }
 .metrics .k { font-size: 12.5px; font-weight: 600; color: var(--text-dim); display: block; margin-bottom: 4px; }
-.metrics .v { font: 600 21px/1.2 var(--sans); letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+.metrics .v { font: 400 22px/1.2 var(--serif); letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
 .metrics .v.none { color: var(--muted); font-weight: 500; font-size: 14px; }
 .metrics .note { display: block; margin-top: 6px; font-size: 12px; line-height: 1.5; color: var(--text-dim); }
 
@@ -495,7 +510,8 @@ code.wrap { word-break: break-all; white-space: normal; background: var(--surfac
 /* ----------------------------------------------------------------- about */
 .prose { max-width: 84ch; }
 dl.glossary { display: grid; grid-template-columns: max-content 1fr; gap: 8px 20px; margin: 16px 0 18px; font-size: 14px; }
-dl.glossary dt { font: 500 13.5px var(--mono); color: var(--text); }
+dl.glossary dt { color: var(--text); }
+dl.glossary dd { font-family: var(--serif); font-size: 15.5px; }
 dl.glossary dd { margin: 0; color: var(--text-dim); }
 .about-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); }
 .about-grid .panel + .panel { margin-top: 0; }

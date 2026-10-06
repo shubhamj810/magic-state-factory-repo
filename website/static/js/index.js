@@ -1,54 +1,9 @@
-/* Landing page: the hero matrix, stat cards, explore tiles, landmarks, and the
- * paged [[n,k,d]] table.  Every count on the page is computed here from
+/* Landing page: the hero matrix, the landmarks, and the paged [[n,k,d]] table.  Every count on the page is computed here from
  * data/index.json, so nothing can drift from the catalogue. */
 (function (global) {
   "use strict";
   var C = global.Catalog, Q = global.Query;
   var PAGE = 50;
-
-  function statbar(index) {
-    var counts = index.counts, ranges = index.ranges;
-    return [
-      [counts.factories, "verified factories"],
-      [counts.parameter_sets, "distinct [[n, k, d]]"],
-      [ranges.n[0] + "–" + ranges.n[1], "n, noisy inputs"],
-      [ranges.k[0] + "–" + ranges.k[1], "k, outputs"],
-      [ranges.d[0] + "–" + ranges.d[ranges.d.length - 1], "d, distance"]
-    ].map(function (pair) {
-      return '<div class="stat"><span class="value">' + C.escapeHtml(pair[0]) +
-             '</span><span class="label">' + C.escapeHtml(pair[1]) + "</span></div>";
-    }).join("");
-  }
-
-  /* ------------------------------------------------------- explore tiles */
-  function tiles(index) {
-    var f = index.factories;
-    function count(test) { return f.filter(test).length; }
-    var PARETO = "exhaustive classification n<=54 (Pareto point)";
-    var list = [
-      ["Pure T<sup>⊗k</sup>", "search.html?pure=1",
-       count(function (r) { return r.pure_t; }), "k independent T states from one circuit"],
-      ["Gates with CCZ", "search.html?has=ccz",
-       count(function (r) { return r.ccz_terms > 0; }), "Toffoli-type magic, three outputs at a time"],
-      ["Gates with CS", "search.html?has=cs",
-       count(function (r) { return r.cs_terms > 0; }), "controlled-S terms on pairs of outputs"],
-      ["Distance 5 or more", "search.html?d=5,6,7",
-       count(function (r) { return r.d >= 5; }), "the strongest error suppression catalogued"],
-      ["Pareto-optimal, n ≤ 54", "search.html?regime=" + encodeURIComponent(PARETO),
-       count(function (r) { return r.regimes.indexOf(PARETO) >= 0; }), "undominated in inputs and wires by the exhaustive classification"],
-      ["Found by AI search", "search.html?disc=" + encodeURIComponent("AI search"),
-       count(function (r) { return r.discovery === "AI search"; }), "classes no classification or SAT search had"],
-      ["From the literature", "search.html?lit=1",
-       count(Q.isLiterature), "credited to a published paper"],
-      ["Best yield, γ<sub>ρ</sub> ≤ 1.2", "search.html?grmax=1.2&sort=gamma_rho",
-       count(function (r) { return r.gamma_rho !== null && r.gamma_rho <= 1.2; }), "the frontier of the distillation exponent"]
-    ];
-    return list.map(function (t) {
-      return '<a class="tile" href="' + t[1] + '">' +
-        '<span class="t"><span>' + t[0] + '</span><span class="c">' + t[2] + "</span></span>" +
-        '<span class="s">' + t[3] + "</span></a>";
-    }).join("");
-  }
 
   /* ------------------------------------------- the hero's binary matrix */
   function heroMatrix(record) {
@@ -97,9 +52,7 @@
 
   C.loadIndex().then(function (index) {
     Q.prepare(index);
-    document.getElementById("stats").innerHTML = statbar(index);
     document.getElementById("hero-count").textContent = index.counts.factories + " verified";
-    document.getElementById("tiles").innerHTML = tiles(index);
 
     var refs = index.references || {};
     document.getElementById("cite-list").innerHTML =
@@ -160,10 +113,11 @@
       body.innerHTML = slice.map(function (row) {
         var href = C.paramsHref(row.n, row.k, row.d);
         return '<tr class="clickable" data-href="' + href + '">' +
-          '<td class="params"><a href="' + href + '">' + C.params(row.n, row.k, row.d) + "</a></td>" +
+          '<td class="params"><a href="' + href + '" aria-label="' + C.params(row.n, row.k, row.d) + '">' +
+            C.paramsTex(row.n, row.k, row.d) + "</a></td>" +
           '<td class="num">' + row.n + "</td>" +
           '<td class="num">' + row.k + "</td>" +
-          '<td><span class="tag"><span class="dot d' + row.d + '"></span>' + row.d + "</span></td>" +
+          '<td class="num">' + row.d + "</td>" +
           '<td class="num">' + row.count + "</td>" +
           '<td class="num">' + C.num(row.gamma_rho) + "</td>" +
           '<td class="num">' + C.num(row.gamma) + "</td>" +

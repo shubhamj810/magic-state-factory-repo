@@ -26,10 +26,10 @@
       <table class="syntax-table">
         <tr><td><code>[[49, 1, 5]]</code></td><td>exactly these parameters</td></tr>
         <tr><td><code>n&lt;=100</code> <code>k=2</code> <code>d&gt;=5</code> <code>N&lt;12</code> <code>r=4</code></td><td>a parameter compared with a number &mdash; <code>n</code> and <code>N</code> are different</td></tr>
-        <tr><td><code>t&lt;=4</code> <code>deg=2</code> <code>g&lt;1.3</code></td><td>T-count, phase-polynomial degree, &gamma;<sub>&rho;</sub></td></tr>
+        <tr><td><code>t&lt;=4</code> <code>deg=2</code> <code>g&lt;1.3</code></td><td>T-count, phase-polynomial degree, <span class="tex">\gamma_\rho</span></td></tr>
         <tr><td><code>T0</code> <code>CS01</code> <code>CCZ012</code> <code>CCZ10,11,12</code></td><td>the gate contains this exact term (commas once an index reaches 10)</td></tr>
         <tr><td><code>T</code> <code>CS</code> <code>CCZ</code></td><td>the gate contains at least one term of this kind</td></tr>
-        <tr><td><code>pure</code> <code>exact</code></td><td>pure T<sup>&otimes;k</sup> gates; exact distance only</td></tr>
+        <tr><td><code>pure</code> <code>exact</code></td><td>pure <span class="tex">T^{\otimes k}</span> gates; exact distance only</td></tr>
         <tr><td>anything else</td><td>matched against the gate, the id, the discovery regime and the cited papers</td></tr>
       </table>
       <p>Words combine with AND.</p>
@@ -54,16 +54,16 @@
           <label class="pill"><input type="checkbox" name="has" value="t"><span class="sym">T</span> has T</label>
           <label class="pill"><input type="checkbox" name="has" value="cs"><span class="sym">CS</span> has CS</label>
           <label class="pill"><input type="checkbox" name="has" value="ccz"><span class="sym">CCZ</span> has CCZ</label>
-          <label class="pill"><input type="checkbox" id="pure"> pure T<sup>&otimes;k</sup></label>
+          <label class="pill"><input type="checkbox" id="pure"> pure <span class="tex">T^{\otimes k}</span></label>
         </div>
       </fieldset>
       <fieldset>
         <legend>Size</legend>
-        <div class="range"><label for="nmin">n</label>
+        <div class="range"><label for="nmin"><span class="tex">n</span></label>
           <input id="nmin" type="number" min="1" inputmode="numeric" placeholder="min" aria-label="n minimum">
           <span>–</span>
           <input id="nmax" type="number" min="1" inputmode="numeric" placeholder="max" aria-label="n maximum"></div>
-        <div class="range"><label for="kmin">k</label>
+        <div class="range"><label for="kmin"><span class="tex">k</span></label>
           <input id="kmin" type="number" min="1" inputmode="numeric" placeholder="min" aria-label="k minimum">
           <span>–</span>
           <input id="kmax" type="number" min="1" inputmode="numeric" placeholder="max" aria-label="k maximum"></div>
@@ -72,7 +72,7 @@
         <legend>Cost and yield</legend>
         <div class="range"><label class="wide" for="tmax">T-count &le;</label>
           <input id="tmax" type="number" min="1" inputmode="numeric" placeholder="any"></div>
-        <div class="range"><label class="wide" for="grmax">&gamma;<sub>&rho;</sub> &le;</label>
+        <div class="range"><label class="wide" for="grmax"><span class="tex">\gamma_\rho \le</span></label>
           <input id="grmax" type="number" min="0" step="0.05" inputmode="decimal" placeholder="any"></div>
         <div class="pills"><label class="pill"><input type="checkbox" id="known"> T-count known</label></div>
       </fieldset>
@@ -106,12 +106,12 @@
         <table id="table">
           <caption class="sr-only">Factories matching the search. Click a column header to sort.</caption>
           <thead><tr>
-            <th data-key="order" data-type="number" scope="col">[[n, k, d]]</th>
+            <th data-key="order" data-type="number" scope="col"><span class="tex">[\![n,k,d]\!]</span></th>
             <th data-key="gate_human" data-type="text" scope="col">output gate</th>
-            <th class="num" data-key="N" data-type="number" scope="col">N</th>
+            <th class="num" data-key="N" data-type="number" scope="col"><span class="tex">N</span></th>
             <th class="num" data-key="t_count" data-type="number" scope="col">T-count</th>
-            <th class="num" data-key="gamma_rho" data-type="number" scope="col" title="log(n/V_ex)/log d — lower is better">&gamma;<sub>&rho;</sub></th>
-            <th class="num" data-key="gamma" data-type="number" scope="col" title="log(n/k)/log d">&gamma;</th>
+            <th class="num" data-key="gamma_rho" data-type="number" scope="col" title="log(n/V_ex)/log d — lower is better"><span class="tex">\gamma_\rho</span></th>
+            <th class="num" data-key="gamma" data-type="number" scope="col" title="log(n/k)/log d"><span class="tex">\gamma</span></th>
             <th data-key="d_is_exact" data-type="text" scope="col">distance</th>
             <th data-key="discovery" data-type="text" scope="col">found by</th>
             <th data-key="cite_text" data-type="text" scope="col">cited</th>

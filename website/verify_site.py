@@ -186,9 +186,12 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         count = page.inner_text("#count")
         failures.check(f"{len(parameters)} of {len(parameters)}" in count,
                        f"index.html count reads {count!r}")
-        stat_values = [e.inner_text() for e in page.query_selector_all(".statbar .value")]
-        failures.check(str(len(factories)) in stat_values,
-                       f"index.html stat bar lacks the factory count ({stat_values})")
+        hero = page.inner_text("#hero-count")
+        failures.check(hero.startswith(str(len(factories))),
+                       f"index.html hero says {hero!r}, the catalogue has {len(factories)} factories")
+        failures.check(page.evaluate("!!window.katex") and
+                       not page.query_selector_all(".tex-fallback"),
+                       "index.html: KaTeX did not load, so the maths is shown as TeX source")
         failures.check(page.query_selector("#frontier-plot svg") is not None,
                        "index.html: the frontier plot did not render")
         failures.check(len(page.query_selector_all("#record-cards a.record")) == len(index["ranges"]["d"]),
@@ -203,26 +206,13 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
             cells = len(page.query_selector_all("#hm-svg rect"))
             failures.check(cells == bk["N"] * bk["n"],
                            f"index.html: hero matrix has {cells} cells, expected {bk['N'] * bk['n']}")
-        # every explore tile's count, recomputed here
-        tile_counts = [int(e.inner_text()) for e in page.query_selector_all("#tiles a.tile .c")]
-        wanted_tiles = [
-            sum(f["pure_t"] for f in factories),
-            sum(f["ccz_terms"] > 0 for f in factories),
-            sum(f["cs_terms"] > 0 for f in factories),
-            sum(f["d"] >= 5 for f in factories),
-            sum("exhaustive classification n<=54 (Pareto point)" in f["regimes"] for f in factories),
-            sum(f["discovery"] == "AI search" for f in factories),
-            sum(any(c not in OWN for c in f["citations"]) for f in factories),
-            sum(f["gamma_rho"] is not None and f["gamma_rho"] <= 1.2 for f in factories),
-        ]
-        failures.check(tile_counts == wanted_tiles,
-                       f"index.html: tile counts {tile_counts}, expected {wanted_tiles}")
         # hovering a plot point shows its parameters
         point = page.query_selector_all("#frontier-plot circle.pt")[0]
         point.scroll_into_view_if_needed()
         box = point.bounding_box()
         page.mouse.move(box["x"] + box["width"] / 2, box["y"] + box["height"] / 2)
-        failures.check("[[" in page.inner_text("#plot-tip"),
+        failures.check("gates" in page.inner_text("#plot-tip") and
+                       page.query_selector("#plot-tip.on") is not None,
                        "index.html: hovering a plot point shows no tooltip")
         page.click('#pager button[data-page="2"]')
         failures.check("page 2 of" in page.inner_text("#count"),
@@ -288,9 +278,10 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
             links = [a.get_attribute("href") for a in page.query_selector_all("#body td.gate a[href]")]
             failures.check(len(links) == p["count"],
                            f"{where}: {len(links)} gate links for {p['count']} factories")
-            heading = page.inner_text("#heading")
-            failures.check(f"[[{p['n']}, {p['k']}, {p['d']}]]" in heading,
-                           f"{where}: heading is {heading!r}")
+            title = page.title()
+            failures.check(f"[[{p['n']}, {p['k']}, {p['d']}]]" in title and
+                           page.query_selector("#heading .katex") is not None,
+                           f"{where}: title is {title!r}, or the heading was not typeset")
             _ghosts(page, failures, where)
             for href in links:
                 if not href or not href.startswith("factory.html?id="):

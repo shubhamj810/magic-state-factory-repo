@@ -30,18 +30,18 @@
       </form>
       <p class="quick" aria-label="example searches">
         <span class="label">Popular:</span>
-        <a href="search.html?pure=1">pure T<sup>&otimes;k</sup></a>
+        <a href="search.html?pure=1">pure <span class="tex">T^{\otimes k}</span></a>
         <a href="search.html?has=ccz">with CCZ</a>
         <a href="search.html?kmin=1&amp;kmax=1">single output</a>
         <a href="search.html?d=5,6,7">distance &ge; 5</a>
-        <a href="search.html?sort=gamma_rho">best &gamma;<sub>&rho;</sub></a>
+        <a href="search.html?sort=gamma_rho">best <span class="tex">\gamma_\rho</span></a>
       </p>
     </div>
 
     <figure class="hero-matrix" id="hero-matrix" aria-label="The 15-to-1 factory as a binary matrix">
-      <div class="hm-head"><span>A factory is a binary matrix</span><strong id="hm-label">[[15, 1, 3]]</strong></div>
+      <div class="hm-head"><span>A factory is a binary matrix</span><strong id="hm-label"><span class="tex">[\![15,\,1,\,3]\!]</span></strong></div>
       <div id="hm-svg"></div>
-      <figcaption>Rows are wires, columns are the &pi;/4 rotations that consume
+      <figcaption>Rows are wires, columns are the <span class="tex">\pi/4</span> rotations that consume
       noisy T states. <span class="k-out">Output</span> rows carry the protected
       magic state; <span class="k-chk">check</span> rows are measured and
       postselected. <a id="hm-link" href="search.html?q=%5B%5B15%2C1%2C3%5D%5D">Open this factory &rarr;</a></figcaption>
@@ -49,30 +49,25 @@
   </div>
 </section>
 
-<div class="inner stats-wrap"><div class="statbar" id="stats"></div></div>
 
 <main id="main">
-  <h2 id="explore">Explore the catalogue</h2>
-  <p class="section-intro">Common starting points. Each opens a search you can refine.</p>
-  <div class="tiles" id="tiles"></div>
-
   <h2 id="best">The best in the catalogue</h2>
-  <p class="section-intro">Ranked on &gamma;<sub>&rho;</sub> = log(n/V<sub>ex</sub>)/log d,
-  where V<sub>ex</sub> is the number of T states one run actually yields
+  <p class="section-intro">Ranked on <span class="tex">\gamma_\rho = \log(n/V_{\mathrm{ex}})/\log d</span>,
+  where <span class="tex">V_{\mathrm{ex}}</span> is the number of T states one run actually yields
   (T and CS count one, CCZ two). <strong>Lower is better.</strong> Gates whose
-  terms overlap have no well-defined V<sub>ex</sub> and are left out.</p>
+  terms overlap have no well-defined <span class="tex">V_{\mathrm{ex}}</span> and are left out.</p>
   <div class="headline" id="headline-stats"></div>
 
-  <h3>Least &gamma;<sub>&rho;</sub> at each distance</h3>
+  <h3>Least <span class="tex">\gamma_\rho</span> at each distance</h3>
   <div class="records" id="record-cards"></div>
 
-  <h2 id="frontier">The &gamma;<sub>&rho;</sub> frontier</h2>
-  <p class="section-intro">How the best achievable &gamma;<sub>&rho;</sub> falls as
+  <h2 id="frontier">The <span class="tex">\gamma_\rho</span> frontier</h2>
+  <p class="section-intro">How the best achievable <span class="tex">\gamma_\rho</span> falls as
   a factory is allowed more noisy inputs, one panel per distance on shared axes.</p>
   <div id="frontier-plot"></div>
 
   <h2 id="parameters">Browse by parameters</h2>
-  <p class="section-intro">One row per distinct <span class="mono">[[n, k, d]]</span>.
+  <p class="section-intro">One row per distinct <span class="tex">[\![n,k,d]\!]</span>.
   Open a row to see every inequivalent output gate at those parameters. For
   anything finer, use <a href="search.html">search</a>.</p>
 
@@ -88,16 +83,16 @@
     <table id="table">
       <caption class="sr-only">Parameter sets in the catalogue. Click a column header to sort.</caption>
       <thead><tr>
-        <th data-key="order" data-type="number" scope="col">[[n, k, d]]</th>
-        <th class="num" data-key="n" data-type="number" scope="col">n</th>
-        <th class="num" data-key="k" data-type="number" scope="col">k</th>
-        <th data-key="d" data-type="number" scope="col">d</th>
+        <th data-key="order" data-type="number" scope="col"><span class="tex">[\![n,k,d]\!]</span></th>
+        <th class="num" data-key="n" data-type="number" scope="col"><span class="tex">n</span></th>
+        <th class="num" data-key="k" data-type="number" scope="col"><span class="tex">k</span></th>
+        <th class="num" data-key="d" data-type="number" scope="col"><span class="tex">d</span></th>
         <th class="num" data-key="count" data-type="number" scope="col">gates</th>
-        <th class="num" data-key="gamma_rho" data-type="number" scope="col" title="best log(n/V_ex)/log d at these parameters">best &gamma;<sub>&rho;</sub></th>
-        <th class="num" data-key="gamma" data-type="number" scope="col" title="log(n/k)/log d">&gamma;</th>
-        <th class="num" data-key="rate" data-type="number" scope="col">rate k/n</th>
+        <th class="num" data-key="gamma_rho" data-type="number" scope="col" title="best log(n/V_ex)/log d at these parameters">best <span class="tex">\gamma_\rho</span></th>
+        <th class="num" data-key="gamma" data-type="number" scope="col" title="log(n/k)/log d"><span class="tex">\gamma</span></th>
+        <th class="num" data-key="rate" data-type="number" scope="col">rate <span class="tex">k/n</span></th>
         <th class="num" data-key="best_t_count" data-type="number" scope="col">best T-count</th>
-        <th class="num" data-key="N_min" data-type="number" scope="col">min N</th>
+        <th class="num" data-key="N_min" data-type="number" scope="col">min <span class="tex">N</span></th>
       </tr></thead>
       <tbody id="body"></tbody>
     </table>
@@ -106,30 +101,30 @@
 
   <h2 id="reading">How to read an entry</h2>
   <div class="panel prose">
-    <p>A <strong>factory</strong> is a circuit of <code>n</code> &pi;/4 parity
-    rotations on <code>N = k + r</code> wires. Each rotation consumes one noisy
-    T state. The first <code>k</code> wires are <strong>outputs</strong>; the
-    other <code>r</code> are <strong>checks</strong>, measured and postselected
+    <p>A <strong>factory</strong> is a circuit of <span class="tex">n</span> <span class="tex">\pi/4</span> parity
+    rotations on <span class="tex">N = k + r</span> wires. Each rotation consumes one noisy
+    T state. The first <span class="tex">k</span> wires are <strong>outputs</strong>; the
+    other <span class="tex">r</span> are <strong>checks</strong>, measured and postselected
     on. Stack the rotations into a binary matrix &mdash; one row per wire, one
     column per rotation &mdash; and that matrix is the whole circuit. The gate it
     deposits on the outputs is read off the row overlaps, and the circuit is a
     valid factory exactly when no phase lands on a check wire.</p>
     <dl class="glossary">
-      <dt>n</dt><dd>rotations, i.e. noisy T states consumed per run</dd>
-      <dt>k</dt><dd>output wires, indexed 0&hellip;k&minus;1</dd>
-      <dt>d</dt><dd>circuit distance: the least number of faulty rotations that is both undetected and damaging. <em>Exact</em> means proved and witnessed; otherwise it is a proved lower bound</dd>
-      <dt>N, r</dt><dd>total wires, and the r = N &minus; k postselected checks</dd>
+      <dt><span class="tex">n</span></dt><dd>rotations, i.e. noisy T states consumed per run</dd>
+      <dt><span class="tex">k</span></dt><dd>output wires, indexed <span class="tex">0,\dots,k-1</span></dd>
+      <dt><span class="tex">d</span></dt><dd>circuit distance: the least number of faulty rotations that is both undetected and damaging. <em>Exact</em> means proved and witnessed; otherwise it is a proved lower bound</dd>
+      <dt><span class="tex">N,\ r</span></dt><dd>total wires, and the <span class="tex">r = N - k</span> postselected checks</dd>
       <dt>T-count</dt><dd>exact minimal T-count of the deposited gate, where computable</dd>
-      <dt>&gamma;</dt><dd>log(n/k)/log d &mdash; the yield exponent counted in output wires</dd>
-      <dt>&gamma;<sub>T</sub></dt><dd>log(n/T-count)/log d &mdash; the same, counted in T-cost</dd>
-      <dt>&gamma;<sub>&rho;</sub></dt><dd>log(n/V<sub>ex</sub>)/log d &mdash; counted in extractable T states; the fair comparison across gates. Lower is better for all three</dd>
+      <dt><span class="tex">\gamma</span></dt><dd><span class="tex">\log(n/k)/\log d</span> &mdash; the yield exponent counted in output wires</dd>
+      <dt><span class="tex">\gamma_T</span></dt><dd><span class="tex">\log(n/T)/\log d</span>, with <span class="tex">T</span> the T-count &mdash; the same, counted in T-cost</dd>
+      <dt><span class="tex">\gamma_\rho</span></dt><dd><span class="tex">\log(n/V_{\mathrm{ex}})/\log d</span> &mdash; counted in extractable T states; the fair comparison across gates. Lower is better for all three</dd>
     </dl>
     <p><strong>One row per magic state.</strong> Two circuits with the same
-    <code>n</code>, <code>k</code> and <code>d</code> are one row when their output
+    <span class="tex">n</span>, <span class="tex">k</span> and <span class="tex">d</span> are one row when their output
     gates differ only by an invertible change of output basis and diagonal
-    Clifford corrections (the <code>GL(k,2)</code>, or CNOT+S, equivalence):
-    they prepare the same magic state, so <code>T0&middot;T1</code> and
-    <code>T0&middot;CS01</code> are one class. The stored circuit is one
+    Clifford corrections (the <span class="tex">\mathrm{GL}(k,2)</span>, or CNOT&thinsp;+&thinsp;S, equivalence):
+    they prepare the same magic state, so <span class="tex">\mathrm{T}_0\cdot\mathrm{T}_1</span> and
+    <span class="tex">\mathrm{T}_0\cdot\mathrm{CS}_{01}</span> are one class. The stored circuit is one
     representative. Circuits at different distances are always different rows.</p>
   </div>
 

@@ -14,13 +14,13 @@
                       .filter(function (g) { return !C.blank(g); });
     return [
       [members.length, members.length === 1 ? "distinct gate" : "distinct gates"],
-      [rhos.length ? C.num(Math.min.apply(null, rhos)) : "—", "best γρ"],
-      [C.num(gamma), "γ = log(n/k)/log d"],
+      [rhos.length ? C.num(Math.min.apply(null, rhos)) : "—", "best " + C.tex(C.TEX.gr)],
+      [C.num(gamma), C.tex(C.TEX.gDef)],
       [counts.length ? Math.min.apply(null, counts) : "—", "best T-count"],
-      [Math.min.apply(null, members.map(function (m) { return m.N; })), "min wires N"]
+      [Math.min.apply(null, members.map(function (m) { return m.N; })), "fewest wires " + C.tex("N")]
     ].map(function (pair) {
       return '<div class="stat"><span class="value">' + C.escapeHtml(pair[0]) +
-             '</span><span class="label">' + C.escapeHtml(pair[1]) + "</span></div>";
+             '</span><span class="label">' + pair[1] + "</span></div>";
     }).join("");
   }
 
@@ -31,9 +31,8 @@
     });
 
     document.title = label + " — Magic State Factory Catalog";
-    document.getElementById("crumb").innerHTML =
-      '<span class="mono">' + C.escapeHtml(label) + "</span>";
-    document.getElementById("heading").textContent = label;
+    document.getElementById("crumb").innerHTML = C.paramsTex(n, k, d);
+    document.getElementById("heading").innerHTML = C.paramsTex(n, k, d);
 
     if (!members.length) {
       document.getElementById("blurb").innerHTML =
@@ -42,16 +41,16 @@
         '<a href="search.html">search the catalogue</a>.';
       document.getElementById("stats").remove();
       document.querySelector(".table-wrap").innerHTML =
-        '<p class="empty">Nothing catalogued at ' + C.escapeHtml(label) + ".</p>";
+        '<p class="empty">Nothing catalogued at ' + C.paramsTex(n, k, d) + ".</p>";
       document.querySelector(".toolbar").remove();
       return;
     }
 
     document.getElementById("blurb").innerHTML =
       members.length + (members.length === 1 ? " factory" : " inequivalent factories") +
-      " consuming <strong>" + n + "</strong> noisy T states to protect <strong>" +
-      k + "</strong> output " + (k === 1 ? "wire" : "wires") +
-      " at distance <strong>" + d + "</strong>.";
+      " consuming " + C.tex("n=" + n) + " noisy T states to protect " +
+      C.tex("k=" + k) + " output " + (k === 1 ? "wire" : "wires") +
+      " at distance " + C.tex("d=" + d) + ".";
     document.getElementById("stats").innerHTML = statbar(members);
 
     var body = document.getElementById("body");
@@ -71,7 +70,7 @@
       body.innerHTML = shown.map(function (m) {
         var href = C.factoryHref(m.id);
         return '<tr class="clickable" data-href="' + href + '">' +
-          '<td class="gate"><a href="' + href + '">' + C.gateHtml(m.gate_human) +
+          '<td class="gate"><a href="' + href + '" aria-label="' + C.escapeHtml(m.gate_human) + '">' + C.gateTex(m.gate_human) +
             "</a>" + (m.gate_truncated ? ' <span class="tag">' + m.terms + " terms</span>" : "") +
             (m.pure_t ? ' <span class="tag pure">pure T</span>' : "") + "</td>" +
           '<td class="num">' + m.terms + "</td>" +
@@ -100,14 +99,13 @@
     });
     function links(list) {
       return list.map(function (p) {
-        return '<a href="' + C.paramsHref(p.n, p.k, p.d) + '">' +
-               C.escapeHtml(C.params(p.n, p.k, p.d)) + "</a>";
+        return '<a href="' + C.paramsHref(p.n, p.k, p.d) + '">' + C.paramsTex(p.n, p.k, p.d) + "</a>";
       }).join(" · ");
     }
     var parts = [];
-    if (sameNk.length) parts.push("Same n and k at other distances: " + links(sameNk));
+    if (sameNk.length) parts.push("Same " + C.tex("n") + " and " + C.tex("k") + " at other distances: " + links(sameNk));
     if (sameKd.length) {
-      parts.push("Same k and d at other lengths: " +
+      parts.push("Same " + C.tex("k") + " and " + C.tex("d") + " at other lengths: " +
         links(sameKd.slice(0, 12)) +
         (sameKd.length > 12 ? ' · <a href="search.html?kmin=' + k + "&kmax=" + k + "&d=" + d +
                               '">all ' + sameKd.length + "</a>" : ""));

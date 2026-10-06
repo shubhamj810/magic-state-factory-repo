@@ -38,9 +38,12 @@ the build stitches them in. `PAGE` names the nav link to mark as current; add
 `nosearch` to drop the header's search box. The build also writes the
 catalogue commit into the footer.
 
-The look comes from [`static/css/style.css`](static/css/style.css): IBM Plex
-Sans and Mono, flat surfaces, hairline borders, 4 px corners and one accent
-blue. There are no gradients, glows, shadows on cards or accent bars. Every
+The look comes from [`static/css/style.css`](static/css/style.css). Headings
+and prose are set in Source Serif 4. Tables and controls use IBM Plex Sans with
+tabular figures, and monospace is kept for raw data only: gate strings, the
+matrix and code. All mathematics, including γ_ρ, V_ex, ⟦n, k, d⟧ and gate names
+such as T₀·CS₀₁, is typeset with KaTeX, so it reads like the papers. Surfaces are
+flat, with hairline borders, 4 px corners and one accent blue. There are no gradients, glows, shadows on cards or accent bars. Every
 colour is a token on `:root`, and dark mode is a separate palette rather than
 an automatic inversion. Colour is used only where it carries meaning:
 - **Output wires** are amber and **check wires** are teal, in the matrix, the
@@ -134,7 +137,7 @@ does not run it. It loads every page shape in headless Chromium and checks the
 rendered page against counts it computes itself:
 - 22 searches;
 - the CSV export;
-- the hero matrix, the explore-tile counts and the plot tooltip;
+- the hero matrix, the plot tooltip, and that KaTeX typeset the maths;
 - the CNOT + S tool, against `master_catalog/glcanon.py`: an inequivalent target is
   refused, every factory it lists instead really is equivalent, and random
   equivalent targets come back with a construction checked on every basis state;

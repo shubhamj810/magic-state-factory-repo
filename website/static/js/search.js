@@ -44,7 +44,7 @@
       var label = document.createElement("label");
       label.className = "pill";
       label.innerHTML = '<input type="checkbox" name="d" value="' + d + '"><span class="dot d' + d +
-                        '"></span>d = ' + d;
+                        '"></span>' + C.tex("d=" + d);
       $("d-checks").appendChild(label);
     });
     var discCounts = counted(all, function (r) { return r.discovery; });
@@ -112,9 +112,9 @@
     function row(f) {
       var href = C.factoryHref(f.id);
       return '<tr class="clickable" data-href="' + href + '">' +
-        '<td class="params"><a href="' + C.paramsHref(f.n, f.k, f.d) + '" title="all gates at these parameters">' +
-          C.params(f.n, f.k, f.d) + "</a></td>" +
-        '<td class="gate"><a href="' + href + '">' + C.gateHtml(f.gate_human) + "</a>" +
+        '<td class="params"><a href="' + C.paramsHref(f.n, f.k, f.d) + '" title="all gates at these parameters" aria-label="' +
+          C.params(f.n, f.k, f.d) + '">' + C.paramsTex(f.n, f.k, f.d) + "</a></td>" +
+        '<td class="gate"><a href="' + href + '" aria-label="' + C.escapeHtml(f.gate_human) + '">' + C.gateTex(f.gate_human) + "</a>" +
           (f.gate_truncated ? ' <span class="tag" title="the full gate is on the factory page">' +
                               f.terms + " terms</span>" : "") +
           (f.pure_t ? ' <span class="tag pure">pure T</span>' : "") + "</td>" +

@@ -105,21 +105,22 @@
         var ms = Math.max(1, Math.round(performance.now() - started));
         var gates = circuit.cnots.length + circuit.singles.length + circuit.czs.length;
         if (!gates) {
-          out.innerHTML = '<p class="tf-verdict ok"><strong>✓ Same gate.</strong> <code>' + C.escapeHtml(name) +
-            "</code> is what this factory already deposits, up to diagonal Clifford corrections that do " +
+          out.innerHTML = '<p class="tf-verdict ok"><strong>✓ Same gate.</strong> ' + C.gateTex(name) +
+            " is what this factory already deposits, up to diagonal Clifford corrections that do " +
             "not change the magic state. Nothing to apply.</p>";
           return;
         }
         out.innerHTML =
-          '<p class="tf-verdict ok"><strong>✓ Reachable.</strong> This factory produces <code>' +
-          C.escapeHtml(name) + "</code>: apply, on its " + k + " output" + (k === 1 ? "" : "s") + ", " +
+          '<p class="tf-verdict ok"><strong>✓ Reachable.</strong> This factory produces ' +
+          C.gateTex(name) + ": apply, on its " + k + " output" + (k === 1 ? "" : "s") + ", " +
           circuit.cnots.length + " CNOT" + (circuit.cnots.length === 1 ? "" : "s") + " and then " +
           (circuit.singles.length + circuit.czs.length) + " Clifford correction" +
           (circuit.singles.length + circuit.czs.length === 1 ? "" : "s") + ".</p>" +
           diagram(k, circuit) +
           '<p class="tf-gates">' + gateList(circuit) + "</p>" +
           '<p class="small muted tf-check">Checked by brute force on all ' + circuit.checked +
-          " basis states: the CNOT circuit sends every |x⟩ to the intended |A<sup>−1</sup>x⟩, and the " +
+          " basis states: the CNOT circuit sends every " + C.tex("\\lvert x\\rangle") + " to " +
+          C.tex("\\lvert A^{-1}x\\rangle") + ", and the " +
           "phase of the transformed gate equals the target's exactly (mod 8, up to a global phase)" +
           " — " + ms + " ms.</p>" +
           '<p><button type="button" class="btn" id="tf-copy">Copy as Qiskit</button></p>';
@@ -130,9 +131,9 @@
       out.innerHTML =
         '<p class="tf-verdict ' + (verdict.status === "no" ? "no" : "maybe") + '"><strong>' +
         (verdict.status === "no" ? "✗ Not reachable" : "? Undecided") + ".</strong> " +
-        (verdict.status === "no" ? "No CNOT + S circuit turns this factory's output into <code>"
-                                 : "Could not decide whether this factory reaches <code>") +
-        C.escapeHtml(name) + "</code>: " + C.escapeHtml(verdict.reason) + ".</p>" +
+        (verdict.status === "no" ? "No CNOT + S circuit turns this factory's output into "
+                                 : "Could not decide whether this factory reaches ") +
+        C.gateTex(name) + ": " + C.escapeHtml(verdict.reason) + ".</p>" +
         '<div id="tf-elsewhere" class="small muted">Looking for factories in the catalogue that produce it…</div>';
       setTimeout(function () { elsewhere(k, target, name); }, 30);
     }
@@ -152,12 +153,12 @@
         if (!node) return;
         node.className = "small";
         node.innerHTML = hits.length
-          ? "Catalogued factories that produce <code>" + C.escapeHtml(name) + "</code> (up to CNOT + S), fewest inputs first: " +
+          ? "Catalogued factories that produce " + C.gateTex(name) + " (up to CNOT + S), fewest inputs first: " +
             hits.slice(0, 12).map(function (f) {
-              return '<a href="' + C.factoryHref(f.id) + '">' + C.params(f.n, f.k, f.d) + "</a>";
+              return '<a href="' + C.factoryHref(f.id) + '">' + C.paramsTex(f.n, f.k, f.d) + "</a>";
             }).join(" · ") + (hits.length > 12 ? " and " + (hits.length - 12) + " more" : "") + "."
-          : "No factory in the catalogue with " + k + " outputs produces <code>" + C.escapeHtml(name) +
-            "</code>" + (undecided ? " (" + undecided + " comparisons undecided)" : "") + ".";
+          : "No factory in the catalogue with " + k + " outputs produces " + C.gateTex(name) +
+            (undecided ? " (" + undecided + " comparisons undecided)" : "") + ".";
       });
     }
   }
