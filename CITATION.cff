@@ -1,5 +1,5 @@
 # GitHub reads this file to show "Cite this repository", and Zenodo reads it to
-# describe each archived release.  Please check the authors before a release.
+# describe each archived release.
 cff-version: 1.2.0
 message: >-
   If you use this catalogue, please cite it as below, and cite the papers
@@ -13,8 +13,6 @@ abstract: >-
 authors:
   - family-names: Jain
     given-names: Shubham P.
-  - family-names: Wills
-    given-names: Adam
   - family-names: Singh
     given-names: Shraddha
 repository-code: "https://github.com/shubhamj810/magic-state-factory-repo"
