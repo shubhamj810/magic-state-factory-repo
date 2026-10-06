@@ -19,6 +19,7 @@
 <main id="main" class="guide">
   <nav class="toc" aria-label="on this page">
     <a href="#factory">Factories</a><a href="#numbers">The numbers</a><a href="#distance">Distances</a>
+    <a href="#reliability">How each number is obtained</a>
     <a href="#classes">One row per magic state</a><a href="#labels">Labels</a><a href="#citing">Citing</a>
     <a href="#data">Data</a><a href="#contributing">Contributing</a><a href="#sources">Sources</a>
   </nav>
@@ -55,6 +56,26 @@
     <p>A few sources certify a larger distance than could be re-checked here. Tables show
     both. Rankings and exponents use the certified one and mark it &dagger;.</p>
 
+    <h2 id="reliability">How each number is obtained</h2>
+    <p>Every row is re-derived from its circuit by
+    <a href="https://github.com/shubhamj810/magic-state-factory-repo/blob/main/master_catalog/verify_catalog.py"><code>verify_catalog.py</code></a>
+    when it enters the catalogue, and the whole file can be re-checked the same way at
+    any time.</p>
+    <table class="reliability">
+      <thead><tr><th scope="col">field</th><th scope="col">how</th><th scope="col">status</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tex">n,\ k,\ N</span></td><td>Read off the circuit.</td><td>exact</td></tr>
+        <tr><td>output gate</td><td>Recomputed from the row overlaps of the circuit.</td><td>exact</td></tr>
+        <tr><td>valid factory</td><td>Every parity that touches a check row is checked to be even.</td><td>exact</td></tr>
+        <tr><td>distance</td><td>Every fault below <span class="tex">d</span> is enumerated. An explicit damaging fault of weight <span class="tex">d</span> makes it exact. Without one it is a lower bound, and an explicit fault of larger weight gives an upper bound.</td><td>proved</td></tr>
+        <tr><td>certified distance</td><td>Taken from the factory's source where the search above was out of reach. Not re-checked.</td><td>from source</td></tr>
+        <tr><td>T-count, degree</td><td>Exact minimisation where it is feasible, about <span class="tex">k\le 6</span>. Left blank above that, never estimated.</td><td>exact or blank</td></tr>
+        <tr><td><span class="tex">V_{\mathrm{ex}}</span>, <span class="tex">\gamma</span>, <span class="tex">\gamma_T</span>, <span class="tex">\gamma_\rho</span></td><td>Formulas in the numbers above.</td><td>exact</td></tr>
+        <tr><td>one row per class</td><td>Every pair of rows with the same <span class="tex">n,k,d</span> is decided by a search for a change of output basis. A pair the search could not decide carries a note saying so.</td><td>proved, or noted</td></tr>
+        <tr><td>origin, citations</td><td>Recorded when a factory is added.</td><td>curated</td></tr>
+      </tbody>
+    </table>
+
     <h2 id="classes">One row per magic state</h2>
     <p>Two circuits with the same <span class="tex">n</span>, <span class="tex">k</span> and
     <span class="tex">d</span> share a row when a CNOT circuit and S, Z and CZ gates on the
@@ -87,7 +108,8 @@
       <li><a href="https://github.com/shubhamj810/magic-state-factory-repo/blob/main/master_catalog/master_catalog.json">master_catalog.json</a>, the full database.</li>
     </ul>
     <p>The site is rebuilt from <code>master_catalog.json</code> on every change. The footer
-    names the version it shows.</p>
+    names the version it shows, and <a href="changes.html">What&rsquo;s new</a> lists every
+    change to the catalogue.</p>
 
     <h2 id="contributing">Contributing</h2>
     <p>The catalogue is a community effort. Send a factory in any format, such as a paper,

@@ -44,7 +44,8 @@
     index.ranges.d.forEach(function (d) {
       var label = document.createElement("label");
       label.className = "pill";
-      label.innerHTML = '<input type="checkbox" name="d" value="' + d + '">' + C.tex("d=" + d);
+      label.innerHTML = '<input type="checkbox" name="d" value="' + d + '">' + C.tex("d=" + d) +
+                        ' <span class="cnt" data-count="d:' + d + '"></span>';
       $("d-checks").appendChild(label);
     });
     var discCounts = counted(all, function (r) { return r.discovery; });
@@ -111,21 +112,24 @@
     /* ------------------------------------------------------------ rendering */
     function row(f) {
       var href = C.factoryHref(f.id);
-      return '<tr class="clickable" data-href="' + href + '">' +
-        '<td class="lab"><a href="' + href + '">' + C.escapeHtml(f.id) + "</a></td>" +
-        '<td class="params"><a href="' + C.paramsHref(f.n, f.k, f.d) + '" title="all gates at these parameters" aria-label="' +
+      return '<tr class="clickable" data-href="' + href + '" data-id="' + f.id + '">' +
+        '<td class="lab" data-col="label"><button type="button" class="peek" aria-expanded="false" ' +
+          'aria-label="preview the matrix of ' + f.id + '" title="preview the matrix">&#9656;</button>' +
+          '<a href="' + href + '">' + C.escapeHtml(f.id) + "</a></td>" +
+        '<td class="params" data-col="params"><a href="' + C.paramsHref(f.n, f.k, f.d) + '" title="all gates at these parameters" aria-label="' +
           C.params(f.n, f.k, f.d) + '">' + C.paramsTex(f.n, f.k, f.d) + "</a></td>" +
-        '<td class="gate"><a href="' + href + '" aria-label="' + C.escapeHtml(f.gate_human) + '">' + C.gateTex(f.gate_human) + "</a>" +
+        '<td class="gate" data-col="gate"><a href="' + href + '" aria-label="' + C.escapeHtml(f.gate_human) + '">' + C.gateTex(f.gate_human) + "</a>" +
           (f.gate_truncated ? ' <span class="tag" title="the full gate is on the factory page">' +
                               f.terms + " terms</span>" : "") +
           (f.pure_t ? ' <span class="tag pure">pure T</span>' : "") + "</td>" +
-        '<td class="num">' + f.N + "</td>" +
-        '<td class="num">' + C.num(f.gamma_rho_claim) + C.claimMark(f) + "</td>" +
-        '<td class="num">' + C.num(f.gamma_claim) + C.claimMark(f) + "</td>" +
-        "<td>" + C.distanceTag(f) + "</td>" +
-        '<td><span class="tag ' + (f.discovery === "AI search" ? "ai" : "pre") + '" title="' +
+        '<td class="num" data-col="N">' + f.N + "</td>" +
+        '<td class="num" data-col="gamma_rho">' + C.num(f.gamma_rho_claim) + C.claimMark(f) + "</td>" +
+        '<td class="num" data-col="gamma">' + C.num(f.gamma_claim) + C.claimMark(f) + "</td>" +
+        '<td data-col="distance">' + C.distanceTag(f) + "</td>" +
+        '<td data-col="found"><span class="tag ' + (f.discovery === "AI search" ? "ai" : "pre") + '" title="' +
           C.escapeHtml(f.regimes.join("\n")) + '">' + C.escapeHtml(f.discovery || "—") + "</span></td>" +
-        '<td class="small cites">' + C.escapeHtml(f.cite_text || "—") + "</td></tr>";
+        '<td class="small cites" data-col="cited">' + C.escapeHtml(f.cite_text || "—") + "</td>" +
+        '<td class="num" data-col="tcount">' + C.integer(f.t_count) + "</td></tr>";
     }
 
     function render(sorted) {
@@ -141,12 +145,14 @@
           ? ' <span class="muted">· showing ' + ((page - 1) * size + 1) + "–" +
             ((page - 1) * size + shown.length) + "</span>" : "");
       $("body").innerHTML = shown.length ? shown.map(row).join("")
-        : '<tr><td colspan="9" class="empty">No factory matches. ' +
+        : '<tr><td colspan="10" class="empty">No factory matches. ' +
           '<button type="button" class="linkish" id="reset-inline">Reset the search</button></td></tr>';
       $("pager").innerHTML = C.pagerHtml(page, pages);
       ["export-csv", "export-json"].forEach(function (id) { $(id).disabled = !sorted.length; });
       var inline = $("reset-inline");
       if (inline) inline.addEventListener("click", reset);
+      chips();
+      counts();
       sync();
     }
 
@@ -177,6 +183,110 @@
       show();
       table.set({ key: "label_order", direction: 1 });
     }
+
+    /* ---------------------------------------------------- active filters */
+    /* Every active filter as a chip with an x, plus "Clear all" (Baymard). */
+    function chips() {
+      var list = [];
+      function add(text, drop) { list.push({ text: text, drop: drop }); }
+      if (state.q) add("“" + C.escapeHtml(state.q) + "”", function (s) { delete s.q; });
+      [["nmin", "n\\ge "], ["nmax", "n\\le "], ["kmin", "k\\ge "], ["kmax", "k\\le "],
+       ["grmax", "\\gamma_\\rho\\le "]].forEach(function (pair) {
+        if (state[pair[0]] !== undefined) add(C.tex(pair[1] + state[pair[0]]), function (s) { delete s[pair[0]]; });
+      });
+      (state.d || []).forEach(function (v) {
+        add(C.tex("d=" + v), function (s) { s.d = s.d.filter(function (x) { return x !== v; }); });
+      });
+      (state.has || []).forEach(function (v) {
+        add("has " + v.toUpperCase(), function (s) { s.has = s.has.filter(function (x) { return x !== v; }); });
+      });
+      if (state.exact) add("exact distance", function (s) { delete s.exact; });
+      if (state.pure) add("pure " + C.tex(C.TEX.pure), function (s) { delete s.pure; });
+      if (state.tmax !== undefined) add("T-count &le; " + state.tmax, function (s) { delete s.tmax; });
+      if (state.known) add("T-count known", function (s) { delete s.known; });
+      if (state.lit) add("from the literature", function (s) { delete s.lit; });
+      if (state.disc) add(C.escapeHtml(state.disc), function (s) { delete s.disc; });
+      if (state.regime) add(C.escapeHtml(state.regime), function (s) { delete s.regime; });
+      if (state.cite) add("cites " + C.escapeHtml(C.referenceShort(index, state.cite)), function (s) { delete s.cite; });
+      var node = $("chips");
+      node.innerHTML = list.map(function (c, i) {
+        return '<button type="button" class="chip" data-i="' + i + '" aria-label="remove this filter">' +
+               c.text + ' <span aria-hidden="true">&times;</span></button>';
+      }).join("") + (list.length > 1 ? '<button type="button" class="linkish" id="clear-all">Clear all</button>' : "");
+      node.querySelectorAll("button.chip").forEach(function (b) {
+        b.addEventListener("click", function () {
+          list[Number(b.getAttribute("data-i"))].drop(state);
+          state.page = 1;
+          show();
+          table.refresh();
+        });
+      });
+      var clear = $("clear-all");
+      if (clear) clear.addEventListener("click", reset);
+    }
+
+    /* How many results each pill would give, with every other filter as it is. */
+    function counts() {
+      function size(s) { return Q.filter(all, s).rows.length; }
+      function copy() { return JSON.parse(JSON.stringify(state)); }
+      document.querySelectorAll("[data-count]").forEach(function (span) {
+        var key = span.getAttribute("data-count").split(":"), s = copy();
+        if (key[0] === "d") s.d = [key[1]];
+        else if (key[0] === "has") s.has = (s.has || []).filter(function (x) { return x !== key[1]; }).concat([key[1]]);
+        else s[key[0]] = true;
+        var c = size(s);
+        span.textContent = c;
+        span.parentNode.classList.toggle("zero", c === 0);
+      });
+    }
+
+    /* --------------------------------------------------- column chooser */
+    var COLUMNS = [["params", "[[n, k, d]]"], ["gate", "output gate"], ["N", "N"], ["gamma_rho", "γρ"],
+                   ["gamma", "γ"], ["distance", "distance"], ["found", "found by"], ["cited", "cited"],
+                   ["tcount", "T-count"]];
+    var hidden = ["tcount"];
+    try { var saved = JSON.parse(localStorage.getItem("msfc-hidden-cols")); if (Array.isArray(saved)) hidden = saved; }
+    catch (e) { /* storage unavailable: keep the default */ }
+    function applyColumns() {
+      COLUMNS.forEach(function (c) { $("table").classList.toggle("hide-" + c[0], hidden.indexOf(c[0]) >= 0); });
+      try { localStorage.setItem("msfc-hidden-cols", JSON.stringify(hidden)); } catch (e) { /* ignore */ }
+    }
+    $("colpick-menu").innerHTML = COLUMNS.map(function (c) {
+      return '<label class="check"><input type="checkbox" value="' + c[0] + '"' +
+             (hidden.indexOf(c[0]) < 0 ? " checked" : "") + "> " + c[1] + "</label>";
+    }).join("");
+    $("colpick-menu").addEventListener("change", function (event) {
+      var v = event.target.value;
+      hidden = event.target.checked ? hidden.filter(function (x) { return x !== v; }) : hidden.concat([v]);
+      applyColumns();
+    });
+    applyColumns();
+
+    /* ------------------------------------------------- inline preview */
+    $("body").addEventListener("click", function (event) {
+      var b = event.target.closest("button.peek");
+      if (!b) return;
+      var tr = b.closest("tr"), next = tr.nextElementSibling;
+      if (next && next.classList.contains("preview")) {
+        next.remove();
+        b.setAttribute("aria-expanded", "false");
+        return;
+      }
+      b.setAttribute("aria-expanded", "true");
+      var id = tr.getAttribute("data-id");
+      var row = document.createElement("tr");
+      row.className = "preview";
+      row.innerHTML = '<td colspan="10"><span class="muted small">loading…</span></td>';
+      tr.after(row);
+      C.loadFactory(id).then(function (record) {
+        var p = record.parameters;
+        row.firstChild.innerHTML = (p.n <= 400
+          ? '<div class="preview-wrap">' + C.matrixSvg(record, p.n > 120 ? 4 : 7) + "</div>"
+          : '<p class="small muted">' + p.n + " columns are too many to preview here.</p>") +
+          '<p class="small"><span class="swatch out"></span> outputs <span class="swatch chk"></span> checks · ' +
+          '<a href="' + C.factoryHref(id) + '">Open ' + C.escapeHtml(id) + " &rarr;</a></p>";
+      });
+    });
 
     /* ------------------------------------------------------------- wiring */
     var timer = null;

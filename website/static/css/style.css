@@ -633,3 +633,59 @@ main.guide h2:first-child { margin-top: 24px; }
   main.guide { grid-template-columns: 1fr; gap: 0; }
   nav.toc { position: static; flex-direction: row; flex-wrap: wrap; gap: 6px 14px; padding-top: 8px; }
 }
+
+table.reliability { margin: 8px 0 6px; font-size: 14.5px; }
+table.reliability td { padding: 8px 12px 8px 0; vertical-align: top; }
+table.reliability td:first-child { white-space: nowrap; }
+table.reliability td:last-child { white-space: nowrap; color: var(--text-dim); }
+pre.raw.code { font-size: 12.5px; line-height: 1.55; margin-bottom: 10px; }
+
+/* -------------------------------------------------- search: chips, counts */
+.chips { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0 0 10px; min-height: 0; }
+.chips:empty { display: none; }
+button.chip { font: inherit; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer;
+              padding: 3px 9px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm);
+              background: var(--surface-2); color: var(--text); }
+button.chip:hover { border-color: var(--brand); }
+button.chip span { color: var(--text-dim); }
+.pill .cnt { font-size: 11.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+label.pill.zero { opacity: 0.45; }
+/* column chooser */
+details.colpick { position: relative; }
+details.colpick > summary { list-style: none; }
+details.colpick > summary::-webkit-details-marker { display: none; }
+.colpick-menu { position: absolute; right: 0; top: calc(100% + 6px); z-index: 10; min-width: 170px;
+                background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--radius);
+                padding: 8px 12px; box-shadow: var(--shadow-lg); }
+.colpick-menu .check { display: flex; align-items: center; gap: 8px; font-size: 13.5px; padding: 3px 0; cursor: pointer; }
+table.hide-params [data-col="params"] { display: none; }
+table.hide-gate [data-col="gate"] { display: none; }
+table.hide-N [data-col="N"] { display: none; }
+table.hide-gamma_rho [data-col="gamma_rho"] { display: none; }
+table.hide-gamma [data-col="gamma"] { display: none; }
+table.hide-distance [data-col="distance"] { display: none; }
+table.hide-found [data-col="found"] { display: none; }
+table.hide-cited [data-col="cited"] { display: none; }
+table.hide-tcount [data-col="tcount"] { display: none; }
+/* inline matrix preview */
+button.peek { font: inherit; font-size: 11px; width: 18px; height: 18px; margin-right: 6px; padding: 0; cursor: pointer;
+              border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface);
+              color: var(--text-dim); vertical-align: 1px; transition: transform .1s; }
+button.peek[aria-expanded="true"] { transform: rotate(90deg); }
+tr.preview td { background: var(--surface-2); padding: 12px 14px; }
+.preview-wrap { overflow-x: auto; max-width: 100%; margin-bottom: 6px; }
+svg.mini-matrix { display: block; height: auto; }
+svg.mini-matrix .cell-out { fill: var(--output-fill); }
+svg.mini-matrix .cell-chk { fill: var(--check-fill); }
+svg.mini-matrix .cell-zero { fill: var(--surface-3); }
+tr.preview .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin: 0 4px 0 8px; vertical-align: -1px; }
+
+.plot-bar { display: flex; align-items: center; gap: 8px; margin: 0 0 10px; }
+.plot-bar .spacer { flex: 1; }
+.plot-table { margin-top: 4px; }
+
+ol.changes { list-style: none; margin: 0; padding: 0; max-width: 76ch; }
+ol.changes li { padding: 16px 0; border-bottom: 1px solid var(--border); }
+ol.changes .ch-head { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; margin-bottom: 4px; }
+ol.changes time { font-weight: 600; }
+ol.changes p { margin: 4px 0; }

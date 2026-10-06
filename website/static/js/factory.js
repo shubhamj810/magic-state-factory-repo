@@ -29,6 +29,9 @@
   $("copy-bibtex").addEventListener("click", function (event) {
     C.copy($("bibtex").textContent, event.currentTarget);
   });
+  $("copy-code").addEventListener("click", function (event) {
+    C.copy($("code-snippet").textContent, event.currentTarget);
+  });
 
   /* The N x n matrix as 0/1 rows. */
   function matrix(record) {

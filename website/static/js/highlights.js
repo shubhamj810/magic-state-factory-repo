@@ -202,15 +202,33 @@
       parts.push('<text class="psub" x="' + (W - R) + '" y="16" text-anchor="end">best ' +
                  C.num(best.gamma_rho, 3) + " at " + C.escapeHtml(label(best)) + " · " + rows.length +
                  (rows.length === 1 ? " set" : " sets") + "</text>");
-      panels.push({ d: group.d, pts: rows });
+      panels.push({ d: group.d, pts: rows, stair: stair });
       return '<svg class="panel-svg" data-panel="' + (panels.length - 1) + '" viewBox="0 0 ' + W + " " + H +
         '" role="img" aria-label="gamma_rho against n at distance ' + group.d + ": " + rows.length +
         " parameter sets, best " + C.num(best.gamma_rho, 3) + " at " + label(best) + '">' + parts.join("") + "</svg>";
     }).join("");
 
+    var tableRows = panels.map(function (panel) {
+      return panel.stair.map(function (p) {
+        return '<tr class="clickable" data-href="' + href(p) + '"><td>' + C.tex("d" + (p.lower_bound ? "\\ge " : "=") + panel.d) +
+          '</td><td class="num">' + p.n + '</td><td><a href="' + href(p) + '">' + C.paramsTex(p.n, p.k, p.d) + "</a></td>" +
+          '<td class="num">' + C.num(p.gamma_rho, 4) + '</td><td class="num">' + p.v_ex_best + "</td></tr>";
+      }).join("");
+    }).join("");
     return '<figure class="plot">' +
+      '<div class="plot-bar">' +
+        '<div class="seg" role="group" aria-label="view"><button type="button" id="plot-view-plot" aria-pressed="true">Plot</button>' +
+        '<button type="button" id="plot-view-table" aria-pressed="false">Table</button></div>' +
+        '<span class="spacer"></span>' +
+        '<button type="button" class="btn" id="plot-svg">SVG</button>' +
+        '<button type="button" class="btn" id="plot-png">PNG</button></div>' +
       '<div class="plot-tip" id="plot-tip" role="status"></div>' +
       '<div class="panels">' + html + "</div>" +
+      '<div class="table-wrap plot-table" hidden><table><caption class="sr-only">The frontier points: ' +
+        "each lowers the best gamma_rho at its distance.</caption><thead><tr><th scope=\"col\">distance</th>" +
+        '<th class="num" scope="col">' + C.tex("n") + '</th><th scope="col">parameters</th>' +
+        '<th class="num" scope="col">' + C.tex(C.TEX.gr) + '</th><th class="num" scope="col">' + C.tex(C.TEX.vex) +
+        "</th></tr></thead><tbody>" + tableRows + "</tbody></table></div>" +
       "<figcaption>Inputs " + C.tex("n") + " on a log scale against " + C.tex(C.TEX.gr) +
       ", on axes shared by all panels. " +
       '<span class="key"><span class="key-dot"></span><span>parameter set</span></span>' +
@@ -270,6 +288,71 @@
     });
   }
 
+  /* ---------------------------------------------------------- export */
+  /* One standalone SVG of every panel: styles inlined, so it looks the same
+   * outside the site, laid out three panels to a row. */
+  var STYLE_PROPS = ["fill", "stroke", "stroke-width", "stroke-dasharray", "opacity",
+                     "font-family", "font-size", "font-weight", "font-style", "text-anchor"];
+
+  function composedSvg(figure) {
+    var svgs = Array.prototype.slice.call(figure.querySelectorAll("svg.panel-svg"));
+    var per = Math.min(3, svgs.length), rows = Math.ceil(svgs.length / per), foot = 26;
+    var bg = getComputedStyle(document.body).backgroundColor;
+    var ink = getComputedStyle(document.body).color;
+    var out = '<svg xmlns="http://www.w3.org/2000/svg" width="' + per * W + '" height="' + (rows * H + foot) +
+      '" viewBox="0 0 ' + per * W + " " + (rows * H + foot) + '"><rect width="100%" height="100%" fill="' + bg + '"/>';
+    svgs.forEach(function (svg, i) {
+      var clone = svg.cloneNode(true), src = svg.querySelectorAll("*"), dst = clone.querySelectorAll("*");
+      for (var e = 0; e < src.length; e++) {
+        var cs = getComputedStyle(src[e]);
+        dst[e].setAttribute("style", STYLE_PROPS.map(function (prop) {
+          return prop + ":" + cs.getPropertyValue(prop);
+        }).join(";"));
+        dst[e].removeAttribute("class");
+      }
+      out += '<g transform="translate(' + (i % per) * W + "," + Math.floor(i / per) * H + ')">' + clone.innerHTML + "</g>";
+    });
+    out += '<text x="8" y="' + (rows * H + 17) + '" style="font:11px sans-serif;fill:' + ink + '">' +
+      "gamma_rho frontier by distance. Magic State Factory Catalog, " + new Date().toISOString().slice(0, 10) + "</text></svg>";
+    return out;
+  }
+
+  function wireTools(figure) {
+    var panelsNode = figure.querySelector(".panels"), tableNode = figure.querySelector(".plot-table");
+    [["plot-view-plot", false], ["plot-view-table", true]].forEach(function (pair) {
+      document.getElementById(pair[0]).addEventListener("click", function () {
+        panelsNode.hidden = pair[1];
+        tableNode.hidden = !pair[1];
+        document.getElementById("plot-view-plot").setAttribute("aria-pressed", String(!pair[1]));
+        document.getElementById("plot-view-table").setAttribute("aria-pressed", String(pair[1]));
+      });
+    });
+    C.clickableRows(tableNode.querySelector("tbody"));
+    document.getElementById("plot-svg").addEventListener("click", function () {
+      C.download("gamma-rho-frontier.svg", composedSvg(figure), "image/svg+xml");
+    });
+    document.getElementById("plot-png").addEventListener("click", function () {
+      var svg = composedSvg(figure), img = new Image();
+      img.onload = function () {
+        var canvas = document.createElement("canvas");
+        canvas.width = img.width * 2;
+        canvas.height = img.height * 2;
+        var ctx = canvas.getContext("2d");
+        ctx.scale(2, 2);
+        ctx.drawImage(img, 0, 0);
+        canvas.toBlob(function (blob) {
+          var url = URL.createObjectURL(blob), a = document.createElement("a");
+          a.href = url;
+          a.download = "gamma-rho-frontier.png";
+          document.body.appendChild(a);
+          a.click();
+          setTimeout(function () { URL.revokeObjectURL(url); a.remove(); }, 0);
+        });
+      };
+      img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+    });
+  }
+
   /* ------------------------------------------------------------------ mount */
 
   function mount(index) {
@@ -289,7 +372,7 @@
       C.clickableRows(records);
     }
     var figure = document.querySelector("#frontier-plot figure.plot");
-    if (figure) wirePlot(figure);
+    if (figure) { wirePlot(figure); wireTools(figure); C.renderTex(figure); }
   }
 
   global.Highlights = { mount: mount };

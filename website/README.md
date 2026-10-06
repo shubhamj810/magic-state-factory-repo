@@ -14,7 +14,8 @@ master_catalog/master_catalog.json          813 rows, columns included
             v
 website/_site/                               (git-ignored; built in CI)
   index.html          landing: search, best factories, frontier, parameter table
-  about.html          what the numbers mean, distances, labels, citing, data, contributing
+  about.html          what the numbers mean, how each is obtained, labels, citing, data, contributing
+  changes.html        every change to the catalogue, from its git history
   search.html         every factory: filters, typed queries, sort, CSV/JSON export
   f/<label>/          one static page per factory, e.g. f/15.1.3.a/
   p/<n>.<k>.<d>/      one static page per parameter set, e.g. p/15.1.3/
@@ -46,8 +47,19 @@ the catalogue and never change, so these links are permanent. Links in the old
 form, `factory.html?id=…` (including the hash ids used before labels) and
 `params.html?n=…&k=…&d=…`, redirect to the new pages.
 
-Each factory page has a BibTeX entry, downloads, related parameter sets and a
-"Report a problem" link that opens a prefilled GitHub issue.
+Each factory page has:
+- a summary strip, with the distance as proved bounds (`6 ≤ d ≤ 7` when an explicit
+  damaging fault gives an upper bound);
+- a BibTeX entry, downloads and related parameter sets;
+- a "Use it in code" snippet that loads the factory and re-derives it with
+  `verify_catalog.py`;
+- a "Report a problem" link that opens a prefilled GitHub issue.
+
+The search page shows each active filter as a removable chip, and counts how many
+results each filter value would give. A column chooser hides or shows columns
+(T-count is off by default), and every row can preview its matrix inline. `/`
+focuses the search box on any page. The frontier plot switches to a table of its
+frontier points and exports to SVG and PNG.
 [`CITATION.cff`](../CITATION.cff) at the repository root gives GitHub's
 "Cite this repository" button and describes releases archived on Zenodo.
 
@@ -166,6 +178,10 @@ rendered page against counts it computes itself:
 - 22 searches;
 - the CSV export;
 - the hero matrix, the plot tooltip, and that KaTeX typeset the maths;
+- the search chips, a filter count, the column chooser and an inline preview;
+- the frontier table against the frontier recomputed in Python, and that the SVG
+  export holds every plotted point;
+- a proved upper bound on a factory page, and the change history;
 - the new addresses: old links redirect, and a factory page renders its title
   and matrix with JavaScript turned off;
 - the CNOT + S tool, against `master_catalog/glcanon.py`: an inequivalent target is

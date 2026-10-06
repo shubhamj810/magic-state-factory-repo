@@ -332,6 +332,25 @@
     };
   }
 
+  /* A circuit as a grid of cells: output rows, check rows, zeros. */
+  function matrixSvg(record, cell) {
+    var p = record.parameters, n = p.n, N = p.N, k = p.k, gap = Math.max(1, Math.round(cell / 7));
+    var on = [];
+    for (var q = 0; q < N; q++) on.push(new Uint8Array(n));
+    record.circuit.columns.forEach(function (col, j) {
+      col.forEach(function (w) { if (w < N) on[w][j] = 1; });
+    });
+    var step = cell + gap, W = n * step - gap, H = N * step - gap, parts = [];
+    for (q = 0; q < N; q++) {
+      for (var j = 0; j < n; j++) {
+        parts.push('<rect class="' + (on[q][j] ? (q < k ? "cell-out" : "cell-chk") : "cell-zero") +
+                   '" x="' + j * step + '" y="' + q * step + '" width="' + cell + '" height="' + cell + '"/>');
+      }
+    }
+    return '<svg class="mini-matrix" viewBox="0 0 ' + W + " " + H + '" width="' + W + '" role="img" aria-label="' +
+           N + " by " + n + ' binary matrix">' + parts.join("") + "</svg>";
+  }
+
   /* Rows that open a link when clicked anywhere, not only on the anchor. */
   function clickableRows(body) {
     body.addEventListener("click", function (event) {
@@ -374,6 +393,7 @@
     tex: tex,
     paramsTex: paramsTex,
     gateTex: gateTex,
+    matrixSvg: matrixSvg,
     renderTex: renderTex,
     paramsHref: paramsHref,
     url: url,
@@ -400,6 +420,14 @@
   document.addEventListener("DOMContentLoaded", function () {
     initTheme();
     renderTex(document);
+    /* "/" jumps to the search box, as on most data sites */
+    document.addEventListener("keydown", function (event) {
+      if (event.key !== "/" || event.metaKey || event.ctrlKey || event.altKey) return;
+      var t = event.target;
+      if (t && (t.isContentEditable || /^(input|textarea|select)$/i.test(t.tagName))) return;
+      var box = document.getElementById("q") || document.getElementById("hero-q") || document.getElementById("nav-q");
+      if (box) { event.preventDefault(); box.focus(); box.select(); }
+    });
     /* The footer's data stamp is written by build_site.py, so no page
      * downloads the index just to print a commit hash. */
   });

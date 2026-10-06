@@ -396,6 +396,73 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
                        ones == sum(len(c) for c in record["circuit"]["columns"]),
                        f"factory.html {small}: matrix CSV does not match the columns")
 
+        # --------------------------------------- search chips, counts, columns
+        visit("search.html?has=ccz&d=4,5&q=k%3D3", "search.html chips", "#chips .chip")
+        failures.check(len(page.query_selector_all("#chips button.chip")) == 4,
+                       "search.html: expected one chip per active filter (4)")
+        page.click("#clear-all")
+        page.wait_for_function(f"document.getElementById('count').textContent.startsWith('{len(factories)} of')")
+        visit("search.html", "search.html counts", "#count strong")
+        want5 = sum(1 for f in factories if 5 in (f["d"], f["d_claim"]))
+        got5 = page.inner_text('[data-count="d:5"]')
+        failures.check(got5 == str(want5), f"search.html: the d=5 pill counts {got5}, expected {want5}")
+        failures.check(not page.is_visible('th[data-col="tcount"]'),
+                       "search.html: T-count should be a hidden column by default")
+        page.click("#colpick summary")
+        page.check('#colpick-menu input[value="tcount"]')
+        failures.check(page.is_visible('th[data-col="tcount"]'),
+                       "search.html: the column chooser did not show the T-count column")
+        page.uncheck('#colpick-menu input[value="tcount"]')
+        page.click("#colpick summary")
+        first = page.get_attribute("#body tr:first-child", "data-id")
+        page.click("#body tr:first-child button.peek")
+        page.wait_for_selector("tr.preview svg rect")
+        rec = json.loads((site / "data" / "factories" / f"{first}.json").read_text())
+        cells = len(page.query_selector_all("tr.preview svg rect"))
+        want_cells = rec["parameters"]["N"] * rec["parameters"]["n"]
+        failures.check(cells == want_cells,
+                       f"search.html: preview of {first} has {cells} cells, expected {want_cells}")
+
+        # ------------------------------------------ the frontier: table and export
+        visit("", "index.html plot tools", "#frontier-plot svg")
+        stairs = 0
+        for dc in {p["d_claim"] for p in parameters if p["comparable"]}:
+            pts = sorted((p for p in parameters if p["comparable"] and p["d_claim"] == dc
+                          and p["gamma_rho_claim"] is not None),
+                         key=lambda p: (p["n"], p["gamma_rho_claim"]))
+            best = float("inf")
+            for p in pts:
+                if p["gamma_rho_claim"] < best:
+                    best, stairs = p["gamma_rho_claim"], stairs + 1
+        page.click("#plot-view-table")
+        rows_shown = len(page.query_selector_all(".plot-table tbody tr"))
+        failures.check(rows_shown == stairs,
+                       f"index.html: the frontier table has {rows_shown} rows, the frontier has {stairs} points")
+        with page.expect_download() as info:
+            page.click("#plot-svg")
+        from xml.etree import ElementTree
+        try:
+            root = ElementTree.parse(info.value.path()).getroot()
+            exported = sum(1 for e in root.iter() if e.tag.endswith("circle"))
+            on_page = len(page.query_selector_all("#frontier-plot circle"))
+            failures.check(root.tag.endswith("svg") and exported == on_page,
+                           f"index.html: the SVG export has {exported} points, the plot {on_page}")
+        except ElementTree.ParseError as error:
+            failures.append(f"index.html: the SVG export is not valid XML ({error})")
+
+        # ------------------------------------------ distance bounds, history
+        bounded = next((f for f in factories if not f["d_is_exact"]
+                        and json.loads((site / "data" / "factories" / f"{f['id']}.json").read_text())
+                        ["distance"].get("upper")), None)
+        if bounded:
+            upper = json.loads((site / "data" / "factories" / f"{bounded['id']}.json").read_text())["distance"]["upper"]
+            visit(f"f/{bounded['id']}/", f"f/{bounded['id']}/ bounds", "table.matrix tbody tr")
+            failures.check(page.query_selector(f'dl.summary [data-tex*="le {upper}"]') is not None,
+                           f"f/{bounded['id']}/: the summary does not show the proved upper bound {upper}")
+        visit("changes.html", "changes.html", "main")
+        failures.check(len(page.query_selector_all("ol.changes li")) >= 1,
+                       "changes.html: the catalogue's history is empty")
+
         # ------------------------------------------ old links still work
         old = factories[0]
         for url, want in ((f"factory.html?id={old['legacy_id']}", f"/f/{old['id']}/"),

@@ -180,7 +180,7 @@ class TheBuiltSite(unittest.TestCase):
 
     def test_the_sitemap_lists_every_page(self):
         sitemap = (self.out / "sitemap.xml").read_text(encoding="utf-8")
-        self.assertEqual(sitemap.count("<loc>"), 3 + len(self.index["factories"]) + len(self.index["parameters"]))
+        self.assertEqual(sitemap.count("<loc>"), 4 + len(self.index["factories"]) + len(self.index["parameters"]))
 
     def test_nojekyll(self):
         self.assertTrue((self.out / ".nojekyll").exists())

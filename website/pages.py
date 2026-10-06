@@ -73,6 +73,19 @@ def distance_tags(d, exact, cert, cert_exact) -> str:
     return out
 
 
+def distance_bounds(d, exact, upper) -> str:
+    """What is proved about d, as TeX: d = 3, 6 <= d <= 7, or d >= 6.
+
+    The lower bound is the exhaustive search below d; the upper bound is an
+    explicit damaging fault, when one was found.
+    """
+    if exact:
+        return f"d={d}"
+    if upper is not None and upper > d:
+        return f"{d}\\le d\\le {upper}"
+    return f"d\\ge {d}"
+
+
 def claim_mark(row) -> str:
     dc, dv = row.get("d_claim"), row.get("d")
     return (f'<sup class="cert-mark" title="at the distance certified by its source, d = {dc}">&dagger;</sup>'
@@ -129,6 +142,24 @@ def reference_html(ref) -> str:
     return out
 
 
+def code_snippet(label: str) -> str:
+    return (f"""# git clone {REPO}
+# cd magic-state-factory-repo/master_catalog
+import json, urllib.request
+import verify_catalog as VC
+
+url = "{SITE}data/factories/{label}.json"
+record = json.load(urllib.request.urlopen(url))
+columns = record["circuit"]["columns"]
+k, N = record["parameters"]["k"], record["parameters"]["N"]
+
+facts, problems = VC.derive(columns, k, N)    # gate, T-count, degree, ...
+distance = VC.measure_distance(columns, k, N)  # exhaustive fault search
+print(facts["gate_human"], distance["d_exact"] or distance["d_at_least"],
+      problems or "verified")
+""")
+
+
 def bibtex(record, stamp) -> str:
     p = record["parameters"]
     label = record["id"]
@@ -167,7 +198,7 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
     <p class="lede gate-lede">{gate_tex(short)}</p>
     <dl class="summary">
       <div><dt>parameters</dt><dd>{params_tex(n, k, d)}</dd></div>
-      <div><dt>distance</dt><dd>{distance_tags(d, dist["is_exact"], cert and cert["d"], cert and cert["is_exact"])}</dd></div>
+      <div><dt>distance, proved here</dt><dd>{tex(distance_bounds(d, dist["is_exact"], dist.get("upper")))}{(" <span class='tag cert' title='certified by its source, not re-checked here'>certified " + ("" if cert["is_exact"] else "&ge; ") + str(cert["d"]) + "</span>") if cert else ""}</dd></div>
       <div><dt>{tex(r"\gamma_\rho")}</dt><dd>{num(m.get("gamma_rho_claim"), 4)}{claim_mark(summary)}</dd></div>
       <div><dt>{tex(r"V_{\mathrm{ex}}")}</dt><dd>{m["v_ex"] if m["v_ex"] is not None else "—"}</dd></div>
       <div><dt>wires</dt><dd>{tex(f"N={N}")}</dd></div>
@@ -217,8 +248,10 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
     distance_panel = (
         "<p>" + (f"<strong>{tex(f'd={d}')}, exact.</strong> No fault of weight below {d} is both undetectable "
                  f"and damaging. One of weight {d} is." if dist["is_exact"] else
-                 f"<strong>{tex(f'd\\ge {d}')}, a lower bound.</strong> No fault of weight below {d} is both "
-                 f"undetectable and damaging. None of weight {d} has been found, so the true distance may be larger.")
+                 f"<strong>{tex(distance_bounds(d, False, dist.get('upper')))}.</strong> No fault of weight below {d} is both "
+                 f"undetectable and damaging. None of weight {d} has been found"
+                 + (f", and one of weight {dist['upper']} is, so the distance lies between the two."
+                    if dist.get("upper") is not None and dist["upper"] > d else ", so the true distance may be larger."))
         + "</p>"
         + (f'<p class="small">A damaging fault of weight {dist["upper"]}'
            + (f' sits on columns <code>{esc(json.dumps(dist["witness"], separators=(",", ":")))}</code>' if dist.get("witness") else " exists")
@@ -337,6 +370,14 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
 
   <h2 id="provenance">Provenance</h2>
   <div class="panel" id="provenance-panel">{provenance_panel}</div>
+
+  <h2 id="code">Use it in code</h2>
+  <div class="panel">
+    <p class="small muted">Load this factory and re-derive every number from its circuit with the
+    catalogue's own verifier.</p>
+    <pre class="raw code" id="code-snippet">{esc(code_snippet(label))}</pre>
+    <button type="button" class="btn" id="copy-code">Copy code</button>
+  </div>
 
   <h2>Raw record</h2>
   <div class="panel">
