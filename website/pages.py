@@ -164,8 +164,10 @@ def bibtex(record, stamp) -> str:
     p = record["parameters"]
     label = record["id"]
     commit = stamp.get("commit") or ""
-    return (f"@misc{{msfc:{label},\n"
-            f"  title        = {{Magic-state factory {label}, $[[{p['n']},{p['k']},{p['d']}]]$}},\n"
+    gate = record["gate"]["human"]
+    gate = gate if len(gate) <= 60 else gate[:57] + "..."
+    return (f"@misc{{msfc:{label.replace('.', '-')},\n"
+            f"  title        = {{Magic-state factory $[[{p['n']},{p['k']},{p['d']}]]$, output gate {gate}}},\n"
             f"  howpublished = {{Magic State Factory Catalog, \\url{{{SITE}{factory_path(label)}}}}},\n"
             f"  year         = {{{date.today().year}}},\n"
             f"  note         = {{Data version {commit}}}\n}}")
@@ -193,11 +195,10 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
     head = f"""
 <section class="page-head">
   <div class="inner">
-    <nav class="crumbs" id="crumbs" aria-label="breadcrumb"><span><a href="index.html">Home</a></span><span><a href="{params_path(n, k, d)}">{params_tex(n, k, d)}</a></span><span class="mono">{esc(label)}</span></nav>
-    <h1 id="heading"><span class="label-h">{esc(label)}</span></h1>
+    <nav class="crumbs" id="crumbs" aria-label="breadcrumb"><span><a href="index.html">Home</a></span><span><a href="{params_path(n, k, d)}">{params_tex(n, k, d)}</a></span></nav>
+    <h1 id="heading">{params_tex(n, k, d)} factory</h1>
     <p class="lede gate-lede">{gate_tex(short)}</p>
     <dl class="summary">
-      <div><dt>parameters</dt><dd>{params_tex(n, k, d)}</dd></div>
       <div><dt>distance, proved here</dt><dd>{tex(distance_bounds(d, dist["is_exact"], dist.get("upper")))}{(" <span class='tag cert' title='certified by its source, not re-checked here'>certified " + ("" if cert["is_exact"] else "&ge; ") + str(cert["d"]) + "</span>") if cert else ""}</dd></div>
       <div><dt>{tex(r"\gamma_\rho")}</dt><dd>{num(m.get("gamma_rho_claim"), 4)}{claim_mark(summary)}</dd></div>
       <div><dt>{tex(r"V_{\mathrm{ex}}")}</dt><dd>{m["v_ex"] if m["v_ex"] is not None else "—"}</dd></div>
@@ -290,7 +291,7 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
     related = []
     if same:
         related.append("<h4>Same parameters</h4><ul>" + "".join(
-            f'<li><a href="{factory_path(f["id"])}">{esc(f["id"])}</a> {gate_tex(f["gate_human"][:40] + ("..." if len(f["gate_human"]) > 40 else ""))}</li>'
+            f'<li><a href="{factory_path(f["id"])}">{gate_tex(f["gate_human"][:40] + ("..." if len(f["gate_human"]) > 40 else ""))}</a></li>'
             for f in same[:8]) + ("<li>…</li>" if len(same) > 8 else "") + "</ul>")
     if other_d:
         related.append("<h4>Other distances</h4><ul>" + "".join(
@@ -382,7 +383,7 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
   <h2>Raw record</h2>
   <div class="panel">
     <details id="raw-details"><summary>Show the JSON this page is built from</summary><pre class="raw" id="raw"></pre></details>
-    <p class="small muted" style="margin:10px 0 0">Source: <a href="{REPO}/blob/main/master_catalog/master_catalog.json">master_catalog.json</a>, <code>factories[{record["row"]}]</code>, label <code>{esc(label)}</code>.</p>
+    <p class="small muted" style="margin:10px 0 0">Source: <a href="{REPO}/blob/main/master_catalog/master_catalog.json">master_catalog.json</a>, <code>factories[{record["row"]}]</code>.</p>
   </div>
   </div>
   {side}
@@ -394,8 +395,10 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
 def factory_page(record, summary, groups, by_id, stamp):
     p = record["parameters"]
     label = record["id"]
-    title = f"{label} · {params_text(p['n'], p['k'], p['d'])} · Magic State Factory Catalog"
-    desc = (f"Magic-state factory {label}: {params_text(p['n'], p['k'], p['d'])} with output gate "
+    gate = record["gate"]["human"]
+    gate = gate if len(gate) <= 40 else gate[:37] + "..."
+    title = f"{params_text(p['n'], p['k'], p['d'])} factory, {gate} · Magic State Factory Catalog"
+    desc = (f"Magic-state factory {params_text(p['n'], p['k'], p['d'])} with output gate "
             f"{record['gate']['human'][:120]}. Binary matrix, distance, overhead exponents and references.")
     return title, desc, factory_main(record, summary, groups, by_id, stamp)
 
@@ -405,8 +408,7 @@ def params_main(group, members, groups) -> str:
     n, k, d = group["n"], group["k"], group["d"]
     rows = "".join(
         f'<tr class="clickable" data-href="{factory_path(f["id"])}">'
-        f'<td class="lab"><a href="{factory_path(f["id"])}">{esc(f["id"])}</a></td>'
-        f'<td class="gate">{gate_tex(f["gate_human"])}'
+        f'<td class="gate"><a href="{factory_path(f["id"])}">{gate_tex(f["gate_human"])}</a>'
         + (f' <span class="tag">{f["terms"]} terms</span>' if f["gate_truncated"] else "")
         + (' <span class="tag pure">pure T</span>' if f["pure_t"] else "") + "</td>"
         f'<td class="num">{num(f["gamma_rho_claim"])}{claim_mark(f)}</td>'
@@ -436,7 +438,6 @@ def params_main(group, members, groups) -> str:
     <table id="table">
       <caption class="sr-only">Inequivalent gates at {esc(params_text(n, k, d))}. Click a column header to sort.</caption>
       <thead><tr>
-        <th data-key="label_order" data-type="number" scope="col">label</th>
         <th data-key="gate_human" data-type="text" scope="col">output gate</th>
         <th class="num" data-key="gamma_rho_claim" data-type="number" scope="col">{tex(r"\gamma_\rho")}</th>
         <th class="num" data-key="N" data-type="number" scope="col">{tex("N")}</th>

@@ -113,11 +113,9 @@
     function row(f) {
       var href = C.factoryHref(f.id);
       return '<tr class="clickable" data-href="' + href + '" data-id="' + f.id + '">' +
-        '<td class="lab" data-col="label"><button type="button" class="peek" aria-expanded="false" ' +
-          'aria-label="preview the matrix of ' + f.id + '" title="preview the matrix">&#9656;</button>' +
-          '<a href="' + href + '">' + C.escapeHtml(f.id) + "</a></td>" +
-        '<td class="params" data-col="params"><a href="' + C.paramsHref(f.n, f.k, f.d) + '" title="all gates at these parameters" aria-label="' +
-          C.params(f.n, f.k, f.d) + '">' + C.paramsTex(f.n, f.k, f.d) + "</a></td>" +
+        '<td class="params" data-col="params"><button type="button" class="peek" aria-expanded="false" ' +
+          'aria-label="preview the matrix" title="preview the matrix">&#9656;</button>' +
+          '<a href="' + href + '" aria-label="' + C.params(f.n, f.k, f.d) + '">' + C.paramsTex(f.n, f.k, f.d) + "</a></td>" +
         '<td class="gate" data-col="gate"><a href="' + href + '" aria-label="' + C.escapeHtml(f.gate_human) + '">' + C.gateTex(f.gate_human) + "</a>" +
           (f.gate_truncated ? ' <span class="tag" title="the full gate is on the factory page">' +
                               f.terms + " terms</span>" : "") +
@@ -145,7 +143,7 @@
           ? ' <span class="muted">· showing ' + ((page - 1) * size + 1) + "–" +
             ((page - 1) * size + shown.length) + "</span>" : "");
       $("body").innerHTML = shown.length ? shown.map(row).join("")
-        : '<tr><td colspan="10" class="empty">No factory matches. ' +
+        : '<tr><td colspan="9" class="empty">No factory matches. ' +
           '<button type="button" class="linkish" id="reset-inline">Reset the search</button></td></tr>';
       $("pager").innerHTML = C.pagerHtml(page, pages);
       ["export-csv", "export-json"].forEach(function (id) { $(id).disabled = !sorted.length; });
@@ -276,7 +274,7 @@
       var id = tr.getAttribute("data-id");
       var row = document.createElement("tr");
       row.className = "preview";
-      row.innerHTML = '<td colspan="10"><span class="muted small">loading…</span></td>';
+      row.innerHTML = '<td colspan="9"><span class="muted small">loading…</span></td>';
       tr.after(row);
       C.loadFactory(id).then(function (record) {
         var p = record.parameters;
@@ -284,7 +282,7 @@
           ? '<div class="preview-wrap">' + C.matrixSvg(record, p.n > 120 ? 4 : 7) + "</div>"
           : '<p class="small muted">' + p.n + " columns are too many to preview here.</p>") +
           '<p class="small"><span class="swatch out"></span> outputs <span class="swatch chk"></span> checks · ' +
-          '<a href="' + C.factoryHref(id) + '">Open ' + C.escapeHtml(id) + " &rarr;</a></p>";
+          '<a href="' + C.factoryHref(id) + '">Open this factory &rarr;</a></p>';
       });
     });
 

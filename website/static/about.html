@@ -20,7 +20,7 @@
   <nav class="toc" aria-label="on this page">
     <a href="#factory">Factories</a><a href="#numbers">The numbers</a><a href="#distance">Distances</a>
     <a href="#reliability">How each number is obtained</a>
-    <a href="#classes">One row per magic state</a><a href="#labels">Labels</a><a href="#citing">Citing</a>
+    <a href="#classes">One row per magic state</a><a href="#citing">Citing</a>
     <a href="#data">Data</a><a href="#contributing">Contributing</a><a href="#sources">Sources</a>
   </nav>
 
@@ -84,14 +84,6 @@
     <span class="tex">\mathrm{T}_0\cdot\mathrm{CS}_{01}</span> are one class. Each factory page
     has a tool that checks this for any target gate and builds the circuit.</p>
 
-    <h2 id="labels">Labels</h2>
-    <p>Each factory has a permanent label <code>n.k.d.x</code>, for example
-    <a href="f/15.1.3.a/"><code>15.1.3.a</code></a>. Here <span class="tex">d</span> is the
-    distance proved in the catalogue, and the letters number the classes at those
-    parameters in the order they entered the catalogue: <code>a</code> to <code>z</code>,
-    then <code>ba</code>, <code>bb</code> and so on. A label is never changed or reused.
-    It is also the page's address, <code>f/15.1.3.a/</code>.</p>
-
     <h2 id="citing">Citing</h2>
     <p>Each factory page has a BibTeX entry and lists the papers to cite. For the
     catalogue as a whole, cite</p>
@@ -104,7 +96,6 @@
     <ul class="plain">
       <li><a href="data/factories.csv" download>factories.csv</a>, one row per factory.</li>
       <li><a href="data/index.json" download>index.json</a>, the same with the reference table.</li>
-      <li><code>data/factories/&lt;label&gt;.json</code>, one factory with its circuit.</li>
       <li><a href="https://github.com/shubhamj810/magic-state-factory-repo/blob/main/master_catalog/master_catalog.json">master_catalog.json</a>, the full database.</li>
     </ul>
     <p>The site is rebuilt from <code>master_catalog.json</code> on every change. The footer

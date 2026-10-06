@@ -165,11 +165,13 @@ class TheBuiltSite(unittest.TestCase):
     def test_a_factory_page_reads_without_javascript(self):
         f = next(x for x in self.index["factories"] if x["id"] == "15.1.3.a")
         text = (self.out / "f" / "15.1.3.a" / "index.html").read_text(encoding="utf-8")
-        self.assertIn("<title>15.1.3.a · [[15, 1, 3]]", text)
+        self.assertIn("<title>[[15, 1, 3]] factory, T0", text)
         self.assertIn('<table class="matrix">', text)
         self.assertEqual(text.count('<tr class="out'), f["k"])
         self.assertEqual(text.count('<tr class="chk'), f["N"] - f["k"])
-        self.assertIn("@misc{msfc:15.1.3.a", text)
+        self.assertIn("@misc{msfc:15-1-3-a", text)
+        # the label is the page's address, not something a reader sees
+        self.assertNotIn(">15.1.3.a<", text)
         self.assertNotIn("<!--#", text)
 
     def test_nested_pages_link_back_to_the_root(self):

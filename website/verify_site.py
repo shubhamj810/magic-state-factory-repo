@@ -269,7 +269,7 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         # sorting by a header puts the least gamma_rho first
         visit("search.html?sort=gamma_rho_claim", "search.html sorted", "#body tr")
         best = min(f["gamma_rho_claim"] for f in factories if f["gamma_rho_claim"] is not None)
-        first = page.inner_text("#body tr:first-child td:nth-child(5)")
+        first = page.inner_text("#body tr:first-child td:nth-child(4)")
         failures.check(first.startswith(f"{best:.3f}"),
                        f"search.html?sort=gamma_rho_claim: first row shows {first}, least is {best:.3f}")
 
@@ -284,7 +284,7 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         for p in wanted_params:
             where = f"params.html [[{p['n']},{p['k']},{p['d']}]]"
             visit(f"p/{p['n']}.{p['k']}.{p['d']}/", where, "#body tr")
-            links = [a.get_attribute("href") for a in page.query_selector_all("#body td.lab a[href]")]
+            links = [a.get_attribute("href") for a in page.query_selector_all("#body td.gate a[href]")]
             failures.check(len(links) == p["count"],
                            f"{where}: {len(links)} gate links for {p['count']} factories")
             title = page.title()
@@ -476,7 +476,7 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         # every page reads without JavaScript: a static factory page
         bare = browser.new_context(java_script_enabled=False).new_page()
         bare.goto(f"{base}/f/{old['id']}/")
-        failures.check(bare.title().startswith(old["id"]) and
+        failures.check(bare.title().startswith(f"[[{old['n']}, {old['k']}, {old['d']}]]") and
                        len(bare.query_selector_all("table.matrix tbody tr")) == old["N"],
                        f"f/{old['id']}/ does not render its title and matrix without JavaScript")
         about = browser.new_context().new_page()

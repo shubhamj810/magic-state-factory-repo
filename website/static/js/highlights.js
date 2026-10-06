@@ -99,8 +99,7 @@
       var link = holder ? C.factoryHref(holder.id) : href(best);
       return '<tr class="clickable" data-href="' + link + '">' +
         "<td>" + C.tex("d" + (best.lower_bound ? "\\ge " : "=") + group.d) + "</td>" +
-        '<td><a href="' + link + '">' + (holder ? C.escapeHtml(holder.id) + " " : "") + "</a>" +
-          '<span class="muted">' + C.paramsTex(best.n, best.k, best.d) + "</span></td>" +
+        '<td><a href="' + link + '">' + C.paramsTex(best.n, best.k, best.d) + "</a></td>" +
         '<td class="num">' + C.num(best.gamma_rho, 4) + "</td>" +
         '<td class="num">' + best.v_ex_best + "</td>" +
         '<td class="small muted">' + (best.certified ? "distance certified by its source" +

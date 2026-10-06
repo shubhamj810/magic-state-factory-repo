@@ -18,8 +18,7 @@
       body.innerHTML = sorted.map(function (m) {
         var href = C.factoryHref(m.id);
         return '<tr class="clickable" data-href="' + href + '">' +
-          '<td class="lab"><a href="' + href + '">' + C.escapeHtml(m.id) + "</a></td>" +
-          '<td class="gate">' + C.gateTex(m.gate_human) +
+          '<td class="gate"><a href="' + href + '">' + C.gateTex(m.gate_human) + "</a>" +
             (m.gate_truncated ? ' <span class="tag">' + m.terms + " terms</span>" : "") +
             (m.pure_t ? ' <span class="tag pure">pure T</span>' : "") + "</td>" +
           '<td class="num">' + C.num(m.gamma_rho_claim) + C.claimMark(m) + "</td>" +
