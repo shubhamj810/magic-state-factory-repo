@@ -44,6 +44,15 @@ re-derivation, so this list is also the list of things that get checked.
                  them point into source directories this folder no longer has.
   ``relabelled_into_canonical_frame``  whether the columns were permuted on the
                  way in, so a reader can tell the frame apart from the original
+  ``catalog_label``  the row's permanent public name, ``n.k.d.x`` -- for
+                 example ``15.1.3.a`` -- with ``d`` the distance proved here and
+                 ``x`` a letter code numbering the classes at that ``(n, k, d)``
+                 in the order they entered the catalogue (``a`` .. ``z``, then
+                 ``ba``, ``bb``, ... as LMFDB does).  Assigned once by
+                 `merge_results.py`, never changed by an improvement, never
+                 reused; `verify_catalog.label_problems` checks the format and
+                 the uniqueness.  It is identity, not data: nothing about the
+                 circuit follows from it
   ``citations``  the works this class is credited to, as keys of the header's
                  ``references`` map.  Provenance like ``sources``: the keys must
                  resolve, and nothing about the circuit follows from them
@@ -94,6 +103,9 @@ REQUIRED_FIELDS = (
     # map, checked to resolve by `verify_catalog.citation_problems` and never
     # computed with.
     "citations",
+    # ``catalog_label`` is the row's permanent public name (see the schema
+    # above).  Required, so every published row can be cited by it.
+    "catalog_label",
 )
 
 #: Fields a row may carry.  Anything outside the two tuples is a field nobody
@@ -145,8 +157,46 @@ FIELD_TYPES = {
     "relabelled_into_canonical_frame": "bool",
     "columns": [["int"]], "sk_key": [["int"]],
     "d_witness": ["int"], "regimes": ["str"], "sources": ["dict"],
-    "citations": ["str"],
+    "citations": ["str"], "catalog_label": "str",
 }
+
+
+# ------------------------------------------------------------------ labels
+#: ``n.k.d.x``: the parameters, then a lowercase letter code.
+LABEL_RE = re.compile(r"^(\d+)\.(\d+)\.(\d+)\.([a-z]+)$")
+
+
+def label_letters(index: int) -> str:
+    """``0 -> a``, ``25 -> z``, ``26 -> ba``: base 26 with ``a`` as zero, as LMFDB
+    numbers isogeny classes, so the code for an index is unique and short."""
+    if index < 0:
+        raise ValueError("a label index is never negative")
+    letters = ""
+    while True:
+        letters = chr(ord("a") + index % 26) + letters
+        index //= 26
+        if index == 0:
+            return letters
+
+
+def label_index(letters: str) -> int:
+    """The inverse of `label_letters`."""
+    value = 0
+    for ch in letters:
+        value = value * 26 + (ord(ch) - ord("a"))
+    return value
+
+
+def next_label(rows, n: int, k: int, d: int) -> str:
+    """The first unused label at ``(n, k, d)``: one past the highest in use.
+
+    Rows are never deleted, so "one past the highest" is also "never used
+    before" -- a label, once given, is not handed out again.
+    """
+    used = [label_index(m.group(4)) for row in rows
+            for m in [LABEL_RE.match(str(row.get("catalog_label", "")))]
+            if m and (int(m.group(1)), int(m.group(2)), int(m.group(3))) == (n, k, d)]
+    return f"{n}.{k}.{d}.{label_letters(max(used) + 1 if used else 0)}"
 #: Fields whose value may be ``null`` INSTEAD of the shape above: a row with no
 #: proved canonical frame stores no key, and a row whose distance search found
 #: no fault at all stores no witness.
@@ -473,9 +523,9 @@ def render_markdown(payload: dict) -> str:
     A("class, to the length-54 classification and/or the symmetry-and-AI")
     A("report. Full entries are under [References](#references).")
     A("")
-    A("| # | `[[n,k,d]]` | cert d | N | gate | T | deg | discovery | "
+    A("| # | label | `[[n,k,d]]` | cert d | N | gate | T | deg | discovery | "
       "regime(s) | citation |")
-    A("|---:|---|---:|---:|---|---:|---:|---|---|---|")
+    A("|---:|---|---|---:|---:|---|---:|---:|---|---|---|")
     for index, row in enumerate(rows_, 1):
         t = "—" if row["t_count"] is None else row["t_count"]
         degree = "—" if row["poly_degree"] is None else row["poly_degree"]
@@ -484,7 +534,7 @@ def render_markdown(payload: dict) -> str:
         cert = ("—" if row.get("d_certified") is None
                 else row["d_certified"] if row.get("d_certified_is_exact")
                 else f"≥{row['d_certified']}")
-        A(f"| {index} | `[[{row['n']},{row['k']},{d}]]` | {cert} | "
+        A(f"| {index} | `{row['catalog_label']}` | `[[{row['n']},{row['k']},{d}]]` | {cert} | "
           f"{row['N']} | "
           f"`{gate}` | {t} | {degree} | {row['discovery']} | "
           f"{'; '.join(row['regimes'])} | {cite(row)} |")

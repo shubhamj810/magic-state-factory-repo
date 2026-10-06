@@ -137,6 +137,7 @@ is also the list of what gets checked.
 | `regimes`, `discovery`, `strongest_claim`, `sources` | provenance |
 | `relabelled_into_canonical_frame` | provenance too: whether the ingest permuted the columns on the way in. A self-contained row cannot prove or refute it — the source frame is not stored — so the verifier checks its type and nothing else |
 | `citations` | provenance too: keys of the header's `references` map crediting the class. The verifier checks that every key resolves, that a row cites at least one work and none twice; which works are credited is a curation decision |
+| `catalog_label` | the row's permanent public name, `n.k.d.x` (e.g. `15.1.3.a`): `d` is the distance proved here, and the letters (`a`…`z`, then `ba`, `bb`, … as LMFDB numbers its classes) count the classes at that `(n, k, d)` in the order they entered the catalogue. `merge_results.py` gives a new class the next unused letter, and an improvement keeps the label, so a label is never changed or reused. The verifier checks the format and that no two rows share one. It is also the address of the class's page on the website |
 
 **Provenance is inert.** `sources` and
 `relabelled_into_canonical_frame` record where a class came from and how it

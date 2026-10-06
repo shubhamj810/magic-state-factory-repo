@@ -125,6 +125,19 @@ class TestCatalogFile(unittest.TestCase):
         self.assertEqual(CF.render_markdown(self.payload),
                          CF.render_markdown(CF.load()))
 
+    def test_every_label_is_well_formed_and_unique(self):
+        for index, row in enumerate(self.payload["factories"], 1):
+            with self.subTest(row=index):
+                self.assertEqual(VC.label_problems(row), [])
+        self.assertEqual(VC.duplicate_label_problems(self.payload["factories"]), [])
+
+    def test_a_label_naming_other_parameters_is_refused(self):
+        row = dict(self.payload["factories"][0])
+        row["catalog_label"] = "16.1.3.a"
+        self.assertTrue(VC.label_problems(row))
+        row["catalog_label"] = "15.1.3.aa"   # not the canonical spelling of 0
+        self.assertTrue(VC.label_problems(row))
+
     def test_every_row_carries_exactly_the_documented_fields(self):
         allowed = set(CF.REQUIRED_FIELDS + CF.OPTIONAL_FIELDS)
         for index, row in enumerate(self.payload["factories"], 1):
@@ -165,6 +178,9 @@ class TestGoodRows(unittest.TestCase):
         row["d_is_exact"] = False
         row["d_upper"] = row["d"]
         row["d"] -= 1
+        # a row published at the lower distance is named for it: the label's d
+        # is the row's d (see `label_problems`)
+        row["catalog_label"] = f"{row['n']}.{row['k']}.{row['d']}.a"
         _facts, problems = VC.verify_row(row)
         self.assertEqual(problems, [])
 

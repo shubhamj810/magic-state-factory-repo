@@ -422,6 +422,9 @@ def candidate_row(record, payload, source_file: str, index: int):
         "strongest_claim": strength,
         "columns": facts["columns"],
         "citations": citations,
+        # provisional: kept only if `merge` accepts this row as a NEW class --
+        # an improvement keeps the incumbent's label, a duplicate changes nothing
+        "catalog_label": CF.next_label(payload["factories"], facts["n"], k, d),
         "sources": [{
             "regime": regime,
             "file": record.get("file") or source_file,

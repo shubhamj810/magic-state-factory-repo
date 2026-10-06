@@ -89,821 +89,821 @@ community contribution brought, to its contributor's work; every other
 class, to the length-54 classification and/or the symmetry-and-AI
 report. Full entries are under [References](#references).
 
-| # | `[[n,k,d]]` | cert d | N | gate | T | deg | discovery | regime(s) | citation |
-|---:|---|---:|---:|---|---:|---:|---|---|---|
-| 1 | `[[15,1,3]]` | — | 5 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Bravyi & Kitaev (2005)](https://doi.org/10.1103/PhysRevA.71.022316) |
-| 2 | `[[23,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 3 | `[[27,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 4 | `[[28,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 5 | `[[28,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437) |
-| 6 | `[[29,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 7 | `[[30,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 8 | `[[30,2,3]]` | — | 10 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 9 | `[[31,1,3]]` | — | 6 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 10 | `[[31,2,3]]` | — | 7 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 11 | `[[31,3,3]]` | — | 8 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 12 | `[[31,4,3]]` | — | 9 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 13 | `[[31,5,3]]` | — | 10 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 14 | `[[32,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 15 | `[[32,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 16 | `[[33,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 17 | `[[34,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 18 | `[[34,2,3]]` | — | 10 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 19 | `[[35,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 20 | `[[35,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437) |
-| 21 | `[[35,2,3]]` | — | 8 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 22 | `[[35,2,3]]` | — | 8 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); AI search | [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437) |
-| 23 | `[[35,3,3]]` | — | 9 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 24 | `[[35,3,3]]` | — | 9 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437) |
-| 25 | `[[36,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 26 | `[[36,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 27 | `[[36,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 28 | `[[36,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 29 | `[[36,3,3]]` | — | 9 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 30 | `[[36,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 31 | `[[36,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 32 | `[[36,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 33 | `[[37,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 34 | `[[37,2,3]]` | — | 10 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 35 | `[[37,3,3]]` | — | 11 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 36 | `[[38,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 37 | `[[38,2,3]]` | — | 10 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 38 | `[[38,2,3]]` | — | 10 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 39 | `[[38,3,3]]` | — | 11 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 40 | `[[38,3,3]]` | — | 11 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 41 | `[[38,4,3]]` | — | 12 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 42 | `[[39,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 43 | `[[39,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 44 | `[[39,2,3]]` | — | 8 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 45 | `[[39,2,3]]` | — | 8 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 46 | `[[39,3,3]]` | — | 9 | `01+02+12` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 47 | `[[39,3,3]]` | — | 9 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 48 | `[[39,3,3]]` | — | 9 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 49 | `[[39,3,3]]` | — | 9 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 50 | `[[39,4,3]]` | — | 10 | `01+02+03+13+23+012+123` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 51 | `[[39,4,3]]` | — | 10 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 52 | `[[39,4,3]]` | — | 10 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 53 | `[[39,4,3]]` | — | 10 | `0+1+2+3+01` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 54 | `[[39,5,3]]` | — | 11 | `01+02+03+04+012+013+014+023+024+034` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 55 | `[[39,5,3]]` | — | 11 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 56 | `[[39,5,3]]` | — | 11 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 57 | `[[39,5,3]]` | — | 11 | `0+1+2+3+4+01+23` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 58 | `[[39,6,3]]` | — | 12 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 59 | `[[39,6,3]]` | — | 12 | `0+1+2+3+4+5+01+23+45` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 60 | `[[40,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 61 | `[[40,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 62 | `[[40,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 63 | `[[40,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 64 | `[[40,3,3]]` | — | 9 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 65 | `[[40,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 66 | `[[40,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 67 | `[[40,4,3]]` | — | 11 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 68 | `[[40,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 69 | `[[40,5,3]]` | — | 12 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 70 | `[[41,1,3]]` | — | 9 | `0` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 71 | `[[42,2,3]]` | — | 12 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 72 | `[[43,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 73 | `[[43,2,3]]` | — | 9 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 74 | `[[43,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 75 | `[[43,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 76 | `[[43,3,3]]` | — | 10 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 77 | `[[43,3,3]]` | — | 10 | `01+02+12` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 78 | `[[43,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 79 | `[[43,3,3]]` | — | 10 | `0+01+02` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 80 | `[[43,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 81 | `[[43,3,3]]` | — | 10 | `0+12` | 4 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 82 | `[[43,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 83 | `[[43,4,3]]` | — | 11 | `01+02+03+13+23+012+123` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 84 | `[[43,4,3]]` | — | 11 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 85 | `[[43,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 86 | `[[43,4,3]]` | — | 11 | `0+1+2+3+01` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 87 | `[[43,4,3]]` | — | 11 | `0+12+13` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 88 | `[[43,5,3]]` | — | 12 | `01+02+03+04+012+013+014+023+024+034` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 89 | `[[43,5,3]]` | — | 12 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 90 | `[[43,5,3]]` | — | 12 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 91 | `[[43,5,3]]` | — | 12 | `0+1+2+3+4+01+23` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 92 | `[[43,6,3]]` | — | 13 | `01+02+03+04+05+012+013+014+015+023+02…` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 93 | `[[43,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 94 | `[[43,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+12+34+35+45+012+345` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 95 | `[[43,6,3]]` | — | 13 | `0+1+2+3+4+5+01+23+45` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 96 | `[[43,7,3]]` | — | 14 | `0+1+2+3+4+5+6+01+02+12+34+56+012` | — | — | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 97 | `[[44,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 98 | `[[44,2,3]]` | — | 9 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 99 | `[[44,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 100 | `[[44,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 101 | `[[44,3,3]]` | — | 10 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 102 | `[[44,3,3]]` | — | 10 | `01+02+12` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 103 | `[[44,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 104 | `[[44,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 105 | `[[44,3,3]]` | — | 10 | `0+12` | 4 | 2 | pre-existing | exhaustive classification n<=54; AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 106 | `[[44,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 107 | `[[44,4,3]]` | — | 11 | `01+02+03+13+23+012+123` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 108 | `[[44,4,3]]` | — | 11 | `01+02+13+23` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 109 | `[[44,4,3]]` | — | 11 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 110 | `[[44,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 111 | `[[44,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 112 | `[[44,5,3]]` | — | 12 | `01+02+03+04+012+034` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 113 | `[[44,5,3]]` | — | 12 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 114 | `[[44,5,3]]` | — | 12 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 115 | `[[44,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 116 | `[[44,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+12+34+35+45+012+345` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 117 | `[[44,7,3]]` | — | 14 | `0+1+2+3+4+5+6+01+02+03+12+13+23+45+46…` | — | — | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 118 | `[[45,1,3]]` | — | 9 | `0` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 119 | `[[45,2,3]]` | — | 10 | `01` | 3 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 120 | `[[45,2,3]]` | — | 10 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 121 | `[[45,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 122 | `[[46,1,3]]` | — | 9 | `0` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 123 | `[[46,2,3]]` | — | 10 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 124 | `[[47,1,3]]` | — | 7 | `0` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 125 | `[[47,2,3]]` | — | 8 | `0+1` | 2 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 126 | `[[47,3,3]]` | — | 9 | `012` | 7 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Jacinto et al. (2026)](https://arxiv.org/abs/2606.07734) |
-| 127 | `[[47,3,3]]` | — | 9 | `0+01+012` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 128 | `[[47,3,3]]` | — | 9 | `0+012` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 129 | `[[47,3,3]]` | — | 9 | `0+12` | 4 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 130 | `[[47,3,3]]` | — | 9 | `0+1+2` | 3 | 1 | AI search | AI search; AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 131 | `[[47,4,3]]` | — | 10 | `01+23+012` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 132 | `[[47,4,3]]` | — | 10 | `01+023` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 133 | `[[47,4,3]]` | — | 10 | `01+23` | 6 | 2 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 134 | `[[47,4,3]]` | — | 10 | `0+01+23+012+123` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 135 | `[[47,4,3]]` | — | 10 | `0+01+023` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 136 | `[[47,4,3]]` | — | 10 | `0+01+23+023` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 137 | `[[47,4,3]]` | — | 10 | `0+01+123` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 138 | `[[47,4,3]]` | — | 10 | `0+13+012+123` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 139 | `[[47,4,3]]` | — | 10 | `0+13+012` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 140 | `[[47,4,3]]` | — | 10 | `0+12+123` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 141 | `[[47,4,3]]` | — | 10 | `0+123` | 7 | 3 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 142 | `[[47,4,3]]` | — | 10 | `0+1+23` | 5 | 2 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 143 | `[[47,4,3]]` | — | 10 | `0+1+2+3` | 4 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 144 | `[[47,5,3]]` | — | 11 | `012+034` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 145 | `[[47,5,3]]` | — | 11 | `0+1+4+01+04+14+012+013+023+024+124+234` | 10 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 146 | `[[47,5,3]]` | — | 11 | `0+012+034` | 10 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 147 | `[[47,5,3]]` | — | 11 | `0+12+34+012+034` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 148 | `[[47,5,3]]` | — | 11 | `0+12+012+134` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 149 | `[[47,5,3]]` | — | 11 | `0+1+2+3+4` | 5 | 1 | AI search | exhaustive classification n<=54 (Pareto point); AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 150 | `[[47,6,3]]` | — | 12 | `0+1+2+3+01+02+03+12+13+23+012+013+014…` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 151 | `[[48,1,3]]` | — | 8 | `0` | 1 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 152 | `[[48,1,4]]` | — | 11 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 153 | `[[48,2,3]]` | — | 14 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 154 | `[[48,2,4]]` | — | 10 | `01` | 3 | 2 | AI search | exhaustive classification n<=54 (Pareto point); AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 155 | `[[48,3,3]]` | — | 9 | `012` | 7 | 3 | AI search | AI search: punctured r=7 simplex parents | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 156 | `[[48,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 157 | `[[48,3,4]]` | — | 11 | `01+02+012` | 3 | 2 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 158 | `[[48,3,4]]` | — | 10 | `012` | 7 | 3 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Jacinto et al. (2026)](https://arxiv.org/abs/2606.07734) |
-| 159 | `[[48,4,3]]` | — | 10 | `01+23` | 6 | 2 | pre-existing | symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 160 | `[[48,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 161 | `[[48,4,4]]` | — | 12 | `01+02+03+012+013+023` | 3 | 2 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 162 | `[[48,5,3]]` | — | 11 | `01+23+012+023+134` | 10 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 163 | `[[48,5,3]]` | — | 11 | `01+34+012+023+234` | 9 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 164 | `[[48,5,3]]` | — | 11 | `01+012+034` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 165 | `[[48,5,3]]` | — | 11 | `01+34+012+234` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 166 | `[[48,5,3]]` | — | 11 | `01+023+124` | 11 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Gong et al. (2026)](https://arxiv.org/abs/2608.09727) |
-| 167 | `[[48,5,3]]` | — | 11 | `01+24+023` | 9 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 168 | `[[48,5,3]]` | — | 12 | `0+01+23+234` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 169 | `[[48,5,4]]` | — | 12 | `012+034` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 170 | `[[48,6,3]]` | — | 12 | `01+35+012+023+034+145+235` | 12 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 171 | `[[48,6,3]]` | — | 12 | `01+012+034+135` | 12 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 172 | `[[48,6,3]]` | — | 12 | `01+35+012+034+235` | 10 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 173 | `[[48,6,3]]` | — | 12 | `01+023+024+035+123+145` | 15 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Gong et al. (2026)](https://arxiv.org/abs/2608.09727) |
-| 174 | `[[48,6,3]]` | — | 12 | `01+24+023+145` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 175 | `[[48,7,3]]` | — | 13 | `01+012+034+035+046+134+156` | — | — | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 176 | `[[48,7,3]]` | — | 13 | `01+35+012+034+156+235` | — | — | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 177 | `[[49,1,5]]` | — | 12 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 178 | `[[49,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 179 | `[[50,4,3]]` | — | 14 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 180 | `[[51,1,3]]` | — | 8 | `0` | 1 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 181 | `[[51,2,3]]` | — | 9 | `0+1` | 2 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 182 | `[[51,3,3]]` | — | 16 | `0+1+2` | 3 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 183 | `[[51,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 184 | `[[51,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 185 | `[[51,5,3]]` | — | 12 | `01+34+012` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 186 | `[[51,5,3]]` | — | 12 | `01+234` | 9 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 187 | `[[51,5,3]]` | — | 12 | `0+01+24+012+013+024+134` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 188 | `[[51,5,3]]` | — | 12 | `0+01+34+012+034` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 189 | `[[51,5,3]]` | — | 12 | `0+01+234` | 8 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 190 | `[[51,5,3]]` | — | 12 | `0+12+34+012+013+123` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 191 | `[[51,5,3]]` | — | 12 | `0+12+012+034` | 9 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 192 | `[[51,5,3]]` | — | 12 | `0+12+012+034+134` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 193 | `[[51,5,3]]` | — | 12 | `0+12+34+012` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 194 | `[[51,5,3]]` | — | 12 | `0+1+2+3+4` | 5 | 1 | pre-existing | symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 195 | `[[51,6,3]]` | — | 13 | `0+12+34+012+345` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 196 | `[[51,6,3]]` | — | 13 | `0+12+012+345` | 9 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 197 | `[[52,1,3]]` | — | 8 | `0` | 1 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 198 | `[[52,1,4]]` | — | 10 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 199 | `[[52,2,3]]` | — | 9 | `01` | 3 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 200 | `[[52,2,3]]` | — | 9 | `0+1` | 2 | 1 | AI search | AI search; AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 201 | `[[52,2,4]]` | — | 11 | `0+1+01` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 202 | `[[52,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 203 | `[[52,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 204 | `[[52,5,3]]` | — | 12 | `0+01+24+023+124` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 205 | `[[52,5,3]]` | — | 12 | `0+13+24+012+013+024` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 206 | `[[52,5,3]]` | — | 12 | `0+12+34+012+123` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 207 | `[[52,5,3]]` | — | 12 | `0+13+24+012` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 208 | `[[52,5,3]]` | — | 12 | `0+12+34+123` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 209 | `[[52,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 210 | `[[52,5,3]]` | — | 12 | `0+1+2+3+4` | 5 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 211 | `[[52,6,3]]` | — | 13 | `0+01+23+45+123+145` | 8 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 212 | `[[52,6,3]]` | — | 13 | `0+1+2+3+4+5` | 6 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 213 | `[[53,1,5]]` | — | 11 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 214 | `[[53,3,3]]` | — | 17 | `0+1+2` | 3 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 215 | `[[53,5,3]]` | — | 13 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 216 | `[[54,2,3]]` | — | 10 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 217 | `[[54,4,3]]` | — | 12 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
-| 218 | `[[55,3,3]]` | — | 10 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 219 | `[[55,3,3]]` | — | 16 | `0+1+2` | 3 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
-| 220 | `[[55,4,3]]` | — | 11 | `0+123` | 7 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 221 | `[[55,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 222 | `[[55,5,3]]` | — | 12 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
-| 223 | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 224 | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+12+13+14+23+2…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 225 | `[[55,6,3]]` | — | 13 | `0+2+4+01+02+03+14+012+013+014+015+023…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 226 | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+01+02+12+14+23+34+012+013+0…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 227 | `[[55,6,3]]` | — | 13 | `0+1+2+4+5+01+04+012+013+023+024+025+0…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 228 | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 229 | `[[55,6,3]]` | — | 13 | `0+1+2+3+5+01+02+03+15+25+35+045+124+1…` | 7 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 230 | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
-| 231 | `[[55,7,3]]` | — | 14 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
-| 232 | `[[56,2,3]]` | — | 9 | `01` | 3 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 233 | `[[56,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
-| 234 | `[[56,5,4]]` | — | 13 | `012+034` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 235 | `[[56,6,3]]` | — | 13 | `0+3+4+5+01+02+23+24+25+34+35+45+012+0…` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 236 | `[[56,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+12+13+14+15+23+…` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 237 | `[[56,6,3]]` | — | 13 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
-| 238 | `[[56,8,3]]` | — | 15 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 239 | `[[57,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
-| 240 | `[[57,5,3]]` | — | 13 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
-| 241 | `[[58,4,3]]` | — | 19 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
-| 242 | `[[58,6,3]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
-| 243 | `[[59,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 244 | `[[59,5,3]]` | — | 12 | `01+234` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 245 | `[[59,5,3]]` | — | 12 | `0+01+23+012+023+134` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 246 | `[[59,5,3]]` | — | 12 | `0+01+012+134` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 247 | `[[59,5,3]]` | — | 12 | `0+01+34+012+234` | 7 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 248 | `[[59,5,3]]` | — | 12 | `0+01+24+023` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 249 | `[[59,5,3]]` | — | 12 | `0+12+34+012+013+024+123` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 250 | `[[59,5,3]]` | — | 12 | `0+13+24+012+013+024+123` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 251 | `[[59,5,3]]` | — | 12 | `0+13+012+134` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 252 | `[[59,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 253 | `[[59,5,3]]` | — | 16 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
-| 254 | `[[59,6,3]]` | — | 13 | `0+1+2+4+5+01+02+24+25+012+013+014+015…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 255 | `[[59,6,3]]` | — | 13 | `0+1+2+3+4+01+02+04+13+23+34+012+013+0…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 256 | `[[59,6,3]]` | — | 13 | `0+01+12+13+14+15+23+24+25+34+35+45+02…` | 7 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 257 | `[[59,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 258 | `[[59,7,3]]` | — | 14 | `0+1+2+3+4+5+6` | — | — | AI search | AI search; AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 259 | `[[60,1,4]]` | — | 10 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
-| 260 | `[[60,2,4]]` | — | 11 | `0+1` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
-| 261 | `[[60,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 262 | `[[60,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
-| 263 | `[[60,5,3]]` | — | 12 | `01+34+012+034` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 264 | `[[60,5,3]]` | — | 12 | `01+012+234` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 265 | `[[60,5,3]]` | — | 12 | `0+01+34+012+013+124` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 266 | `[[60,5,3]]` | — | 12 | `0+01+34+012+023+124` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 267 | `[[60,5,3]]` | — | 12 | `0+01+34+012+023+234` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 268 | `[[60,5,3]]` | — | 12 | `0+01+012+034` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 269 | `[[60,5,3]]` | — | 12 | `0+01+34+012+123` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 270 | `[[60,5,3]]` | — | 12 | `0+01+23+012+134` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 271 | `[[60,5,3]]` | — | 12 | `0+01+34+012+134` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 272 | `[[60,5,3]]` | — | 12 | `0+01+012+234` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 273 | `[[60,5,3]]` | — | 12 | `0+01+34+012` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 274 | `[[60,5,3]]` | — | 12 | `0+01+023+124` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 275 | `[[60,5,3]]` | — | 12 | `0+01+34+023+124` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 276 | `[[60,5,3]]` | — | 12 | `0+01+24+023+234` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 277 | `[[60,5,3]]` | — | 12 | `0+01+24+123` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 278 | `[[60,5,3]]` | — | 12 | `0+12+34+012+013+024+034` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 279 | `[[60,5,3]]` | — | 12 | `0+12+34+012+013+024` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 280 | `[[60,5,3]]` | — | 12 | `0+12+34+012+013` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 281 | `[[60,5,3]]` | — | 12 | `0+34+012+013+124` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 282 | `[[60,5,3]]` | — | 12 | `0+13+012+034+123` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 283 | `[[60,5,3]]` | — | 12 | `0+13+24+012+034` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 284 | `[[60,5,3]]` | — | 12 | `0+13+24+012+123` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 285 | `[[60,5,3]]` | — | 12 | `0+34+012+123` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 286 | `[[60,5,3]]` | — | 12 | `0+13+012+234` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 287 | `[[60,5,3]]` | — | 12 | `0+34+012+134` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 288 | `[[60,5,3]]` | — | 12 | `0+34+012` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 289 | `[[60,5,3]]` | — | 12 | `0+12+134` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 290 | `[[60,6,3]]` | — | 13 | `01+02+03+05+12+23+24+25+012+013+014+0…` | 12 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 291 | `[[60,6,3]]` | — | 13 | `01+02+03+04+05+012+013+014+123+124+13…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 292 | `[[60,6,3]]` | — | 13 | `01+05+23+24+012+013+014+023+024+025+0…` | 8 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 293 | `[[60,6,3]]` | — | 13 | `0+3+4+01+02+03+04+13+14+23+24+34+35+4…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 294 | `[[60,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+05+12+13+14+15+…` | 8 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 295 | `[[60,6,3]]` | — | 13 | `0+3+5+01+02+03+04+05+13+15+23+25+34+4…` | 12 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 296 | `[[60,6,3]]` | — | 13 | `0+1+2+3+4+01+02+05+12+15+25+35+45+012…` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 297 | `[[60,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+12+13+14+15+24+…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 298 | `[[60,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+12+13+14+15+25+…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 299 | `[[60,6,3]]` | — | 13 | `0+1+2+4+5+01+02+03+13+15+23+34+35+012…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 300 | `[[60,6,3]]` | — | 13 | `0+1+2+01+02+03+14+24+34+35+45+012+013…` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 301 | `[[60,6,3]]` | — | 13 | `0+1+3+4+5+01+02+05+12+15+23+24+25+012…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 302 | `[[60,6,3]]` | — | 13 | `0+01+02+03+04+05+012+013+024+123+125+…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 303 | `[[60,6,3]]` | — | 13 | `0+1+4+01+04+15+25+45+012+013+023+024+…` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 304 | `[[60,6,3]]` | — | 13 | `0+4+5+01+02+03+12+13+14+15+23+24+25+3…` | 8 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 305 | `[[60,6,3]]` | — | 13 | `0+1+4+23+012+013+014+025+035+125+135+…` | 8 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 306 | `[[60,6,3]]` | — | 13 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
-| 307 | `[[60,7,3]]` | — | 14 | `0+2+4+01+02+03+04+05+12+14+16+23+25+2…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 308 | `[[60,7,3]]` | — | 14 | `0+01+02+03+04+12+13+23+45+56+012+013+…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 309 | `[[60,8,3]]` | — | 15 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 310 | `[[61,3,3]]` | — | 16 | `0+1+2` | 3 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
-| 311 | `[[61,7,3]]` | — | 15 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
-| 312 | `[[62,4,3]]` | — | 12 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
-| 313 | `[[62,6,3]]` | — | 16 | `0+1+2+3+4+01+02+03+04+05+12+13+14+15+…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 314 | `[[62,6,3]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
-| 315 | `[[62,7,3]]` | — | 17 | `0+01+02+03+04+05+06+012+013+014+015+0…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 316 | `[[62,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 317 | `[[63,2,3]]` | — | 8 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
-| 318 | `[[63,3,3]]` | — | 9 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 319 | `[[63,3,3]]` | — | 9 | `0+12` | 4 | 2 | AI search | AI search | Jain et al. (2026) |
-| 320 | `[[63,4,3]]` | — | 10 | `01+23` | 6 | 2 | pre-existing | symmetry-SAT search; AI search | Jain et al. (2026) |
-| 321 | `[[63,4,3]]` | — | 10 | `0+123` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 322 | `[[63,5,3]]` | — | 11 | `01+234` | 9 | 3 | AI search | AI search | Jain et al. (2026) |
-| 323 | `[[63,5,3]]` | — | 11 | `012+034` | 11 | 3 | AI search | AI search | Jain et al. (2026) |
-| 324 | `[[63,5,3]]` | — | 11 | `0+12+34` | 7 | 2 | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 325 | `[[63,5,3]]` | — | 11 | `0+1+2+34` | 6 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 326 | `[[63,5,3]]` | — | 11 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
-| 327 | `[[63,6,3]]` | — | 12 | `01+23+45` | 9 | 2 | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 328 | `[[63,6,3]]` | — | 12 | `012+345` | 13 | 3 | AI search | AI search | Jain et al. (2026) |
-| 329 | `[[63,6,3]]` | — | 16 | `0+1+2+3+5+01+02+25+012+013+014+023+02…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 330 | `[[63,6,3]]` | — | 16 | `0+1+2+3+4+5+01+02+04+12+13+14+15+23+2…` | 12 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 331 | `[[63,6,3]]` | — | 16 | `0+1+2+3+4+01+02+12+14+23+012+013+024+…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 332 | `[[63,6,3]]` | — | 16 | `0+2+3+4+01+14+23+24+012+013+045+145+2…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 333 | `[[63,7,3]]` | — | 17 | `0+12+13+14+15+26+36+46+56+123+124+125…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 334 | `[[63,7,3]]` | — | 17 | `0+12+13+26+36+45+123+124+125+134+145+…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 335 | `[[63,7,3]]` | — | 17 | `0+12+13+14+15+16+123+124+125+136+146+…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 336 | `[[63,7,3]]` | — | 17 | `0+12+35+56+123+134+135+145+146+234+23…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 337 | `[[63,7,3]]` | — | 17 | `0+12+34+123+134+135+145+146+236+245` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 338 | `[[63,7,3]]` | — | 13 | `0+123+456` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 339 | `[[63,7,3]]` | — | 13 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
-| 340 | `[[63,8,3]]` | — | 18 | `0+12+123+145+146+157+245+267` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 341 | `[[63,8,3]]` | — | 18 | `0+12+46+123+145+267+346` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
-| 342 | `[[63,8,3]]` | — | 14 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 343 | `[[63,9,3]]` | — | 15 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
-| 344 | `[[63,10,3]]` | — | 16 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
-| 345 | `[[63,11,3]]` | — | 17 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
-| 346 | `[[63,12,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9,10,11` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 347 | `[[63,16,3]]` | — | 22 | `0+1,2,3+1,4,5+1,6,7+2,8,9+2,10,11+3,1…` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 348 | `[[64,1,4]]` | — | 10 | `0` | 1 | 1 | pre-existing | symmetry-SAT search; AI search | [Jacinto et al. (2026)](https://arxiv.org/abs/2606.07734) |
-| 349 | `[[64,2,4]]` | — | 11 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
-| 350 | `[[64,2,4]]` | — | 11 | `0+1` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
-| 351 | `[[64,3,4]]` | — | 10 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 352 | `[[64,4,3]]` | — | 18 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
-| 353 | `[[64,5,4]]` | — | 12 | `012+034` | 11 | 3 | AI search | AI search | Jain et al. (2026) |
-| 354 | `[[64,6,4]]` | — | 13 | `012+013+014+023+024+035+123+125+135+345` | 15 | 3 | AI search | AI search | Jain et al. (2026) |
-| 355 | `[[64,6,4]]` | — | 13 | `012+345` | 13 | 3 | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71); [Gong et al. (2026)](https://arxiv.org/abs/2608.09727); [Jacinto et al. (2026)](https://arxiv.org/abs/2606.07734) |
-| 356 | `[[64,8,3]]` | — | 15 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 357 | `[[64,15,4]]` | — | 22 | `0,1,2+0,3,4+0,5,6+1,7,8+1,9,10+2,11,1…` | — | — | AI search | AI search | [Rengaswamy et al. (2020)](https://doi.org/10.1109/JSAIT.2020.3012914); [Vuillot & Breuckmann (2022)](https://doi.org/10.1109/TIT.2022.3170846); [Gong et al. (2026)](https://arxiv.org/abs/2608.09727) |
-| 358 | `[[65,5,3]]` | — | 13 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
-| 359 | `[[65,7,3]]` | — | 15 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
-| 360 | `[[65,9,3]]` | — | 17 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
-| 361 | `[[66,3,4]]` | — | 12 | `012` | 7 | 3 | pre-existing | symmetry-SAT search; AI search | Jain et al. (2026) |
-| 362 | `[[66,4,3]]` | — | 12 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
-| 363 | `[[66,6,3]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
-| 364 | `[[66,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 365 | `[[67,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 366 | `[[67,5,3]]` | — | 12 | `01+234` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 367 | `[[67,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 368 | `[[67,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 369 | `[[67,9,3]]` | — | 16 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
-| 370 | `[[68,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 371 | `[[68,5,3]]` | — | 12 | `01+234` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 372 | `[[68,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 373 | `[[68,6,3]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
-| 374 | `[[68,8,3]]` | — | 15 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 375 | `[[68,10,3]]` | — | 17 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
-| 376 | `[[69,9,3]]` | — | 17 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
-| 377 | `[[70,6,3]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
-| 378 | `[[70,8,3]]` | — | 19 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 379 | `[[70,10,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
-| 380 | `[[71,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 381 | `[[71,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 382 | `[[71,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 383 | `[[71,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 384 | `[[72,1,4]]` | — | 10 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
-| 385 | `[[72,2,4]]` | — | 11 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
-| 386 | `[[72,3,4]]` | — | 11 | `01+02` | 4 | 2 | AI search | AI search | Jain et al. (2026) |
-| 387 | `[[72,3,4]]` | — | 12 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 388 | `[[72,4,4]]` | — | 13 | `01+23` | 6 | 2 | AI search | AI search | Jain et al. (2026) |
-| 389 | `[[72,5,3]]` | — | 12 | `01+234` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 390 | `[[72,10,3]]` | — | 17 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
-| 391 | `[[73,1,4]]` | — | 10 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
-| 392 | `[[74,6,3]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
-| 393 | `[[74,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 394 | `[[74,10,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
-| 395 | `[[75,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 396 | `[[75,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 397 | `[[75,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 398 | `[[75,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 399 | `[[76,1,4]]` | — | 10 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
-| 400 | `[[76,2,4]]` | — | 11 | `0+01` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
-| 401 | `[[76,4,4]]` | — | 13 | `012+013` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 402 | `[[76,4,4]]` | — | 13 | `0+1+2+3+01+23` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
-| 403 | `[[76,5,3]]` | — | 12 | `01+234` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 404 | `[[76,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 405 | `[[76,5,3]]` | — | 12 | `0+1+234` | 8 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 406 | `[[76,5,3]]` | — | 12 | `0+1+2+34` | 6 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 407 | `[[76,10,3]]` | — | 17 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
-| 408 | `[[76,12,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
-| 409 | `[[77,1,4]]` | — | 11 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
-| 410 | `[[77,3,4]]` | — | 13 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 411 | `[[77,4,4]]` | — | 14 | `0+123` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 412 | `[[77,5,4]]` | — | 15 | `012+034` | 11 | 3 | AI search | AI search | Jain et al. (2026) |
-| 413 | `[[77,6,4]]` | — | 16 | `012+345` | 13 | 3 | AI search | AI search | Jain et al. (2026) |
-| 414 | `[[77,7,4]]` | — | 17 | `0+123+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 415 | `[[78,12,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
-| 416 | `[[79,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 417 | `[[79,5,3]]` | — | 12 | `0+1+2+34` | 6 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 418 | `[[79,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 419 | `[[79,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 420 | `[[79,7,3]]` | — | 14 | `0+123+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 421 | `[[79,9,3]]` | — | 16 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
-| 422 | `[[79,11,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
-| 423 | `[[79,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
-| 424 | `[[80,2,4]]` | — | 10 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
-| 425 | `[[80,3,4]]` | — | 11 | `01+02` | 4 | 2 | AI search | AI search | Jain et al. (2026) |
-| 426 | `[[80,4,4]]` | — | 12 | `01+23` | 6 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 427 | `[[80,5,4]]` | — | 13 | `01+234` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 428 | `[[80,6,3]]` | — | 13 | `012+345` | 13 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 429 | `[[80,8,3]]` | — | 15 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 430 | `[[82,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 431 | `[[82,10,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
-| 432 | `[[82,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8,9,10` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 433 | `[[82,12,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
-| 434 | `[[83,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 435 | `[[83,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 436 | `[[83,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 437 | `[[83,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 438 | `[[84,1,4]]` | — | 10 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
-| 439 | `[[84,3,4]]` | — | 12 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 440 | `[[84,5,3]]` | — | 12 | `0+1+2+34` | 6 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 441 | `[[84,6,3]]` | — | 13 | `012+345` | 13 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 442 | `[[84,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 443 | `[[84,6,3]]` | — | 13 | `0+1+23+45` | 8 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 444 | `[[84,7,3]]` | — | 14 | `0+1+2+3+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 445 | `[[84,12,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
-| 446 | `[[85,1,5]]` | — | 11 | `0` | 1 | 1 | pre-existing | symmetry-SAT search; AI search | Jain et al. (2026) |
-| 447 | `[[85,2,5]]` | — | 18 | `0+1+01` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
-| 448 | `[[86,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 449 | `[[86,10,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
-| 450 | `[[86,12,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
-| 451 | `[[87,6,3]]` | — | 13 | `012+345` | 13 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 452 | `[[87,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 453 | `[[87,6,3]]` | — | 13 | `0+1+23+45` | 8 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 454 | `[[87,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 455 | `[[87,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
-| 456 | `[[87,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
-| 457 | `[[88,6,3]]` | — | 13 | `012+345` | 13 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 458 | `[[88,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 459 | `[[88,6,3]]` | — | 13 | `0+1+23+45` | 8 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 460 | `[[88,10,3]]` | — | 17 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
-| 461 | `[[88,12,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
-| 462 | `[[88,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10,11,12` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 463 | `[[88,14,3]]` | — | 21 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
-| 464 | `[[90,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 465 | `[[90,10,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
-| 466 | `[[90,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8,9,10` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 467 | `[[90,12,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
-| 468 | `[[90,14,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
-| 469 | `[[91,1,3]]` | — | 13 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
-| 470 | `[[91,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 471 | `[[91,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 472 | `[[91,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 473 | `[[91,7,3]]` | — | 14 | `0+12+34+56` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 474 | `[[91,7,3]]` | — | 14 | `0+123+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 475 | `[[91,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
-| 476 | `[[91,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
-| 477 | `[[91,15,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | AI search | AI search | Jain et al. (2026) |
-| 478 | `[[92,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 479 | `[[92,6,3]]` | — | 13 | `0+1+23+45` | 8 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 480 | `[[92,6,4]]` | — | 14 | `012+345` | 13 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 481 | `[[92,7,3]]` | — | 14 | `0+123+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 482 | `[[92,12,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
-| 483 | `[[92,14,3]]` | — | 21 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
-| 484 | `[[92,15,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12,13,14` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 485 | `[[93,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
-| 486 | `[[94,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 487 | `[[94,12,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
-| 488 | `[[94,14,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
-| 489 | `[[95,7,3]]` | — | 14 | `0+12+34+56` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 490 | `[[95,7,3]]` | — | 14 | `0+123+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 491 | `[[95,7,3]]` | — | 14 | `0+1+23+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 492 | `[[95,9,3]]` | — | 16 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
-| 493 | `[[95,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
-| 494 | `[[95,12,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9,10,11` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 495 | `[[95,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
-| 496 | `[[95,15,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | AI search | AI search | Jain et al. (2026) |
-| 497 | `[[96,6,3]]` | — | 13 | `012+345` | 13 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 498 | `[[96,8,3]]` | — | 15 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 499 | `[[96,12,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
-| 500 | `[[96,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8,9+10,11,12` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 501 | `[[97,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
-| 502 | `[[98,14,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
-| 503 | `[[99,9,3]]` | — | 16 | `012+345+678` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 504 | `[[99,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
-| 505 | `[[99,12,3]]` | — | 19 | `0,1,2+3,4,5+6,7,8+9,10,11` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 506 | `[[99,13,3]]` | — | 20 | `0+1,2,3+4,5,6+7,8,9+10,11,12` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 507 | `[[99,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
-| 508 | `[[99,15,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | AI search | AI search | Jain et al. (2026) |
-| 509 | `[[99,16,3]]` | — | 23 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13,14,15` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 510 | `[[100,2,4]]` | — | 12 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
-| 511 | `[[100,6,4]]` | — | 15 | `012+013+014+023+125+145+245+345` | 17 | 3 | AI search | AI search | Jain et al. (2026) |
-| 512 | `[[100,9,4]]` | — | 17 | `012+345+678` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 513 | `[[100,12,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
-| 514 | `[[100,12,4]]` | — | 20 | `0,1,2+3,4,5+6,7,8+9,10,11` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 515 | `[[100,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
-| 516 | `[[100,14,3]]` | — | 21 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
-| 517 | `[[100,15,3]]` | — | 23 | `0+1+2+3+4+5+6+7+8+9+10+11+12,13,14` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 518 | `[[100,16,3]]` | — | 23 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | AI search | AI search | Jain et al. (2026) |
-| 519 | `[[101,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
-| 520 | `[[103,7,3]]` | — | 14 | `0+1+23+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 521 | `[[103,8,3]]` | — | 15 | `0+12+34+567` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 522 | `[[103,8,3]]` | — | 15 | `0+1+2+3+4+567` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 523 | `[[103,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
-| 524 | `[[103,15,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | AI search | AI search | Jain et al. (2026) |
-| 525 | `[[103,17,3]]` | — | 24 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | AI search | AI search | Jain et al. (2026) |
-| 526 | `[[104,7,3]]` | — | 14 | `0+1+23+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 527 | `[[104,8,3]]` | — | 15 | `0+12+34+567` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 528 | `[[107,19,3]]` | — | 28 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 529 | `[[109,19,3]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 530 | `[[110,18,3]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 531 | `[[111,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 532 | `[[111,8,3]]` | — | 15 | `0+12+34+567` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 533 | `[[111,9,3]]` | — | 16 | `0+1+2+345+678` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 534 | `[[111,17,3]]` | — | 24 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | AI search | AI search | Jain et al. (2026) |
-| 535 | `[[112,12,3]]` | — | 19 | `0,1,2+3,4,5+6,7,8+9,10,11` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 536 | `[[112,16,3]]` | — | 23 | `0+1+2+3+4,5,6+7,8,9+10,11,12+13,14,15` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 537 | `[[112,16,3]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 538 | `[[114,14,3]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 539 | `[[116,2,4]]` | — | 12 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
-| 540 | `[[116,3,4]]` | — | 13 | `0+12` | 4 | 2 | AI search | AI search | Jain et al. (2026) |
-| 541 | `[[116,12,4]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71); [Vuillot & Breuckmann (2022)](https://doi.org/10.1109/TIT.2022.3170846) |
-| 542 | `[[117,1,4]]` | — | 11 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
-| 543 | `[[117,2,4]]` | — | 12 | `0+01` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
-| 544 | `[[117,5,4]]` | — | 15 | `0+1+2+3+4` | 5 | 1 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 545 | `[[118,10,4]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 546 | `[[119,17,3]]` | — | 25 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | AI search | AI search | Jain et al. (2026) |
-| 547 | `[[119,20,3]]` | — | 28 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 548 | `[[120,3,4]]` | — | 13 | `01+02` | 4 | 2 | AI search | AI search | Jain et al. (2026) |
-| 549 | `[[120,4,4]]` | — | 14 | `012+013` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 550 | `[[125,3,5]]` | — | 29 | `0+1+2` | 3 | 1 | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 551 | `[[127,1,7]]` | — | 22 | `0` | 1 | 1 | AI search | AI search | [Gong & Renes (2024)](https://arxiv.org/abs/2410.23263) |
-| 552 | `[[127,5,5]]` | — | 19 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
-| 553 | `[[127,11,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
-| 554 | `[[127,12,3]]` | — | 19 | `0,1,2+3,4,5+6,7,8+9,10,11` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 555 | `[[127,16,3]]` | — | 23 | `0+1,2,3+4,5,6+7,8,9+10,11,12+13,14,15` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
-| 556 | `[[127,17,3]]` | — | 24 | `0+1+2+3+4+5,6,7+8,9,10+11,12,13+14,15,16` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 557 | `[[127,19,3]]` | — | 26 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 558 | `[[127,21,3]]` | — | 28 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 559 | `[[127,23,3]]` | — | 30 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 560 | `[[127,26,3]]` | — | 33 | `0+1+2+3+4+5+6+7+8+9+10+11,12,13+11,14…` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 561 | `[[127,37,3]]` | — | 44 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 562 | `[[128,3,6]]` | — | 18 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 563 | `[[128,12,4]]` | — | 20 | `0,1,2+3,4,5+6,7,8+9,10,11` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 564 | `[[128,15,4]]` | — | 23 | `0,1,2+3,4,5+6,7,8+9,10,11+12,13,14` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
-| 565 | `[[135,14,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
-| 566 | `[[135,15,3]]` | — | 23 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | AI search | AI search | Jain et al. (2026) |
-| 567 | `[[135,17,3]]` | — | 25 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | AI search | AI search | Jain et al. (2026) |
-| 568 | `[[136,7,4]]` | — | 16 | `012+013+014+015+016+023+024+025+034+0…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 569 | `[[136,7,4]]` | — | 17 | `012+013+014+015+023+024+034+125+236+2…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 570 | `[[141,2,4]]` | — | 12 | `0+1` | 2 | 1 | pre-existing | symmetry-SAT search; AI search | Jain et al. (2026) |
-| 571 | `[[154,28,3]]` | — | 37 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 572 | `[[155,16,3]]` | — | 26 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | AI search | AI search | Jain et al. (2026) |
-| 573 | `[[155,17,3]]` | — | 27 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | AI search | AI search | Jain et al. (2026) |
-| 574 | `[[155,19,3]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 575 | `[[155,21,3]]` | — | 31 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 576 | `[[156,28,3]]` | — | 38 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 577 | `[[157,29,3]]` | — | 38 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 578 | `[[158,28,3]]` | — | 39 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 579 | `[[159,29,3]]` | — | 39 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 580 | `[[160,4,4]]` | — | 13 | `01+02+03` | 7 | 2 | AI search | AI search | Jain et al. (2026) |
-| 581 | `[[160,28,3]]` | — | 40 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 582 | `[[160,30,3]]` | — | 40 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 583 | `[[161,29,3]]` | — | 40 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 584 | `[[161,31,3]]` | — | 41 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 585 | `[[165,1,4]]` | — | 10 | `0` | 1 | 1 | AI search | AI search | [Jacinto et al. (2026)](https://arxiv.org/abs/2606.07734) |
-| 586 | `[[172,3,4]]` | — | 13 | `01+02+12` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
-| 587 | `[[176,2,5]]` | — | 26 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
-| 588 | `[[176,3,5]]` | — | 27 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 589 | `[[176,3,6]]` | — | 28 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 590 | `[[176,5,5]]` | — | 29 | `01+02+03+04+12+13+24+34+012+013+023` | 8 | 2 | AI search | AI search | Jain et al. (2026) |
-| 591 | `[[176,9,4]]` | — | 20 | `012+013+014+015+016+017+023+024+025+0…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 592 | `[[176,32,3]]` | — | 42 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 593 | `[[188,3,4]]` | — | 13 | `01+02` | 4 | 2 | AI search | AI search | Jain et al. (2026) |
-| 594 | `[[188,36,3]]` | — | 46 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 595 | `[[189,35,3]]` | — | 46 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 596 | `[[203,37,3]]` | — | 50 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 597 | `[[203,41,3]]` | — | 51 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 598 | `[[204,40,3]]` | — | 50 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 599 | `[[205,41,3]]` | — | 52 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 600 | `[[205,43,3]]` | — | 53 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 601 | `[[206,40,3]]` | — | 51 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 602 | `[[206,42,3]]` | — | 52 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 603 | `[[207,41,3]]` | — | 53 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 604 | `[[207,43,3]]` | — | 54 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 605 | `[[208,5,4]]` | — | 14 | `012+034` | 11 | 3 | AI search | AI search | Jain et al. (2026) |
-| 606 | `[[208,40,3]]` | — | 52 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 607 | `[[208,42,3]]` | — | 53 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 608 | `[[208,44,3]]` | — | 54 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 609 | `[[210,40,3]]` | — | 53 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 610 | `[[210,42,3]]` | — | 54 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 611 | `[[210,44,3]]` | — | 55 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 612 | `[[210,46,3]]` | — | 56 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 613 | `[[211,41,3]]` | — | 54 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 614 | `[[211,43,3]]` | — | 55 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 615 | `[[212,40,3]]` | — | 54 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 616 | `[[212,42,3]]` | — | 55 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 617 | `[[213,41,3]]` | — | 55 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 618 | `[[214,40,3]]` | — | 55 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 619 | `[[225,19,3]]` | — | 27 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 620 | `[[225,26,3]]` | — | 42 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 621 | `[[225,27,3]]` | — | 43 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 622 | `[[225,28,3]]` | — | 36 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 623 | `[[225,29,3]]` | — | 37 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 624 | `[[225,35,3]]` | — | 43 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 625 | `[[228,2,4]]` | — | 12 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
-| 626 | `[[248,8,6]]` | — | 53 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search: pure-T puncture caps | Jain et al. (2026) |
-| 627 | `[[252,46,3]]` | — | 59 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
-| 628 | `[[255,1,5]]` | — | 17 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
-| 629 | `[[255,2,5]]` | — | 18 | `0+1` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
-| 630 | `[[255,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | AI search | AI search | Jain et al. (2026) |
-| 631 | `[[255,3,5]]` | — | 19 | `0+1+2` | 3 | 1 | AI search | AI search | Jain et al. (2026) |
-| 632 | `[[255,3,7]]` | — | 38 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 633 | `[[255,4,5]]` | — | 20 | `0+1+2+3` | 4 | 1 | AI search | AI search | Jain et al. (2026) |
-| 634 | `[[255,4,7]]` | — | 39 | `0+123` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 635 | `[[255,5,5]]` | — | 21 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
-| 636 | `[[255,5,7]]` | — | 41 | `012+034` | 11 | 3 | AI search | AI search | Jain et al. (2026) |
-| 637 | `[[255,6,5]]` | — | 22 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
-| 638 | `[[255,6,7]]` | — | 41 | `0+1+01+012+013+014+015+023+024+025+12…` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
-| 639 | `[[255,7,5]]` | — | 23 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
-| 640 | `[[255,8,5]]` | — | 24 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 641 | `[[255,9,5]]` | — | 25 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
-| 642 | `[[255,27,3]]` | — | 35 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 643 | `[[255,40,3]]` | — | 48 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 644 | `[[255,41,3]]` | — | 49 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 645 | `[[255,43,3]]` | — | 51 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: pure-T width campaign n=255, 511 | Jain et al. (2026) |
-| 646 | `[[255,47,3]]` | — | 62 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
-| 647 | `[[256,6,6]]` | — | 23 | `012+345` | 13 | 3 | AI search | AI search | Jain et al. (2026) |
-| 648 | `[[256,9,4]]` | — | 24 | `012+013+014+015+023+024+026+035+036+0…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 649 | `[[256,11,6]]` | — | 35 | `0,1,2+0,1,3+0,1,4+0,1,5+0,1,6+0,1,7+0…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 650 | `[[256,16,4]]` | — | 28 | `0,1,2+0,1,4+0,1,9+0,1,10+0,1,12+0,1,1…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 651 | `[[256,84,4]]` | — | 93 | `0,64,83+0,65,82+0,66,81+0,67,80+0,68,…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 652 | `[[261,59,3]]` | — | 69 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 653 | `[[288,64,3]]` | — | 75 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 654 | `[[300,68,3]]` | — | 79 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 655 | `[[308,70,3]]` | — | 81 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 656 | `[[309,71,3]]` | — | 82 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 657 | `[[310,70,3]]` | — | 82 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 658 | `[[310,72,3]]` | — | 83 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 659 | `[[311,71,3]]` | — | 83 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 660 | `[[311,73,3]]` | — | 84 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 661 | `[[312,70,3]]` | — | 83 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 662 | `[[324,76,3]]` | — | 87 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 663 | `[[336,80,3]]` | — | 91 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 664 | `[[358,86,3]]` | — | 97 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 665 | `[[359,87,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 666 | `[[360,86,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 667 | `[[360,88,3]]` | — | 99 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 668 | `[[386,94,3]]` | — | 105 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 669 | `[[399,77,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
-| 670 | `[[404,100,3]]` | — | 111 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 671 | `[[405,101,3]]` | — | 112 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 672 | `[[406,100,3]]` | — | 112 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 673 | `[[406,102,3]]` | — | 113 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 674 | `[[407,73,4]]` | — | 92 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 675 | `[[407,101,3]]` | — | 113 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 676 | `[[408,100,3]]` | — | 113 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 677 | `[[408,102,3]]` | — | 114 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 678 | `[[408,104,3]]` | — | 115 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 679 | `[[409,101,3]]` | — | 114 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 680 | `[[410,100,3]]` | — | 114 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 681 | `[[426,80,4]]` | — | 99 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 682 | `[[427,81,4]]` | — | 100 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 683 | `[[427,85,3]]` | — | 115 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 684 | `[[428,80,4]]` | — | 100 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 685 | `[[428,82,4]]` | — | 101 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 686 | `[[429,81,4]]` | — | 101 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 687 | `[[429,83,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 688 | `[[430,80,4]]` | — | 101 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
-| 689 | `[[430,82,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 690 | `[[431,81,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 691 | `[[432,80,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 692 | `[[460,116,3]]` | — | 128 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 693 | `[[495,99,3]]` | — | 118 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
-| 694 | `[[496,16,6]]` | — | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | AI search | AI search: pure-T puncture caps | Jain et al. (2026) |
-| 695 | `[[496,36,4]]` | — | 47 | `0,1,2+0,1,7+0,1,8+0,1,9+0,1,11+0,1,12…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 696 | `[[502,92,3]]` | — | 117 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
-| 697 | `[[508,132,3]]` | — | 143 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 698 | `[[511,1,5]]` | — | 19 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
-| 699 | `[[511,2,5]]` | — | 20 | `0+1` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
-| 700 | `[[511,3,5]]` | — | 21 | `0+1+2` | 3 | 1 | AI search | AI search | Jain et al. (2026) |
-| 701 | `[[511,4,5]]` | — | 22 | `0+1+2+3` | 4 | 1 | AI search | AI search | Jain et al. (2026) |
-| 702 | `[[511,5,5]]` | — | 23 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
-| 703 | `[[511,6,5]]` | — | 24 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
-| 704 | `[[511,7,5]]` | — | 25 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
-| 705 | `[[511,8,5]]` | — | 26 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 706 | `[[511,9,5]]` | — | 27 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
-| 707 | `[[511,9,≥6]]` | — | 36 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
-| 708 | `[[511,10,5]]` | — | 28 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
-| 709 | `[[511,11,5]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
-| 710 | `[[511,12,5]]` | — | 30 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
-| 711 | `[[511,13,5]]` | — | 31 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
-| 712 | `[[511,14,5]]` | — | 32 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
-| 713 | `[[511,15,5]]` | — | 33 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+0,…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 714 | `[[511,15,5]]` | — | 33 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | AI search | AI search | Jain et al. (2026) |
-| 715 | `[[511,16,5]]` | — | 34 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | AI search | AI search | Jain et al. (2026) |
-| 716 | `[[511,17,5]]` | — | 35 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | AI search | AI search | Jain et al. (2026) |
-| 717 | `[[511,81,3]]` | — | 90 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: pure-T width campaign n=255, 511 | Jain et al. (2026) |
-| 718 | `[[511,85,3]]` | — | 94 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: full-simplex pure-T frames | Jain et al. (2026) |
-| 719 | `[[511,89,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: full-simplex pure-T frames | Jain et al. (2026) |
-| 720 | `[[512,39,≥6]]` | — | 85 | `0,1,2+3,4,5+6,7,8+9,10,11+12,13,14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 721 | `[[512,84,≥6]]` | — | 130 | `0,64,83+0,65,82+0,66,81+0,67,80+0,68,…` | — | — | AI search | AI search | [Rengaswamy et al. (2020)](https://doi.org/10.1109/JSAIT.2020.3012914); [Vuillot & Breuckmann (2022)](https://doi.org/10.1109/TIT.2022.3170846) |
-| 722 | `[[558,146,3]]` | — | 158 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 723 | `[[606,162,3]]` | — | 174 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 724 | `[[655,177,3]]` | — | 189 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 725 | `[[679,185,3]]` | — | 197 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 726 | `[[684,132,3]]` | — | 168 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
-| 727 | `[[691,189,3]]` | — | 201 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 728 | `[[702,194,3]]` | — | 205 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 729 | `[[715,197,3]]` | — | 209 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 730 | `[[727,201,3]]` | — | 213 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 731 | `[[742,36,≥6]]` | ≥8 | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 732 | `[[750,210,3]]` | — | 221 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 733 | `[[756,32,≥6]]` | ≥9 | 80 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 734 | `[[800,224,3]]` | — | 237 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 735 | `[[825,199,3]]` | — | 237 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 736 | `[[846,122,6]]` | — | 161 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 737 | `[[848,122,6]]` | — | 162 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 738 | `[[850,126,6]]` | — | 165 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 739 | `[[850,128,6]]` | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 740 | `[[852,126,6]]` | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 741 | `[[852,128,6]]` | — | 167 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 742 | `[[854,124,6]]` | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 743 | `[[854,126,6]]` | — | 167 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 744 | `[[854,128,6]]` | — | 168 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 745 | `[[856,128,6]]` | — | 169 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 746 | `[[858,128,6]]` | — | 170 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 747 | `[[860,124,6]]` | — | 169 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 748 | `[[860,126,6]]` | — | 170 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 749 | `[[860,128,6]]` | — | 171 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 750 | `[[862,162,3]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 751 | `[[863,161,3]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 752 | `[[870,154,4]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 753 | `[[871,153,4]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 754 | `[[872,152,4]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 755 | `[[879,145,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 756 | `[[880,144,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 757 | `[[880,176,3]]` | — | 209 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
-| 758 | `[[887,137,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 759 | `[[896,128,6]]` | — | 189 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 760 | `[[901,123,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): punctured Reed-Muller code | Jain et al. (2026) |
-| 761 | `[[902,122,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 762 | `[[904,120,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 763 | `[[905,119,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 764 | `[[906,118,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 765 | `[[907,117,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 766 | `[[908,116,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 767 | `[[909,115,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 768 | `[[909,171,3]]` | — | 225 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
-| 769 | `[[910,114,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 770 | `[[911,113,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 771 | `[[912,112,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 772 | `[[935,89,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 773 | `[[936,88,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 774 | `[[937,87,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 775 | `[[959,65,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 776 | `[[960,184,3]]` | — | 212 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
-| 777 | `[[988,36,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: Wills downset framework | Jain et al. (2026) |
-| 778 | `[[998,26,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: Wills downset framework | Jain et al. (2026) |
-| 779 | `[[1023,1,5]]` | — | 21 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
-| 780 | `[[1023,2,5]]` | — | 22 | `0+1` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
-| 781 | `[[1023,3,5]]` | — | 23 | `0+1+2` | 3 | 1 | AI search | AI search | Jain et al. (2026) |
-| 782 | `[[1023,4,5]]` | — | 24 | `0+1+2+3` | 4 | 1 | AI search | AI search | Jain et al. (2026) |
-| 783 | `[[1023,5,5]]` | — | 25 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
-| 784 | `[[1023,6,5]]` | — | 26 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
-| 785 | `[[1023,7,5]]` | — | 27 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
-| 786 | `[[1023,8,5]]` | — | 28 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
-| 787 | `[[1023,9,5]]` | — | 29 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
-| 788 | `[[1023,10,5]]` | — | 30 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
-| 789 | `[[1023,11,5]]` | — | 31 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
-| 790 | `[[1023,12,5]]` | — | 32 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
-| 791 | `[[1023,13,5]]` | — | 33 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
-| 792 | `[[1023,14,5]]` | — | 34 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
-| 793 | `[[1023,15,5]]` | — | 35 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | AI search | AI search | Jain et al. (2026) |
-| 794 | `[[1023,16,5]]` | — | 36 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | AI search | AI search | Jain et al. (2026) |
-| 795 | `[[1023,17,5]]` | — | 37 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | AI search | AI search | Jain et al. (2026) |
-| 796 | `[[1023,18,5]]` | — | 38 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 797 | `[[1023,19,5]]` | — | 39 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 798 | `[[1023,20,5]]` | — | 40 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 799 | `[[1023,21,5]]` | — | 41 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 800 | `[[1023,22,5]]` | — | 42 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 801 | `[[1023,23,5]]` | — | 43 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 802 | `[[1023,24,5]]` | — | 44 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 803 | `[[1023,25,5]]` | — | 45 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 804 | `[[1023,26,5]]` | — | 46 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 805 | `[[1023,27,5]]` | — | 47 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 806 | `[[1023,28,5]]` | — | 48 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 807 | `[[1023,29,5]]` | — | 49 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 808 | `[[1023,30,5]]` | — | 50 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 809 | `[[1023,31,5]]` | — | 51 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
-| 810 | `[[1675,373,≥3]]` | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 811 | `[[1676,372,≥3]]` | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 812 | `[[1683,365,≥3]]` | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
-| 813 | `[[1715,287,≥3]]` | 6 | 329 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| # | label | `[[n,k,d]]` | cert d | N | gate | T | deg | discovery | regime(s) | citation |
+|---:|---|---|---:|---:|---|---:|---:|---|---|---|
+| 1 | `15.1.3.a` | `[[15,1,3]]` | — | 5 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Bravyi & Kitaev (2005)](https://doi.org/10.1103/PhysRevA.71.022316) |
+| 2 | `23.1.3.a` | `[[23,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 3 | `27.1.3.a` | `[[27,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 4 | `28.1.3.a` | `[[28,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 5 | `28.2.3.a` | `[[28,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437) |
+| 6 | `29.1.3.a` | `[[29,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 7 | `30.1.3.a` | `[[30,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 8 | `30.2.3.a` | `[[30,2,3]]` | — | 10 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 9 | `31.1.3.a` | `[[31,1,3]]` | — | 6 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 10 | `31.2.3.a` | `[[31,2,3]]` | — | 7 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 11 | `31.3.3.a` | `[[31,3,3]]` | — | 8 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 12 | `31.4.3.a` | `[[31,4,3]]` | — | 9 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 13 | `31.5.3.a` | `[[31,5,3]]` | — | 10 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 14 | `32.1.3.a` | `[[32,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 15 | `32.2.3.a` | `[[32,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 16 | `33.1.3.a` | `[[33,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 17 | `34.1.3.a` | `[[34,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 18 | `34.2.3.a` | `[[34,2,3]]` | — | 10 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 19 | `35.1.3.a` | `[[35,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 20 | `35.2.3.a` | `[[35,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437) |
+| 21 | `35.2.3.b` | `[[35,2,3]]` | — | 8 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 22 | `35.2.3.c` | `[[35,2,3]]` | — | 8 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); AI search | [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437) |
+| 23 | `35.3.3.a` | `[[35,3,3]]` | — | 9 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 24 | `35.3.3.b` | `[[35,3,3]]` | — | 9 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437) |
+| 25 | `36.1.3.a` | `[[36,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 26 | `36.2.3.a` | `[[36,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 27 | `36.2.3.b` | `[[36,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 28 | `36.2.3.c` | `[[36,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 29 | `36.3.3.a` | `[[36,3,3]]` | — | 9 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 30 | `36.3.3.b` | `[[36,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 31 | `36.3.3.c` | `[[36,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 32 | `36.4.3.a` | `[[36,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 33 | `37.1.3.a` | `[[37,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 34 | `37.2.3.a` | `[[37,2,3]]` | — | 10 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 35 | `37.3.3.a` | `[[37,3,3]]` | — | 11 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 36 | `38.1.3.a` | `[[38,1,3]]` | — | 9 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 37 | `38.2.3.a` | `[[38,2,3]]` | — | 10 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 38 | `38.2.3.b` | `[[38,2,3]]` | — | 10 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 39 | `38.3.3.a` | `[[38,3,3]]` | — | 11 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 40 | `38.3.3.b` | `[[38,3,3]]` | — | 11 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 41 | `38.4.3.a` | `[[38,4,3]]` | — | 12 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 42 | `39.1.3.a` | `[[39,1,3]]` | — | 7 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 43 | `39.2.3.a` | `[[39,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 44 | `39.2.3.b` | `[[39,2,3]]` | — | 8 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 45 | `39.2.3.c` | `[[39,2,3]]` | — | 8 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 46 | `39.3.3.a` | `[[39,3,3]]` | — | 9 | `01+02+12` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 47 | `39.3.3.b` | `[[39,3,3]]` | — | 9 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 48 | `39.3.3.c` | `[[39,3,3]]` | — | 9 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 49 | `39.3.3.d` | `[[39,3,3]]` | — | 9 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 50 | `39.4.3.a` | `[[39,4,3]]` | — | 10 | `01+02+03+13+23+012+123` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 51 | `39.4.3.b` | `[[39,4,3]]` | — | 10 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 52 | `39.4.3.c` | `[[39,4,3]]` | — | 10 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 53 | `39.4.3.d` | `[[39,4,3]]` | — | 10 | `0+1+2+3+01` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 54 | `39.5.3.a` | `[[39,5,3]]` | — | 11 | `01+02+03+04+012+013+014+023+024+034` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 55 | `39.5.3.b` | `[[39,5,3]]` | — | 11 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 56 | `39.5.3.c` | `[[39,5,3]]` | — | 11 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 57 | `39.5.3.d` | `[[39,5,3]]` | — | 11 | `0+1+2+3+4+01+23` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 58 | `39.6.3.a` | `[[39,6,3]]` | — | 12 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 59 | `39.6.3.b` | `[[39,6,3]]` | — | 12 | `0+1+2+3+4+5+01+23+45` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 60 | `40.1.3.a` | `[[40,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 61 | `40.2.3.a` | `[[40,2,3]]` | — | 8 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 62 | `40.2.3.b` | `[[40,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 63 | `40.2.3.c` | `[[40,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 64 | `40.3.3.a` | `[[40,3,3]]` | — | 9 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 65 | `40.3.3.b` | `[[40,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 66 | `40.3.3.c` | `[[40,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 67 | `40.4.3.a` | `[[40,4,3]]` | — | 11 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 68 | `40.4.3.b` | `[[40,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 69 | `40.5.3.a` | `[[40,5,3]]` | — | 12 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 70 | `41.1.3.a` | `[[41,1,3]]` | — | 9 | `0` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 71 | `42.2.3.a` | `[[42,2,3]]` | — | 12 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 72 | `43.1.3.a` | `[[43,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 73 | `43.2.3.a` | `[[43,2,3]]` | — | 9 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 74 | `43.2.3.b` | `[[43,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 75 | `43.2.3.c` | `[[43,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 76 | `43.3.3.a` | `[[43,3,3]]` | — | 10 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 77 | `43.3.3.b` | `[[43,3,3]]` | — | 10 | `01+02+12` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 78 | `43.3.3.c` | `[[43,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 79 | `43.3.3.d` | `[[43,3,3]]` | — | 10 | `0+01+02` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 80 | `43.3.3.e` | `[[43,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 81 | `43.3.3.f` | `[[43,3,3]]` | — | 10 | `0+12` | 4 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 82 | `43.3.3.g` | `[[43,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 83 | `43.4.3.a` | `[[43,4,3]]` | — | 11 | `01+02+03+13+23+012+123` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 84 | `43.4.3.b` | `[[43,4,3]]` | — | 11 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 85 | `43.4.3.c` | `[[43,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 86 | `43.4.3.d` | `[[43,4,3]]` | — | 11 | `0+1+2+3+01` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 87 | `43.4.3.e` | `[[43,4,3]]` | — | 11 | `0+12+13` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 88 | `43.5.3.a` | `[[43,5,3]]` | — | 12 | `01+02+03+04+012+013+014+023+024+034` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 89 | `43.5.3.b` | `[[43,5,3]]` | — | 12 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 90 | `43.5.3.c` | `[[43,5,3]]` | — | 12 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 91 | `43.5.3.d` | `[[43,5,3]]` | — | 12 | `0+1+2+3+4+01+23` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 92 | `43.6.3.a` | `[[43,6,3]]` | — | 13 | `01+02+03+04+05+012+013+014+015+023+02…` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 93 | `43.6.3.b` | `[[43,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 94 | `43.6.3.c` | `[[43,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+12+34+35+45+012+345` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 95 | `43.6.3.d` | `[[43,6,3]]` | — | 13 | `0+1+2+3+4+5+01+23+45` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 96 | `43.7.3.a` | `[[43,7,3]]` | — | 14 | `0+1+2+3+4+5+6+01+02+12+34+56+012` | — | — | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 97 | `44.1.3.a` | `[[44,1,3]]` | — | 8 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 98 | `44.2.3.a` | `[[44,2,3]]` | — | 9 | `01` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 99 | `44.2.3.b` | `[[44,2,3]]` | — | 9 | `0+1+01` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 100 | `44.2.3.c` | `[[44,2,3]]` | — | 9 | `0+1` | 2 | 1 | pre-existing | exhaustive classification n<=54; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 101 | `44.3.3.a` | `[[44,3,3]]` | — | 10 | `01+02` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 102 | `44.3.3.b` | `[[44,3,3]]` | — | 10 | `01+02+12` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 103 | `44.3.3.c` | `[[44,3,3]]` | — | 10 | `0+1+2+01+02+12+012` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 104 | `44.3.3.d` | `[[44,3,3]]` | — | 10 | `0+1+2+01` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 105 | `44.3.3.e` | `[[44,3,3]]` | — | 10 | `0+12` | 4 | 2 | pre-existing | exhaustive classification n<=54; AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 106 | `44.3.3.f` | `[[44,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 107 | `44.4.3.a` | `[[44,4,3]]` | — | 11 | `01+02+03+13+23+012+123` | 3 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 108 | `44.4.3.b` | `[[44,4,3]]` | — | 11 | `01+02+13+23` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 109 | `44.4.3.c` | `[[44,4,3]]` | — | 11 | `0+1+2+3+01+02+03+12+13+23+012+013+023…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 110 | `44.4.3.d` | `[[44,4,3]]` | — | 11 | `0+1+2+3+01+23` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 111 | `44.4.3.e` | `[[44,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 112 | `44.5.3.a` | `[[44,5,3]]` | — | 12 | `01+02+03+04+012+034` | 4 | 2 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 113 | `44.5.3.b` | `[[44,5,3]]` | — | 12 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 114 | `44.5.3.c` | `[[44,5,3]]` | — | 12 | `0+1+2+3+4+01+02+12+34+012` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 115 | `44.6.3.a` | `[[44,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 1 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 116 | `44.6.3.b` | `[[44,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+12+34+35+45+012+345` | 2 | 1 | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 117 | `44.7.3.a` | `[[44,7,3]]` | — | 14 | `0+1+2+3+4+5+6+01+02+03+12+13+23+45+46…` | — | — | pre-existing | exhaustive classification n<=54 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 118 | `45.1.3.a` | `[[45,1,3]]` | — | 9 | `0` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 119 | `45.2.3.a` | `[[45,2,3]]` | — | 10 | `01` | 3 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 120 | `45.2.3.b` | `[[45,2,3]]` | — | 10 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 121 | `45.3.3.a` | `[[45,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 122 | `46.1.3.a` | `[[46,1,3]]` | — | 9 | `0` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 123 | `46.2.3.a` | `[[46,2,3]]` | — | 10 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 124 | `47.1.3.a` | `[[47,1,3]]` | — | 7 | `0` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 125 | `47.2.3.a` | `[[47,2,3]]` | — | 8 | `0+1` | 2 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 126 | `47.3.3.a` | `[[47,3,3]]` | — | 9 | `012` | 7 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Jacinto et al. (2026)](https://arxiv.org/abs/2606.07734) |
+| 127 | `47.3.3.b` | `[[47,3,3]]` | — | 9 | `0+01+012` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 128 | `47.3.3.c` | `[[47,3,3]]` | — | 9 | `0+012` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 129 | `47.3.3.d` | `[[47,3,3]]` | — | 9 | `0+12` | 4 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 130 | `47.3.3.e` | `[[47,3,3]]` | — | 9 | `0+1+2` | 3 | 1 | AI search | AI search; AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 131 | `47.4.3.a` | `[[47,4,3]]` | — | 10 | `01+23+012` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 132 | `47.4.3.b` | `[[47,4,3]]` | — | 10 | `01+023` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 133 | `47.4.3.c` | `[[47,4,3]]` | — | 10 | `01+23` | 6 | 2 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 134 | `47.4.3.d` | `[[47,4,3]]` | — | 10 | `0+01+23+012+123` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 135 | `47.4.3.e` | `[[47,4,3]]` | — | 10 | `0+01+023` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 136 | `47.4.3.f` | `[[47,4,3]]` | — | 10 | `0+01+23+023` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 137 | `47.4.3.g` | `[[47,4,3]]` | — | 10 | `0+01+123` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 138 | `47.4.3.h` | `[[47,4,3]]` | — | 10 | `0+13+012+123` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 139 | `47.4.3.i` | `[[47,4,3]]` | — | 10 | `0+13+012` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 140 | `47.4.3.j` | `[[47,4,3]]` | — | 10 | `0+12+123` | 5 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 141 | `47.4.3.k` | `[[47,4,3]]` | — | 10 | `0+123` | 7 | 3 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 142 | `47.4.3.l` | `[[47,4,3]]` | — | 10 | `0+1+23` | 5 | 2 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 143 | `47.4.3.m` | `[[47,4,3]]` | — | 10 | `0+1+2+3` | 4 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 144 | `47.5.3.a` | `[[47,5,3]]` | — | 11 | `012+034` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 145 | `47.5.3.b` | `[[47,5,3]]` | — | 11 | `0+1+4+01+04+14+012+013+023+024+124+234` | 10 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 146 | `47.5.3.c` | `[[47,5,3]]` | — | 11 | `0+012+034` | 10 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 147 | `47.5.3.d` | `[[47,5,3]]` | — | 11 | `0+12+34+012+034` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 148 | `47.5.3.e` | `[[47,5,3]]` | — | 11 | `0+12+012+134` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 149 | `47.5.3.f` | `[[47,5,3]]` | — | 11 | `0+1+2+3+4` | 5 | 1 | AI search | exhaustive classification n<=54 (Pareto point); AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 150 | `47.6.3.a` | `[[47,6,3]]` | — | 12 | `0+1+2+3+01+02+03+12+13+23+012+013+014…` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 151 | `48.1.3.a` | `[[48,1,3]]` | — | 8 | `0` | 1 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 152 | `48.1.4.a` | `[[48,1,4]]` | — | 11 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 153 | `48.2.3.a` | `[[48,2,3]]` | — | 14 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 154 | `48.2.4.a` | `[[48,2,4]]` | — | 10 | `01` | 3 | 2 | AI search | exhaustive classification n<=54 (Pareto point); AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 155 | `48.3.3.a` | `[[48,3,3]]` | — | 9 | `012` | 7 | 3 | AI search | AI search: punctured r=7 simplex parents | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 156 | `48.3.3.b` | `[[48,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 157 | `48.3.4.a` | `[[48,3,4]]` | — | 11 | `01+02+012` | 3 | 2 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 158 | `48.3.4.b` | `[[48,3,4]]` | — | 10 | `012` | 7 | 3 | AI search | exhaustive classification n<=54 (Pareto point); AI search: multi-agent campaign 39<=n<=127 | [Jacinto et al. (2026)](https://arxiv.org/abs/2606.07734) |
+| 159 | `48.4.3.a` | `[[48,4,3]]` | — | 10 | `01+23` | 6 | 2 | pre-existing | symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 160 | `48.4.3.b` | `[[48,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 161 | `48.4.4.a` | `[[48,4,4]]` | — | 12 | `01+02+03+012+013+023` | 3 | 2 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 162 | `48.5.3.a` | `[[48,5,3]]` | — | 11 | `01+23+012+023+134` | 10 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 163 | `48.5.3.b` | `[[48,5,3]]` | — | 11 | `01+34+012+023+234` | 9 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 164 | `48.5.3.c` | `[[48,5,3]]` | — | 11 | `01+012+034` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 165 | `48.5.3.d` | `[[48,5,3]]` | — | 11 | `01+34+012+234` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 166 | `48.5.3.e` | `[[48,5,3]]` | — | 11 | `01+023+124` | 11 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Gong et al. (2026)](https://arxiv.org/abs/2608.09727) |
+| 167 | `48.5.3.f` | `[[48,5,3]]` | — | 11 | `01+24+023` | 9 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 168 | `48.5.3.g` | `[[48,5,3]]` | — | 12 | `0+01+23+234` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 169 | `48.5.4.a` | `[[48,5,4]]` | — | 12 | `012+034` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 170 | `48.6.3.a` | `[[48,6,3]]` | — | 12 | `01+35+012+023+034+145+235` | 12 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 171 | `48.6.3.b` | `[[48,6,3]]` | — | 12 | `01+012+034+135` | 12 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 172 | `48.6.3.c` | `[[48,6,3]]` | — | 12 | `01+35+012+034+235` | 10 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 173 | `48.6.3.d` | `[[48,6,3]]` | — | 12 | `01+023+024+035+123+145` | 15 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Gong et al. (2026)](https://arxiv.org/abs/2608.09727) |
+| 174 | `48.6.3.e` | `[[48,6,3]]` | — | 12 | `01+24+023+145` | 11 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 175 | `48.7.3.a` | `[[48,7,3]]` | — | 13 | `01+012+034+035+046+134+156` | — | — | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 176 | `48.7.3.b` | `[[48,7,3]]` | — | 13 | `01+35+012+034+156+235` | — | — | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 177 | `49.1.5.a` | `[[49,1,5]]` | — | 12 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 178 | `49.3.3.a` | `[[49,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 179 | `50.4.3.a` | `[[50,4,3]]` | — | 14 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 180 | `51.1.3.a` | `[[51,1,3]]` | — | 8 | `0` | 1 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 181 | `51.2.3.a` | `[[51,2,3]]` | — | 9 | `0+1` | 2 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 182 | `51.3.3.a` | `[[51,3,3]]` | — | 16 | `0+1+2` | 3 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 183 | `51.4.3.a` | `[[51,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 184 | `51.4.3.b` | `[[51,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 185 | `51.5.3.a` | `[[51,5,3]]` | — | 12 | `01+34+012` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 186 | `51.5.3.b` | `[[51,5,3]]` | — | 12 | `01+234` | 9 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 187 | `51.5.3.c` | `[[51,5,3]]` | — | 12 | `0+01+24+012+013+024+134` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 188 | `51.5.3.d` | `[[51,5,3]]` | — | 12 | `0+01+34+012+034` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 189 | `51.5.3.e` | `[[51,5,3]]` | — | 12 | `0+01+234` | 8 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 190 | `51.5.3.f` | `[[51,5,3]]` | — | 12 | `0+12+34+012+013+123` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 191 | `51.5.3.g` | `[[51,5,3]]` | — | 12 | `0+12+012+034` | 9 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 192 | `51.5.3.h` | `[[51,5,3]]` | — | 12 | `0+12+012+034+134` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 193 | `51.5.3.i` | `[[51,5,3]]` | — | 12 | `0+12+34+012` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 194 | `51.5.3.j` | `[[51,5,3]]` | — | 12 | `0+1+2+3+4` | 5 | 1 | pre-existing | symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 195 | `51.6.3.a` | `[[51,6,3]]` | — | 13 | `0+12+34+012+345` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 196 | `51.6.3.b` | `[[51,6,3]]` | — | 13 | `0+12+012+345` | 9 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 197 | `52.1.3.a` | `[[52,1,3]]` | — | 8 | `0` | 1 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 198 | `52.1.4.a` | `[[52,1,4]]` | — | 10 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 199 | `52.2.3.a` | `[[52,2,3]]` | — | 9 | `01` | 3 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 200 | `52.2.3.b` | `[[52,2,3]]` | — | 9 | `0+1` | 2 | 1 | AI search | AI search; AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 201 | `52.2.4.a` | `[[52,2,4]]` | — | 11 | `0+1+01` | 1 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 202 | `52.3.3.a` | `[[52,3,3]]` | — | 10 | `0+1+2` | 3 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 203 | `52.4.3.a` | `[[52,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 204 | `52.5.3.a` | `[[52,5,3]]` | — | 12 | `0+01+24+023+124` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 205 | `52.5.3.b` | `[[52,5,3]]` | — | 12 | `0+13+24+012+013+024` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 206 | `52.5.3.c` | `[[52,5,3]]` | — | 12 | `0+12+34+012+123` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 207 | `52.5.3.d` | `[[52,5,3]]` | — | 12 | `0+13+24+012` | 8 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 208 | `52.5.3.e` | `[[52,5,3]]` | — | 12 | `0+12+34+123` | 6 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 209 | `52.5.3.f` | `[[52,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 210 | `52.5.3.g` | `[[52,5,3]]` | — | 12 | `0+1+2+3+4` | 5 | 1 | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 211 | `52.6.3.a` | `[[52,6,3]]` | — | 13 | `0+01+23+45+123+145` | 8 | 3 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 212 | `52.6.3.b` | `[[52,6,3]]` | — | 13 | `0+1+2+3+4+5` | 6 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 213 | `53.1.5.a` | `[[53,1,5]]` | — | 11 | `0` | 1 | 1 | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
+| 214 | `53.3.3.a` | `[[53,3,3]]` | — | 17 | `0+1+2` | 3 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 215 | `53.5.3.a` | `[[53,5,3]]` | — | 13 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 216 | `54.2.3.a` | `[[54,2,3]]` | — | 10 | `0+1` | 2 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 217 | `54.4.3.a` | `[[54,4,3]]` | — | 12 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); Jain et al. (2026) |
+| 218 | `55.3.3.a` | `[[55,3,3]]` | — | 10 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 219 | `55.3.3.b` | `[[55,3,3]]` | — | 16 | `0+1+2` | 3 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
+| 220 | `55.4.3.a` | `[[55,4,3]]` | — | 11 | `0+123` | 7 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 221 | `55.4.3.b` | `[[55,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 222 | `55.5.3.a` | `[[55,5,3]]` | — | 12 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
+| 223 | `55.6.3.a` | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 224 | `55.6.3.b` | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+12+13+14+23+2…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 225 | `55.6.3.c` | `[[55,6,3]]` | — | 13 | `0+2+4+01+02+03+14+012+013+014+015+023…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 226 | `55.6.3.d` | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+01+02+12+14+23+34+012+013+0…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 227 | `55.6.3.e` | `[[55,6,3]]` | — | 13 | `0+1+2+4+5+01+04+012+013+023+024+025+0…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 228 | `55.6.3.f` | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5+01+02+03+04+05+12+13+14+1…` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 229 | `55.6.3.g` | `[[55,6,3]]` | — | 13 | `0+1+2+3+5+01+02+03+15+25+35+045+124+1…` | 7 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 230 | `55.6.3.h` | `[[55,6,3]]` | — | 13 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
+| 231 | `55.7.3.a` | `[[55,7,3]]` | — | 14 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
+| 232 | `56.2.3.a` | `[[56,2,3]]` | — | 9 | `01` | 3 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 233 | `56.4.3.a` | `[[56,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
+| 234 | `56.5.4.a` | `[[56,5,4]]` | — | 13 | `012+034` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 235 | `56.6.3.a` | `[[56,6,3]]` | — | 13 | `0+3+4+5+01+02+23+24+25+34+35+45+012+0…` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 236 | `56.6.3.b` | `[[56,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+12+13+14+15+23+…` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 237 | `56.6.3.c` | `[[56,6,3]]` | — | 13 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
+| 238 | `56.8.3.a` | `[[56,8,3]]` | — | 15 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 239 | `57.3.3.a` | `[[57,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
+| 240 | `57.5.3.a` | `[[57,5,3]]` | — | 13 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
+| 241 | `58.4.3.a` | `[[58,4,3]]` | — | 19 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
+| 242 | `58.6.3.a` | `[[58,6,3]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
+| 243 | `59.4.3.a` | `[[59,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 244 | `59.5.3.a` | `[[59,5,3]]` | — | 12 | `01+234` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 245 | `59.5.3.b` | `[[59,5,3]]` | — | 12 | `0+01+23+012+023+134` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 246 | `59.5.3.c` | `[[59,5,3]]` | — | 12 | `0+01+012+134` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 247 | `59.5.3.d` | `[[59,5,3]]` | — | 12 | `0+01+34+012+234` | 7 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 248 | `59.5.3.e` | `[[59,5,3]]` | — | 12 | `0+01+24+023` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 249 | `59.5.3.f` | `[[59,5,3]]` | — | 12 | `0+12+34+012+013+024+123` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 250 | `59.5.3.g` | `[[59,5,3]]` | — | 12 | `0+13+24+012+013+024+123` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 251 | `59.5.3.h` | `[[59,5,3]]` | — | 12 | `0+13+012+134` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 252 | `59.5.3.i` | `[[59,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 253 | `59.5.3.j` | `[[59,5,3]]` | — | 16 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
+| 254 | `59.6.3.a` | `[[59,6,3]]` | — | 13 | `0+1+2+4+5+01+02+24+25+012+013+014+015…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 255 | `59.6.3.b` | `[[59,6,3]]` | — | 13 | `0+1+2+3+4+01+02+04+13+23+34+012+013+0…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 256 | `59.6.3.c` | `[[59,6,3]]` | — | 13 | `0+01+12+13+14+15+23+24+25+34+35+45+02…` | 7 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 257 | `59.6.3.d` | `[[59,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 258 | `59.7.3.a` | `[[59,7,3]]` | — | 14 | `0+1+2+3+4+5+6` | — | — | AI search | AI search; AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 259 | `60.1.4.a` | `[[60,1,4]]` | — | 10 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
+| 260 | `60.2.4.a` | `[[60,2,4]]` | — | 11 | `0+1` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
+| 261 | `60.4.3.a` | `[[60,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 262 | `60.4.3.b` | `[[60,4,3]]` | — | 11 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
+| 263 | `60.5.3.a` | `[[60,5,3]]` | — | 12 | `01+34+012+034` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 264 | `60.5.3.b` | `[[60,5,3]]` | — | 12 | `01+012+234` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 265 | `60.5.3.c` | `[[60,5,3]]` | — | 12 | `0+01+34+012+013+124` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 266 | `60.5.3.d` | `[[60,5,3]]` | — | 12 | `0+01+34+012+023+124` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 267 | `60.5.3.e` | `[[60,5,3]]` | — | 12 | `0+01+34+012+023+234` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 268 | `60.5.3.f` | `[[60,5,3]]` | — | 12 | `0+01+012+034` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 269 | `60.5.3.g` | `[[60,5,3]]` | — | 12 | `0+01+34+012+123` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 270 | `60.5.3.h` | `[[60,5,3]]` | — | 12 | `0+01+23+012+134` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 271 | `60.5.3.i` | `[[60,5,3]]` | — | 12 | `0+01+34+012+134` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 272 | `60.5.3.j` | `[[60,5,3]]` | — | 12 | `0+01+012+234` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 273 | `60.5.3.k` | `[[60,5,3]]` | — | 12 | `0+01+34+012` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 274 | `60.5.3.l` | `[[60,5,3]]` | — | 12 | `0+01+023+124` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 275 | `60.5.3.m` | `[[60,5,3]]` | — | 12 | `0+01+34+023+124` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 276 | `60.5.3.n` | `[[60,5,3]]` | — | 12 | `0+01+24+023+234` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 277 | `60.5.3.o` | `[[60,5,3]]` | — | 12 | `0+01+24+123` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 278 | `60.5.3.p` | `[[60,5,3]]` | — | 12 | `0+12+34+012+013+024+034` | 9 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 279 | `60.5.3.q` | `[[60,5,3]]` | — | 12 | `0+12+34+012+013+024` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 280 | `60.5.3.r` | `[[60,5,3]]` | — | 12 | `0+12+34+012+013` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 281 | `60.5.3.s` | `[[60,5,3]]` | — | 12 | `0+34+012+013+124` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 282 | `60.5.3.t` | `[[60,5,3]]` | — | 12 | `0+13+012+034+123` | 10 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 283 | `60.5.3.u` | `[[60,5,3]]` | — | 12 | `0+13+24+012+034` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 284 | `60.5.3.v` | `[[60,5,3]]` | — | 12 | `0+13+24+012+123` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 285 | `60.5.3.w` | `[[60,5,3]]` | — | 12 | `0+34+012+123` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 286 | `60.5.3.x` | `[[60,5,3]]` | — | 12 | `0+13+012+234` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 287 | `60.5.3.y` | `[[60,5,3]]` | — | 12 | `0+34+012+134` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 288 | `60.5.3.z` | `[[60,5,3]]` | — | 12 | `0+34+012` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 289 | `60.5.3.ba` | `[[60,5,3]]` | — | 12 | `0+12+134` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 290 | `60.6.3.a` | `[[60,6,3]]` | — | 13 | `01+02+03+05+12+23+24+25+012+013+014+0…` | 12 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 291 | `60.6.3.b` | `[[60,6,3]]` | — | 13 | `01+02+03+04+05+012+013+014+123+124+13…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 292 | `60.6.3.c` | `[[60,6,3]]` | — | 13 | `01+05+23+24+012+013+014+023+024+025+0…` | 8 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 293 | `60.6.3.d` | `[[60,6,3]]` | — | 13 | `0+3+4+01+02+03+04+13+14+23+24+34+35+4…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 294 | `60.6.3.e` | `[[60,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+05+12+13+14+15+…` | 8 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 295 | `60.6.3.f` | `[[60,6,3]]` | — | 13 | `0+3+5+01+02+03+04+05+13+15+23+25+34+4…` | 12 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 296 | `60.6.3.g` | `[[60,6,3]]` | — | 13 | `0+1+2+3+4+01+02+05+12+15+25+35+45+012…` | 9 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 297 | `60.6.3.h` | `[[60,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+12+13+14+15+24+…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 298 | `60.6.3.i` | `[[60,6,3]]` | — | 13 | `0+2+3+4+5+01+02+03+04+12+13+14+15+25+…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 299 | `60.6.3.j` | `[[60,6,3]]` | — | 13 | `0+1+2+4+5+01+02+03+13+15+23+34+35+012…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 300 | `60.6.3.k` | `[[60,6,3]]` | — | 13 | `0+1+2+01+02+03+14+24+34+35+45+012+013…` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 301 | `60.6.3.l` | `[[60,6,3]]` | — | 13 | `0+1+3+4+5+01+02+05+12+15+23+24+25+012…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 302 | `60.6.3.m` | `[[60,6,3]]` | — | 13 | `0+01+02+03+04+05+012+013+024+123+125+…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 303 | `60.6.3.n` | `[[60,6,3]]` | — | 13 | `0+1+4+01+04+15+25+45+012+013+023+024+…` | 8 | 2 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 304 | `60.6.3.o` | `[[60,6,3]]` | — | 13 | `0+4+5+01+02+03+12+13+14+15+23+24+25+3…` | 8 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 305 | `60.6.3.p` | `[[60,6,3]]` | — | 13 | `0+1+4+23+012+013+014+025+035+125+135+…` | 8 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 306 | `60.6.3.q` | `[[60,6,3]]` | — | 13 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
+| 307 | `60.7.3.a` | `[[60,7,3]]` | — | 14 | `0+2+4+01+02+03+04+05+12+14+16+23+25+2…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 308 | `60.7.3.b` | `[[60,7,3]]` | — | 14 | `0+01+02+03+04+12+13+23+45+56+012+013+…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 309 | `60.8.3.a` | `[[60,8,3]]` | — | 15 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 310 | `61.3.3.a` | `[[61,3,3]]` | — | 16 | `0+1+2` | 3 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
+| 311 | `61.7.3.a` | `[[61,7,3]]` | — | 15 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
+| 312 | `62.4.3.a` | `[[62,4,3]]` | — | 12 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
+| 313 | `62.6.3.a` | `[[62,6,3]]` | — | 16 | `0+1+2+3+4+01+02+03+04+05+12+13+14+15+…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 314 | `62.6.3.b` | `[[62,6,3]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
+| 315 | `62.7.3.a` | `[[62,7,3]]` | — | 17 | `0+01+02+03+04+05+06+012+013+014+015+0…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 316 | `62.8.3.a` | `[[62,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 317 | `63.2.3.a` | `[[63,2,3]]` | — | 8 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
+| 318 | `63.3.3.a` | `[[63,3,3]]` | — | 9 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 319 | `63.3.3.b` | `[[63,3,3]]` | — | 9 | `0+12` | 4 | 2 | AI search | AI search | Jain et al. (2026) |
+| 320 | `63.4.3.a` | `[[63,4,3]]` | — | 10 | `01+23` | 6 | 2 | pre-existing | symmetry-SAT search; AI search | Jain et al. (2026) |
+| 321 | `63.4.3.b` | `[[63,4,3]]` | — | 10 | `0+123` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 322 | `63.5.3.a` | `[[63,5,3]]` | — | 11 | `01+234` | 9 | 3 | AI search | AI search | Jain et al. (2026) |
+| 323 | `63.5.3.b` | `[[63,5,3]]` | — | 11 | `012+034` | 11 | 3 | AI search | AI search | Jain et al. (2026) |
+| 324 | `63.5.3.c` | `[[63,5,3]]` | — | 11 | `0+12+34` | 7 | 2 | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 325 | `63.5.3.d` | `[[63,5,3]]` | — | 11 | `0+1+2+34` | 6 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 326 | `63.5.3.e` | `[[63,5,3]]` | — | 11 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
+| 327 | `63.6.3.a` | `[[63,6,3]]` | — | 12 | `01+23+45` | 9 | 2 | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 328 | `63.6.3.b` | `[[63,6,3]]` | — | 12 | `012+345` | 13 | 3 | AI search | AI search | Jain et al. (2026) |
+| 329 | `63.6.3.c` | `[[63,6,3]]` | — | 16 | `0+1+2+3+5+01+02+25+012+013+014+023+02…` | 11 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 330 | `63.6.3.d` | `[[63,6,3]]` | — | 16 | `0+1+2+3+4+5+01+02+04+12+13+14+15+23+2…` | 12 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 331 | `63.6.3.e` | `[[63,6,3]]` | — | 16 | `0+1+2+3+4+01+02+12+14+23+012+013+024+…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 332 | `63.6.3.f` | `[[63,6,3]]` | — | 16 | `0+2+3+4+01+14+23+24+012+013+045+145+2…` | 10 | 3 | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 333 | `63.7.3.a` | `[[63,7,3]]` | — | 17 | `0+12+13+14+15+26+36+46+56+123+124+125…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 334 | `63.7.3.b` | `[[63,7,3]]` | — | 17 | `0+12+13+26+36+45+123+124+125+134+145+…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 335 | `63.7.3.c` | `[[63,7,3]]` | — | 17 | `0+12+13+14+15+16+123+124+125+136+146+…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 336 | `63.7.3.d` | `[[63,7,3]]` | — | 17 | `0+12+35+56+123+134+135+145+146+234+23…` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 337 | `63.7.3.e` | `[[63,7,3]]` | — | 17 | `0+12+34+123+134+135+145+146+236+245` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 338 | `63.7.3.f` | `[[63,7,3]]` | — | 13 | `0+123+456` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 339 | `63.7.3.g` | `[[63,7,3]]` | — | 13 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
+| 340 | `63.8.3.a` | `[[63,8,3]]` | — | 18 | `0+12+123+145+146+157+245+267` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 341 | `63.8.3.b` | `[[63,8,3]]` | — | 18 | `0+12+46+123+145+267+346` | — | — | AI search | AI search: generalised triorthogonal search 55<=n<=64 | Jain et al. (2026) |
+| 342 | `63.8.3.c` | `[[63,8,3]]` | — | 14 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 343 | `63.9.3.a` | `[[63,9,3]]` | — | 15 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
+| 344 | `63.10.3.a` | `[[63,10,3]]` | — | 16 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
+| 345 | `63.11.3.a` | `[[63,11,3]]` | — | 17 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
+| 346 | `63.12.3.a` | `[[63,12,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9,10,11` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 347 | `63.16.3.a` | `[[63,16,3]]` | — | 22 | `0+1,2,3+1,4,5+1,6,7+2,8,9+2,10,11+3,1…` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 348 | `64.1.4.a` | `[[64,1,4]]` | — | 10 | `0` | 1 | 1 | pre-existing | symmetry-SAT search; AI search | [Jacinto et al. (2026)](https://arxiv.org/abs/2606.07734) |
+| 349 | `64.2.4.a` | `[[64,2,4]]` | — | 11 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
+| 350 | `64.2.4.b` | `[[64,2,4]]` | — | 11 | `0+1` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
+| 351 | `64.3.4.a` | `[[64,3,4]]` | — | 10 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 352 | `64.4.3.a` | `[[64,4,3]]` | — | 18 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
+| 353 | `64.5.4.a` | `[[64,5,4]]` | — | 12 | `012+034` | 11 | 3 | AI search | AI search | Jain et al. (2026) |
+| 354 | `64.6.4.a` | `[[64,6,4]]` | — | 13 | `012+013+014+023+024+035+123+125+135+345` | 15 | 3 | AI search | AI search | Jain et al. (2026) |
+| 355 | `64.6.4.b` | `[[64,6,4]]` | — | 13 | `012+345` | 13 | 3 | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71); [Gong et al. (2026)](https://arxiv.org/abs/2608.09727); [Jacinto et al. (2026)](https://arxiv.org/abs/2606.07734) |
+| 356 | `64.8.3.a` | `[[64,8,3]]` | — | 15 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 357 | `64.15.4.a` | `[[64,15,4]]` | — | 22 | `0,1,2+0,3,4+0,5,6+1,7,8+1,9,10+2,11,1…` | — | — | AI search | AI search | [Rengaswamy et al. (2020)](https://doi.org/10.1109/JSAIT.2020.3012914); [Vuillot & Breuckmann (2022)](https://doi.org/10.1109/TIT.2022.3170846); [Gong et al. (2026)](https://arxiv.org/abs/2608.09727) |
+| 358 | `65.5.3.a` | `[[65,5,3]]` | — | 13 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
+| 359 | `65.7.3.a` | `[[65,7,3]]` | — | 15 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
+| 360 | `65.9.3.a` | `[[65,9,3]]` | — | 17 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
+| 361 | `66.3.4.a` | `[[66,3,4]]` | — | 12 | `012` | 7 | 3 | pre-existing | symmetry-SAT search; AI search | Jain et al. (2026) |
+| 362 | `66.4.3.a` | `[[66,4,3]]` | — | 12 | `0+1+2+3` | 4 | 1 | AI search | AI search | [Shi et al. (2024)](https://doi.org/10.1007/s11128-024-04485-9) |
+| 363 | `66.6.3.a` | `[[66,6,3]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
+| 364 | `66.8.3.a` | `[[66,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 365 | `67.4.3.a` | `[[67,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 366 | `67.5.3.a` | `[[67,5,3]]` | — | 12 | `01+234` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 367 | `67.5.3.b` | `[[67,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 368 | `67.6.3.a` | `[[67,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 369 | `67.9.3.a` | `[[67,9,3]]` | — | 16 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
+| 370 | `68.4.3.a` | `[[68,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 371 | `68.5.3.a` | `[[68,5,3]]` | — | 12 | `01+234` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 372 | `68.5.3.b` | `[[68,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 373 | `68.6.3.a` | `[[68,6,3]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
+| 374 | `68.8.3.a` | `[[68,8,3]]` | — | 15 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 375 | `68.10.3.a` | `[[68,10,3]]` | — | 17 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
+| 376 | `69.9.3.a` | `[[69,9,3]]` | — | 17 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
+| 377 | `70.6.3.a` | `[[70,6,3]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
+| 378 | `70.8.3.a` | `[[70,8,3]]` | — | 19 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 379 | `70.10.3.a` | `[[70,10,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
+| 380 | `71.4.3.a` | `[[71,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 381 | `71.5.3.a` | `[[71,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 382 | `71.6.3.a` | `[[71,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 383 | `71.6.3.b` | `[[71,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 384 | `72.1.4.a` | `[[72,1,4]]` | — | 10 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
+| 385 | `72.2.4.a` | `[[72,2,4]]` | — | 11 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
+| 386 | `72.3.4.a` | `[[72,3,4]]` | — | 11 | `01+02` | 4 | 2 | AI search | AI search | Jain et al. (2026) |
+| 387 | `72.3.4.b` | `[[72,3,4]]` | — | 12 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 388 | `72.4.4.a` | `[[72,4,4]]` | — | 13 | `01+23` | 6 | 2 | AI search | AI search | Jain et al. (2026) |
+| 389 | `72.5.3.a` | `[[72,5,3]]` | — | 12 | `01+234` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 390 | `72.10.3.a` | `[[72,10,3]]` | — | 17 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
+| 391 | `73.1.4.a` | `[[73,1,4]]` | — | 10 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
+| 392 | `74.6.3.a` | `[[74,6,3]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
+| 393 | `74.8.3.a` | `[[74,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 394 | `74.10.3.a` | `[[74,10,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
+| 395 | `75.4.3.a` | `[[75,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 396 | `75.5.3.a` | `[[75,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 397 | `75.6.3.a` | `[[75,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 398 | `75.6.3.b` | `[[75,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 399 | `76.1.4.a` | `[[76,1,4]]` | — | 10 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
+| 400 | `76.2.4.a` | `[[76,2,4]]` | — | 11 | `0+01` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
+| 401 | `76.4.4.a` | `[[76,4,4]]` | — | 13 | `012+013` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 402 | `76.4.4.b` | `[[76,4,4]]` | — | 13 | `0+1+2+3+01+23` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
+| 403 | `76.5.3.a` | `[[76,5,3]]` | — | 12 | `01+234` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 404 | `76.5.3.b` | `[[76,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 405 | `76.5.3.c` | `[[76,5,3]]` | — | 12 | `0+1+234` | 8 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 406 | `76.5.3.d` | `[[76,5,3]]` | — | 12 | `0+1+2+34` | 6 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 407 | `76.10.3.a` | `[[76,10,3]]` | — | 17 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
+| 408 | `76.12.3.a` | `[[76,12,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
+| 409 | `77.1.4.a` | `[[77,1,4]]` | — | 11 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
+| 410 | `77.3.4.a` | `[[77,3,4]]` | — | 13 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 411 | `77.4.4.a` | `[[77,4,4]]` | — | 14 | `0+123` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 412 | `77.5.4.a` | `[[77,5,4]]` | — | 15 | `012+034` | 11 | 3 | AI search | AI search | Jain et al. (2026) |
+| 413 | `77.6.4.a` | `[[77,6,4]]` | — | 16 | `012+345` | 13 | 3 | AI search | AI search | Jain et al. (2026) |
+| 414 | `77.7.4.a` | `[[77,7,4]]` | — | 17 | `0+123+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 415 | `78.12.3.a` | `[[78,12,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
+| 416 | `79.5.3.a` | `[[79,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 417 | `79.5.3.b` | `[[79,5,3]]` | — | 12 | `0+1+2+34` | 6 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 418 | `79.6.3.a` | `[[79,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 419 | `79.6.3.b` | `[[79,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 420 | `79.7.3.a` | `[[79,7,3]]` | — | 14 | `0+123+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 421 | `79.9.3.a` | `[[79,9,3]]` | — | 16 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
+| 422 | `79.11.3.a` | `[[79,11,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
+| 423 | `79.13.3.a` | `[[79,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
+| 424 | `80.2.4.a` | `[[80,2,4]]` | — | 10 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
+| 425 | `80.3.4.a` | `[[80,3,4]]` | — | 11 | `01+02` | 4 | 2 | AI search | AI search | Jain et al. (2026) |
+| 426 | `80.4.4.a` | `[[80,4,4]]` | — | 12 | `01+23` | 6 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 427 | `80.5.4.a` | `[[80,5,4]]` | — | 13 | `01+234` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 428 | `80.6.3.a` | `[[80,6,3]]` | — | 13 | `012+345` | 13 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 429 | `80.8.3.a` | `[[80,8,3]]` | — | 15 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 430 | `82.8.3.a` | `[[82,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 431 | `82.10.3.a` | `[[82,10,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
+| 432 | `82.11.3.a` | `[[82,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8,9,10` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 433 | `82.12.3.a` | `[[82,12,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
+| 434 | `83.4.3.a` | `[[83,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 435 | `83.5.3.a` | `[[83,5,3]]` | — | 12 | `0+12+34` | 7 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 436 | `83.6.3.a` | `[[83,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 437 | `83.6.3.b` | `[[83,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 438 | `84.1.4.a` | `[[84,1,4]]` | — | 10 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
+| 439 | `84.3.4.a` | `[[84,3,4]]` | — | 12 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 440 | `84.5.3.a` | `[[84,5,3]]` | — | 12 | `0+1+2+34` | 6 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 441 | `84.6.3.a` | `[[84,6,3]]` | — | 13 | `012+345` | 13 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 442 | `84.6.3.b` | `[[84,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 443 | `84.6.3.c` | `[[84,6,3]]` | — | 13 | `0+1+23+45` | 8 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 444 | `84.7.3.a` | `[[84,7,3]]` | — | 14 | `0+1+2+3+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 445 | `84.12.3.a` | `[[84,12,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
+| 446 | `85.1.5.a` | `[[85,1,5]]` | — | 11 | `0` | 1 | 1 | pre-existing | symmetry-SAT search; AI search | Jain et al. (2026) |
+| 447 | `85.2.5.a` | `[[85,2,5]]` | — | 18 | `0+1+01` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
+| 448 | `86.8.3.a` | `[[86,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 449 | `86.10.3.a` | `[[86,10,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
+| 450 | `86.12.3.a` | `[[86,12,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
+| 451 | `87.6.3.a` | `[[87,6,3]]` | — | 13 | `012+345` | 13 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 452 | `87.6.3.b` | `[[87,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 453 | `87.6.3.c` | `[[87,6,3]]` | — | 13 | `0+1+23+45` | 8 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 454 | `87.6.3.d` | `[[87,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 455 | `87.11.3.a` | `[[87,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
+| 456 | `87.13.3.a` | `[[87,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
+| 457 | `88.6.3.a` | `[[88,6,3]]` | — | 13 | `012+345` | 13 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 458 | `88.6.3.b` | `[[88,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 459 | `88.6.3.c` | `[[88,6,3]]` | — | 13 | `0+1+23+45` | 8 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 460 | `88.10.3.a` | `[[88,10,3]]` | — | 17 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
+| 461 | `88.12.3.a` | `[[88,12,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
+| 462 | `88.13.3.a` | `[[88,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10,11,12` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 463 | `88.14.3.a` | `[[88,14,3]]` | — | 21 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
+| 464 | `90.8.3.a` | `[[90,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 465 | `90.10.3.a` | `[[90,10,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
+| 466 | `90.11.3.a` | `[[90,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8,9,10` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 467 | `90.12.3.a` | `[[90,12,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
+| 468 | `90.14.3.a` | `[[90,14,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
+| 469 | `91.1.3.a` | `[[91,1,3]]` | — | 13 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
+| 470 | `91.4.3.a` | `[[91,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 471 | `91.6.3.a` | `[[91,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 472 | `91.6.3.b` | `[[91,6,3]]` | — | 13 | `0+1+2+345` | 9 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 473 | `91.7.3.a` | `[[91,7,3]]` | — | 14 | `0+12+34+56` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 474 | `91.7.3.b` | `[[91,7,3]]` | — | 14 | `0+123+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 475 | `91.11.3.a` | `[[91,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
+| 476 | `91.13.3.a` | `[[91,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
+| 477 | `91.15.3.a` | `[[91,15,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | AI search | AI search | Jain et al. (2026) |
+| 478 | `92.6.3.a` | `[[92,6,3]]` | — | 13 | `0+12+345` | 10 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 479 | `92.6.3.b` | `[[92,6,3]]` | — | 13 | `0+1+23+45` | 8 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 480 | `92.6.4.a` | `[[92,6,4]]` | — | 14 | `012+345` | 13 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 481 | `92.7.3.a` | `[[92,7,3]]` | — | 14 | `0+123+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 482 | `92.12.3.a` | `[[92,12,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
+| 483 | `92.14.3.a` | `[[92,14,3]]` | — | 21 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
+| 484 | `92.15.3.a` | `[[92,15,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12,13,14` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 485 | `93.11.3.a` | `[[93,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
+| 486 | `94.8.3.a` | `[[94,8,3]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 487 | `94.12.3.a` | `[[94,12,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
+| 488 | `94.14.3.a` | `[[94,14,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
+| 489 | `95.7.3.a` | `[[95,7,3]]` | — | 14 | `0+12+34+56` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 490 | `95.7.3.b` | `[[95,7,3]]` | — | 14 | `0+123+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 491 | `95.7.3.c` | `[[95,7,3]]` | — | 14 | `0+1+23+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 492 | `95.9.3.a` | `[[95,9,3]]` | — | 16 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
+| 493 | `95.11.3.a` | `[[95,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
+| 494 | `95.12.3.a` | `[[95,12,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9,10,11` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 495 | `95.13.3.a` | `[[95,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
+| 496 | `95.15.3.a` | `[[95,15,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | AI search | AI search | Jain et al. (2026) |
+| 497 | `96.6.3.a` | `[[96,6,3]]` | — | 13 | `012+345` | 13 | 3 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 498 | `96.8.3.a` | `[[96,8,3]]` | — | 15 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 499 | `96.12.3.a` | `[[96,12,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
+| 500 | `96.13.3.a` | `[[96,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8,9+10,11,12` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 501 | `97.11.3.a` | `[[97,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
+| 502 | `98.14.3.a` | `[[98,14,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
+| 503 | `99.9.3.a` | `[[99,9,3]]` | — | 16 | `012+345+678` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 504 | `99.11.3.a` | `[[99,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
+| 505 | `99.12.3.a` | `[[99,12,3]]` | — | 19 | `0,1,2+3,4,5+6,7,8+9,10,11` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 506 | `99.13.3.a` | `[[99,13,3]]` | — | 20 | `0+1,2,3+4,5,6+7,8,9+10,11,12` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 507 | `99.13.3.b` | `[[99,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
+| 508 | `99.15.3.a` | `[[99,15,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | AI search | AI search | Jain et al. (2026) |
+| 509 | `99.16.3.a` | `[[99,16,3]]` | — | 23 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13,14,15` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 510 | `100.2.4.a` | `[[100,2,4]]` | — | 12 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
+| 511 | `100.6.4.a` | `[[100,6,4]]` | — | 15 | `012+013+014+023+125+145+245+345` | 17 | 3 | AI search | AI search | Jain et al. (2026) |
+| 512 | `100.9.4.a` | `[[100,9,4]]` | — | 17 | `012+345+678` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 513 | `100.12.3.a` | `[[100,12,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
+| 514 | `100.12.4.a` | `[[100,12,4]]` | — | 20 | `0,1,2+3,4,5+6,7,8+9,10,11` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 515 | `100.13.3.a` | `[[100,13,3]]` | — | 20 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
+| 516 | `100.14.3.a` | `[[100,14,3]]` | — | 21 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
+| 517 | `100.15.3.a` | `[[100,15,3]]` | — | 23 | `0+1+2+3+4+5+6+7+8+9+10+11+12,13,14` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 518 | `100.16.3.a` | `[[100,16,3]]` | — | 23 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | AI search | AI search | Jain et al. (2026) |
+| 519 | `101.11.3.a` | `[[101,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
+| 520 | `103.7.3.a` | `[[103,7,3]]` | — | 14 | `0+1+23+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 521 | `103.8.3.a` | `[[103,8,3]]` | — | 15 | `0+12+34+567` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 522 | `103.8.3.b` | `[[103,8,3]]` | — | 15 | `0+1+2+3+4+567` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 523 | `103.11.3.a` | `[[103,11,3]]` | — | 19 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
+| 524 | `103.15.3.a` | `[[103,15,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | AI search | AI search | Jain et al. (2026) |
+| 525 | `103.17.3.a` | `[[103,17,3]]` | — | 24 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | AI search | AI search | Jain et al. (2026) |
+| 526 | `104.7.3.a` | `[[104,7,3]]` | — | 14 | `0+1+23+456` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 527 | `104.8.3.a` | `[[104,8,3]]` | — | 15 | `0+12+34+567` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 528 | `107.19.3.a` | `[[107,19,3]]` | — | 28 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 529 | `109.19.3.a` | `[[109,19,3]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 530 | `110.18.3.a` | `[[110,18,3]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 531 | `111.4.3.a` | `[[111,4,3]]` | — | 11 | `0+1+23` | 5 | 2 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 532 | `111.8.3.a` | `[[111,8,3]]` | — | 15 | `0+12+34+567` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 533 | `111.9.3.a` | `[[111,9,3]]` | — | 16 | `0+1+2+345+678` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 534 | `111.17.3.a` | `[[111,17,3]]` | — | 24 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | AI search | AI search | Jain et al. (2026) |
+| 535 | `112.12.3.a` | `[[112,12,3]]` | — | 19 | `0,1,2+3,4,5+6,7,8+9,10,11` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 536 | `112.16.3.a` | `[[112,16,3]]` | — | 23 | `0+1+2+3+4,5,6+7,8,9+10,11,12+13,14,15` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 537 | `112.16.3.b` | `[[112,16,3]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 538 | `114.14.3.a` | `[[114,14,3]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 539 | `116.2.4.a` | `[[116,2,4]]` | — | 12 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
+| 540 | `116.3.4.a` | `[[116,3,4]]` | — | 13 | `0+12` | 4 | 2 | AI search | AI search | Jain et al. (2026) |
+| 541 | `116.12.4.a` | `[[116,12,4]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71); [Vuillot & Breuckmann (2022)](https://doi.org/10.1109/TIT.2022.3170846) |
+| 542 | `117.1.4.a` | `[[117,1,4]]` | — | 11 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
+| 543 | `117.2.4.a` | `[[117,2,4]]` | — | 12 | `0+01` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
+| 544 | `117.5.4.a` | `[[117,5,4]]` | — | 15 | `0+1+2+3+4` | 5 | 1 | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 545 | `118.10.4.a` | `[[118,10,4]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 546 | `119.17.3.a` | `[[119,17,3]]` | — | 25 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | AI search | AI search | Jain et al. (2026) |
+| 547 | `119.20.3.a` | `[[119,20,3]]` | — | 28 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 548 | `120.3.4.a` | `[[120,3,4]]` | — | 13 | `01+02` | 4 | 2 | AI search | AI search | Jain et al. (2026) |
+| 549 | `120.4.4.a` | `[[120,4,4]]` | — | 14 | `012+013` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 550 | `125.3.5.a` | `[[125,3,5]]` | — | 29 | `0+1+2` | 3 | 1 | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 551 | `127.1.7.a` | `[[127,1,7]]` | — | 22 | `0` | 1 | 1 | AI search | AI search | [Gong & Renes (2024)](https://arxiv.org/abs/2410.23263) |
+| 552 | `127.5.5.a` | `[[127,5,5]]` | — | 19 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
+| 553 | `127.11.3.a` | `[[127,11,3]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
+| 554 | `127.12.3.a` | `[[127,12,3]]` | — | 19 | `0,1,2+3,4,5+6,7,8+9,10,11` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 555 | `127.16.3.a` | `[[127,16,3]]` | — | 23 | `0+1,2,3+4,5,6+7,8,9+10,11,12+13,14,15` | — | — | AI search | AI search: multi-agent campaign 39<=n<=127 | Jain et al. (2026) |
+| 556 | `127.17.3.a` | `[[127,17,3]]` | — | 24 | `0+1+2+3+4+5,6,7+8,9,10+11,12,13+14,15,16` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 557 | `127.19.3.a` | `[[127,19,3]]` | — | 26 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 558 | `127.21.3.a` | `[[127,21,3]]` | — | 28 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 559 | `127.23.3.a` | `[[127,23,3]]` | — | 30 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 560 | `127.26.3.a` | `[[127,26,3]]` | — | 33 | `0+1+2+3+4+5+6+7+8+9+10+11,12,13+11,14…` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 561 | `127.37.3.a` | `[[127,37,3]]` | — | 44 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 562 | `128.3.6.a` | `[[128,3,6]]` | — | 18 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 563 | `128.12.4.a` | `[[128,12,4]]` | — | 20 | `0,1,2+3,4,5+6,7,8+9,10,11` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 564 | `128.15.4.a` | `[[128,15,4]]` | — | 23 | `0,1,2+3,4,5+6,7,8+9,10,11+12,13,14` | — | — | AI search | AI search: punctured r=7 simplex parents | Jain et al. (2026) |
+| 565 | `135.14.3.a` | `[[135,14,3]]` | — | 22 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
+| 566 | `135.15.3.a` | `[[135,15,3]]` | — | 23 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | AI search | AI search | Jain et al. (2026) |
+| 567 | `135.17.3.a` | `[[135,17,3]]` | — | 25 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | AI search | AI search | Jain et al. (2026) |
+| 568 | `136.7.4.a` | `[[136,7,4]]` | — | 16 | `012+013+014+015+016+023+024+025+034+0…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 569 | `136.7.4.b` | `[[136,7,4]]` | — | 17 | `012+013+014+015+023+024+034+125+236+2…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 570 | `141.2.4.a` | `[[141,2,4]]` | — | 12 | `0+1` | 2 | 1 | pre-existing | symmetry-SAT search; AI search | Jain et al. (2026) |
+| 571 | `154.28.3.a` | `[[154,28,3]]` | — | 37 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 572 | `155.16.3.a` | `[[155,16,3]]` | — | 26 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | AI search | AI search | Jain et al. (2026) |
+| 573 | `155.17.3.a` | `[[155,17,3]]` | — | 27 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | AI search | AI search | Jain et al. (2026) |
+| 574 | `155.19.3.a` | `[[155,19,3]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 575 | `155.21.3.a` | `[[155,21,3]]` | — | 31 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 576 | `156.28.3.a` | `[[156,28,3]]` | — | 38 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 577 | `157.29.3.a` | `[[157,29,3]]` | — | 38 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 578 | `158.28.3.a` | `[[158,28,3]]` | — | 39 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 579 | `159.29.3.a` | `[[159,29,3]]` | — | 39 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 580 | `160.4.4.a` | `[[160,4,4]]` | — | 13 | `01+02+03` | 7 | 2 | AI search | AI search | Jain et al. (2026) |
+| 581 | `160.28.3.a` | `[[160,28,3]]` | — | 40 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 582 | `160.30.3.a` | `[[160,30,3]]` | — | 40 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 583 | `161.29.3.a` | `[[161,29,3]]` | — | 40 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 584 | `161.31.3.a` | `[[161,31,3]]` | — | 41 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 585 | `165.1.4.a` | `[[165,1,4]]` | — | 10 | `0` | 1 | 1 | AI search | AI search | [Jacinto et al. (2026)](https://arxiv.org/abs/2606.07734) |
+| 586 | `172.3.4.a` | `[[172,3,4]]` | — | 13 | `01+02+12` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
+| 587 | `176.2.5.a` | `[[176,2,5]]` | — | 26 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
+| 588 | `176.3.5.a` | `[[176,3,5]]` | — | 27 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 589 | `176.3.6.a` | `[[176,3,6]]` | — | 28 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 590 | `176.5.5.a` | `[[176,5,5]]` | — | 29 | `01+02+03+04+12+13+24+34+012+013+023` | 8 | 2 | AI search | AI search | Jain et al. (2026) |
+| 591 | `176.9.4.a` | `[[176,9,4]]` | — | 20 | `012+013+014+015+016+017+023+024+025+0…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 592 | `176.32.3.a` | `[[176,32,3]]` | — | 42 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 593 | `188.3.4.a` | `[[188,3,4]]` | — | 13 | `01+02` | 4 | 2 | AI search | AI search | Jain et al. (2026) |
+| 594 | `188.36.3.a` | `[[188,36,3]]` | — | 46 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 595 | `189.35.3.a` | `[[189,35,3]]` | — | 46 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 596 | `203.37.3.a` | `[[203,37,3]]` | — | 50 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 597 | `203.41.3.a` | `[[203,41,3]]` | — | 51 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 598 | `204.40.3.a` | `[[204,40,3]]` | — | 50 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 599 | `205.41.3.a` | `[[205,41,3]]` | — | 52 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 600 | `205.43.3.a` | `[[205,43,3]]` | — | 53 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 601 | `206.40.3.a` | `[[206,40,3]]` | — | 51 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 602 | `206.42.3.a` | `[[206,42,3]]` | — | 52 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 603 | `207.41.3.a` | `[[207,41,3]]` | — | 53 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 604 | `207.43.3.a` | `[[207,43,3]]` | — | 54 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 605 | `208.5.4.a` | `[[208,5,4]]` | — | 14 | `012+034` | 11 | 3 | AI search | AI search | Jain et al. (2026) |
+| 606 | `208.40.3.a` | `[[208,40,3]]` | — | 52 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 607 | `208.42.3.a` | `[[208,42,3]]` | — | 53 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 608 | `208.44.3.a` | `[[208,44,3]]` | — | 54 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 609 | `210.40.3.a` | `[[210,40,3]]` | — | 53 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 610 | `210.42.3.a` | `[[210,42,3]]` | — | 54 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 611 | `210.44.3.a` | `[[210,44,3]]` | — | 55 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 612 | `210.46.3.a` | `[[210,46,3]]` | — | 56 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 613 | `211.41.3.a` | `[[211,41,3]]` | — | 54 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 614 | `211.43.3.a` | `[[211,43,3]]` | — | 55 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 615 | `212.40.3.a` | `[[212,40,3]]` | — | 54 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 616 | `212.42.3.a` | `[[212,42,3]]` | — | 55 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 617 | `213.41.3.a` | `[[213,41,3]]` | — | 55 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 618 | `214.40.3.a` | `[[214,40,3]]` | — | 55 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 619 | `225.19.3.a` | `[[225,19,3]]` | — | 27 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 620 | `225.26.3.a` | `[[225,26,3]]` | — | 42 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 621 | `225.27.3.a` | `[[225,27,3]]` | — | 43 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 622 | `225.28.3.a` | `[[225,28,3]]` | — | 36 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 623 | `225.29.3.a` | `[[225,29,3]]` | — | 37 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 624 | `225.35.3.a` | `[[225,35,3]]` | — | 43 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 625 | `228.2.4.a` | `[[228,2,4]]` | — | 12 | `01` | 3 | 2 | AI search | AI search | Jain et al. (2026) |
+| 626 | `248.8.6.a` | `[[248,8,6]]` | — | 53 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search: pure-T puncture caps | Jain et al. (2026) |
+| 627 | `252.46.3.a` | `[[252,46,3]]` | — | 59 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
+| 628 | `255.1.5.a` | `[[255,1,5]]` | — | 17 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
+| 629 | `255.2.5.a` | `[[255,2,5]]` | — | 18 | `0+1` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
+| 630 | `255.3.3.a` | `[[255,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | AI search | AI search | Jain et al. (2026) |
+| 631 | `255.3.5.a` | `[[255,3,5]]` | — | 19 | `0+1+2` | 3 | 1 | AI search | AI search | Jain et al. (2026) |
+| 632 | `255.3.7.a` | `[[255,3,7]]` | — | 38 | `012` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 633 | `255.4.5.a` | `[[255,4,5]]` | — | 20 | `0+1+2+3` | 4 | 1 | AI search | AI search | Jain et al. (2026) |
+| 634 | `255.4.7.a` | `[[255,4,7]]` | — | 39 | `0+123` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 635 | `255.5.5.a` | `[[255,5,5]]` | — | 21 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
+| 636 | `255.5.7.a` | `[[255,5,7]]` | — | 41 | `012+034` | 11 | 3 | AI search | AI search | Jain et al. (2026) |
+| 637 | `255.6.5.a` | `[[255,6,5]]` | — | 22 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
+| 638 | `255.6.7.a` | `[[255,6,7]]` | — | 41 | `0+1+01+012+013+014+015+023+024+025+12…` | 7 | 3 | AI search | AI search | Jain et al. (2026) |
+| 639 | `255.7.5.a` | `[[255,7,5]]` | — | 23 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
+| 640 | `255.8.5.a` | `[[255,8,5]]` | — | 24 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 641 | `255.9.5.a` | `[[255,9,5]]` | — | 25 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
+| 642 | `255.27.3.a` | `[[255,27,3]]` | — | 35 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 643 | `255.40.3.a` | `[[255,40,3]]` | — | 48 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 644 | `255.41.3.a` | `[[255,41,3]]` | — | 49 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 645 | `255.43.3.a` | `[[255,43,3]]` | — | 51 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: pure-T width campaign n=255, 511 | Jain et al. (2026) |
+| 646 | `255.47.3.a` | `[[255,47,3]]` | — | 62 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
+| 647 | `256.6.6.a` | `[[256,6,6]]` | — | 23 | `012+345` | 13 | 3 | AI search | AI search | Jain et al. (2026) |
+| 648 | `256.9.4.a` | `[[256,9,4]]` | — | 24 | `012+013+014+015+023+024+026+035+036+0…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 649 | `256.11.6.a` | `[[256,11,6]]` | — | 35 | `0,1,2+0,1,3+0,1,4+0,1,5+0,1,6+0,1,7+0…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 650 | `256.16.4.a` | `[[256,16,4]]` | — | 28 | `0,1,2+0,1,4+0,1,9+0,1,10+0,1,12+0,1,1…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 651 | `256.84.4.a` | `[[256,84,4]]` | — | 93 | `0,64,83+0,65,82+0,66,81+0,67,80+0,68,…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 652 | `261.59.3.a` | `[[261,59,3]]` | — | 69 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 653 | `288.64.3.a` | `[[288,64,3]]` | — | 75 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 654 | `300.68.3.a` | `[[300,68,3]]` | — | 79 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 655 | `308.70.3.a` | `[[308,70,3]]` | — | 81 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 656 | `309.71.3.a` | `[[309,71,3]]` | — | 82 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 657 | `310.70.3.a` | `[[310,70,3]]` | — | 82 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 658 | `310.72.3.a` | `[[310,72,3]]` | — | 83 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 659 | `311.71.3.a` | `[[311,71,3]]` | — | 83 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 660 | `311.73.3.a` | `[[311,73,3]]` | — | 84 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 661 | `312.70.3.a` | `[[312,70,3]]` | — | 83 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 662 | `324.76.3.a` | `[[324,76,3]]` | — | 87 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 663 | `336.80.3.a` | `[[336,80,3]]` | — | 91 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 664 | `358.86.3.a` | `[[358,86,3]]` | — | 97 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 665 | `359.87.3.a` | `[[359,87,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 666 | `360.86.3.a` | `[[360,86,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 667 | `360.88.3.a` | `[[360,88,3]]` | — | 99 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 668 | `386.94.3.a` | `[[386,94,3]]` | — | 105 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 669 | `399.77.3.a` | `[[399,77,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
+| 670 | `404.100.3.a` | `[[404,100,3]]` | — | 111 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 671 | `405.101.3.a` | `[[405,101,3]]` | — | 112 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 672 | `406.100.3.a` | `[[406,100,3]]` | — | 112 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 673 | `406.102.3.a` | `[[406,102,3]]` | — | 113 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 674 | `407.73.4.a` | `[[407,73,4]]` | — | 92 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 675 | `407.101.3.a` | `[[407,101,3]]` | — | 113 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 676 | `408.100.3.a` | `[[408,100,3]]` | — | 113 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 677 | `408.102.3.a` | `[[408,102,3]]` | — | 114 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 678 | `408.104.3.a` | `[[408,104,3]]` | — | 115 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 679 | `409.101.3.a` | `[[409,101,3]]` | — | 114 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 680 | `410.100.3.a` | `[[410,100,3]]` | — | 114 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 681 | `426.80.4.a` | `[[426,80,4]]` | — | 99 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 682 | `427.81.4.a` | `[[427,81,4]]` | — | 100 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 683 | `427.85.3.a` | `[[427,85,3]]` | — | 115 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 684 | `428.80.4.a` | `[[428,80,4]]` | — | 100 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 685 | `428.82.4.a` | `[[428,82,4]]` | — | 101 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 686 | `429.81.4.a` | `[[429,81,4]]` | — | 101 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 687 | `429.83.4.a` | `[[429,83,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 688 | `430.80.4.a` | `[[430,80,4]]` | — | 101 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): contraction of an existing code | Jain et al. (2026) |
+| 689 | `430.82.4.a` | `[[430,82,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 690 | `431.81.4.a` | `[[431,81,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 691 | `432.80.4.a` | `[[432,80,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 692 | `460.116.3.a` | `[[460,116,3]]` | — | 128 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 693 | `495.99.3.a` | `[[495,99,3]]` | — | 118 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
+| 694 | `496.16.6.a` | `[[496,16,6]]` | — | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | AI search | AI search: pure-T puncture caps | Jain et al. (2026) |
+| 695 | `496.36.4.a` | `[[496,36,4]]` | — | 47 | `0,1,2+0,1,7+0,1,8+0,1,9+0,1,11+0,1,12…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 696 | `502.92.3.a` | `[[502,92,3]]` | — | 117 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
+| 697 | `508.132.3.a` | `[[508,132,3]]` | — | 143 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 698 | `511.1.5.a` | `[[511,1,5]]` | — | 19 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
+| 699 | `511.2.5.a` | `[[511,2,5]]` | — | 20 | `0+1` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
+| 700 | `511.3.5.a` | `[[511,3,5]]` | — | 21 | `0+1+2` | 3 | 1 | AI search | AI search | Jain et al. (2026) |
+| 701 | `511.4.5.a` | `[[511,4,5]]` | — | 22 | `0+1+2+3` | 4 | 1 | AI search | AI search | Jain et al. (2026) |
+| 702 | `511.5.5.a` | `[[511,5,5]]` | — | 23 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
+| 703 | `511.6.5.a` | `[[511,6,5]]` | — | 24 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
+| 704 | `511.7.5.a` | `[[511,7,5]]` | — | 25 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
+| 705 | `511.8.5.a` | `[[511,8,5]]` | — | 26 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 706 | `511.9.5.a` | `[[511,9,5]]` | — | 27 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
+| 707 | `511.9.6.a` | `[[511,9,≥6]]` | — | 36 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
+| 708 | `511.10.5.a` | `[[511,10,5]]` | — | 28 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
+| 709 | `511.11.5.a` | `[[511,11,5]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
+| 710 | `511.12.5.a` | `[[511,12,5]]` | — | 30 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
+| 711 | `511.13.5.a` | `[[511,13,5]]` | — | 31 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
+| 712 | `511.14.5.a` | `[[511,14,5]]` | — | 32 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
+| 713 | `511.15.5.a` | `[[511,15,5]]` | — | 33 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+0,…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 714 | `511.15.5.b` | `[[511,15,5]]` | — | 33 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | AI search | AI search | Jain et al. (2026) |
+| 715 | `511.16.5.a` | `[[511,16,5]]` | — | 34 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | AI search | AI search | Jain et al. (2026) |
+| 716 | `511.17.5.a` | `[[511,17,5]]` | — | 35 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | AI search | AI search | Jain et al. (2026) |
+| 717 | `511.81.3.a` | `[[511,81,3]]` | — | 90 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: pure-T width campaign n=255, 511 | Jain et al. (2026) |
+| 718 | `511.85.3.a` | `[[511,85,3]]` | — | 94 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: full-simplex pure-T frames | Jain et al. (2026) |
+| 719 | `511.89.3.a` | `[[511,89,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: full-simplex pure-T frames | Jain et al. (2026) |
+| 720 | `512.39.6.a` | `[[512,39,≥6]]` | — | 85 | `0,1,2+3,4,5+6,7,8+9,10,11+12,13,14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 721 | `512.84.6.a` | `[[512,84,≥6]]` | — | 130 | `0,64,83+0,65,82+0,66,81+0,67,80+0,68,…` | — | — | AI search | AI search | [Rengaswamy et al. (2020)](https://doi.org/10.1109/JSAIT.2020.3012914); [Vuillot & Breuckmann (2022)](https://doi.org/10.1109/TIT.2022.3170846) |
+| 722 | `558.146.3.a` | `[[558,146,3]]` | — | 158 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 723 | `606.162.3.a` | `[[606,162,3]]` | — | 174 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 724 | `655.177.3.a` | `[[655,177,3]]` | — | 189 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 725 | `679.185.3.a` | `[[679,185,3]]` | — | 197 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 726 | `684.132.3.a` | `[[684,132,3]]` | — | 168 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
+| 727 | `691.189.3.a` | `[[691,189,3]]` | — | 201 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 728 | `702.194.3.a` | `[[702,194,3]]` | — | 205 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 729 | `715.197.3.a` | `[[715,197,3]]` | — | 209 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 730 | `727.201.3.a` | `[[727,201,3]]` | — | 213 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 731 | `742.36.6.a` | `[[742,36,≥6]]` | ≥8 | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 732 | `750.210.3.a` | `[[750,210,3]]` | — | 221 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 733 | `756.32.6.a` | `[[756,32,≥6]]` | ≥9 | 80 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 734 | `800.224.3.a` | `[[800,224,3]]` | — | 237 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 735 | `825.199.3.a` | `[[825,199,3]]` | — | 237 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 736 | `846.122.6.a` | `[[846,122,6]]` | — | 161 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 737 | `848.122.6.a` | `[[848,122,6]]` | — | 162 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 738 | `850.126.6.a` | `[[850,126,6]]` | — | 165 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 739 | `850.128.6.a` | `[[850,128,6]]` | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 740 | `852.126.6.a` | `[[852,126,6]]` | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 741 | `852.128.6.a` | `[[852,128,6]]` | — | 167 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 742 | `854.124.6.a` | `[[854,124,6]]` | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 743 | `854.126.6.a` | `[[854,126,6]]` | — | 167 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 744 | `854.128.6.a` | `[[854,128,6]]` | — | 168 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 745 | `856.128.6.a` | `[[856,128,6]]` | — | 169 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 746 | `858.128.6.a` | `[[858,128,6]]` | — | 170 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 747 | `860.124.6.a` | `[[860,124,6]]` | — | 169 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 748 | `860.126.6.a` | `[[860,126,6]]` | — | 170 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 749 | `860.128.6.a` | `[[860,128,6]]` | — | 171 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 750 | `862.162.3.a` | `[[862,162,3]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 751 | `863.161.3.a` | `[[863,161,3]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 752 | `870.154.4.a` | `[[870,154,4]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 753 | `871.153.4.a` | `[[871,153,4]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 754 | `872.152.4.a` | `[[872,152,4]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 755 | `879.145.5.a` | `[[879,145,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 756 | `880.144.5.a` | `[[880,144,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 757 | `880.176.3.a` | `[[880,176,3]]` | — | 209 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
+| 758 | `887.137.5.a` | `[[887,137,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 759 | `896.128.6.a` | `[[896,128,6]]` | — | 189 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 760 | `901.123.6.a` | `[[901,123,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): punctured Reed-Muller code | Jain et al. (2026) |
+| 761 | `902.122.6.a` | `[[902,122,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 762 | `904.120.6.a` | `[[904,120,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 763 | `905.119.6.a` | `[[905,119,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 764 | `906.118.6.a` | `[[906,118,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 765 | `907.117.6.a` | `[[907,117,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 766 | `908.116.6.a` | `[[908,116,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 767 | `909.115.6.a` | `[[909,115,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 768 | `909.171.3.a` | `[[909,171,3]]` | — | 225 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
+| 769 | `910.114.6.a` | `[[910,114,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 770 | `911.113.6.a` | `[[911,113,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 771 | `912.112.6.a` | `[[912,112,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 772 | `935.89.6.a` | `[[935,89,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 773 | `936.88.6.a` | `[[936,88,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 774 | `937.87.6.a` | `[[937,87,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 775 | `959.65.6.a` | `[[959,65,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 776 | `960.184.3.a` | `[[960,184,3]]` | — | 212 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: graph gluing | Jain et al. (2026) |
+| 777 | `988.36.6.a` | `[[988,36,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: Wills downset framework | Jain et al. (2026) |
+| 778 | `998.26.6.a` | `[[998,26,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search: Wills downset framework | Jain et al. (2026) |
+| 779 | `1023.1.5.a` | `[[1023,1,5]]` | — | 21 | `0` | 1 | 1 | AI search | AI search | Jain et al. (2026) |
+| 780 | `1023.2.5.a` | `[[1023,2,5]]` | — | 22 | `0+1` | 2 | 1 | AI search | AI search | Jain et al. (2026) |
+| 781 | `1023.3.5.a` | `[[1023,3,5]]` | — | 23 | `0+1+2` | 3 | 1 | AI search | AI search | Jain et al. (2026) |
+| 782 | `1023.4.5.a` | `[[1023,4,5]]` | — | 24 | `0+1+2+3` | 4 | 1 | AI search | AI search | Jain et al. (2026) |
+| 783 | `1023.5.5.a` | `[[1023,5,5]]` | — | 25 | `0+1+2+3+4` | 5 | 1 | AI search | AI search | Jain et al. (2026) |
+| 784 | `1023.6.5.a` | `[[1023,6,5]]` | — | 26 | `0+1+2+3+4+5` | 6 | 1 | AI search | AI search | Jain et al. (2026) |
+| 785 | `1023.7.5.a` | `[[1023,7,5]]` | — | 27 | `0+1+2+3+4+5+6` | — | — | AI search | AI search | Jain et al. (2026) |
+| 786 | `1023.8.5.a` | `[[1023,8,5]]` | — | 28 | `0+1+2+3+4+5+6+7` | — | — | AI search | AI search | Jain et al. (2026) |
+| 787 | `1023.9.5.a` | `[[1023,9,5]]` | — | 29 | `0+1+2+3+4+5+6+7+8` | — | — | AI search | AI search | Jain et al. (2026) |
+| 788 | `1023.10.5.a` | `[[1023,10,5]]` | — | 30 | `0+1+2+3+4+5+6+7+8+9` | — | — | AI search | AI search | Jain et al. (2026) |
+| 789 | `1023.11.5.a` | `[[1023,11,5]]` | — | 31 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | AI search | AI search | Jain et al. (2026) |
+| 790 | `1023.12.5.a` | `[[1023,12,5]]` | — | 32 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | AI search | AI search | Jain et al. (2026) |
+| 791 | `1023.13.5.a` | `[[1023,13,5]]` | — | 33 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | AI search | AI search | Jain et al. (2026) |
+| 792 | `1023.14.5.a` | `[[1023,14,5]]` | — | 34 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | AI search | AI search | Jain et al. (2026) |
+| 793 | `1023.15.5.a` | `[[1023,15,5]]` | — | 35 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | AI search | AI search | Jain et al. (2026) |
+| 794 | `1023.16.5.a` | `[[1023,16,5]]` | — | 36 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | AI search | AI search | Jain et al. (2026) |
+| 795 | `1023.17.5.a` | `[[1023,17,5]]` | — | 37 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | AI search | AI search | Jain et al. (2026) |
+| 796 | `1023.18.5.a` | `[[1023,18,5]]` | — | 38 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 797 | `1023.19.5.a` | `[[1023,19,5]]` | — | 39 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 798 | `1023.20.5.a` | `[[1023,20,5]]` | — | 40 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 799 | `1023.21.5.a` | `[[1023,21,5]]` | — | 41 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 800 | `1023.22.5.a` | `[[1023,22,5]]` | — | 42 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 801 | `1023.23.5.a` | `[[1023,23,5]]` | — | 43 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 802 | `1023.24.5.a` | `[[1023,24,5]]` | — | 44 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 803 | `1023.25.5.a` | `[[1023,25,5]]` | — | 45 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 804 | `1023.26.5.a` | `[[1023,26,5]]` | — | 46 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 805 | `1023.27.5.a` | `[[1023,27,5]]` | — | 47 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 806 | `1023.28.5.a` | `[[1023,28,5]]` | — | 48 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 807 | `1023.29.5.a` | `[[1023,29,5]]` | — | 49 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 808 | `1023.30.5.a` | `[[1023,30,5]]` | — | 50 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 809 | `1023.31.5.a` | `[[1023,31,5]]` | — | 51 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search | Jain et al. (2026) |
+| 810 | `1675.373.3.a` | `[[1675,373,≥3]]` | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 811 | `1676.372.3.a` | `[[1676,372,≥3]]` | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 812 | `1683.365.3.a` | `[[1683,365,≥3]]` | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
+| 813 | `1715.287.3.a` | `[[1715,287,≥3]]` | 6 | 329 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | AI search | AI search (gamma frontier): from Wills parent codes | Jain et al. (2026) |
 
 ## Circuits
 

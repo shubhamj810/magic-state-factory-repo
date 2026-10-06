@@ -601,6 +601,7 @@ def verify_row(row, budget=None, reference=True):
     if typed:
         return {}, problems
     problems += certificate_problems(row)
+    problems += label_problems(row)
 
     facts, derived_problems = derive(row["columns"], row["k"], row["N"])
     problems += derived_problems
@@ -1019,6 +1020,42 @@ def citation_problems(payload):
     return problems
 
 
+def label_problems(row):
+    """A row whose ``catalog_label`` is not ``n.k.d.x`` for its OWN n, k and d.
+
+    ``d`` is the distance proved here, the one the class key uses, so a label
+    can never disagree with the row it names.  The letter code must be the
+    canonical spelling of its number (no leading ``a`` on a multi-letter code),
+    or two spellings could name one class.
+    """
+    label = row.get("catalog_label")
+    match = CF.LABEL_RE.match(label) if isinstance(label, str) else None
+    if not match:
+        return [("label", f"catalog_label {label!r} is not of the form n.k.d.x")]
+    n, k, d, letters = match.groups()
+    problems = []
+    if (int(n), int(k), int(d)) != (row["n"], row["k"], row["d"]):
+        problems.append(("label", f"catalog_label {label!r} names [[{n},{k},{d}]] "
+                                  f"but the row is [[{row['n']},{row['k']},{row['d']}]]"))
+    if CF.label_letters(CF.label_index(letters)) != letters:
+        problems.append(("label", f"catalog_label {label!r} is not the canonical "
+                                  f"spelling of its letter code"))
+    return problems
+
+
+def duplicate_label_problems(rows):
+    """Two rows sharing a ``catalog_label``: a label names exactly one class."""
+    seen, problems = {}, []
+    for index, row in enumerate(rows, 1):
+        label = row.get("catalog_label") if isinstance(row, dict) else None
+        if label in seen:
+            problems.append(("label", f"rows {seen[label]} and {index} are both "
+                                      f"labelled {label!r}"))
+        elif label is not None:
+            seen[label] = index
+    return problems
+
+
 CERTIFICATE_FIELDS = ("d_certified", "d_certified_is_exact", "d_certified_source")
 
 
@@ -1216,6 +1253,7 @@ def verify_catalog(payload, budget=None, verbose=True, indices=None,
                   f"{time.time() - started:6.2f}s", flush=True)
     if file_level:
         for kind, detail in (duplicate_class_problems(rows)
+                             + duplicate_label_problems(rows)
                              + provenance_problems(payload)
                              + citation_problems(payload)
                              + header_problems(payload)):

@@ -375,6 +375,36 @@ class TestLifecycle(unittest.TestCase):
                         MR.retention_key(row(sk_key=None)),
                         "then a proved canonical frame over an as-found one")
 
+    def test_a_new_class_gets_the_next_label_and_an_improvement_keeps_it(self):
+        """A label is a permanent name: given once, never changed or reused.
+
+        The first class at an ``(n, k, d)`` is ``.a``; improving its circuit
+        replaces the columns but must not rename the class, or every link and
+        citation to it would break.
+        """
+        self.merge({"k": 1, "N": 10, "columns": narrow_46()})
+        incumbent, = self.rows()
+        label = incumbent["catalog_label"]
+        self.assertEqual(label, f"{incumbent['n']}.{incumbent['k']}.{incumbent['d']}.a")
+        incumbent["N"] = 14                  # make the next merge an improvement
+        self.merge({"k": 1, "N": 10, "columns": narrow_46()})
+        kept, = self.rows()
+        self.assertEqual(kept["catalog_label"], label)
+        self.assertEqual(VC.verify_row(kept)[1], [])
+
+    def test_label_letter_codes_round_trip_and_never_collide(self):
+        codes = [CF.label_letters(i) for i in range(2000)]
+        self.assertEqual(codes[:3] + codes[25:28], ["a", "b", "c", "z", "ba", "bb"])
+        self.assertEqual(len(set(codes)), len(codes))
+        self.assertEqual([CF.label_index(c) for c in codes], list(range(2000)))
+
+    def test_next_label_is_one_past_the_highest_in_use(self):
+        rows = [{"catalog_label": "60.5.3.a"}, {"catalog_label": "60.5.3.z"},
+                {"catalog_label": "61.5.3.c"}]
+        self.assertEqual(CF.next_label(rows, 60, 5, 3), "60.5.3.ba")
+        self.assertEqual(CF.next_label(rows, 61, 5, 3), "61.5.3.d")
+        self.assertEqual(CF.next_label(rows, 62, 5, 3), "62.5.3.a")
+
     def test_improve_clears_every_note_it_does_not_carry_over(self):
         """A note left behind by an improvement describes a circuit that is gone.
 
