@@ -353,72 +353,7 @@ def shell(title: str, description: str, main: str, current: str, scripts, depth:
     return text
 
 
-def catalogue_history(catalog_path: Path, limit: int = 40) -> list[dict]:
-    """Every commit that changed the catalogue: date, subject, and which classes
-    it added or removed, from the file itself before and after the commit.
-    Empty when git or the history is unavailable (a shallow checkout)."""
-    repo = catalog_path.parent.parent
-    rel = catalog_path.relative_to(repo).as_posix()
-    try:
-        log = subprocess.run(["git", "log", f"-{limit}", "--format=%H%x09%h%x09%cs%x09%s", "--", rel],
-                             cwd=repo, capture_output=True, text=True, check=True, timeout=60).stdout
-    except (OSError, subprocess.SubprocessError):
-        return []
-
-    def keys(commit):
-        try:
-            text = subprocess.run(["git", "show", f"{commit}:{rel}"], cwd=repo, capture_output=True,
-                                  text=True, check=True, timeout=120).stdout
-            rows = json.loads(text)["factories"]
-        except (OSError, subprocess.SubprocessError, ValueError, KeyError):
-            return None
-        return {(r["n"], r["k"], r["d"], r["gate"]): r.get("catalog_label") for r in rows}
-
-    entries = [line.split("\t", 3) for line in log.splitlines() if line.count("\t") >= 3]
-    # today's labels, so a class added before labels existed still links to its page
-    current = {(r["n"], r["k"], r["d"], r["gate"]): r.get("catalog_label")
-               for r in json.loads(catalog_path.read_text(encoding="utf-8"))["factories"]}
-    out, after = [], None
-    for i, (full, short, day, subject) in enumerate(entries):
-        now = keys(full) if after is None else after
-        before = keys(entries[i + 1][0]) if i + 1 < len(entries) else {}
-        after = before
-        if now is None or before is None:
-            continue
-        added = sorted(set(now) - set(before))
-        out.append({"commit": short, "date": day, "subject": subject, "classes": len(now),
-                    "added": [now[key] or current.get(key) or f"[[{key[0]},{key[1]},{key[2]}]]"
-                              for key in added],
-                    "removed": len(set(before) - set(now))})
-    return out
-
-
-def changes_page(history: list[dict]) -> str:
-    import pages as P
-    items = []
-    for h in history:
-        added = h["added"]
-        shown = ", ".join(f'<a href="{P.factory_path(a)}">{P.esc(a)}</a>' if "." in a else P.esc(a)
-                          for a in added[:12]) + (f" and {len(added) - 12} more" if len(added) > 12 else "")
-        items.append(
-            f'<li><div class="ch-head"><time>{P.esc(h["date"])}</time>'
-            f'<a class="mono small" href="{P.REPO}/commit/{P.esc(h["commit"])}">{P.esc(h["commit"])}</a>'
-            f'<span class="small muted">{h["classes"]} classes</span></div>'
-            f'<p>{P.esc(h["subject"])}</p>'
-            + (f'<p class="small">Added {len(added)}: {shown}</p>' if added else "")
-            + (f'<p class="small muted">Removed {h["removed"]}.</p>' if h["removed"] else "")
-            + "</li>")
-    body = ("<ol class=\"changes\">" + "".join(items) + "</ol>") if items else \
-        '<p class="muted">The change history is not available in this build.</p>'
-    return f"""
-<section class="page-head narrow"><div class="inner">
-  <h1>What&rsquo;s new</h1>
-  <p class="lede">Every change to the catalogue, newest first, read from its history.</p>
-</div></section>
-<main id="main">{body}</main>"""
-
-
-def render_entries(out: Path, index: dict, records: list, history=None) -> None:
+def render_entries(out: Path, index: dict, records: list) -> None:
     """f/<label>/ for every factory and p/<n>.<k>.<d>/ for every parameter set."""
     import pages as P
     by_id = {f["id"]: f for f in index["factories"]}
@@ -435,13 +370,6 @@ def render_entries(out: Path, index: dict, records: list, history=None) -> None:
         path = P.params_path(*key)
         pages.append((path, shell(title, desc, main, "browse",
                                   ["catalog.js", "query.js", "params.js"], 2, path)))
-    if history is not None:
-        changes = out / "changes.html"
-        changes.write_text(shell("What's new · Magic State Factory Catalog",
-                                 "Every change to the Magic State Factory Catalog, newest first.",
-                                 changes_page(history), "", ["catalog.js"], 0, "changes.html"),
-                           encoding="utf-8")
-        stitch(out, [changes], index["source"], depth=0)
     for path, text in pages:
         target = out / path / "index.html"
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -449,7 +377,7 @@ def render_entries(out: Path, index: dict, records: list, history=None) -> None:
     stitch(out, [out / path / "index.html" for path, _ in pages], index["source"], depth=2)
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for path in ["", "search.html", "about.html", "changes.html"] + [path for path, _ in pages]:
+    for path in ["", "search.html", "about.html"] + [path for path, _ in pages]:
         sitemap.append(f"  <url><loc>{P.SITE}{path}</loc></url>")
     sitemap.append("</urlset>")
     (out / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
@@ -508,7 +436,7 @@ def build(out: Path, catalog_path: Path = CATALOG) -> dict:
             writer.writerow(["; ".join(s[f]) if isinstance(s[f], list) else s[f]
                              for f in CSV_FIELDS])
     render_pages(out, index["source"])
-    render_entries(out, index, records, catalogue_history(catalog_path))
+    render_entries(out, index, records)
     # GitHub Pages runs Jekyll unless told not to, and Jekyll drops _-prefixed paths.
     (out / ".nojekyll").write_text("", encoding="utf-8")
     return index

@@ -15,7 +15,6 @@ master_catalog/master_catalog.json          813 rows, columns included
 website/_site/                               (git-ignored; built in CI)
   index.html          landing: search, best factories, frontier, parameter table
   about.html          what the numbers mean, how each is obtained, labels, citing, data, contributing
-  changes.html        every change to the catalogue, from its git history
   search.html         every factory: filters, typed queries, sort, CSV/JSON export
   f/<label>/          one static page per factory, e.g. f/15.1.3.a/
   p/<n>.<k>.<d>/      one static page per parameter set, e.g. p/15.1.3/
@@ -181,7 +180,7 @@ rendered page against counts it computes itself:
 - the search chips, a filter count, the column chooser and an inline preview;
 - the frontier table against the frontier recomputed in Python, and that the SVG
   export holds every plotted point;
-- a proved upper bound on a factory page, and the change history;
+- a proved upper bound on a factory page;
 - the new addresses: old links redirect, and a factory page renders its title
   and matrix with JavaScript turned off;
 - the CNOT + S tool, against `master_catalog/glcanon.py`: an inequivalent target is

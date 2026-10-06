@@ -684,8 +684,3 @@ tr.preview .swatch { display: inline-block; width: 10px; height: 10px; border-ra
 .plot-bar .spacer { flex: 1; }
 .plot-table { margin-top: 4px; }
 
-ol.changes { list-style: none; margin: 0; padding: 0; max-width: 76ch; }
-ol.changes li { padding: 16px 0; border-bottom: 1px solid var(--border); }
-ol.changes .ch-head { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; margin-bottom: 4px; }
-ol.changes time { font-weight: 600; }
-ol.changes p { margin: 4px 0; }

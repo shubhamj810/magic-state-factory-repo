@@ -450,7 +450,7 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         except ElementTree.ParseError as error:
             failures.append(f"index.html: the SVG export is not valid XML ({error})")
 
-        # ------------------------------------------ distance bounds, history
+        # ------------------------------------------ distance bounds
         bounded = next((f for f in factories if not f["d_is_exact"]
                         and json.loads((site / "data" / "factories" / f"{f['id']}.json").read_text())
                         ["distance"].get("upper")), None)
@@ -459,9 +459,6 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
             visit(f"f/{bounded['id']}/", f"f/{bounded['id']}/ bounds", "table.matrix tbody tr")
             failures.check(page.query_selector(f'dl.summary [data-tex*="le {upper}"]') is not None,
                            f"f/{bounded['id']}/: the summary does not show the proved upper bound {upper}")
-        visit("changes.html", "changes.html", "main")
-        failures.check(len(page.query_selector_all("ol.changes li")) >= 1,
-                       "changes.html: the catalogue's history is empty")
 
         # ------------------------------------------ old links still work
         old = factories[0]
