@@ -130,14 +130,16 @@ def searches(factories: list[dict], references: dict) -> list[tuple[str, int]]:
     count = lambda pred: sum(1 for f in factories if pred(f))  # noqa: E731
     return [
         ("", len(factories)),
-        ("d=5", count(lambda f: f["d"] == 5)),
-        ("d=6,7&exact=1", count(lambda f: f["d"] in (6, 7) and f["d_is_exact"])),
+        # a distance filter matches the re-verified OR the source-certified distance
+        ("d=5", count(lambda f: 5 in (f["d"], f["d_claim"]))),
+        ("d=6,7&exact=1", count(lambda f: (f["d"] in (6, 7) or f["d_claim"] in (6, 7)) and f["d_is_exact"])),
+        ("d=8", count(lambda f: 8 in (f["d"], f["d_claim"]))),
         ("has=ccz", count(lambda f: f["ccz_terms"] > 0)),
         ("has=cs,ccz", count(lambda f: f["cs_terms"] > 0 and f["ccz_terms"] > 0)),
         ("pure=1", count(lambda f: f["pure_t"])),
         ("kmin=2&kmax=4&nmax=60", count(lambda f: 2 <= f["k"] <= 4 and f["n"] <= 60)),
         ("tmax=4", count(lambda f: f["t_count"] is not None and f["t_count"] <= 4)),
-        ("grmax=1.2", count(lambda f: f["gamma_rho"] is not None and f["gamma_rho"] <= 1.2)),
+        ("grmax=1.2", count(lambda f: f["gamma_rho_claim"] is not None and f["gamma_rho_claim"] <= 1.2)),
         ("disc=pre-existing", count(lambda f: f["discovery"] == "pre-existing")),
         ("cite=haah2018codes", count(lambda f: "haah2018codes" in f["citations"])),
         ("regime=symmetry-SAT%20search", count(lambda f: "symmetry-SAT search" in f["regimes"])),
@@ -148,7 +150,7 @@ def searches(factories: list[dict], references: dict) -> list[tuple[str, int]]:
                                        and f["t_count"] <= 4)),
         ("q=N%3C10", count(lambda f: f["N"] < 10)),
         ("q=n%3C10", count(lambda f: f["n"] < 10)),
-        ("q=CS%20d%3E%3D4", count(lambda f: f["cs_terms"] > 0 and f["d"] >= 4)),
+        ("q=CS%20d%3E%3D4", count(lambda f: f["cs_terms"] > 0 and f["d_claim"] >= 4)),
         ("q=pure%20exact", count(lambda f: f["pure_t"] and f["d_is_exact"])),
         ("q=haah", count(lambda f: "haah" in haystack(f))),
         ("lit=1", count(lambda f: any(c not in OWN for c in f["citations"]))),
@@ -194,8 +196,13 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
                        "index.html: KaTeX did not load, so the maths is shown as TeX source")
         failures.check(page.query_selector("#frontier-plot svg") is not None,
                        "index.html: the frontier plot did not render")
-        failures.check(len(page.query_selector_all("#record-cards a.record")) == len(index["ranges"]["d"]),
-                       "index.html: not one record card per distance")
+        claimed = {p["d_claim"] for p in parameters if p["comparable"]}
+        failures.check(len(page.query_selector_all("#record-cards a.record")) == len(claimed),
+                       f"index.html: expected one record card per claimed distance {sorted(claimed)}")
+        best_claim = min((p for p in parameters if p["gamma_rho_claim"] is not None),
+                         key=lambda p: p["gamma_rho_claim"])
+        failures.check(f"{best_claim['gamma_rho_claim']:.4f}" in page.inner_text("#headline-stats"),
+                       f"index.html: headline does not show the best claim {best_claim['gamma_rho_claim']:.4f}")
         failures.check(len(page.query_selector_all("#cite-list li")) >= 1,
                        "index.html: the how-to-cite list is empty")
         _ghosts(page, failures, "index.html")
@@ -254,15 +261,15 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         with page.expect_download() as info:
             page.click("#export-csv")
         lines = Path(info.value.path()).read_text().strip().splitlines()
-        wanted = sum(1 for f in factories if f["d"] == 4 and f["d_is_exact"])
+        wanted = sum(1 for f in factories if 4 in (f["d"], f["d_claim"]) and f["d_is_exact"])
         failures.check(len(lines) == wanted + 1,
                        f"search.html: CSV export has {len(lines) - 1} rows, expected {wanted}")
         # sorting by a header puts the least gamma_rho first
-        visit("search.html?sort=gamma_rho", "search.html sorted", "#body tr")
-        best = min(f["gamma_rho"] for f in factories if f["gamma_rho"] is not None)
+        visit("search.html?sort=gamma_rho_claim", "search.html sorted", "#body tr")
+        best = min(f["gamma_rho_claim"] for f in factories if f["gamma_rho_claim"] is not None)
         first = page.inner_text("#body tr:first-child td:nth-child(5)")
-        failures.check(first == f"{best:.3f}",
-                       f"search.html?sort=gamma_rho: first row shows {first}, least is {best:.3f}")
+        failures.check(first.startswith(f"{best:.3f}"),
+                       f"search.html?sort=gamma_rho_claim: first row shows {first}, least is {best:.3f}")
 
         # ----------------------------------------------------------- params
         wanted_params = parameters if full else rng.sample(parameters, min(sample, len(parameters)))

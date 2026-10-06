@@ -48,9 +48,9 @@
 
   /* --------------------------------------------------------- the free text */
   var FIELD = {           /* query word -> index field; n and N are DIFFERENT */
-    n: "n", k: "k", d: "d", N: "N", r: "r",
+    n: "n", k: "k", d: "d_claim", N: "N", r: "r",
     t: "t_count", T: "t_count", deg: "poly_degree",
-    g: "gamma_rho", gamma: "gamma"
+    g: "gamma_rho_claim", gamma: "gamma_claim"
   };
   var COMPARE = /^(n|k|d|N|r|t|T|deg|g|gamma)\s*(>=|<=|=|==|>|<)\s*(\d+(?:\.\d+)?)$/;
   var TERM = /^(t|cs|ccz)(\d+(?:,\d+)*)$/i;
@@ -154,7 +154,7 @@
     if (state.kmax !== undefined) add(function (r) { return r.k <= state.kmax; });
     if (state.d && state.d.length) {
       var ds = state.d.map(Number);
-      add(function (r) { return ds.indexOf(r.d) >= 0; });
+      add(function (r) { return ds.indexOf(r.d) >= 0 || ds.indexOf(r.d_claim) >= 0; });
     }
     if (state.exact) add(function (r) { return r.d_is_exact; });
     (state.has || []).forEach(function (kind) {
@@ -163,7 +163,7 @@
     if (state.pure) add(function (r) { return r.pure_t; });
     if (state.tmax !== undefined) add(function (r) { return r.t_count !== null && r.t_count <= state.tmax; });
     if (state.known) add(function (r) { return r.t_count !== null; });
-    if (state.grmax !== undefined) add(function (r) { return r.gamma_rho !== null && r.gamma_rho <= state.grmax; });
+    if (state.grmax !== undefined) add(function (r) { return r.gamma_rho_claim !== null && r.gamma_rho_claim <= state.grmax; });
     if (state.disc) add(function (r) { return r.discovery === state.disc; });
     if (state.regime) add(function (r) { return r.regimes.indexOf(state.regime) >= 0; });
     if (state.cite) add(function (r) { return r.citations.indexOf(state.cite) >= 0; });

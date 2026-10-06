@@ -10,7 +10,7 @@
     var gamma = (n && k && d > 1) ? Math.log(n / k) / Math.log(d) : null;
     var counts = members.map(function (m) { return m.t_count; })
                         .filter(function (t) { return !C.blank(t); });
-    var rhos = members.map(function (m) { return m.gamma_rho; })
+    var rhos = members.map(function (m) { return m.gamma_rho_claim; })
                       .filter(function (g) { return !C.blank(g); });
     return [
       [members.length, members.length === 1 ? "distinct gate" : "distinct gates"],
@@ -75,8 +75,8 @@
           '<td class="num">' + m.terms + "</td>" +
           '<td class="num">' + C.integer(m.t_count) + "</td>" +
           '<td class="num">' + C.integer(m.poly_degree) + "</td>" +
-          '<td class="num">' + C.num(m.gamma_rho) + "</td>" +
-          '<td class="num">' + C.num(m.gamma_t) + "</td>" +
+          '<td class="num">' + C.num(m.gamma_rho_claim) + C.claimMark(m) + "</td>" +
+          '<td class="num">' + C.num(m.gamma_t_claim) + C.claimMark(m) + "</td>" +
           '<td class="num">' + m.N + "</td>" +
           "<td>" + C.distanceTag(m) + "</td>" +
           '<td class="small cites">' + C.escapeHtml(m.cite_text || "—") + "</td></tr>";

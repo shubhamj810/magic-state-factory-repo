@@ -45,8 +45,25 @@
     return best;
   }
 
+  /* Landmarks are claims, so they use the distance a source certified where
+   * there is one (see claims() below); links still go to the catalogue's row,
+   * which is keyed on the distance re-verified here. */
   function href(row) {
-    return C.paramsHref(row.n, row.k, row.d);
+    return C.paramsHref(row.n, row.k, row.d_verified || row.d);
+  }
+
+  function claims(parameters) {
+    return parameters.map(function (p) {
+      return Object.assign({}, p, {
+        d_verified: p.d, d: p.d_claim, gamma_rho: p.gamma_rho_claim, certified: p.d_claim_certified,
+        lower_bound: p.d_claim_certified && p.d_claim_exact === false
+      });
+    });
+  }
+
+  function certNote(row) {
+    return row.certified ? '<span class="cert-note">distance certified by its source' +
+      (row.lower_bound ? " as a lower bound" : "") + "</span>" : "";
   }
 
   function label(row) {             /* plain text, for SVG titles and aria labels */
@@ -79,8 +96,8 @@
         '<span class="d">' + C.tex("d=" + group.d) + "</span>" +
         '<span class="g">' + C.tex(C.TEX.gr + "=" + C.num(best.gamma_rho, 4)) + "</span>" +
         '<span class="p">' + C.paramsTex(best.n, best.k, best.d) + "</span>" +
-        '<span class="meta">' + C.tex(C.TEX.vex + "=" + best.v_ex_best) +
-        "</span></a>";
+        '<span class="meta">' + C.tex(C.TEX.vex + "=" + best.v_ex_best) + "</span>" +
+        certNote(best) + "</a>";
     }).join("");
   }
 
@@ -97,13 +114,13 @@
         '<span class="t">' + title + "</span>" +
         '<span class="v">' + value + "</span>" +
         (row ? '<a class="l" href="' + href(row) + '">' + C.paramsTex(row.n, row.k, row.d) + "</a>" : "") +
-        (note ? '<span class="n">' + note + "</span>" : "") +
+        (note ? '<span class="n">' + note + "</span>" : "") + (row ? certNote(row) : "") +
         "</div>";
     }
     return cell("least " + C.tex(C.TEX.gr), C.tex(C.TEX.gr + "=" + C.num(best.gamma_rho, 4)), best,
                 C.tex(C.TEX.vex + "=" + best.v_ex_best) + " T states per run") +
            cell("most T states per run", C.tex(C.TEX.vex + "=" + widest.v_ex_best), widest, "") +
-           cell("highest distance", C.tex("d=" + deepest.d), deepest, "");
+           cell("highest distance", C.tex("d" + (deepest.lower_bound ? "\\ge " : "=") + deepest.d), deepest, "");
   }
 
   /* ------------------------------------------------------------- the plot */
@@ -233,7 +250,8 @@
           '<div class="row"><span>' + C.tex(C.TEX.gr) + "</span><span>" + C.num(p.gamma_rho, 4) + "</span></div>" +
           '<div class="row"><span>' + C.tex(C.TEX.vex) + "</span><span>" + p.v_ex_best + "</span></div>" +
           '<div class="row"><span>gates</span><span>' + p.count + "</span></div>" +
-          (p._front ? '<div class="hint">on the frontier</div>' : "");
+          (p._front ? '<div class="hint">on the frontier</div>' : "") +
+          (p.certified ? '<div class="hint">distance certified by its source</div>' : "");
         tip.classList.add("on");
         svg.style.cursor = "pointer";
       });
@@ -248,7 +266,7 @@
   /* ------------------------------------------------------------------ mount */
 
   function mount(index) {
-    var p = index.parameters || [];
+    var p = claims(index.parameters || []);
     var slots = {
       "headline-stats": headline(p),
       "record-cards": recordCards(p),

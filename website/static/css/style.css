@@ -39,8 +39,6 @@
   --violet-soft: #eef0f3;
   --amber-soft: #fff4dd;
   --amber-ink: #92400e;
-  /* distance: ordinal blue ramp, d = 3 .. 7 (validated, light surface #fff) */
-  --d3: #86b6ef; --d4: #5598e7; --d5: #2a78d6; --d6: #1c5cab; --d7: #104281;
   --stair: #d97706;
   --shadow-sm: none;
   --shadow: none;
@@ -66,7 +64,6 @@
     --good: #7fc79e; --good-soft: #18261f;
     --violet: #a9b0ba; --violet-soft: #252b33;
     --amber-soft: #2d2412; --amber-ink: #fcd34d;
-    --d3: #256abf; --d4: #3987e5; --d5: #6da7ec; --d6: #9ec5f4; --d7: #cde2fb;
     --stair: #fbbf24;
     --shadow-sm: none; --shadow: none; --shadow-lg: 0 4px 14px rgba(0, 0, 0, 0.45);
     --hero-1: #0c1119; --hero-2: #0c1119; --hero-3: #0c1119;
@@ -84,7 +81,6 @@
   --good: #7fc79e; --good-soft: #18261f;
   --violet: #a9b0ba; --violet-soft: #252b33;
   --amber-soft: #2d2412; --amber-ink: #fcd34d;
-  --d3: #256abf; --d4: #3987e5; --d5: #6da7ec; --d6: #9ec5f4; --d7: #cde2fb;
   --stair: #fbbf24;
   --shadow-sm: none; --shadow: none; --shadow-lg: 0 4px 14px rgba(0, 0, 0, 0.45);
   --hero-1: #0c1119; --hero-2: #0c1119; --hero-3: #0c1119;
@@ -315,9 +311,10 @@ td.cites { white-space: nowrap; color: var(--text-dim); }
 .tag.pure { background: var(--amber-soft); color: var(--amber-ink); }
 .tag.ai { background: var(--violet-soft); color: var(--violet); }
 .tag.pre { background: var(--brand-soft); color: var(--brand-ink); }
+.tag.cert { background: transparent; color: var(--text-dim); border: 1px dashed var(--border-strong); }
+.cert-mark { color: var(--text-dim); margin-left: 1px; }
+.cert-d { color: var(--text-dim); font-size: 12.5px; }
 a.tag:hover { text-decoration: none; border-color: var(--brand); }
-.dot.d3 { background: var(--d3); } .dot.d4 { background: var(--d4); } .dot.d5 { background: var(--d5); }
-.dot.d6 { background: var(--d6); } .dot.d7 { background: var(--d7); }
 
 .pager { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; margin: 16px 0 0; }
 .pager button { font: inherit; font-size: 13px; min-width: 36px; height: 34px; padding: 0 10px;
@@ -593,3 +590,4 @@ footer.site code { color: #dfe3fa; }
 .community p { margin: 0; flex: 1 1 300px; font: 16px/1.5 var(--serif); color: var(--hero-text); }
 .btn.ghost { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.45); }
 .btn.ghost:hover { border-color: #fff; background: rgba(255, 255, 255, 0.06); }
+.cert-note { display: block; font-size: 12px; color: var(--text-dim); margin-top: 4px; font-style: italic; }

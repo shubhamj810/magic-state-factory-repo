@@ -117,10 +117,11 @@
             C.paramsTex(row.n, row.k, row.d) + "</a></td>" +
           '<td class="num">' + row.n + "</td>" +
           '<td class="num">' + row.k + "</td>" +
-          '<td class="num">' + row.d + "</td>" +
+          '<td class="num">' + row.d + (row.d_claim_certified ? ' <span class="cert-d" title="certified by its source">(' +
+            row.d_claim + ")</span>" : "") + "</td>" +
           '<td class="num">' + row.count + "</td>" +
-          '<td class="num">' + C.num(row.gamma_rho) + "</td>" +
-          '<td class="num">' + C.num(row.gamma) + "</td>" +
+          '<td class="num">' + C.num(row.gamma_rho_claim) + C.claimMark(row) + "</td>" +
+          '<td class="num">' + C.num(row.gamma_claim) + C.claimMark(row) + "</td>" +
           '<td class="num">' + C.num(row.rate, 4) + "</td>" +
           '<td class="num">' + C.integer(row.best_t_count) + "</td>" +
           '<td class="num">' + row.N_min + "</td></tr>";

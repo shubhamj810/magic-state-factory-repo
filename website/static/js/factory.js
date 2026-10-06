@@ -102,6 +102,10 @@
 
   C.loadFactory(id).then(function (record) {
     var p = record.parameters, gate = record.gate, m = record.metrics;
+    var cert = record.distance.certified && record.distance.certified.d > p.d ? record.distance.certified : null;
+    function atCert(value) {
+      return cert && !C.blank(value) ? " At the certified " + C.tex("d=" + cert.d) + ": " + C.num(value, 4) + "." : "";
+    }
     var label = C.params(p.n, p.k, p.d);
     var short = gate.human.length > 90 ? gate.human.slice(0, 90) + "…" : gate.human;
 
@@ -118,7 +122,8 @@
       " and " + C.tex("r=" + p.r) + " postselected " + (p.r === 1 ? "check" : "checks") +
       ", consuming " + C.tex("n=" + p.n) + " noisy T states as " + C.tex("\\pi/4") + " parity rotations." +
       '<span class="pills" style="margin-top:10px">' +
-      C.distanceTag({ d: p.d, d_is_exact: record.distance.is_exact }) + " " +
+      C.distanceTag({ d: p.d, d_is_exact: record.distance.is_exact,
+                      d_cert: cert && cert.d, d_cert_exact: cert && cert.is_exact }) + " " +
       (record.provenance && record.provenance.discovery
         ? '<span class="tag ' + (record.provenance.discovery === "AI search" ? "ai" : "pre") + '">' +
           C.escapeHtml(record.provenance.discovery) + "</span> " : "") +
@@ -173,8 +178,10 @@
     document.getElementById("metric-grid").innerHTML =
       metric("inputs " + C.tex("n"), p.n, "Noisy T states per run.") +
       metric("outputs " + C.tex("k"), p.k) +
-      metric("distance " + C.tex("d"), p.d, record.distance.is_exact
-             ? "Exact, proved and witnessed." : "A proved lower bound.", null, true) +
+      metric("distance " + C.tex("d"), (record.distance.is_exact ? "" : "≥ ") + p.d,
+             (record.distance.is_exact ? "Exact, proved and witnessed here." : "A lower bound proved here.") +
+             (cert ? " Its source certifies " + C.tex("d" + (cert.is_exact ? "=" : "\\ge ") + cert.d) + "." : ""),
+             null, true) +
       metric("wires " + C.tex("N"), p.N) +
       metric("checks " + C.tex("r"), p.r) +
       metric("T-count", m.t_count, "Minimal T-count of the output gate." +
@@ -184,9 +191,9 @@
              ? "Undefined, because the gate's terms overlap."
              : "T states per run. CCZ counts as two.", "not defined") +
       metric(C.tex(C.TEX.grDef), C.num(m.gamma_rho, 4),
-             "Overhead per extractable T state. Lower is better.", "not defined", true) +
-      metric(C.tex(C.TEX.gDef), C.num(m.gamma, 4), "Overhead per output qubit.") +
-      metric(C.tex(C.TEX.gtDef), C.num(m.gamma_t, 4), "Overhead per unit of T-count.") +
+             "Overhead per extractable T state. Lower is better." + atCert(m.gamma_rho_claim), "not defined", true) +
+      metric(C.tex(C.TEX.gDef), C.num(m.gamma, 4), "Overhead per output qubit." + atCert(m.gamma_claim)) +
+      metric(C.tex(C.TEX.gtDef), C.num(m.gamma_t, 4), "Overhead per unit of T-count." + atCert(m.gamma_t_claim)) +
       metric("rate " + C.tex("k/n"), C.num(m.rate, 5), "Outputs per input.") +
       metric("effective width", m.effective_width, "Rank of the output rows modulo the check rows.");
 
@@ -223,6 +230,10 @@
           (distance.witness ? " sits on columns <code>" +
           C.escapeHtml(JSON.stringify(distance.witness)) + "</code>" : " exists") + ".</p>"
         : "") +
+      (cert ? "<p>Its source certifies " + C.tex("d" + (cert.is_exact ? "=" : "\\ge ") + cert.d) +
+        (cert.is_exact ? ", exactly" : ", as a lower bound") + ". That certificate is not re-checked " +
+        "here, but rankings on this site may use it." +
+        (cert.source ? ' <span class="small muted">Source: ' + C.escapeHtml(cert.source) + ".</span>" : "") + "</p>" : "") +
       '<p class="small muted">A fault is a set of faulty columns. It is undetectable when their ' +
       "check parts cancel, and damaging when their output parts do not.</p>";
 

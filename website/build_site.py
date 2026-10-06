@@ -147,6 +147,11 @@ def build_rows(catalog: dict):
         gamma = exponent(n, k, d)
         gamma_t = exponent(n, row.get("t_count"), d)
         gamma_rho = exponent(n, v_ex, d)
+        # A source may certify a larger distance than the catalogue could
+        # re-measure.  Tables show both; claims (rankings, the frontier) may use
+        # the certified one, so the exponents are also given at that distance.
+        d_cert = row.get("d_certified")
+        d_claim = max(d, d_cert) if d_cert else d
         gate_human = row["gate_human"]
 
         summary = {
@@ -164,6 +169,12 @@ def build_rows(catalog: dict):
             "gamma": gamma, "gamma_t": gamma_t, "gamma_rho": gamma_rho,
             "v_ex": v_ex, "rate": k / n,
             "d_is_exact": bool(row.get("d_is_exact")),
+            "d_cert": d_cert,
+            "d_cert_exact": row.get("d_certified_is_exact") if d_cert else None,
+            "d_claim": d_claim,
+            "gamma_claim": exponent(n, k, d_claim),
+            "gamma_t_claim": exponent(n, row.get("t_count"), d_claim),
+            "gamma_rho_claim": exponent(n, v_ex, d_claim),
             "regimes": list(row.get("regimes") or []),
             "discovery": row.get("discovery"),
             "citations": list(row.get("citations") or []),
@@ -185,8 +196,14 @@ def build_rows(catalog: dict):
             },
             "circuit": {"columns": row["columns"]},
             "distance": {"d": d, "is_exact": bool(row.get("d_is_exact")),
-                         "upper": row.get("d_upper"), "witness": row.get("d_witness")},
+                         "upper": row.get("d_upper"), "witness": row.get("d_witness"),
+                         "certified": ({"d": d_cert,
+                                        "is_exact": row.get("d_certified_is_exact"),
+                                        "source": row.get("d_certified_source")} if d_cert else None)},
             "metrics": {"gamma": gamma, "gamma_t": gamma_t, "gamma_rho": gamma_rho,
+                        "gamma_claim": exponent(n, k, d_claim),
+                        "gamma_t_claim": exponent(n, row.get("t_count"), d_claim),
+                        "gamma_rho_claim": exponent(n, v_ex, d_claim),
                         "v_ex": v_ex, "rate": k / n,
                         "t_count": row.get("t_count"),
                         "poly_degree": row.get("poly_degree"),
@@ -210,6 +227,8 @@ def parameter_groups(factories: list[dict]) -> list[dict]:
         t_counts = [m["t_count"] for m in members if m["t_count"] is not None]
         v_exs = [m["v_ex"] for m in members if m["v_ex"] is not None]
         rhos = [m["gamma_rho"] for m in members if m["gamma_rho"] is not None]
+        claims = [m["gamma_rho_claim"] for m in members if m["gamma_rho_claim"] is not None]
+        d_claim = max(m["d_claim"] for m in members)
         out.append({
             "n": n, "k": k, "d": d,
             "count": len(members),
@@ -219,15 +238,22 @@ def parameter_groups(factories: list[dict]) -> list[dict]:
             "v_ex_best": max(v_exs) if v_exs else None,
             "gamma_rho": min(rhos) if rhos else None,
             "comparable": bool(rhos),
+            # claims may use a distance certified by the source (see build_rows)
+            "d_claim": d_claim,
+            "d_claim_certified": d_claim > d,
+            "d_claim_exact": next((bool(m["d_cert_exact"]) for m in members
+                                   if m["d_cert"] == d_claim), True) if d_claim > d else None,
+            "gamma_claim": exponent(n, k, d_claim),
+            "gamma_rho_claim": min(claims) if claims else None,
             "N_min": min(m["N"] for m in members),
             "ids": [m["id"] for m in members],
         })
     return out
 
 
-CSV_FIELDS = ("id", "n", "k", "d", "N", "r", "gate_human", "terms", "t_terms",
+CSV_FIELDS = ("id", "n", "k", "d", "d_is_exact", "d_cert", "d_cert_exact", "N", "r", "gate_human", "terms", "t_terms",
               "cs_terms", "ccz_terms", "pure_t", "t_count", "poly_degree",
-              "gamma", "gamma_t", "gamma_rho", "v_ex", "rate", "d_is_exact",
+              "gamma", "gamma_t", "gamma_rho", "v_ex", "rate",
               "discovery", "regimes", "citations", "row")
 
 
@@ -309,7 +335,7 @@ def build(out: Path, catalog_path: Path = CATALOG) -> dict:
                    "with_t_count": sum(1 for s in summaries if s["t_count"] is not None)},
         "ranges": {key: [min(s[key] for s in summaries), max(s[key] for s in summaries)]
                    for key in ("n", "k", "N")} |
-                  {"d": sorted({s["d"] for s in summaries})},
+                  {"d": sorted({s["d"] for s in summaries} | {s["d_claim"] for s in summaries})},
         "source": source_stamp(catalog_path),
         "dedup_key": catalog.get("dedup_key"),
         "regimes": catalog.get("regimes") or {},

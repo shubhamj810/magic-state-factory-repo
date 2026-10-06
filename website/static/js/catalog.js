@@ -119,13 +119,23 @@
     return new URLSearchParams(global.location.search).get(name);
   }
 
+  /* The re-verified distance, and beside it any larger distance a source certified. */
   function distanceTag(row) {
-    var dot = '<span class="dot d' + row.d + '"></span>';
-    return row.d_is_exact
-      ? '<span class="tag exact" title="proved: no harmful fault below d, one exhibited at d">' + dot +
-        "d = " + row.d + " exact</span>"
-      : '<span class="tag floor" title="proved floor: no harmful fault below d, none exhibited at d">' + dot +
-        "d &ge; " + row.d + "</span>";
+    var verified = row.d_is_exact
+      ? '<span class="tag exact" title="verified here: exact">d = ' + row.d + "</span>"
+      : '<span class="tag floor" title="verified here: a proved lower bound">d &ge; ' + row.d + "</span>";
+    if (row.d_cert && row.d_cert > row.d) {
+      verified += ' <span class="tag cert" title="certified by its source, not re-checked here">certified ' +
+        (row.d_cert_exact ? "" : "&ge; ") + row.d_cert + "</span>";
+    }
+    return verified;
+  }
+
+  /* A value computed at a source-certified distance carries a dagger. */
+  function claimMark(row) {
+    var dc = row.d_claim, dv = row.d;
+    return dc && dc > dv ? '<sup class="cert-mark" title="at the distance certified by its source, d = ' +
+      dc + '">&dagger;</sup>' : "";
   }
 
   /* One citation from the catalogue's reference table, linked when it can be. */
@@ -363,6 +373,7 @@
     gateHtml: gateHtml,
     query: query,
     distanceTag: distanceTag,
+    claimMark: claimMark,
     referenceHtml: referenceHtml,
     referenceShort: referenceShort,
     fail: fail,

@@ -13,7 +13,8 @@
   var EXPORT_FIELDS = ["id", "n", "k", "d", "N", "r", "gate_human", "gate", "terms",
                        "t_terms", "cs_terms", "ccz_terms", "pure_t", "t_count",
                        "poly_degree", "effective_width", "gamma", "gamma_t",
-                       "gamma_rho", "v_ex", "rate", "d_is_exact", "discovery",
+                       "gamma_rho", "v_ex", "rate", "d_is_exact", "d_cert", "d_cert_exact",
+                       "d_claim", "gamma_claim", "gamma_rho_claim", "discovery",
                        "regimes", "citations", "row"];
 
   function $(id) { return document.getElementById(id); }
@@ -43,8 +44,7 @@
     index.ranges.d.forEach(function (d) {
       var label = document.createElement("label");
       label.className = "pill";
-      label.innerHTML = '<input type="checkbox" name="d" value="' + d + '"><span class="dot d' + d +
-                        '"></span>' + C.tex("d=" + d);
+      label.innerHTML = '<input type="checkbox" name="d" value="' + d + '">' + C.tex("d=" + d);
       $("d-checks").appendChild(label);
     });
     var discCounts = counted(all, function (r) { return r.discovery; });
@@ -120,8 +120,8 @@
           (f.pure_t ? ' <span class="tag pure">pure T</span>' : "") + "</td>" +
         '<td class="num">' + f.N + "</td>" +
         '<td class="num">' + C.integer(f.t_count) + "</td>" +
-        '<td class="num">' + C.num(f.gamma_rho) + "</td>" +
-        '<td class="num">' + C.num(f.gamma) + "</td>" +
+        '<td class="num">' + C.num(f.gamma_rho_claim) + C.claimMark(f) + "</td>" +
+        '<td class="num">' + C.num(f.gamma_claim) + C.claimMark(f) + "</td>" +
         "<td>" + C.distanceTag(f) + "</td>" +
         '<td><span class="tag ' + (f.discovery === "AI search" ? "ai" : "pre") + '" title="' +
           C.escapeHtml(f.regimes.join("\n")) + '">' + C.escapeHtml(f.discovery || "—") + "</span></td>" +

@@ -102,6 +102,11 @@ does not hold:
 - no two rows share an id;
 - the number of rows matches `n_classes`.
 
+A few rows carry a distance certified by their source that the catalogue could
+not re-check (`d_certified`). Tables show both distances side by side. Claims,
+meaning the rankings, the frontier plot and the exponents marked †, use the
+certified distance. Filters on distance match either one.
+
 A factory's id is `n{n:04}-k{k:03}-d{d}-{sha256(n|k|d|gate)[:8]}`. It is stable
 across rebuilds, so a link to a factory keeps working. It changes only if a merge
 replaces that row's representative circuit.

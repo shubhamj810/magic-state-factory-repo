@@ -96,6 +96,20 @@ class TheBuiltSite(unittest.TestCase):
             for key in ("n", "k", "d", "N", "t_count", "poly_degree", "d_is_exact"):
                 self.assertEqual(summary[key], row[key], (summary["id"], key))
 
+    def test_certified_distances_are_carried_and_kept_apart(self):
+        certified = [r for r in self.catalog["factories"] if r.get("d_certified")]
+        self.assertTrue(certified)
+        for row in certified:
+            summary = next(f for f in self.index["factories"] if f["row"] ==
+                           self.catalog["factories"].index(row))
+            self.assertEqual(summary["d"], row["d"])                 # the verified one
+            self.assertEqual(summary["d_cert"], row["d_certified"])
+            self.assertEqual(summary["d_claim"], max(row["d"], row["d_certified"]))
+            if summary["gamma_rho"] is not None:
+                self.assertLessEqual(summary["gamma_rho_claim"], summary["gamma_rho"])
+        plain = [f for f in self.index["factories"] if f["d_cert"] is None]
+        self.assertTrue(all(f["d_claim"] == f["d"] for f in plain))
+
     def test_every_citation_resolves(self):
         for summary in self.index["factories"]:
             for key in summary["citations"]:

@@ -33,7 +33,7 @@
         <a href="search.html?has=ccz">with CCZ</a>
         <a href="search.html?kmin=1&amp;kmax=1">one output</a>
         <a href="search.html?d=5,6,7">distance <span class="tex">\ge 5</span></a>
-        <a href="search.html?sort=gamma_rho">lowest <span class="tex">\gamma_\rho</span></a>
+        <a href="search.html?sort=gamma_rho_claim">lowest <span class="tex">\gamma_\rho</span></a>
       </p>
 
       <div class="community">
@@ -92,8 +92,8 @@
         <th class="num" data-key="k" data-type="number" scope="col"><span class="tex">k</span></th>
         <th class="num" data-key="d" data-type="number" scope="col"><span class="tex">d</span></th>
         <th class="num" data-key="count" data-type="number" scope="col">gates</th>
-        <th class="num" data-key="gamma_rho" data-type="number" scope="col" title="best log(n/V_ex)/log d at these parameters">best <span class="tex">\gamma_\rho</span></th>
-        <th class="num" data-key="gamma" data-type="number" scope="col" title="log(n/k)/log d"><span class="tex">\gamma</span></th>
+        <th class="num" data-key="gamma_rho_claim" data-type="number" scope="col" title="best log(n/V_ex)/log d at these parameters">best <span class="tex">\gamma_\rho</span></th>
+        <th class="num" data-key="gamma_claim" data-type="number" scope="col" title="log(n/k)/log d"><span class="tex">\gamma</span></th>
         <th class="num" data-key="rate" data-type="number" scope="col">rate <span class="tex">k/n</span></th>
         <th class="num" data-key="best_t_count" data-type="number" scope="col">best T-count</th>
         <th class="num" data-key="N_min" data-type="number" scope="col">min <span class="tex">N</span></th>
@@ -124,6 +124,9 @@
     </dl>
     <p>For a pure <span class="tex">T^{\otimes k}</span> gate the three exponents agree.
     Lower is better for all of them.</p>
+    <p>Every distance is re-checked here. A few sources certify a larger distance than
+    we could re-check. Tables show both, and rankings and exponents use the certified
+    one, marked &dagger;.</p>
     <p>Two circuits with the same <span class="tex">n</span>, <span class="tex">k</span> and
     <span class="tex">d</span> share a row when a CNOT circuit and S, Z and CZ gates on the
     outputs turn one gate into the other. Such gates prepare the same magic state.
