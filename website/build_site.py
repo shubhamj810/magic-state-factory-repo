@@ -114,7 +114,7 @@ def exponent(n: int, denominator, d: int) -> float | None:
 
 
 # ------------------------------------------------------------------ one row
-def factory_id(row: dict) -> str:
+def legacy_id(row: dict) -> str:
     """``n0015-k001-d3-1e610403``: sortable, readable, stable across rebuilds.
 
     A row is identified by ``(n, k, d, gate)``.  The gate of a row is its
@@ -141,7 +141,10 @@ def build_rows(catalog: dict):
         if missing:
             raise ValueError(f"factories[{position}]: unknown citation(s) {missing}")
 
-        fid = factory_id(row)
+        # the public name is the catalogue's own label; the old hash id is kept
+        # only so links made before labels existed can be redirected
+        fid = row["catalog_label"]
+        old_id = legacy_id(row)
         by_degree = [sum(1 for t in terms if len(t) == w) for w in (1, 2, 3)]
         v_ex = extractable_t(terms)
         gamma = exponent(n, k, d)
@@ -155,7 +158,7 @@ def build_rows(catalog: dict):
         gate_human = row["gate_human"]
 
         summary = {
-            "id": fid, "n": n, "k": k, "d": d, "N": N, "r": N - k,
+            "id": fid, "legacy_id": old_id, "n": n, "k": k, "d": d, "N": N, "r": N - k,
             "gate": row["gate"],
             "gate_human": gate_human if len(gate_human) <= HUMAN_LIMIT
                           else gate_human[:HUMAN_LIMIT - 3] + "...",
@@ -271,6 +274,10 @@ def source_stamp(catalog_path: Path) -> dict:
 
 
 def render_pages(out: Path, stamp: dict) -> None:
+    stitch(out, list(out.glob("*.html")), stamp, depth=0)
+
+
+def stitch(out: Path, files, stamp: dict, depth: int) -> None:
     """Stitch the shared head, header and footer into every page.
 
     A page marks where they go with ``<!--#head-->``, ``<!--#header PAGE-->``
@@ -292,7 +299,9 @@ def render_pages(out: Path, stamp: dict) -> None:
         .replace("{{logo}}", logo) \
         .replace("{{stamp}}", stamp_html)
     marker = re.compile(r"<!--#header ?([^>]*)-->")
-    for page in out.glob("*.html"):
+    root = "../" * depth or "./"
+    head_here = head.replace("<!--#root-->", f'<meta name="site-root" content="{root}">')
+    for page in files:
         text = page.read_text(encoding="utf-8")
         if "<!--#" not in text:
             continue
@@ -306,10 +315,72 @@ def render_pages(out: Path, stamp: dict) -> None:
                 html = html.replace(f'data-page="{word}"', 'aria-current="page"')
             return re.sub(r' data-page="[a-z]+"', "", html).strip()
         text = marker.sub(stitched, text)
-        text = text.replace("<!--#head-->", head).replace("<!--#footer-->", footer.strip())
+        text = text.replace("<!--#head-->", head_here).replace("<!--#footer-->", footer.strip())
         if "<!--#" in text:
             raise ValueError(f"{page.name}: an unknown template marker is left")
-        page.write_text(text, encoding="utf-8")
+        page.write_text(relocate(text, depth), encoding="utf-8")
+
+
+_RELATIVE = re.compile(r'(\b(?:href|src|action|data-href)=")(?!https?:|/|#|mailto:|data:|javascript:)')
+
+
+def relocate(text: str, depth: int) -> str:
+    """Prefix every relative link with ``../`` per directory level."""
+    return _RELATIVE.sub(lambda m: m.group(1) + "../" * depth, text) if depth else text
+
+
+def shell(title: str, description: str, main: str, current: str, scripts, depth: int,
+          canonical: str) -> str:
+    """A whole page around ``main``: the shared head, header and footer."""
+    import pages as P
+    text = f"""<!doctype html>
+<html lang="en">
+<head>
+<!--#head-->
+<title>{P.esc(title)}</title>
+<meta name="description" content="{P.esc(description)}">
+<link rel="canonical" href="{P.SITE}{canonical}">
+<meta property="og:title" content="{P.esc(title)}">
+<meta property="og:description" content="{P.esc(description)}">
+</head>
+<body data-prerendered="1">
+<!--#header {current}-->
+{main}
+<!--#footer-->
+{"".join(f'<script src="js/{name}"></script>' + chr(10) for name in scripts)}</body>
+</html>
+"""
+    return text
+
+
+def render_entries(out: Path, index: dict, records: list) -> None:
+    """f/<label>/ for every factory and p/<n>.<k>.<d>/ for every parameter set."""
+    import pages as P
+    by_id = {f["id"]: f for f in index["factories"]}
+    groups = {(g["n"], g["k"], g["d"]): g for g in index["parameters"]}
+    pages = []
+    for record in records:
+        title, desc, main = P.factory_page(record, by_id[record["id"]], groups, by_id, index["source"])
+        path = P.factory_path(record["id"])
+        pages.append((path, shell(title, desc, main, "browse",
+                                  ["catalog.js", "glequiv.js", "transform.js", "factory.js"], 2, path)))
+    for key, group in groups.items():
+        members = sorted((by_id[i] for i in group["ids"]), key=lambda f: f["id"])
+        title, desc, main = P.params_page(group, members, groups)
+        path = P.params_path(*key)
+        pages.append((path, shell(title, desc, main, "browse",
+                                  ["catalog.js", "query.js", "params.js"], 2, path)))
+    for path, text in pages:
+        target = out / path / "index.html"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(text, encoding="utf-8")
+    stitch(out, [out / path / "index.html" for path, _ in pages], index["source"], depth=2)
+    sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
+               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for path in ["", "search.html", "about.html"] + [path for path, _ in pages]:
+        sitemap.append(f"  <url><loc>{P.SITE}{path}</loc></url>")
+    sitemap.append("</urlset>")
+    (out / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
 
 
 def build(out: Path, catalog_path: Path = CATALOG) -> dict:
@@ -321,7 +392,10 @@ def build(out: Path, catalog_path: Path = CATALOG) -> dict:
 
     ids = [s["id"] for s in summaries]
     if len(set(ids)) != len(ids):
-        raise ValueError("two rows share an id: (n, k, d, gate) is not unique")
+        raise ValueError("two rows share a catalog_label")
+    references_map = catalog.get("references") or {}
+    for s_ in summaries:
+        s_["cite_text"] = "; ".join(references_map.get(c, {}).get("short", c) for c in s_["citations"])
     if catalog.get("n_classes") not in (None, len(summaries)):
         raise ValueError(f"n_classes says {catalog['n_classes']}, "
                          f"the file has {len(summaries)} rows")
@@ -362,6 +436,7 @@ def build(out: Path, catalog_path: Path = CATALOG) -> dict:
             writer.writerow(["; ".join(s[f]) if isinstance(s[f], list) else s[f]
                              for f in CSV_FIELDS])
     render_pages(out, index["source"])
+    render_entries(out, index, records)
     # GitHub Pages runs Jekyll unless told not to, and Jekyll drops _-prefixed paths.
     (out / ".nojekyll").write_text("", encoding="utf-8")
     return index

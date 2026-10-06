@@ -3,90 +3,27 @@
 <head>
 <!--#head-->
 <title>Factory · Magic State Factory Catalog</title>
-<meta name="description" content="One magic-state factory with its binary matrix, output gate, distance, T-count, overhead exponents and references.">
+<meta name="robots" content="noindex">
 </head>
 <body>
 <!--#header browse-->
-
-<section class="page-head">
-  <div class="inner">
-    <nav class="crumbs" id="crumbs" aria-label="breadcrumb"><span><a href="index.html">Home</a></span><span><a href="index.html#parameters">Parameters</a></span></nav>
-    <h1 id="heading">&hellip;</h1>
-    <p class="lede" id="blurb"></p>
-    <nav class="jump" aria-label="on this page"><a href="#matrix">Circuit</a><a href="#metrics">Figures of merit</a>
-    <a href="#gate">Gate</a><a href="#transform">Convert</a><a href="#distance">Distance</a><a href="#references">References</a>
-    <a href="#provenance">Provenance</a></nav>
-  </div>
-</section>
-
-<main id="main" class="wide">
-  <h2 id="matrix" style="margin-top:8px">The circuit</h2>
-  <p class="section-intro" id="matrix-caption"></p>
-  <div class="matrix-bar">
-    <ul class="legend">
-      <li><span class="swatch out" aria-hidden="true"></span>output wires</li>
-      <li><span class="swatch chk" aria-hidden="true"></span>check wires, measured and postselected</li>
-    </ul>
-    <div class="seg" role="group" aria-label="matrix view">
-      <button type="button" id="view-cells" aria-pressed="true">Cells</button>
-      <button type="button" id="view-digits" aria-pressed="false">0 / 1</button>
-    </div>
-  </div>
-  <div class="matrix-wrap cells" id="matrix-wrap" tabindex="0" role="region" aria-label="binary matrix, scrollable"></div>
-  <div class="toolbar export" id="export">
-    <span class="label">Export</span>
-    <button type="button" class="btn" id="copy-columns" title="the columns as a JSON list of wire lists, the catalogue's own format">Copy columns</button>
-    <button type="button" class="btn" id="copy-numpy" title="the N by n matrix as a numpy array">Copy as numpy</button>
-    <button type="button" class="btn" id="download-csv">Matrix CSV</button>
-    <a class="btn" id="download-json" download>Record JSON</a>
-  </div>
-  <p class="small muted" id="matrix-note"></p>
-
-  <h2 id="metrics">Parameters and figures of merit</h2>
-  <div class="metrics" id="metric-grid" style="margin-top:14px"></div>
-
-  <h2 id="gate">Output gate</h2>
-  <div class="panel" id="gate-panel" style="margin-top:14px"></div>
-
-  <h2 id="transform">Convert the output with CNOT and S</h2>
-  <div class="panel" id="transform-panel" style="margin-top:14px">
-    <p class="small muted" id="tf-intro">A CNOT circuit on the outputs, followed by S, Z and CZ
-    gates, turns this factory's gate into other gates that prepare the same magic state.
-    Type a target gate to check whether it is reachable. If it is, you get the circuit,
-    checked on every basis state.</p>
-    <form class="tf-row" id="tf-form" autocomplete="off">
-      <label class="sr-only" for="tf-target">Target gate</label>
-      <input id="tf-target" type="text" spellcheck="false" placeholder="e.g. T0·CS01   or   0+01">
-      <button type="submit" class="btn primary" id="tf-check">Check and construct</button>
-      <button type="button" class="btn" id="tf-random" title="fill in this gate after a random change of output basis">Random equivalent gate</button>
-    </form>
-    <div id="tf-result" aria-live="polite"></div>
-  </div>
-
-  <h2 id="distance">Distance</h2>
-  <div class="panel" id="distance-panel" style="margin-top:14px"></div>
-
-  <h2 id="references">References</h2>
-  <div class="panel" id="references-panel" style="margin-top:14px"></div>
-
-  <h2 id="provenance">Provenance</h2>
-  <div class="panel" id="provenance-panel" style="margin-top:14px"></div>
-
-  <h2>Raw record</h2>
-  <div class="panel" style="margin-top:14px">
-    <details>
-      <summary>Show the JSON this page is built from</summary>
-      <pre class="raw" id="raw"></pre>
-    </details>
-    <p class="small muted" style="margin:10px 0 0" id="source-line"></p>
-  </div>
+<main id="main">
+  <h1>Moved</h1>
+  <p class="lede" id="msg">Factories now live at their own address, such as <a href="f/15.1.3.a/">f/15.1.3.a/</a>. Redirecting…</p>
 </main>
-
 <!--#footer-->
-
 <script src="js/catalog.js"></script>
-<script src="js/glequiv.js"></script>
-<script src="js/transform.js"></script>
-<script src="js/factory.js"></script>
+<script>
+/* Old links: factory.html?id=<label or old hash id> -> f/<label>/ */
+(function () {
+  var C = window.Catalog, id = C.query("id") || "";
+  C.loadIndex().then(function (index) {
+    var hit = index.factories.filter(function (f) { return f.id === id || f.legacy_id === id; })[0];
+    if (hit) { window.location.replace(C.factoryHref(hit.id)); return; }
+    document.getElementById("msg").innerHTML = "Could not load a factory with id <code>" + C.escapeHtml(id) +
+      "</code>. <a href=\"search.html\">Search the catalogue</a> instead.";
+  });
+}());
+</script>
 </body>
 </html>

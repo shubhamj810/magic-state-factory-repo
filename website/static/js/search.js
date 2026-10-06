@@ -104,7 +104,7 @@
       var s = Object.assign({}, state);
       if (s.size === 50) delete s.size;
       if (s.page === 1) delete s.page;
-      if (s.sort === "order" && s.dir === 1) { delete s.sort; delete s.dir; }
+      if (s.sort === "label_order" && s.dir === 1) { delete s.sort; delete s.dir; }
       history.replaceState(null, "", window.location.pathname + Q.writeState(s));
     }
 
@@ -112,6 +112,7 @@
     function row(f) {
       var href = C.factoryHref(f.id);
       return '<tr class="clickable" data-href="' + href + '">' +
+        '<td class="lab"><a href="' + href + '">' + C.escapeHtml(f.id) + "</a></td>" +
         '<td class="params"><a href="' + C.paramsHref(f.n, f.k, f.d) + '" title="all gates at these parameters" aria-label="' +
           C.params(f.n, f.k, f.d) + '">' + C.paramsTex(f.n, f.k, f.d) + "</a></td>" +
         '<td class="gate"><a href="' + href + '" aria-label="' + C.escapeHtml(f.gate_human) + '">' + C.gateTex(f.gate_human) + "</a>" +
@@ -119,7 +120,6 @@
                               f.terms + " terms</span>" : "") +
           (f.pure_t ? ' <span class="tag pure">pure T</span>' : "") + "</td>" +
         '<td class="num">' + f.N + "</td>" +
-        '<td class="num">' + C.integer(f.t_count) + "</td>" +
         '<td class="num">' + C.num(f.gamma_rho_claim) + C.claimMark(f) + "</td>" +
         '<td class="num">' + C.num(f.gamma_claim) + C.claimMark(f) + "</td>" +
         "<td>" + C.distanceTag(f) + "</td>" +
@@ -163,7 +163,7 @@
 
     show();
     table = C.sortable($("table"), getRows, render,
-                       { key: state.sort || "order", direction: state.dir === -1 ? -1 : 1 },
+                       { key: state.sort || "label_order", direction: state.dir === -1 ? -1 : 1 },
                        function (s) { state.sort = s.key; state.dir = s.direction; state.page = 1; });
 
     function update() {
@@ -175,7 +175,7 @@
     function reset() {
       state = {};
       show();
-      table.set({ key: "order", direction: 1 });
+      table.set({ key: "label_order", direction: 1 });
     }
 
     /* ------------------------------------------------------------- wiring */

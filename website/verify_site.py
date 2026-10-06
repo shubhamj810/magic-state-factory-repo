@@ -34,6 +34,7 @@ import functools
 import http.server
 import json
 import random
+import re
 import socket
 import sys
 import threading
@@ -182,9 +183,9 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         # ---------------------------------------------------------- landing
         visit("", "index.html", "#body tr")
         rows = page.query_selector_all("#body tr")
-        failures.check(len(rows) == min(50, len(parameters)),
+        failures.check(len(rows) == min(20, len(parameters)),
                        f"index.html shows {len(rows)} rows on page 1, expected "
-                       f"{min(50, len(parameters))}")
+                       f"{min(20, len(parameters))}")
         count = page.inner_text("#count")
         failures.check(f"{len(parameters)} of {len(parameters)}" in count,
                        f"index.html count reads {count!r}")
@@ -197,13 +198,14 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         failures.check(page.query_selector("#frontier-plot svg") is not None,
                        "index.html: the frontier plot did not render")
         claimed = {p["d_claim"] for p in parameters if p["comparable"]}
-        failures.check(len(page.query_selector_all("#record-cards a.record")) == len(claimed),
+        failures.check(len(page.query_selector_all("#record-cards tbody tr")) == len(claimed),
                        f"index.html: expected one record card per claimed distance {sorted(claimed)}")
         best_claim = min((p for p in parameters if p["gamma_rho_claim"] is not None),
                          key=lambda p: p["gamma_rho_claim"])
         failures.check(f"{best_claim['gamma_rho_claim']:.4f}" in page.inner_text("#headline-stats"),
                        f"index.html: headline does not show the best claim {best_claim['gamma_rho_claim']:.4f}")
-        failures.check(len(page.query_selector_all("#cite-list li")) >= 1,
+        failures.check(page.query_selector("#cite-list") is None or
+                       len(page.query_selector_all("#cite-list li")) >= 1,
                        "index.html: the how-to-cite list is empty")
         _ghosts(page, failures, "index.html")
         # the hero draws the 15-to-1 factory from its own record: N x n cells
@@ -230,8 +232,8 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
                        f"index.html filter 'k=1 d=3' reads {page.inner_text('#count')!r}, "
                        f"expected {expected}")
         hrefs = [a.get_attribute("href") for a in page.query_selector_all("#body a[href]")]
-        failures.check(hrefs and all(h.startswith("params.html?") for h in hrefs),
-                       "index.html has a row link that does not go to params.html")
+        failures.check(hrefs and all(h.startswith("./p/") or h.startswith("p/") for h in hrefs),
+                       "index.html has a row link that does not go to a parameter page")
         # the landing search box submits into search.html
         page.fill("#hero-q", "CCZ")
         page.click(".searchbar.big button[type=submit]")
@@ -281,8 +283,8 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         linked: set[str] = set()
         for p in wanted_params:
             where = f"params.html [[{p['n']},{p['k']},{p['d']}]]"
-            visit(f"params.html?n={p['n']}&k={p['k']}&d={p['d']}", where, "#body tr")
-            links = [a.get_attribute("href") for a in page.query_selector_all("#body td.gate a[href]")]
+            visit(f"p/{p['n']}.{p['k']}.{p['d']}/", where, "#body tr")
+            links = [a.get_attribute("href") for a in page.query_selector_all("#body td.lab a[href]")]
             failures.check(len(links) == p["count"],
                            f"{where}: {len(links)} gate links for {p['count']} factories")
             title = page.title()
@@ -291,10 +293,11 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
                            f"{where}: title is {title!r}, or the heading was not typeset")
             _ghosts(page, failures, where)
             for href in links:
-                if not href or not href.startswith("factory.html?id="):
-                    failures.append(f"{where}: bad gate link {href!r}")
+                match = re.search(r"(?:^|/)f/([^/]+)/$", href or "")
+                if not match:
+                    failures.append(f"{where}: bad factory link {href!r}")
                 else:
-                    linked.add(href.split("id=", 1)[1])
+                    linked.add(match.group(1))
 
         # ---------------------------------------------------------- factory
         by_id = {f["id"]: f for f in factories}
@@ -310,7 +313,7 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
                 continue
             record = json.loads((site / "data" / "factories" / f"{fid}.json").read_text())
             where = f"factory.html {fid}"
-            visit(f"factory.html?id={fid}", where, "table.matrix tbody tr", timeout=40000)
+            visit(f"f/{fid}/", where, "table.matrix tbody tr", timeout=40000)
             stats["factories"] += 1
             k, N, n = (record["parameters"][key] for key in ("k", "N", "n"))
             matrix_rows = page.query_selector_all("table.matrix tbody tr")
@@ -337,8 +340,8 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
             failures.check(len(refs) == len(record["references"]),
                            f"{where}: {len(refs)} references shown, record cites "
                            f"{len(record['references'])}")
-            failures.check(page.query_selector('#crumbs a[href^="params.html"]') is not None,
-                           f"{where}: no breadcrumb back to params.html")
+            failures.check(page.query_selector('#crumbs a[href*="p/"]') is not None,
+                           f"{where}: no breadcrumb back to its parameter page")
             _ghosts(page, failures, where)
 
         # ------------------------------------------- the CNOT + S tool, cross-checked
@@ -353,7 +356,7 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         other = next(f for f in same_k[1:]
                      if glcanon.gl_isomorphic(3, monos(source["gate"], 3), monos(f["gate"], 3)) is False)
         where = f"factory.html {source['id']} (CNOT + S tool)"
-        visit(f"factory.html?id={source['id']}", where, "table.matrix tbody tr")
+        visit(f"f/{source['id']}/", where, "table.matrix tbody tr")
         page.fill("#tf-target", other["gate_human"])
         page.click("#tf-check")
         page.wait_for_selector(".tf-verdict")
@@ -362,8 +365,8 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
                        f"{page.inner_text('.tf-verdict')[:80]!r}")
         page.wait_for_function("!/Looking/.test(document.getElementById('tf-elsewhere').textContent)",
                                timeout=60000)
-        listed = [a.get_attribute("href").split("id=", 1)[1]
-                  for a in page.query_selector_all("#tf-elsewhere a[href^='factory.html']")]
+        listed = [re.search(r"f/([^/]+)/$", a.get_attribute("href")).group(1)
+                  for a in page.query_selector_all("#tf-elsewhere a[href*='f/']")]
         by = {f["id"]: f for f in factories}
         failures.check(listed, f"{where}: no catalogued factory listed for {other['gate_human']}")
         for fid in listed:
@@ -383,7 +386,7 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
 
         # one export from a factory page, checked cell by cell
         small = factories[0]["id"]
-        visit(f"factory.html?id={small}", "factory.html export", "table.matrix tbody tr")
+        visit(f"f/{small}/", "factory page export", "table.matrix tbody tr")
         with page.expect_download() as info:
             page.click("#download-csv")
         record = json.loads((site / "data" / "factories" / f"{small}.json").read_text())
@@ -392,6 +395,30 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         failures.check(len(lines) == record["parameters"]["N"] + 1 and
                        ones == sum(len(c) for c in record["circuit"]["columns"]),
                        f"factory.html {small}: matrix CSV does not match the columns")
+
+        # ------------------------------------------ old links still work
+        old = factories[0]
+        for url, want in ((f"factory.html?id={old['legacy_id']}", f"/f/{old['id']}/"),
+                          (f"factory.html?id={old['id']}", f"/f/{old['id']}/"),
+                          (f"params.html?n={old['n']}&k={old['k']}&d={old['d']}",
+                           f"/p/{old['n']}.{old['k']}.{old['d']}/")):
+            watcher.at(url)
+            page.goto(f"{base}/{url}")
+            try:
+                page.wait_for_url(f"**{want}", timeout=15000)
+            except Exception:
+                failures.append(f"{url}: did not redirect to {want} (at {page.url})")
+            stats["pages"] += 1
+        # every page reads without JavaScript: a static factory page
+        bare = browser.new_context(java_script_enabled=False).new_page()
+        bare.goto(f"{base}/f/{old['id']}/")
+        failures.check(bare.title().startswith(old["id"]) and
+                       len(bare.query_selector_all("table.matrix tbody tr")) == old["N"],
+                       f"f/{old['id']}/ does not render its title and matrix without JavaScript")
+        about = browser.new_context().new_page()
+        about.goto(f"{base}/about.html", wait_until="networkidle")
+        failures.check(len(about.query_selector_all("#cite-list li")) >= 1,
+                       "about.html: the how-to-cite list is empty")
 
         # ------------------------------------------- graceful failures
         for url, expect in (("params.html?n=999999&k=1&d=3", "Nothing catalogued"),

@@ -135,7 +135,8 @@ class TheBuiltSite(unittest.TestCase):
                 self.assertTrue((self.out / target).exists(), f"{page.name} -> {target}")
 
     def test_every_page_has_the_shared_chrome(self):
-        current = {"search.html": "Search", "params.html": "Browse", "factory.html": "Browse"}
+        current = {"search.html": "Search", "params.html": "Browse", "factory.html": "Browse",
+                   "about.html": "About"}
         for page in self.out.glob("*.html"):
             if page.name == "404.html":
                 continue                  # standalone: served at any depth
@@ -153,6 +154,33 @@ class TheBuiltSite(unittest.TestCase):
         stamp = self.index["source"]
         if stamp.get("commit"):
             self.assertIn(stamp["commit"], (self.out / "index.html").read_text(encoding="utf-8"))
+
+    def test_every_factory_and_parameter_set_has_a_static_page(self):
+        for f in self.index["factories"]:
+            page = self.out / "f" / f["id"] / "index.html"
+            self.assertTrue(page.exists(), f["id"])
+        for p in self.index["parameters"]:
+            self.assertTrue((self.out / "p" / f"{p['n']}.{p['k']}.{p['d']}" / "index.html").exists())
+
+    def test_a_factory_page_reads_without_javascript(self):
+        f = next(x for x in self.index["factories"] if x["id"] == "15.1.3.a")
+        text = (self.out / "f" / "15.1.3.a" / "index.html").read_text(encoding="utf-8")
+        self.assertIn("<title>15.1.3.a · [[15, 1, 3]]", text)
+        self.assertIn('<table class="matrix">', text)
+        self.assertEqual(text.count('<tr class="out'), f["k"])
+        self.assertEqual(text.count('<tr class="chk'), f["N"] - f["k"])
+        self.assertIn("@misc{msfc:15.1.3.a", text)
+        self.assertNotIn("<!--#", text)
+
+    def test_nested_pages_link_back_to_the_root(self):
+        local = re.compile(r'(?:src|href)="([^"#?:]+\.(?:js|css|svg|html|json|csv))"')
+        page = self.out / "f" / "15.1.3.a" / "index.html"
+        for target in local.findall(page.read_text(encoding="utf-8")):
+            self.assertTrue((page.parent / target).resolve().exists(), target)
+
+    def test_the_sitemap_lists_every_page(self):
+        sitemap = (self.out / "sitemap.xml").read_text(encoding="utf-8")
+        self.assertEqual(sitemap.count("<loc>"), 3 + len(self.index["factories"]) + len(self.index["parameters"]))
 
     def test_nojekyll(self):
         self.assertTrue((self.out / ".nojekyll").exists())

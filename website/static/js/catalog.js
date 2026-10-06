@@ -13,7 +13,11 @@
 (function (global) {
   "use strict";
 
-  var DATA = "data/";
+  /* Pages live at the site root and two levels down (f/<label>/, p/<n.k.d>/);
+   * the build writes how far up the root is, and every link is made from it. */
+  var rootMeta = document.querySelector('meta[name="site-root"]');
+  var ROOT = rootMeta ? rootMeta.getAttribute("content") : "./";
+  var DATA = ROOT + "data/";
   var REPO = "https://github.com/shubhamj810/magic-state-factory-repo";
   var CATALOG_FILE = REPO + "/blob/main/master_catalog/master_catalog.json";
   var CATALOG_RAW = "https://raw.githubusercontent.com/shubhamj810/magic-state-factory-repo/main/master_catalog/master_catalog.json";
@@ -29,7 +33,7 @@
     return indexPromise;
   }
 
-  var ID_RE = /^n\d{4,}-k\d{3,}-d\d+-[0-9a-f]{8}$/;
+  var ID_RE = /^\d+\.\d+\.\d+\.[a-z]+$/;           /* a catalog label, n.k.d.x */
 
   function loadFactory(id) {
     if (!ID_RE.test(id)) return Promise.reject(new Error("not a factory id: " + id));
@@ -102,11 +106,15 @@
   }
 
   function paramsHref(n, k, d) {
-    return "params.html?n=" + n + "&k=" + k + "&d=" + d;
+    return ROOT + "p/" + n + "." + k + "." + d + "/";
   }
 
-  function factoryHref(id) {
-    return "factory.html?id=" + encodeURIComponent(id);
+  function factoryHref(label) {
+    return ROOT + "f/" + label + "/";
+  }
+
+  function url(path) {
+    return ROOT + path;
   }
 
   function escapeHtml(text) {
@@ -368,6 +376,8 @@
     gateTex: gateTex,
     renderTex: renderTex,
     paramsHref: paramsHref,
+    url: url,
+    ROOT: ROOT,
     factoryHref: factoryHref,
     escapeHtml: escapeHtml,
     gateHtml: gateHtml,

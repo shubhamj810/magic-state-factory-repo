@@ -38,6 +38,10 @@
     var refs = index.references || {};
     index.factories.forEach(function (f) {
       f.order = f.n * 10000 + f.k * 10 + f.d;
+      /* labels sort by their letter code as a number: z (25) before ba (26) */
+      var letters = f.id.split(".").pop(), code = 0;
+      for (var i = 0; i < letters.length; i++) code = code * 26 + (letters.charCodeAt(i) - 97);
+      f.label_order = f.order * 100000 + code;
       f._mono = monomialKeys(f.gate, f.k);
       f.cite_text = f.citations.map(function (c) { return refs[c] ? refs[c].short : c; }).join("; ");
       f._text = [f.id, f.gate_human, f.regimes.join(" "), f.discovery || "", f.cite_text,

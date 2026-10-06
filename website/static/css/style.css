@@ -276,13 +276,12 @@ a.tile:hover .t { color: var(--brand); }
 .toolbar .count { margin-left: auto; font-size: 13.5px; color: var(--text-dim); }
 .toolbar .spacer { flex: 1; }
 
-.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius);
-              background: var(--surface); box-shadow: var(--shadow); }
+.table-wrap { overflow-x: auto; border-top: 1px solid var(--text); background: var(--surface); }
 table { border-collapse: collapse; width: 100%; font-size: 14px; }
 thead th {
-  position: sticky; top: 0; background: var(--surface-2); text-align: left;
+  position: sticky; top: 0; background: var(--surface); text-align: left;
   font: 600 12.5px/1.4 var(--sans); color: var(--text-dim); padding: 11px 14px;
-  border-bottom: 1px solid var(--border); white-space: nowrap; cursor: pointer; user-select: none;
+  border-bottom: 1px solid var(--border-strong); white-space: nowrap; cursor: pointer; user-select: none;
 }
 thead th:hover { color: var(--text); }
 thead th.nosort { cursor: default; }
@@ -478,8 +477,7 @@ tr.chk td.bits b { color: var(--check); }
 .metrics .v.none { color: var(--muted); font-weight: 500; font-size: 14px; }
 .metrics .note { display: block; margin-top: 6px; font-size: 12px; line-height: 1.5; color: var(--text-dim); }
 
-.panel { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface);
-         padding: 18px 20px; box-shadow: var(--shadow-sm); }
+.panel { padding: 0; }
 .panel + .panel { margin-top: 14px; }
 .panel > :last-child { margin-bottom: 0; }
 ol.refs { margin: 0; padding-left: 22px; font-size: 14px; }
@@ -591,3 +589,47 @@ footer.site code { color: #dfe3fa; }
 .btn.ghost { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.45); }
 .btn.ghost:hover { border-color: #fff; background: rgba(255, 255, 255, 0.06); }
 .cert-note { display: block; font-size: 12px; color: var(--text-dim); margin-top: 4px; font-style: italic; }
+
+/* ------------------------------------------------------- factory pages */
+.label-h { font-family: var(--mono); font-weight: 500; letter-spacing: -0.01em; }
+.page-head .gate-lede { margin: 2px 0 14px; color: var(--text); font-size: 20px; }
+dl.summary { display: flex; flex-wrap: wrap; gap: 10px 32px; margin: 6px 0 0; padding: 12px 0 0;
+             border-top: 1px solid var(--border); }
+dl.summary div { min-width: 90px; }
+dl.summary dt { font-size: 12.5px; color: var(--text-dim); margin-bottom: 2px; }
+dl.summary dd { margin: 0; font-size: 16px; font-variant-numeric: tabular-nums; }
+.entry-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 48px; align-items: start; }
+.entry-main > h2:first-child { margin-top: 8px; }
+aside.side { position: sticky; top: 80px; font-size: 14px; padding-top: 14px; }
+aside.side section { padding: 0 0 18px; margin-bottom: 18px; border-bottom: 1px solid var(--border); }
+aside.side section:last-child { border-bottom: 0; }
+aside.side h3 { margin: 0 0 8px; font: 600 14px var(--sans); }
+aside.side h4 { margin: 12px 0 4px; font: 500 12.5px var(--sans); color: var(--text-dim); }
+aside.side ul { list-style: none; margin: 0; padding: 0; }
+aside.side li { margin: 3px 0; }
+aside.side .related .katex { font-size: 1em; }
+pre.bib { font: 11.5px/1.5 var(--mono); background: var(--surface-2); border: 1px solid var(--border);
+          border-radius: var(--radius); padding: 10px; overflow-x: auto; white-space: pre; margin: 0 0 8px; }
+td.lab { font-family: var(--mono); font-size: 13px; white-space: nowrap; }
+td.lab a { color: var(--brand); }
+
+/* ------------------------------------------------------------ landing */
+.records-wrap { margin-top: 14px; }
+.records-table td { vertical-align: middle; }
+.records-table td .muted .katex { font-size: 0.95em; }
+
+/* -------------------------------------------------------------- guide */
+main.guide { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 48px; align-items: start; }
+nav.toc { position: sticky; top: 84px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; padding-top: 52px; }
+nav.toc a { color: var(--text-dim); }
+nav.toc a:hover { color: var(--brand); }
+main.guide .prose { max-width: 68ch; }
+main.guide .prose p, main.guide .prose li { font-size: 16.5px; line-height: 1.65; }
+main.guide h2:first-child { margin-top: 24px; }
+
+@media (max-width: 1000px) {
+  .entry-grid { grid-template-columns: 1fr; gap: 0; }
+  aside.side { position: static; border-top: 1px solid var(--border); margin-top: 32px; }
+  main.guide { grid-template-columns: 1fr; gap: 0; }
+  nav.toc { position: static; flex-direction: row; flex-wrap: wrap; gap: 6px 14px; padding-top: 8px; }
+}

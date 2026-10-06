@@ -13,12 +13,15 @@ master_catalog/master_catalog.json          813 rows, columns included
             |  website/build_site.py         standard library only, ~1 s
             v
 website/_site/                               (git-ignored; built in CI)
-  index.html    landing: best results, γ_ρ frontier, [[n,k,d]] table, cite, download
-  search.html   every factory: filters, typed queries, sort, CSV/JSON export
-  params.html   every inequivalent gate at one [[n,k,d]]
-  factory.html  one circuit: its matrix, metrics, references, export
+  index.html          landing: search, best factories, frontier, parameter table
+  about.html          what the numbers mean, distances, labels, citing, data, contributing
+  search.html         every factory: filters, typed queries, sort, CSV/JSON export
+  f/<label>/          one static page per factory, e.g. f/15.1.3.a/
+  p/<n>.<k>.<d>/      one static page per parameter set, e.g. p/15.1.3/
+  factory.html, params.html   old addresses, redirected to the two above
+  sitemap.xml         every page, for search engines
   data/index.json             every row WITHOUT columns (what the list pages read)
-  data/factories/<id>.json    one row WITH columns (what one factory page reads)
+  data/factories/<label>.json one row WITH columns
   data/factories.csv          the index as a spreadsheet
 ```
 
@@ -28,6 +31,25 @@ website/_site/                               (git-ignored; built in CI)
 python website/build_site.py
 python -m http.server -d website/_site 8000      # open http://localhost:8000/
 ```
+
+## Static pages and labels
+
+Every factory and parameter page is rendered to HTML at build time
+([`pages.py`](pages.py)), so it has its own title and description, reads
+without JavaScript, and can be indexed by search engines (including Google
+Scholar) and archived. The scripts only add interaction on top: sorting, the
+matrix view toggle, exports, the CNOT + S tool and KaTeX typesetting.
+
+A factory's address is its catalogue label, `catalog_label` in
+`master_catalog.json`, for example `f/15.1.3.a/`. Labels are assigned once by
+the catalogue and never change, so these links are permanent. Links in the old
+form, `factory.html?id=…` (including the hash ids used before labels) and
+`params.html?n=…&k=…&d=…`, redirect to the new pages.
+
+Each factory page has a BibTeX entry, downloads, related parameter sets and a
+"Report a problem" link that opens a prefilled GitHub issue.
+[`CITATION.cff`](../CITATION.cff) at the repository root gives GitHub's
+"Cite this repository" button and describes releases archived on Zenodo.
 
 ## Layout and design
 
@@ -107,9 +129,9 @@ not re-check (`d_certified`). Tables show both distances side by side. Claims,
 meaning the rankings, the frontier plot and the exponents marked †, use the
 certified distance. Filters on distance match either one.
 
-A factory's id is `n{n:04}-k{k:03}-d{d}-{sha256(n|k|d|gate)[:8]}`. It is stable
-across rebuilds, so a link to a factory keeps working. It changes only if a merge
-replaces that row's representative circuit.
+A factory's id on the site is its `catalog_label`. The earlier hash id
+`n{n:04}-k{k:03}-d{d}-{sha256(n|k|d|gate)[:8]}` is still computed, as
+`legacy_id`, only so old links can be redirected.
 
 ## Searching
 
@@ -118,6 +140,7 @@ The search box takes words, combined with AND:
 | type | means |
 |---|---|
 | `[[49, 1, 5]]` | exactly these parameters |
+| `15.1.3.a` | a factory by its label |
 | `n<=100` `k=2` `d>=5` `N<12` `r=4` | parameters (`n` and `N` are different) |
 | `t<=4` `deg=2` `g<1.3` | T-count, phase-polynomial degree, γ_ρ |
 | `T0` `CS01` `CCZ012` `CCZ10,11,12` | the gate contains this exact term |
@@ -143,6 +166,8 @@ rendered page against counts it computes itself:
 - 22 searches;
 - the CSV export;
 - the hero matrix, the plot tooltip, and that KaTeX typeset the maths;
+- the new addresses: old links redirect, and a factory page renders its title
+  and matrix with JavaScript turned off;
 - the CNOT + S tool, against `master_catalog/glcanon.py`: an inequivalent target is
   refused, every factory it lists instead really is equivalent, and random
   equivalent targets come back with a construction checked on every basis state;

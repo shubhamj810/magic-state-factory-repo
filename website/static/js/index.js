@@ -3,7 +3,7 @@
 (function (global) {
   "use strict";
   var C = global.Catalog, Q = global.Query;
-  var PAGE = 50;
+  var PAGE = 20;
 
   /* ------------------------------------------- the hero's binary matrix */
   function heroMatrix(record) {
@@ -54,10 +54,6 @@
     Q.prepare(index);
     document.getElementById("hero-count").textContent = index.counts.factories + " verified";
 
-    var refs = index.references || {};
-    document.getElementById("cite-list").innerHTML =
-      ["jain2026symmetry", "wills2026classification"].filter(function (key) { return refs[key]; })
-        .map(function (key) { return "<li>" + C.referenceHtml(refs[key]) + "</li>"; }).join("");
 
     /* The landmarks and the hero read the same index; a failure to draw them
      * must not take the table down with it, so they are mounted defensively. */
@@ -70,7 +66,7 @@
     if (bk) {
       C.loadFactory(bk.id).then(function (record) {
         document.getElementById("hm-svg").innerHTML = heroMatrix(record);
-        document.getElementById("hm-link").href = C.factoryHref(bk.id);
+        document.getElementById("hm-link").href = C.factoryHref(bk.id);   /* 15.1.3.a */
       }).catch(function (e) { if (global.console) console.error("hero matrix:", e); });
     }
 
@@ -107,7 +103,7 @@
         (pages > 1 ? " · page " + page + " of " + pages : "");
       pager.innerHTML = C.pagerHtml(page, pages);
       if (!slice.length) {
-        body.innerHTML = '<tr><td colspan="10" class="empty">Nothing matches that filter.</td></tr>';
+        body.innerHTML = '<tr><td colspan="8" class="empty">Nothing matches that filter.</td></tr>';
         return;
       }
       body.innerHTML = slice.map(function (row) {
@@ -122,8 +118,6 @@
           '<td class="num">' + row.count + "</td>" +
           '<td class="num">' + C.num(row.gamma_rho_claim) + C.claimMark(row) + "</td>" +
           '<td class="num">' + C.num(row.gamma_claim) + C.claimMark(row) + "</td>" +
-          '<td class="num">' + C.num(row.rate, 4) + "</td>" +
-          '<td class="num">' + C.integer(row.best_t_count) + "</td>" +
           '<td class="num">' + row.N_min + "</td></tr>";
       }).join("");
     }

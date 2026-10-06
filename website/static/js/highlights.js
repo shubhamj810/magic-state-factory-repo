@@ -86,18 +86,25 @@
 
   /* One card per distance: the least-gamma circuit at that d, which is the
    * question the catalogue exists to answer. */
-  function recordCards(parameters) {
+  function recordCards(parameters, factories) {
     return byDistance(parameters).map(function (group) {
       var usable = group.rows.filter(function (r) { return r.comparable; });
       var best = bestBy(usable, "gamma_rho");
       if (!best) return "";
-      var widest = maxBy(usable, "v_ex_best");
-      return '<a class="record" href="' + href(best) + '">' +
-        '<span class="d">' + C.tex("d=" + group.d) + "</span>" +
-        '<span class="g">' + C.tex(C.TEX.gr + "=" + C.num(best.gamma_rho, 4)) + "</span>" +
-        '<span class="p">' + C.paramsTex(best.n, best.k, best.d) + "</span>" +
-        '<span class="meta">' + C.tex(C.TEX.vex + "=" + best.v_ex_best) + "</span>" +
-        certNote(best) + "</a>";
+      /* the factory in that parameter set that holds the record */
+      var holder = factories.filter(function (f) {
+        return f.n === best.n && f.k === best.k && f.d === best.d_verified &&
+               f.gamma_rho_claim !== null && Math.abs(f.gamma_rho_claim - best.gamma_rho) < 1e-12;
+      })[0];
+      var link = holder ? C.factoryHref(holder.id) : href(best);
+      return '<tr class="clickable" data-href="' + link + '">' +
+        "<td>" + C.tex("d" + (best.lower_bound ? "\\ge " : "=") + group.d) + "</td>" +
+        '<td><a href="' + link + '">' + (holder ? C.escapeHtml(holder.id) + " " : "") + "</a>" +
+          '<span class="muted">' + C.paramsTex(best.n, best.k, best.d) + "</span></td>" +
+        '<td class="num">' + C.num(best.gamma_rho, 4) + "</td>" +
+        '<td class="num">' + best.v_ex_best + "</td>" +
+        '<td class="small muted">' + (best.certified ? "distance certified by its source" +
+          (best.lower_bound ? " as a lower bound" : "") : "") + "</td></tr>";
     }).join("");
   }
 
@@ -269,13 +276,18 @@
     var p = claims(index.parameters || []);
     var slots = {
       "headline-stats": headline(p),
-      "record-cards": recordCards(p),
+      "record-cards": null,
       "frontier-plot": plot(p)
     };
     Object.keys(slots).forEach(function (id) {
       var node = document.getElementById(id);
-      if (node) node.innerHTML = slots[id];
+      if (node && slots[id] !== null) node.innerHTML = slots[id];
     });
+    var records = document.querySelector("#record-cards tbody");
+    if (records) {
+      records.innerHTML = recordCards(p, index.factories || []);
+      C.clickableRows(records);
+    }
     var figure = document.querySelector("#frontier-plot figure.plot");
     if (figure) wirePlot(figure);
   }

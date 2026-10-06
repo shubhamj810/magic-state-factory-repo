@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--#head-->
+<title>About · Magic State Factory Catalog</title>
+<meta name="description" content="What the Magic State Factory Catalog holds, what its numbers mean, how distances are checked, and how to cite, download and contribute.">
+</head>
+<body>
+<!--#header about-->
+
+<section class="page-head narrow">
+  <div class="inner">
+    <h1>About the catalogue</h1>
+    <p class="lede">What a factory is, what the numbers mean, and how to cite, download
+    and contribute.</p>
+  </div>
+</section>
+
+<main id="main" class="guide">
+  <nav class="toc" aria-label="on this page">
+    <a href="#factory">Factories</a><a href="#numbers">The numbers</a><a href="#distance">Distances</a>
+    <a href="#classes">One row per magic state</a><a href="#labels">Labels</a><a href="#citing">Citing</a>
+    <a href="#data">Data</a><a href="#contributing">Contributing</a><a href="#sources">Sources</a>
+  </nav>
+
+  <div class="prose">
+    <h2 id="factory">Factories</h2>
+    <p>A factory is a binary matrix. Each column is a <span class="tex">\pi/4</span> parity
+    rotation, which consumes one noisy T state. Each row is a wire. The first
+    <span class="tex">k</span> rows are outputs. The other <span class="tex">r</span> rows are
+    checks, which are measured and postselected. The gate the factory applies to its
+    outputs is read off the overlaps between rows.</p>
+
+    <h2 id="numbers">The numbers</h2>
+    <dl class="glossary">
+      <dt><span class="tex">n</span></dt><dd>Noisy T states consumed per run.</dd>
+      <dt><span class="tex">k</span></dt><dd>Output qubits.</dd>
+      <dt><span class="tex">d</span></dt><dd>Distance. Input errors of rate <span class="tex">p</span>
+      leave an output error of order <span class="tex">p^d</span>.</dd>
+      <dt><span class="tex">N,\ r</span></dt><dd>Wires in total, and the <span class="tex">r = N - k</span> checks.</dd>
+      <dt><span class="tex">V_{\mathrm{ex}}</span></dt><dd>T states one run yields. T and CS count one, CCZ counts two.
+      It is undefined when the gate's terms share an output.</dd>
+      <dt><span class="tex">\gamma</span></dt><dd><span class="tex">\log(n/k)/\log d</span>. Overhead per output qubit.</dd>
+      <dt><span class="tex">\gamma_T</span></dt><dd><span class="tex">\log(n/T)/\log d</span>, with <span class="tex">T</span> the T-count of the output gate.</dd>
+      <dt><span class="tex">\gamma_\rho</span></dt><dd><span class="tex">\log(n/V_{\mathrm{ex}})/\log d</span>. Overhead per extractable T state. Rankings use this one.</dd>
+    </dl>
+    <p>Lower is better for all three exponents, and for a pure <span class="tex">T^{\otimes k}</span>
+    gate they agree. They differ for CS and CCZ gates, where counting output qubits can
+    flatter a factory.</p>
+
+    <h2 id="distance">Distances</h2>
+    <p>Every distance is re-checked from the circuit. An <em>exact</em> distance is proved
+    (no undetectable damaging fault is lighter) and witnessed (one of that weight is
+    shown). Otherwise the catalogue gives a proved lower bound.</p>
+    <p>A few sources certify a larger distance than could be re-checked here. Tables show
+    both. Rankings and exponents use the certified one and mark it &dagger;.</p>
+
+    <h2 id="classes">One row per magic state</h2>
+    <p>Two circuits with the same <span class="tex">n</span>, <span class="tex">k</span> and
+    <span class="tex">d</span> share a row when a CNOT circuit and S, Z and CZ gates on the
+    outputs turn one gate into the other. Such gates prepare the same magic state. For
+    example, <span class="tex">\mathrm{T}_0\cdot\mathrm{T}_1</span> and
+    <span class="tex">\mathrm{T}_0\cdot\mathrm{CS}_{01}</span> are one class. Each factory page
+    has a tool that checks this for any target gate and builds the circuit.</p>
+
+    <h2 id="labels">Labels</h2>
+    <p>Each factory has a permanent label <code>n.k.d.x</code>, for example
+    <a href="f/15.1.3.a/"><code>15.1.3.a</code></a>. Here <span class="tex">d</span> is the
+    distance proved in the catalogue, and the letters number the classes at those
+    parameters in the order they entered the catalogue: <code>a</code> to <code>z</code>,
+    then <code>ba</code>, <code>bb</code> and so on. A label is never changed or reused.
+    It is also the page's address, <code>f/15.1.3.a/</code>.</p>
+
+    <h2 id="citing">Citing</h2>
+    <p>Each factory page has a BibTeX entry and lists the papers to cite. For the
+    catalogue as a whole, cite</p>
+    <ol class="refs" id="cite-list"></ol>
+    <p>and the repository,
+    <a href="https://github.com/shubhamj810/magic-state-factory-repo">github.com/shubhamj810/magic-state-factory-repo</a>.
+    GitHub's "Cite this repository" button gives the same in several formats.</p>
+
+    <h2 id="data">Data</h2>
+    <ul class="plain">
+      <li><a href="data/factories.csv" download>factories.csv</a>, one row per factory.</li>
+      <li><a href="data/index.json" download>index.json</a>, the same with the reference table.</li>
+      <li><code>data/factories/&lt;label&gt;.json</code>, one factory with its circuit.</li>
+      <li><a href="https://github.com/shubhamj810/magic-state-factory-repo/blob/main/master_catalog/master_catalog.json">master_catalog.json</a>, the full database.</li>
+    </ul>
+    <p>The site is rebuilt from <code>master_catalog.json</code> on every change. The footer
+    names the version it shows.</p>
+
+    <h2 id="contributing">Contributing</h2>
+    <p>The catalogue is a community effort. Send a factory in any format, such as a paper,
+    matrices, code or a notebook. Open a pull request with a folder in
+    <code>community_contributions/submissions</code>, or attach it to an issue. Each
+    submission is verified like any other row and credited to you on every class it adds.</p>
+    <p><a class="btn primary" href="https://github.com/shubhamj810/magic-state-factory-repo/tree/main/community_contributions">How to submit</a>
+    <a class="btn" href="https://github.com/shubhamj810/magic-state-factory-repo/issues/new">Open an issue</a></p>
+
+    <h2 id="sources">Sources</h2>
+    <ul class="plain">
+      <li>An exhaustive classification of generalised triorthogonal codes with up to 54 inputs (Wills, Jain and Singh).</li>
+      <li>AI-assisted and SAT searches beyond that (Jain, Wills and Singh).</li>
+      <li>Published constructions, credited to their papers.</li>
+      <li>Community submissions, verified to the same standard.</li>
+    </ul>
+  </div>
+</main>
+
+<!--#footer-->
+
+<script src="js/catalog.js"></script>
+<script>
+(function () {
+  var C = window.Catalog;
+  C.loadIndex().then(function (index) {
+    var refs = index.references || {};
+    document.getElementById("cite-list").innerHTML =
+      ["jain2026symmetry", "wills2026classification"].filter(function (key) { return refs[key]; })
+        .map(function (key) { return "<li>" + C.referenceHtml(refs[key]) + "</li>"; }).join("");
+  });
+}());
+</script>
+</body>
+</html>

@@ -14,67 +14,61 @@
 <section class="hero">
   <div class="inner">
     <div class="hero-copy">
-      <p class="eyebrow">Clifford level-3 magic-state distillation</p>
       <h1>Magic State Factory Catalog</h1>
       <p class="lede">An open catalogue of <strong id="hero-count">verified</strong> magic-state
-      factories. Every circuit is stored explicitly, and every number on this site is
-      recomputed from it.</p>
+      factories, each stored as an explicit circuit.</p>
 
       <form class="searchbar big" role="search" action="search.html" method="get">
         <label class="sr-only" for="hero-q">Search the catalogue</label>
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         <input id="hero-q" name="q" type="search" autocomplete="off" spellcheck="false"
-               placeholder="Try CCZ012, [[49, 1, 5]], k=2 t<=4, Haah …">
+               placeholder="CCZ012, [[49, 1, 5]], 15.1.3.a, k=2 …">
         <button type="submit" class="btn primary">Search</button>
       </form>
       <p class="quick" aria-label="example searches">
         <span class="label">Try:</span>
         <a href="search.html?pure=1">pure <span class="tex">T^{\otimes k}</span></a>
         <a href="search.html?has=ccz">with CCZ</a>
-        <a href="search.html?kmin=1&amp;kmax=1">one output</a>
-        <a href="search.html?d=5,6,7">distance <span class="tex">\ge 5</span></a>
-        <a href="search.html?sort=gamma_rho_claim">lowest <span class="tex">\gamma_\rho</span></a>
+        <a href="search.html?d=5,6,7,8,9">distance <span class="tex">\ge 5</span></a>
+        <a href="search.html?lit=1">from the literature</a>
       </p>
 
       <div class="community">
-        <p>This catalogue is a community effort. If you have a factory, send it in any
-        format. We verify it and credit you.</p>
+        <p>A community effort. Have a factory? Send it in any format.</p>
         <a class="btn ghost" href="https://github.com/shubhamj810/magic-state-factory-repo/tree/main/community_contributions">Contribute a factory</a>
       </div>
     </div>
 
     <figure class="hero-matrix" id="hero-matrix" aria-label="The 15-to-1 factory as a binary matrix">
-      <div class="hm-head"><span>A factory is a binary matrix</span><strong id="hm-label"><span class="tex">[\![15,\,1,\,3]\!]</span></strong></div>
+      <div class="hm-head"><span>The 15-to-1 factory</span><strong id="hm-label"><span class="tex">[\![15,\,1,\,3]\!]</span></strong></div>
       <div id="hm-svg"></div>
-      <figcaption>Each column is a <span class="tex">\pi/4</span> rotation that consumes one
-      noisy T state. <span class="k-out">Output</span> rows carry the magic state.
-      <span class="k-chk">Check</span> rows are measured and postselected.
-      <a id="hm-link" href="search.html?q=%5B%5B15%2C1%2C3%5D%5D">Open this factory &rarr;</a></figcaption>
+      <figcaption><span class="k-out">Output</span> and <span class="k-chk">check</span> wires
+      by <span class="tex">\pi/4</span> rotations. <a id="hm-link" href="f/15.1.3.a/">Open it &rarr;</a></figcaption>
     </figure>
   </div>
 </section>
 
-
 <main id="main">
   <h2 id="best">Best factories</h2>
-  <p class="section-intro">Ranked by <span class="tex">\gamma_\rho = \log(n/V_{\mathrm{ex}})/\log d</span>,
-  where <span class="tex">V_{\mathrm{ex}}</span> is the number of T states one run yields.
-  Lower is better. Gates with overlapping terms have no <span class="tex">V_{\mathrm{ex}}</span>
-  and are left out.</p>
+  <p class="section-intro">Lowest <span class="tex">\gamma_\rho</span>, the input overhead per
+  extractable T state. <a href="about.html#numbers">What this measures</a></p>
   <div class="headline" id="headline-stats"></div>
+  <div class="table-wrap records-wrap">
+    <table class="records-table" id="record-cards">
+      <caption class="sr-only">The lowest gamma_rho at each distance.</caption>
+      <thead><tr><th scope="col"><span class="tex">d</span></th><th scope="col">factory</th>
+      <th class="num" scope="col"><span class="tex">\gamma_\rho</span></th>
+      <th class="num" scope="col"><span class="tex">V_{\mathrm{ex}}</span></th><th scope="col"></th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
 
-  <h3>Lowest <span class="tex">\gamma_\rho</span> at each distance</h3>
-  <div class="records" id="record-cards"></div>
-
-  <h2 id="frontier">The <span class="tex">\gamma_\rho</span> frontier</h2>
-  <p class="section-intro">The lowest <span class="tex">\gamma_\rho</span> reached with at most
-  <span class="tex">n</span> inputs, one panel per distance.</p>
+  <h2 id="frontier">Frontier</h2>
+  <p class="section-intro">The lowest <span class="tex">\gamma_\rho</span> with at most
+  <span class="tex">n</span> inputs, by distance.</p>
   <div id="frontier-plot"></div>
 
   <h2 id="parameters">Browse by parameters</h2>
-  <p class="section-intro">One row per <span class="tex">[\![n,k,d]\!]</span>. Open a row
-  to see every inequivalent gate with those parameters.</p>
-
   <div class="toolbar">
     <label class="sr-only" for="filter">Filter parameter sets</label>
     <input id="filter" type="search" placeholder="filter…  e.g. 15  or  k=3  or  d>=5" size="34">
@@ -82,7 +76,6 @@
     <select id="dfilter"><option value="">every distance</option></select>
     <span class="count" id="count"></span>
   </div>
-
   <div class="table-wrap">
     <table id="table">
       <caption class="sr-only">Parameter sets in the catalogue. Click a column header to sort.</caption>
@@ -92,87 +85,15 @@
         <th class="num" data-key="k" data-type="number" scope="col"><span class="tex">k</span></th>
         <th class="num" data-key="d" data-type="number" scope="col"><span class="tex">d</span></th>
         <th class="num" data-key="count" data-type="number" scope="col">gates</th>
-        <th class="num" data-key="gamma_rho_claim" data-type="number" scope="col" title="best log(n/V_ex)/log d at these parameters">best <span class="tex">\gamma_\rho</span></th>
-        <th class="num" data-key="gamma_claim" data-type="number" scope="col" title="log(n/k)/log d"><span class="tex">\gamma</span></th>
-        <th class="num" data-key="rate" data-type="number" scope="col">rate <span class="tex">k/n</span></th>
-        <th class="num" data-key="best_t_count" data-type="number" scope="col">best T-count</th>
-        <th class="num" data-key="N_min" data-type="number" scope="col">min <span class="tex">N</span></th>
+        <th class="num" data-key="gamma_rho_claim" data-type="number" scope="col">best <span class="tex">\gamma_\rho</span></th>
+        <th class="num" data-key="gamma_claim" data-type="number" scope="col"><span class="tex">\gamma</span></th>
+        <th class="num" data-key="N_min" data-type="number" scope="col">fewest <span class="tex">N</span></th>
       </tr></thead>
       <tbody id="body"></tbody>
     </table>
   </div>
   <div id="pager"></div>
-
-  <h2 id="reading">How to read an entry</h2>
-  <div class="panel prose">
-    <p>A factory is a binary matrix. Each column is a <span class="tex">\pi/4</span> parity
-    rotation, which consumes one noisy T state. Each row is a wire. The first
-    <span class="tex">k</span> rows are outputs. The other <span class="tex">r</span> rows are
-    checks, which are measured and postselected. The gate the factory applies to
-    its outputs is read off the overlaps between rows.</p>
-    <dl class="glossary">
-      <dt><span class="tex">n</span></dt><dd>Noisy T states consumed per run.</dd>
-      <dt><span class="tex">k</span></dt><dd>Output qubits.</dd>
-      <dt><span class="tex">d</span></dt><dd>Distance. Input errors of rate <span class="tex">p</span>
-      leave an output error of order <span class="tex">p^d</span>. Exact distances are proved and
-      witnessed. The others are proved lower bounds.</dd>
-      <dt><span class="tex">N,\ r</span></dt><dd>Wires in total, and the <span class="tex">r = N - k</span> checks.</dd>
-      <dt>T-count</dt><dd>The minimal T-count of the output gate, where it could be computed.</dd>
-      <dt><span class="tex">\gamma</span></dt><dd><span class="tex">\log(n/k)/\log d</span>. Overhead per output qubit.</dd>
-      <dt><span class="tex">\gamma_T</span></dt><dd><span class="tex">\log(n/T)/\log d</span>, with <span class="tex">T</span> the T-count. Overhead per unit of T-count.</dd>
-      <dt><span class="tex">\gamma_\rho</span></dt><dd><span class="tex">\log(n/V_{\mathrm{ex}})/\log d</span>. Overhead per extractable T state. We rank by this one.</dd>
-    </dl>
-    <p>For a pure <span class="tex">T^{\otimes k}</span> gate the three exponents agree.
-    Lower is better for all of them.</p>
-    <p>Every distance is re-checked here. A few sources certify a larger distance than
-    we could re-check. Tables show both, and rankings and exponents use the certified
-    one, marked &dagger;.</p>
-    <p>Two circuits with the same <span class="tex">n</span>, <span class="tex">k</span> and
-    <span class="tex">d</span> share a row when a CNOT circuit and S, Z and CZ gates on the
-    outputs turn one gate into the other. Such gates prepare the same magic state.
-    For example, <span class="tex">\mathrm{T}_0\cdot\mathrm{T}_1</span> and
-    <span class="tex">\mathrm{T}_0\cdot\mathrm{CS}_{01}</span> are one class.</p>
-  </div>
-
-  <h2 id="about">About</h2>
-  <div class="about-grid">
-    <div class="panel">
-      <h3>Sources</h3>
-      <ul class="plain">
-        <li>An exhaustive classification of generalised triorthogonal codes with up to
-        54 inputs (Wills, Jain and Singh).</li>
-        <li>AI-assisted and SAT searches beyond that (Jain, Wills and Singh).</li>
-        <li>Published constructions, credited to their papers.</li>
-        <li>Community submissions, verified to the same standard.</li>
-      </ul>
-    </div>
-    <div class="panel">
-      <h3>Citing</h3>
-      <p class="small">Cite the papers listed on each factory's page. For the
-      catalogue, cite</p>
-      <ol class="refs small" id="cite-list"></ol>
-      <p class="small">and the repository,
-      <a href="https://github.com/shubhamj810/magic-state-factory-repo">github.com/shubhamj810/magic-state-factory-repo</a>.</p>
-    </div>
-    <div class="panel">
-      <h3>Data</h3>
-      <ul class="plain small">
-        <li><a href="data/factories.csv" download>factories.csv</a>, one row per factory.</li>
-        <li><a href="data/index.json" download>index.json</a>, the same with the reference table.</li>
-        <li><a id="full-catalog" href="https://github.com/shubhamj810/magic-state-factory-repo/blob/main/master_catalog/master_catalog.json">master_catalog.json</a>, the full database with every circuit.</li>
-      </ul>
-    </div>
-    <div class="panel" id="contribute">
-      <h3>Contributing</h3>
-      <p class="small">Send a factory in any format, such as a paper, matrices, code or a
-      notebook. Open a pull request with a folder in
-      <code>community_contributions/submissions</code>, or attach it to an issue.
-      We verify each submission like any other row and credit you on every class
-      it adds.</p>
-      <p class="small"><a href="https://github.com/shubhamj810/magic-state-factory-repo/tree/main/community_contributions">How to submit</a>
-      &middot; <a href="https://github.com/shubhamj810/magic-state-factory-repo/issues/new">Open an issue</a></p>
-    </div>
-  </div>
+  <p class="small muted" style="margin-top:14px">&dagger; at a distance certified by the factory's source. <a href="about.html#distance">How distances are checked</a></p>
 </main>
 
 <!--#footer-->

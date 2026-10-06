@@ -1,0 +1,26 @@
+# GitHub reads this file to show "Cite this repository", and Zenodo reads it to
+# describe each archived release.  Please check the authors before a release.
+cff-version: 1.2.0
+message: >-
+  If you use this catalogue, please cite it as below, and cite the papers
+  listed on the page of each factory you use.
+type: dataset
+title: "Magic State Factory Catalog"
+abstract: >-
+  An open catalogue of verified magic-state distillation factories. Every
+  factory is stored as an explicit circuit, and every figure of merit is
+  re-derived from that circuit. Each factory has a permanent label n.k.d.x.
+authors:
+  - family-names: Jain
+    given-names: Shubham P.
+  - family-names: Wills
+    given-names: Adam
+  - family-names: Singh
+    given-names: Shraddha
+repository-code: "https://github.com/shubhamj810/magic-state-factory-repo"
+url: "https://shubhamj810.github.io/magic-state-factory-repo/"
+keywords:
+  - magic-state distillation
+  - fault-tolerant quantum computing
+  - quantum error correction
+  - triorthogonal codes
