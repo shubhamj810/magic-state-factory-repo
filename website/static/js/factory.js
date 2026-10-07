@@ -1,7 +1,7 @@
 /* f/<label>/ -- one factory.  The page is rendered at build time (pages.py);
  * this script only adds what needs a browser:
  *
- *   the Cells | 0/1 view of the matrix     copying the BibTeX
+ *   the Cells | 0/1 view of the matrix     copying the code snippets
  *   exports (CSV, columns, numpy)          the CNOT + S tool (transform.js)
  *   the raw record, filled in when opened
  *
@@ -26,8 +26,8 @@
     });
   });
 
-  $("copy-bibtex").addEventListener("click", function (event) {
-    C.copy($("bibtex").textContent, event.currentTarget);
+  $("copy-eq-code").addEventListener("click", function (event) {
+    C.copy($("eq-snippet").textContent, event.currentTarget);
   });
   $("copy-code").addEventListener("click", function (event) {
     C.copy($("code-snippet").textContent, event.currentTarget);

@@ -1,7 +1,7 @@
 """Static HTML for every factory page and every parameter page.
 
     f/<label>/index.html     one factory: matrix, figures of merit, gate,
-                             distance, references, provenance, cite, related
+                             distance, original source, provenance, related
     p/<n>.<k>.<d>/index.html every inequivalent gate at one [[n,k,d]]
 
 Rendered here, at build time, so each page is real HTML: it has its own title
@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import html
 import json
-from datetime import date
+import re
 from urllib.parse import quote
 
 REPO = "https://github.com/shubhamj810/magic-state-factory-repo"
@@ -160,17 +160,111 @@ print(facts["gate_human"], distance["d_exact"] or distance["d_at_least"],
 """)
 
 
-def bibtex(record, stamp) -> str:
-    p = record["parameters"]
-    label = record["id"]
-    commit = stamp.get("commit") or ""
-    gate = record["gate"]["human"]
-    gate = gate if len(gate) <= 60 else gate[:57] + "..."
-    return (f"@misc{{msfc:{label.replace('.', '-')},\n"
-            f"  title        = {{Magic-state factory $[[{p['n']},{p['k']},{p['d']}]]$, output gate {gate}}},\n"
-            f"  howpublished = {{Magic State Factory Catalog, \\url{{{SITE}{factory_path(label)}}}}},\n"
-            f"  year         = {{{date.today().year}}},\n"
-            f"  note         = {{Data version {commit}}}\n}}")
+def equivalents_snippet(label: str) -> str:
+    return (f"""import json, urllib.request
+
+NAMES = {{1: "T", 2: "CS", 3: "CCZ"}}
+
+
+def equivalent_gates(k, terms, limit=1_000_000):
+    \"\"\"Every gate a CNOT circuit and S, Z, CZ gates reach from this one.
+
+    A gate is its set of terms mod Clifford: {{a}} is T, {{a,b}} is CS and
+    {{a,b,c}} is CCZ on those outputs. CNOT c->t sends x_t to
+    x_c + x_t - 2 x_c x_t, so a term on t but not c adds the term with t
+    replaced by c, and, below CCZ, the term with c added.
+    \"\"\"
+    start = frozenset(frozenset(m) for m in terms)
+    seen, queue = {{start}}, [start]
+    for gate in queue:
+        for c in range(k):
+            for t in range(k):
+                if c == t:
+                    continue
+                new = set(gate)
+                for m in gate:
+                    if t in m and c not in m:
+                        new ^= {{(m - {{t}}) | {{c}}}}
+                        if len(m) < 3:
+                            new ^= {{m | {{c}}}}
+                new = frozenset(new)
+                if new not in seen:
+                    seen.add(new)
+                    queue.append(new)
+                    if len(seen) > limit:
+                        raise RuntimeError(f"more than {{limit}} equivalent gates")
+    return seen
+
+
+def name(gate, k):
+    sep = "," if k > 10 else ""
+    terms = sorted((sorted(m) for m in gate), key=lambda m: (len(m), m))
+    return "·".join(NAMES[len(m)] + sep.join(map(str, m)) for m in terms) or "I"
+
+
+url = "{SITE}data/factories/{label}.json"
+record = json.load(urllib.request.urlopen(url))
+k = record["parameters"]["k"]
+gates = equivalent_gates(k, record["gate"]["monomials"])
+lines = sorted(name(g, k) for g in gates)
+print(len(lines), "equivalent gates")
+with open("equivalent-gates-{label}.txt", "w") as out:
+    out.write("\\n".join(lines) + "\\n")
+""")
+
+
+# ---------------------------------------------------------- references page
+def _year(key: str) -> int:
+    match = re.search(r"\d{4}", key)
+    return int(match.group()) if match else 0
+
+
+def references_page(index: dict, contributors: list[dict]):
+    """Every paper the catalogue draws on, and everyone who has contributed."""
+    counts: dict[str, int] = {}
+    for f in index["factories"]:
+        for key in f["citations"]:
+            counts[key] = counts.get(key, 0) + 1
+    refs = sorted(index["references"].items(), key=lambda item: (_year(item[0]), item[0]))
+    papers = "".join(
+        f'<li id="ref-{esc(key)}">{reference_html(dict(key=key, **ref))} '
+        f'<span class="muted">·</span> <a class="small" href="search.html?cite={quote(key)}">{counts.get(key, 0)} '
+        f'{"factory" if counts.get(key, 0) == 1 else "factories"}</a></li>'
+        for key, ref in refs)
+    people = "".join(
+        "<li><strong>" + esc(c["name"]) + "</strong>"
+        + (f", {esc(c['affiliation'])}" if c.get("affiliation") else "")
+        + (f'. <span class="muted">{esc(c["contribution"])}</span>' if c.get("contribution") else "")
+        + (f' <span class="small muted">({esc(c["date"])})</span>' if c.get("date") else "")
+        + "</li>" for c in contributors)
+    main = f"""
+<section class="page-head narrow">
+  <div class="inner">
+    <h1>References</h1>
+    <p class="lede">The papers the catalogue's factories come from, and the people who have
+    contributed to it.</p>
+  </div>
+</section>
+
+<main id="main" class="guide">
+  <nav class="toc" aria-label="on this page">
+    <a href="#papers">Papers</a><a href="#contributors">Contributors</a>
+  </nav>
+  <div class="prose">
+    <h2 id="papers">Papers</h2>
+    <p>Every factory is credited to the work that found it. The link after each paper
+    lists its factories.</p>
+    <ol class="refs ref-list" id="paper-list">{papers}</ol>
+
+    <h2 id="contributors">Contributors</h2>
+    {f'<ul class="plain contributor-list" id="contributor-list">{people}</ul>' if people else
+     '<p class="muted" id="contributor-list">No community contributions yet.</p>'}
+    <p>Anyone who adds a factory is listed here. <a href="contribute.html">Contribute a factory</a>.</p>
+  </div>
+</main>"""
+    return ("References · Magic State Factory Catalog",
+            "The papers the Magic State Factory Catalog draws on, and everyone who has contributed to it.",
+            main)
 
 
 # ------------------------------------------------------------- factory page
@@ -265,13 +359,10 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
         + '<p class="small muted">A fault is a set of faulty columns. It is undetectable when their check parts '
           "cancel, and damaging when their output parts do not.</p>")
     refs = record.get("references") or []
-    references_panel = (
-        ('<p class="small muted" style="margin-top:0">If you use this factory, please cite</p>'
-         '<ol class="refs">' + "".join(f"<li>{reference_html(x)}</li>" for x in refs) + "</ol>"
-         '<p class="small" style="margin:12px 0 0">'
-         + " · ".join(f'<a href="search.html?cite={quote(x["key"])}">All factories citing {esc(x.get("short") or x["key"])}</a>'
-                      for x in refs) + "</p>")
-        if refs else '<p class="muted">No reference is recorded for this factory.</p>')
+    source_panel = (
+        f'<p style="margin:0">{reference_html(refs[0])}</p>' if len(refs) == 1 else
+        '<ul class="plain source-list">' + "".join(f"<li>{reference_html(x)}</li>" for x in refs) + "</ul>"
+        if refs else '<p class="muted">No source is recorded for this factory.</p>')
     sources = prov.get("sources") or []
     provenance_panel = (
         (f"<p>{esc(prov['strongest_claim'])}</p>" if prov.get("strongest_claim") else "")
@@ -304,12 +395,6 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
 
     side = f"""
   <aside class="side">
-    <section>
-      <h3>Cite this factory</h3>
-      <pre class="bib" id="bibtex">{esc(bibtex(record, stamp))}</pre>
-      <button type="button" class="btn" id="copy-bibtex">Copy BibTeX</button>
-      <p class="small muted">Please also cite the papers under References.</p>
-    </section>
     <section>
       <h3>Download</h3>
       <ul class="plain small">
@@ -361,13 +446,21 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
       <button type="button" class="btn" id="tf-random" title="fill in this gate after a random change of output basis">Random equivalent gate</button>
     </form>
     <div id="tf-result" aria-live="polite"></div>
+    <div class="tf-all">
+      <p class="small muted" id="eq-intro">Or list every gate it reaches. The list is built in your browser and saved as a text file, one gate per line.</p>
+      <p><button type="button" class="btn" id="eq-list">List all equivalent gates</button> <span class="small muted" id="eq-status" aria-live="polite"></span></p>
+      <details id="eq-code"><summary>Python code that writes the same list</summary>
+        <pre class="raw code" id="eq-snippet">{esc(equivalents_snippet(label))}</pre>
+        <button type="button" class="btn" id="copy-eq-code">Copy code</button>
+      </details>
+    </div>
   </div>
 
   <h2 id="distance">Distance</h2>
   <div class="panel" id="distance-panel">{distance_panel}</div>
 
-  <h2 id="references">References</h2>
-  <div class="panel" id="references-panel">{references_panel}</div>
+  <h2 id="source">Original source</h2>
+  <div class="panel" id="source-panel">{source_panel}</div>
 
   <h2 id="provenance">Provenance</h2>
   <div class="panel" id="provenance-panel">{provenance_panel}</div>
@@ -399,7 +492,7 @@ def factory_page(record, summary, groups, by_id, stamp):
     gate = gate if len(gate) <= 40 else gate[:37] + "..."
     title = f"{params_text(p['n'], p['k'], p['d'])} factory, {gate} · Magic State Factory Catalog"
     desc = (f"Magic-state factory {params_text(p['n'], p['k'], p['d'])} with output gate "
-            f"{record['gate']['human'][:120]}. Binary matrix, distance, overhead exponents and references.")
+            f"{record['gate']['human'][:120]}. Binary matrix, distance, overhead exponents and original source.")
     return title, desc, factory_main(record, summary, groups, by_id, stamp)
 
 

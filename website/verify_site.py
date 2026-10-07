@@ -344,11 +344,12 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
                 failures.check(bits.count("1") == weights[q],
                                f"{where}: row {q} has {bits.count('1')} ones, columns give {weights[q]}")
             for section in ("#metric-grid", "#gate-panel", "#distance-panel",
-                            "#references-panel", "#provenance-panel"):
+                            "#source-panel", "#provenance-panel"):
                 element = page.query_selector(section)
                 failures.check(element is not None and element.inner_text().strip(),
                                f"{where}: {section} is empty")
-            refs = page.query_selector_all("#references-panel ol.refs li")
+            refs = (page.query_selector_all("#source-panel li") if len(record["references"]) > 1
+                    else page.query_selector_all("#source-panel > p:not(.muted)"))
             failures.check(len(refs) == len(record["references"]),
                            f"{where}: {len(refs)} references shown, record cites "
                            f"{len(record['references'])}")
@@ -395,6 +396,29 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
             text = page.inner_text("#tf-result")
             failures.check("Same gate" in text or "Checked on all 8 basis states" in text,
                            f"{where}: no verified construction for {target}")
+
+        # every equivalent gate: the browser's list against the page's own Python
+        import pages as P
+        snippet = P.equivalents_snippet("x")
+        namespace = {}
+        exec(snippet[:snippet.index("url = ")], namespace)
+        expect = sorted(namespace["name"](g, 3) for g in
+                        namespace["equivalent_gates"](3, [list(m) for m in monos(source["gate"], 3)]))
+        with page.expect_download() as info:
+            page.click("#eq-list")
+        got = [line for line in Path(info.value.path()).read_text().splitlines()
+               if line and not line.startswith("#")]
+        failures.check(sorted(got) == expect,
+                       f"{where}: listed {len(got)} equivalent gates, the Python snippet gives {len(expect)}")
+        big = next((f for f in factories if 8 <= f["k"] <= 16), None)
+        if big:
+            visit(f"f/{big['id']}/", f"factory.html {big['id']} (equivalent gates)", "table.matrix tbody tr")
+            page.click("#eq-list")
+            page.wait_for_function("/More than|saved/.test(document.getElementById('eq-status').textContent)",
+                                   timeout=60000)
+            failures.check("More than" in page.inner_text("#eq-status") and
+                           page.eval_on_selector("#eq-code", "d => d.open"),
+                           f"factory.html {big['id']}: a large class does not point to the Python code")
 
         # one export from a factory page, checked cell by cell
         small = factories[0]["id"]
@@ -501,6 +525,14 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         about.goto(f"{base}/about.html", wait_until="networkidle")
         failures.check(len(about.query_selector_all("#cite-list li")) >= 1,
                        "about.html: the how-to-cite list is empty")
+
+        # ------------------------------------------- the references page
+        visit("references.html", "references.html", "#paper-list li")
+        index = json.loads((site / "data" / "index.json").read_text())
+        failures.check(len(page.query_selector_all("#paper-list li")) == len(index["references"]),
+                       "references.html: not every paper is listed")
+        failures.check(page.query_selector("#contributor-list") is not None,
+                       "references.html: no contributors list")
 
         # ------------------------------------------- the contribute tutorial
         visit("contribute.html", "contribute.html", "ol.steps > li")

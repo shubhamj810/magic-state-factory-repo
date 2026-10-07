@@ -12,6 +12,7 @@
   "use strict";
   var C = global.Catalog, G = global.GLEquiv;
   var MAX_DRAWN = 80;                    /* gates; past this the diagram is skipped */
+  var MAX_LISTED = 50000;                /* equivalent gates listed in the browser */
 
   function $(id) { return document.getElementById(id); }
 
@@ -85,6 +86,38 @@
       if (monos) { input.value = G.human(monos, k); check(); }
     });
     $("tf-form").addEventListener("submit", function (event) { event.preventDefault(); check(); });
+
+    /* Every equivalent gate, found in slices so the page stays responsive. */
+    var listButton = $("eq-list"), status = $("eq-status");
+    if (listButton && k > G.ORBIT_K_CAP) {
+      listButton.disabled = true;
+      status.textContent = "With " + k + " outputs, use the Python code below.";
+    } else if (listButton) listButton.addEventListener("click", function () {
+      listButton.disabled = true;
+      var walker = G.orbitWalker(k, own, MAX_LISTED);
+      (function slice() {
+        walker.step(200);
+        if (!walker.done && !walker.overflow) {
+          status.textContent = walker.count().toLocaleString() + " gates so far…";
+          setTimeout(slice, 0);
+          return;
+        }
+        listButton.disabled = false;
+        if (walker.overflow) {
+          status.textContent = "More than " + MAX_LISTED.toLocaleString() + " gates are equivalent to this one, " +
+            "too many to list here. The Python code below takes a limit you can raise.";
+          $("eq-code").open = true;
+          return;
+        }
+        var gates = walker.gates().map(function (g) { return G.human(g, k); });
+        var p = record.parameters;
+        C.download("equivalent-gates-" + record.id + ".txt",
+          "# [[" + p.n + "," + p.k + "," + p.d + "]] factory, output gate " + record.gate.human + "\n" +
+          "# " + gates.length + " gate" + (gates.length === 1 ? "" : "s") + " reachable with a CNOT circuit and S, Z, CZ on the outputs,\n" +
+          "# up to Clifford corrections. Fewest terms first.\n" + gates.join("\n") + "\n", "text/plain");
+        status.textContent = gates.length.toLocaleString() + " gate" + (gates.length === 1 ? "" : "s") + ", saved as a text file.";
+      }());
+    });
 
     function check() {
       var target;

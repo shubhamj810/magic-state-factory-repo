@@ -63,21 +63,15 @@
         <p><strong>Pull request.</strong> Add one folder to the
         <a href="https://github.com/shubhamj810/magic-state-factory-repo">repository</a>, named
         <code class="wrap">community_contributions/submissions/YYYY-MM-DD_surname_short-title/</code>, holding
-        your files as they are. Leave <code>master_catalog/</code> alone. We regenerate it.</p>
+        your files as they are.</p>
         <p><strong>Issue.</strong> <a href="https://github.com/shubhamj810/magic-state-factory-repo/issues/new">Open an issue</a>
         and attach or link your files.</p>
       </li>
       <li>
         <h2 id="next">What happens next</h2>
         <p>We convert your files into the catalogue's input format and re-derive every number
-        from the circuit. Stated parameters are never taken on trust. Each factory gets one
-        verdict.</p>
-        <dl class="glossary">
-          <dt>accepted</dt><dd>A class the catalogue did not have. It is added and cited to your work.</dd>
-          <dt>improved</dt><dd>A class it had, and your circuit uses fewer wires. Yours replaces the stored one.</dd>
-          <dt>duplicate</dt><dd>A class it had, with a circuit no better. Nothing changes.</dd>
-          <dt>rejected</dt><dd>It did not verify, for example its distance is below 3. We tell you why.</dd>
-        </dl>
+        from the circuit. Valid factories are integrated into the catalogue with appropriate
+        citations.</p>
         <p>Classes are compared up to relabelling and a change of output basis by CNOT and S
         gates, at the same <span class="tex">n</span>, <span class="tex">k</span> and
         <span class="tex">d</span>.</p>

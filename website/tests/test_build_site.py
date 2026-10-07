@@ -136,7 +136,8 @@ class TheBuiltSite(unittest.TestCase):
 
     def test_every_page_has_the_shared_chrome(self):
         current = {"search.html": "Search", "params.html": "Browse", "factory.html": "Browse",
-                   "about.html": "About", "contribute.html": "Contribute"}
+                   "about.html": "About", "references.html": "References",
+                   "contribute.html": "Contribute"}
         for page in self.out.glob("*.html"):
             if page.name == "404.html":
                 continue                  # standalone: served at any depth
@@ -182,7 +183,11 @@ class TheBuiltSite(unittest.TestCase):
         self.assertIn('<table class="matrix">', text)
         self.assertEqual(text.count('<tr class="out'), f["k"])
         self.assertEqual(text.count('<tr class="chk'), f["N"] - f["k"])
-        self.assertIn("@misc{msfc:15-1-3-a", text)
+        # one original source, no per-factory citation
+        self.assertIn('<h2 id="source">Original source</h2>', text)
+        self.assertIn("Bravyi and A. Kitaev", text)
+        self.assertNotIn("@misc", text)
+        self.assertIn('id="eq-list"', text)
         # the label is the page's address, not something a reader sees
         self.assertNotIn(">15.1.3.a<", text)
         self.assertNotIn("<!--#", text)
@@ -193,9 +198,27 @@ class TheBuiltSite(unittest.TestCase):
         for target in local.findall(page.read_text(encoding="utf-8")):
             self.assertTrue((page.parent / target).resolve().exists(), target)
 
+    def test_the_references_page_lists_every_paper(self):
+        text = (self.out / "references.html").read_text(encoding="utf-8")
+        self.assertEqual(text.count('<li id="ref-'), len(self.index["references"]))
+        for key in self.index["references"]:
+            self.assertIn(f'href="search.html?cite={key}"', text)
+        self.assertIn('id="contributor-list"', text)
+        self.assertIn('aria-current="page">References<', text)
+        self.assertNotIn("<!--#", text)
+
+    def test_the_equivalents_snippet_runs(self):
+        import pages
+        source = pages.equivalents_snippet("15.1.3.a")
+        namespace = {}
+        exec(source[:source.index("url = ")], namespace)
+        gates = namespace["equivalent_gates"](2, [[0], [1]])
+        self.assertEqual(sorted(namespace["name"](g, 2) for g in gates),
+                         ["T0·CS01", "T0·T1", "T1·CS01"])
+
     def test_the_sitemap_lists_every_page(self):
         sitemap = (self.out / "sitemap.xml").read_text(encoding="utf-8")
-        self.assertEqual(sitemap.count("<loc>"), 4 + len(self.index["factories"]) + len(self.index["parameters"]))
+        self.assertEqual(sitemap.count("<loc>"), 5 + len(self.index["factories"]) + len(self.index["parameters"]))
 
     def test_nojekyll(self):
         self.assertTrue((self.out / ".nojekyll").exists())

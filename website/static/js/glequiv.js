@@ -403,8 +403,83 @@
     return out;
   }
 
+  /* ------------------------------------------------------------ the orbit */
+  /* Every gate equivalent to this one, by breadth-first search over the CNOTs
+   * (they generate GL(k,2)).  A gate is its set of terms mod Clifford, each a
+   * bitmask of output wires.  CNOT c -> t substitutes x_t -> x_c + x_t - 2 x_c x_t;
+   * for a term m on t but not c that adds m - t + c (same weight) and m + c
+   * (twice the weight, so an odd multiple of the next level's unit, and Clifford
+   * past CCZ).  A term on both c and t is unchanged mod Clifford.  Terms XOR.
+   * walker.step(n) expands up to n more gates.  It stops for good once more
+   * than `limit` gates are known (walker.overflow); otherwise walker.done is
+   * set when every equivalent gate has been found. */
+  var ORBIT_K_CAP = 30;
+
+  function orbitWalker(k, monos, limit) {
+    function key(masks) { return masks.join(","); }
+    function popc(m) { return popcount(m); }
+    var start = monos.map(function (m) {
+      return m.reduce(function (acc, w) { return acc | (1 << w); }, 0);
+    }).sort(function (a, b) { return a - b; });
+    var seen = new Map(), queue = [start], head = 0;
+    seen.set(key(start), start);
+    var walker = {
+      count: function () { return seen.size; },
+      done: false,
+      overflow: false,
+      step: function (budget) {
+        while (head < queue.length && budget-- > 0 && !walker.overflow) {
+          var g = queue[head++];
+          for (var c = 0; c < k; c++) for (var t = 0; t < k; t++) {
+            if (c === t) continue;
+            var bc = 1 << c, bt = 1 << t, toggled = new Map();
+            var flip = function (m) { if (toggled.has(m)) toggled.delete(m); else toggled.set(m, 1); };
+            for (var i = 0; i < g.length; i++) {
+              var m = g[i];
+              if (!(m & bt) || (m & bc)) continue;
+              flip((m ^ bt) | bc);
+              if (popc(m) < 3) flip(m | bc);
+            }
+            if (!toggled.size) continue;
+            var set = new Set(g);
+            toggled.forEach(function (_, m2) { if (set.has(m2)) set.delete(m2); else set.add(m2); });
+            var next = Array.from(set).sort(function (a, b) { return a - b; });
+            var nk = key(next);
+            if (!seen.has(nk)) {
+              seen.set(nk, next); queue.push(next);
+              if (limit && seen.size > limit) { walker.overflow = true; return false; }
+            }
+          }
+        }
+        walker.done = !walker.overflow && head >= queue.length;
+        return walker.done;
+      },
+      /* fewest terms first, then T before CS before CCZ */
+      gates: function () {
+        function termCmp(a, b) {
+          if (a.length !== b.length) return a.length - b.length;
+          for (var j = 0; j < a.length; j++) if (a[j] !== b[j]) return a[j] - b[j];
+          return 0;
+        }
+        return Array.from(seen.values()).map(function (masks) {
+          return masks.map(bits).sort(termCmp);
+        }).sort(function (a, b) {
+          if (a.length !== b.length) return a.length - b.length;
+          for (var i = 0; i < a.length; i++) {
+            var x = termCmp(a[i], b[i]);
+            if (x) return x;
+          }
+          return 0;
+        });
+      }
+    };
+    return walker;
+  }
+
   global.GLEquiv = {
     LABEL_K_CAP: LABEL_K_CAP,
+    ORBIT_K_CAP: ORBIT_K_CAP,
+    orbitWalker: orbitWalker,
     parseGate: parseGate,
     parseCatalogGate: parseCatalogGate,
     human: human,

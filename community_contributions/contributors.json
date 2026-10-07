@@ -1,0 +1,4 @@
+{
+  "about": "The running list of people who have contributed to the catalogue, shown on the website's References page. Add one entry per contributor when a submission is merged. Fields: name (required), affiliation, contribution (one short sentence), date (YYYY-MM-DD).",
+  "contributors": []
+}

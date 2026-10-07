@@ -44,6 +44,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 CATALOG = ROOT / "master_catalog" / "master_catalog.json"
+CONTRIBUTORS = ROOT / "community_contributions" / "contributors.json"
 STATIC = HERE / "static"
 TEMPLATES = HERE / "templates"
 DEFAULT_OUT = HERE / "_site"
@@ -379,6 +380,12 @@ def render_entries(out: Path, index: dict, records: list) -> None:
         path = P.params_path(*key)
         pages.append((path, shell(title, desc, main, "browse",
                                   ["catalog.js", "query.js", "params.js"], 2, path)))
+    contributors = (json.loads(CONTRIBUTORS.read_text(encoding="utf-8")).get("contributors") or []
+                    if CONTRIBUTORS.exists() else [])
+    title, desc, main = P.references_page(index, contributors)
+    (out / "references.html").write_text(
+        shell(title, desc, main, "references", ["catalog.js"], 0, "references.html"), encoding="utf-8")
+    stitch(out, [out / "references.html"], depth=0)
     for path, text in pages:
         target = out / path / "index.html"
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -386,7 +393,7 @@ def render_entries(out: Path, index: dict, records: list) -> None:
     stitch(out, [out / path / "index.html" for path, _ in pages], depth=2)
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for path in ["", "search.html", "about.html", "contribute.html"] + [path for path, _ in pages]:
+    for path in ["", "search.html", "about.html", "references.html", "contribute.html"] + [path for path, _ in pages]:
         sitemap.append(f"  <url><loc>{P.SITE}{path}</loc></url>")
     sitemap.append("</urlset>")
     (out / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")

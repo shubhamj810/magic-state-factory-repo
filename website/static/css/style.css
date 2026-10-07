@@ -551,6 +551,10 @@ footer.site .brand { margin-bottom: 10px; }
   .toolbar .count { margin-left: 0; width: 100%; }
   footer.site .inner { grid-template-columns: 1fr; }
 }
+@media (max-width: 480px) {
+  header.site nav a { padding: 6px 7px; }
+  header.site nav a.gh { display: none; }  /* the footer links to GitHub */
+}
 
 /* ------------------------------------------------- CNOT + S transform panel */
 .tf-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 12px; }
@@ -560,6 +564,11 @@ footer.site .brand { margin-bottom: 10px; }
 .tf-msg.bad { color: var(--output); font-size: 13.5px; }
 .tf-verdict { font-size: 14.5px; margin: 4px 0 12px; }
 .tf-verdict strong { margin-right: 4px; }
+.tf-all { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); }
+.tf-all p { margin: 0 0 10px; }
+.source-list li { margin-bottom: 8px; }
+.ref-list li { margin-bottom: 12px; overflow-wrap: anywhere; }
+.contributor-list li { margin-bottom: 6px; }
 .tf-verdict.ok strong { color: var(--good); }
 .tf-verdict.no strong { color: var(--output); }
 .tf-verdict.maybe strong { color: var(--text-dim); }
@@ -624,7 +633,7 @@ main.guide .prose p, main.guide .prose li { font-size: 16.5px; line-height: 1.65
 main.guide h2:first-child { margin-top: 24px; }
 
 @media (max-width: 1000px) {
-  .entry-grid { grid-template-columns: 1fr; gap: 0; }
+  .entry-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
   aside.side { position: static; border-top: 1px solid var(--border); margin-top: 32px; }
   main.guide { grid-template-columns: minmax(0, 1fr); gap: 0; }
   nav.toc { position: static; flex-direction: row; flex-wrap: wrap; gap: 6px 14px; padding-top: 8px; }

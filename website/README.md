@@ -50,7 +50,9 @@ form, `factory.html?id=…` (including the hash ids used before labels) and
 Each factory page has:
 - a summary strip, with the distance as proved bounds (`6 ≤ d ≤ 7` when an explicit
   damaging fault gives an upper bound);
-- a BibTeX entry, downloads and related parameter sets;
+- its original source: the paper that found it, or the contributor who sent it
+  (there is no per-factory citation);
+- downloads and related parameter sets;
 - a "Use it in code" snippet that loads the factory and re-derives it with
   `verify_catalog.py`;
 - a "Report a problem" link that opens a prefilled GitHub issue.
@@ -105,6 +107,13 @@ factory page lets you type a target gate and get one of three answers:
 - **not reachable**, with the catalogued factories that do produce that gate;
 - **undecided**, when the search runs out of budget or k > 16.
 
+A second button lists every gate the factory's gate reaches, and saves the list
+as a text file. It is a breadth-first search over the CNOTs on the gate's terms
+mod Clifford (`orbitWalker` in `glequiv.js`), stopped past 50,000 gates. Past
+that, or for k > 30, the page offers the same search as standalone Python
+(`equivalents_snippet` in `pages.py`). The two agree on every row with k ≤ 7, and
+`verify_site.py` compares the browser's list with the Python's on one factory.
+
 [`static/js/glequiv.js`](static/js/glequiv.js) decides the question with a port
 of [`master_catalog/glcanon.py`](../master_catalog/glcanon.py): the cubic form's
 labels, then a bounded basis search. It then constructs the answer:
@@ -118,6 +127,15 @@ The port was checked against the Python on the catalogue:
 - 4,000 same-k pairs of rows, k ≤ 6: 4,000 agree, none undecided;
 - every row with k ≤ 8 after a random change of output basis: all recognised,
   and all constructions pass.
+
+## The references page
+
+`references.html` lists every paper the catalogue cites, oldest first, each
+linked to a search for its factories. Below it is the running list of
+contributors, read from
+[`community_contributions/contributors.json`](../community_contributions/contributors.json).
+Add one entry there when a submission is merged: `name`, and optionally
+`affiliation`, `contribution` (one sentence) and `date`.
 
 ## What the build adds, and what it does not
 
