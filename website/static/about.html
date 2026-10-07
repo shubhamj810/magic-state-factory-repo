@@ -11,20 +11,30 @@
 <section class="page-head narrow">
   <div class="inner">
     <h1>About the catalogue</h1>
-    <p class="lede">What a factory is, what the numbers mean, and how to cite, download
-    and contribute.</p>
+    <p class="lede">A video introduction, what a factory is, what the numbers mean, and how to
+    cite, download and contribute.</p>
   </div>
 </section>
 
 <main id="main" class="guide">
   <nav class="toc" aria-label="on this page">
-    <a href="#factory">Factories</a><a href="#numbers">The numbers</a><a href="#distance">Distances</a>
+    <a href="#video">Video introduction</a><a href="#factory">Factories</a><a href="#numbers">The numbers</a><a href="#distance">Distances</a>
     <a href="#reliability">How each number is obtained</a>
     <a href="#classes">One row per magic state</a><a href="#citing">Citing</a>
     <a href="#data">Data</a><a href="#contributing">Contributing</a><a href="#sources">Sources</a>
   </nav>
 
   <div class="prose">
+    <h2 id="video">Video introduction</h2>
+    <figure class="video">
+      <a class="video-facade" id="video-facade" href="https://www.youtube.com/watch?v=D2N3s--cVwU"
+         data-video="D2N3s--cVwU" aria-label="Play the video: Magic state factories">
+        <img src="https://i.ytimg.com/vi/D2N3s--cVwU/maxresdefault.jpg" alt="" width="1280" height="720" loading="lazy">
+        <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+      </a>
+      <figcaption><em>Magic state factories</em>, a 12-minute introduction by Shubham Jain. <a href="https://www.youtube.com/watch?v=D2N3s--cVwU">Watch on YouTube</a>.</figcaption>
+    </figure>
+
     <h2 id="factory">Factories</h2>
     <p>A factory is a binary matrix. Each column is a <span class="tex">\pi/4</span> parity
     rotation, which consumes one noisy T state. Each row is a wire. The first
@@ -124,6 +134,21 @@
 
 <script src="js/catalog.js"></script>
 <script>
+/* The player loads only when asked for: no YouTube scripts or cookies before a click. */
+(function () {
+  var facade = document.getElementById("video-facade");
+  if (!facade) return;
+  facade.addEventListener("click", function (event) {
+    event.preventDefault();
+    var frame = document.createElement("iframe");
+    frame.src = "https://www.youtube-nocookie.com/embed/" + facade.getAttribute("data-video") + "?autoplay=1&rel=0";
+    frame.title = "Magic state factories";
+    frame.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+    frame.allowFullscreen = true;
+    frame.referrerPolicy = "strict-origin-when-cross-origin";
+    facade.replaceWith(frame);
+  });
+}());
 (function () {
   var C = window.Catalog;
   C.loadIndex().then(function (index) {

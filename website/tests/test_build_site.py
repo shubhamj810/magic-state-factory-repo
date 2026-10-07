@@ -217,6 +217,14 @@ class TheBuiltSite(unittest.TestCase):
             self.assertIn(f"id: {field}\n", form)
         self.assertIn('labels: ["factory submission"]', form)
 
+    def test_the_video_is_on_the_about_page_and_linked_from_home(self):
+        about = (self.out / "about.html").read_text(encoding="utf-8")
+        home = (self.out / "index.html").read_text(encoding="utf-8")
+        self.assertIn('<h2 id="video">', about)
+        self.assertIn('data-video="D2N3s--cVwU"', about)
+        self.assertIn('href="https://www.youtube.com/watch?v=D2N3s--cVwU"', about)   # works without JS
+        self.assertIn('href="about.html#video"', home)
+
     def test_the_equivalents_snippet_runs(self):
         import pages
         source = pages.equivalents_snippet("15.1.3.a")
