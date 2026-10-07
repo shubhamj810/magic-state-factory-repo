@@ -172,8 +172,9 @@ DEFAULT_REFERENCES = {
     "jain2026symmetry": {
         "short": "Jain et al. (2026)",
         "full": "S. P. Jain, A. Wills, and S. Singh, \"Symmetry and "
-                "AI-assisted discovery of magic-state factories\" (2026), in "
-                "preparation.",
+                "AI-assisted discovery of magic-state factories,\" "
+                "arXiv:2610.06535 (2026).",
+        "url": "https://arxiv.org/abs/2610.06535",
     },
 }
 

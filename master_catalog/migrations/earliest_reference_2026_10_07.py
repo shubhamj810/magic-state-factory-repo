@@ -14,7 +14,7 @@ from every row that also cites a work published before it -- a year before
 the same class (Eastin's and Jones's 8 T -> CCZ factories) both stay.
 
 A row whose other citations are all later -- the length-54 classification
-(arXiv:2609.30860) and the unpublished symmetry-and-AI report, on
+(arXiv:2609.30860) and the symmetry-and-AI report (arXiv:2610.06535), on
 ``31.1.3.a`` -- keeps the paper.  So does every class the paper is the first
 to state.  Only ``citations`` changes; no circuit and no other field does.
 """

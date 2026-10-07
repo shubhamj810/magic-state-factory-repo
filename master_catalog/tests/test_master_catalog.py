@@ -75,8 +75,8 @@ COMMUNITY = "community contribution"
 #: borrowed-identity searches and a community contribution.
 NOT_AI = (PARETO, "exhaustive classification n<=54", SAT, COMMUNITY) + BORROWED
 #: The two reports the classification window is credited to: the length-54
-#: classification (arXiv:2609.30860) and the still-unpublished symmetry-and-AI
-#: report.
+#: classification (arXiv:2609.30860) and the symmetry-and-AI report
+#: (arXiv:2610.06535).
 WILLS, JAIN = "wills2026classification", "jain2026symmetry"
 #: The Pareto points the classification's own table (Table tab:complete-pareto)
 #: attributes to published protocols, by their index in the frontier file, with
@@ -697,14 +697,14 @@ class TestMasterCatalogue(unittest.TestCase):
                     self.assertEqual(row["citations"], [WILLS])
         self.assertEqual(seen, set(range(74)))
 
-    def test_published_works_are_linked_and_unpublished_ones_are_not(self):
+    def test_published_works_are_linked(self):
         """Every published work a row credits carries its link -- including the
-        length-54 classification, now on the arXiv; the unpublished
-        symmetry-and-AI report carries none.  A community contribution's entry
-        may go either way -- linked when the contributor's work is published."""
+        project's own two reports, both now on the arXiv.  A community
+        contribution's entry may go either way -- linked when the contributor's
+        work is published."""
         references = self.blob["references"]
-        if JAIN in references:
-            self.assertNotIn("url", references[JAIN])
+        self.assertEqual(references[JAIN].get("url"),
+                         "https://arxiv.org/abs/2610.06535")
         self.assertEqual(references[WILLS].get("url"),
                          "https://arxiv.org/abs/2609.30860")
         # a contributor's own work may be unpublished: exempt only the keys no
@@ -712,7 +712,7 @@ class TestMasterCatalogue(unittest.TestCase):
         elsewhere = {key for row in self.rows if COMMUNITY not in row["regimes"]
                      for key in row["citations"]}
         for key, entry in references.items():
-            if key == JAIN or key not in elsewhere:
+            if key not in elsewhere:
                 continue
             with self.subTest(key=key):
                 self.assertTrue(entry["url"].startswith("https://"))

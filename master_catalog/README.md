@@ -106,7 +106,8 @@ links each published one to its DOI or arXiv page.
     symmetry-SAT or AI searches also found is credited to the
     classification (Wills, Jain and Singh,
     [arXiv:2609.30860](https://arxiv.org/abs/2609.30860)) **and** the
-    symmetry-and-AI report (Jain, Wills and Singh).
+    symmetry-and-AI report (Jain, Wills and Singh,
+    [arXiv:2610.06535](https://arxiv.org/abs/2610.06535)).
   * **Everything else** is credited to the classification alone.
 * **Every other class with `n ≤ 54`** is credited to the classification and the
   symmetry-and-AI report. A published work that states it is credited too;

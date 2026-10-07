@@ -22,9 +22,20 @@ keywords:
   - fault-tolerant quantum computing
   - quantum error correction
   - triorthogonal codes
-# Works whose data the catalogue imports. Each factory page names the papers
+# The papers the catalogue is built from. Each factory page names the papers
 # that credit that factory.
 references:
+  - type: article
+    title: "Symmetry and AI-assisted discovery of magic-state factories"
+    authors:
+      - family-names: Jain
+        given-names: Shubham P.
+      - family-names: Wills
+        given-names: Adam
+      - family-names: Singh
+        given-names: Shraddha
+    year: 2026
+    url: "https://arxiv.org/abs/2610.06535"
   - type: article
     title: "Classification of Generalised Triorthogonal Codes through Length 54"
     authors:
