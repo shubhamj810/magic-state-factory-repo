@@ -569,9 +569,9 @@ figure.video iframe, .video-facade { display: block; width: 100%; aspect-ratio: 
 .video-facade:hover .play, .video-facade:focus-visible .play { background: var(--brand-solid); }
 figure.video figcaption { margin-top: 8px; font-size: 14px; color: var(--text-dim); }
 .hero-video { margin: 14px 0 0; font-size: 14.5px; }
-.hero-video a { display: inline-flex; align-items: center; gap: 6px; color: #dfe4ec; }
+.hero-video a { display: inline-flex; align-items: baseline; gap: 6px; color: #dfe4ec; line-height: 1.5; }
 .hero-video a:hover { color: #fff; }
-.hero-video svg { width: 16px; height: 16px; }
+.hero-video svg { width: 14px; height: 14px; flex: none; position: relative; top: 2px; }
 
 /* ------------------------------------------------- contribute: submission form */
 .submit-form { display: grid; gap: 6px; margin: 12px 0 24px; padding: 16px; max-width: 100%;
