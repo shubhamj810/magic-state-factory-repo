@@ -22,7 +22,9 @@ circuits in.  In order:
     regimes (``borrowed-identity search: two-group`` / ``: symmetry-free``) are
     registered by the merge, at the end of the header's order, as witnesses.
     Each record already names its citations (see that folder's README): the
-    paper, after the earlier work that published the class where there is one.
+    earliest work that published the class, or the paper where none did.  (As
+    first run, the records named the paper after the earlier work as well;
+    `earliest_reference_2026_10_07.py` removed it from those rows.)
     The paper's ``[[8,4,2]]`` is refused, as the catalogue refuses every
     pseudo-output: its fourth output is a combination of the other three
     modulo the checks.  The paper keeps it for the correlated errors the extra

@@ -94,8 +94,8 @@ and catalogue are in
 [`shraggy/Magic_state_factory_search`](https://github.com/shraggy/Magic_state_factory_search).
 [`borrowed_identities/`](borrowed_identities/) holds a byte-identical copy of
 that catalogue and code. It also holds an explicit, re-verified circuit for every
-row at levels 2, 3 and 4. Each imported class is credited to the paper, after
-any earlier work that published it.
+row at levels 2, 3 and 4. Each imported class is credited to the paper, unless
+an earlier work published it, in which case that work alone is credited.
 
 Only level 3 (`T` inputs) is merged into the master catalogue. The level-2 and
 level-4 circuits stay in that folder. The length-54 classification covers

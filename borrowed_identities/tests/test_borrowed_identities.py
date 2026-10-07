@@ -67,14 +67,16 @@ UPSTREAM_DISTANCE_ERRATA = {
 #: [[8,4,2]], whose fourth output is the others modulo the check span.
 REFUSED = {"l3-row083-two-group"}
 BORROWED = "singh2026borrowed"
-LITERATURE_FIRST = {
-    "8.3.2.a": ["eastin2013distilling", "jones2013novel", BORROWED],
-    "12.2.2.a": ["webster2023transversal", BORROWED],
-    "14.2.2.a": ["bravyi2012magic", BORROWED],
-    "20.4.2.a": ["bravyi2012magic", BORROWED],
-    "26.6.2.a": ["bravyi2012magic", BORROWED],
-    "14.6.2.a": ["campbell2017unified", BORROWED],
-    "18.4.2.b": ["campbell2017unified", BORROWED],
+#: Classes the searches found that an earlier work had published: credited to
+#: that work alone.
+EARLIER = {
+    "8.3.2.a": ["eastin2013distilling", "jones2013novel"],
+    "12.2.2.a": ["webster2023transversal"],
+    "14.2.2.a": ["bravyi2012magic"],
+    "20.4.2.a": ["bravyi2012magic"],
+    "26.6.2.a": ["bravyi2012magic"],
+    "14.6.2.a": ["campbell2017unified"],
+    "18.4.2.b": ["campbell2017unified"],
     "15.1.3.a": ["bravyi2005universal"],
 }
 
@@ -231,24 +233,18 @@ class TestMasterCatalogue(unittest.TestCase):
                 held = self.holders(circuit)
                 self.assertEqual(len(held), 0 if circuit["id"] in REFUSED else 1)
 
-    def test_every_class_the_searches_found_credits_the_paper(self):
-        """Except the 15-to-1, which stays credited to Bravyi and Kitaev."""
-        credited = set()
-        for circuit in load(3)["circuits"]:
-            for row in self.holders(circuit):
-                credited.add(row["catalog_label"])
-                with self.subTest(label=row["catalog_label"]):
-                    if row["catalog_label"] == "15.1.3.a":
-                        self.assertEqual(row["citations"], ["bravyi2005universal"])
-                    else:
-                        self.assertIn(BORROWED, row["citations"])
+    def test_the_paper_is_credited_where_no_earlier_work_was(self):
+        """On exactly the classes the searches found that no earlier
+        publication states."""
+        found = {row["catalog_label"] for circuit in load(3)["circuits"]
+                 for row in self.holders(circuit)}
+        self.assertLessEqual(set(EARLIER), found)
         cites = {row["catalog_label"] for row in self.rows
                  if BORROWED in row["citations"]}
-        self.assertEqual(cites, credited - {"15.1.3.a"},
-                         "the paper is credited on exactly the classes it found")
+        self.assertEqual(cites, found - set(EARLIER))
 
-    def test_earlier_publications_are_credited_first(self):
-        for label, keys in LITERATURE_FIRST.items():
+    def test_an_earlier_publication_is_credited_alone(self):
+        for label, keys in EARLIER.items():
             with self.subTest(label=label):
                 self.assertEqual(self.by_label[label]["citations"], keys)
 

@@ -116,12 +116,13 @@ links each published one to its DOI or arXiv page.
   symmetry-and-AI report.
 * **Distance 2.** The length-54 classification does not cover distance 2, so a
   distance-2 class never cites it. A class the borrowed-identity searches found
-  is credited to their paper (Singh, Gidney and Jones), after the earlier works
-  that published it, where any did: Bravyi & Haah, Eastin, Jones, Webster et
-  al., Campbell & Howard. The table is in
-  [`../borrowed_identities/README.md`](../borrowed_identities/README.md). One
-  exception: the 15-to-1, which the paper recovers, stays credited to Bravyi &
-  Kitaev alone, as a Pareto point. A distance-2 class only the symmetry-SAT
+  is credited to their paper (Singh, Gidney and Jones), unless an earlier work
+  published it. Then that earlier work alone is credited: Bravyi & Haah,
+  Eastin and Jones, Webster et al., Campbell & Howard, and, for the 15-to-1,
+  Bravyi & Kitaev ([`migrations/earliest_reference_2026_10_07.py`](migrations/earliest_reference_2026_10_07.py)).
+  The table is in
+  [`../borrowed_identities/README.md`](../borrowed_identities/README.md). A
+  distance-2 class only the symmetry-SAT
   search found is credited to the symmetry-and-AI report, unless a published
   work states it (`12.5.2.a`, Campbell & Howard's Example IV.4).
 * **A community contribution** that brings a new class is credited to the

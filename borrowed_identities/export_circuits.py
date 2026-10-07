@@ -81,9 +81,9 @@ CITATION = ("S. Singh, C. Gidney and C. Jones, \"Borrowed Identities: "
             "Malleable Distillation Factories and a Unified Numerical Search,\" "
             "arXiv:2606.28518 (2026)")
 
-#: The master-catalogue reference key for the paper.  Every level-3 record
-#: names it, except the one class the paper itself attributes to earlier work
-#: and that the catalogue already credits to that work alone (below).
+#: The master-catalogue reference key for the paper.  A record names it when
+#: no earlier work published the class; otherwise it names the earliest
+#: publication alone (`LITERATURE`).
 BORROWED = "singh2026borrowed"
 
 #: Earlier publications of a level-3 factory the paper recovers, keyed by
@@ -94,13 +94,14 @@ BORROWED = "singh2026borrowed"
 #: 8 T -> CCZ factory the Jones paper is Phys. Rev. A 87, 022328 (arXiv:
 #: 1212.5069), the one Eastin's and Campbell and Howard's papers cite for it;
 #: the Borrowed Identities paper's ref. [48] points to his later composite-
-#: Toffoli paper instead.  ``only`` means the record names that work alone:
-#: the classic 15-to-1 is a Pareto point of the length-54 classification that
-#: the catalogue credits to Bravyi and Kitaev alone, and the paper recovers it
-#: rather than claiming it.
+#: Toffoli paper instead.  A record whose class is here names these works and
+#: not the Borrowed Identities paper, which recovered the class rather than
+#: introducing it.  Eastin's and Jones's 8 T -> CCZ factories are concurrent
+#: and independent (arXiv:1212.4872 and 1212.5069, the same week), so both
+#: stay.
 LITERATURE = {
     (15, 1, 3, "T0"): dict(
-        keys=["bravyi2005universal"], only=True,
+        keys=["bravyi2005universal"],
         where="Bravyi and Kitaev (2005); recovered in arXiv:2606.28518 "
               "(symmetric circuits, s = 2)"),
     (14, 2, 2, "T0+T1"): dict(
@@ -332,9 +333,7 @@ def merge_record(entry):
     row = entry["csv"]
     key = (int(row["N"]), int(row["k"]), int(row["d"]), row["decomposition"])
     known = LITERATURE.get(key)
-    citations = list(known["keys"]) if known else []
-    if not (known and known.get("only")):
-        citations.append(BORROWED)
+    citations = list(known["keys"]) if known else [BORROWED]
     p = entry["parameters"]
     if entry["search"] == "two-group":
         built = (f"two-group l=3 n={p['n']} k={p['k']} s_total={p['s_total']} "

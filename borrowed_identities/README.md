@@ -33,7 +33,8 @@ cite the paper.** If you use the code, cite the repository too:
 
 What this repository adds is bookkeeping. It rebuilds an explicit circuit for every
 row, re-checks each one, and merges the level-3 circuits into the
-[master catalogue](../master_catalog/), credited to the paper.
+[master catalogue](../master_catalog/), credited to the paper wherever it was
+the first to publish the class.
 
 ## What the upstream catalogue is
 
@@ -189,19 +190,25 @@ show the same.
 
 ### Credit
 
-Every class these searches found is credited to the paper. Where an earlier
-work published the same class (same inputs, outputs, distance and output gate up
-to a CNOT frame), that work is credited first:
+A class these searches found is credited to the paper, unless an earlier work
+published the same class (same inputs, outputs, distance and output gate up to a
+CNOT frame). Then that work alone is credited, since the paper recovered the
+class rather than introducing it. The paper is cited on 173 classes. These are
+credited elsewhere:
 
 | class | credited to | where |
 |---|---|---|
-| `14.2.2.a`, `20.4.2.a`, `26.6.2.a` (`T^⊗k`) | Bravyi & Haah (2012), then the paper | the `k = 2, 4, 6` members of the `[[3k+8, k, 2]]` family (paper, App. F.3a) |
-| `8.3.2.a` (`CCZ`) | Eastin (2013), Jones (2013), then the paper | the 8 `T` → `CCZ` factory |
-| `12.2.2.a` (`CS`) | Webster, Quintavalle & Bartlett (2023), then the paper | the paper's ref. [33] |
-| `14.6.2.a` (`CCZ⊗CCZ`) | Campbell & Howard (2017), then the paper | their Example IV.2, the `N = 2` member of their `6N + 2` Toffoli family |
-| `18.4.2.b` (`CS⊗CS`) | Campbell & Howard (2017), then the paper | their Example IV.3: 18 `T` states for two `CS` gates, output error `45ε²` |
-| `15.1.3.a` (`T`) | Bravyi & Kitaev (2005) alone | unchanged. A Pareto point of the length-54 classification already credited to its publication, which the paper recovers |
-| `31.1.3.a` (`T`) | the length-54 classification and the symmetry-and-AI report, then the paper | an existing class within the classification window, where a published work stating a class is credited too |
+| `14.2.2.a`, `20.4.2.a`, `26.6.2.a` (`T^⊗k`) | Bravyi & Haah (2012) | the `k = 2, 4, 6` members of the `[[3k+8, k, 2]]` family (paper, App. F.3a) |
+| `8.3.2.a` (`CCZ`) | Eastin (2013) and Jones (2013) | the 8 `T` → `CCZ` factory, found independently in the same week (arXiv:1212.4872, 1212.5069) |
+| `12.2.2.a` (`CS`) | Webster, Quintavalle & Bartlett (2023) | the paper's ref. [33] |
+| `14.6.2.a` (`CCZ⊗CCZ`) | Campbell & Howard (2017) | their Example IV.2, the `N = 2` member of their `6N + 2` Toffoli family |
+| `18.4.2.b` (`CS⊗CS`) | Campbell & Howard (2017) | their Example IV.3: 18 `T` states for two `CS` gates, output error `45ε²` |
+| `15.1.3.a` (`T`) | Bravyi & Kitaev (2005) | the 15-to-1, a Pareto point of the length-54 classification |
+
+One held class keeps the paper alongside other credit. `31.1.3.a` is credited to
+the length-54 classification and the symmetry-and-AI report, as every class in
+that window is. Both are later than the paper, which states `[[31, 1, 3]]` in
+its catalogue, so the paper is credited there too.
 
 Two of these attributions go beyond the paper's own reference list:
 
@@ -214,7 +221,7 @@ Two of these attributions go beyond the paper's own reference list:
 - **`[[18, 4, 2]]`.** The paper presents it as the first new member of its
   `T`-to-`CS` family `[[6m+6, 2m, 2]]`. Campbell and Howard's Example IV.3
   already prints an 18-`T`-state, distance-2 protocol for two `CS` gates, the
-  same class, so they are credited too. For three `CS` gates their general count
+  same class, so the class is credited to them. For three `CS` gates their general count
   (their Eq. 121, `7N + 5` for odd `N`) is 26 inputs, so `[[24, 6, 2]]`
   (`m = 3`) is credited to the paper alone.
 
