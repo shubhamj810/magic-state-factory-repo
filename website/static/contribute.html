@@ -60,12 +60,28 @@
       </li>
       <li>
         <h2 id="send">Send it</h2>
+        <p><strong>The submission form is the easiest.</strong> Type a description below. It can
+        be parameters, a gate, matrices, a construction in words or a link. The next page is a
+        form on GitHub with your text already filled in, where you can also attach files. When
+        you submit it, your text and files are saved in the repository's contributions folder
+        automatically. You need a free GitHub account.</p>
+        <form class="submit-form" id="submit-form" method="get" target="_blank" rel="noopener"
+              action="https://github.com/shubhamj810/magic-state-factory-repo/issues/new">
+          <input type="hidden" name="template" value="submit-factory.yml">
+          <input type="hidden" name="title" value="Factory submission">
+          <label for="sub-name">Your name</label>
+          <input id="sub-name" name="name" type="text" autocomplete="name" required>
+          <label for="sub-text">The factories</label>
+          <textarea id="sub-text" name="description" rows="8" maxlength="6000" required
+                    placeholder="e.g. a [[49, 1, 5]] factory for T, built from ..."></textarea>
+          <p class="small muted">Long matrices are better attached as a file on the next page.</p>
+          <p><button type="submit" class="btn primary">Continue on GitHub</button></p>
+        </form>
         <p><strong>Pull request.</strong> Add one folder to the
         <a href="https://github.com/shubhamj810/magic-state-factory-repo">repository</a>, named
         <code class="wrap">community_contributions/submissions/YYYY-MM-DD_surname_short-title/</code>, holding
         your files as they are.</p>
-        <p><strong>Issue.</strong> <a href="https://github.com/shubhamj810/magic-state-factory-repo/issues/new">Open an issue</a>
-        and attach or link your files.</p>
+        <p><strong>No GitHub account?</strong> <a href="#email">Email it</a> instead.</p>
       </li>
       <li>
         <h2 id="next">What happens next</h2>

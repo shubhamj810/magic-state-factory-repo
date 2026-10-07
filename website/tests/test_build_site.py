@@ -207,6 +207,16 @@ class TheBuiltSite(unittest.TestCase):
         self.assertIn('aria-current="page">References<', text)
         self.assertNotIn("<!--#", text)
 
+    def test_the_submission_box_matches_the_issue_form(self):
+        text = (self.out / "contribute.html").read_text(encoding="utf-8")
+        form = (Path(__file__).resolve().parents[2] / ".github" / "ISSUE_TEMPLATE" /
+                "submit-factory.yml").read_text(encoding="utf-8")
+        self.assertIn('name="template" value="submit-factory.yml"', text)
+        for field in ("name", "description"):
+            self.assertIn(f'name="{field}"', text)
+            self.assertIn(f"id: {field}\n", form)
+        self.assertIn('labels: ["factory submission"]', form)
+
     def test_the_equivalents_snippet_runs(self):
         import pages
         source = pages.equivalents_snippet("15.1.3.a")

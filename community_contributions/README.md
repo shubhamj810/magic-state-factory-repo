@@ -51,6 +51,14 @@ not sure a protocol fits, send it anyway.
 
 ### How to send it
 
+* **Submission form (easiest).** Open a
+  [factory submission](https://github.com/shubhamj810/magic-state-factory-repo/issues/new?template=submit-factory.yml),
+  or use the text box on the website's
+  [contribute page](https://shubhamj810.github.io/magic-state-factory-repo/contribute.html#send).
+  Type a description and attach files. On submit, a workflow copies your text to
+  `submissions/YYYY-MM-DD_<github-login>_issue-<N>/description.txt`, downloads
+  your attachments beside it, and opens a pull request. You never fork or push.
+  No GitHub account? Email shubhamj810@gmail.com.
 * **Pull request.** Add one folder,
   `submissions/YYYY-MM-DD_surname_short-title/`, containing your files as they
   are. Do not edit `master_catalog/`; the maintainers regenerate it.

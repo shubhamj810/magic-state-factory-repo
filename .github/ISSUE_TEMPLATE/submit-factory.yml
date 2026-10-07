@@ -1,0 +1,49 @@
+name: Submit a factory
+description: Send magic-state factories to the catalogue. Text, files, links, anything.
+title: "Factory submission: "
+labels: ["factory submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing. Describe your factories in any form you have them.
+        When you submit, your text and files are copied into
+        `community_contributions/submissions/` automatically, and a pull request is opened
+        for the maintainers. Everything here is public.
+  - type: input
+    id: name
+    attributes:
+      label: Your name
+      description: The name your contribution is credited under.
+    validations:
+      required: true
+  - type: input
+    id: affiliation
+    attributes:
+      label: Affiliation
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: The factories
+      description: >-
+        Describe them in any form: parameters [[n, k, d]], output gate, matrices, circuits,
+        a construction in words, or a paper. Paste text here, or drag files (text, CSV, JSON,
+        PDF, images, zip) into this box.
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Paper or preprint
+      description: A link, if the work is published or on arXiv.
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Redistribution
+      options:
+        - label: The factories may be included in the catalogue and redistributed with it.
+          required: true

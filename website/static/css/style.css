@@ -556,6 +556,18 @@ footer.site .brand { margin-bottom: 10px; }
   header.site nav a.gh { display: none; }  /* the footer links to GitHub */
 }
 
+/* ------------------------------------------------- contribute: submission form */
+.submit-form { display: grid; gap: 6px; margin: 12px 0 24px; padding: 16px; max-width: 100%;
+  border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-2); }
+.submit-form label { font: 600 13.5px var(--sans); color: var(--text); margin-top: 4px; }
+.submit-form input[type="text"], .submit-form textarea { font: 15px/1.5 var(--sans); color: var(--text);
+  background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--radius);
+  padding: 8px 10px; width: 100%; box-sizing: border-box; min-width: 0; }
+.submit-form textarea { resize: vertical; }
+.submit-form input:focus, .submit-form textarea:focus { outline: none; border-color: var(--brand);
+  box-shadow: 0 0 0 1px var(--brand); }
+.submit-form p { margin: 0; }
+
 /* ------------------------------------------------- CNOT + S transform panel */
 .tf-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 12px; }
 .tf-row input { flex: 1 1 280px; min-width: 0; font: 14px var(--mono); padding: 7px 10px; color: var(--text);

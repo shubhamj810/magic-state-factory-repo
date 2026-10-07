@@ -1,0 +1,66 @@
+# A "Submit a factory" issue becomes a folder in community_contributions/submissions/
+# and a pull request, so contributors never have to fork or push anything.
+#
+#   issue form (.github/ISSUE_TEMPLATE/submit-factory.yml)
+#     --submission_from_issue.py--> submissions/YYYY-MM-DD_<login>_issue-<N>/
+#     --> branch submission/issue-<N> --> pull request, linked back on the issue
+#
+# Runs when an issue labelled "factory submission" is opened, or when a
+# maintainer adds that label to an existing issue (which also re-runs it).
+# The issue text is untrusted: it reaches the shell only as file contents and
+# never through ${{ }} interpolation.
+#
+# One-time setup: Settings -> Actions -> General -> "Allow GitHub Actions to
+# create and approve pull requests".
+name: Factory submission
+
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: submission-${{ github.event.issue.number }}
+
+jobs:
+  file:
+    if: >-
+      contains(github.event.issue.labels.*.name, 'factory submission') &&
+      (github.event.action == 'opened' || github.event.label.name == 'factory submission')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Write the submission folder
+        id: write
+        run: python3 .github/scripts/submission_from_issue.py
+
+      - name: Open a pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE: ${{ github.event.issue.number }}
+          AUTHOR: ${{ github.event.issue.user.login }}
+          FOLDER: ${{ steps.write.outputs.folder }}
+        run: |
+          branch="submission/issue-$ISSUE"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$branch"
+          git add -- "$FOLDER"
+          git commit -m "Factory submission from issue #$ISSUE" || echo "nothing new to commit"
+          git push --force origin "$branch"
+          if ! url=$(gh pr view "$branch" --json url --jq .url 2>/dev/null); then
+            printf 'Filed automatically from #%s by @%s.\n\nThe contributor text is in `%s/description.txt`, with any attached files beside it.\n\nTo do: convert to `catalogue_input.json`, run `check_submission.py`, merge what verifies, and add the contributor to `community_contributions/contributors.json`.\n' \
+              "$ISSUE" "$AUTHOR" "$FOLDER" > "$RUNNER_TEMP/body.md"
+            url=$(gh pr create --base main --head "$branch" \
+                    --title "Factory submission from @$AUTHOR (#$ISSUE)" --body-file "$RUNNER_TEMP/body.md")
+          fi
+          printf 'Thank you! Your submission is saved in `%s` and the maintainers have been notified (%s). We will verify it and reply here.\n' \
+            "$FOLDER" "$url" > "$RUNNER_TEMP/comment.md"
+          gh issue comment "$ISSUE" --body-file "$RUNNER_TEMP/comment.md"
