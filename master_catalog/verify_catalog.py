@@ -340,7 +340,7 @@ def derive(columns, k, N):
 
     Returns ``(facts, problems)``.  ``problems`` is a list of
     ``(kind, detail)`` pairs and means the circuit is not a publishable
-    level-3 distance->=3 factory; ``facts`` carries the derived values, and is
+    level-3 distance->=2 factory; ``facts`` carries the derived values, and is
     incomplete when the shape checks failed (nothing after them is meaningful).
 
     The distance is NOT derived here -- see `confirm_distance` (which re-proves
@@ -496,9 +496,10 @@ def confirm_distance(columns, k, N, d, d_is_exact, d_witness, d_upper,
     measurement -- and that is what the checks above are pointed at.
     """
     problems = []
-    if not _integer(d) or d < 3:
-        return [("distance-below-3",
-                 f"d={d!r} is not an integer >= 3; this catalogue is d >= 3")]
+    if not _integer(d) or d < 2:
+        return [("distance-below-2",
+                 f"d={d!r} is not an integer >= 2; this catalogue is d >= 2: "
+                 f"a distance-1 circuit detects no single fault")]
     circuit = FC.Circuit(columns, k, N, budget or FC.Budget())
     if d > circuit.n:
         problems.append(("distance", f"d={d} exceeds the {circuit.n} columns"))

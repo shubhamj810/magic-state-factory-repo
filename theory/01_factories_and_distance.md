@@ -93,8 +93,11 @@ target, with `0` required on every subset touching a check.
 
 One family is worth writing down explicitly, because nine rows of the
 symmetry search's example catalogue are members of it and every search in
-this repository starts from inside it. They are distance 2, so none of them
-is in the master catalogue, whose floor is `d >= 3`.
+this repository starts from inside it. They are distance 2. Since the master
+catalogue's floor was lowered to `d >= 2` (2026-10-07) they are held there,
+among them `14.1.2.a`, `12.2.2.a` and `8.3.2.a`: the `T`, `CS` and `CCZ` members
+of the malleable chain of Singh, Gidney and Jones (arXiv:2606.28518), whose
+catalogue is imported in [`../borrowed_identities/`](../borrowed_identities/).
 
 Fix `N` wires with the output block `0..k-1`, and take **every nonzero column
 except those supported inside the output block** — that is, every column

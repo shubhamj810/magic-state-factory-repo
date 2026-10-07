@@ -7,6 +7,8 @@ a source certifies but that could not be re-measured is printed separately and
 marked as such. The protocols come from:
 
 - an **exhaustive classification** of every protocol with up to 54 inputs;
+- the **borrowed-identity searches** of Singh, Gidney and Jones, for
+  distance 2;
 - **AI-assisted and symmetry-constrained searches** for larger and better ones;
 - the **published literature**;
 - **community contributions** from outside authors, verified to the same bar.
@@ -39,11 +41,13 @@ circuit is a list of parity-rotation `columns` over `N` wires: wires `0..k-1`
 are the outputs and the rest are postselected checks. `d` is the circuit's
 fault distance.
 
-The catalogue holds **813 classes**:
+The catalogue holds **1002 classes**:
 
-- `n = 15..1715`, `k = 1..373`, `d = 3..7`;
-- 217 classes with `n <= 54`, including all 74 Pareto points of the length-54
-  classification.
+- `n = 8..2046`, `k = 1..373`, `d = 2..7`;
+- 181 classes at distance 2, from the borrowed-identity searches and this
+  repository's symmetry-SAT search;
+- 217 classes with `n <= 54` and `d >= 3`, including all 74 Pareto points of
+  the length-54 classification.
 
 ```bash
 .venv/bin/python master_catalog/verify_catalog.py            # re-derive every row from its columns
@@ -70,23 +74,32 @@ names the papers that credit it, linked where they are published.
 | source | what it contributes | regime(s) |
 |---|---|---|
 | **Exhaustive classification**, `n <= 54` (Wills, Jain and Singh; [paper](https://arxiv.org/abs/2609.30860), [code and theory](https://github.com/AWillsQuantum/generalised_triorthogonal_classification), [data](https://figshare.com/articles/dataset/Generalised_Triorthogonal_Code_Classification_Through_Length_54_Data/33717319)) | every generalised triorthogonal protocol with `n <= 54` and exact `d_Z >= 3`, up to CNOT+S. Its 74 Pareto points (undominated in inputs `n` and wires `N`) are copied in [`classification/length54/`](classification/length54/); a test checks that every other class the catalogue holds in that window is dominated by one | `exhaustive classification n<=54 (Pareto point)`, `exhaustive classification n<=54` |
+| **Borrowed-identity searches** (Singh, Gidney and Jones; [paper](https://arxiv.org/abs/2606.28518), [code and data](https://github.com/shraggy/Magic_state_factory_search)) | the paper's catalogue of distance-2 factories: two-group and symmetry-free searches over borrowed-identity circuits. Copied, with an explicit circuit rebuilt for every row, in [`borrowed_identities/`](borrowed_identities/); its 185 level-3 circuits give 179 classes here (171 at distance 2). Not counted as an AI discovery | `borrowed-identity search: two-group`, `borrowed-identity search: symmetry-free` |
 | **AI-assisted search** (Jain, Wills and Singh) | AI search campaigns run in the companion repository `magic-states-AI`, from punctured simplex and Reed–Muller parents and Wills's parent codes, including the pure-T distillation-exponent (`γ`) frontier, and the public search for generalised triorthogonal protocols at lengths 55–64 | `AI search`, `AI search: …`, `AI search (gamma frontier): …` |
 | **Symmetry-constrained SAT search** (same report) | CP-SAT searches over symmetric column orbits and ansatz-free SAT, in [`symmetry_sat_search/`](symmetry_sat_search/). Not counted as an AI discovery | `symmetry-SAT search` |
-| **Literature** | published protocols: Bravyi & Kitaev, Nezami & Haah, Haah & Hastings, Jacinto et al., Gong et al., and others | cited in the row's `citations`, linked to the DOI or arXiv page |
+| **Literature** | published protocols: Bravyi & Kitaev, Bravyi & Haah, Eastin, Jones, Campbell & Howard, Nezami & Haah, Haah & Hastings, Jacinto et al., Gong et al., and others | cited in the row's `citations`, linked to the DOI or arXiv page |
 | **Community contributions** | protocols from outside authors, verified here; a class new to the catalogue is cited to its contributor | `community contribution` |
 
 A published class is credited to its paper. The rest
 of the credit rules are in [`master_catalog/README.md`](master_catalog/README.md).
 
-### Distance-2 factories
+### Distance-2 factories: `borrowed_identities/`
 
-This catalogue holds `d ≥ 3` only. Distance-2 factories, and the
-borrowed-identity search that finds them at every level of the Clifford
-hierarchy, are in
-[`shraggy/Magic_state_factory_search`](https://github.com/shraggy/Magic_state_factory_search)
-(S. Singh, C. Gidney and C. Jones, *Borrowed Identities: Malleable Distillation
+The catalogue holds distance 2 and up. Most distance-2 classes come from
+S. Singh, C. Gidney and C. Jones, *Borrowed Identities: Malleable Distillation
 Factories and a Unified Numerical Search*,
-[arXiv:2606.28518](https://arxiv.org/abs/2606.28518)).
+[arXiv:2606.28518](https://arxiv.org/abs/2606.28518). Their search finds
+distance-2 factories at every level of the Clifford hierarchy, and their code
+and catalogue are in
+[`shraggy/Magic_state_factory_search`](https://github.com/shraggy/Magic_state_factory_search).
+[`borrowed_identities/`](borrowed_identities/) holds a byte-identical copy of
+that catalogue and code. It also holds an explicit, re-verified circuit for every
+row at levels 2, 3 and 4. Each imported class is credited to the paper, after
+any earlier work that published it.
+
+Only level 3 (`T` inputs) is merged into the master catalogue. The level-2 and
+level-4 circuits stay in that folder. The length-54 classification covers
+`d ≥ 3` only, so its claims say nothing about distance 2.
 
 ## Context for AI agents: `agent_context/`
 
@@ -136,6 +149,7 @@ describes what to send and how the maintainers process it.
 |---|---|
 | [`master_catalog/`](master_catalog/) | **the database**, its verifier, merge tool and one-off migrations |
 | [`classification/length54/`](classification/length54/) | the length-54 classification's Pareto frontier (byte-identical copy, CC BY 4.0) |
+| [`borrowed_identities/`](borrowed_identities/) | the Borrowed Identities catalogue and code (Singh, Gidney and Jones), byte-identical, with an explicit circuit for every row |
 | [`symmetry_sat_search/`](symmetry_sat_search/) | symmetry-slot and ansatz-free SAT search engines and their verified examples |
 | [`parent_first/`](parent_first/) | analyse one check parent, target a gate, or enumerate the gates it carries |
 | [`agent_context/`](agent_context/) | the context pack for agents continuing the search |
@@ -183,6 +197,10 @@ expected outputs and runtimes.
 - **The length-54 frontier** is copied unmodified from the classification's own
   delivery. Its commit and SHA-256 are in
   [`classification/length54/README.md`](classification/length54/README.md).
+- **The Borrowed Identities catalogue and code** are copied unmodified from
+  the upstream repository. The commit and SHA-256s are in
+  [`borrowed_identities/README.md`](borrowed_identities/README.md) and pinned
+  by its tests.
 - **Third-party data** the repository uses is listed, with its terms, in
   [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 - **Per-row provenance** is in each row's `sources`: the file, record and

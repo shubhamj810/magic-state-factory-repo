@@ -406,6 +406,7 @@ figure.plot figcaption { padding: 10px 0 0; font-size: 13px; color: var(--text-d
 .panels .stair { fill: none; stroke: var(--brand); stroke-width: 1.75; }
 .panels .pt { fill: var(--muted); opacity: 0.55; }
 .panels .pt.front { fill: var(--brand); opacity: 1; }
+.panels .pt.clipped { fill: none; stroke: var(--muted); stroke-width: 1; opacity: 0.8; }
 .panels .pt.hot { opacity: 1; stroke: var(--text); stroke-width: 1.5; }
 .key { display: inline-flex; align-items: center; gap: 6px; margin-right: 14px; color: var(--text); }
 .key .key-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); opacity: 0.7; }

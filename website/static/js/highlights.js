@@ -170,10 +170,25 @@
     var xs = pts.map(function (p) { return Math.log10(p.n); });
     var ys = pts.map(function (p) { return p.gamma_rho; });
     var x0 = Math.min.apply(null, xs) - 0.04, x1 = Math.max.apply(null, xs) + 0.04;
-    var y0 = Math.min(0.95, Math.min.apply(null, ys) - 0.05), y1 = Math.max.apply(null, ys) + 0.08;
+    /* The axis is fitted to the frontiers, the subject of the plot: every
+     * staircase point is drawn where it is.  Parameter sets far above every
+     * frontier (distance-2 factories with one output and thousands of inputs
+     * reach gamma = 11) would otherwise squash the panels into their lowest
+     * fifth, so a point above the axis sits on its top edge, hollow, and the
+     * caption counts them.  The tooltip still gives its value. */
+    var yFront = Math.max.apply(null, byDistance(pts).map(function (group) {
+      /* a staircase's highest step is its first: the best at the smallest n */
+      var first = Math.min.apply(null, group.rows.map(function (p) { return p.n; }));
+      return Math.min.apply(null, group.rows.filter(function (p) { return p.n === first; })
+                                           .map(function (p) { return p.gamma_rho; }));
+    }));
+    var yCap = Math.min(Math.max.apply(null, ys), yFront + 0.75);
+    var y0 = Math.min(0.95, Math.min.apply(null, ys) - 0.05), y1 = yCap + 0.08;
+    var clipped = ys.filter(function (y) { return y > yCap; }).length;
+    var step = y1 - y0 > 5 ? 1 : 0.5;
     var iw = W - L - R, ih = H - T - B;
     function X(n) { return L + (Math.log10(n) - x0) / (x1 - x0) * iw; }
-    function Y(g) { return T + ih - (g - y0) / (y1 - y0) * ih; }
+    function Y(g) { return T + ih - (Math.min(g, yCap) - y0) / (y1 - y0) * ih; }
 
     panels = [];
     var html = byDistance(pts).map(function (group) {
@@ -183,7 +198,7 @@
       var best = stair[stair.length - 1];
       var parts = [];
 
-      for (var gy = Math.ceil(y0 * 2) / 2; gy <= y1; gy += 0.5) {
+      for (var gy = Math.ceil(y0 / step) * step; gy <= yCap; gy += step) {
         parts.push('<line class="grid" x1="' + L + '" y1="' + Y(gy).toFixed(1) + '" x2="' + (W - R) +
                    '" y2="' + Y(gy).toFixed(1) + '"/>');
         parts.push('<text class="ax" x="' + (L - 6) + '" y="' + (Y(gy) + 3.5).toFixed(1) +
@@ -213,7 +228,8 @@
         parts.push('<path class="stair" d="' + path + '"/>');
       }
       rows.forEach(function (p, i) {
-        parts.push('<circle class="pt' + (p._front ? " front" : "") + '" data-i="' + i + '" cx="' +
+        parts.push('<circle class="pt' + (p._front ? " front" : "") + (p.gamma_rho > yCap ? " clipped" : "") +
+                   '" data-i="' + i + '" cx="' +
                    p._x.toFixed(1) + '" cy="' + p._y.toFixed(1) + '" r="' + (p._front ? 3.6 : 2.6) + '"/>');
       });
       parts.push('<text class="ptitle" x="' + L + '" y="16"><tspan class="mi">d</tspan> = ' + group.d + "</text>");
@@ -260,6 +276,8 @@
       '<span class="key"><span class="stair-key"></span><span>lowest ' + C.tex(M.sym) + " up to this " + C.tex("n") + '</span></span>' +
       '<span class="key"><span class="unity-key"></span><span>' + C.tex(M.sym + "=1") + '</span></span>' +
       "<br>Hover over a point for details, or click it to open." +
+      (clipped ? " " + clipped + " parameter set" + (clipped === 1 ? " lies" : "s lie") + " above the axis and " +
+                 (clipped === 1 ? "is" : "are") + " drawn hollow on its top edge." : "") +
       (skipped ? " " + skipped + " parameter set" + (skipped === 1 ? " is" : "s are") + " left out because " +
                  (M === METRICS.gamma ? "they hold no pure " + C.tex("T^{\\otimes k}") + " gate."
                                       : "their gates have no " + C.tex(C.TEX.vex) + ".") : "") +

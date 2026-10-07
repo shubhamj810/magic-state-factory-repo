@@ -1,0 +1,183 @@
+l,N,k,d,degree,essential_dim,t_count,t_count_note,decomposition,n,s_total,s_O,parts,search
+3,14,1,2,1,1,1,,T0,4,1,1,,two-group
+3,15,1,3,1,1,1,,T0,5,2,1,,two-group
+3,30,1,2,1,1,1,,T0,5,1,1,,two-group
+3,31,1,3,1,1,1,,T0,6,2,1,,two-group
+3,62,1,2,1,1,1,,T0,6,1,1,,two-group
+3,63,1,3,1,1,1,,T0,7,2,1,,two-group
+3,126,1,2,1,1,1,,T0,7,1,1,,two-group
+3,127,1,3,1,1,1,,T0,8,2,1,,two-group
+3,135,1,5,1,1,1,,T0,9,4,1,,two-group
+3,254,1,2,1,1,1,,T0,8,1,1,,two-group
+3,255,1,3,1,1,1,,T0,9,2,1,,two-group
+3,271,1,5,1,1,1,,T0,10,4,1,,two-group
+3,510,1,2,1,1,1,,T0,9,1,1,,two-group
+3,511,1,3,1,1,1,,T0,10,2,1,,two-group
+3,527,1,5,1,1,1,,T0,11,4,1,,two-group
+3,1022,1,2,1,1,1,,T0,10,1,1,,two-group
+3,1023,1,3,1,1,1,,T0,11,2,1,,two-group
+3,2046,1,2,1,1,1,,T0,11,1,1,,two-group
+3,12,2,2,2,2,3,,CS01,4,1,1,,two-group + symmetry-free
+3,14,2,2,1,2,2,,T0+T1,5,2,1,,two-group + symmetry-free
+3,28,2,2,2,2,3,,CS01,5,1,1,,two-group
+3,30,2,2,1,2,2,,T0+T1,6,2,1,,two-group
+3,45,2,2,1,2,2,,T0+T1,6,1,2,,two-group
+3,46,2,2,1,2,2,,T0+T1,7,2,2,,two-group
+3,60,2,2,2,2,3,,CS01,6,1,1,,two-group
+3,62,2,2,1,2,2,,T0+T1,7,2,1,,two-group
+3,93,2,2,1,2,2,,T0+T1,7,1,2,,two-group
+3,94,2,2,1,2,2,,T0+T1,8,2,2,,two-group
+3,124,2,2,2,2,3,,CS01,7,1,1,,two-group
+3,126,2,2,1,2,2,,T0+T1,8,2,1,,two-group
+3,134,2,2,1,2,2,,T0+T1,9,4,1,,two-group
+3,189,2,2,1,2,2,,T0+T1,8,1,2,,two-group
+3,190,2,2,1,2,2,,T0+T1,9,2,2,,two-group
+3,252,2,2,2,2,3,,CS01,8,1,1,,two-group
+3,254,2,2,1,2,2,,T0+T1,9,2,1,,two-group
+3,270,2,2,1,2,2,,T0+T1,10,4,1,,two-group
+3,381,2,2,1,2,2,,T0+T1,9,1,2,,two-group
+3,382,2,2,1,2,2,,T0+T1,10,2,2,,two-group
+3,406,2,2,1,2,2,,T0+T1,11,4,2,,two-group
+3,508,2,2,2,2,3,,CS01,9,1,1,,two-group
+3,510,2,2,1,2,2,,T0+T1,10,2,1,,two-group
+3,526,2,2,1,2,2,,T0+T1,11,4,1,,two-group
+3,765,2,2,1,2,2,,T0+T1,10,1,2,,two-group
+3,766,2,2,1,2,2,,T0+T1,11,2,2,,two-group
+3,1020,2,2,2,2,3,,CS01,10,1,1,,two-group
+3,1022,2,2,1,2,2,,T0+T1,11,2,1,,two-group
+3,1533,2,2,1,2,2,,T0+T1,11,1,2,,two-group
+3,2044,2,2,2,2,3,,CS01,11,1,1,,two-group
+3,8,3,2,3,3,7,,CCZ012,4,1,1,,two-group + symmetry-free
+3,12,3,2,2,3,4,,CS01+CS02,5,2,1,,two-group
+3,20,3,2,2,3,4,,CS01+T2,6,,,2+1,symmetry-free
+3,24,3,2,3,3,7,,CCZ012,5,1,1,,two-group
+3,28,3,2,1,3,3,,T0+T1+T2,6,1,3,,two-group
+3,29,3,2,1,3,3,,T0+T1+T2,7,2,3,,two-group
+3,56,3,2,3,3,7,,CCZ012,6,1,1,,two-group
+3,60,3,2,1,3,3,,T0+T1+T2,7,1,3,,two-group
+3,61,3,2,1,3,3,,T0+T1+T2,8,2,3,,two-group
+3,75,3,2,2,3,4,,CS01+CS02,7,1,2,,two-group
+3,76,3,2,2,3,4,,CS01+CS02,8,2,2,,two-group
+3,120,3,2,3,3,7,,CCZ012,7,1,1,,two-group
+3,124,3,2,1,3,3,,T0+T1+T2,8,1,3,,two-group
+3,125,3,2,1,3,3,,T0+T1+T2,9,2,3,,two-group
+3,133,3,2,1,3,3,,T0+T1+T2,9,4,1,,two-group
+3,155,3,2,2,3,4,,CS01+CS02,8,1,2,,two-group
+3,156,3,2,2,3,4,,CS01+CS02,9,2,2,,two-group
+3,248,3,2,3,3,7,,CCZ012,8,1,1,,two-group
+3,252,3,2,1,3,3,,T0+T1+T2,9,1,3,,two-group
+3,253,3,2,1,3,3,,T0+T1+T2,10,2,3,,two-group
+3,269,3,2,1,3,3,,T0+T1+T2,10,4,1,,two-group
+3,277,3,2,1,3,3,,T0+T1+T2,11,4,3,,two-group
+3,315,3,2,2,3,4,,CS01+CS02,9,1,2,,two-group
+3,316,3,2,2,3,4,,CS01+CS02,10,2,2,,two-group
+3,504,3,2,3,3,7,,CCZ012,9,1,1,,two-group
+3,508,3,2,1,3,3,,T0+T1+T2,10,1,3,,two-group
+3,509,3,2,1,3,3,,T0+T1+T2,11,2,3,,two-group
+3,525,3,2,1,3,3,,T0+T1+T2,11,4,1,,two-group
+3,635,3,2,2,3,4,,CS01+CS02,10,1,2,,two-group
+3,636,3,2,2,3,4,,CS01+CS02,11,2,2,,two-group
+3,1016,3,2,3,3,7,,CCZ012,10,1,1,,two-group
+3,1020,3,2,1,3,3,,T0+T1+T2,11,1,3,,two-group
+3,1275,3,2,2,3,4,,CS01+CS02,11,1,2,,two-group
+3,2040,3,2,3,3,7,,CCZ012,11,1,1,,two-group
+3,8,4,2,3,3,7,,CCZ012,5,2,1,,two-group
+3,18,4,2,2,4,5,,CS01+CS02+CS13,6,1,3,,two-group
+3,18,4,2,2,4,6,,CS01+CS23,6,,,2+2,symmetry-free
+3,20,4,2,1,4,4,,T0+T1+T2+T3,7,2,3,,two-group
+3,20,4,2,3,4,7,,CCZ012+T3,7,,,3+1,symmetry-free
+3,22,4,2,2,4,5,,CS01+T2+T3,7,,,2+1+1,symmetry-free
+3,24,4,2,3,3,7,,CCZ012,6,2,1,,two-group
+3,28,4,2,1,4,4,,T0+T1+T2+T3,7,,,1+1+1+1,symmetry-free
+3,42,4,2,2,4,5,,CS01+CS02+CS13,7,1,3,,two-group
+3,44,4,2,1,4,4,,T0+T1+T2+T3,8,2,3,,two-group
+3,56,4,2,3,3,7,,CCZ012,7,2,1,,two-group
+3,75,4,2,1,4,4,,T0+T1+T2+T3,8,1,4,,two-group
+3,76,4,2,1,4,4,,T0+T1+T2+T3,9,2,4,,two-group
+3,90,4,2,2,4,5,,CS01+CS02+CS13,8,1,3,,two-group
+3,92,4,2,1,4,4,,T0+T1+T2+T3,9,2,3,,two-group
+3,120,4,2,3,3,7,,CCZ012,8,2,1,,two-group
+3,132,4,2,1,4,4,,T0+T1+T2+T3,9,4,1,,two-group
+3,135,4,2,3,3,7,,CCZ012,8,1,2,,two-group
+3,136,4,2,3,3,7,,CCZ012,9,2,2,,two-group
+3,155,4,2,1,4,4,,T0+T1+T2+T3,9,1,4,,two-group
+3,156,4,2,1,4,4,,T0+T1+T2+T3,10,2,4,,two-group
+3,186,4,2,2,4,5,,CS01+CS02+CS13,9,1,3,,two-group
+3,188,4,2,1,4,4,,T0+T1+T2+T3,10,2,3,,two-group
+3,196,4,2,1,4,4,,T0+T1+T2+T3,11,4,3,,two-group
+3,248,4,2,3,3,7,,CCZ012,9,2,1,,two-group
+3,268,4,2,1,4,4,,T0+T1+T2+T3,10,4,1,,two-group
+3,279,4,2,3,3,7,,CCZ012,9,1,2,,two-group
+3,280,4,2,3,3,7,,CCZ012,10,2,2,,two-group
+3,315,4,2,1,4,4,,T0+T1+T2+T3,10,1,4,,two-group
+3,316,4,2,1,4,4,,T0+T1+T2+T3,11,2,4,,two-group
+3,378,4,2,2,4,5,,CS01+CS02+CS13,10,1,3,,two-group
+3,380,4,2,1,4,4,,T0+T1+T2+T3,11,2,3,,two-group
+3,504,4,2,3,3,7,,CCZ012,10,2,1,,two-group
+3,524,4,2,1,4,4,,T0+T1+T2+T3,11,4,1,,two-group
+3,567,4,2,3,3,7,,CCZ012,10,1,2,,two-group
+3,568,4,2,3,3,7,,CCZ012,11,2,2,,two-group
+3,635,4,2,1,4,4,,T0+T1+T2+T3,11,1,4,,two-group
+3,762,4,2,2,4,5,,CS01+CS02+CS13,11,1,3,,two-group
+3,1016,4,2,3,3,7,,CCZ012,11,2,1,,two-group
+3,1143,4,2,3,3,7,,CCZ012,11,1,2,,two-group
+3,18,5,2,3,5,9,,CCZ012+CS34,7,,,3+2,symmetry-free
+3,20,5,2,3,5,8,,CCZ012+T3+T4,8,,,3+1+1,symmetry-free
+3,26,5,2,2,5,7,,CS01+CS23+T4,8,,,2+2+1,symmetry-free
+3,30,5,2,2,5,6,,CS01+T2+T3+T4,8,,,2+1+1+1,symmetry-free
+3,42,5,2,1,5,5,,T0+T1+T2+T3+T4,8,1,5,,two-group
+3,43,5,2,1,5,5,,T0+T1+T2+T3+T4,9,2,5,,two-group
+3,90,5,2,1,5,5,,T0+T1+T2+T3+T4,9,1,5,,two-group
+3,91,5,2,1,5,5,,T0+T1+T2+T3+T4,10,2,5,,two-group
+3,105,5,2,2,5,6,,CS02+CS03+CS13+CS24,9,1,4,,two-group
+3,106,5,2,2,5,6,,CS02+CS03+CS13+CS24,10,2,4,,two-group
+3,130,5,2,2,5,6,,CS02+CS03+CS13+CS24,9,4,1,,two-group
+3,165,5,2,2,5,10,,CS01234(10+5 terms),9,1,3,,two-group
+3,171,5,2,1,5,5,,T0+T1+T2+T3+T4,10,2,3,,two-group
+3,186,5,2,1,5,5,,T0+T1+T2+T3+T4,10,1,5,,two-group
+3,187,5,2,1,5,5,,T0+T1+T2+T3+T4,11,2,5,,two-group
+3,217,5,2,2,5,6,,CS02+CS03+CS13+CS24,10,1,4,,two-group
+3,218,5,2,2,5,6,,CS02+CS03+CS13+CS24,11,2,4,,two-group
+3,266,5,2,2,5,6,,CS02+CS03+CS13+CS24,10,4,1,,two-group
+3,341,5,2,2,5,10,,CS01234(10+5 terms),10,1,3,,two-group
+3,347,5,2,1,5,5,,T0+T1+T2+T3+T4,11,2,3,,two-group
+3,378,5,2,1,5,5,,T0+T1+T2+T3+T4,11,1,5,,two-group
+3,441,5,2,2,5,6,,CS02+CS03+CS13+CS24,11,1,4,,two-group
+3,522,5,2,2,5,6,,CS02+CS03+CS13+CS24,11,4,1,,two-group
+3,693,5,2,2,5,10,,CS01234(10+5 terms),11,1,3,,two-group
+3,14,6,2,3,6,13,,CCZ012+CCZ345,7,,,3+3,symmetry-free
+3,24,6,2,2,6,7,,CS012345(5 terms),8,1,5,,two-group
+3,24,6,2,2,6,9,,CS01+CS23+CS45,8,,,2+2+2,symmetry-free
+3,26,6,2,1,6,6,,T0+T1+T2+T3+T4+T5,9,2,5,,two-group
+3,26,6,2,3,6,10,,CCZ012+CS34+T5,9,,,3+2+1,symmetry-free
+3,28,6,2,2,6,8,,CS01+CS23+T4+T5,9,,,2+2+1+1,symmetry-free
+3,42,6,2,1,6,6,,T0+T1+T2+T3+T4+T5,9,,,1+1+1+1+1+1,symmetry-free
+3,56,6,2,2,6,7,,CS012345(5 terms),9,1,5,,two-group
+3,58,6,2,1,6,6,,T0+T1+T2+T3+T4+T5,10,2,5,,two-group
+3,105,6,2,1,6,6,,T0+T1+T2+T3+T4+T5,10,1,6,,two-group
+3,106,6,2,1,6,6,,T0+T1+T2+T3+T4+T5,11,2,6,,two-group
+3,120,6,2,2,6,7,,CS012345(5 terms),10,1,5,,two-group
+3,122,6,2,1,6,6,,T0+T1+T2+T3+T4+T5,11,2,5,,two-group
+3,124,6,2,3,5,11,,CCZ014+CCZ023+CCZ123+CCZ124,9,4,1,,two-group
+3,154,6,2,2,6,6,,CS01245(4+1 terms)+T3,9,1,3,,two-group
+3,170,6,2,1,6,6,,T0+T1+T2+T3+T4+T5,10,2,3,,two-group
+3,195,6,2,3,5,11,,CCZ014+CCZ023+CCZ123+CCZ124,10,1,4,,two-group
+3,196,6,2,3,5,11,,CCZ014+CCZ023+CCZ123+CCZ124,11,2,4,,two-group
+3,217,6,2,1,6,6,,T0+T1+T2+T3+T4+T5,11,1,6,,two-group
+3,248,6,2,2,6,7,,CS012345(5 terms),11,1,5,,two-group
+3,260,6,2,3,5,11,,CCZ014+CCZ023+CCZ123+CCZ124,10,4,1,,two-group
+3,330,6,2,2,6,6,,CS01245(4+1 terms)+T3,10,1,3,,two-group
+3,346,6,2,1,6,6,,T0+T1+T2+T3+T4+T5,11,2,3,,two-group
+3,403,6,2,3,5,11,,CCZ014+CCZ023+CCZ123+CCZ124,11,1,4,,two-group
+3,516,6,2,3,5,11,,CCZ014+CCZ023+CCZ123+CCZ124,11,4,1,,two-group
+3,682,6,2,2,6,6,,CS01245(4+1 terms)+T3,11,1,3,,two-group
+3,56,7,2,1,7,,exact T-count decoder only supports k<=6 (uint64 vector packing); this state touches 7 qubits,T0+T1+T2+T3+T4+T5+T6,10,1,7,,two-group
+3,57,7,2,1,7,,exact T-count decoder only supports k<=6 (uint64 vector packing); this state touches 7 qubits,T0+T1+T2+T3+T4+T5+T6,11,2,7,,two-group
+3,120,7,2,1,7,,exact T-count decoder only supports k<=6 (uint64 vector packing); this state touches 7 qubits,T0+T1+T2+T3+T4+T5+T6,11,1,7,,two-group
+3,132,7,2,3,7,,exact T-count decoder only supports k<=6 (uint64 vector packing); this state touches 7 qubits,CCZ0123456(35+21 terms),9,1,3,,two-group
+3,135,7,2,3,7,,exact T-count decoder only supports k<=6 (uint64 vector packing); this state touches 7 qubits,CCZ0123456(35+21 terms),11,1,6,,two-group
+3,168,7,2,3,7,,exact T-count decoder only supports k<=6 (uint64 vector packing); this state touches 7 qubits,CCZ0123456(35+21 terms),10,2,3,,two-group
+3,225,7,2,2,7,,exact T-count decoder only supports k<=6 (uint64 vector packing); this state touches 7 qubits,CS0123456(21+7 terms),11,1,5,,two-group
+3,308,7,2,3,7,,exact T-count decoder only supports k<=6 (uint64 vector packing); this state touches 7 qubits,CCZ0123456(35+21 terms),10,1,3,,two-group
+3,344,7,2,3,7,,exact T-count decoder only supports k<=6 (uint64 vector packing); this state touches 7 qubits,CCZ0123456(35+21 terms),11,2,3,,two-group
+3,660,7,2,3,7,,exact T-count decoder only supports k<=6 (uint64 vector packing); this state touches 7 qubits,CCZ0123456(35+21 terms),11,1,3,,two-group

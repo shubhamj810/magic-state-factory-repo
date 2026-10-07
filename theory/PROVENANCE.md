@@ -56,11 +56,27 @@ Figshare dataset; none of that is re-run here.
 |---|---|---|
 | 74 Pareto points for 62 CNOT+S output classes, `n <= 54`, exact `d_Z >= 3` | that repository's enumeration | its audit (`AUDIT_GUIDE.md` there); the witnesses alone are checked here |
 | each Pareto point's matrix, exact distance and output | [`classification/length54/pareto_frontier.json`](../classification/length54/pareto_frontier.json), byte-identical to the release (SHA-256 in its [README](../classification/length54/README.md)) | the release's `code/verify_protocols.py` passes on the copy; every circuit is re-derived from its columns by `master_catalog/verify_catalog.py` as a master-catalogue row |
-| no class the master catalogue holds with `n <= 54` beats the frontier | [`master_catalog/tests/test_master_catalog.py`](../master_catalog/tests/test_master_catalog.py) | each such row is strictly dominated by a Pareto point with the same exact distance and spectator-free output |
+| no class the master catalogue holds with `n <= 54` and `d >= 3` beats the frontier | [`master_catalog/tests/test_master_catalog.py`](../master_catalog/tests/test_master_catalog.py) | each such row is strictly dominated by a Pareto point with the same exact distance and spectator-free output |
 
 Absence inside this window rests on that repository's audit, not on anything
 shipped here. The copy of the frontier is an existence and consistency
 statement.
+
+## Distance 2: the Borrowed Identities import (external)
+
+The distance-2 factories of S. Singh, C. Gidney and C. Jones, "Borrowed
+Identities: Malleable Distillation Factories and a Unified Numerical Search"
+([arXiv:2606.28518](https://arxiv.org/abs/2606.28518)), from their repository
+`shraggy/Magic_state_factory_search` at commit `cae4982`. Their catalogue
+lists factories by search parameters; the circuits are rebuilt here. The
+searches are witnesses, so nothing here claims completeness at distance 2.
+
+| claim | producer | certificate/check |
+|---|---|---|
+| the catalogue rows (`l = 2, 3, 4`) and the code that produced them | [`borrowed_identities/upstream/`](../borrowed_identities/upstream/), byte-identical to that commit | SHA-256 of all 16 files pinned in [`borrowed_identities/tests/`](../borrowed_identities/tests/) |
+| an explicit circuit per row | [`borrowed_identities/export_circuits.py`](../borrowed_identities/export_circuits.py), running the upstream code unmodified | each circuit has its row's `N` and `n`, satisfies the borrowed-identity condition (re-checked by a second phase computation in the tests), and `--check` rebuilds the files byte for byte |
+| each circuit's distance | `master_catalog/faultcore.py`, at export | every witness re-checked in the tests, and absence below `d` re-proved by brute force on every circuit with at most 40 magic gates; ten upstream distances (printed 5 or 7) are 3, listed in [`borrowed_identities/README.md`](../borrowed_identities/README.md) |
+| the level-3 classes and their credit | [`master_catalog/migrations/distance_two_2026_10_07.py`](../master_catalog/migrations/distance_two_2026_10_07.py) through `merge_results` | every row re-derived by `verify_catalog.py`; every level-3 circuit's class held (but the refused `[[8,4,2]]`) and credited as documented, tested in `borrowed_identities/tests/` |
 
 ## Parent-check claims
 

@@ -341,7 +341,7 @@ class TestExhaustiveInputPasses(unittest.TestCase):
 
 # ==================================================== master catalogue rows
 class TestMasterCatalogueRow(unittest.TestCase):
-    """Whether a SHIPPED catalogue row may stand as a level-3, d>=3 factory.
+    """Whether a SHIPPED catalogue row may stand as a level-3, d>=2 factory.
 
     The boundary moved when the catalogue stopped being built from source
     corpora and became a permanent file that is re-verified in place: the
@@ -460,7 +460,7 @@ class TestMasterCatalogueRow(unittest.TestCase):
 
 
 class TestMasterCatalogueFilter(unittest.TestCase):
-    """The scope filter itself: level 3 and d >= 3, nothing else.
+    """The scope filter itself: level 3 and d >= 2, nothing else.
 
     The two halves are applied in different places, on purpose.  LEVEL is the
     rotation angle of the injected states, which no reading of the columns
@@ -469,7 +469,9 @@ class TestMasterCatalogueFilter(unittest.TestCase):
     DISTANCE is derivable, so it is never taken from a claim at all:
     `merge_results` MEASURES it from the columns and applies the filter to the
     measurement, which is what stops a circuit that claims 5 and is 2 from
-    being sorted on a number nobody checked.
+    being sorted on a number nobody checked.  The floor is 2: a distance-1
+    circuit has a single fault that is undetectable and damaging, so it
+    distils nothing.
     """
 
     @classmethod
@@ -495,13 +497,29 @@ class TestMasterCatalogueFilter(unittest.TestCase):
         """The smallest k=1 row, re-offered to the merger as a new result."""
         return {"k": 1, "N": self.narrow["N"], "columns": columns}
 
-    def test_the_distance_filter_rejects_a_distance_two_circuit(self):
+    def test_the_distance_filter_rejects_a_distance_one_circuit(self):
         """Applied to the MEASURED distance, not to the claimed one.
 
-        The witness is a repeated column: it makes the circuit distance 2
-        whatever any field says -- the two columns XOR to zero, an undetectable
-        fault of weight 2 -- so a record carrying one has to be rejected on the
-        distance even when it claims a larger one.
+        The smallest two-output row, plus one rotation on the outputs alone: a
+        fault on that column touches no check, so it is undetectable, and it
+        changes the outputs, so it is damaging -- distance 1, whatever the
+        record claims.  The gate stays non-Clifford on both outputs, so the
+        distance is the only thing wrong with it.
+        """
+        pair = min((row for row in self.payload["factories"] if row["k"] == 2),
+                   key=lambda row: (row["n"], row["N"]))
+        self.assertNotIn([0, 1], pair["columns"])
+        record = {"k": 2, "N": pair["N"], "d": 3,
+                  "columns": [list(c) for c in pair["columns"]] + [[0, 1]]}
+        _row, problems = self.merger.candidate_row(
+            record, copy.deepcopy(self.payload), "test", 0)
+        self.assertIn("distance-below-2",
+                      [kind for kind, _detail in problems], problems)
+
+    def test_a_repeated_column_is_rejected_whatever_distance_it_claims(self):
+        """The witness is a repeated column: the two copies XOR to zero, an
+        undetectable fault of weight 2, and they cancel to a Clifford, so a
+        record carrying one is rejected even when it claims distance 5.
         """
         record = self._record(list(self.narrow["columns"])
                               + [self.narrow["columns"][0]])

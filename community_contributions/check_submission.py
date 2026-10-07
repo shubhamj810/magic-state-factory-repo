@@ -437,8 +437,9 @@ def intrinsic_output(k, monomials):
 def frontier_problems(merged, verdicts):
     """Circuits the length-54 classification says cannot exist.
 
-    Every class with ``n <= 54`` is on that classification's Pareto frontier or
-    strictly dominated by a point of it -- same exact distance, same output
+    Every class with ``n <= 54`` and ``d >= 3`` is on that classification's
+    Pareto frontier or strictly dominated by a point of it -- same exact
+    distance, same output
     once spectators are removed, no more inputs and no more wires --
     `master_catalog/tests` holds the catalogue to that.  A contributed circuit
     that improves a Pareto point, or is a new or improved class no Pareto point
@@ -450,8 +451,10 @@ def frontier_problems(merged, verdicts):
         return []           # a catalogue without the frontier has nothing to hold
     problems = []
     for index, verdict, row, _detail in verdicts:
+        # the classification covers d >= 3: a distance-2 class is outside it
         if verdict not in ("accepted", "improved") \
-                or row["n"] > MR.CLASSIFICATION_LENGTH:
+                or row["n"] > MR.CLASSIFICATION_LENGTH \
+                or row["d"] < MR.CLASSIFICATION_MIN_DISTANCE:
             continue
         shape = f"[[{row['n']},{row['k']},{row['d']}]] N={row['N']}"
         if PARETO in row["regimes"]:

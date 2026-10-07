@@ -34,8 +34,9 @@ PASS: all <N> tests in every repository suite ran, with no skips and no failures
 Anything else — a failure, a skip, or a suite that collected no tests — is
 reported as a failure and exits nonzero.
 
-Five of the seven suites check that the published results are right. One
-tests the community-contribution checker. The seventh,
+Six of the nine suites check that the published results are right, the
+Borrowed Identities import among them. One tests the community-contribution
+checker and one the website build. The ninth,
 [`tests/`](tests/), checks what this repository would ACCEPT as a result: it
 mutates every field of a real accepted artifact — a census certificate, a shipped
 input pass, a catalogue row — and requires each mutation to be rejected, declared
@@ -289,6 +290,30 @@ an empty file, or a file of circuits the catalogue already holds, rewrites both
 files byte-identically. A merge re-verifies no existing row and takes seconds
 plus the cost of verifying the new circuits; `verify_catalog.py --changed`
 then re-derives exactly the rows it changed.
+
+### Distance 2: the Borrowed Identities import
+
+The distance-2 rows came in through one migration, from two inputs: the
+circuits of S. Singh, C. Gidney and C. Jones's Borrowed Identities catalogue
+(arXiv:2606.28518), rebuilt in [`borrowed_identities/`](borrowed_identities/),
+and the distance-2 rows of the symmetry-SAT catalogue. To reproduce it:
+
+```bash
+.venv/bin/python borrowed_identities/export_circuits.py --check      # rebuild every circuit from the upstream code, ~35 s
+.venv/bin/python -m unittest discover -s borrowed_identities/tests   # copy, circuits, distances, credit, ~2 s
+.venv/bin/python master_catalog/migrations/distance_two_2026_10_07.py --dry-run   # seconds
+```
+
+The export prints `up to date`. Run against the catalogue before the
+migration (`git show 990f259:master_catalog/master_catalog.json`), the
+migration reports `179 accepted, 5 duplicate, 1 rejected` for the import and
+`10 accepted, 7 duplicate, 2 rejected` for the symmetry-SAT rows. The one refused
+import is the paper's `[[8,4,2]]`, a pseudo-output here. The two refused SAT
+rows' classes are held anyway. Against the shipped catalogue every admissible
+circuit is already held: `184 duplicate, 1 rejected`, `17 duplicate, 2
+rejected`, and `1002 -> 1002 classes`.
+[`borrowed_identities/README.md`](borrowed_identities/README.md) explains each
+verdict and the credit.
 
 ## 8. Community contributions and the agent context pack
 

@@ -60,7 +60,7 @@ Fields of a result object:
   ``citations``  optional.  Keys of the header's ``references`` map crediting
                  the class -- a published work that states it, and the report
                  this catalogue lists it in.  Omitted, an ACCEPTED row is
-                 credited to the default works for its length
+                 credited to the default works for its length and distance
                  (`default_citations`).  An improvement or a duplicate adds
                  only the citations the record names: a class already held
                  keeps the credit it was given, so a class credited to a
@@ -153,11 +153,14 @@ DEFAULT_DISCOVERY = "AI search"
 
 #: The works a merged class is credited to when its record names none.  Every
 #: class this catalogue holds is reported in the symmetry-and-AI paper; one no
-#: longer than the length-54 classification is ALSO within that classification's
-#: window and is credited to it.  A record that knows of a published source for
-#: its class passes ``citations`` itself.  The entries are registered in the
-#: header the first time a row uses them, exactly as a new regime is.
+#: longer than the length-54 classification, and at a distance that
+#: classification covers (it is ``d >= 3``), is ALSO within that
+#: classification's window and is credited to it.  A record that knows of a
+#: published source for its class passes ``citations`` itself.  The entries are
+#: registered in the header the first time a row uses them, exactly as a new
+#: regime is.
 CLASSIFICATION_LENGTH = 54
+CLASSIFICATION_MIN_DISTANCE = 3
 DEFAULT_REFERENCES = {
     "wills2026classification": {
         "short": "Wills et al. (2026)",
@@ -175,9 +178,11 @@ DEFAULT_REFERENCES = {
 }
 
 
-def default_citations(n: int) -> list[str]:
-    """The works a class of ``n`` injections is credited to by default."""
-    if n <= CLASSIFICATION_LENGTH:
+def default_citations(n: int, d: int = CLASSIFICATION_MIN_DISTANCE) -> list[str]:
+    """The works a class of ``n`` injections at distance ``d`` is credited to
+    by default.  A distance-2 class is outside the length-54 classification,
+    whatever its length."""
+    if n <= CLASSIFICATION_LENGTH and d >= CLASSIFICATION_MIN_DISTANCE:
         return ["wills2026classification", "jain2026symmetry"]
     return ["jain2026symmetry"]
 
@@ -344,11 +349,11 @@ def candidate_row(record, payload, source_file: str, index: int):
         d, exact = report["d_at_least"], False
         d_upper = report["d_upper"]
         witness = report["witness"] if d_upper is not None else None
-    if d < 3:
-        problems.append(("distance-below-3",
-                         f"the distance is {d}: this catalogue is d >= 3, and "
-                         f"a distance-2 circuit is a sound circuit in the "
-                         f"wrong table, not an unsound one"))
+    if d < 2:
+        problems.append(("distance-below-2",
+                         f"the distance is {d}: this catalogue is d >= 2, and "
+                         f"a circuit with an undetectable single fault "
+                         f"distils nothing"))
     if record.get("d") is not None and d_upper is not None \
             and record["d"] > d_upper:
         problems.append(("distance-claim",
@@ -398,7 +403,7 @@ def candidate_row(record, payload, source_file: str, index: int):
     if problems:
         return None, problems
     strength = known.get(regime) or record.get("strength") or DEFAULT_STRENGTH
-    citations = list(record.get("citations") or default_citations(facts["n"]))
+    citations = list(record.get("citations") or default_citations(facts["n"], d))
     references = payload.get("references") or {}
     unknown = [key for key in citations
                if key not in references and key not in DEFAULT_REFERENCES]

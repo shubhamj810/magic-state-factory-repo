@@ -2,10 +2,12 @@
 
 **This directory is the repository's database.** It holds the permanent
 collection of factory protocols: one table of **every Clifford level-3, distance
-≥ 3 factory** this repository holds. Every row carries its own explicit circuit,
+≥ 2 factory** this repository holds. Every row carries its own explicit circuit,
 and every published number can be re-derived from that circuit alone. Rows come
-from the exhaustive length-54 classification, the AI-assisted searches, the
-literature and [community contributions](../community_contributions/).
+from the exhaustive length-54 classification, the
+[borrowed-identity searches](../borrowed_identities/) of Singh, Gidney and Jones,
+the AI-assisted and SAT searches, the literature and
+[community contributions](../community_contributions/).
 
 | file | contents |
 |---|---|
@@ -16,7 +18,7 @@ literature and [community contributions](../community_contributions/).
 | [`catalogfile.py`](catalogfile.py) | reading, writing and rendering the two files; no verification logic |
 | [`attribute_classification.py`](attribute_classification.py) | credit a classification catalogue on the rows it certifies -- provenance only, no circuit field is touched; needed because a class first merged from a search and later covered by a classification is a `duplicate` to `merge_results.py`, which changes nothing |
 | [`faultcore.py`](faultcore.py), [`glcanon.py`](glcanon.py), [`skcanon.py`](skcanon.py), [`gatelabels.py`](gatelabels.py) | the primitives: fault search, the `GL(k,2)` class decision, the `S_k` frame, reading a claimed gate string |
-| [`migrations/`](migrations/) | the one-off scripts that made structural changes to the file (keying on `GL(k,2)` classes, citations, distance certificates, the length-54 classification, source paths, header wording), kept so each can be re-run and read |
+| [`migrations/`](migrations/) | the one-off scripts that made structural changes to the file (keying on `GL(k,2)` classes, citations, distance certificates, the length-54 classification, source paths, header wording, the distance-2 floor and the Borrowed Identities import), kept so each can be re-run and read |
 | [`reduced_degree_cache.json`](reduced_degree_cache.json) | memoised reduced-degree bounds, so re-verifying a `k = 5, 6` row is a lookup rather than a ~100 s re-search |
 | [`tests/`](tests/) | an independent re-derivation of the shipped file, plus the verifier's and merger's own suites |
 
@@ -45,9 +47,24 @@ merge_results                        imports verify_catalog, so "verified to
 
 ## What is in it
 
-**813 distinct `(n, k, d, GL(k,2) gate)` classes**, 217 of them with
-`n ≤ 54`. Widths run `k = 1..373`, injection counts `n = 15..1715`, and
-distances `d = 3..7`.
+**1002 distinct `(n, k, d, GL(k,2) gate)` classes**. 181 of them are at
+distance 2, and 217 are at `d ≥ 3` with `n ≤ 54`. Widths run `k = 1..373`,
+injection counts `n = 8..2046`, and distances `d = 2..7`.
+
+**Distance 2.** The floor was `d ≥ 3` until 2026-10-07.
+[`migrations/distance_two_2026_10_07.py`](migrations/distance_two_2026_10_07.py)
+lowered it to 2 and merged two sets of circuits, both through `merge_results`:
+
+- the level-3 circuits of the
+  [Borrowed Identities import](../borrowed_identities/README.md) (Singh, Gidney
+  and Jones, arXiv:2606.28518). Their 185 circuits give 179 new classes, 171 at
+  distance 2 and 8 single-output classes at distance 3;
+- the 19 distance-2 rows of the symmetry-SAT catalogue, which the old floor
+  kept out. They give 10 new classes.
+
+The length-54 classification is a `d ≥ 3` statement, so the two
+`exhaustive classification` regimes, and the frontier tests, apply to `d ≥ 3`
+rows only.
 
 The [graph-gluing import](imports/2026-09-18_graph_gluing_d3/README.md) holds
 nine exact-distance-three pure-T witnesses built by gluing catalogued small
@@ -97,6 +114,16 @@ links each published one to its DOI or arXiv page.
 * **`n > 54`.** The published works that state the class with the same `n`,
   `k`, distance and output gate, where there are any, and otherwise the
   symmetry-and-AI report.
+* **Distance 2.** The length-54 classification does not cover distance 2, so a
+  distance-2 class never cites it. A class the borrowed-identity searches found
+  is credited to their paper (Singh, Gidney and Jones), after the earlier works
+  that published it, where any did: Bravyi & Haah, Eastin, Jones, Webster et
+  al., Campbell & Howard. The table is in
+  [`../borrowed_identities/README.md`](../borrowed_identities/README.md). One
+  exception: the 15-to-1, which the paper recovers, stays credited to Bravyi &
+  Kitaev alone, as a Pareto point. A distance-2 class only the symmetry-SAT
+  search found is credited to the symmetry-and-AI report, unless a published
+  work states it (`12.5.2.a`, Campbell & Howard's Example IV.4).
 * **A community contribution** that brings a new class is credited to the
   contributor's own reference. A published work is linked; an unpublished one
   credits the contributor without a link. A contribution that repeats or
@@ -253,7 +280,7 @@ and merging it changes nothing.
 | `regime` | optional; how the result was found, in a few words (see [the regimes](#the-regimes-and-why-they-stay-apart)). Default `merged results` |
 | `strength` | optional; what a row from a **new** regime means, one sentence |
 | `discovery` | optional; `AI search` (default) or `pre-existing` |
-| `citations` | optional; keys of the header's `references` map. Omitted, an **accepted** row is credited to the length-54 classification and the symmetry-and-AI report when `n ≤ 54`, and to the report alone otherwise. An improvement or a duplicate adds only the citations the record **names** — a held class keeps the credit it was given, so a class credited to a published work alone is not re-credited because a search found it again |
+| `citations` | optional; keys of the header's `references` map. Omitted, an **accepted** row is credited to the length-54 classification and the symmetry-and-AI report when `n ≤ 54` and `d ≥ 3`, and to the report alone otherwise. An improvement or a duplicate adds only the citations the record **names** — a held class keeps the credit it was given, so a class credited to a published work alone is not re-credited because a search found it again |
 | `label`, `provenance`, `origin`, `file`, `notes` | optional provenance strings — inert |
 
 Anything else in a record is a typo and rejects it: `colums` silently ignored is
@@ -318,6 +345,7 @@ The header, in order:
 | `AI search: pure-T width campaign n=255, 511`, `AI search: pure-T puncture caps`, `AI search: full-simplex pure-T frames` | width and cap witnesses, explicitly **not** rate records |
 | `AI search: generalised triorthogonal search 55<=n<=64` | found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55–64; a verified witness, not a maximum |
 | `community contribution` | a protocol an outside author submitted through [`../community_contributions/`](../community_contributions/), verified here from its columns; a verified witness, not a maximum. Registered the first time one is merged |
+| `borrowed-identity search: two-group`, `borrowed-identity search: symmetry-free` | found by the two searches of Singh, Gidney and Jones (arXiv:2606.28518), imported in [`../borrowed_identities/`](../borrowed_identities/); verified witnesses, not maxima |
 
 The full sentence for each is in the header and on the first page of
 `MASTER_CATALOG.md`. A regime a merge introduces is registered at the **end** of
@@ -328,7 +356,8 @@ classification.
 
 * `AI search` when an AI search campaign is among them and no
   classification stage run in this repository (the `n ≤ 38` classification, the
-  rank-7 census), symmetry-SAT search or community contribution is. The
+  rank-7 census), symmetry-SAT search, borrowed-identity search or community
+  contribution is. The
   length-54 classification does not count against it: a Pareto point an AI
   search also found is `AI search`;
 * `pre-existing` otherwise — including a class only the length-54
@@ -351,7 +380,7 @@ measured one.
 
 | module | what it does | pinned against |
 |---|---|---|
-| [`faultcore.py`](faultcore.py) | bit-level gate read-off, output structure, fault search at the scale the catalogue reaches (`n` to 1715, `k` to 373) | the literal `C(k,3)` / `C(n,4)` enumerations kept beside the verifier in [`verify_catalog.py`](verify_catalog.py), on every circuit small enough for both |
+| [`faultcore.py`](faultcore.py) | bit-level gate read-off, output structure, fault search at the scale the catalogue reaches (`n` to 2046, `k` to 373) | the literal `C(k,3)` / `C(n,4)` enumerations kept beside the verifier in [`verify_catalog.py`](verify_catalog.py), on every circuit small enough for both |
 | [`glcanon.py`](glcanon.py) | the `GL(k,2)` class decision: tensor, invariants and a budgeted search | a literal enumeration of `GL(k,2)` on `Z_8` truth tables in [`tests/test_glcanon.py`](tests/test_glcanon.py) — every pair at `k = 2, 3`, random pairs at `k = 4`, and all 9,999,360 frames of `GL(5,2)` for a pair whose invariants agree |
 | [`skcanon.py`](skcanon.py) | the `S_k` frame at widths where `k!` is not a loop | `classification/legacy/exhaustive_n38/dedup.py`, on 1,200 random gates |
 | `factorylib/verification.py` | the repository's standalone verifier, sharing no code with any search or catalogue here | run as a third opinion on every circuit within its reach |
@@ -361,7 +390,7 @@ implementations rather than importing the verifier's, so a mistake has to be
 made twice to go unnoticed. It adds what only a consumer can check: that the
 catalogue holds every qualifying row of the legacy `n ≤ 38` classification and
 rank-7 census catalogues and of the symmetry-SAT catalogue, and every Pareto point of the length-54 classification, that no other class with
-`n ≤ 54` beats that frontier, that its filter is exactly "level 3, distance ≥ 3",
+`n ≤ 54` and `d ≥ 3` beats that frontier, that its filter is exactly "level 3, distance ≥ 2",
 that the `discovery` tag and the Pareto points' citations follow their rules,
 and that no class is in the table twice. The verifier's and merger's own suites are mostly **negative** — a
 verifier is worth what its rejections are worth — and cover broken check parity,
@@ -389,9 +418,13 @@ or undocumented fields.
 * **Hidden spectators.** The spectator and pseudo-output checks are made in the
   stored frame. A gate that, in some other CNOT frame, leaves an output untouched
   up to Cliffords (`T0·T1·CS01` is `T` on `x0 + x1` times a `CZ`) passes them;
-  80 of the 813 classes are of this kind, 70 of them with `n ≤ 54`. None is a
-  Pareto point — those outputs are spectator-free by construction — and each of
-  the 70 is dominated by the Pareto point of its spectator-free output (tested).
+  102 of the 1002 classes are of this kind. 80 are at `d ≥ 3`, 70 of them with
+  `n ≤ 54`. The other 22 are at distance 2: three from the symmetry-SAT search,
+  and 19 from the Borrowed Identities import. Those 19 are exactly the rows
+  whose upstream catalogue marks them `essential_dim < k` (padded), apart from
+  its `[[8,4,2]]`, which is refused as a pseudo-output. None is a Pareto point,
+  since those outputs are spectator-free by construction. Each of the 70 is
+  dominated by the Pareto point of its spectator-free output (tested).
 * **Repairs.** A circuit rejected for a spectator, a pseudo-output or a
   redundant check wire is not fixed on the way in. Demoting a redundant output
   to a check, or deleting a check wire the others already decide, gives a valid

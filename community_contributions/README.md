@@ -44,7 +44,7 @@ If some of this is missing, send what you have. The maintainers will ask.
 ### What the catalogue can hold
 
 It holds protocols whose output is a diagonal non-Clifford gate built from `T`,
-`CS` and `CCZ` (level 3), with fault distance `d ≥ 3`. Each protocol must be
+`CS` and `CCZ` (level 3), with fault distance `d ≥ 2`. Each protocol must be
 writable as an explicit circuit. A family or asymptotic construction is fine to
 send: the maintainers list the explicit members they can write down. If you are
 not sure a protocol fits, send it anyway.
@@ -77,7 +77,7 @@ gets one of four verdicts:
 | `accepted` | a class the catalogue did not have. It is added and credited to your work |
 | `improved` | a class the catalogue had, and your circuit is better (fewer wires). Your circuit replaces the stored one and is recorded as a source; the class keeps the credit it already had |
 | `duplicate` | a class the catalogue had, with a circuit no better. Nothing changes |
-| `rejected` | it did not verify, for example because its distance is below 3 or it is not a factory as stated. The maintainers tell you why |
+| `rejected` | it did not verify, for example because a single fault goes undetected (distance 1) or it is not a factory as stated. The maintainers tell you why |
 
 Nothing is merged that the verifier would not re-derive from the circuit.
 Classes are compared up to relabelling and a change of output basis (the
@@ -205,7 +205,7 @@ A rejected protocol is listed with its reasons, for example:
 | exit status | meaning |
 |---|---|
 | `0` | every protocol verified, whatever its verdict |
-| `1` | a protocol was rejected, or the merged catalogue failed a check: a file-level check, or a circuit the length-54 classification says cannot exist (one that improves a Pareto point, or a new or improved class with `n ≤ 54` that no Pareto point strictly dominates) |
+| `1` | a protocol was rejected, or the merged catalogue failed a check: a file-level check, or a circuit the length-54 classification says cannot exist (one that improves a Pareto point, or a new or improved class with `n ≤ 54` and `d ≥ 3` that no Pareto point strictly dominates) |
 | `2` | the input file is malformed (a missing, unknown or mistyped field, a placeholder, a bad link, or a reference key that clashes with the catalogue's), or the catalogue cannot be read. Nothing was merged |
 
 `--catalog PATH` checks against another copy of the catalogue.

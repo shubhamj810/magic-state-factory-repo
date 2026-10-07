@@ -8,7 +8,7 @@ them has to be made twice to go unnoticed.  It also checks the things only a
 consumer can check -- that the catalogue still contains every qualifying row of
 the three classification catalogues it inherited and every Pareto point of the
 length-54 classification, that no other class within that window beats the
-frontier, that its filter is exactly "level 3, distance >= 3", that no class is
+frontier, that its filter is exactly "level 3, distance >= 2", that no class is
 in it twice, and that the discovery tag and the citations mean what they say.
 
 SCALE
@@ -57,7 +57,13 @@ SAT = "symmetry-SAT search"
 #: Where a source that names a file in this repository points.  Every other
 #: ``file`` a source carries is inert provenance -- history, not a path -- and
 #: nothing here opens one.
-LOCAL_SOURCE_DIRS = ("classification/", "symmetry_sat_search/")
+LOCAL_SOURCE_DIRS = ("classification/", "symmetry_sat_search/",
+                     "borrowed_identities/")
+#: The Borrowed Identities circuits (Singh, Gidney and Jones), rebuilt from the
+#: upstream catalogue by `borrowed_identities/export_circuits.py`.
+BORROWED_CIRCUITS = REPO / "borrowed_identities" / "circuits" / "circuits_l3.json"
+BORROWED = ("borrowed-identity search: two-group",
+            "borrowed-identity search: symmetry-free")
 #: The classification stages this repository ran itself -- every catalogue under
 #: ``classification/`` but the copied length-54 frontier: a source from one of
 #: them makes a class ``pre-existing``.
@@ -65,9 +71,9 @@ EARLY_STAGES = "classification/"
 FRONTIER_DIR = "classification/length54/"
 #: The regime `community_contributions/check_submission.py` merges under.
 COMMUNITY = "community contribution"
-#: Regimes that are not an AI search: the classification, the SAT search and a
-#: community contribution.
-NOT_AI = (PARETO, "exhaustive classification n<=54", SAT, COMMUNITY)
+#: Regimes that are not an AI search: the classification, the SAT search, the
+#: borrowed-identity searches and a community contribution.
+NOT_AI = (PARETO, "exhaustive classification n<=54", SAT, COMMUNITY) + BORROWED
 #: The two reports the classification window is credited to: the length-54
 #: classification (arXiv:2609.30860) and the still-unpublished symmetry-and-AI
 #: report.
@@ -267,7 +273,7 @@ class TestMasterCatalogue(unittest.TestCase):
                                 "outputs must be independent modulo the check "
                                 "span -- no pseudo-outputs")
                 self.assertEqual(report["effective_width"], k)
-                self.assertGreaterEqual(row["d"], 3, "this catalogue is d >= 3")
+                self.assertGreaterEqual(row["d"], 2, "this catalogue is d >= 2")
                 self.assertEqual(row["level"], 3)
 
     def test_verify_row_is_exercised_across_the_width_range(self):
@@ -536,7 +542,7 @@ class TestMasterCatalogue(unittest.TestCase):
             blob = json.loads(path.read_text())
             blobs[regime] = blob["factories"] if isinstance(blob, dict) else blob
             wanted |= {(row["n"], row["k"], row["d"]) for row in blobs[regime]
-                       if row.get("level", 3) == 3 and row["d"] >= 3}
+                       if row.get("level", 3) == 3 and row["d"] >= 2}
         by_shape = {}
         for row in self.rows:
             shape = (row["n"], row["k"], row["d"])
@@ -546,7 +552,7 @@ class TestMasterCatalogue(unittest.TestCase):
             by_shape.setdefault(shape, []).append(read_gate(columns, row["k"]))
         for regime, rows in blobs.items():
             for row in rows:
-                if row.get("level", 3) != 3 or row["d"] < 3:
+                if row.get("level", 3) != 3 or row["d"] < 2:
                     continue
                 columns = [sorted(set(c)) for c in row["columns"]]
                 gate = read_gate(columns, row["k"])
@@ -564,8 +570,8 @@ class TestMasterCatalogue(unittest.TestCase):
         """`AI search` iff the only finders the sources record are AI searches.
 
         Any other recorded finder -- a classification stage this repository
-        ran, the symmetry-SAT search, or a community contribution -- makes the
-        class `pre-existing`.  The sources carry no dates, so this is a
+        ran, the symmetry-SAT search, a borrowed-identity search, or a
+        community contribution -- makes the class `pre-existing`.  The sources carry no dates, so this is a
         statement about who is on record, not who was first, and the sources
         answer it in both directions.  It is
         stated on the sources rather than on `regimes` because the length-54
@@ -578,7 +584,7 @@ class TestMasterCatalogue(unittest.TestCase):
         for row in self.rows:
             # a finder other than an AI search: the SAT search, a community
             # contribution, or a classification stage this repository ran
-            early = any(s["regime"] in (SAT, COMMUNITY)
+            early = any(s["regime"] in (SAT, COMMUNITY) + BORROWED
                         or (s["file"].startswith(EARLY_STAGES)
                             and not s["file"].startswith(FRONTIER_DIR))
                         for s in row["sources"])
@@ -613,6 +619,10 @@ class TestMasterCatalogue(unittest.TestCase):
                 if not source["file"].startswith(LOCAL_SOURCE_DIRS):
                     self.assertIsNotNone(source["provenance"])
                     continue
+                if REPO / source["file"] == BORROWED_CIRCUITS:
+                    with self.subTest(label=source["label"]):
+                        self.assert_borrowed_source(row, source)
+                    continue
                 if REPO / source["file"] == FRONTIER:
                     with self.subTest(label=source["label"]):
                         protocol = frontier[source["label"]]
@@ -635,6 +645,23 @@ class TestMasterCatalogue(unittest.TestCase):
                     self.assertIn(source["label"], labels,
                                   f"{source['label']!r} is not in "
                                   f"{source['file']}")
+
+    def assert_borrowed_source(self, row, source):
+        """A Borrowed Identities source names a circuit of the exported file
+        that IS this class: the same n, wires N, distance and gate up to a
+        frame, read off the circuit's odd-coefficient gates here."""
+        if not hasattr(self, "_borrowed"):
+            blob = json.loads(BORROWED_CIRCUITS.read_text())
+            type(self)._borrowed = {c["id"]: c for c in blob["circuits"]}
+        circuit = self._borrowed[source["label"]]
+        columns = [sorted(g) for g, c in circuit["gates"] if c % 2]
+        self.assertEqual((len(columns), circuit["wires"], circuit["d"]),
+                         (row["n"], source["N"], source["d"]))
+        self.assertEqual(len(circuit["outputs"]), row["k"])
+        self.assertEqual(source["d"], row["d"])
+        self.assertTrue(GC.gl_isomorphic(
+            row["k"], read_gate(columns, row["k"]),
+            read_gate([sorted(set(c)) for c in row["columns"]], row["k"])))
 
     # ------------------------------------------------------------- citations
     def test_every_citation_resolves(self):
@@ -694,8 +721,13 @@ class TestMasterCatalogue(unittest.TestCase):
         """Every other class within the length-54 window cites that
         classification and the report this catalogue is published in -- except
         a class a community contribution brought, which is credited to the
-        contributor's work."""
+        contributor's work.  The window is ``d >= 3``: a distance-2 class is
+        outside it whatever its length, and never cites the classification."""
         for row in self.rows:
+            if row["d"] < 3:
+                with self.subTest(params=(row["n"], row["k"], row["gate"])):
+                    self.assertNotIn(WILLS, row["citations"])
+                continue
             brought = COMMUNITY in row["regimes"] and WILLS not in row["citations"]
             if row["n"] <= 54 and PARETO not in row["regimes"] and not brought:
                 with self.subTest(params=(row["n"], row["k"], row["gate"])):
@@ -741,7 +773,8 @@ class TestMasterCatalogue(unittest.TestCase):
         """
         protocols = frontier_protocols()
         for row in self.rows:
-            if row["n"] > 54 or PARETO in row["regimes"]:
+            # the classification covers d >= 3; a distance-2 row is outside it
+            if row["n"] > 54 or row["d"] < 3 or PARETO in row["regimes"]:
                 continue
             with self.subTest(params=(row["n"], row["k"], row["d"], row["N"])):
                 self.assertTrue(row["d_is_exact"])
@@ -756,12 +789,14 @@ class TestMasterCatalogue(unittest.TestCase):
                     and GC.gl_isomorphic(q, g, reduced)]
                 self.assertTrue(dominating)
 
-    def test_the_filter_admits_exactly_level_3_distance_3(self):
+    def test_the_filter_admits_exactly_level_3_distance_at_least_2(self):
         """The one property a reader of this table relies on, on its own."""
         for row in self.rows:
             with self.subTest(params=(row["n"], row["k"], row["d"])):
                 self.assertEqual(row["level"], 3)
-                self.assertGreaterEqual(row["d"], 3)
+                self.assertGreaterEqual(row["d"], 2)
+        self.assertTrue(any(row["d"] == 2 for row in self.rows),
+                        "the distance-2 rows are in the file")
 
 
 if __name__ == "__main__":

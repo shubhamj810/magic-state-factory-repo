@@ -53,9 +53,18 @@ def payload():
     return CF.load()
 
 
-def small_rows(rows, limit=6):
-    """A few shipped rows small enough to mutate and re-verify quickly."""
-    return [r for r in rows if r["n"] <= SMALL_N and r["k"] <= SMALL_K][:limit]
+def small_rows(rows, limit=6, d=None):
+    """A few shipped rows small enough to mutate and re-verify quickly.
+
+    By default the smallest rows at distance 3 or more, the 15-to-1 first:
+    the mutation tests below were written against them and rely on their
+    shapes -- a single output to split into a pseudo-output, a check wire in
+    the first column to contaminate, a class several corpora found.  ``d=2``
+    samples the distance-2 rows instead.
+    """
+    keep = (lambda r: r["d"] >= 3) if d is None else (lambda r: r["d"] == d)
+    return [r for r in rows
+            if r["n"] <= SMALL_N and r["k"] <= SMALL_K and keep(r)][:limit]
 
 
 def payload_with(row, **changes):
@@ -152,7 +161,7 @@ class TestGoodRows(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.rows = payload()["factories"]
-        cls.sample = small_rows(cls.rows)
+        cls.sample = small_rows(cls.rows) + small_rows(cls.rows, d=2)
 
     def test_sample_verifies(self):
         for row in self.sample:

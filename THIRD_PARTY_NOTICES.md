@@ -29,3 +29,25 @@ Copyright 2026 Adam Wills; creators Adam Wills, Shubham P. Jain and Shraddha
 Singh. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 Dataset: *Generalised triorthogonal protocols through length 54: classification
 data and evidence*, DOI `10.6084/m9.figshare.33717319`.
+
+## Borrowed Identities catalogue and search code
+
+The repository includes `borrowed_identities/upstream/`, sixteen files copied
+unmodified from
+[`shraggy/Magic_state_factory_search`](https://github.com/shraggy/Magic_state_factory_search)
+at commit `cae49828ed9ab9c1079c7cdf66c5bd337b027515` (author: Shraddha Singh):
+the two-group and symmetry-free searches, the classifier and circuit
+exporter, the factory catalogues `outputs/factory_catalogue_l{2,3,4}.csv`, and
+their READMEs. Cite:
+
+> S. Singh, C. Gidney, and C. Jones, “Borrowed Identities: Malleable
+> Distillation Factories and a Unified Numerical Search,” arXiv:2606.28518
+> (2026). <https://arxiv.org/abs/2606.28518>
+
+The upstream repository states no licence. The files are included unchanged,
+with attribution, so that the master catalogue's provenance resolves inside this
+repository and the circuits in `borrowed_identities/circuits/` can be rebuilt.
+They are not covered by any licence later chosen for this repository's own
+code. `borrowed_identities/tests/` pins every file's SHA-256, so an accidental
+edit is caught by the test suite. See
+[`borrowed_identities/README.md`](borrowed_identities/README.md).

@@ -28,6 +28,7 @@ SUITES = (
     ("parent check", ROOT / "parent_first"),
     ("symmetry and SAT", ROOT / "symmetry_sat_search"),
     ("master catalogue", ROOT / "master_catalog"),
+    ("borrowed identities", ROOT / "borrowed_identities"),
     ("community contributions", ROOT / "community_contributions"),
     ("website build", ROOT / "website"),
     ("acceptance boundaries", ROOT),
