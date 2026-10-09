@@ -106,6 +106,7 @@ columns. Indices are 0-based throughout.
 | `reference.short` | **required.** The label for the citation column, e.g. `Doe et al. (2026)`; it must differ from every other work's label |
 | `reference.full` | **required.** The full bibliographic line. For unpublished work, a line crediting the contributor, e.g. `J. Doe, unpublished community contribution (2026).` |
 | `reference.url` | optional. The `https` DOI or arXiv link of a **published** work, which the citation column links to |
+| `reference.date` | optional. The publication date of a **published** work, `YYYY-MM-DD` or `YYYY-MM` (the journal's, or the arXiv v1 date for a preprint), in the year `short` prints. It orders the reference lists |
 | `method` | **required.** One or two sentences (at most 400 characters) on how the protocols were found |
 | `terms` | **required.** The redistribution terms the contributor gave (see [Data terms](#data-terms)) |
 | `protocols` | **required.** A non-empty list of protocols, each in one of the two forms below |
@@ -152,7 +153,8 @@ generator-matrix form (shown here without its `notes` field):
   "key": "bravyi2005universal",
   "short": "Bravyi & Kitaev (2005)",
   "full": "S. Bravyi and A. Kitaev, \"Universal quantum computation with ideal Clifford gates and noisy ancillas,\" Phys. Rev. A 71, 022316 (2005).",
-  "url": "https://doi.org/10.1103/PhysRevA.71.022316"
+  "url": "https://doi.org/10.1103/PhysRevA.71.022316",
+  "date": "2005-02-22"
  },
  "method": "the 15-to-1 T distillation protocol (the [[15,1,3]] quantum Reed-Muller code), transcribed from the paper as a generator matrix: one logical row, four stabiliser rows",
  "terms": "The protocol is published in the reference above; this file restates its generator matrix as a worked example and adds no data of its own.",

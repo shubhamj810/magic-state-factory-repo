@@ -716,6 +716,8 @@ class TestMasterCatalogue(unittest.TestCase):
                 continue
             with self.subTest(key=key):
                 self.assertTrue(entry["url"].startswith("https://"))
+                # the reference lists are in order of publication
+                self.assertRegex(entry.get("date", ""), r"^\d{4}-\d{2}(-\d{2})?$")
 
     def test_the_rest_of_the_classification_window_cites_both_reports(self):
         """Every other class within the length-54 window cites that

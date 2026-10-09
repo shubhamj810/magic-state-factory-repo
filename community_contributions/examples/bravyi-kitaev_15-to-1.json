@@ -6,7 +6,8 @@
   "key": "bravyi2005universal",
   "short": "Bravyi & Kitaev (2005)",
   "full": "S. Bravyi and A. Kitaev, \"Universal quantum computation with ideal Clifford gates and noisy ancillas,\" Phys. Rev. A 71, 022316 (2005).",
-  "url": "https://doi.org/10.1103/PhysRevA.71.022316"
+  "url": "https://doi.org/10.1103/PhysRevA.71.022316",
+  "date": "2005-02-22"
  },
  "method": "the 15-to-1 T distillation protocol (the [[15,1,3]] quantum Reed-Muller code), transcribed from the paper as a generator matrix: one logical row, four stabiliser rows",
  "terms": "The protocol is published in the reference above; this file restates its generator matrix as a worked example and adds no data of its own.",

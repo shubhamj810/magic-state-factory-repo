@@ -329,9 +329,30 @@ HEADER_KEYS = ("scope", "dedup_key", "regimes", "discovery", "caveat",
 #: The shape of one ``references`` entry: a short in-table label and the full
 #: bibliographic line printed under "References" -- both required -- and, for a
 #: published work, the ``url`` of its DOI or arXiv page, which the table links
-#: the label to.  Unpublished works carry no ``url``.
+#: the label to, and its ``date`` of publication, ``YYYY-MM`` or ``YYYY-MM-DD``:
+#: the journal's (Crossref's) for an article, the arXiv v1 date for a preprint.
+#: The date orders the reference lists; its year is the one ``short`` prints.
+#: Unpublished works carry neither.
 REFERENCE_FIELDS = ("short", "full")
-REFERENCE_OPTIONAL = ("url",)
+REFERENCE_OPTIONAL = ("url", "date")
+REFERENCE_DATE = re.compile(r"(\d{4})-(0[1-9]|1[0-2])(-(0[1-9]|[12]\d|3[01]))?")
+REFERENCE_YEAR = re.compile(r"\((\d{4})\)")
+
+
+def reference_order(references: dict) -> list[str]:
+    """The reference keys, oldest publication first.
+
+    By ``date`` where an entry has one, else by the year its ``short`` label
+    prints; an entry with neither (an unpublished work) goes last.  Ties keep
+    the key order, so the result is deterministic.
+    """
+    def when(key):
+        entry = references[key]
+        if entry.get("date"):
+            return entry["date"]
+        year = REFERENCE_YEAR.search(entry.get("short", ""))
+        return year.group(1) if year else "9999"
+    return sorted(references, key=lambda key: (when(key), key))
 
 
 # --------------------------------------------------------------------- reading
@@ -616,7 +637,10 @@ def render_markdown(payload: dict) -> str:
         A("")
     A("## References")
     A("")
-    for key, entry in references.items():
+    A("In order of publication.")
+    A("")
+    for key in reference_order(references):
+        entry = references[key]
         count = sum(1 for r in rows_ if key in r.get("citations", []))
         link = f" <{entry['url']}>" if entry.get("url") else ""
         A(f"- <a id=\"ref-{key}\"></a>**{entry['short']}** (`{key}`, "

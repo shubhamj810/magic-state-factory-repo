@@ -1147,6 +1147,8 @@ def header_problems(payload):
                          and ("url" not in entry
                               or (isinstance(entry["url"], str)
                                   and REFERENCE_URL.fullmatch(entry["url"])))
+                         and ("date" not in entry
+                              or _reference_date_ok(entry))
                          for name, entry in entries.items()):
                 # the map IS the meaning of every row's citation keys, so an
                 # entry without a label and a full line is a citation no reader
@@ -1154,7 +1156,9 @@ def header_problems(payload):
                 problems.append(("header", "header 'references' maps something "
                                            "other than names to "
                                            "{short, full} strings with an "
-                                           "optional https url"))
+                                           "optional https url and an "
+                                           "optional YYYY-MM[-DD] date in the "
+                                           "year its label prints"))
         elif key in ("regimes", "discovery"):
             if not isinstance(payload[key], dict):
                 problems.append(("header", f"header {key!r} is not an object"))
@@ -1197,6 +1201,21 @@ def header_problems(payload):
 #: The fields that say where a row came from and who credits it.  Changing
 #: them changes nothing a row's columns are checked against, so a row that
 #: differs from a baseline only here has not changed as a CIRCUIT.
+def _reference_date_ok(entry):
+    """A reference's ``date`` is ``YYYY-MM[-DD]`` and in the year ``short`` prints.
+
+    The date only orders the reference lists, but a date a year away from the
+    label would put a paper in the wrong place on a page that says it is in
+    order of publication.
+    """
+    date = entry["date"]
+    match = isinstance(date, str) and CF.REFERENCE_DATE.fullmatch(date)
+    if not match:
+        return False
+    label = CF.REFERENCE_YEAR.search(entry["short"])
+    return label is None or label.group(1) == match.group(1)
+
+
 PROVENANCE_FIELDS = ("regimes", "discovery", "strongest_claim", "sources",
                      "citations")
 

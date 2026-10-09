@@ -201,6 +201,10 @@ class TheBuiltSite(unittest.TestCase):
     def test_the_references_page_lists_every_paper(self):
         text = (self.out / "references.html").read_text(encoding="utf-8")
         self.assertEqual(text.count('<li id="ref-'), len(self.index["references"]))
+        listed = re.findall(r'<li id="ref-([^"]+)"', text)
+        dates = [self.index["references"][key].get("date") for key in listed]
+        self.assertTrue(all(dates), "every listed paper carries a date")
+        self.assertEqual(dates, sorted(dates), "in order of publication")
         for key in self.index["references"]:
             self.assertIn(f'href="search.html?cite={key}"', text)
         self.assertIn('id="contributor-list"', text)

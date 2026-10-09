@@ -41,7 +41,10 @@ circuits in.  In order:
     wire -- and this script stops unless their classes are held anyway.
 
 Run once, from the repository root; a second run finds every circuit already
-held and writes a byte-identical catalogue.
+held and writes a byte-identical catalogue.  The reference entries below carry
+the corrections and dates of `reference_dates_2026_10_09.py` (the Jones entry
+was first written with its arXiv title, under the key ``jones2013novel``), so a
+re-run leaves them as they are.
 """
 from __future__ import annotations
 
@@ -89,24 +92,28 @@ REFERENCES = {
                 "Malleable Distillation Factories and a Unified Numerical "
                 "Search,\" arXiv:2606.28518 (2026).",
         "url": "https://arxiv.org/abs/2606.28518",
+        "date": "2026-06-26",
     },
     "bravyi2012magic": {
         "short": "Bravyi & Haah (2012)",
         "full": "S. Bravyi and J. Haah, \"Magic-state distillation with low "
                 "overhead,\" Phys. Rev. A 86, 052329 (2012).",
         "url": "https://doi.org/10.1103/PhysRevA.86.052329",
+        "date": "2012-11-27",
     },
     "eastin2013distilling": {
         "short": "Eastin (2013)",
         "full": "B. Eastin, \"Distilling one-qubit magic states into Toffoli "
                 "states,\" Phys. Rev. A 87, 032321 (2013).",
         "url": "https://doi.org/10.1103/PhysRevA.87.032321",
+        "date": "2013-03-18",
     },
-    "jones2013novel": {
+    "jones2013low": {
         "short": "Jones (2013)",
-        "full": "C. Jones, \"Novel constructions for the fault-tolerant "
+        "full": "C. Jones, \"Low-overhead constructions for the fault-tolerant "
                 "Toffoli gate,\" Phys. Rev. A 87, 022328 (2013).",
         "url": "https://doi.org/10.1103/PhysRevA.87.022328",
+        "date": "2013-02-20",
     },
     "webster2023transversal": {
         "short": "Webster et al. (2023)",
@@ -114,6 +121,7 @@ REFERENCES = {
                 "\"Transversal diagonal logical operators for stabiliser "
                 "codes,\" New J. Phys. 25, 103018 (2023).",
         "url": "https://doi.org/10.1088/1367-2630/acfc5f",
+        "date": "2023-10-01",
     },
     "campbell2017unified": {
         "short": "Campbell & Howard (2017)",
@@ -121,6 +129,7 @@ REFERENCES = {
                 "state distillation and multiqubit gate synthesis with reduced "
                 "resource cost,\" Phys. Rev. A 95, 022316 (2017).",
         "url": "https://doi.org/10.1103/PhysRevA.95.022316",
+        "date": "2017-02-09",
     },
 }
 

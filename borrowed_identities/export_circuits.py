@@ -91,8 +91,10 @@ BORROWED = "singh2026borrowed"
 #: saying where the parameters are printed.  Most are the paper's own
 #: attributions; two come from reading Campbell and Howard, whose Examples IV.2
 #: and IV.3 print the [[14,6,2]] and [[18,4,2]] protocols explicitly.  For the
-#: 8 T -> CCZ factory the Jones paper is Phys. Rev. A 87, 022328 (arXiv:
-#: 1212.5069), the one Eastin's and Campbell and Howard's papers cite for it;
+#: 8 T -> CCZ factory the Jones paper is Phys. Rev. A 87, 022328, "Low-overhead
+#: constructions for the fault-tolerant Toffoli gate" (arXiv:1212.5069, titled
+#: there "Novel constructions ..."), the one Eastin's and Campbell and Howard's
+#: papers cite for it;
 #: the Borrowed Identities paper's ref. [48] points to his later composite-
 #: Toffoli paper instead.  A record whose class is here names these works and
 #: not the Borrowed Identities paper, which recovered the class rather than
@@ -117,7 +119,7 @@ LITERATURE = {
         where="the k = 6 member of the Bravyi-Haah [[3k+8,k,2]] family "
               "(arXiv:2606.28518, App. F.3a)"),
     (8, 3, 2, "CCZ012"): dict(
-        keys=["eastin2013distilling", "jones2013novel"],
+        keys=["eastin2013distilling", "jones2013low"],
         where="the 8 T -> CCZ factory of Eastin (2013) and Jones (2013) "
               "(arXiv:2606.28518, malleable circuits)"),
     (12, 2, 2, "CS01"): dict(

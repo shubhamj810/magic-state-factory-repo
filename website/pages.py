@@ -214,9 +214,11 @@ with open("equivalent-gates-{label}.txt", "w") as out:
 
 
 # ---------------------------------------------------------- references page
-def _year(key: str) -> int:
-    match = re.search(r"\d{4}", key)
-    return int(match.group()) if match else 0
+def _published(key: str, ref: dict) -> tuple[str, str]:
+    """Sort key for a reference: its publication ``date`` (``YYYY-MM[-DD]``),
+    else the year its label prints, else last; then the key."""
+    year = re.search(r"\((\d{4})\)", ref.get("short", ""))
+    return (ref.get("date") or (year.group(1) if year else "9999"), key)
 
 
 def references_page(index: dict, contributors: list[dict]):
@@ -225,7 +227,7 @@ def references_page(index: dict, contributors: list[dict]):
     for f in index["factories"]:
         for key in f["citations"]:
             counts[key] = counts.get(key, 0) + 1
-    refs = sorted(index["references"].items(), key=lambda item: (_year(item[0]), item[0]))
+    refs = sorted(index["references"].items(), key=lambda item: _published(*item))
     papers = "".join(
         f'<li id="ref-{esc(key)}">{reference_html(dict(key=key, **ref))} '
         f'<span class="muted">·</span> <a class="small" href="search.html?cite={quote(key)}">{counts.get(key, 0)} '
@@ -252,8 +254,8 @@ def references_page(index: dict, contributors: list[dict]):
   </nav>
   <div class="prose">
     <h2 id="papers">Papers</h2>
-    <p>Every factory is credited to the work that found it. The link after each paper
-    lists its factories.</p>
+    <p>Every factory is credited to the work that found it. The papers are in order of
+    publication, and the link after each one lists its factories.</p>
     <ol class="refs ref-list" id="paper-list">{papers}</ol>
 
     <h2 id="contributors">Contributors</h2>

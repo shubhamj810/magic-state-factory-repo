@@ -8,7 +8,8 @@
   "key": "<surname2026firstword>",
   "short": "<in-table label, e.g. Surname et al. (2026)>",
   "full": "<the full bibliographic line, or: A. Surname, unpublished community contribution (2026).>",
-  "url": "<https DOI or arXiv link of the published work; delete the field if unpublished>"
+  "url": "<https DOI or arXiv link of the published work; delete the field if unpublished>",
+  "date": "<publication date YYYY-MM-DD or YYYY-MM; delete the field if unpublished>"
  },
  "method": "<one or two sentences: how the protocols were found>",
  "terms": "<the redistribution terms the contributor gave>",

@@ -75,7 +75,7 @@ PARETO = "exhaustive classification n<=54 (Pareto point)"
 
 TOP_FIELDS = ("contributor", "reference", "method", "terms", "protocols")
 CONTRIBUTOR_REQUIRED, CONTRIBUTOR_OPTIONAL = ("name",), ("affiliation", "contact")
-REFERENCE_REQUIRED, REFERENCE_OPTIONAL = ("key", "short", "full"), ("url",)
+REFERENCE_REQUIRED, REFERENCE_OPTIONAL = ("key", "short", "full"), ("url", "date")
 COLUMNS_FORM = ("k", "N", "columns")
 MATRIX_FORM = ("generator_matrix_rows", "q")
 PROTOCOL_OPTIONAL = ("n", "d", "gate", "label", "notes")
@@ -269,6 +269,13 @@ def submission_problems(submission):
             problems.append(f"reference.url {url!r} is not an https link "
                             f"(https://host/path, no spaces, brackets or "
                             f"parentheses); omit the field for unpublished work")
+        date = reference.get("date")
+        if isinstance(date, str) and not PLACEHOLDER.fullmatch(date) \
+                and not VC._reference_date_ok(reference):
+            problems.append(f"reference.date {date!r} is not a publication "
+                            f"date YYYY-MM or YYYY-MM-DD in the year "
+                            f"reference.short prints; omit the field for "
+                            f"unpublished work")
     _text(submission, "method", "submission", problems, limit=METHOD_MAX,
           angles=True)
     _text(submission, "terms", "submission", problems, printable=False)

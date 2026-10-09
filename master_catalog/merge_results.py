@@ -168,6 +168,7 @@ DEFAULT_REFERENCES = {
                 "Generalised Triorthogonal Codes through Length 54,\" "
                 "arXiv:2609.30860 (2026).",
         "url": "https://arxiv.org/abs/2609.30860",
+        "date": "2026-09-25",
     },
     "jain2026symmetry": {
         "short": "Jain et al. (2026)",
@@ -175,6 +176,7 @@ DEFAULT_REFERENCES = {
                 "AI-assisted discovery of magic-state factories,\" "
                 "arXiv:2610.06535 (2026).",
         "url": "https://arxiv.org/abs/2610.06535",
+        "date": "2026-10-05",
     },
 }
 

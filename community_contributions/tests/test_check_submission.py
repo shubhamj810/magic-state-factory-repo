@@ -285,7 +285,7 @@ class TestMalformedSubmissions(Case):
         """Filled in -- placeholders replaced, optional ones deleted -- it passes."""
         blob = json.loads(TEMPLATE.read_text(encoding="utf-8"))
         del blob["contributor"]["affiliation"], blob["contributor"]["contact"]
-        del blob["reference"]["url"]
+        del blob["reference"]["url"], blob["reference"]["date"]
         blob["contributor"]["name"] = "Jane Doe"
         blob["reference"].update(REFERENCE)
         blob["method"], blob["terms"] = "by hand", "may be redistributed"

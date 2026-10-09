@@ -70,7 +70,7 @@ BORROWED = "singh2026borrowed"
 #: Classes the searches found that an earlier work had published: credited to
 #: that work alone.
 EARLIER = {
-    "8.3.2.a": ["eastin2013distilling", "jones2013novel"],
+    "8.3.2.a": ["eastin2013distilling", "jones2013low"],
     "12.2.2.a": ["webster2023transversal"],
     "14.2.2.a": ["bravyi2012magic"],
     "20.4.2.a": ["bravyi2012magic"],

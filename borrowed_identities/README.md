@@ -212,10 +212,11 @@ its catalogue, so the paper is credited there too.
 
 Two of these attributions go beyond the paper's own reference list:
 
-- **The Jones paper for the 8-`T` Toffoli factory** is *Novel constructions for
-  the fault-tolerant Toffoli gate*, Phys. Rev. A 87, 022328 (2013),
-  arXiv:1212.5069. That is the paper Eastin's and Campbell–Howard's papers cite
-  for it. The Borrowed Identities paper's ref. [48] points instead to Jones's
+- **The Jones paper for the 8-`T` Toffoli factory** is *Low-overhead
+  constructions for the fault-tolerant Toffoli gate*, Phys. Rev. A 87, 022328
+  (2013); its arXiv version, 1212.5069, is titled *Novel constructions for the
+  fault-tolerant Toffoli gate*. That is the paper Eastin's and Campbell–Howard's
+  papers cite for it. The Borrowed Identities paper's ref. [48] points instead to Jones's
   later composite-Toffoli paper (Phys. Rev. A 87, 052334), which uses 64 `T`
   gates.
 - **`[[18, 4, 2]]`.** The paper presents it as the first new member of its
