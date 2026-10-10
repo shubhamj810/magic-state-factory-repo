@@ -10,7 +10,7 @@ anywhere else in the repository, so the site cannot drift from the database:
 merge a result into `master_catalog.json`, push, and the deploy rebuilds every
 page's data from it.
 
-    master_catalog/master_catalog.json      1002 rows, 32 MB, with columns
+    master_catalog/master_catalog.json      1017 rows, 35 MB, with columns
                  |
                  |  build_site.py  (standard library only)
                  v
@@ -127,6 +127,17 @@ def legacy_id(row: dict) -> str:
     return f"n{row['n']:04d}-k{row['k']:03d}-d{row['d']}-{digest}"
 
 
+def clifford_kind(row: dict) -> str:
+    """``none``: the rotations, every one a T, deposit exactly the gate;
+    ``powers``: they do once some rotations run as T^3, T^5 or T-dagger, so no
+    Clifford gate is needed; ``required``: S or CZ gates are needed whatever
+    the powers (the catalogue proves it: ``rotation_powers`` is null)."""
+    corr = row["clifford_correction"]
+    if not corr["S"] and not corr["CZ"]:
+        return "none"
+    return "powers" if row["rotation_powers"] is not None else "required"
+
+
 def build_rows(catalog: dict):
     """Yield ``(summary, record)`` per row; raise on anything inconsistent."""
     references = catalog.get("references") or {}
@@ -156,6 +167,8 @@ def build_rows(catalog: dict):
         # the certified one, so the exponents are also given at that distance.
         d_cert = row.get("d_certified")
         d_claim = max(d, d_cert) if d_cert else d
+        # a certified lower bound met by a fault exhibited here pins the distance
+        d_cert_met = bool(d_cert) and row.get("d_upper") == d_cert
         gate_human = row["gate_human"]
 
         summary = {
@@ -175,7 +188,9 @@ def build_rows(catalog: dict):
             "d_is_exact": bool(row.get("d_is_exact")),
             "d_cert": d_cert,
             "d_cert_exact": row.get("d_certified_is_exact") if d_cert else None,
+            "d_cert_met": d_cert_met,
             "d_claim": d_claim,
+            "clifford": clifford_kind(row),
             "gamma_claim": exponent(n, k, d_claim),
             "gamma_t_claim": exponent(n, row.get("t_count"), d_claim),
             "gamma_rho_claim": exponent(n, v_ex, d_claim),
@@ -203,7 +218,11 @@ def build_rows(catalog: dict):
                          "upper": row.get("d_upper"), "witness": row.get("d_witness"),
                          "certified": ({"d": d_cert,
                                         "is_exact": row.get("d_certified_is_exact"),
+                                        "met": d_cert_met,
                                         "source": row.get("d_certified_source")} if d_cert else None)},
+            "clifford": {"kind": clifford_kind(row),
+                         "correction": row["clifford_correction"],
+                         "rotation_powers": row["rotation_powers"]},
             "metrics": {"gamma": gamma, "gamma_t": gamma_t, "gamma_rho": gamma_rho,
                         "gamma_claim": exponent(n, k, d_claim),
                         "gamma_t_claim": exponent(n, row.get("t_count"), d_claim),
@@ -258,7 +277,7 @@ def parameter_groups(factories: list[dict]) -> list[dict]:
 
 
 CSV_FIELDS = ("id", "n", "k", "d", "d_is_exact", "d_cert", "d_cert_exact", "N", "r", "gate_human", "terms", "t_terms",
-              "cs_terms", "ccz_terms", "pure_t", "t_count", "poly_degree",
+              "cs_terms", "ccz_terms", "pure_t", "t_count", "poly_degree", "clifford",
               "gamma", "gamma_t", "gamma_rho", "v_ex", "rate",
               "discovery", "regimes", "citations", "row")
 

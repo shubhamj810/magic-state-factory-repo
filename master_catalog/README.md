@@ -6,7 +6,8 @@ collection of factory protocols: one table of **every Clifford level-3, distance
 and every published number can be re-derived from that circuit alone. Rows come
 from the exhaustive length-54 classification, the
 [borrowed-identity searches](../borrowed_identities/) of Singh, Gidney and Jones,
-the AI-assisted and SAT searches, the literature and
+the [transversal-T codes](../transversal_t_codes/) of Jain and Albert, the
+AI-assisted and SAT searches, the literature and
 [community contributions](../community_contributions/).
 
 | file | contents |
@@ -18,12 +19,13 @@ the AI-assisted and SAT searches, the literature and
 | [`catalogfile.py`](catalogfile.py) | reading, writing and rendering the two files; no verification logic |
 | [`attribute_classification.py`](attribute_classification.py) | credit a classification catalogue on the rows it certifies -- provenance only, no circuit field is touched; needed because a class first merged from a search and later covered by a classification is a `duplicate` to `merge_results.py`, which changes nothing |
 | [`faultcore.py`](faultcore.py), [`glcanon.py`](glcanon.py), [`skcanon.py`](skcanon.py), [`gatelabels.py`](gatelabels.py) | the primitives: fault search, the `GL(k,2)` class decision, the `S_k` frame, reading a claimed gate string |
-| [`migrations/`](migrations/) | the one-off scripts that made structural changes to the file (keying on `GL(k,2)` classes, citations, distance certificates, the length-54 classification, source paths, header wording, the distance-2 floor and the Borrowed Identities import), kept so each can be re-run and read |
+| [`clifford.py`](clifford.py) | the Clifford correction a circuit needs, the rotation powers that avoid it (or the proof that none do), and a direct evaluation of the logical action |
+| [`migrations/`](migrations/) | the one-off scripts that made structural changes to the file (keying on `GL(k,2)` classes, citations, distance certificates, the length-54 classification, source paths, header wording, the distance-2 floor and the Borrowed Identities import, the Clifford corrections, the transversal-T codes), kept so each can be re-run and read |
 | [`reduced_degree_cache.json`](reduced_degree_cache.json) | memoised reduced-degree bounds, so re-verifying a `k = 5, 6` row is a lookup rather than a ~100 s re-search |
 | [`tests/`](tests/) | an independent re-derivation of the shipped file, plus the verifier's and merger's own suites |
 
 ```bash
-.venv/bin/python master_catalog/verify_catalog.py            # all rows, plus the file-level checks (~15 min)
+.venv/bin/python master_catalog/verify_catalog.py            # all rows, plus the file-level checks (~20 min)
 .venv/bin/python master_catalog/verify_catalog.py --changed  # only the rows that differ from HEAD, plus the file-level checks (seconds)
 .venv/bin/python master_catalog/verify_catalog.py --rows 1-20
 .venv/bin/python master_catalog/merge_results.py new.json    # see "Merging" below
@@ -47,9 +49,29 @@ merge_results                        imports verify_catalog, so "verified to
 
 ## What is in it
 
-**1002 distinct `(n, k, d, GL(k,2) gate)` classes**. 181 of them are at
+**1017 distinct `(n, k, d, GL(k,2) gate)` classes**. 181 of them are at
 distance 2, and 217 are at `d ≥ 3` with `n ≤ 54`. Widths run `k = 1..373`,
-injection counts `n = 8..2046`, and distances `d = 2..7`.
+injection counts `n = 8..3239`, and distances proved here `d = 2..7`. Sources
+certify up to `d ≥ 31` on the transversal-T codes.
+
+**Transversal-T codes.**
+[`migrations/transversal_t_codes_2026_10_10.py`](migrations/transversal_t_codes_2026_10_10.py)
+merged the codes of S. P. Jain and V. V. Albert (IEEE JSAIT 6, 127 (2025),
+arXiv:2408.12752). They are rebuilt from the paper's doubling construction in
+[`../transversal_t_codes/`](../transversal_t_codes/README.md): `[[15,1,3]]` to
+`[[3239,1,31]]`, seventeen codes, fifteen of them new classes. Above `n = 95`
+the sweep here proves only a floor, from 7 down to 3. Each of those rows
+carries the paper's distance as a certified lower bound (`d_certified`) and an
+explicit fault of exactly that weight (`d_upper`, `d_witness`). Together they
+pin the distance, though the label, as always, uses the proved one.
+
+**Clifford corrections.** Every row says what its circuit needs besides the
+rotations to be exactly its gate (`clifford_correction`), and whether running
+some rotations as `T³`, `T⁵` or `T†` makes that unnecessary
+(`rotation_powers`). 10 classes need nothing, 551 need only powers, and 456
+need `S` or `CZ` gates whatever the powers.
+[`migrations/clifford_corrections_2026_10_10.py`](migrations/clifford_corrections_2026_10_10.py)
+added the fields, and [`clifford.py`](clifford.py) explains the method.
 
 **Distance 2.** The floor was `d ≥ 3` until 2026-10-07.
 [`migrations/distance_two_2026_10_07.py`](migrations/distance_two_2026_10_07.py)
@@ -115,6 +137,10 @@ links each published one to its DOI or arXiv page.
 * **`n > 54`.** The published works that state the class with the same `n`,
   `k`, distance and output gate, where there are any, and otherwise the
   symmetry-and-AI report.
+* **The transversal-T codes** of Jain and Albert are credited to their paper,
+  except `[[95,1,7]]`, which Sullivan (PRA 109, 042416 (2024)) published
+  first. The `[[15,1,3]]` and `[[49,1,5]]` codes were already held and keep
+  their credit.
 * **Distance 2.** The length-54 classification does not cover distance 2, so a
   distance-2 class never cites it. A class the borrowed-identity searches found
   is credited to their paper (Singh, Gidney and Jones), unless an earlier work
@@ -163,6 +189,8 @@ is also the list of what gets checked.
 | `t_count` | exact minimal level-3 T-count, or `null` with `t_count_note` |
 | `poly_degree` | CNOT-frame-reduced phase-polynomial degree, or `null` with a note |
 | `effective_width` | rank of the output rows modulo the check span; must equal `k` |
+| `clifford_correction` | `{"S": [[wire, p], ...], "CZ": [[wire, wire], ...]}`: the diagonal Clifford to apply after the rotations and before the checks are measured, so that the accepted action is **exactly** `gate`, with `T = diag(1, e^{iπ/4})`, `CS = diag(1,1,1,i)` and `CCZ`. `S^p` for `p` = 1, 2, 3 is `S`, `Z`, `S†`. Unique; derived by the weight expansion of Bravyi and Haah (2012) |
+| `rotation_powers` | `[[column, power], ...]`: run those rotations as `T^power` (3, 5 or 7, and `T⁷ = T†`) and the rest as `T`, and no correction is needed. `[]` when none is needed anyway; `null` when no choice of powers avoids `S` or `CZ` gates. Not unique: a list is checked by evaluating the logical action at those powers, and `null` is re-proved by solving the `Z_4` system |
 | `regimes`, `discovery`, `strongest_claim`, `sources` | provenance |
 | `relabelled_into_canonical_frame` | provenance too: whether the ingest permuted the columns on the way in. A self-contained row cannot prove or refute it — the source frame is not stored — so the verifier checks its type and nothing else |
 | `citations` | provenance too: keys of the header's `references` map crediting the class. The verifier checks that every key resolves, that a row cites at least one work and none twice; which works are credited is a curation decision |
@@ -185,7 +213,7 @@ different factory, or none.
 .venv/bin/python master_catalog/verify_catalog.py --changed    # the rows a merge changed
 ```
 
-The full run re-derives all rows and takes about fifteen minutes on one core;
+The full run re-derives all rows and takes about twenty minutes on one core;
 the time is in the few large-`n`, high-distance rows. After a merge, `--changed`
 re-derives only the rows whose circuit differs from the catalogue committed at
 `HEAD` (or at `--changed REF`, or in a file with `--baseline PATH`) and runs the
@@ -225,6 +253,19 @@ For every row, from `columns`, `k` and `N` alone:
    those are computable, and a note saying why wherever they are not. The
    T-count is exact throughout; the degree is exact through `k = 4` and a
    documented sampled upper bound at `k = 5, 6`.
+9. **The Clifford correction**, re-derived and compared literally. Then the
+   **logical action** is checked by a computation that does not use the
+   derivation. The phase of the corrected circuit, every rotation a `T`, is
+   evaluated on every input (`N ≤ 16`), or on every input of weight at most 3
+   (or 2 for the widest rows), plus 64 random inputs. It must equal the gate's
+   phase on every input, checks included. Weight 3 is complete, because the
+   residual phase is a polynomial of degree at most 3. Weight 2 is complete
+   given checks 2 and 3. A stored `rotation_powers` list is checked the same
+   way, with no correction applied; a `null` is re-proved. On every circuit
+   with `N ≤ 12` and `2^(N+k) ≤ 65536`, both are also simulated gate by gate:
+   CNOT ladders and single-qubit `T`s, then the correction. Every output basis
+   state, with the checks in `|+⟩`, must come back with exactly the gate's
+   phase.
 
 Then, across the file, three checks a single row cannot make about itself:
 

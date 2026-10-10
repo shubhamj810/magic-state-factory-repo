@@ -38,6 +38,17 @@ re-derivation, so this list is also the list of things that get checked.
   ``t_count``     exact minimal level-3 T-count, or ``null`` with a note
   ``poly_degree`` CNOT-frame-reduced phase-polynomial degree, or ``null``
   ``effective_width``  rank of the output rows modulo the check span; ``== k``
+  ``clifford_correction``  the diagonal Clifford to apply after the rotations,
+                 before the checks are measured, so that the accepted action is
+                 EXACTLY ``gate`` (``T = diag(1, e^{i pi/4})``, ``CS``, ``CCZ``):
+                 ``{"S": [[wire, p], ...], "CZ": [[wire, wire], ...]}``,
+                 ``S^p`` with ``p`` 1, 2, 3 (``S``, ``Z``, ``S-dagger``).
+                 Unique, derived by `clifford.correction`
+  ``rotation_powers``  ``[[column, power], ...]``: run those rotations as
+                 ``T^power`` (3, 5 or 7 = ``T-dagger``) and the rest as ``T``,
+                 and no correction is needed -- ``[]`` when none is anyway.
+                 ``null`` when no choice of powers avoids ``S`` or ``CZ``
+                 gates, which `clifford.rotation_powers` proves
   ``regimes``, ``discovery``, ``strongest_claim``, ``sources``
                  provenance.  INERT STRINGS: they record where a class came
                  from, and no code here opens any path they name.  Several of
@@ -106,6 +117,9 @@ REQUIRED_FIELDS = (
     # ``catalog_label`` is the row's permanent public name (see the schema
     # above).  Required, so every published row can be cited by it.
     "catalog_label",
+    # The Clifford correction the circuit needs, and the rotation powers that
+    # avoid it (or ``null``: none do).  Derived from the columns like the gate.
+    "clifford_correction", "rotation_powers",
 )
 
 #: Fields a row may carry.  Anything outside the two tuples is a field nobody
@@ -158,6 +172,7 @@ FIELD_TYPES = {
     "columns": [["int"]], "sk_key": [["int"]],
     "d_witness": ["int"], "regimes": ["str"], "sources": ["dict"],
     "citations": ["str"], "catalog_label": "str",
+    "clifford_correction": "dict", "rotation_powers": [["int"]],
 }
 
 
@@ -198,9 +213,10 @@ def next_label(rows, n: int, k: int, d: int) -> str:
             if m and (int(m.group(1)), int(m.group(2)), int(m.group(3))) == (n, k, d)]
     return f"{n}.{k}.{d}.{label_letters(max(used) + 1 if used else 0)}"
 #: Fields whose value may be ``null`` INSTEAD of the shape above: a row with no
-#: proved canonical frame stores no key, and a row whose distance search found
-#: no fault at all stores no witness.
-NULLABLE_FIELDS = ("sk_key", "d_witness")
+#: proved canonical frame stores no key, a row whose distance search found no
+#: fault at all stores no witness, and a row no rotation powers can spare its
+#: Clifford correction stores no powers.
+NULLABLE_FIELDS = ("sk_key", "d_witness", "rotation_powers")
 
 #: The keys every entry of ``sources`` carries, and their types.  ``sources``
 #: itself is typed only as a list of objects by `FIELD_TYPES`, which admits
@@ -340,11 +356,12 @@ REFERENCE_YEAR = re.compile(r"\((\d{4})\)")
 
 
 def reference_order(references: dict) -> list[str]:
-    """The reference keys, oldest publication first.
+    """The reference keys, newest publication first.
 
     By ``date`` where an entry has one, else by the year its ``short`` label
-    prints; an entry with neither (an unpublished work) goes last.  Ties keep
-    the key order, so the result is deterministic.
+    prints; an entry with neither (an unpublished work, so the newest of all)
+    goes first.  Equal dates fall back to the key, alphabetically, so the
+    result is deterministic.
     """
     def when(key):
         entry = references[key]
@@ -352,7 +369,8 @@ def reference_order(references: dict) -> list[str]:
             return entry["date"]
         year = REFERENCE_YEAR.search(entry.get("short", ""))
         return year.group(1) if year else "9999"
-    return sorted(references, key=lambda key: (when(key), key))
+    by_key = sorted(references)
+    return sorted(by_key, key=when, reverse=True)
 
 
 # --------------------------------------------------------------------- reading
@@ -423,6 +441,51 @@ def write(payload: dict, json_path: Path | str = CATALOG_JSON,
 
 
 # ------------------------------------------------------------------- rendering
+#: ``S^p`` and ``T^p`` as printed; ``S^2 = Z`` and ``T^7 = T-dagger``.
+S_POWER = {1: "S", 2: "Z", 3: "S†"}
+T_POWER = {3: "T³", 5: "T⁵", 7: "T†"}
+#: How many gates of a correction, or rotations of a power list, are spelled
+#: out before the rest are counted.
+SPELL_OUT = 12
+
+
+def correction_kind(row) -> str:
+    """``none``, ``T-powers`` or ``S, CZ`` -- the table's Clifford column."""
+    corr = row["clifford_correction"]
+    if not corr["S"] and not corr["CZ"]:
+        return "none"
+    return "T-powers" if row["rotation_powers"] is not None else "S, CZ"
+
+
+def correction_text(corr) -> str:
+    """``S on 0, CZ on (1,4)``, long ones cut after `SPELL_OUT` gates."""
+    gates = ([f"{S_POWER[p]} on {q}" for q, p in corr["S"]]
+             + [f"CZ on ({q},{r})" for q, r in corr["CZ"]])
+    if not gates:
+        return "none"
+    shown = ", ".join(f"`{g}`" for g in gates[:SPELL_OUT])
+    more = len(gates) - SPELL_OUT
+    return shown + (f" and {more} more ({len(corr['S'])} single-wire, "
+                    f"{len(corr['CZ'])} CZ in all)" if more > 0 else "")
+
+
+def powers_text(powers, n) -> str:
+    """``T† on every rotation`` or ``T³ on columns 1, 4; T† on 7``."""
+    if len(powers) == n and len({p for _c, p in powers}) == 1:
+        return f"`{T_POWER[powers[0][1]]}` on every rotation"
+    by_power: dict[int, list[int]] = {}
+    for c, p in powers:
+        by_power.setdefault(p, []).append(c)
+    parts = []
+    for p in sorted(by_power):
+        cols = by_power[p]
+        listed = ", ".join(map(str, cols[:SPELL_OUT]))
+        more = f" and {len(cols) - SPELL_OUT} more" if len(cols) > SPELL_OUT else ""
+        parts.append(f"`{T_POWER[p]}` on column{'s' if len(cols) > 1 else ''} "
+                     f"{listed}{more}")
+    return "; ".join(parts) + ", `T` on the rest"
+
+
 def render_markdown(payload: dict) -> str:
     """`MASTER_CATALOG.md`, from the payload and nothing else.
 
@@ -542,6 +605,13 @@ def render_markdown(payload: dict) -> str:
                 labels.append(entry["short"])
         return "; ".join(labels)
 
+    A("`Clifford` says what the circuit needs besides its rotations to deposit")
+    A("exactly the gate shown (`T = diag(1, e^{iπ/4})`, `CS`, `CCZ`): `none`;")
+    A("`T-powers` — no Clifford gate, if some rotations run as `T³`, `T⁵` or")
+    A("`T†` instead of `T` (a transversal `T` in the sense of Jain and Albert);")
+    A("or `S, CZ` — `S`/`CZ` gates after the rotations, whatever their powers.")
+    A("Each circuit's own correction is listed with it below.")
+    A("")
     A("`citation` names the papers that credit the class. A class in the")
     A("published literature is credited to the earliest work that published it,")
     A("linked; a class the Borrowed Identities searches (Singh, Gidney and Jones)")
@@ -550,9 +620,9 @@ def render_markdown(payload: dict) -> str:
     A("the length-54 classification and/or the symmetry-and-AI report. Full")
     A("entries are under [References](#references).")
     A("")
-    A("| # | label | `[[n,k,d]]` | cert d | N | gate | T | deg | discovery | "
-      "regime(s) | citation |")
-    A("|---:|---|---|---:|---:|---|---:|---:|---|---|---|")
+    A("| # | label | `[[n,k,d]]` | cert d | N | gate | T | deg | Clifford | "
+      "discovery | regime(s) | citation |")
+    A("|---:|---|---|---:|---:|---|---:|---:|---|---|---|---|")
     for index, row in enumerate(rows_, 1):
         t = "—" if row["t_count"] is None else row["t_count"]
         degree = "—" if row["poly_degree"] is None else row["poly_degree"]
@@ -563,7 +633,7 @@ def render_markdown(payload: dict) -> str:
                 else f"≥{row['d_certified']}")
         A(f"| {index} | `{row['catalog_label']}` | `[[{row['n']},{row['k']},{d}]]` | {cert} | "
           f"{row['N']} | "
-          f"`{gate}` | {t} | {degree} | {row['discovery']} | "
+          f"`{gate}` | {t} | {degree} | {correction_kind(row)} | {row['discovery']} | "
           f"{'; '.join(row['regimes'])} | {cite(row)} |")
     A("")
     A("## Circuits")
@@ -603,6 +673,15 @@ def render_markdown(payload: dict) -> str:
             relation = "=" if row.get("d_certified_is_exact") else ">="
             A(f"- certified distance: `d {relation} {row['d_certified']}`, "
               f"from {row['d_certified_source']}; not re-measured here")
+        A(f"- Clifford correction, every rotation a `T`: "
+          f"{correction_text(row['clifford_correction'])}")
+        powers = row["rotation_powers"]
+        if powers is None:
+            A("- no choice of rotation powers avoids it: `S`/`CZ` gates are "
+              "needed")
+        elif powers:
+            A(f"- or no correction at all, with rotations run as "
+              f"{powers_text(powers, row['n'])}")
         A(f"- discovery: {row['discovery']}")
         A(f"- regime: {'; '.join(row['regimes'])} — {row['strongest_claim']}")
         A(f"- citation: {cite(row)}")
@@ -637,7 +716,7 @@ def render_markdown(payload: dict) -> str:
         A("")
     A("## References")
     A("")
-    A("In order of publication.")
+    A("Newest first.")
     A("")
     for key in reference_order(references):
         entry = references[key]

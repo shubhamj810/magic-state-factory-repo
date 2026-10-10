@@ -66,10 +66,22 @@ WHAT IS RE-DERIVED, PER ROW
     Above ``k = 6`` both are minimisations over groups that stop being finite in
     practice, and the row carries ``null`` with a note saying so; the note is
     then required to be there.
+9.  **The Clifford correction** (`clifford.py`).  ``clifford_correction`` --
+    the ``S`` powers and ``CZ`` pairs that turn the rotations' phase into
+    exactly the gate shown -- is re-derived by the Bravyi-Haah weight
+    expansion and compared LITERALLY; it is unique.  Then the LOGICAL ACTION
+    is checked by a computation that does not use the expansion: the phase of
+    the corrected circuit is evaluated on every input (``N <= 16``) or on
+    every input of weight at most 3, or 2, plus random ones, and must equal
+    the gate's, checks included.  ``rotation_powers`` is either a list of
+    rotations to run as ``T^3``, ``T^5`` or ``T-dagger`` -- checked the same
+    way, with no correction applied -- or ``null``, which claims that no such
+    list exists and is re-proved by solving the ``Z_4`` system.  On small
+    circuits `statevector_problems` simulates both, gate by gate.
 
 AND, ONCE, OVER THE WHOLE FILE
 ------------------------------
-9.  **No duplicate classes.**  A class is ``(n, k, d, GL(k,2) gate)``: the
+10. **No duplicate classes.**  A class is ``(n, k, d, GL(k,2) gate)``: the
     distance, and the gate up to an invertible change of the output basis and
     diagonal Cliffords.  Two rows with equal ``d`` and equal PROVED ``S_k`` keys
     are one class outright (a permutation is a frame change), and then every
@@ -79,18 +91,18 @@ AND, ONCE, OVER THE WHOLE FILE
     ``dedup_note``: the file may hold a class whose distinctness is unproved,
     at the widths where proving it is out of reach, but it may not do so
     silently -- and a note on a row whose every pair WAS decided is refused.
-10. **The provenance labels resolve.**  Every name in a row's ``regimes`` is
+11. **The provenance labels resolve.**  Every name in a row's ``regimes`` is
     one the file's own header defines, the names are listed strongest-first in
     the header's order, and ``strongest_claim`` is the header's sentence for
     the first of them.  This is the one published field a row cannot check
     alone -- it is a statement about the row AND the header -- which is why it
     lives here rather than in `verify_row`.
-11. **The header is there and counts its rows.**  Every key
+12. **The header is there and counts its rows.**  Every key
     `catalogfile.HEADER_KEYS` names is present and typed, the two definition
     maps really map names to sentences, and ``n_classes`` equals the number of
     rows -- the one header value that is DERIVABLE, and so the one that can go
     stale without anything else noticing.
-12. **The citations resolve.**  Every row cites at least one work, no key twice,
+13. **The citations resolve.**  Every row cites at least one work, no key twice,
     and every key is an entry of the header's ``references`` map.  Which works
     a class is credited to is a curation decision and nothing here re-derives
     it; what is checked is that a reader following a citation finds one.
@@ -102,6 +114,9 @@ reach ``n = 1023`` and ``k = 162``.  On every circuit small enough for them, the
 literal ``C(k,3)`` / ``C(n,4)`` enumerations at the bottom of this file are run
 as well and must agree; so is `factorylib/verification.py`, which shares no code
 with anything in this folder.  Agreement of three implementations is the point.
+The Clifford correction of 9 has its three as well: the weight expansion that
+derives it, the direct evaluation of the phase that checks it, and the
+gate-by-gate statevector simulation at the bottom of this file.
 
 Exit status is 0 only if every row passes and the file-level checks pass.
 """
@@ -123,6 +138,7 @@ sys.path.insert(0, str(HERE))          # run from anywhere: siblings by bare nam
 sys.path.insert(0, str(REPO))          # shared factorylib package
 
 import catalogfile as CF                                          # noqa: E402
+import clifford as CL                                             # noqa: E402
 import faultcore as FC                                            # noqa: E402
 import glcanon as GC                                              # noqa: E402
 import skcanon as SK                                              # noqa: E402
@@ -250,6 +266,75 @@ def effective_width(columns, k, N):
     for check in rows[k:]:
         insert(check)
     return sum(1 for output in rows[:k] if insert(output))
+
+
+#: The statevector check holds one vector of ``2^N`` amplitudes per output
+#: basis state, so it runs while ``2^(N + k)`` stays small.
+STATEVECTOR_MAX_N = 12
+STATEVECTOR_MAX_SIZE = 1 << 16
+
+
+def statevector_fits(N, k):
+    return N <= STATEVECTOR_MAX_N and (1 << (N + k)) <= STATEVECTOR_MAX_SIZE
+
+
+def statevector_problems(columns, k, N, gate, corr, powers):
+    """The logical action by gate-level simulation -- the literal definition.
+
+    Each rotation is built the way a circuit would run it: a ladder of CNOTs
+    computes the parity of its wires onto the last of them, a single-qubit
+    ``T^p`` acts there, and the ladder is undone.  Then the correction's ``S``
+    and ``CZ`` gates.  Every output basis state ``|x>``, with every check in
+    ``|+>``, must come back as ``w^t(x) |x>|+...+>`` exactly: amplitude 1 in
+    modulus (nothing leaks to a rejected check outcome) and the gate's phase.
+    Shares nothing with `clifford.py` but the definitions.
+    """
+    import numpy as np
+    r = N - k
+    dim = 1 << N
+    index = np.arange(dim)
+    xs = np.arange(1 << k)
+    # one column per output basis state x: |x> on the outputs, |+> on checks
+    state = np.zeros((dim, len(xs)), dtype=np.complex128)
+    for x in xs:
+        for y in range(1 << r):
+            state[x | (y << k), x] = 2 ** (-r / 2)
+    omega = np.exp(1j * np.pi / 4)
+    full = [1] * len(columns)
+    for c, p in powers or []:
+        full[c] = p
+
+    def cnot(a, b):
+        return index ^ (((index >> a) & 1) << b)
+
+    for column, p in zip(columns, full):
+        wires = sorted(column)
+        target = wires[-1]
+        ladder = [cnot(a, target) for a in wires[:-1]]
+        for perm in ladder:
+            state = state[perm]
+        state[((index >> target) & 1) == 1] *= omega ** p
+        for perm in reversed(ladder):
+            state = state[perm]
+    for q, s in (corr or {}).get("S", []):
+        state[((index >> q) & 1) == 1] *= 1j ** s
+    for q, r_ in (corr or {}).get("CZ", []):
+        state[(((index >> q) & 1) & ((index >> r_) & 1)) == 1] *= -1
+    bad = []
+    for x in xs:
+        amplitude = sum(state[x | (y << k), x] for y in range(1 << r)) * 2 ** (-r / 2)
+        phase = sum({1: 1, 2: 2, 3: 4}[len(m)] for m in gate
+                    if all((x >> q) & 1 for q in m))
+        if abs(amplitude - omega ** phase) > 1e-9:
+            bad.append(int(x))
+    if not bad:
+        return []
+    what = ("at the stored rotation powers" if powers
+            else "with the correction applied")
+    return [("statevector",
+             f"{what}, the gate-by-gate simulation does not return output "
+             f"basis state(s) {bad[:4]} with the checks in |+> and the gate's "
+             f"phase")]
 
 
 # ------------------------------------------------------------- the shape check
@@ -395,6 +480,16 @@ def derive(columns, k, N):
                          "the bit-level and literal width computations "
                          "disagree"))
 
+    # The correction is defined for a factory only: on a contaminated circuit
+    # the residual phase touching a check is not Clifford, which is the
+    # contamination already reported above, not a second problem.
+    corr = None
+    if gate and not contamination:
+        try:
+            corr = CL.correction(rows, k, N, gate)
+        except ValueError as failure:                      # pragma: no cover
+            problems.append(("clifford-correction", str(failure)))
+
     encoding, perm = SK.sk_canonical_with_perm(k, gate)
     t_count, t_note, degree, degree_note = recompute_metrics(gate, k)
     facts = {
@@ -413,6 +508,7 @@ def derive(columns, k, N):
         "effective_width": widths["effective_width"],
         "t_count": t_count, "t_count_note": t_note,
         "poly_degree": degree, "poly_degree_note": degree_note,
+        "clifford_correction": corr,
         "columns": [list(c) for c in normalised],
     }
     return facts, problems
@@ -568,6 +664,115 @@ def measure_distance(columns, k, N, budget=None):
     return FC.distance_report(columns, k, N, budget=budget or FC.Budget())
 
 
+# ------------------------------------------------------- Clifford correction
+def correction_shape_problem(value):
+    """``None`` if ``value`` is ``{"S": [[q, p], ...], "CZ": [[q, r], ...]}``.
+
+    Typed before it is compared, for the reason `catalogfile.FIELD_TYPES`
+    gives: ``[[0, True]] == [[0, 1]]`` in Python, so a boolean power would
+    otherwise compare equal to ``S^1`` and pass.
+    """
+    if not isinstance(value, dict) or set(value) != {"S", "CZ"}:
+        return f"{value!r:.80} is not an object with exactly the keys S and CZ"
+    for key in ("S", "CZ"):
+        entries = value[key]
+        if not isinstance(entries, list) or not all(
+                isinstance(entry, list) and len(entry) == 2
+                and all(_integer(x) for x in entry) for entry in entries):
+            return f"{key} is not a list of [int, int] pairs"
+    return None
+
+
+def powers_shape_problem(value, n):
+    """``None`` if ``value`` is null or ``[[column, power], ...]`` as published:
+    columns strictly increasing and in range, powers 3, 5 or 7."""
+    if value is None:
+        return None
+    if not isinstance(value, list) or not all(
+            isinstance(entry, list) and len(entry) == 2
+            and all(_integer(x) for x in entry) for entry in value):
+        return "is not a list of [column, power] pairs"
+    columns = [c for c, _p in value]
+    if columns != sorted(set(columns)) or (columns and columns[-1] >= n):
+        return "does not list distinct columns in increasing order, in range"
+    if any(p not in (3, 5, 7) for _c, p in value):
+        return ("lists a power other than 3, 5 or 7 (a power-1 rotation is a T "
+                "and is not listed)")
+    return None
+
+
+def clifford_problems(facts, row):
+    """The stored correction and rotation powers, re-derived and re-checked.
+
+    ``clifford_correction`` is unique, so it is compared literally with the
+    one `clifford.correction` derives.  Then `clifford.logical_action`
+    evaluates the corrected circuit directly and must find the gate.
+
+    ``rotation_powers`` is not unique.  A list is checked by running the
+    circuit at those powers with NO correction and finding the gate; ``null``
+    claims that no list works, and `clifford.rotation_powers` must fail to
+    find one -- a ``None`` from it is a proof (the ``Z_4`` system has no
+    solution), not a timeout.  ``[]`` is the one list a trivial correction
+    allows, and the only one: a trivial correction with a ``null`` would claim
+    the impossible, a non-empty list would be noise.
+    """
+    corr = facts.get("clifford_correction")
+    if corr is None:
+        return []                       # not a factory: reported by `derive`
+    problems = []
+    stored = row.get("clifford_correction")
+    wrong = correction_shape_problem(stored)
+    if wrong is not None:
+        return [("clifford-correction", f"clifford_correction {wrong}")]
+    if stored != corr:
+        return [("clifford-correction",
+                 f"row says clifford_correction={CL.describe(stored)[:120]}, "
+                 f"the columns need {CL.describe(corr)[:120]}")]
+    columns, k, N = facts["columns"], facts["k"], facts["N"]
+    gate = facts["monomials"]
+    failures, scope = CL.logical_action(columns, k, N, gate, corr=corr)
+    if failures:
+        problems.append(("logical-action",
+                         f"with the correction applied the circuit is not the "
+                         f"gate: the phase is wrong on inputs (wires set) "
+                         f"{failures[:3]}, checked on {scope}"))
+    powers = row.get("rotation_powers")
+    wrong = powers_shape_problem(powers, facts["n"])
+    if wrong is not None:
+        return problems + [("rotation-powers", f"rotation_powers {wrong}")]
+    if CL.is_trivial(corr):
+        if powers != []:
+            problems.append(("rotation-powers",
+                             f"the correction is trivial, so rotation_powers "
+                             f"must be [], not {powers!r:.60}"))
+    elif powers is None:
+        found = CL.rotation_powers(FC.rows_over_columns(columns, N),
+                                   facts["n"], N, corr)
+        if found is not None:
+            problems.append(("rotation-powers",
+                             f"rotation_powers is null, claiming every power "
+                             f"choice still needs S or CZ gates, but running "
+                             f"rotations {found[:6]} (column, power) at those "
+                             f"powers needs none"))
+    elif not powers:
+        problems.append(("rotation-powers",
+                         "rotation_powers is [] but the correction is not "
+                         "trivial: running every rotation as T is not the gate"))
+    else:
+        failures, scope = CL.logical_action(columns, k, N, gate, powers=powers)
+        if failures:
+            problems.append(("rotation-powers",
+                             f"at the stored rotation powers, with no "
+                             f"correction, the circuit is not the gate: the "
+                             f"phase is wrong on inputs {failures[:3]}, checked "
+                             f"on {scope}"))
+    if not problems and statevector_fits(N, k):
+        problems += statevector_problems(columns, k, N, gate, corr, None)
+        if powers:
+            problems += statevector_problems(columns, k, N, gate, None, powers)
+    return problems
+
+
 # ------------------------------------------------------------------- one row
 def verify_row(row, budget=None, reference=True):
     """Re-derive a shipped row from its columns; return ``(facts, problems)``.
@@ -691,6 +896,8 @@ def verify_row(row, budget=None, reference=True):
         if note is None and f"{name}_note" in row:
             problems.append(("schema", f"row carries a {name}_note but the "
                                        f"recomputation has nothing to note"))
+
+    problems += clifford_problems(facts, row)
 
     problems += confirm_distance(facts["columns"], row["k"], row["N"], row["d"],
                                  row["d_is_exact"], row["d_witness"],
@@ -1205,8 +1412,8 @@ def _reference_date_ok(entry):
     """A reference's ``date`` is ``YYYY-MM[-DD]`` and in the year ``short`` prints.
 
     The date only orders the reference lists, but a date a year away from the
-    label would put a paper in the wrong place on a page that says it is in
-    order of publication.
+    label would put a paper in the wrong place on a page that says it lists
+    papers by publication date.
     """
     date = entry["date"]
     match = isinstance(date, str) and CF.REFERENCE_DATE.fullmatch(date)
@@ -1371,8 +1578,11 @@ def main(argv=None):
           f"below d, presence witnessed at it), output width modulo the check "
           f"span, spectator and pseudo-output freedom, no check wire whose "
           f"syndrome bit the others already decide, T-count and reduced "
-          f"degree where computable, and a circuit its own sources published "
-          f"or a note saying why not"
+          f"degree where computable, the Clifford correction with the "
+          f"corrected logical action evaluated (and simulated gate by gate on "
+          f"small circuits), the rotation powers that avoid it or the proof "
+          f"that none do, and a circuit its own sources published or a note "
+          f"saying why not"
           + (f" (the rows that differ from {against}; every other row is "
              f"byte-identical as a circuit to one already verified there)"
              if against else "")

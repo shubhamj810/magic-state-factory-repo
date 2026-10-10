@@ -51,3 +51,16 @@ They are not covered by any licence later chosen for this repository's own
 code. `borrowed_identities/tests/` pins every file's SHA-256, so an accidental
 edit is caught by the test suite. See
 [`borrowed_identities/README.md`](borrowed_identities/README.md).
+
+## Transversal-T codes of Jain and Albert
+
+`transversal_t_codes/` contains no third-party files. It builds the codes of
+S. P. Jain and V. V. Albert, “Transversal Clifford and T-gate codes of short
+length and high distance,” *IEEE J. Sel. Areas Inf. Theory* 6, 127–137 (2025)
+(<https://doi.org/10.1109/JSAIT.2025.3570832>, arXiv:2408.12752), from the
+paper's published construction, with this repository's own code. Please cite
+the paper for the codes. The construction name `sub(XQ47)` of the `[46,23,10]`
+self-dual code is from P. Gaborit's tables of self-dual codes
+(<https://www.unilim.fr/pages_perso/philippe.gaborit/SD/>); no data was copied
+from them.
+

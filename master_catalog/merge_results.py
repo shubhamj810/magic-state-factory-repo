@@ -130,6 +130,8 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
 import catalogfile as CF                                          # noqa: E402
+import clifford as CL                                             # noqa: E402
+import faultcore as FC                                            # noqa: E402
 import gatelabels as GL                                           # noqa: E402
 import glcanon as GC                                              # noqa: E402
 import skcanon as SK                                              # noqa: E402
@@ -425,6 +427,11 @@ def candidate_row(record, payload, source_file: str, index: int):
         "t_count": facts["t_count"], "poly_degree": facts["poly_degree"],
         "effective_width": facts["effective_width"],
         "d_is_exact": exact, "d_upper": d_upper, "d_witness": witness,
+        # in the stored frame: the correction names output wires
+        "clifford_correction": facts["clifford_correction"],
+        "rotation_powers": CL.rotation_powers(
+            FC.rows_over_columns(facts["columns"], N), facts["n"], N,
+            facts["clifford_correction"]),
         "regimes": [regime], "discovery": discovery,
         "relabelled_into_canonical_frame": relabelled,
         "strongest_claim": strength,
@@ -563,7 +570,8 @@ def find_class(rows, candidate):
 CIRCUIT_FIELDS = ("d", "N", "gate", "gate_human", "sk_key",
                   "sk_canonical_frame", "sk_fingerprint", "t_count",
                   "poly_degree", "effective_width", "d_is_exact", "d_upper",
-                  "d_witness", "relabelled_into_canonical_frame", "columns")
+                  "d_witness", "relabelled_into_canonical_frame", "columns",
+                  "clifford_correction", "rotation_powers")
 #: Every optional note, so `improve` replaces or clears ALL of them.  A note
 #: left behind by an improvement describes a circuit that is no longer there:
 #: the ten reduced rows each carry a ``columns_note`` saying their N is not one

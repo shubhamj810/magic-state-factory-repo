@@ -9,6 +9,8 @@ marked as such. The protocols come from:
 - an **exhaustive classification** of every protocol with up to 54 inputs;
 - the **borrowed-identity searches** of Singh, Gidney and Jones, for
   distance 2;
+- the **transversal-T codes** of Jain and Albert, built by doubling, up to
+  distance 31;
 - **AI-assisted and symmetry-constrained searches** for larger and better ones;
 - the **published literature**;
 - **community contributions** from outside authors, verified to the same bar.
@@ -39,11 +41,13 @@ verification bar and the merge process.
 A factory consumes `n` noisy `T` states and outputs `k` magic qubits. Its
 circuit is a list of parity-rotation `columns` over `N` wires: wires `0..k-1`
 are the outputs and the rest are postselected checks. `d` is the circuit's
-fault distance.
+fault distance. Each row also gives the circuit's **Clifford correction**: the
+`S` and `CZ` gates that make its action exactly the gate shown (see below).
 
-The catalogue holds **1002 classes**:
+The catalogue holds **1017 classes**:
 
-- `n = 8..2046`, `k = 1..373`, `d = 2..7`;
+- `n = 8..3239`, `k = 1..373`, `d = 2..7` proved here, and up to 31 certified
+  by a source;
 - 181 classes at distance 2, from the borrowed-identity searches and this
   repository's symmetry-SAT search;
 - 217 classes with `n <= 54` and `d >= 3`, including all 74 Pareto points of
@@ -66,6 +70,27 @@ always different rows.
 [`master_catalog/glcanon.py`](master_catalog/glcanon.py) decides the relation;
 [`theory/02_classification.md`](theory/02_classification.md) explains it.
 
+### Clifford corrections
+
+A row's `gate` names only the non-Clifford part of what its rotations deposit.
+With every rotation a `T`, the rest is a diagonal Clifford: `S` powers and
+`CZ`s on the wires, which the factory applies after the rotations and before it
+measures the checks. Every row stores this correction (`clifford_correction`),
+derived from its columns by the weight expansion of Bravyi and Haah (2012). It
+also stores whether the correction can be avoided by running some rotations as
+`T³`, `T⁵` or `T†` instead of `T` (`rotation_powers`). For a code this is a
+transversal `T` gate in the sense of Jain and Albert.
+
+- 10 classes need no correction at all;
+- 551 need none once some rotations run at another power of `T`;
+- 456 need `S` or `CZ` gates whatever the powers, which the verifier proves.
+
+[`master_catalog/clifford.py`](master_catalog/clifford.py) computes all three.
+The verifier then checks the logical action two more ways. It evaluates the
+corrected circuit's phase input by input, and on small circuits it simulates
+the circuit gate by gate. The website can filter on whether a factory needs a
+correction.
+
 ## Where the protocols come from
 
 Each row's **regime** says briefly how the class was found. Its **citation**
@@ -77,6 +102,7 @@ names the papers that credit it, linked where they are published.
 | **Borrowed-identity searches** (Singh, Gidney and Jones; [paper](https://arxiv.org/abs/2606.28518), [code and data](https://github.com/shraggy/Magic_state_factory_search)) | the paper's catalogue of distance-2 factories: two-group and symmetry-free searches over borrowed-identity circuits. Copied, with an explicit circuit rebuilt for every row, in [`borrowed_identities/`](borrowed_identities/); its 185 level-3 circuits give 179 classes here (171 at distance 2). Not counted as an AI discovery | `borrowed-identity search: two-group`, `borrowed-identity search: symmetry-free` |
 | **AI-assisted search** (Jain, Wills and Singh; [paper](https://arxiv.org/abs/2610.06535)) | AI search campaigns run in the companion repository `magic-states-AI`, from punctured simplex and Reed–Muller parents and Wills's parent codes, including the pure-T distillation-exponent (`γ`) frontier, and the public search for generalised triorthogonal protocols at lengths 55–64 | `AI search`, `AI search: …`, `AI search (gamma frontier): …` |
 | **Symmetry-constrained SAT search** (same paper) | CP-SAT searches over symmetric column orbits and ansatz-free SAT, in [`symmetry_sat_search/`](symmetry_sat_search/). Not counted as an AI discovery | `symmetry-SAT search` |
+| **Transversal-T codes** (Jain and Albert; [paper](https://doi.org/10.1109/JSAIT.2025.3570832), [arXiv](https://arxiv.org/abs/2408.12752)) | one-qubit codes with a transversal `T`, built by doubling self-dual and quadratic-residue CSS codes: all fifteen of the paper's weak triply even codes and the first five of its triorthogonal ones, `[[15,1,3]]` to `[[3239,1,31]]`, rebuilt from the paper's construction in [`transversal_t_codes/`](transversal_t_codes/). Fifteen new classes, with the paper's distances as certificates. Not counted as an AI discovery | `Jain-Albert doubling: weak triply even family`, `Jain-Albert doubling: triorthogonal family` |
 | **Literature** | published protocols: Bravyi & Kitaev, Bravyi & Haah, Eastin, Jones, Campbell & Howard, Nezami & Haah, Haah & Hastings, Jacinto et al., Gong et al., and others | cited in the row's `citations`, linked to the DOI or arXiv page |
 | **Community contributions** | protocols from outside authors, verified here; a class new to the catalogue is cited to its contributor | `community contribution` |
 
@@ -100,6 +126,26 @@ an earlier work published it, in which case that work alone is credited.
 Only level 3 (`T` inputs) is merged into the master catalogue. The level-2 and
 level-4 circuits stay in that folder. The length-54 classification covers
 `d ≥ 3` only, so its claims say nothing about distance 2.
+
+### Transversal-T codes: `transversal_t_codes/`
+
+S. P. Jain and V. V. Albert, *Transversal Clifford and T-gate codes of short
+length and high distance*, IEEE JSAIT 6, 127 (2025),
+[arXiv:2408.12752](https://arxiv.org/abs/2408.12752), build one-qubit codes
+with a transversal `T` gate up to distance 31. The paper prints their
+parameters, not their matrices.
+[`transversal_t_codes/build_codes.py`](transversal_t_codes/build_codes.py)
+builds every code the paper's construction allows from the classical codes it
+names, and writes each one as a factory. Seventeen codes are built, fifteen
+of them new to the catalogue.
+
+The catalogue's fault sweep proves only a floor at these lengths. So each row
+also carries the paper's distance as a certified lower bound (`d_certified`),
+and an explicit fault of exactly that weight (`d_upper`), which together pin
+the distance. Ten codes of the paper's triorthogonal table are not built: they
+depend on a self-dual `[70,35,14]` code, and the code the paper cites is only
+formally self-dual. See
+[`transversal_t_codes/README.md`](transversal_t_codes/README.md).
 
 ## Context for AI agents: `agent_context/`
 
@@ -150,6 +196,7 @@ describes what to send and how the maintainers process it.
 | [`master_catalog/`](master_catalog/) | **the database**, its verifier, merge tool and one-off migrations |
 | [`classification/length54/`](classification/length54/) | the length-54 classification's Pareto frontier (byte-identical copy, CC BY 4.0) |
 | [`borrowed_identities/`](borrowed_identities/) | the Borrowed Identities catalogue and code (Singh, Gidney and Jones), byte-identical, with an explicit circuit for every row |
+| [`transversal_t_codes/`](transversal_t_codes/) | the transversal-T codes of Jain and Albert, rebuilt from the paper's doubling construction, as factories |
 | [`symmetry_sat_search/`](symmetry_sat_search/) | symmetry-slot and ansatz-free SAT search engines and their verified examples |
 | [`parent_first/`](parent_first/) | analyse one check parent, target a gate, or enumerate the gates it carries |
 | [`agent_context/`](agent_context/) | the context pack for agents continuing the search |
@@ -187,7 +234,7 @@ the database is separate:
 .venv/bin/python master_catalog/verify_catalog.py
 ```
 
-It takes about fifteen minutes on one core; `--changed` re-verifies only the
+It takes about twenty minutes on one core; `--changed` re-verifies only the
 rows that differ from the committed catalogue, in seconds.
 [`REPRODUCING.md`](REPRODUCING.md) has every rebuild and search command, with
 expected outputs and runtimes.
@@ -201,6 +248,9 @@ expected outputs and runtimes.
   the upstream repository. The commit and SHA-256s are in
   [`borrowed_identities/README.md`](borrowed_identities/README.md) and pinned
   by its tests.
+- **The transversal-T codes** of Jain and Albert are built here from the
+  paper's construction, with no files copied. See
+  [`transversal_t_codes/README.md`](transversal_t_codes/README.md).
 - **Third-party data** the repository uses is listed, with its terms, in
   [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 - **Per-row provenance** is in each row's `sources`: the file, record and

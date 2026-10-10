@@ -8,7 +8,7 @@ anywhere else in the repository. Every deploy rebuilds the site's data from the
 catalogue, so a merged result appears on the site with no further step.
 
 ```
-master_catalog/master_catalog.json          1002 rows, columns included
+master_catalog/master_catalog.json          1017 rows, columns included
             |
             |  website/build_site.py         standard library only, ~1 s
             v
@@ -161,7 +161,19 @@ does not hold:
 A few rows carry a distance certified by their source that the catalogue could
 not re-check (`d_certified`). Tables show both distances side by side. Claims,
 meaning the rankings, the frontier plot and the exponents marked †, use the
-certified distance. Filters on distance match either one.
+certified distance. Filters on distance match either one. A certified lower
+bound that the row's own fault `d_upper` meets is shown as the distance itself
+(`d_cert_met` in the index).
+
+Every factory page has a **Clifford correction** section: the `S`, `Z` and `CZ`
+gates (`clifford_correction`) that make the circuit's action exactly its gate,
+and either the rotation powers that make them unnecessary or the statement,
+proved by the catalogue, that none do. The index carries the summary as
+`clifford` (`none`, `powers` or `required`), and the search page filters on it
+(`cliff=no` for no `S` or `CZ` gate needed, `cliff=yes` for needed) and shows it
+as a column. A factory page whose matrix has more than 1.5 million cells, the
+widest transversal-T codes, offers the CSV and the columns instead of drawing
+it.
 
 A factory's id on the site is its `catalog_label`. The earlier hash id
 `n{n:04}-k{k:03}-d{d}-{sha256(n|k|d|gate)[:8]}` is still computed, as
@@ -180,6 +192,7 @@ The search box takes words, combined with AND:
 | `T0` `CS01` `CCZ012` `CCZ10,11,12` | the gate contains this exact term |
 | `T` `CS` `CCZ` | the gate contains a term of this kind |
 | `pure` `exact` | pure `T^⊗k`; exact distance |
+| `transversal` | needs no `S` or `CZ` gate: the rotations, each a `T` or another power of `T`, deposit exactly the gate |
 | anything else | text in the gate, id, regime or cited papers |
 
 Every filter lives in the URL, so a search can be shared as a link, for
@@ -197,7 +210,7 @@ python website/verify_site.py --full                 # every parameter set and f
 It is the only part of the repository that does, which is why `verify_repo.py`
 does not run it. It loads every page shape in headless Chromium and checks the
 rendered page against counts it computes itself:
-- 22 searches;
+- 27 searches;
 - the CSV export;
 - the hero matrix, the plot tooltip, and that KaTeX typeset the maths;
 - the search chips, a filter count, the column chooser and an inline preview;

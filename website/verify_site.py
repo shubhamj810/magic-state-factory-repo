@@ -163,6 +163,11 @@ def searches(factories: list[dict], references: dict) -> list[tuple[str, int]]:
         ("q=haah", count(lambda f: "haah" in haystack(f))),
         ("lit=1", count(lambda f: any(c not in OWN for c in f["citations"]))),
         ("q=graph%20gluing", count(lambda f: "graph" in haystack(f) and "gluing" in haystack(f))),
+        # the Clifford correction: "no" is none at all or none with T powers
+        ("cliff=no", count(lambda f: f["clifford"] != "required")),
+        ("cliff=yes&d=2", count(lambda f: f["clifford"] == "required" and 2 in (f["d"], f["d_claim"]))),
+        ("q=transversal%20k%3D1", count(lambda f: f["clifford"] != "required" and f["k"] == 1)),
+        ("d=31", count(lambda f: 31 in (f["d"], f["d_claim"]))),
     ]
 
 
@@ -314,9 +319,13 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         # ---------------------------------------------------------- factory
         by_id = {f["id"]: f for f in factories}
         targets = sorted(linked)
+        from pages import MATRIX_CELL_LIMIT        # past it the page offers, not draws
         if not full:
-            # always include the widest circuit and one with every reference kind
+            # always include the widest circuit, the widest one still drawn, and
+            # one with every reference kind
             targets += [max(factories, key=lambda f: f["n"] * f["N"])["id"]]
+            targets += [max((f for f in factories if f["n"] * f["N"] <= MATRIX_CELL_LIMIT),
+                            key=lambda f: f["n"] * f["N"])["id"]]
             targets += [f["id"] for f in factories if "haah2018codes" in f["citations"]][:1]
             targets = sorted(set(targets))
         for fid in targets:
@@ -325,25 +334,33 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
                 continue
             record = json.loads((site / "data" / "factories" / f"{fid}.json").read_text())
             where = f"factory.html {fid}"
-            visit(f"f/{fid}/", where, "table.matrix tbody tr", timeout=40000)
-            stats["factories"] += 1
             k, N, n = (record["parameters"][key] for key in ("k", "N", "n"))
+            drawn = N * n <= MATRIX_CELL_LIMIT
+            visit(f"f/{fid}/", where, "table.matrix tbody tr" if drawn else ".matrix-skip",
+                  timeout=40000)
+            stats["factories"] += 1
+            if not drawn:
+                failures.check(f"{N * n:,} cells" in page.inner_text(".matrix-skip"),
+                               f"{where}: the note for an undrawn matrix does not give its size")
+                failures.check(not page.query_selector_all("table.matrix"),
+                               f"{where}: a matrix past the cell limit was drawn anyway")
             matrix_rows = page.query_selector_all("table.matrix tbody tr")
-            failures.check(len(matrix_rows) == N, f"{where}: {len(matrix_rows)} matrix rows, N = {N}")
-            failures.check(len(page.query_selector_all("table.matrix tbody tr.out")) == k,
+            failures.check(len(matrix_rows) == (N if drawn else 0),
+                           f"{where}: {len(matrix_rows)} matrix rows, N = {N}")
+            failures.check(len(page.query_selector_all("table.matrix tbody tr.out")) == (k if drawn else 0),
                            f"{where}: output rows marked != k = {k}")
-            failures.check(len(page.query_selector_all("table.matrix tbody tr.chk")) == N - k,
+            failures.check(len(page.query_selector_all("table.matrix tbody tr.chk")) == (N - k if drawn else 0),
                            f"{where}: check rows marked != r = {N - k}")
             weights = [0] * N
             for column in record["circuit"]["columns"]:
                 for wire in column:
                     weights[wire] += 1
-            for q in {0, N - 1}:
+            for q in ({0, N - 1} if drawn else ()):
                 bits = matrix_rows[q].query_selector("td.bits").inner_text()
                 failures.check(len(bits) == n, f"{where}: row {q} is {len(bits)} wide, n = {n}")
                 failures.check(bits.count("1") == weights[q],
                                f"{where}: row {q} has {bits.count('1')} ones, columns give {weights[q]}")
-            for section in ("#metric-grid", "#gate-panel", "#distance-panel",
+            for section in ("#metric-grid", "#gate-panel", "#clifford-panel", "#distance-panel",
                             "#source-panel", "#provenance-panel"):
                 element = page.query_selector(section)
                 failures.check(element is not None and element.inner_text().strip(),
@@ -498,7 +515,7 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
                         ["distance"].get("upper")), None)
         if bounded:
             upper = json.loads((site / "data" / "factories" / f"{bounded['id']}.json").read_text())["distance"]["upper"]
-            visit(f"f/{bounded['id']}/", f"f/{bounded['id']}/ bounds", "table.matrix tbody tr")
+            visit(f"f/{bounded['id']}/", f"f/{bounded['id']}/ bounds", "#distance-panel")
             failures.check(page.query_selector(f'dl.summary [data-tex*="le {upper}"]') is not None,
                            f"f/{bounded['id']}/: the summary does not show the proved upper bound {upper}")
 

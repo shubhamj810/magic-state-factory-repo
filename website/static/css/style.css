@@ -488,6 +488,11 @@ pre.raw { margin: 0; padding: 14px; overflow-x: auto; font-size: 12px;
           background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius); }
 details > summary { cursor: pointer; font-size: 13.5px; color: var(--brand); font-weight: 500; }
 details[open] > summary { margin-bottom: 10px; }
+/* a long list folded mid-sentence: the summary reads as part of the text */
+details.inline { display: inline; }
+details.inline > summary { display: inline; font-size: inherit; }
+details.inline[open] > summary { margin-bottom: 0; }
+.matrix-skip { margin: 0; padding: 14px 16px; color: var(--text-dim); }
 code.wrap { word-break: break-all; white-space: normal; background: var(--surface-2); padding: 1px 5px; border-radius: 4px; }
 .jump { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 0; }
 .jump a { font-size: 13.5px; font-weight: 500; color: var(--text-dim); padding: 2px 0; margin-right: 14px; }

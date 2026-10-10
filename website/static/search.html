@@ -57,6 +57,13 @@
         </div>
       </fieldset>
       <fieldset>
+        <legend>Clifford correction</legend>
+        <div class="pills" role="group" aria-label="Clifford correction">
+          <label class="pill" title="no S or CZ gate: every rotation a T deposits the gate exactly, or does once some rotations run as T&sup3;, T&#8309; or T&dagger;"><input type="checkbox" name="cliff" value="no"> not needed <span class="cnt" data-count="cliff:no"></span></label>
+          <label class="pill" title="S or CZ gates after the rotations, whatever powers of T they run at"><input type="checkbox" name="cliff" value="yes"> S or CZ needed <span class="cnt" data-count="cliff:yes"></span></label>
+        </div>
+      </fieldset>
+      <fieldset>
         <legend>Size</legend>
         <div class="range"><label for="nmin"><span class="tex">n</span></label>
           <input id="nmin" type="number" min="1" inputmode="numeric" placeholder="min" aria-label="n minimum">
@@ -117,6 +124,7 @@
             <th class="num" data-col="gamma_rho" data-key="gamma_rho_claim" data-type="number" scope="col" title="log(n/V_ex)/log d, lower is better. A dagger marks a source-certified distance."><span class="tex">\gamma_\rho</span></th>
             <th class="num" data-col="gamma" data-key="gamma_claim" data-type="number" scope="col" title="log(n/k)/log d"><span class="tex">\gamma</span></th>
             <th data-col="distance" data-key="d_is_exact" data-type="text" scope="col">distance</th>
+            <th data-col="clifford" data-key="clifford" data-type="text" scope="col" title="what the circuit needs besides its rotations to deposit exactly its gate">Clifford</th>
             <th data-col="found" data-key="discovery" data-type="text" scope="col">found by</th>
             <th data-col="cited" data-key="cite_text" data-type="text" scope="col">cited</th>
             <th class="num" data-col="tcount" data-key="t_count" data-type="number" scope="col">T-count</th>

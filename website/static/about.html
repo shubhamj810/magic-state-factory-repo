@@ -19,7 +19,7 @@
 <main id="main" class="guide">
   <nav class="toc" aria-label="on this page">
     <a href="#video">Video introduction</a><a href="#factory">Factories</a><a href="#numbers">The numbers</a><a href="#distance">Distances</a>
-    <a href="#reliability">How each number is obtained</a>
+    <a href="#clifford">Clifford corrections</a><a href="#reliability">How each number is obtained</a>
     <a href="#classes">One row per magic state</a><a href="#citing">Citing</a>
     <a href="#data">Data</a><a href="#contributing">Contributing</a><a href="#sources">Sources</a>
   </nav>
@@ -66,7 +66,22 @@
     (no undetectable damaging fault is lighter) and witnessed (one of that weight is
     shown). Otherwise the catalogue gives a proved lower bound.</p>
     <p>A few sources certify a larger distance than could be re-checked here. Tables show
-    both. Rankings and exponents use the certified one and mark it &dagger;.</p>
+    both. Rankings and exponents use the certified one and mark it &dagger;. Where a
+    source certifies a lower bound and a damaging fault of that weight is shown here, the
+    two together give the distance, and the tag shows it without the &ge;.</p>
+
+    <h2 id="clifford">Clifford corrections</h2>
+    <p>The output gate names only the non-Clifford part of what the rotations deposit. With
+    every rotation a <span class="tex">T=\mathrm{diag}(1,e^{i\pi/4})</span>, the rest is a
+    diagonal Clifford: S, Z and CZ gates on the wires. The factory undoes it after the
+    rotations and before it measures the checks. Then its action is exactly the gate shown,
+    and an error-free run passes every check. Each factory page lists this correction, derived
+    as Bravyi and Haah do for triorthogonal codes.</p>
+    <p>Running some rotations as <span class="tex">T^3</span>, <span class="tex">T^5</span> or
+    <span class="tex">T^\dagger</span> instead of <span class="tex">T</span> costs the same magic
+    states and can remove the correction altogether. For a code this is a transversal T gate,
+    as in Jain and Albert. The search page can show only the factories that need no S or CZ
+    gate, or only those that do.</p>
 
     <h2 id="reliability">How each number is obtained</h2>
     <p>Every row is re-derived from its circuit by
@@ -81,6 +96,7 @@
         <tr><td>valid factory</td><td>Every parity that touches a check row is checked to be even.</td><td>exact</td></tr>
         <tr><td>distance</td><td>Every fault below <span class="tex">d</span> is enumerated. An explicit damaging fault of weight <span class="tex">d</span> makes it exact. Without one it is a lower bound, and an explicit fault of larger weight gives an upper bound.</td><td>proved</td></tr>
         <tr><td>certified distance</td><td>Taken from the factory's source where the search above was out of reach. Not re-checked.</td><td>from source</td></tr>
+        <tr><td>Clifford correction</td><td>Derived from the circuit, then checked by evaluating the corrected circuit's phase on every input that matters, and by simulating small circuits gate by gate. That no choice of powers of T removes it is proved by solving a linear system over <span class="tex">\mathbb{Z}_4</span>.</td><td>exact</td></tr>
         <tr><td>T-count, degree</td><td>Exact minimisation where it is feasible, about <span class="tex">k\le 6</span>. Left blank above that, never estimated.</td><td>exact or blank</td></tr>
         <tr><td><span class="tex">V_{\mathrm{ex}}</span>, <span class="tex">\gamma</span>, <span class="tex">\gamma_T</span>, <span class="tex">\gamma_\rho</span></td><td>Formulas in the numbers above.</td><td>exact</td></tr>
         <tr><td>one row per class</td><td>Every pair of rows with the same <span class="tex">n,k,d</span> is decided by a search for a change of output basis. A pair the search could not decide carries a note saying so.</td><td>proved, or noted</td></tr>
@@ -108,6 +124,8 @@
     C. Gidney and C. Jones. If you use them, cite their paper,
     <a href="https://arxiv.org/abs/2606.28518">arXiv:2606.28518</a>, and their code and
     catalogue, <a href="https://github.com/shraggy/Magic_state_factory_search">github.com/shraggy/Magic_state_factory_search</a>.</p>
+    <p>The factories of distance 9 to 31 are codes of S. P. Jain and V. V. Albert. If you use
+    them, cite their paper, <a href="https://arxiv.org/abs/2408.12752">arXiv:2408.12752</a>.</p>
 
     <h2 id="data">Data</h2>
     <ul class="plain">
@@ -130,6 +148,7 @@
     <ul class="plain">
       <li>An exhaustive classification of generalised triorthogonal codes with up to 54 inputs and distance at least 3 (Wills, Jain and Singh).</li>
       <li>Distance-2 factories from the borrowed-identity searches (Singh, Gidney and Jones, <a href="https://arxiv.org/abs/2606.28518">arXiv:2606.28518</a>), rebuilt from <a href="https://github.com/shraggy/Magic_state_factory_search">their code and catalogue</a>.</li>
+      <li>One-qubit codes with a transversal T gate up to distance 31 (Jain and Albert, <a href="https://doi.org/10.1109/JSAIT.2025.3570832">IEEE JSAIT 6, 127 (2025)</a>, <a href="https://arxiv.org/abs/2408.12752">arXiv:2408.12752</a>), rebuilt from the paper's doubling construction.</li>
       <li>AI-assisted and SAT searches beyond that (Jain, Wills and Singh, <a href="https://arxiv.org/abs/2610.06535">arXiv:2610.06535</a>).</li>
       <li>Published constructions, credited to their papers.</li>
       <li>Community submissions, verified to the same standard.</li>

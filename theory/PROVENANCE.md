@@ -78,6 +78,31 @@ searches are witnesses, so nothing here claims completeness at distance 2.
 | each circuit's distance | `master_catalog/faultcore.py`, at export | every witness re-checked in the tests, and absence below `d` re-proved by brute force on every circuit with at most 40 magic gates; ten upstream distances (printed 5 or 7) are 3, listed in [`borrowed_identities/README.md`](../borrowed_identities/README.md) |
 | the level-3 classes and their credit | [`master_catalog/migrations/distance_two_2026_10_07.py`](../master_catalog/migrations/distance_two_2026_10_07.py) through `merge_results` | every row re-derived by `verify_catalog.py`; every level-3 circuit's class held (but the refused `[[8,4,2]]`) and credited as documented, tested in `borrowed_identities/tests/` |
 
+## Transversal-T codes: the Jain-Albert doubling (external)
+
+The one-qubit codes of S. P. Jain and V. V. Albert, "Transversal Clifford and
+T-gate codes of short length and high distance", IEEE JSAIT 6, 127 (2025)
+([arXiv:2408.12752](https://arxiv.org/abs/2408.12752)). The paper gives
+parameters and a construction, not matrices or software, so the codes are
+built here from that construction. Their distances above `n = 95` are the
+paper's theorem, recorded as certificates, not re-proved.
+
+| claim | producer | certificate/check |
+|---|---|---|
+| each code, as the paper's construction defines it | [`transversal_t_codes/build_codes.py`](../transversal_t_codes/build_codes.py): QR codes, the `sub(XQ47)` code, the `[[17,1,5]]` color code, the puncture-and-dualise map and the doubling map | triorthogonality, independence, odd/even row weights, and Table II's `T`/`T†` partition, checked at build and again in [`transversal_t_codes/tests/`](../transversal_t_codes/tests/) with the catalogue's own primitives; `--check` rebuilds the files byte for byte |
+| the small inputs' distances (`[[7,1,3]]`, `[[17,1,5]]`, `[[23,1,7]]`, `[[45,1,9]]`, `[[47,1,11]]`) and the `[46,23,10]` code | the tests, by enumerating every codeword | exact |
+| an upper bound equal to the paper's distance | a fault built recursively, two qubits per doubling | re-checked against the true syndromes by `verify_catalog.py` as `d_witness` |
+| the paper's distance as a lower bound | the paper's doubling theorem, with the larger QR codes' distances as the paper states them | not re-proved here; stored as `d_certified` with `d_certified_is_exact: false` |
+| the classes and their credit | [`master_catalog/migrations/transversal_t_codes_2026_10_10.py`](../master_catalog/migrations/transversal_t_codes_2026_10_10.py) through `merge_results` | every row re-derived by `verify_catalog.py`; held and credited as tested in `transversal_t_codes/tests/` |
+
+## Clifford corrections
+
+| claim | producer | certificate/check |
+|---|---|---|
+| a row's `clifford_correction` | [`master_catalog/clifford.py`](../master_catalog/clifford.py), by the weight expansion of Bravyi and Haah (2012) | re-derived and compared literally by `verify_catalog.py`; the corrected circuit's phase evaluated input by input (exhaustively for `N <= 16`, else every input of weight at most 3 or 2 plus random ones) and, for small circuits, simulated gate by gate |
+| a row's `rotation_powers` list | the `Z_4` solver in `clifford.py` | the logical action at those powers, with no correction, evaluated and simulated the same way |
+| a `null` `rotation_powers` (S or CZ gates are needed) | the same solver: the `Z_4` system has no solution | re-solved by `verify_catalog.py`; the solver is pinned against brute force over every power assignment in [`master_catalog/tests/test_clifford.py`](../master_catalog/tests/test_clifford.py) |
+
 ## Parent-check claims
 
 The filter chain `tau_D <= mu_d <= kappa_d`, targeted solver, compatible

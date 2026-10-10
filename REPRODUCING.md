@@ -34,9 +34,9 @@ PASS: all <N> tests in every repository suite ran, with no skips and no failures
 Anything else — a failure, a skip, or a suite that collected no tests — is
 reported as a failure and exits nonzero.
 
-Six of the nine suites check that the published results are right, the
-Borrowed Identities import among them. One tests the community-contribution
-checker and one the website build. The ninth,
+Seven of the ten suites check that the published results are right, the
+Borrowed Identities import and the transversal-T codes among them. One tests
+the community-contribution checker and one the website build. The tenth,
 [`tests/`](tests/), checks what this repository would ACCEPT as a result: it
 mutates every field of a real accepted artifact — a census certificate, a shipped
 input pass, a catalogue row — and requires each mutation to be rejected, declared
@@ -252,7 +252,7 @@ through `merge_results.py`. So what there is to reproduce is the VERIFICATION,
 which reads nothing but the file itself:
 
 ```bash
-.venv/bin/python master_catalog/verify_catalog.py            # every row, ~15 min on one core
+.venv/bin/python master_catalog/verify_catalog.py            # every row, ~20 min on one core
 .venv/bin/python master_catalog/verify_catalog.py --changed  # rows that differ from HEAD, seconds
 ```
 
@@ -263,7 +263,10 @@ PASS: <N> rows re-derived from their columns in <time>s -- gate, check
 parities, distance (absence proved below d, presence witnessed at it), output
 width modulo the check span, spectator and pseudo-output freedom, no check wire
 whose syndrome bit the others already decide, T-count and reduced degree where
-computable, and a circuit its own sources published or a note saying why not,
+computable, the Clifford correction with the corrected logical action evaluated
+(and simulated gate by gate on small circuits), the rotation powers that avoid
+it or the proof that none do, and a circuit its own sources published or a note
+saying why not,
 and no two rows are the same GL(k,2) class, every row's regimes,
 strongest_claim and citations resolve against the file's own header, and the
 header itself is present, typed and counts the rows it has
@@ -314,6 +317,40 @@ circuit is already held: `184 duplicate, 1 rejected`, `17 duplicate, 2
 rejected`, and `1002 -> 1002 classes`.
 [`borrowed_identities/README.md`](borrowed_identities/README.md) explains each
 verdict and the credit.
+
+### The transversal-T codes of Jain and Albert
+
+The codes of S. P. Jain and V. V. Albert (IEEE JSAIT 6, 127 (2025),
+arXiv:2408.12752) are built from the paper's doubling construction in
+[`transversal_t_codes/`](transversal_t_codes/) and came in through one
+migration:
+
+```bash
+.venv/bin/python transversal_t_codes/build_codes.py --check          # build and check all 17 codes, ~15 s
+.venv/bin/python -m unittest discover -s transversal_t_codes/tests   # re-checks, small distances by enumeration, catalogue rows, ~1 min
+.venv/bin/python master_catalog/migrations/transversal_t_codes_2026_10_10.py --dry-run   # ~4 min
+```
+
+The build prints `up to date`. Run against the catalogue before the migration,
+the migration reports `15 accepted, 2 duplicate`: `[[15,1,3]]` and
+`[[49,1,5]]` were held already. Against the shipped catalogue it reports `17
+duplicate` and writes nothing. Most of its time is the distance sweep of the
+`n = 805` and `n = 1011` codes.
+
+### Clifford corrections
+
+Every row's `clifford_correction` and `rotation_powers` were added by one
+migration, which checks every row before it writes:
+
+```bash
+.venv/bin/python master_catalog/migrations/clifford_corrections_2026_10_10.py --dry-run   # ~1 min
+```
+
+Against the shipped catalogue it reports, for 1017 rows, `S, CZ: 456,
+T-powers: 551, none: 10` and `nothing written`. `verify_catalog.py`
+re-derives both fields on every row, evaluates each corrected circuit's
+logical action, re-proves every `null` power list, and simulates the small
+circuits gate by gate.
 
 ## 8. Community contributions and the agent context pack
 

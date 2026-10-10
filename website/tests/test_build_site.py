@@ -110,6 +110,56 @@ class TheBuiltSite(unittest.TestCase):
         plain = [f for f in self.index["factories"] if f["d_cert"] is None]
         self.assertTrue(all(f["d_claim"] == f["d"] for f in plain))
 
+    def test_the_clifford_summary_follows_the_catalogue(self):
+        """``none`` / ``powers`` / ``required``, read off the two catalogue
+        fields, and the factory files carry both fields verbatim."""
+        for summary in self.index["factories"]:
+            row = self.catalog["factories"][summary["row"]]
+            corr, powers = row["clifford_correction"], row["rotation_powers"]
+            want = ("none" if not corr["S"] and not corr["CZ"]
+                    else "powers" if powers is not None else "required")
+            self.assertEqual(summary["clifford"], want, summary["id"])
+        record = json.loads((self.out / "data" / "factories" / "15.1.3.a.json")
+                            .read_text(encoding="utf-8"))
+        self.assertEqual(record["clifford"], {
+            "kind": "powers", "correction": {"S": [[0, 1]], "CZ": []},
+            "rotation_powers": [[c, 7] for c in range(15)]})
+
+    def test_a_factory_page_states_its_clifford_correction(self):
+        def panel(label):
+            text = (self.out / "f" / label / "index.html").read_text(encoding="utf-8")
+            self.assertIn('id="clifford-panel"', text)
+            return text.split('id="clifford-panel">', 1)[1].split("</div>", 1)[0]
+        self.assertIn("Or no Clifford gate at all", panel("15.1.3.a"))
+        required = next(f["id"] for f in self.index["factories"] if f["clifford"] == "required")
+        self.assertIn("cannot be avoided", panel(required))
+        none = next(f["id"] for f in self.index["factories"] if f["clifford"] == "none")
+        self.assertIn("<strong>None.</strong>", panel(none))
+        # a long list is cut, and the whole of it is in a fold-out after the paragraph
+        long = panel("185.1.7.a")
+        self.assertIn("more (listed below)", long)
+        self.assertNotIn("<p><details", long.replace(" ", ""))
+
+    def test_a_met_certificate_reads_as_the_distance(self):
+        """A source's lower bound that the row's own fault meets is shown as
+        the distance, without the >=; one it does not meet keeps the >=."""
+        summary = next(f for f in self.index["factories"] if f["id"] == "3239.1.3.a")
+        self.assertEqual((summary["d"], summary["d_cert"], summary["d_cert_met"]), (3, 31, True))
+        text = (self.out / "f" / "3239.1.3.a" / "index.html").read_text(encoding="utf-8")
+        self.assertIn(">certified 31</span>", text)
+        unmet = [f for f in self.index["factories"] if f["d_cert"] and not f["d_cert_met"]
+                 and not f["d_cert_exact"]]
+        for f in unmet:
+            page = (self.out / "f" / f["id"] / "index.html").read_text(encoding="utf-8")
+            self.assertIn(f">certified &ge; {f['d_cert']}</span>", page)
+
+    def test_a_huge_matrix_is_offered_not_drawn(self):
+        text = (self.out / "f" / "3239.1.3.a" / "index.html").read_text(encoding="utf-8")
+        self.assertIn('class="matrix-skip', text)
+        self.assertLess(len(text), 200_000)
+        small = (self.out / "f" / "15.1.3.a" / "index.html").read_text(encoding="utf-8")
+        self.assertNotIn('class="matrix-skip', small)
+
     def test_every_citation_resolves(self):
         for summary in self.index["factories"]:
             for key in summary["citations"]:
@@ -204,7 +254,7 @@ class TheBuiltSite(unittest.TestCase):
         listed = re.findall(r'<li id="ref-([^"]+)"', text)
         dates = [self.index["references"][key].get("date") for key in listed]
         self.assertTrue(all(dates), "every listed paper carries a date")
-        self.assertEqual(dates, sorted(dates), "in order of publication")
+        self.assertEqual(dates, sorted(dates, reverse=True), "newest first")
         for key in self.index["references"]:
             self.assertIn(f'href="search.html?cite={key}"', text)
         self.assertIn('id="contributor-list"', text)

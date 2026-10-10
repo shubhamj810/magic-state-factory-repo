@@ -64,12 +64,21 @@ def params_path(n, k, d) -> str:
     return f"p/{n}.{k}.{d}/"
 
 
-def distance_tags(d, exact, cert, cert_exact) -> str:
+def cert_tag(cert, cert_exact, met=False) -> str:
+    """The tag for a source's distance certificate.  A lower bound that a fault
+    exhibited here meets is the distance, and reads as one."""
+    if met and not cert_exact:
+        return (f'<span class="tag cert" title="its source certifies d &ge; {cert}, and a damaging '
+                f'fault of weight {cert} is exhibited here, so d = {cert}">certified {cert}</span>')
+    return (f'<span class="tag cert" title="certified by its source, not re-checked here">certified '
+            f'{"" if cert_exact else "&ge; "}{cert}</span>')
+
+
+def distance_tags(d, exact, cert, cert_exact, met=False) -> str:
     out = (f'<span class="tag exact" title="verified here: exact">d = {d}</span>' if exact
            else f'<span class="tag floor" title="verified here: a proved lower bound">d &ge; {d}</span>')
     if cert and cert > d:
-        out += (f' <span class="tag cert" title="certified by its source, not re-checked here">certified '
-                f'{"" if cert_exact else "&ge; "}{cert}</span>')
+        out += " " + cert_tag(cert, cert_exact, met)
     return out
 
 
@@ -93,6 +102,11 @@ def claim_mark(row) -> str:
 
 
 # ------------------------------------------------------------------ the matrix
+#: Past this many cells the inline matrix is several megabytes of page that no
+#: one reads cell by cell; those pages offer the CSV and the columns instead.
+MATRIX_CELL_LIMIT = 1_500_000
+
+
 def matrix_html(record) -> str:
     p = record["parameters"]
     n, N, k = p["n"], p["N"], p["k"]
@@ -107,6 +121,10 @@ def matrix_html(record) -> str:
         labels += str(t)
         if t + 10 < n:
             labels += " " * max(10 - len(str(t)), 1)
+    if N * n > MATRIX_CELL_LIMIT:
+        return (f'<p class="matrix-skip small">This matrix has {N:,} rows and {n:,} columns, '
+                f"{N * n:,} cells, too many to draw here. Download it as a CSV or copy the columns "
+                "(see Download).</p>")
     rows = []
     for q in range(N):
         out = q < k
@@ -214,11 +232,11 @@ with open("equivalent-gates-{label}.txt", "w") as out:
 
 
 # ---------------------------------------------------------- references page
-def _published(key: str, ref: dict) -> tuple[str, str]:
-    """Sort key for a reference: its publication ``date`` (``YYYY-MM[-DD]``),
-    else the year its label prints, else last; then the key."""
+def _published(ref: dict) -> str:
+    """When a reference was published: its ``date`` (``YYYY-MM[-DD]``), else
+    the year its label prints, else ``9999`` (unpublished, so the newest)."""
     year = re.search(r"\((\d{4})\)", ref.get("short", ""))
-    return (ref.get("date") or (year.group(1) if year else "9999"), key)
+    return ref.get("date") or (year.group(1) if year else "9999")
 
 
 def references_page(index: dict, contributors: list[dict]):
@@ -227,7 +245,9 @@ def references_page(index: dict, contributors: list[dict]):
     for f in index["factories"]:
         for key in f["citations"]:
             counts[key] = counts.get(key, 0) + 1
-    refs = sorted(index["references"].items(), key=lambda item: _published(*item))
+    # newest first; equal dates by key, so the page is reproducible
+    refs = sorted(sorted(index["references"].items()),
+                  key=lambda item: _published(item[1]), reverse=True)
     papers = "".join(
         f'<li id="ref-{esc(key)}">{reference_html(dict(key=key, **ref))} '
         f'<span class="muted">·</span> <a class="small" href="search.html?cite={quote(key)}">{counts.get(key, 0)} '
@@ -254,8 +274,8 @@ def references_page(index: dict, contributors: list[dict]):
   </nav>
   <div class="prose">
     <h2 id="papers">Papers</h2>
-    <p>Every factory is credited to the work that found it. The papers are in order of
-    publication, and the link after each one lists its factories.</p>
+    <p>Every factory is credited to the work that found it. The papers are listed newest
+    first, and the link after each one lists its factories.</p>
     <ol class="refs ref-list" id="paper-list">{papers}</ol>
 
     <h2 id="contributors">Contributors</h2>
@@ -267,6 +287,86 @@ def references_page(index: dict, contributors: list[dict]):
     return ("References · Magic State Factory Catalog",
             "The papers the Magic State Factory Catalog draws on, and everyone who has contributed to it.",
             main)
+
+
+# ------------------------------------------------------- Clifford correction
+S_TEX = {1: "\\mathrm{S}", 2: "\\mathrm{Z}", 3: "\\mathrm{S}^\\dagger"}
+T_TEX = {3: "\\mathrm{T}^3", 5: "\\mathrm{T}^5", 7: "\\mathrm{T}^\\dagger"}
+CZ_TEX = "\\mathrm{CZ}"
+T_ONE = "\\mathrm{T}"
+CLIFFORD_LABEL = {"none": "none", "powers": "none with T powers", "required": "S, CZ"}
+T_NAME = {3: "T³", 5: "T⁵", 7: "T†"}
+#: Gates or rotations listed inline before the rest go into a fold-out.
+LIST_INLINE = 24
+
+
+def _fold(items, noun, folds):
+    """``items`` joined, cut after `LIST_INLINE` with a pointer to the full
+    list, which goes into ``folds`` to be shown after the paragraph -- a
+    <details> cannot sit inside a <p>, where the parser would end the
+    paragraph at it."""
+    if len(items) <= LIST_INLINE:
+        return ", ".join(items)
+    folds.append(f"<details><summary>All {len(items)} {noun}</summary>"
+                 f'<p class="small">{", ".join(items)}</p></details>')
+    return ", ".join(items[:LIST_INLINE]) + f" and {len(items) - LIST_INLINE} more (listed below)"
+
+
+def clifford_panel(record) -> str:
+    """What the circuit needs besides its rotations to be exactly its gate."""
+    k, n = record["parameters"]["k"], record["parameters"]["n"]
+    cl = record["clifford"]
+    corr, powers = cl["correction"], cl["rotation_powers"]
+
+    def wire(q):
+        return f"{'output' if q < k else 'check'} {q}"
+
+    gates = ([f"{tex(S_TEX[p])} on {wire(q)}" for q, p in corr["S"]]
+             + [f"{tex(CZ_TEX)} on {wire(q)}, {wire(r)}" for q, r in corr["CZ"]])
+    out, folds = [], []
+    if not gates:
+        out.append("<p><strong>None.</strong> With every rotation a "
+                   f"{tex('\\mathrm{T}=\\mathrm{diag}(1,e^{i\\pi/4})')}, the circuit's action is exactly the gate "
+                   "above, and an error-free run passes every check with certainty.</p>")
+    else:
+        parts = []
+        if corr["S"]:
+            parts.append(f"{len(corr['S'])} single-wire gate{'' if len(corr['S']) == 1 else 's'}")
+        if corr["CZ"]:
+            parts.append(f"{len(corr['CZ'])} {tex(CZ_TEX)} gate{'' if len(corr['CZ']) == 1 else 's'}")
+        count = " and ".join(parts)
+        out.append("<p>With every rotation a "
+                   f"{tex('\\mathrm{T}=\\mathrm{diag}(1,e^{i\\pi/4})')}, the rotations deposit the gate above times a "
+                   "diagonal Clifford. Undo it after the rotations and before the checks are measured, with "
+                   f"{count}: {_fold(gates, 'correction gates', folds)}. The circuit's action is then exactly "
+                   "the gate above, and an error-free run passes every check with certainty.</p>")
+        out += folds
+        folds = []
+        if powers is None:
+            out.append("<p><strong>These Clifford gates cannot be avoided.</strong> No choice of "
+                       f"{tex(T_ONE)}, {tex(T_TEX[3])}, {tex(T_TEX[5])} or {tex(T_TEX[7])} for each rotation "
+                       "removes them; the catalogue proves this by showing that the linear system over "
+                       f"{tex('\\mathbb{Z}_4')} the powers would have to solve has no solution.</p>")
+        else:
+            if len(powers) == n and len({p for _c, p in powers}) == 1:
+                which = f"every rotation as {tex(T_TEX[powers[0][1]])}"
+            else:
+                groups = {}
+                for c, p in powers:
+                    groups.setdefault(p, []).append(str(c))
+                which = "; ".join(f"{tex(T_TEX[p])} on rotation{'s' if len(cs) > 1 else ''} "
+                                  f"{_fold(cs, f'rotations at {T_NAME[p]}', folds)}"
+                                  for p, cs in sorted(groups.items())) \
+                    + f", and {tex(T_ONE)} on the rest"
+            out.append(f"<p><strong>Or no Clifford gate at all:</strong> run {which}. A power of "
+                       f"{tex(T_ONE)} costs one magic state, like {tex(T_ONE)} itself. For a code this is a "
+                       f"transversal {tex(T_ONE)} gate, {tex(T_ONE + '^j')} on each qubit.</p>")
+            out += folds
+    out.append('<p class="small muted">Rotations are numbered by matrix column, from 0. The correction '
+               "comes from the columns by the weight expansion of Bravyi and Haah (2012). "
+               "<code>verify_catalog.py</code> re-derives it, checks the corrected circuit's phase input by "
+               "input against the gate, and on small circuits simulates it gate by gate.</p>")
+    return "".join(out)
 
 
 # ------------------------------------------------------------- factory page
@@ -295,10 +395,11 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
     <h1 id="heading">{params_tex(n, k, d)} factory</h1>
     <p class="lede gate-lede">{gate_tex(short)}</p>
     <dl class="summary">
-      <div><dt>distance, proved here</dt><dd>{tex(distance_bounds(d, dist["is_exact"], dist.get("upper")))}{(" <span class='tag cert' title='certified by its source, not re-checked here'>certified " + ("" if cert["is_exact"] else "&ge; ") + str(cert["d"]) + "</span>") if cert else ""}</dd></div>
+      <div><dt>distance, proved here</dt><dd>{tex(distance_bounds(d, dist["is_exact"], dist.get("upper")))}{(" " + cert_tag(cert["d"], cert["is_exact"], cert.get("met"))) if cert else ""}</dd></div>
       <div><dt>{tex(r"\gamma_\rho")}</dt><dd>{num(m.get("gamma_rho_claim"), 4)}{claim_mark(summary)}</dd></div>
       <div><dt>{tex(r"V_{\mathrm{ex}}")}</dt><dd>{m["v_ex"] if m["v_ex"] is not None else "—"}</dd></div>
       <div><dt>wires</dt><dd>{tex(f"N={N}")}</dd></div>
+      <div><dt>Clifford correction</dt><dd>{CLIFFORD_LABEL[record["clifford"]["kind"]]}</dd></div>
       <div><dt>found by</dt><dd><span class="tag {'ai' if prov.get('discovery') == 'AI search' else 'pre'}">{esc(prov.get("discovery") or "—")}</span>{' <span class="tag pure">pure T</span>' if pure else ""}</dd></div>
     </dl>
   </div>
@@ -306,13 +407,15 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
 
     caption = (f"The {tex(f'{N}\\times{n}')} matrix. Rows are wires and columns are rotations. "
                "A 1 means the wire takes part in the rotation, and the number beside each wire is its row weight."
-               + (" Scroll sideways to see every column." if n > 120 else ""))
+               + (" Scroll sideways to see every column." if 120 < n and N * n <= MATRIX_CELL_LIMIT else ""))
     metrics = "".join([
         metric(f"inputs {tex('n')}", n, "Noisy T states per run."),
         metric(f"outputs {tex('k')}", k),
         metric(f"distance {tex('d')}", ("" if dist["is_exact"] else "≥ ") + str(d),
                ("Exact, proved and witnessed here." if dist["is_exact"] else "A lower bound proved here.")
-               + (f" Its source certifies {tex(('d=' if cert['is_exact'] else 'd\\ge ') + str(cert['d']))}." if cert else "")),
+               + (f" Its source certifies {tex(('d=' if cert['is_exact'] else 'd\\ge ') + str(cert['d']))}"
+                  + (f", and a fault of weight {cert['d']} is shown below, so {tex('d=' + str(cert['d']))}."
+                     if cert.get("met") and not cert["is_exact"] else ".") if cert else "")),
         metric(f"wires {tex('N')}", N),
         metric(f"checks {tex('r')}", r),
         metric(tex(r"V_{\mathrm{ex}}"), m["v_ex"],
@@ -356,6 +459,8 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
         + (f"<p>Its source certifies {tex(('d=' if cert['is_exact'] else 'd\\ge ') + str(cert['d']))}"
            f"{', exactly' if cert['is_exact'] else ', as a lower bound'}. That certificate is not re-checked here, "
            f"but rankings on this site may use it."
+           + (f" With the damaging fault of weight {cert['d']} above, it makes the distance exactly "
+              f"{tex('d=' + str(cert['d']))}." if cert.get("met") and not cert["is_exact"] else "")
            + (f' <span class="small muted">Source: {esc(cert.get("source"))}.</span>' if cert.get("source") else "")
            + "</p>" if cert else "")
         + '<p class="small muted">A fault is a set of faulty columns. It is undetectable when their check parts '
@@ -438,6 +543,9 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
   <h2 id="gate">Output gate</h2>
   <div class="panel" id="gate-panel">{gate_panel}</div>
 
+  <h2 id="clifford">Clifford correction</h2>
+  <div class="panel" id="clifford-panel">{clifford_panel(record)}</div>
+
   <h2 id="transform">Convert the output with CNOT and S</h2>
   <div class="panel" id="transform-panel">
     <p class="small muted" id="tf-intro">A CNOT circuit on the outputs, followed by S, Z and CZ gates, turns this factory's gate into other gates that prepare the same magic state. Type a target gate to check whether it is reachable. If it is, you get the circuit, checked on every basis state.</p>
@@ -508,7 +616,7 @@ def params_main(group, members, groups) -> str:
         + (' <span class="tag pure">pure T</span>' if f["pure_t"] else "") + "</td>"
         f'<td class="num">{num(f["gamma_rho_claim"])}{claim_mark(f)}</td>'
         f'<td class="num">{f["N"]}</td>'
-        f'<td>{distance_tags(f["d"], f["d_is_exact"], f["d_cert"], f["d_cert_exact"])}</td>'
+        f'<td>{distance_tags(f["d"], f["d_is_exact"], f["d_cert"], f["d_cert_exact"], f.get("d_cert_met"))}</td>'
         f'<td class="small cites">{esc(f.get("cite_text") or "—")}</td></tr>'
         for f in members)
     others = [g for key, g in groups.items() if key[:2] == (n, k) and key[2] != d]

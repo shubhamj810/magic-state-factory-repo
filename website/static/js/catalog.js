@@ -133,8 +133,13 @@
       ? '<span class="tag exact" title="verified here: exact">d = ' + row.d + "</span>"
       : '<span class="tag floor" title="verified here: a proved lower bound">d &ge; ' + row.d + "</span>";
     if (row.d_cert && row.d_cert > row.d) {
-      verified += ' <span class="tag cert" title="certified by its source, not re-checked here">certified ' +
-        (row.d_cert_exact ? "" : "&ge; ") + row.d_cert + "</span>";
+      /* a certified lower bound that a fault exhibited here meets is the distance */
+      verified += row.d_cert_met && !row.d_cert_exact
+        ? ' <span class="tag cert" title="its source certifies d &ge; ' + row.d_cert +
+          ", and a damaging fault of weight " + row.d_cert + " is exhibited here, so d = " +
+          row.d_cert + '">certified ' + row.d_cert + "</span>"
+        : ' <span class="tag cert" title="certified by its source, not re-checked here">certified ' +
+          (row.d_cert_exact ? "" : "&ge; ") + row.d_cert + "</span>";
     }
     return verified;
   }

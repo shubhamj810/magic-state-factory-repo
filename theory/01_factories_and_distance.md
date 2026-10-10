@@ -89,6 +89,45 @@ Verification never trusts this algebra: given explicit columns,
 degree-1, 2 and 3 column parity directly and compares against the claimed
 target, with `0` required on every subset touching a check.
 
+## The Clifford correction
+
+The factory condition makes every parity touching a check *even*, not zero
+mod 8, and an odd output parity fixes only which gate is there, not its exact
+phase. So the rotations deposit the gate times a diagonal Clifford, and the
+factory must undo it after the rotations and before it measures the checks.
+With every rotation a `T = diag(1, e^{i pi/4})`, the rotations multiply in
+`e^{i pi f(v)/4}` on the basis state `v` of all `N` wires, and expanding the
+parity of each column (Bravyi and Haah, PRA 86, 052329 (2012), Sec. III) gives
+
+```text
+f(v) = sum_q |g_q| v_q - 2 sum_{q<r} |g_q AND g_r| v_q v_r
+       + 4 sum_{q<r<s} |g_q AND g_r AND g_s| v_q v_r v_s      (mod 8),
+```
+
+with `g_q` the row of wire `q`. Take away the gate as printed (`x_i` for each
+`T`, `2 x_i x_j` for each `CS`, `4 x_i x_j x_l` for each `CCZ`). The cubic
+terms cancel, every pair coefficient is `0` or `4` (a `CZ`), and every single
+coefficient is even (an `S^p`). That residual is the row's
+`clifford_correction`, unique for the stored circuit. Undoing it on a check
+makes an error-free run pass with certainty. Undoing it on an output makes the
+output the gate shown rather than the gate times a Clifford, for instance `T`
+rather than `T^dagger` for the 15-to-1.
+
+Running a rotation as `T^3`, `T^5` or `T^7 = T^dagger` costs the same magic
+state and adds `2 s |c . v|` to `f`. The correction disappears for some choice
+of powers exactly when a linear system over `Z_4` has a solution: for each
+wire `q`, `sum_{c contains q} s_c = p_q (mod 4)`, and for each pair `q < r`,
+`sum_{c contains q, r} s_c = [CZ_qr] (mod 2)`. For a code, with columns as
+qubits, a solution is a transversal `T` gate (`T^j` on each qubit), in the
+sense of Jain and Albert, arXiv:2408.12752. The row stores a solution as
+`rotation_powers`, or `null` when the system has none and `S` or `CZ` gates
+are unavoidable.
+[`master_catalog/clifford.py`](../master_catalog/clifford.py) computes both.
+`verify_catalog.py` checks them without the expansion: it evaluates the
+circuit's phase directly on every input of weight at most 3, which is complete
+because the residual has degree at most 3, and it simulates small circuits
+gate by gate.
+
 ## The punctured simplex
 
 One family is worth writing down explicitly, because nine rows of the

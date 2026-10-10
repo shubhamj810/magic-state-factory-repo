@@ -14,10 +14,17 @@
                        "t_terms", "cs_terms", "ccz_terms", "pure_t", "t_count",
                        "poly_degree", "effective_width", "gamma", "gamma_t",
                        "gamma_rho", "v_ex", "rate", "d_is_exact", "d_cert", "d_cert_exact",
-                       "d_claim", "gamma_claim", "gamma_rho_claim", "discovery",
+                       "d_claim", "gamma_claim", "gamma_rho_claim", "clifford", "discovery",
                        "regimes", "citations", "row"];
 
   function $(id) { return document.getElementById(id); }
+
+  /* The Clifford column: what the circuit needs besides its rotations. */
+  var CLIFFORD = {
+    none: '<span class="tag" title="every rotation a T deposits the gate exactly">none</span>',
+    powers: '<span class="tag" title="no S or CZ gate once some rotations run as T&sup3;, T&#8309; or T&dagger;">T powers</span>',
+    required: '<span class="tag" title="S or CZ gates after the rotations, whatever powers of T they run at">S, CZ</span>'
+  };
 
   function option(value, text) {
     var o = document.createElement("option");
@@ -79,6 +86,9 @@
       document.querySelectorAll('input[name="has"]').forEach(function (box) {
         box.checked = (state.has || []).indexOf(box.value) >= 0;
       });
+      document.querySelectorAll('input[name="cliff"]').forEach(function (box) {
+        box.checked = (state.cliff || []).indexOf(box.value) >= 0;
+      });
       ["disc", "regime", "cite"].forEach(function (key) { $(key).value = state[key] || ""; });
       $("size").value = String(state.size === undefined ? 50 : state.size);
     }
@@ -97,6 +107,7 @@
       ["exact", "pure", "known", "lit"].forEach(function (key) { if ($(key).checked) next[key] = true; });
       next.d = [].map.call(document.querySelectorAll('input[name="d"]:checked'), function (b) { return b.value; });
       next.has = [].map.call(document.querySelectorAll('input[name="has"]:checked'), function (b) { return b.value; });
+      next.cliff = [].map.call(document.querySelectorAll('input[name="cliff"]:checked'), function (b) { return b.value; });
       ["disc", "regime", "cite"].forEach(function (key) { if ($(key).value) next[key] = $(key).value; });
       return next;
     }
@@ -124,6 +135,7 @@
         '<td class="num" data-col="gamma_rho">' + C.num(f.gamma_rho_claim) + C.claimMark(f) + "</td>" +
         '<td class="num" data-col="gamma">' + C.num(f.gamma_claim) + C.claimMark(f) + "</td>" +
         '<td data-col="distance">' + C.distanceTag(f) + "</td>" +
+        '<td data-col="clifford">' + CLIFFORD[f.clifford] + "</td>" +
         '<td data-col="found"><span class="tag ' + (f.discovery === "AI search" ? "ai" : "pre") + '" title="' +
           C.escapeHtml(f.regimes.join("\n")) + '">' + C.escapeHtml(f.discovery || "—") + "</span></td>" +
         '<td class="small cites" data-col="cited">' + C.escapeHtml(f.cite_text || "—") + "</td>" +
@@ -143,7 +155,7 @@
           ? ' <span class="muted">· showing ' + ((page - 1) * size + 1) + "–" +
             ((page - 1) * size + shown.length) + "</span>" : "");
       $("body").innerHTML = shown.length ? shown.map(row).join("")
-        : '<tr><td colspan="9" class="empty">No factory matches. ' +
+        : '<tr><td colspan="10" class="empty">No factory matches. ' +
           '<button type="button" class="linkish" id="reset-inline">Reset the search</button></td></tr>';
       $("pager").innerHTML = C.pagerHtml(page, pages);
       ["export-csv", "export-json"].forEach(function (id) { $(id).disabled = !sorted.length; });
@@ -198,6 +210,10 @@
       (state.has || []).forEach(function (v) {
         add("has " + v.toUpperCase(), function (s) { s.has = s.has.filter(function (x) { return x !== v; }); });
       });
+      (state.cliff || []).forEach(function (v) {
+        add(v === "yes" ? "S or CZ needed" : "no Clifford correction needed",
+            function (s) { s.cliff = s.cliff.filter(function (x) { return x !== v; }); });
+      });
       if (state.exact) add("exact distance", function (s) { delete s.exact; });
       if (state.pure) add("pure " + C.tex(C.TEX.pure), function (s) { delete s.pure; });
       if (state.tmax !== undefined) add("T-count &le; " + state.tmax, function (s) { delete s.tmax; });
@@ -230,6 +246,7 @@
       document.querySelectorAll("[data-count]").forEach(function (span) {
         var key = span.getAttribute("data-count").split(":"), s = copy();
         if (key[0] === "d") s.d = [key[1]];
+        else if (key[0] === "cliff") s.cliff = [key[1]];
         else if (key[0] === "has") s.has = (s.has || []).filter(function (x) { return x !== key[1]; }).concat([key[1]]);
         else s[key[0]] = true;
         var c = size(s);
@@ -240,7 +257,7 @@
 
     /* --------------------------------------------------- column chooser */
     var COLUMNS = [["params", "[[n, k, d]]"], ["gate", "output gate"], ["N", "N"], ["gamma_rho", "γρ"],
-                   ["gamma", "γ"], ["distance", "distance"], ["found", "found by"], ["cited", "cited"],
+                   ["gamma", "γ"], ["distance", "distance"], ["clifford", "Clifford"], ["found", "found by"], ["cited", "cited"],
                    ["tcount", "T-count"]];
     var hidden = ["tcount"];
     try { var saved = JSON.parse(localStorage.getItem("msfc-hidden-cols")); if (Array.isArray(saved)) hidden = saved; }
@@ -274,7 +291,7 @@
       var id = tr.getAttribute("data-id");
       var row = document.createElement("tr");
       row.className = "preview";
-      row.innerHTML = '<td colspan="9"><span class="muted small">loading…</span></td>';
+      row.innerHTML = '<td colspan="10"><span class="muted small">loading…</span></td>';
       tr.after(row);
       C.loadFactory(id).then(function (record) {
         var p = record.parameters;

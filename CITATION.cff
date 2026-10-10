@@ -59,6 +59,20 @@ references:
     year: 2026
     doi: "10.48550/arXiv.2606.28518"
     url: "https://arxiv.org/abs/2606.28518"
+  - type: article
+    title: "Transversal Clifford and T-Gate Codes of Short Length and High Distance"
+    authors:
+      - family-names: Jain
+        given-names: Shubham P.
+      - family-names: Albert
+        given-names: Victor V.
+    journal: "IEEE Journal on Selected Areas in Information Theory"
+    volume: 6
+    start: 127
+    end: 137
+    year: 2025
+    doi: "10.1109/JSAIT.2025.3570832"
+    url: "https://arxiv.org/abs/2408.12752"
   - type: software
     title: "Magic State Factory Search"
     authors:

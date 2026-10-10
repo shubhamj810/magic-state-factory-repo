@@ -90,6 +90,10 @@
         return;
       }
       if (lower === "pure") { tests.push(function (row) { return row.pure_t; }); return; }
+      if (lower === "transversal") {
+        tests.push(function (row) { return row.clifford !== "required"; });
+        return;
+      }
       if (lower === "exact") { tests.push(function (row) { return row.d_is_exact; }); return; }
       m = TERM.exec(word);
       if (m) {
@@ -115,7 +119,7 @@
    * the URL, so a bare search.html is the whole catalogue. */
   var KEYS = {
     q: "text", nmin: "int", nmax: "int", kmin: "int", kmax: "int",
-    d: "list", exact: "bool", has: "list", pure: "bool",
+    d: "list", exact: "bool", has: "list", pure: "bool", cliff: "list",
     tmax: "int", known: "bool", grmax: "float",
     disc: "text", regime: "text", cite: "text", lit: "bool",
     sort: "text", dir: "int", page: "int", size: "int"
@@ -165,6 +169,15 @@
       if (ARITY[kind]) add(function (r) { return r[kind + "_terms"] > 0; });
     });
     if (state.pure) add(function (r) { return r.pure_t; });
+    /* Clifford correction: "no" = no S or CZ gate is needed (none at all, or
+     * none once some rotations run as T^3, T^5 or T-dagger); "yes" = S or CZ
+     * gates are needed whatever the powers.  Both ticked is every factory. */
+    if (state.cliff && state.cliff.length) {
+      var wanted = state.cliff;
+      add(function (r) {
+        return wanted.indexOf(r.clifford === "required" ? "yes" : "no") >= 0;
+      });
+    }
     if (state.tmax !== undefined) add(function (r) { return r.t_count !== null && r.t_count <= state.tmax; });
     if (state.known) add(function (r) { return r.t_count !== null; });
     if (state.grmax !== undefined) add(function (r) { return r.gamma_rho_claim !== null && r.gamma_rho_claim <= state.grmax; });

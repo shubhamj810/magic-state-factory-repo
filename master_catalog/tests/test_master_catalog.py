@@ -58,12 +58,16 @@ SAT = "symmetry-SAT search"
 #: ``file`` a source carries is inert provenance -- history, not a path -- and
 #: nothing here opens one.
 LOCAL_SOURCE_DIRS = ("classification/", "symmetry_sat_search/",
-                     "borrowed_identities/")
+                     "borrowed_identities/", "transversal_t_codes/")
 #: The Borrowed Identities circuits (Singh, Gidney and Jones), rebuilt from the
 #: upstream catalogue by `borrowed_identities/export_circuits.py`.
 BORROWED_CIRCUITS = REPO / "borrowed_identities" / "circuits" / "circuits_l3.json"
 BORROWED = ("borrowed-identity search: two-group",
             "borrowed-identity search: symmetry-free")
+#: The codes of Jain and Albert (arXiv:2408.12752), rebuilt by
+#: `transversal_t_codes/build_codes.py`: literature, not an AI search.
+DOUBLED = ("Jain-Albert doubling: weak triply even family",
+           "Jain-Albert doubling: triorthogonal family")
 #: The classification stages this repository ran itself -- every catalogue under
 #: ``classification/`` but the copied length-54 frontier: a source from one of
 #: them makes a class ``pre-existing``.
@@ -72,8 +76,10 @@ FRONTIER_DIR = "classification/length54/"
 #: The regime `community_contributions/check_submission.py` merges under.
 COMMUNITY = "community contribution"
 #: Regimes that are not an AI search: the classification, the SAT search, the
-#: borrowed-identity searches and a community contribution.
-NOT_AI = (PARETO, "exhaustive classification n<=54", SAT, COMMUNITY) + BORROWED
+#: borrowed-identity searches, the Jain-Albert codes and a community
+#: contribution.
+NOT_AI = (PARETO, "exhaustive classification n<=54", SAT, COMMUNITY) \
+    + BORROWED + DOUBLED
 #: The two reports the classification window is credited to: the length-54
 #: classification (arXiv:2609.30860) and the symmetry-and-AI report
 #: (arXiv:2610.06535).
@@ -570,8 +576,9 @@ class TestMasterCatalogue(unittest.TestCase):
         """`AI search` iff the only finders the sources record are AI searches.
 
         Any other recorded finder -- a classification stage this repository
-        ran, the symmetry-SAT search, a borrowed-identity search, or a
-        community contribution -- makes the class `pre-existing`.  The sources carry no dates, so this is a
+        ran, the symmetry-SAT search, a borrowed-identity search, a code of
+        Jain and Albert, or a community contribution -- makes the class
+        `pre-existing`.  The sources carry no dates, so this is a
         statement about who is on record, not who was first, and the sources
         answer it in both directions.  It is
         stated on the sources rather than on `regimes` because the length-54
@@ -584,7 +591,7 @@ class TestMasterCatalogue(unittest.TestCase):
         for row in self.rows:
             # a finder other than an AI search: the SAT search, a community
             # contribution, or a classification stage this repository ran
-            early = any(s["regime"] in (SAT, COMMUNITY) + BORROWED
+            early = any(s["regime"] in (SAT, COMMUNITY) + BORROWED + DOUBLED
                         or (s["file"].startswith(EARLY_STAGES)
                             and not s["file"].startswith(FRONTIER_DIR))
                         for s in row["sources"])
@@ -716,7 +723,7 @@ class TestMasterCatalogue(unittest.TestCase):
                 continue
             with self.subTest(key=key):
                 self.assertTrue(entry["url"].startswith("https://"))
-                # the reference lists are in order of publication
+                # the reference lists are ordered by publication date
                 self.assertRegex(entry.get("date", ""), r"^\d{4}-\d{2}(-\d{2})?$")
 
     def test_the_rest_of_the_classification_window_cites_both_reports(self):
