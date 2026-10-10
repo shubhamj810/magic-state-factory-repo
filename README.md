@@ -44,7 +44,7 @@ are the outputs and the rest are postselected checks. `d` is the circuit's
 fault distance. Each row also gives the circuit's **Clifford correction**: the
 `S` and `CZ` gates that make its action exactly the gate shown (see below).
 
-The catalogue holds **1017 classes**:
+The catalogue holds **1027 classes**:
 
 - `n = 8..3239`, `k = 1..373`, `d = 2..7` proved here, and up to 31 certified
   by a source;
@@ -82,7 +82,7 @@ also stores whether the correction can be avoided by running some rotations as
 transversal `T` gate in the sense of Jain and Albert.
 
 - 10 classes need no correction at all;
-- 551 need none once some rotations run at another power of `T`;
+- 561 need none once some rotations run at another power of `T`;
 - 456 need `S` or `CZ` gates whatever the powers, which the verifier proves.
 
 [`master_catalog/clifford.py`](master_catalog/clifford.py) computes all three.
@@ -102,7 +102,7 @@ names the papers that credit it, linked where they are published.
 | **Borrowed-identity searches** (Singh, Gidney and Jones; [paper](https://arxiv.org/abs/2606.28518), [code and data](https://github.com/shraggy/Magic_state_factory_search)) | the paper's catalogue of distance-2 factories: two-group and symmetry-free searches over borrowed-identity circuits. Copied, with an explicit circuit rebuilt for every row, in [`borrowed_identities/`](borrowed_identities/); its 185 level-3 circuits give 179 classes here (171 at distance 2). Not counted as an AI discovery | `borrowed-identity search: two-group`, `borrowed-identity search: symmetry-free` |
 | **AI-assisted search** (Jain, Wills and Singh; [paper](https://arxiv.org/abs/2610.06535)) | AI search campaigns run in the companion repository `magic-states-AI`, from punctured simplex and Reed–Muller parents and Wills's parent codes, including the pure-T distillation-exponent (`γ`) frontier, and the public search for generalised triorthogonal protocols at lengths 55–64 | `AI search`, `AI search: …`, `AI search (gamma frontier): …` |
 | **Symmetry-constrained SAT search** (same paper) | CP-SAT searches over symmetric column orbits and ansatz-free SAT, in [`symmetry_sat_search/`](symmetry_sat_search/). Not counted as an AI discovery | `symmetry-SAT search` |
-| **Transversal-T codes** (Jain and Albert; [paper](https://doi.org/10.1109/JSAIT.2025.3570832), [arXiv](https://arxiv.org/abs/2408.12752)) | one-qubit codes with a transversal `T`, built by doubling self-dual and quadratic-residue CSS codes: all fifteen of the paper's weak triply even codes and the first five of its triorthogonal ones, `[[15,1,3]]` to `[[3239,1,31]]`, rebuilt from the paper's construction in [`transversal_t_codes/`](transversal_t_codes/). Fifteen new classes, with the paper's distances as certificates. Not counted as an AI discovery | `Jain-Albert doubling: weak triply even family`, `Jain-Albert doubling: triorthogonal family` |
+| **Transversal-T codes** (Jain and Albert; [paper](https://doi.org/10.1109/JSAIT.2025.3570832), [arXiv](https://arxiv.org/abs/2408.12752)) | one-qubit codes with a transversal `T`, built by doubling self-dual and quadratic-residue CSS codes: all fifteen codes of each of the paper's two tables, `[[15,1,3]]` to `[[3239,1,31]]`, rebuilt from the paper's construction in [`transversal_t_codes/`](transversal_t_codes/). 25 new classes, with the paper's distances as certificates. Not counted as an AI discovery | `Jain-Albert doubling: weak triply even family`, `Jain-Albert doubling: triorthogonal family` |
 | **Literature** | published protocols: Bravyi & Kitaev, Bravyi & Haah, Eastin, Jones, Campbell & Howard, Nezami & Haah, Haah & Hastings, Jacinto et al., Gong et al., and others | cited in the row's `citations`, linked to the DOI or arXiv page |
 | **Community contributions** | protocols from outside authors, verified here; a class new to the catalogue is cited to its contributor | `community contribution` |
 
@@ -135,16 +135,18 @@ length and high distance*, IEEE JSAIT 6, 127 (2025),
 with a transversal `T` gate up to distance 31. The paper prints their
 parameters, not their matrices.
 [`transversal_t_codes/build_codes.py`](transversal_t_codes/build_codes.py)
-builds every code the paper's construction allows from the classical codes it
-names, and writes each one as a factory. Seventeen codes are built, fifteen
-of them new to the catalogue.
+builds every code of both of its tables from the classical codes it names,
+and writes each one as a factory. That is 27 codes, 25 of them new to the
+catalogue.
 
 The catalogue's fault sweep proves only a floor at these lengths. So each row
 also carries the paper's distance as a certified lower bound (`d_certified`),
 and an explicit fault of exactly that weight (`d_upper`), which together pin
-the distance. Ten codes of the paper's triorthogonal table are not built: they
-depend on a self-dual `[70,35,14]` code, and the code the paper cites is only
-formally self-dual. See
+the distance. Ten of the triorthogonal codes need a `[[69,1,13]]` code. The
+paper takes it from a `[70,35,14]` code that is only formally self-dual.
+[`transversal_t_codes/search_sd70.py`](transversal_t_codes/search_sd70.py)
+found a self-dual `[70,35,12]` code whose words through one coordinate all
+weigh at least 14, which is enough. See
 [`transversal_t_codes/README.md`](transversal_t_codes/README.md).
 
 ## Context for AI agents: `agent_context/`

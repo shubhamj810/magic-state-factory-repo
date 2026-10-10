@@ -6,7 +6,7 @@ nothing here, run [`merge_results.py`](merge_results.py) instead.
 Every row is re-checked against its own columns by
 [`verify_catalog.py`](verify_catalog.py).
 
-**1017 distinct `(n, k, d, GL(k,2) gate)` classes**, every one with an
+**1027 distinct `(n, k, d, GL(k,2) gate)` classes**, every one with an
 explicit circuit whose gate, check parities, distance, output width,
 freedom from spectator and pseudo-outputs, freedom from check wires
 that carry no syndrome bit of their own, and — where those are
@@ -41,7 +41,7 @@ witness are different kinds of statement.
 | `borrowed-identity search: two-group` (165 rows) | found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum |
 | `borrowed-identity search: symmetry-free` (14 rows) | found by the symmetry-free, targeted-output borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/), which solves for the check couplings of a chosen output; a verified witness, not a maximum |
 | `Jain-Albert doubling: weak triply even family` (13 rows) | a code of the weak triply even family of Jain and Albert (arXiv:2408.12752, Table II; transversal_t_codes/): quadratic-residue CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction, where T on some qubits and T-dagger on the rest is a logical T; a verified witness, not a maximum |
-| `Jain-Albert doubling: triorthogonal family` (2 rows) | a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum |
+| `Jain-Albert doubling: triorthogonal family` (12 rows) | a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum |
 
 A **class** is `(n, k, d, gate)` with the gate taken up to an invertible
 change of the output basis (a CNOT frame, `GL(k,2)`) and diagonal Clifford
@@ -57,7 +57,7 @@ the retained circuit is the one with the fewest ambient qubits. `regimes`
 therefore tells you the strongest claim available for that class.
 
 `discovery` says whether a class is **found only by AI search**: **633** rows are
-`AI search` — found only by AI search campaigns — and **384** are
+`AI search` — found only by AI search campaigns — and **394** are
 `pre-existing` — a classification stage run in this repository, the
 symmetry-SAT search, the borrowed-identity searches or a community
 contribution has them, or the length-54 classification alone does. A
@@ -77,8 +77,8 @@ nothing about them.
 
 ## Summary
 
-- output widths: `k=1`: 75, `k=2`: 89, `k=3`: 106, `k=4`: 110, `k=5`: 144, `k=6`: 124, `k=7`: 44, `k=8`: 25, `k=9`: 15, `k=10`: 13, `k=11`: 16, `k=12`: 21, `k=13`: 11, `k=14`: 10, `k=15`: 12, `k=16`: 11, `k=17`: 8, `k=18`: 2, `k=19`: 6, `k=20`: 2, `k=21`: 3, `k=22`: 1, `k=23`: 2, `k=24`: 1, `k=25`: 1, `k=26`: 4, `k=27`: 3, `k=28`: 6, `k=29`: 5, `k=30`: 2, `k=31`: 2, `k=32`: 2, `k=35`: 2, `k=36`: 4, `k=37`: 2, `k=39`: 1, `k=40`: 7, `k=41`: 6, `k=42`: 4, `k=43`: 4, `k=44`: 2, `k=46`: 2, `k=47`: 1, `k=59`: 1, `k=64`: 1, `k=65`: 1, `k=68`: 1, `k=70`: 3, `k=71`: 2, `k=72`: 1, `k=73`: 2, `k=76`: 1, `k=77`: 1, `k=80`: 5, `k=81`: 4, `k=82`: 2, `k=83`: 1, `k=84`: 2, `k=85`: 2, `k=86`: 2, `k=87`: 2, `k=88`: 2, `k=89`: 2, `k=92`: 1, `k=94`: 1, `k=99`: 1, `k=100`: 4, `k=101`: 3, `k=102`: 2, `k=104`: 1, `k=112`: 1, `k=113`: 1, `k=114`: 1, `k=115`: 1, `k=116`: 2, `k=117`: 1, `k=118`: 1, `k=119`: 1, `k=120`: 1, `k=122`: 3, `k=123`: 1, `k=124`: 2, `k=126`: 4, `k=128`: 7, `k=132`: 2, `k=137`: 1, `k=144`: 1, `k=145`: 1, `k=146`: 1, `k=152`: 1, `k=153`: 1, `k=154`: 1, `k=161`: 1, `k=162`: 2, `k=171`: 1, `k=176`: 1, `k=177`: 1, `k=184`: 1, `k=185`: 1, `k=189`: 1, `k=194`: 1, `k=197`: 1, `k=199`: 1, `k=201`: 1, `k=210`: 1, `k=224`: 1, `k=287`: 1, `k=365`: 1, `k=372`: 1, `k=373`: 1
-- distances: `d=2`: 181, `d=3`: 623, `d=4`: 86, `d=5`: 70, `d=6`: 47, `d=7`: 10 (977 pinned exactly, the rest proved floors)
+- output widths: `k=1`: 85, `k=2`: 89, `k=3`: 106, `k=4`: 110, `k=5`: 144, `k=6`: 124, `k=7`: 44, `k=8`: 25, `k=9`: 15, `k=10`: 13, `k=11`: 16, `k=12`: 21, `k=13`: 11, `k=14`: 10, `k=15`: 12, `k=16`: 11, `k=17`: 8, `k=18`: 2, `k=19`: 6, `k=20`: 2, `k=21`: 3, `k=22`: 1, `k=23`: 2, `k=24`: 1, `k=25`: 1, `k=26`: 4, `k=27`: 3, `k=28`: 6, `k=29`: 5, `k=30`: 2, `k=31`: 2, `k=32`: 2, `k=35`: 2, `k=36`: 4, `k=37`: 2, `k=39`: 1, `k=40`: 7, `k=41`: 6, `k=42`: 4, `k=43`: 4, `k=44`: 2, `k=46`: 2, `k=47`: 1, `k=59`: 1, `k=64`: 1, `k=65`: 1, `k=68`: 1, `k=70`: 3, `k=71`: 2, `k=72`: 1, `k=73`: 2, `k=76`: 1, `k=77`: 1, `k=80`: 5, `k=81`: 4, `k=82`: 2, `k=83`: 1, `k=84`: 2, `k=85`: 2, `k=86`: 2, `k=87`: 2, `k=88`: 2, `k=89`: 2, `k=92`: 1, `k=94`: 1, `k=99`: 1, `k=100`: 4, `k=101`: 3, `k=102`: 2, `k=104`: 1, `k=112`: 1, `k=113`: 1, `k=114`: 1, `k=115`: 1, `k=116`: 2, `k=117`: 1, `k=118`: 1, `k=119`: 1, `k=120`: 1, `k=122`: 3, `k=123`: 1, `k=124`: 2, `k=126`: 4, `k=128`: 7, `k=132`: 2, `k=137`: 1, `k=144`: 1, `k=145`: 1, `k=146`: 1, `k=152`: 1, `k=153`: 1, `k=154`: 1, `k=161`: 1, `k=162`: 2, `k=171`: 1, `k=176`: 1, `k=177`: 1, `k=184`: 1, `k=185`: 1, `k=189`: 1, `k=194`: 1, `k=197`: 1, `k=199`: 1, `k=201`: 1, `k=210`: 1, `k=224`: 1, `k=287`: 1, `k=365`: 1, `k=372`: 1, `k=373`: 1
+- distances: `d=2`: 181, `d=3`: 629, `d=4`: 86, `d=5`: 70, `d=6`: 51, `d=7`: 10 (977 pinned exactly, the rest proved floors)
 - exact minimal T-count reaches **17** (369 rows are too wide for it to be computed)
 - injection counts from `n=8` to `n=3239`
 
@@ -943,188 +943,198 @@ entries are under [References](#references).
 | 833 | `408.104.3.a` | `[[408,104,3]]` | — | 115 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 834 | `409.101.3.a` | `[[409,101,3]]` | — | 114 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): contraction of an existing code | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 835 | `410.100.3.a` | `[[410,100,3]]` | — | 114 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): contraction of an existing code | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 836 | `426.80.4.a` | `[[426,80,4]]` | — | 99 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 837 | `427.81.4.a` | `[[427,81,4]]` | — | 100 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 838 | `427.85.3.a` | `[[427,85,3]]` | — | 115 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 839 | `428.80.4.a` | `[[428,80,4]]` | — | 100 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): contraction of an existing code | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 840 | `428.82.4.a` | `[[428,82,4]]` | — | 101 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 841 | `429.81.4.a` | `[[429,81,4]]` | — | 101 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): contraction of an existing code | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 842 | `429.83.4.a` | `[[429,83,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 843 | `430.80.4.a` | `[[430,80,4]]` | — | 101 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): contraction of an existing code | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 844 | `430.82.4.a` | `[[430,82,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 845 | `431.81.4.a` | `[[431,81,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 846 | `432.80.4.a` | `[[432,80,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 847 | `441.1.6.a` | `[[441,1,≥6]]` | ≥13 | 114 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 848 | `441.5.2.a` | `[[441,5,2]]` | — | 11 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 849 | `460.116.3.a` | `[[460,116,3]]` | — | 128 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 850 | `495.99.3.a` | `[[495,99,3]]` | — | 118 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 851 | `496.16.6.a` | `[[496,16,6]]` | — | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | T-powers | AI search | AI search: pure-T puncture caps | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 852 | `496.36.4.a` | `[[496,36,4]]` | — | 47 | `0,1,2+0,1,7+0,1,8+0,1,9+0,1,11+0,1,12…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 853 | `502.92.3.a` | `[[502,92,3]]` | — | 117 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 854 | `504.3.2.a` | `[[504,3,2]]` | — | 9 | `012` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 855 | `504.4.2.a` | `[[504,4,2]]` | — | 10 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 856 | `508.2.2.a` | `[[508,2,2]]` | — | 9 | `01` | 3 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 857 | `508.3.2.a` | `[[508,3,2]]` | — | 10 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 858 | `508.132.3.a` | `[[508,132,3]]` | — | 143 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 859 | `509.3.2.a` | `[[509,3,2]]` | — | 11 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 860 | `510.1.2.a` | `[[510,1,2]]` | — | 9 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 861 | `510.2.2.a` | `[[510,2,2]]` | — | 10 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 862 | `511.1.3.a` | `[[511,1,3]]` | — | 10 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 863 | `511.1.5.a` | `[[511,1,5]]` | — | 19 | `0` | 1 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 864 | `511.2.5.a` | `[[511,2,5]]` | — | 20 | `0+1` | 2 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 865 | `511.3.5.a` | `[[511,3,5]]` | — | 21 | `0+1+2` | 3 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 866 | `511.4.5.a` | `[[511,4,5]]` | — | 22 | `0+1+2+3` | 4 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 867 | `511.5.5.a` | `[[511,5,5]]` | — | 23 | `0+1+2+3+4` | 5 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 868 | `511.6.5.a` | `[[511,6,5]]` | — | 24 | `0+1+2+3+4+5` | 6 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 869 | `511.7.5.a` | `[[511,7,5]]` | — | 25 | `0+1+2+3+4+5+6` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 870 | `511.8.5.a` | `[[511,8,5]]` | — | 26 | `0+1+2+3+4+5+6+7` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 871 | `511.9.5.a` | `[[511,9,5]]` | — | 27 | `0+1+2+3+4+5+6+7+8` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 872 | `511.9.6.a` | `[[511,9,≥6]]` | — | 36 | `0+1+2+3+4+5+6+7+8` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 873 | `511.10.5.a` | `[[511,10,5]]` | — | 28 | `0+1+2+3+4+5+6+7+8+9` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 874 | `511.11.5.a` | `[[511,11,5]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 875 | `511.12.5.a` | `[[511,12,5]]` | — | 30 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 876 | `511.13.5.a` | `[[511,13,5]]` | — | 31 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 877 | `511.14.5.a` | `[[511,14,5]]` | — | 32 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 878 | `511.15.5.a` | `[[511,15,5]]` | — | 33 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+0,…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 879 | `511.15.5.b` | `[[511,15,5]]` | — | 33 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 880 | `511.16.5.a` | `[[511,16,5]]` | — | 34 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 881 | `511.17.5.a` | `[[511,17,5]]` | — | 35 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 882 | `511.81.3.a` | `[[511,81,3]]` | — | 90 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: pure-T width campaign n=255, 511 | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 883 | `511.85.3.a` | `[[511,85,3]]` | — | 94 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: full-simplex pure-T frames | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 884 | `511.89.3.a` | `[[511,89,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: full-simplex pure-T frames | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 885 | `512.39.6.a` | `[[512,39,≥6]]` | — | 85 | `0,1,2+3,4,5+6,7,8+9,10,11+12,13,14+15…` | — | — | none | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 886 | `512.84.6.a` | `[[512,84,≥6]]` | — | 130 | `0,64,83+0,65,82+0,66,81+0,67,80+0,68,…` | — | — | none | AI search | AI search | [Rengaswamy et al. (2020)](https://doi.org/10.1109/JSAIT.2020.3012914); [Vuillot & Breuckmann (2022)](https://doi.org/10.1109/TIT.2022.3170846) |
-| 887 | `516.6.2.a` | `[[516,6,2]]` | — | 11 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 888 | `522.5.2.a` | `[[522,5,2]]` | — | 11 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 889 | `524.4.2.a` | `[[524,4,2]]` | — | 11 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 890 | `525.3.2.a` | `[[525,3,2]]` | — | 11 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 891 | `526.2.2.a` | `[[526,2,2]]` | — | 11 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 892 | `527.1.3.a` | `[[527,1,3]]` | — | 11 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 893 | `558.146.3.a` | `[[558,146,3]]` | — | 158 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 894 | `567.4.2.a` | `[[567,4,2]]` | — | 10 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 895 | `568.4.2.a` | `[[568,4,2]]` | — | 11 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 896 | `599.1.6.a` | `[[599,1,≥6]]` | ≥15 | 154 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 897 | `606.162.3.a` | `[[606,162,3]]` | — | 174 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 898 | `635.3.2.a` | `[[635,3,2]]` | — | 10 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 899 | `635.4.2.a` | `[[635,4,2]]` | — | 11 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 900 | `636.3.2.a` | `[[636,3,2]]` | — | 11 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 901 | `655.177.3.a` | `[[655,177,3]]` | — | 189 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 902 | `660.7.2.a` | `[[660,7,2]]` | — | 11 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 903 | `679.185.3.a` | `[[679,185,3]]` | — | 197 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 904 | `682.6.2.a` | `[[682,6,2]]` | — | 11 | `0+1+2+3+4+5+012+013+014+015+023+024+0…` | 6 | 2 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 905 | `684.132.3.a` | `[[684,132,3]]` | — | 168 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 906 | `691.189.3.a` | `[[691,189,3]]` | — | 201 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 907 | `693.5.2.a` | `[[693,5,2]]` | — | 11 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34` | 10 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 908 | `702.194.3.a` | `[[702,194,3]]` | — | 205 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 909 | `715.197.3.a` | `[[715,197,3]]` | — | 209 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 910 | `727.201.3.a` | `[[727,201,3]]` | — | 213 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 911 | `742.36.6.a` | `[[742,36,≥6]]` | ≥8 | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 912 | `750.210.3.a` | `[[750,210,3]]` | — | 221 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 913 | `756.32.6.a` | `[[756,32,≥6]]` | ≥9 | 80 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 914 | `762.4.2.a` | `[[762,4,2]]` | — | 11 | `01+02+03+12+13+23+012+013+023+123` | 5 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 915 | `765.2.2.a` | `[[765,2,2]]` | — | 10 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 916 | `766.2.2.a` | `[[766,2,2]]` | — | 11 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 917 | `800.224.3.a` | `[[800,224,3]]` | — | 237 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 918 | `805.1.6.a` | `[[805,1,≥6]]` | ≥17 | 206 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 919 | `825.199.3.a` | `[[825,199,3]]` | — | 237 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 920 | `846.122.6.a` | `[[846,122,6]]` | — | 161 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 921 | `848.122.6.a` | `[[848,122,6]]` | — | 162 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 922 | `850.126.6.a` | `[[850,126,6]]` | — | 165 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 923 | `850.128.6.a` | `[[850,128,6]]` | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 924 | `852.126.6.a` | `[[852,126,6]]` | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 925 | `852.128.6.a` | `[[852,128,6]]` | — | 167 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 926 | `854.124.6.a` | `[[854,124,6]]` | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 927 | `854.126.6.a` | `[[854,126,6]]` | — | 167 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 928 | `854.128.6.a` | `[[854,128,6]]` | — | 168 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 929 | `856.128.6.a` | `[[856,128,6]]` | — | 169 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 930 | `858.128.6.a` | `[[858,128,6]]` | — | 170 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 931 | `860.124.6.a` | `[[860,124,6]]` | — | 169 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 932 | `860.126.6.a` | `[[860,126,6]]` | — | 170 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 933 | `860.128.6.a` | `[[860,128,6]]` | — | 171 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 934 | `862.162.3.a` | `[[862,162,3]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 935 | `863.161.3.a` | `[[863,161,3]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 936 | `870.154.4.a` | `[[870,154,4]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 937 | `871.153.4.a` | `[[871,153,4]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 938 | `872.152.4.a` | `[[872,152,4]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 939 | `879.145.5.a` | `[[879,145,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 940 | `880.144.5.a` | `[[880,144,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 941 | `880.176.3.a` | `[[880,176,3]]` | — | 209 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 942 | `887.137.5.a` | `[[887,137,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 943 | `896.128.6.a` | `[[896,128,6]]` | — | 189 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 944 | `901.123.6.a` | `[[901,123,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): punctured Reed-Muller code | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 945 | `902.122.6.a` | `[[902,122,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 946 | `904.120.6.a` | `[[904,120,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 947 | `905.119.6.a` | `[[905,119,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 948 | `906.118.6.a` | `[[906,118,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 949 | `907.117.6.a` | `[[907,117,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 950 | `908.116.6.a` | `[[908,116,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 951 | `909.115.6.a` | `[[909,115,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 952 | `909.171.3.a` | `[[909,171,3]]` | — | 225 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 953 | `910.114.6.a` | `[[910,114,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 954 | `911.113.6.a` | `[[911,113,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 955 | `912.112.6.a` | `[[912,112,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 956 | `935.89.6.a` | `[[935,89,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 957 | `936.88.6.a` | `[[936,88,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 958 | `937.87.6.a` | `[[937,87,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
-| 959 | `959.65.6.a` | `[[959,65,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 960 | `960.184.3.a` | `[[960,184,3]]` | — | 212 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 961 | `988.36.6.a` | `[[988,36,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 962 | `998.26.6.a` | `[[998,26,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 963 | `1011.1.6.a` | `[[1011,1,≥6]]` | ≥19 | 258 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 964 | `1016.3.2.a` | `[[1016,3,2]]` | — | 10 | `012` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 965 | `1016.4.2.a` | `[[1016,4,2]]` | — | 11 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 966 | `1020.2.2.a` | `[[1020,2,2]]` | — | 10 | `01` | 3 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 967 | `1020.3.2.a` | `[[1020,3,2]]` | — | 11 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 968 | `1022.1.2.a` | `[[1022,1,2]]` | — | 10 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 969 | `1022.2.2.a` | `[[1022,2,2]]` | — | 11 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 970 | `1023.1.3.a` | `[[1023,1,3]]` | — | 11 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 971 | `1023.1.5.a` | `[[1023,1,5]]` | — | 21 | `0` | 1 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 972 | `1023.2.5.a` | `[[1023,2,5]]` | — | 22 | `0+1` | 2 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 973 | `1023.3.5.a` | `[[1023,3,5]]` | — | 23 | `0+1+2` | 3 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 974 | `1023.4.5.a` | `[[1023,4,5]]` | — | 24 | `0+1+2+3` | 4 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 975 | `1023.5.5.a` | `[[1023,5,5]]` | — | 25 | `0+1+2+3+4` | 5 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 976 | `1023.6.5.a` | `[[1023,6,5]]` | — | 26 | `0+1+2+3+4+5` | 6 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 977 | `1023.7.5.a` | `[[1023,7,5]]` | — | 27 | `0+1+2+3+4+5+6` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 978 | `1023.8.5.a` | `[[1023,8,5]]` | — | 28 | `0+1+2+3+4+5+6+7` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 979 | `1023.9.5.a` | `[[1023,9,5]]` | — | 29 | `0+1+2+3+4+5+6+7+8` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 980 | `1023.10.5.a` | `[[1023,10,5]]` | — | 30 | `0+1+2+3+4+5+6+7+8+9` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 981 | `1023.11.5.a` | `[[1023,11,5]]` | — | 31 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 982 | `1023.12.5.a` | `[[1023,12,5]]` | — | 32 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 983 | `1023.13.5.a` | `[[1023,13,5]]` | — | 33 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 984 | `1023.14.5.a` | `[[1023,14,5]]` | — | 34 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 985 | `1023.15.5.a` | `[[1023,15,5]]` | — | 35 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 986 | `1023.16.5.a` | `[[1023,16,5]]` | — | 36 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 987 | `1023.17.5.a` | `[[1023,17,5]]` | — | 37 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 988 | `1023.18.5.a` | `[[1023,18,5]]` | — | 38 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 989 | `1023.19.5.a` | `[[1023,19,5]]` | — | 39 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 990 | `1023.20.5.a` | `[[1023,20,5]]` | — | 40 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 991 | `1023.21.5.a` | `[[1023,21,5]]` | — | 41 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 992 | `1023.22.5.a` | `[[1023,22,5]]` | — | 42 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 993 | `1023.23.5.a` | `[[1023,23,5]]` | — | 43 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 994 | `1023.24.5.a` | `[[1023,24,5]]` | — | 44 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 995 | `1023.25.5.a` | `[[1023,25,5]]` | — | 45 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 996 | `1023.26.5.a` | `[[1023,26,5]]` | — | 46 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 997 | `1023.27.5.a` | `[[1023,27,5]]` | — | 47 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 998 | `1023.28.5.a` | `[[1023,28,5]]` | — | 48 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 999 | `1023.29.5.a` | `[[1023,29,5]]` | — | 49 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1000 | `1023.30.5.a` | `[[1023,30,5]]` | — | 50 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1001 | `1023.31.5.a` | `[[1023,31,5]]` | — | 51 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1002 | `1143.4.2.a` | `[[1143,4,2]]` | — | 11 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1003 | `1275.3.2.a` | `[[1275,3,2]]` | — | 11 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1004 | `1345.1.3.a` | `[[1345,1,≥3]]` | ≥21 | 342 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 1005 | `1533.2.2.a` | `[[1533,2,2]]` | — | 11 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1006 | `1675.373.3.a` | `[[1675,373,≥3]]` | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1007 | `1676.372.3.a` | `[[1676,372,≥3]]` | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1008 | `1679.1.3.a` | `[[1679,1,≥3]]` | ≥23 | 426 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 1009 | `1683.365.3.a` | `[[1683,365,≥3]]` | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1010 | `1715.287.3.a` | `[[1715,287,≥3]]` | 6 | 329 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1011 | `2040.3.2.a` | `[[2040,3,2]]` | — | 11 | `012` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1012 | `2044.2.2.a` | `[[2044,2,2]]` | — | 11 | `01` | 3 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1013 | `2046.1.2.a` | `[[2046,1,2]]` | — | 11 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1014 | `2061.1.3.a` | `[[2061,1,≥3]]` | ≥25 | 522 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 1015 | `2443.1.3.a` | `[[2443,1,≥3]]` | ≥27 | 618 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 1016 | `2841.1.3.a` | `[[2841,1,≥3]]` | ≥29 | 718 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 1017 | `3239.1.3.a` | `[[3239,1,≥3]]` | ≥31 | 818 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 836 | `417.1.6.a` | `[[417,1,≥6]]` | ≥13 | 108 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 837 | `426.80.4.a` | `[[426,80,4]]` | — | 99 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 838 | `427.81.4.a` | `[[427,81,4]]` | — | 100 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 839 | `427.85.3.a` | `[[427,85,3]]` | — | 115 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 840 | `428.80.4.a` | `[[428,80,4]]` | — | 100 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): contraction of an existing code | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 841 | `428.82.4.a` | `[[428,82,4]]` | — | 101 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 842 | `429.81.4.a` | `[[429,81,4]]` | — | 101 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): contraction of an existing code | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 843 | `429.83.4.a` | `[[429,83,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 844 | `430.80.4.a` | `[[430,80,4]]` | — | 101 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): contraction of an existing code | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 845 | `430.82.4.a` | `[[430,82,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 846 | `431.81.4.a` | `[[431,81,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 847 | `432.80.4.a` | `[[432,80,4]]` | — | 102 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 848 | `441.1.6.a` | `[[441,1,≥6]]` | ≥13 | 114 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 849 | `441.5.2.a` | `[[441,5,2]]` | — | 11 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 850 | `460.116.3.a` | `[[460,116,3]]` | — | 128 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 851 | `495.99.3.a` | `[[495,99,3]]` | — | 118 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 852 | `496.16.6.a` | `[[496,16,6]]` | — | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | T-powers | AI search | AI search: pure-T puncture caps | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 853 | `496.36.4.a` | `[[496,36,4]]` | — | 47 | `0,1,2+0,1,7+0,1,8+0,1,9+0,1,11+0,1,12…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 854 | `502.92.3.a` | `[[502,92,3]]` | — | 117 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 855 | `504.3.2.a` | `[[504,3,2]]` | — | 9 | `012` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 856 | `504.4.2.a` | `[[504,4,2]]` | — | 10 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 857 | `508.2.2.a` | `[[508,2,2]]` | — | 9 | `01` | 3 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 858 | `508.3.2.a` | `[[508,3,2]]` | — | 10 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 859 | `508.132.3.a` | `[[508,132,3]]` | — | 143 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 860 | `509.3.2.a` | `[[509,3,2]]` | — | 11 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 861 | `510.1.2.a` | `[[510,1,2]]` | — | 9 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 862 | `510.2.2.a` | `[[510,2,2]]` | — | 10 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 863 | `511.1.3.a` | `[[511,1,3]]` | — | 10 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 864 | `511.1.5.a` | `[[511,1,5]]` | — | 19 | `0` | 1 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 865 | `511.2.5.a` | `[[511,2,5]]` | — | 20 | `0+1` | 2 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 866 | `511.3.5.a` | `[[511,3,5]]` | — | 21 | `0+1+2` | 3 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 867 | `511.4.5.a` | `[[511,4,5]]` | — | 22 | `0+1+2+3` | 4 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 868 | `511.5.5.a` | `[[511,5,5]]` | — | 23 | `0+1+2+3+4` | 5 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 869 | `511.6.5.a` | `[[511,6,5]]` | — | 24 | `0+1+2+3+4+5` | 6 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 870 | `511.7.5.a` | `[[511,7,5]]` | — | 25 | `0+1+2+3+4+5+6` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 871 | `511.8.5.a` | `[[511,8,5]]` | — | 26 | `0+1+2+3+4+5+6+7` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 872 | `511.9.5.a` | `[[511,9,5]]` | — | 27 | `0+1+2+3+4+5+6+7+8` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 873 | `511.9.6.a` | `[[511,9,≥6]]` | — | 36 | `0+1+2+3+4+5+6+7+8` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 874 | `511.10.5.a` | `[[511,10,5]]` | — | 28 | `0+1+2+3+4+5+6+7+8+9` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 875 | `511.11.5.a` | `[[511,11,5]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 876 | `511.12.5.a` | `[[511,12,5]]` | — | 30 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 877 | `511.13.5.a` | `[[511,13,5]]` | — | 31 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 878 | `511.14.5.a` | `[[511,14,5]]` | — | 32 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 879 | `511.15.5.a` | `[[511,15,5]]` | — | 33 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+0,…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 880 | `511.15.5.b` | `[[511,15,5]]` | — | 33 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 881 | `511.16.5.a` | `[[511,16,5]]` | — | 34 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 882 | `511.17.5.a` | `[[511,17,5]]` | — | 35 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 883 | `511.81.3.a` | `[[511,81,3]]` | — | 90 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: pure-T width campaign n=255, 511 | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 884 | `511.85.3.a` | `[[511,85,3]]` | — | 94 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: full-simplex pure-T frames | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 885 | `511.89.3.a` | `[[511,89,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: full-simplex pure-T frames | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 886 | `512.39.6.a` | `[[512,39,≥6]]` | — | 85 | `0,1,2+3,4,5+6,7,8+9,10,11+12,13,14+15…` | — | — | none | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 887 | `512.84.6.a` | `[[512,84,≥6]]` | — | 130 | `0,64,83+0,65,82+0,66,81+0,67,80+0,68,…` | — | — | none | AI search | AI search | [Rengaswamy et al. (2020)](https://doi.org/10.1109/JSAIT.2020.3012914); [Vuillot & Breuckmann (2022)](https://doi.org/10.1109/TIT.2022.3170846) |
+| 888 | `516.6.2.a` | `[[516,6,2]]` | — | 11 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 889 | `522.5.2.a` | `[[522,5,2]]` | — | 11 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 890 | `524.4.2.a` | `[[524,4,2]]` | — | 11 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 891 | `525.3.2.a` | `[[525,3,2]]` | — | 11 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 892 | `526.2.2.a` | `[[526,2,2]]` | — | 11 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 893 | `527.1.3.a` | `[[527,1,3]]` | — | 11 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 894 | `558.146.3.a` | `[[558,146,3]]` | — | 158 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 895 | `567.4.2.a` | `[[567,4,2]]` | — | 10 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 896 | `568.4.2.a` | `[[568,4,2]]` | — | 11 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 897 | `575.1.6.a` | `[[575,1,≥6]]` | ≥15 | 148 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 898 | `599.1.6.a` | `[[599,1,≥6]]` | ≥15 | 154 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 899 | `606.162.3.a` | `[[606,162,3]]` | — | 174 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 900 | `635.3.2.a` | `[[635,3,2]]` | — | 10 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 901 | `635.4.2.a` | `[[635,4,2]]` | — | 11 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 902 | `636.3.2.a` | `[[636,3,2]]` | — | 11 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 903 | `655.177.3.a` | `[[655,177,3]]` | — | 189 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 904 | `660.7.2.a` | `[[660,7,2]]` | — | 11 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 905 | `679.185.3.a` | `[[679,185,3]]` | — | 197 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 906 | `682.6.2.a` | `[[682,6,2]]` | — | 11 | `0+1+2+3+4+5+012+013+014+015+023+024+0…` | 6 | 2 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 907 | `684.132.3.a` | `[[684,132,3]]` | — | 168 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 908 | `691.189.3.a` | `[[691,189,3]]` | — | 201 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 909 | `693.5.2.a` | `[[693,5,2]]` | — | 11 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34` | 10 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 910 | `702.194.3.a` | `[[702,194,3]]` | — | 205 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 911 | `715.197.3.a` | `[[715,197,3]]` | — | 209 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 912 | `727.201.3.a` | `[[727,201,3]]` | — | 213 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 913 | `742.36.6.a` | `[[742,36,≥6]]` | ≥8 | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 914 | `750.210.3.a` | `[[750,210,3]]` | — | 221 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 915 | `756.32.6.a` | `[[756,32,≥6]]` | ≥9 | 80 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 916 | `762.4.2.a` | `[[762,4,2]]` | — | 11 | `01+02+03+12+13+23+012+013+023+123` | 5 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 917 | `765.2.2.a` | `[[765,2,2]]` | — | 10 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 918 | `766.2.2.a` | `[[766,2,2]]` | — | 11 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 919 | `777.1.6.a` | `[[777,1,≥6]]` | ≥17 | 199 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 920 | `800.224.3.a` | `[[800,224,3]]` | — | 237 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 921 | `805.1.6.a` | `[[805,1,≥6]]` | ≥17 | 206 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 922 | `825.199.3.a` | `[[825,199,3]]` | — | 237 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 923 | `846.122.6.a` | `[[846,122,6]]` | — | 161 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 924 | `848.122.6.a` | `[[848,122,6]]` | — | 162 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 925 | `850.126.6.a` | `[[850,126,6]]` | — | 165 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 926 | `850.128.6.a` | `[[850,128,6]]` | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 927 | `852.126.6.a` | `[[852,126,6]]` | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 928 | `852.128.6.a` | `[[852,128,6]]` | — | 167 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 929 | `854.124.6.a` | `[[854,124,6]]` | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 930 | `854.126.6.a` | `[[854,126,6]]` | — | 167 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 931 | `854.128.6.a` | `[[854,128,6]]` | — | 168 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 932 | `856.128.6.a` | `[[856,128,6]]` | — | 169 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 933 | `858.128.6.a` | `[[858,128,6]]` | — | 170 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 934 | `860.124.6.a` | `[[860,124,6]]` | — | 169 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 935 | `860.126.6.a` | `[[860,126,6]]` | — | 170 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 936 | `860.128.6.a` | `[[860,128,6]]` | — | 171 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 937 | `862.162.3.a` | `[[862,162,3]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 938 | `863.161.3.a` | `[[863,161,3]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 939 | `870.154.4.a` | `[[870,154,4]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 940 | `871.153.4.a` | `[[871,153,4]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 941 | `872.152.4.a` | `[[872,152,4]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 942 | `879.145.5.a` | `[[879,145,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 943 | `880.144.5.a` | `[[880,144,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 944 | `880.176.3.a` | `[[880,176,3]]` | — | 209 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 945 | `887.137.5.a` | `[[887,137,5]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 946 | `896.128.6.a` | `[[896,128,6]]` | — | 189 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 947 | `901.123.6.a` | `[[901,123,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): punctured Reed-Muller code | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 948 | `902.122.6.a` | `[[902,122,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 949 | `904.120.6.a` | `[[904,120,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 950 | `905.119.6.a` | `[[905,119,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 951 | `906.118.6.a` | `[[906,118,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 952 | `907.117.6.a` | `[[907,117,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 953 | `908.116.6.a` | `[[908,116,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 954 | `909.115.6.a` | `[[909,115,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 955 | `909.171.3.a` | `[[909,171,3]]` | — | 225 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 956 | `910.114.6.a` | `[[910,114,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 957 | `911.113.6.a` | `[[911,113,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 958 | `912.112.6.a` | `[[912,112,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 959 | `935.89.6.a` | `[[935,89,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 960 | `936.88.6.a` | `[[936,88,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 961 | `937.87.6.a` | `[[937,87,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 962 | `959.65.6.a` | `[[959,65,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 963 | `960.184.3.a` | `[[960,184,3]]` | — | 212 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 964 | `983.1.6.a` | `[[983,1,≥6]]` | ≥19 | 251 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 965 | `988.36.6.a` | `[[988,36,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 966 | `998.26.6.a` | `[[998,26,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 967 | `1011.1.6.a` | `[[1011,1,≥6]]` | ≥19 | 258 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 968 | `1016.3.2.a` | `[[1016,3,2]]` | — | 10 | `012` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 969 | `1016.4.2.a` | `[[1016,4,2]]` | — | 11 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 970 | `1020.2.2.a` | `[[1020,2,2]]` | — | 10 | `01` | 3 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 971 | `1020.3.2.a` | `[[1020,3,2]]` | — | 11 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 972 | `1022.1.2.a` | `[[1022,1,2]]` | — | 10 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 973 | `1022.2.2.a` | `[[1022,2,2]]` | — | 11 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 974 | `1023.1.3.a` | `[[1023,1,3]]` | — | 11 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 975 | `1023.1.5.a` | `[[1023,1,5]]` | — | 21 | `0` | 1 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 976 | `1023.2.5.a` | `[[1023,2,5]]` | — | 22 | `0+1` | 2 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 977 | `1023.3.5.a` | `[[1023,3,5]]` | — | 23 | `0+1+2` | 3 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 978 | `1023.4.5.a` | `[[1023,4,5]]` | — | 24 | `0+1+2+3` | 4 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 979 | `1023.5.5.a` | `[[1023,5,5]]` | — | 25 | `0+1+2+3+4` | 5 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 980 | `1023.6.5.a` | `[[1023,6,5]]` | — | 26 | `0+1+2+3+4+5` | 6 | 1 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 981 | `1023.7.5.a` | `[[1023,7,5]]` | — | 27 | `0+1+2+3+4+5+6` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 982 | `1023.8.5.a` | `[[1023,8,5]]` | — | 28 | `0+1+2+3+4+5+6+7` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 983 | `1023.9.5.a` | `[[1023,9,5]]` | — | 29 | `0+1+2+3+4+5+6+7+8` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 984 | `1023.10.5.a` | `[[1023,10,5]]` | — | 30 | `0+1+2+3+4+5+6+7+8+9` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 985 | `1023.11.5.a` | `[[1023,11,5]]` | — | 31 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 986 | `1023.12.5.a` | `[[1023,12,5]]` | — | 32 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 987 | `1023.13.5.a` | `[[1023,13,5]]` | — | 33 | `0+1+2+3+4+5+6+7+8+9+10+11+12` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 988 | `1023.14.5.a` | `[[1023,14,5]]` | — | 34 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 989 | `1023.15.5.a` | `[[1023,15,5]]` | — | 35 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 990 | `1023.16.5.a` | `[[1023,16,5]]` | — | 36 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 991 | `1023.17.5.a` | `[[1023,17,5]]` | — | 37 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 992 | `1023.18.5.a` | `[[1023,18,5]]` | — | 38 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 993 | `1023.19.5.a` | `[[1023,19,5]]` | — | 39 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 994 | `1023.20.5.a` | `[[1023,20,5]]` | — | 40 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 995 | `1023.21.5.a` | `[[1023,21,5]]` | — | 41 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 996 | `1023.22.5.a` | `[[1023,22,5]]` | — | 42 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 997 | `1023.23.5.a` | `[[1023,23,5]]` | — | 43 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 998 | `1023.24.5.a` | `[[1023,24,5]]` | — | 44 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 999 | `1023.25.5.a` | `[[1023,25,5]]` | — | 45 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1000 | `1023.26.5.a` | `[[1023,26,5]]` | — | 46 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1001 | `1023.27.5.a` | `[[1023,27,5]]` | — | 47 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1002 | `1023.28.5.a` | `[[1023,28,5]]` | — | 48 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1003 | `1023.29.5.a` | `[[1023,29,5]]` | — | 49 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1004 | `1023.30.5.a` | `[[1023,30,5]]` | — | 50 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1005 | `1023.31.5.a` | `[[1023,31,5]]` | — | 51 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1006 | `1143.4.2.a` | `[[1143,4,2]]` | — | 11 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1007 | `1275.3.2.a` | `[[1275,3,2]]` | — | 11 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1008 | `1317.1.3.a` | `[[1317,1,≥3]]` | ≥21 | 335 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1009 | `1345.1.3.a` | `[[1345,1,≥3]]` | ≥21 | 342 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1010 | `1533.2.2.a` | `[[1533,2,2]]` | — | 11 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1011 | `1651.1.3.a` | `[[1651,1,≥3]]` | ≥23 | 419 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1012 | `1675.373.3.a` | `[[1675,373,≥3]]` | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1013 | `1676.372.3.a` | `[[1676,372,≥3]]` | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1014 | `1679.1.3.a` | `[[1679,1,≥3]]` | ≥23 | 426 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1015 | `1683.365.3.a` | `[[1683,365,≥3]]` | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1016 | `1715.287.3.a` | `[[1715,287,≥3]]` | 6 | 329 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1017 | `2033.1.3.a` | `[[2033,1,≥3]]` | ≥25 | 515 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1018 | `2040.3.2.a` | `[[2040,3,2]]` | — | 11 | `012` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1019 | `2044.2.2.a` | `[[2044,2,2]]` | — | 11 | `01` | 3 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1020 | `2046.1.2.a` | `[[2046,1,2]]` | — | 11 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1021 | `2061.1.3.a` | `[[2061,1,≥3]]` | ≥25 | 522 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1022 | `2415.1.3.a` | `[[2415,1,≥3]]` | ≥27 | 611 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1023 | `2443.1.3.a` | `[[2443,1,≥3]]` | ≥27 | 618 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1024 | `2813.1.3.a` | `[[2813,1,≥3]]` | ≥29 | 711 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1025 | `2841.1.3.a` | `[[2841,1,≥3]]` | ≥29 | 718 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1026 | `3211.1.3.a` | `[[3211,1,≥3]]` | ≥31 | 811 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1027 | `3239.1.3.a` | `[[3239,1,≥3]]` | ≥31 | 818 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 
 ## Circuits
 
@@ -16628,7 +16638,22 @@ readable copy of exactly these rows.
 
 - 410 columns — see `master_catalog.json`, `factories[834]`
 
-### 836. `[[426,80,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79
+### 836. `[[417,1,≥6]]` — T0
+
+- output gate: `0`
+- `N = 108` (1 output + 107 checks), exact minimal T-count 1, reduced degree 1
+- distance: proved `6 <= d <= 13`; the upper bound is the fault on columns [0, 69, 138, 185, 232, 277, 322, 345, 368, 385, 402, 409, 416]
+- certified distance: `d >= 13`, from Jain and Albert (arXiv:2408.12752), Table I: [[69,1,13]] code of the self-dual [70,35,12] code SD70 doubled onto [[279,1,11]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 13, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not re-measured here
+- Clifford correction, every rotation a `T`: `Z on 12`, `Z on 13`, `Z on 14`, `Z on 15`, `Z on 16`, `Z on 17`, `Z on 18`, `Z on 19`, `Z on 20`, `Z on 21`, `Z on 22`, `Z on 23` and 56 more (35 single-wire, 33 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 2, 3, 4, 5, 6, 7, 11, 13, 14, 17, 18, 23 and 100 more, `T` on the rest
+- discovery: pre-existing
+- regime: Jain-Albert doubling: triorthogonal family — a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum
+- citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
+- source: `Jain-Albert doubling: triorthogonal family` · JA-417 (`[[69,1,13]] code of the self-dual [70,35,12] code SD70 doubled onto [[279,1,11]] (Table I)`)
+
+- 417 columns — see `master_catalog.json`, `factories[835]`
+
+### 837. `[[426,80,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79`
 - `N = 99` (80 outputs + 19 checks)
@@ -16642,9 +16667,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(80,2) and a punctured RM(80-4,80) coset, neither feasible at k=80
 - note (reduced degree): not computed: exact minimisation is over GL(80,2) and a punctured RM(80-4,80) coset, neither feasible at k=80
 
-- 426 columns — see `master_catalog.json`, `factories[835]`
+- 426 columns — see `master_catalog.json`, `factories[836]`
 
-### 837. `[[427,81,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80
+### 838. `[[427,81,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80`
 - `N = 100` (81 outputs + 19 checks)
@@ -16658,9 +16683,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(81,2) and a punctured RM(81-4,81) coset, neither feasible at k=81
 - note (reduced degree): not computed: exact minimisation is over GL(81,2) and a punctured RM(81-4,81) coset, neither feasible at k=81
 
-- 427 columns — see `master_catalog.json`, `factories[836]`
+- 427 columns — see `master_catalog.json`, `factories[837]`
 
-### 838. `[[427,85,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84
+### 839. `[[427,85,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84`
 - `N = 115` (85 outputs + 30 checks)
@@ -16674,9 +16699,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(85,2) and a punctured RM(85-4,85) coset, neither feasible at k=85
 - note (reduced degree): not computed: exact minimisation is over GL(85,2) and a punctured RM(85-4,85) coset, neither feasible at k=85
 
-- 427 columns — see `master_catalog.json`, `factories[837]`
+- 427 columns — see `master_catalog.json`, `factories[838]`
 
-### 839. `[[428,80,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79
+### 840. `[[428,80,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79`
 - `N = 100` (80 outputs + 20 checks)
@@ -16690,9 +16715,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(80,2) and a punctured RM(80-4,80) coset, neither feasible at k=80
 - note (reduced degree): not computed: exact minimisation is over GL(80,2) and a punctured RM(80-4,80) coset, neither feasible at k=80
 
-- 428 columns — see `master_catalog.json`, `factories[838]`
+- 428 columns — see `master_catalog.json`, `factories[839]`
 
-### 840. `[[428,82,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81
+### 841. `[[428,82,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81`
 - `N = 101` (82 outputs + 19 checks)
@@ -16706,9 +16731,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(82,2) and a punctured RM(82-4,82) coset, neither feasible at k=82
 - note (reduced degree): not computed: exact minimisation is over GL(82,2) and a punctured RM(82-4,82) coset, neither feasible at k=82
 
-- 428 columns — see `master_catalog.json`, `factories[839]`
+- 428 columns — see `master_catalog.json`, `factories[840]`
 
-### 841. `[[429,81,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80
+### 842. `[[429,81,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80`
 - `N = 101` (81 outputs + 20 checks)
@@ -16722,9 +16747,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(81,2) and a punctured RM(81-4,81) coset, neither feasible at k=81
 - note (reduced degree): not computed: exact minimisation is over GL(81,2) and a punctured RM(81-4,81) coset, neither feasible at k=81
 
-- 429 columns — see `master_catalog.json`, `factories[840]`
+- 429 columns — see `master_catalog.json`, `factories[841]`
 
-### 842. `[[429,83,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82
+### 843. `[[429,83,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82`
 - `N = 102` (83 outputs + 19 checks)
@@ -16738,9 +16763,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(83,2) and a punctured RM(83-4,83) coset, neither feasible at k=83
 - note (reduced degree): not computed: exact minimisation is over GL(83,2) and a punctured RM(83-4,83) coset, neither feasible at k=83
 
-- 429 columns — see `master_catalog.json`, `factories[841]`
+- 429 columns — see `master_catalog.json`, `factories[842]`
 
-### 843. `[[430,80,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79
+### 844. `[[430,80,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79`
 - `N = 101` (80 outputs + 21 checks)
@@ -16754,9 +16779,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(80,2) and a punctured RM(80-4,80) coset, neither feasible at k=80
 - note (reduced degree): not computed: exact minimisation is over GL(80,2) and a punctured RM(80-4,80) coset, neither feasible at k=80
 
-- 430 columns — see `master_catalog.json`, `factories[842]`
+- 430 columns — see `master_catalog.json`, `factories[843]`
 
-### 844. `[[430,82,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81
+### 845. `[[430,82,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81`
 - `N = 102` (82 outputs + 20 checks)
@@ -16770,9 +16795,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(82,2) and a punctured RM(82-4,82) coset, neither feasible at k=82
 - note (reduced degree): not computed: exact minimisation is over GL(82,2) and a punctured RM(82-4,82) coset, neither feasible at k=82
 
-- 430 columns — see `master_catalog.json`, `factories[843]`
+- 430 columns — see `master_catalog.json`, `factories[844]`
 
-### 845. `[[431,81,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80
+### 846. `[[431,81,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80`
 - `N = 102` (81 outputs + 21 checks)
@@ -16786,9 +16811,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(81,2) and a punctured RM(81-4,81) coset, neither feasible at k=81
 - note (reduced degree): not computed: exact minimisation is over GL(81,2) and a punctured RM(81-4,81) coset, neither feasible at k=81
 
-- 431 columns — see `master_catalog.json`, `factories[844]`
+- 431 columns — see `master_catalog.json`, `factories[845]`
 
-### 846. `[[432,80,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79
+### 847. `[[432,80,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79`
 - `N = 102` (80 outputs + 22 checks)
@@ -16802,9 +16827,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(80,2) and a punctured RM(80-4,80) coset, neither feasible at k=80
 - note (reduced degree): not computed: exact minimisation is over GL(80,2) and a punctured RM(80-4,80) coset, neither feasible at k=80
 
-- 432 columns — see `master_catalog.json`, `factories[845]`
+- 432 columns — see `master_catalog.json`, `factories[846]`
 
-### 847. `[[441,1,≥6]]` — T0
+### 848. `[[441,1,≥6]]` — T0
 
 - output gate: `0`
 - `N = 114` (1 output + 113 checks), exact minimal T-count 1, reduced degree 1
@@ -16817,9 +16842,9 @@ readable copy of exactly these rows.
 - citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
 - source: `Jain-Albert doubling: weak triply even family` · JA-441 (`[[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[283,1,11]] (Table II)`)
 
-- 441 columns — see `master_catalog.json`, `factories[846]`
+- 441 columns — see `master_catalog.json`, `factories[847]`
 
-### 848. `[[441,5,2]]` — CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34·CCZ012·CCZ013·CCZ014·CCZ023·CCZ024·CCZ034·CCZ123·CCZ124·CCZ134·CCZ234
+### 849. `[[441,5,2]]` — CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34·CCZ012·CCZ013·CCZ014·CCZ023·CCZ024·CCZ034·CCZ123·CCZ124·CCZ134·CCZ234
 
 - output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 6, reduced degree 2
@@ -16832,9 +16857,9 @@ readable copy of exactly these rows.
 - source: `borrowed-identity search: two-group` · l3-row144-two-group (`two-group l=3 n=11 k=5 s_total=1 s_O=4 s_S=1`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
-- 441 columns — see `master_catalog.json`, `factories[847]`
+- 441 columns — see `master_catalog.json`, `factories[848]`
 
-### 849. `[[460,116,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115
+### 850. `[[460,116,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115`
 - `N = 128` (116 outputs + 12 checks)
@@ -16848,9 +16873,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(116,2) and a punctured RM(116-4,116) coset, neither feasible at k=116
 - note (reduced degree): not computed: exact minimisation is over GL(116,2) and a punctured RM(116-4,116) coset, neither feasible at k=116
 
-- 460 columns — see `master_catalog.json`, `factories[848]`
+- 460 columns — see `master_catalog.json`, `factories[849]`
 
-### 850. `[[495,99,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98
+### 851. `[[495,99,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98`
 - `N = 118` (99 outputs + 19 checks)
@@ -16864,9 +16889,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(99,2) and a punctured RM(99-4,99) coset, neither feasible at k=99
 - note (reduced degree): not computed: exact minimisation is over GL(99,2) and a punctured RM(99-4,99) coset, neither feasible at k=99
 
-- 495 columns — see `master_catalog.json`, `factories[849]`
+- 495 columns — see `master_catalog.json`, `factories[850]`
 
-### 851. `[[496,16,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15
+### 852. `[[496,16,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15`
 - `N = 78` (16 outputs + 62 checks)
@@ -16880,9 +16905,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
-- 496 columns — see `master_catalog.json`, `factories[850]`
+- 496 columns — see `master_catalog.json`, `factories[851]`
 
-### 852. `[[496,36,4]]` — CCZ0,1,2·CCZ0,1,7·CCZ0,1,8·CCZ0,1,9·CCZ0,1,11·CCZ0,1,12·CCZ0,1,13·CCZ0,1,14·CCZ0,1,15·CCZ0,1,17·CCZ0,1,18·CCZ0,1,21·CCZ0,1,22·CCZ0,1,25·CCZ0,1,26·CCZ0,1,27·CCZ0,1,28·CCZ0,1,30·CCZ0,1,33·CCZ0,1,35·CCZ0,2,6·CCZ0,2,7·CCZ0,2,11·CCZ0,2,14·CCZ0,2,17·CCZ0,2,18·CCZ0,2,21·CCZ0,2,24·CCZ0,2,25·CCZ0,2,26·CCZ0,2,27·CCZ0,2,28·CCZ0,2,31·CCZ0,3,5·CCZ0,3,6·CCZ0,3,7·CCZ0,3,8·CCZ0,3,9·CCZ0,3,10·CCZ0,3,16·CCZ0,3,17·CCZ0,3,18·CCZ0,3,19·CCZ0,3,20·CCZ0,3,22·CCZ0,3,23·CCZ0,3,25·CCZ0,3,26·CCZ0,3,29·CCZ0,3,33·CCZ0,4,5·CCZ0,4,6·CCZ0,4,7·CCZ0,4,8·CCZ0,4,10·CCZ0,4,11·CCZ0,4,14·CCZ0,4,15·CCZ0,4,18·CCZ0,4,19·CCZ0,4,20·CCZ0,4,22·CCZ0,4,23·CCZ0,4,25·CCZ0,4,26·CCZ0,4,27·CCZ0,4,28·CCZ0,4,29·CCZ0,4,31·CCZ0,4,32·CCZ0,4,35·CCZ0,5,6·CCZ0,5,7·CCZ0,5,8·CCZ0,5,9·CCZ0,5,10·CCZ0,5,12·CCZ0,5,13·CCZ0,5,15·CCZ0,5,16·CCZ0,5,19·CCZ0,5,21·CCZ0,5,24·CCZ0,5,26·CCZ0,5,27·CCZ0,5,30·CCZ0,5,31·CCZ0,5,33·CCZ0,6,11·CCZ0,6,12·CCZ0,6,13·CCZ0,6,14·CCZ0,6,17·CCZ0,6,18·CCZ0,6,20·CCZ0,6,21·CCZ0,6,25·CCZ0,6,27·CCZ0,6,28·CCZ0,6,30·CCZ0,6,31·CCZ0,6,34·CCZ0,6,35·CCZ0,7,13·CCZ0,7,14·CCZ0,7,15·CCZ0,7,16·CCZ0,7,19·CCZ0,7,20·CCZ0,7,21·CCZ0,7,22·CCZ0,7,25·CCZ0,7,29·CCZ0,7,31·CCZ0,7,32·CCZ0,7,33·CCZ0,7,35·CCZ0,8,12·CCZ0,8,13·CCZ0,8,18·CCZ0,8,20·CCZ0,8,23·CCZ0,8,24·CCZ0,8,25·CCZ0,8,27·CCZ0,8,34·CCZ0,8,35·CCZ0,9,11·CCZ0,9,12·CCZ0,9,13·CCZ0,9,14·CCZ0,9,15·CCZ0,9,21·CCZ0,9,24·CCZ0,9,25·CCZ0,9,26·CCZ0,9,28·CCZ0,9,29·CCZ0,9,30·CCZ0,9,33·CCZ0,9,35·CCZ0,10,12·CCZ0,10,13·CCZ0,10,15·CCZ0,10,17·CCZ0,10,18·CCZ0,10,20·CCZ0,10,21·CCZ0,10,22·CCZ0,10,23·CCZ0,10,24·CCZ0,10,25·CCZ0,10,27·CCZ0,10,29·CCZ0,10,30·CCZ0,10,31·CCZ0,11,14·CCZ0,11,15·CCZ0,11,16·CCZ0,11,17·CCZ0,11,19·CCZ0,11,20·CCZ0,11,23·CCZ0,11,24·CCZ0,11,25·CCZ0,11,27·CCZ0,11,29·CCZ0,11,32·CCZ0,12,14·CCZ0,12,15·CCZ0,12,16·CCZ0,12,17·CCZ0,12,18·CCZ0,12,20·CCZ0,12,21·CCZ0,12,22·CCZ0,12,24·CCZ0,12,25·CCZ0,12,26·CCZ0,12,29·CCZ0,12,31·CCZ0,12,33·CCZ0,12,34·CCZ0,12,35·CCZ0,13,15·CCZ0,13,16·CCZ0,13,18·CCZ0,13,19·CCZ0,13,20·CCZ0,13,21·CCZ0,13,23·CCZ0,13,25·CCZ0,13,26·CCZ0,13,30·CCZ0,13,31·CCZ0,13,33·CCZ0,13,34·CCZ0,13,35·CCZ0,14,15·CCZ0,14,18·CCZ0,14,19·CCZ0,14,20·CCZ0,14,21·CCZ0,14,22·CCZ0,14,25·CCZ0,14,28·CCZ0,14,30·CCZ0,14,31·CCZ0,14,33·CCZ0,14,35·CCZ0,15,19·CCZ0,15,21·CCZ0,15,22·CCZ0,15,23·CCZ0,15,25·CCZ0,15,28·CCZ0,15,29·CCZ0,15,32·CCZ0,15,35·CCZ0,16,19·CCZ0,16,23·CCZ0,16,25·CCZ0,16,26·CCZ0,16,28·CCZ0,16,29·CCZ0,16,30·CCZ0,16,31·CCZ0,16,33·CCZ0,16,34·CCZ0,17,18·CCZ0,17,20·CCZ0,17,21·CCZ0,17,23·CCZ0,17,24·CCZ0,17,25·CCZ0,17,26·CCZ0,17,28·CCZ0,17,31·CCZ0,17,32·CCZ0,17,35·CCZ0,18,22·CCZ0,18,24·CCZ0,18,26·CCZ0,18,29·CCZ0,18,30·CCZ0,18,31·CCZ0,18,32·CCZ0,18,35·CCZ0,19,20·CCZ0,19,25·CCZ0,19,28·CCZ0,19,32·CCZ0,19,33·CCZ0,19,35·CCZ0,20,21·CCZ0,20,24·CCZ0,20,26·CCZ0,20,28·CCZ0,20,30·CCZ0,20,32·CCZ0,20,35·CCZ0,21,24·CCZ0,21,29·CCZ0,21,30·CCZ0,21,32·CCZ0,21,33·CCZ0,21,34·CCZ0,21,35·CCZ0,22,23·CCZ0,22,24·CCZ0,22,26·CCZ0,22,29·CCZ0,22,31·CCZ0,22,32·CCZ0,22,33·CCZ0,22,34·CCZ0,22,35·CCZ0,23,25·CCZ0,23,28·CCZ0,23,29·CCZ0,23,31·CCZ0,23,33·CCZ0,23,34·CCZ0,23,35·CCZ0,24,28·CCZ0,24,29·CCZ0,24,30·CCZ0,24,31·CCZ0,24,32·CCZ0,24,35·CCZ0,25,26·CCZ0,25,27·CCZ0,25,28·CCZ0,25,33·CCZ0,26,29·CCZ0,26,31·CCZ0,26,32·CCZ0,26,33·CCZ0,26,35·CCZ0,27,28·CCZ0,27,29·CCZ0,27,30·CCZ0,27,32·CCZ0,27,33·CCZ0,27,34·CCZ0,27,35·CCZ0,28,29·CCZ0,28,32·CCZ0,29,30·CCZ0,29,31·CCZ0,29,35·CCZ0,30,31·CCZ0,30,35·CCZ0,31,33·CCZ0,31,34·CCZ0,31,35·CCZ0,32,33·CCZ0,32,34·CCZ1,2,3·CCZ1,2,4·CCZ1,2,6·CCZ1,2,11·CCZ1,2,12·CCZ1,2,13·CCZ1,2,15·CCZ1,2,16·CCZ1,2,18·CCZ1,2,19·CCZ1,2,20·CCZ1,2,22·CCZ1,2,23·CCZ1,2,24·CCZ1,2,25·CCZ1,2,26·CCZ1,2,27·CCZ1,2,28·CCZ1,2,30·CCZ1,2,31·CCZ1,2,32·CCZ1,3,4·CCZ1,3,6·CCZ1,3,9·CCZ1,3,11·CCZ1,3,12·CCZ1,3,14·CCZ1,3,18·CCZ1,3,20·CCZ1,3,22·CCZ1,3,23·CCZ1,3,24·CCZ1,3,25·CCZ1,3,28·CCZ1,3,30·CCZ1,3,33·CCZ1,3,34·CCZ1,4,8·CCZ1,4,9·CCZ1,4,10·CCZ1,4,11·CCZ1,4,12·CCZ1,4,14·CCZ1,4,15·CCZ1,4,16·CCZ1,4,17·CCZ1,4,19·CCZ1,4,21·CCZ1,4,24·CCZ1,4,25·CCZ1,4,27·CCZ1,4,31·CCZ1,4,32·CCZ1,4,35·CCZ1,5,6·CCZ1,5,8·CCZ1,5,9·CCZ1,5,11·CCZ1,5,12·CCZ1,5,14·CCZ1,5,20·CCZ1,5,22·CCZ1,5,23·CCZ1,5,26·CCZ1,5,29·CCZ1,5,30·CCZ1,5,32·CCZ1,5,33·CCZ1,5,34·CCZ1,6,7·CCZ1,6,9·CCZ1,6,10·CCZ1,6,11·CCZ1,6,12·CCZ1,6,20·CCZ1,6,23·CCZ1,6,27·CCZ1,6,29·CCZ1,6,34·CCZ1,6,35·CCZ1,7,9·CCZ1,7,10·CCZ1,7,13·CCZ1,7,14·CCZ1,7,17·CCZ1,7,20·CCZ1,7,21·CCZ1,7,22·CCZ1,7,23·CCZ1,7,24·CCZ1,7,25·CCZ1,7,29·CCZ1,7,30·CCZ1,7,32·CCZ1,7,35·CCZ1,8,9·CCZ1,8,10·CCZ1,8,16·CCZ1,8,17·CCZ1,8,19·CCZ1,8,20·CCZ1,8,21·CCZ1,8,22·CCZ1,8,23·CCZ1,8,24·CCZ1,8,26·CCZ1,8,27·CCZ1,8,30·CCZ1,8,31·CCZ1,9,11·CCZ1,9,12·CCZ1,9,13·CCZ1,9,14·CCZ1,9,17·CCZ1,9,18·CCZ1,9,21·CCZ1,9,22·CCZ1,9,26·CCZ1,9,27·CCZ1,9,28·CCZ1,9,29·CCZ1,9,30·CCZ1,9,34·CCZ1,10,13·CCZ1,10,15·CCZ1,10,17·CCZ1,10,20·CCZ1,10,21·CCZ1,10,23·CCZ1,10,24·CCZ1,10,26·CCZ1,10,27·CCZ1,10,34·CCZ1,10,35·CCZ1,11,15·CCZ1,11,25·CCZ1,11,29·CCZ1,11,33·CCZ1,11,34·CCZ1,11,35·CCZ1,12,15·CCZ1,12,25·CCZ1,12,29·CCZ1,12,33·CCZ1,12,34·CCZ1,12,35·CCZ1,13,14·CCZ1,13,15·CCZ1,13,18·CCZ1,13,22·CCZ1,13,24·CCZ1,13,27·CCZ1,13,28·CCZ1,13,30·CCZ1,13,34·CCZ1,14,17·CCZ1,14,18·CCZ1,14,20·CCZ1,14,21·CCZ1,14,23·CCZ1,14,27·CCZ1,14,28·CCZ1,14,32·CCZ1,14,33·CCZ1,15,17·CCZ1,15,18·CCZ1,15,21·CCZ1,15,28·CCZ1,15,29·CCZ1,15,32·CCZ1,15,33·CCZ1,15,34·CCZ1,15,35·CCZ1,16,18·CCZ1,16,24·CCZ1,16,25·CCZ1,16,26·CCZ1,16,28·CCZ1,16,29·CCZ1,16,32·CCZ1,17,22·CCZ1,17,25·CCZ1,17,26·CCZ1,17,27·CCZ1,17,29·CCZ1,17,30·CCZ1,17,32·CCZ1,17,34·CCZ1,18,19·CCZ1,18,26·CCZ1,18,27·CCZ1,18,31·CCZ1,18,32·CCZ1,18,33·CCZ1,18,34·CCZ1,19,24·CCZ1,19,25·CCZ1,19,26·CCZ1,19,28·CCZ1,19,29·CCZ1,19,32·CCZ1,20,22·CCZ1,20,26·CCZ1,20,27·CCZ1,20,30·CCZ1,20,32·CCZ1,20,33·CCZ1,20,35·CCZ1,21,22·CCZ1,21,25·CCZ1,21,26·CCZ1,21,27·CCZ1,21,29·CCZ1,21,30·CCZ1,21,32·CCZ1,21,34·CCZ1,22,23·CCZ1,22,24·CCZ1,22,25·CCZ1,22,26·CCZ1,22,27·CCZ1,22,29·CCZ1,22,33·CCZ1,23,26·CCZ1,23,27·CCZ1,23,30·CCZ1,23,32·CCZ1,23,33·CCZ1,23,35·CCZ1,24,25·CCZ1,24,29·CCZ1,24,30·CCZ1,24,31·CCZ1,24,33·CCZ1,25,26·CCZ1,25,29·CCZ1,25,30·CCZ1,25,31·CCZ1,25,34·CCZ1,25,35·CCZ1,26,27·CCZ1,26,28·CCZ1,26,29·CCZ1,26,30·CCZ1,26,31·CCZ1,26,32·CCZ1,27,28·CCZ1,27,30·CCZ1,27,35·CCZ1,28,31·CCZ1,28,32·CCZ1,28,33·CCZ1,28,34·CCZ1,29,30·CCZ1,29,31·CCZ1,29,33·CCZ1,30,33·CCZ1,31,32·CCZ1,32,34·CCZ1,33,35·CCZ2,3,4·CCZ2,3,5·CCZ2,3,6·CCZ2,3,7·CCZ2,3,9·CCZ2,3,11·CCZ2,3,12·CCZ2,3,13·CCZ2,3,14·CCZ2,3,15·CCZ2,3,16·CCZ2,3,17·CCZ2,3,19·CCZ2,3,24·CCZ2,3,25·CCZ2,3,27·CCZ2,3,28·CCZ2,3,29·CCZ2,4,5·CCZ2,4,7·CCZ2,4,8·CCZ2,4,16·CCZ2,4,18·CCZ2,4,23·CCZ2,4,31·CCZ2,4,32·CCZ2,4,33·CCZ2,4,34·CCZ2,5,7·CCZ2,5,8·CCZ2,5,9·CCZ2,5,10·CCZ2,5,11·CCZ2,5,12·CCZ2,5,13·CCZ2,5,17·CCZ2,5,19·CCZ2,5,20·CCZ2,5,21·CCZ2,5,23·CCZ2,5,27·CCZ2,5,28·CCZ2,5,29·CCZ2,5,30·CCZ2,5,33·CCZ2,5,34·CCZ2,5,35·CCZ2,6,8·CCZ2,6,9·CCZ2,6,10·CCZ2,6,12·CCZ2,6,16·CCZ2,6,17·CCZ2,6,19·CCZ2,6,21·CCZ2,6,22·CCZ2,6,23·CCZ2,6,30·CCZ2,6,31·CCZ2,6,32·CCZ2,6,33·CCZ2,7,8·CCZ2,7,10·CCZ2,7,11·CCZ2,7,13·CCZ2,7,17·CCZ2,7,18·CCZ2,7,21·CCZ2,7,22·CCZ2,7,23·CCZ2,7,27·CCZ2,7,28·CCZ2,7,31·CCZ2,7,32·CCZ2,7,33·CCZ2,8,10·CCZ2,8,11·CCZ2,8,12·CCZ2,8,13·CCZ2,8,16·CCZ2,8,22·CCZ2,8,23·CCZ2,8,26·CCZ2,8,27·CCZ2,8,28·CCZ2,8,30·CCZ2,8,32·CCZ2,8,33·CCZ2,8,35·CCZ2,9,10·CCZ2,9,11·CCZ2,9,14·CCZ2,9,16·CCZ2,9,21·CCZ2,9,22·CCZ2,9,23·CCZ2,9,24·CCZ2,9,26·CCZ2,9,30·CCZ2,9,31·CCZ2,9,32·CCZ2,9,34·CCZ2,10,12·CCZ2,10,13·CCZ2,10,17·CCZ2,10,18·CCZ2,10,20·CCZ2,10,21·CCZ2,10,22·CCZ2,10,25·CCZ2,10,26·CCZ2,10,27·CCZ2,10,28·CCZ2,10,29·CCZ2,10,30·CCZ2,10,35·CCZ2,11,13·CCZ2,11,14·CCZ2,11,17·CCZ2,11,20·CCZ2,11,22·CCZ2,11,25·CCZ2,11,29·CCZ2,11,30·CCZ2,11,31·CCZ2,11,33·CCZ2,11,34·CCZ2,11,35·CCZ2,12,14·CCZ2,12,15·CCZ2,12,16·CCZ2,12,20·CCZ2,12,21·CCZ2,12,23·CCZ2,12,24·CCZ2,12,25·CCZ2,12,30·CCZ2,12,33·CCZ2,12,34·CCZ2,12,35·CCZ2,13,15·CCZ2,13,17·CCZ2,13,18·CCZ2,13,19·CCZ2,13,21·CCZ2,13,24·CCZ2,13,25·CCZ2,13,26·CCZ2,13,27·CCZ2,13,28·CCZ2,13,31·CCZ2,13,32·CCZ2,13,33·CCZ2,13,35·CCZ2,14,15·CCZ2,14,16·CCZ2,14,19·CCZ2,14,23·CCZ2,14,25·CCZ2,14,26·CCZ2,14,29·CCZ2,14,30·CCZ2,14,31·CCZ2,14,32·CCZ2,15,16·CCZ2,15,20·CCZ2,15,22·CCZ2,15,24·CCZ2,15,25·CCZ2,15,27·CCZ2,15,29·CCZ2,15,30·CCZ2,15,31·CCZ2,15,33·CCZ2,15,34·CCZ2,15,35·CCZ2,16,17·CCZ2,16,18·CCZ2,16,19·CCZ2,16,21·CCZ2,16,23·CCZ2,16,24·CCZ2,16,25·CCZ2,16,27·CCZ2,16,34·CCZ2,16,35·CCZ2,17,19·CCZ2,17,22·CCZ2,17,25·CCZ2,17,28·CCZ2,17,29·CCZ2,17,30·CCZ2,17,34·CCZ2,18,21·CCZ2,18,26·CCZ2,18,35·CCZ2,19,20·CCZ2,19,21·CCZ2,19,22·CCZ2,19,23·CCZ2,19,24·CCZ2,19,26·CCZ2,19,28·CCZ2,19,30·CCZ2,19,31·CCZ2,19,32·CCZ2,19,33·CCZ2,19,34·CCZ2,20,23·CCZ2,20,28·CCZ2,20,30·CCZ2,20,32·CCZ2,20,33·CCZ2,20,34·CCZ2,20,35·CCZ2,21,23·CCZ2,21,24·CCZ2,21,26·CCZ2,21,27·CCZ2,21,28·CCZ2,21,31·CCZ2,21,32·CCZ2,21,35·CCZ2,22,25·CCZ2,22,28·CCZ2,22,30·CCZ2,22,32·CCZ2,22,33·CCZ2,23,24·CCZ2,23,28·CCZ2,23,34·CCZ2,23,35·CCZ2,24,25·CCZ2,24,26·CCZ2,24,28·CCZ2,24,30·CCZ2,24,33·CCZ2,24,35·CCZ2,25,26·CCZ2,25,27·CCZ2,25,30·CCZ2,25,31·CCZ2,25,32·CCZ2,26,27·CCZ2,26,28·CCZ2,26,29·CCZ2,26,30·CCZ2,26,31·CCZ2,26,33·CCZ2,26,34·CCZ2,26,35·CCZ2,27,30·CCZ2,27,31·CCZ2,28,29·CCZ2,28,30·CCZ2,28,32·CCZ2,28,35·CCZ2,29,30·CCZ2,29,32·CCZ2,29,33·CCZ2,30,32·CCZ2,30,34·CCZ2,31,32·CCZ2,31,34·CCZ2,32,35·CCZ2,34,35·CCZ3,4,5·CCZ3,4,6·CCZ3,4,14·CCZ3,4,15·CCZ3,4,17·CCZ3,4,18·CCZ3,4,20·CCZ3,4,21·CCZ3,4,22·CCZ3,4,23·CCZ3,4,26·CCZ3,4,28·CCZ3,4,30·CCZ3,4,31·CCZ3,4,32·CCZ3,4,33·CCZ3,4,35·CCZ3,5,6·CCZ3,5,8·CCZ3,5,11·CCZ3,5,13·CCZ3,5,15·CCZ3,5,17·CCZ3,5,19·CCZ3,5,20·CCZ3,5,22·CCZ3,5,23·CCZ3,5,24·CCZ3,5,25·CCZ3,5,26·CCZ3,5,30·CCZ3,5,31·CCZ3,5,33·CCZ3,5,35·CCZ3,6,7·CCZ3,6,8·CCZ3,6,9·CCZ3,6,11·CCZ3,6,12·CCZ3,6,13·CCZ3,6,19·CCZ3,6,20·CCZ3,6,21·CCZ3,6,22·CCZ3,6,24·CCZ3,6,25·CCZ3,6,26·CCZ3,6,29·CCZ3,6,30·CCZ3,6,32·CCZ3,6,33·CCZ3,6,34·CCZ3,7,9·CCZ3,7,10·CCZ3,7,15·CCZ3,7,16·CCZ3,7,19·CCZ3,7,20·CCZ3,7,23·CCZ3,7,24·CCZ3,7,27·CCZ3,7,28·CCZ3,7,31·CCZ3,7,32·CCZ3,7,34·CCZ3,7,35·CCZ3,8,9·CCZ3,8,10·CCZ3,8,11·CCZ3,8,14·CCZ3,8,16·CCZ3,8,17·CCZ3,8,23·CCZ3,8,24·CCZ3,8,25·CCZ3,8,28·CCZ3,8,29·CCZ3,8,31·CCZ3,8,33·CCZ3,8,34·CCZ3,9,11·CCZ3,9,16·CCZ3,9,17·CCZ3,9,19·CCZ3,9,21·CCZ3,9,23·CCZ3,9,24·CCZ3,9,27·CCZ3,9,28·CCZ3,9,29·CCZ3,9,30·CCZ3,9,31·CCZ3,9,32·CCZ3,10,11·CCZ3,10,12·CCZ3,10,14·CCZ3,10,16·CCZ3,10,24·CCZ3,10,27·CCZ3,10,29·CCZ3,10,32·CCZ3,10,34·CCZ3,11,16·CCZ3,11,18·CCZ3,11,20·CCZ3,11,21·CCZ3,11,22·CCZ3,11,23·CCZ3,11,25·CCZ3,11,27·CCZ3,11,31·CCZ3,11,33·CCZ3,11,34·CCZ3,11,35·CCZ3,12,14·CCZ3,12,15·CCZ3,12,18·CCZ3,12,19·CCZ3,12,21·CCZ3,12,24·CCZ3,12,25·CCZ3,12,26·CCZ3,12,28·CCZ3,12,30·CCZ3,12,32·CCZ3,12,33·CCZ3,13,14·CCZ3,13,17·CCZ3,13,18·CCZ3,13,21·CCZ3,13,23·CCZ3,13,26·CCZ3,13,27·CCZ3,13,32·CCZ3,14,15·CCZ3,14,16·CCZ3,14,17·CCZ3,14,18·CCZ3,14,19·CCZ3,14,22·CCZ3,14,23·CCZ3,14,24·CCZ3,14,25·CCZ3,14,26·CCZ3,14,27·CCZ3,14,31·CCZ3,14,32·CCZ3,14,33·CCZ3,14,34·CCZ3,15,16·CCZ3,15,19·CCZ3,15,20·CCZ3,15,21·CCZ3,15,24·CCZ3,15,25·CCZ3,15,27·CCZ3,15,31·CCZ3,15,34·CCZ3,15,35·CCZ3,16,18·CCZ3,16,22·CCZ3,16,24·CCZ3,16,25·CCZ3,16,26·CCZ3,16,32·CCZ3,16,34·CCZ3,17,18·CCZ3,17,20·CCZ3,17,24·CCZ3,17,26·CCZ3,17,29·CCZ3,17,30·CCZ3,17,31·CCZ3,17,32·CCZ3,17,33·CCZ3,17,34·CCZ3,17,35·CCZ3,18,19·CCZ3,18,20·CCZ3,18,22·CCZ3,18,23·CCZ3,18,25·CCZ3,18,26·CCZ3,18,27·CCZ3,18,30·CCZ3,18,31·CCZ3,18,34·CCZ3,18,35·CCZ3,19,20·CCZ3,19,22·CCZ3,19,23·CCZ3,19,24·CCZ3,19,25·CCZ3,19,26·CCZ3,19,30·CCZ3,19,31·CCZ3,19,34·CCZ3,20,21·CCZ3,20,23·CCZ3,20,25·CCZ3,20,26·CCZ3,20,28·CCZ3,20,29·CCZ3,20,30·CCZ3,20,33·CCZ3,20,34·CCZ3,20,35·CCZ3,21,23·CCZ3,21,25·CCZ3,21,27·CCZ3,21,28·CCZ3,21,29·CCZ3,21,34·CCZ3,22,23·CCZ3,22,26·CCZ3,22,27·CCZ3,22,31·CCZ3,22,32·CCZ3,23,24·CCZ3,23,26·CCZ3,23,28·CCZ3,23,30·CCZ3,23,32·CCZ3,23,33·CCZ3,23,34·CCZ3,23,35·CCZ3,24,26·CCZ3,24,27·CCZ3,24,30·CCZ3,24,31·CCZ3,25,26·CCZ3,25,27·CCZ3,25,28·CCZ3,25,31·CCZ3,25,33·CCZ3,25,34·CCZ3,25,35·CCZ3,26,28·CCZ3,26,32·CCZ3,26,34·CCZ3,26,35·CCZ3,27,28·CCZ3,27,31·CCZ3,27,32·CCZ3,27,35·CCZ3,28,31·CCZ3,28,32·CCZ3,28,33·CCZ3,28,35·CCZ3,29,30·CCZ3,29,32·CCZ3,29,33·CCZ3,29,34·CCZ3,29,35·CCZ3,30,31·CCZ3,30,32·CCZ3,30,33·CCZ3,30,34·CCZ3,31,34·CCZ3,32,33·CCZ3,32,34·CCZ3,32,35·CCZ3,33,34·CCZ3,33,35·CCZ3,34,35·CCZ4,5,9·CCZ4,5,11·CCZ4,5,13·CCZ4,5,14·CCZ4,5,16·CCZ4,5,17·CCZ4,5,18·CCZ4,5,19·CCZ4,5,20·CCZ4,5,21·CCZ4,5,23·CCZ4,5,29·CCZ4,5,31·CCZ4,5,34·CCZ4,6,7·CCZ4,6,8·CCZ4,6,11·CCZ4,6,17·CCZ4,6,20·CCZ4,6,21·CCZ4,6,25·CCZ4,6,26·CCZ4,6,27·CCZ4,6,29·CCZ4,6,30·CCZ4,6,34·CCZ4,6,35·CCZ4,7,8·CCZ4,7,9·CCZ4,7,10·CCZ4,7,11·CCZ4,7,12·CCZ4,7,15·CCZ4,7,16·CCZ4,7,17·CCZ4,7,19·CCZ4,7,21·CCZ4,7,22·CCZ4,7,23·CCZ4,7,27·CCZ4,7,29·CCZ4,7,30·CCZ4,7,31·CCZ4,7,32·CCZ4,7,33·CCZ4,7,35·CCZ4,8,17·CCZ4,8,18·CCZ4,8,20·CCZ4,8,21·CCZ4,8,23·CCZ4,8,26·CCZ4,8,27·CCZ4,9,10·CCZ4,9,13·CCZ4,9,14·CCZ4,9,16·CCZ4,9,17·CCZ4,9,18·CCZ4,9,19·CCZ4,9,21·CCZ4,9,22·CCZ4,9,24·CCZ4,9,26·CCZ4,9,29·CCZ4,9,30·CCZ4,9,31·CCZ4,9,32·CCZ4,9,33·CCZ4,9,34·CCZ4,9,35·CCZ4,10,12·CCZ4,10,16·CCZ4,10,18·CCZ4,10,19·CCZ4,10,31·CCZ4,10,32·CCZ4,10,35·CCZ4,11,14·CCZ4,11,16·CCZ4,11,17·CCZ4,11,18·CCZ4,11,24·CCZ4,11,29·CCZ4,11,31·CCZ4,11,35·CCZ4,12,14·CCZ4,12,16·CCZ4,12,22·CCZ4,12,25·CCZ4,12,31·CCZ4,12,34·CCZ4,12,35·CCZ4,13,14·CCZ4,13,15·CCZ4,13,17·CCZ4,13,18·CCZ4,13,23·CCZ4,13,26·CCZ4,13,28·CCZ4,13,29·CCZ4,14,16·CCZ4,14,17·CCZ4,14,18·CCZ4,14,20·CCZ4,14,21·CCZ4,14,22·CCZ4,14,23·CCZ4,14,24·CCZ4,14,27·CCZ4,14,28·CCZ4,14,30·CCZ4,14,35·CCZ4,15,20·CCZ4,15,22·CCZ4,15,26·CCZ4,15,27·CCZ4,15,28·CCZ4,15,31·CCZ4,15,33·CCZ4,15,35·CCZ4,16,19·CCZ4,16,21·CCZ4,16,22·CCZ4,16,24·CCZ4,16,25·CCZ4,16,32·CCZ4,16,33·CCZ4,16,34·CCZ4,17,18·CCZ4,17,19·CCZ4,17,23·CCZ4,17,25·CCZ4,17,26·CCZ4,17,27·CCZ4,17,28·CCZ4,17,30·CCZ4,17,33·CCZ4,17,34·CCZ4,17,35·CCZ4,18,19·CCZ4,18,20·CCZ4,18,21·CCZ4,18,25·CCZ4,18,27·CCZ4,18,30·CCZ4,18,31·CCZ4,18,32·CCZ4,19,20·CCZ4,19,23·CCZ4,19,26·CCZ4,19,28·CCZ4,20,21·CCZ4,20,23·CCZ4,20,25·CCZ4,20,27·CCZ4,20,32·CCZ4,20,33·CCZ4,20,34·CCZ4,21,24·CCZ4,21,26·CCZ4,21,27·CCZ4,21,29·CCZ4,21,31·CCZ4,22,24·CCZ4,22,25·CCZ4,22,27·CCZ4,22,28·CCZ4,22,31·CCZ4,22,32·CCZ4,22,34·CCZ4,22,35·CCZ4,23,28·CCZ4,23,29·CCZ4,23,33·CCZ4,23,35·CCZ4,24,27·CCZ4,24,28·CCZ4,24,29·CCZ4,24,30·CCZ4,24,32·CCZ4,24,33·CCZ4,24,34·CCZ4,25,26·CCZ4,25,27·CCZ4,25,30·CCZ4,25,31·CCZ4,25,33·CCZ4,25,34·CCZ4,25,35·CCZ4,26,28·CCZ4,26,29·CCZ4,26,30·CCZ4,26,34·CCZ4,26,35·CCZ4,27,29·CCZ4,27,30·CCZ4,27,32·CCZ4,27,34·CCZ4,27,35·CCZ4,28,29·CCZ4,29,31·CCZ4,29,32·CCZ4,29,34·CCZ4,29,35·CCZ4,30,31·CCZ4,30,32·CCZ4,30,35·CCZ4,31,32·CCZ4,31,34·CCZ4,34,35·CCZ5,6,8·CCZ5,6,9·CCZ5,6,12·CCZ5,6,13·CCZ5,6,15·CCZ5,6,17·CCZ5,6,18·CCZ5,6,20·CCZ5,6,21·CCZ5,6,22·CCZ5,6,23·CCZ5,6,24·CCZ5,6,25·CCZ5,6,26·CCZ5,6,27·CCZ5,6,28·CCZ5,6,29·CCZ5,6,31·CCZ5,6,32·CCZ5,6,33·CCZ5,6,34·CCZ5,7,8·CCZ5,7,10·CCZ5,7,12·CCZ5,7,13·CCZ5,7,14·CCZ5,7,16·CCZ5,7,17·CCZ5,7,19·CCZ5,7,24·CCZ5,7,26·CCZ5,7,27·CCZ5,7,29·CCZ5,7,31·CCZ5,7,32·CCZ5,7,34·CCZ5,7,35·CCZ5,8,9·CCZ5,8,10·CCZ5,8,11·CCZ5,8,12·CCZ5,8,16·CCZ5,8,18·CCZ5,8,19·CCZ5,8,20·CCZ5,8,22·CCZ5,8,27·CCZ5,8,29·CCZ5,8,30·CCZ5,8,31·CCZ5,8,34·CCZ5,9,10·CCZ5,9,11·CCZ5,9,12·CCZ5,9,13·CCZ5,9,15·CCZ5,9,18·CCZ5,9,19·CCZ5,9,27·CCZ5,9,28·CCZ5,9,31·CCZ5,9,32·CCZ5,9,33·CCZ5,9,34·CCZ5,10,12·CCZ5,10,13·CCZ5,10,14·CCZ5,10,18·CCZ5,10,20·CCZ5,10,21·CCZ5,10,22·CCZ5,10,29·CCZ5,10,30·CCZ5,10,31·CCZ5,10,33·CCZ5,10,35·CCZ5,11,16·CCZ5,11,17·CCZ5,11,19·CCZ5,11,20·CCZ5,11,21·CCZ5,11,22·CCZ5,11,28·CCZ5,11,31·CCZ5,11,34·CCZ5,12,13·CCZ5,12,14·CCZ5,12,15·CCZ5,12,16·CCZ5,12,22·CCZ5,12,25·CCZ5,12,26·CCZ5,12,27·CCZ5,12,29·CCZ5,12,32·CCZ5,13,14·CCZ5,13,15·CCZ5,13,17·CCZ5,13,21·CCZ5,13,22·CCZ5,13,24·CCZ5,13,25·CCZ5,13,26·CCZ5,13,27·CCZ5,13,29·CCZ5,13,30·CCZ5,13,31·CCZ5,13,32·CCZ5,14,19·CCZ5,14,20·CCZ5,14,22·CCZ5,14,23·CCZ5,14,25·CCZ5,14,27·CCZ5,14,29·CCZ5,14,33·CCZ5,14,35·CCZ5,15,18·CCZ5,15,19·CCZ5,15,20·CCZ5,15,22·CCZ5,15,23·CCZ5,15,24·CCZ5,15,25·CCZ5,15,26·CCZ5,15,28·CCZ5,15,32·CCZ5,15,33·CCZ5,15,34·CCZ5,15,35·CCZ5,16,17·CCZ5,16,18·CCZ5,16,19·CCZ5,16,20·CCZ5,16,25·CCZ5,16,28·CCZ5,16,30·CCZ5,16,31·CCZ5,17,20·CCZ5,17,21·CCZ5,17,22·CCZ5,17,25·CCZ5,17,26·CCZ5,17,28·CCZ5,17,32·CCZ5,17,33·CCZ5,18,19·CCZ5,18,20·CCZ5,18,21·CCZ5,18,26·CCZ5,18,27·CCZ5,18,28·CCZ5,18,29·CCZ5,18,32·CCZ5,18,33·CCZ5,18,34·CCZ5,18,35·CCZ5,19,20·CCZ5,19,21·CCZ5,19,24·CCZ5,19,25·CCZ5,19,26·CCZ5,19,27·CCZ5,19,28·CCZ5,19,31·CCZ5,19,32·CCZ5,19,33·CCZ5,19,34·CCZ5,20,21·CCZ5,20,22·CCZ5,20,24·CCZ5,20,28·CCZ5,20,29·CCZ5,20,32·CCZ5,20,35·CCZ5,21,22·CCZ5,21,24·CCZ5,21,26·CCZ5,21,28·CCZ5,21,32·CCZ5,22,23·CCZ5,22,26·CCZ5,22,27·CCZ5,22,28·CCZ5,22,29·CCZ5,22,31·CCZ5,22,33·CCZ5,22,34·CCZ5,23,26·CCZ5,23,29·CCZ5,23,30·CCZ5,23,32·CCZ5,24,25·CCZ5,24,26·CCZ5,24,28·CCZ5,24,29·CCZ5,24,30·CCZ5,24,32·CCZ5,24,33·CCZ5,24,34·CCZ5,24,35·CCZ5,25,27·CCZ5,25,28·CCZ5,25,29·CCZ5,25,32·CCZ5,25,34·CCZ5,25,35·CCZ5,26,28·CCZ5,26,29·CCZ5,26,31·CCZ5,26,32·CCZ5,26,34·CCZ5,26,35·CCZ5,27,28·CCZ5,27,30·CCZ5,27,31·CCZ5,27,32·CCZ5,27,34·CCZ5,28,31·CCZ5,28,32·CCZ5,28,34·CCZ5,28,35·CCZ5,29,30·CCZ5,29,32·CCZ5,29,33·CCZ5,29,34·CCZ5,30,31·CCZ5,30,32·CCZ5,31,32·CCZ5,31,34·CCZ5,32,35·CCZ6,7,8·CCZ6,7,9·CCZ6,7,10·CCZ6,7,11·CCZ6,7,12·CCZ6,7,13·CCZ6,7,14·CCZ6,7,15·CCZ6,7,21·CCZ6,7,24·CCZ6,7,30·CCZ6,7,31·CCZ6,7,34·CCZ6,8,9·CCZ6,8,11·CCZ6,8,12·CCZ6,8,13·CCZ6,8,14·CCZ6,8,18·CCZ6,8,20·CCZ6,8,22·CCZ6,8,26·CCZ6,8,29·CCZ6,8,31·CCZ6,8,34·CCZ6,9,10·CCZ6,9,12·CCZ6,9,13·CCZ6,9,14·CCZ6,9,15·CCZ6,9,16·CCZ6,9,17·CCZ6,9,20·CCZ6,9,21·CCZ6,9,23·CCZ6,9,25·CCZ6,9,26·CCZ6,9,27·CCZ6,9,28·CCZ6,9,30·CCZ6,9,32·CCZ6,9,34·CCZ6,9,35·CCZ6,10,11·CCZ6,10,13·CCZ6,10,14·CCZ6,10,16·CCZ6,10,19·CCZ6,10,21·CCZ6,10,27·CCZ6,10,28·CCZ6,10,29·CCZ6,10,30·CCZ6,10,34·CCZ6,10,35·CCZ6,11,13·CCZ6,11,14·CCZ6,11,15·CCZ6,11,16·CCZ6,11,19·CCZ6,11,20·CCZ6,11,21·CCZ6,11,22·CCZ6,11,23·CCZ6,11,24·CCZ6,11,26·CCZ6,11,27·CCZ6,11,31·CCZ6,11,33·CCZ6,12,15·CCZ6,12,16·CCZ6,12,17·CCZ6,12,19·CCZ6,12,29·CCZ6,12,34·CCZ6,12,35·CCZ6,13,14·CCZ6,13,15·CCZ6,13,16·CCZ6,13,17·CCZ6,13,19·CCZ6,13,20·CCZ6,13,23·CCZ6,13,24·CCZ6,13,28·CCZ6,13,30·CCZ6,13,32·CCZ6,13,34·CCZ6,14,17·CCZ6,14,20·CCZ6,14,21·CCZ6,14,25·CCZ6,14,26·CCZ6,14,28·CCZ6,14,30·CCZ6,14,32·CCZ6,15,17·CCZ6,15,18·CCZ6,15,19·CCZ6,15,22·CCZ6,15,25·CCZ6,15,28·CCZ6,15,33·CCZ6,15,34·CCZ6,16,17·CCZ6,16,19·CCZ6,16,20·CCZ6,16,24·CCZ6,16,26·CCZ6,16,28·CCZ6,16,30·CCZ6,16,31·CCZ6,16,32·CCZ6,16,33·CCZ6,16,34·CCZ6,17,18·CCZ6,17,19·CCZ6,17,22·CCZ6,17,23·CCZ6,17,24·CCZ6,17,25·CCZ6,17,28·CCZ6,17,33·CCZ6,17,35·CCZ6,18,19·CCZ6,18,20·CCZ6,18,21·CCZ6,18,22·CCZ6,18,23·CCZ6,18,24·CCZ6,18,25·CCZ6,18,30·CCZ6,18,31·CCZ6,19,25·CCZ6,19,28·CCZ6,19,31·CCZ6,19,33·CCZ6,19,34·CCZ6,19,35·CCZ6,20,22·CCZ6,20,23·CCZ6,20,26·CCZ6,20,29·CCZ6,20,30·CCZ6,20,32·CCZ6,20,33·CCZ6,20,34·CCZ6,21,22·CCZ6,21,24·CCZ6,21,26·CCZ6,21,30·CCZ6,21,31·CCZ6,21,32·CCZ6,21,34·CCZ6,21,35·CCZ6,22,24·CCZ6,22,25·CCZ6,22,28·CCZ6,22,31·CCZ6,22,33·CCZ6,22,34·CCZ6,22,35·CCZ6,23,24·CCZ6,23,28·CCZ6,23,31·CCZ6,23,32·CCZ6,23,34·CCZ6,23,35·CCZ6,24,25·CCZ6,24,28·CCZ6,24,29·CCZ6,24,30·CCZ6,24,32·CCZ6,25,26·CCZ6,25,27·CCZ6,25,33·CCZ6,25,34·CCZ6,25,35·CCZ6,26,29·CCZ6,26,30·CCZ6,26,32·CCZ6,26,34·CCZ6,27,28·CCZ6,27,31·CCZ6,27,32·CCZ6,27,35·CCZ6,28,29·CCZ6,28,30·CCZ6,28,31·CCZ6,28,35·CCZ6,29,31·CCZ6,29,34·CCZ6,29,35·CCZ6,30,33·CCZ6,31,34·CCZ6,31,35·CCZ6,32,33·CCZ6,32,35·CCZ6,33,34·CCZ6,34,35·CCZ7,8,9·CCZ7,8,10·CCZ7,8,14·CCZ7,8,15·CCZ7,8,16·CCZ7,8,21·CCZ7,8,22·CCZ7,8,23·CCZ7,8,24·CCZ7,8,28·CCZ7,8,29·CCZ7,8,32·CCZ7,8,34·CCZ7,8,35·CCZ7,9,11·CCZ7,9,15·CCZ7,9,18·CCZ7,9,24·CCZ7,9,25·CCZ7,9,26·CCZ7,9,27·CCZ7,9,28·CCZ7,9,32·CCZ7,9,35·CCZ7,10,11·CCZ7,10,15·CCZ7,10,16·CCZ7,10,18·CCZ7,10,19·CCZ7,10,22·CCZ7,10,26·CCZ7,10,27·CCZ7,10,30·CCZ7,10,32·CCZ7,10,33·CCZ7,11,12·CCZ7,11,14·CCZ7,11,17·CCZ7,11,18·CCZ7,11,19·CCZ7,11,21·CCZ7,11,22·CCZ7,11,23·CCZ7,11,26·CCZ7,11,27·CCZ7,11,28·CCZ7,11,29·CCZ7,11,30·CCZ7,11,31·CCZ7,11,32·CCZ7,11,33·CCZ7,11,34·CCZ7,12,21·CCZ7,12,22·CCZ7,12,23·CCZ7,12,26·CCZ7,12,27·CCZ7,12,31·CCZ7,12,33·CCZ7,12,34·CCZ7,12,35·CCZ7,13,14·CCZ7,13,15·CCZ7,13,19·CCZ7,13,21·CCZ7,13,22·CCZ7,13,23·CCZ7,13,24·CCZ7,13,28·CCZ7,13,30·CCZ7,13,32·CCZ7,13,34·CCZ7,14,15·CCZ7,14,16·CCZ7,14,17·CCZ7,14,18·CCZ7,14,19·CCZ7,14,25·CCZ7,14,26·CCZ7,14,27·CCZ7,14,29·CCZ7,14,30·CCZ7,14,31·CCZ7,14,32·CCZ7,14,34·CCZ7,14,35·CCZ7,15,17·CCZ7,15,18·CCZ7,15,19·CCZ7,15,21·CCZ7,15,22·CCZ7,15,23·CCZ7,15,25·CCZ7,15,28·CCZ7,15,29·CCZ7,15,31·CCZ7,15,32·CCZ7,15,33·CCZ7,15,34·CCZ7,15,35·CCZ7,16,17·CCZ7,16,20·CCZ7,16,24·CCZ7,16,28·CCZ7,16,34·CCZ7,17,19·CCZ7,17,21·CCZ7,17,23·CCZ7,17,24·CCZ7,17,25·CCZ7,17,30·CCZ7,17,31·CCZ7,18,21·CCZ7,18,22·CCZ7,18,26·CCZ7,18,27·CCZ7,18,30·CCZ7,19,21·CCZ7,19,22·CCZ7,19,23·CCZ7,19,24·CCZ7,19,25·CCZ7,19,26·CCZ7,19,32·CCZ7,19,33·CCZ7,19,34·CCZ7,20,22·CCZ7,20,23·CCZ7,20,24·CCZ7,20,25·CCZ7,20,26·CCZ7,20,30·CCZ7,20,31·CCZ7,20,35·CCZ7,21,22·CCZ7,21,23·CCZ7,21,26·CCZ7,21,27·CCZ7,21,28·CCZ7,21,29·CCZ7,21,32·CCZ7,21,33·CCZ7,21,34·CCZ7,22,23·CCZ7,22,24·CCZ7,22,26·CCZ7,22,31·CCZ7,22,32·CCZ7,22,33·CCZ7,23,24·CCZ7,23,25·CCZ7,23,26·CCZ7,23,27·CCZ7,23,28·CCZ7,23,29·CCZ7,23,30·CCZ7,23,31·CCZ7,23,32·CCZ7,23,34·CCZ7,23,35·CCZ7,24,26·CCZ7,24,28·CCZ7,24,29·CCZ7,24,31·CCZ7,24,32·CCZ7,24,34·CCZ7,24,35·CCZ7,25,27·CCZ7,25,28·CCZ7,25,32·CCZ7,25,33·CCZ7,25,34·CCZ7,25,35·CCZ7,26,27·CCZ7,26,30·CCZ7,26,31·CCZ7,26,32·CCZ7,26,33·CCZ7,26,34·CCZ7,27,28·CCZ7,27,31·CCZ7,27,33·CCZ7,27,35·CCZ7,28,30·CCZ7,28,31·CCZ7,28,32·CCZ7,28,33·CCZ7,28,34·CCZ7,28,35·CCZ7,30,34·CCZ7,31,32·CCZ7,31,35·CCZ7,32,33·CCZ7,32,34·CCZ7,32,35·CCZ7,34,35·CCZ8,9,10·CCZ8,9,12·CCZ8,9,14·CCZ8,9,16·CCZ8,9,17·CCZ8,9,22·CCZ8,9,28·CCZ8,9,29·CCZ8,9,30·CCZ8,9,31·CCZ8,9,35·CCZ8,10,13·CCZ8,10,15·CCZ8,10,20·CCZ8,10,24·CCZ8,10,26·CCZ8,10,27·CCZ8,10,29·CCZ8,10,30·CCZ8,10,31·CCZ8,10,35·CCZ8,11,14·CCZ8,11,20·CCZ8,11,21·CCZ8,11,24·CCZ8,11,27·CCZ8,11,32·CCZ8,11,33·CCZ8,11,35·CCZ8,12,14·CCZ8,12,17·CCZ8,12,18·CCZ8,12,20·CCZ8,12,22·CCZ8,12,25·CCZ8,12,26·CCZ8,12,27·CCZ8,12,32·CCZ8,12,35·CCZ8,13,14·CCZ8,13,22·CCZ8,13,25·CCZ8,13,27·CCZ8,13,30·CCZ8,13,31·CCZ8,13,32·CCZ8,13,35·CCZ8,14,15·CCZ8,14,17·CCZ8,14,20·CCZ8,14,22·CCZ8,14,24·CCZ8,14,25·CCZ8,14,27·CCZ8,14,29·CCZ8,14,30·CCZ8,14,31·CCZ8,14,33·CCZ8,14,34·CCZ8,14,35·CCZ8,15,16·CCZ8,15,18·CCZ8,15,19·CCZ8,15,20·CCZ8,15,21·CCZ8,15,22·CCZ8,15,24·CCZ8,15,26·CCZ8,15,27·CCZ8,15,28·CCZ8,15,29·CCZ8,15,31·CCZ8,15,33·CCZ8,15,35·CCZ8,16,18·CCZ8,16,20·CCZ8,16,21·CCZ8,16,22·CCZ8,16,23·CCZ8,16,24·CCZ8,16,27·CCZ8,16,29·CCZ8,16,30·CCZ8,16,34·CCZ8,17,18·CCZ8,17,22·CCZ8,17,23·CCZ8,17,25·CCZ8,17,26·CCZ8,17,30·CCZ8,17,31·CCZ8,17,32·CCZ8,18,19·CCZ8,18,21·CCZ8,18,23·CCZ8,18,26·CCZ8,18,27·CCZ8,18,28·CCZ8,18,29·CCZ8,18,31·CCZ8,18,32·CCZ8,18,35·CCZ8,19,22·CCZ8,19,23·CCZ8,19,24·CCZ8,19,29·CCZ8,19,31·CCZ8,19,35·CCZ8,20,22·CCZ8,20,27·CCZ8,20,28·CCZ8,20,33·CCZ8,21,25·CCZ8,21,29·CCZ8,21,30·CCZ8,21,34·CCZ8,21,35·CCZ8,22,24·CCZ8,22,25·CCZ8,22,27·CCZ8,22,28·CCZ8,22,30·CCZ8,22,31·CCZ8,22,32·CCZ8,22,35·CCZ8,23,25·CCZ8,23,27·CCZ8,23,28·CCZ8,23,29·CCZ8,23,32·CCZ8,23,33·CCZ8,23,35·CCZ8,24,26·CCZ8,24,29·CCZ8,24,32·CCZ8,24,33·CCZ8,24,35·CCZ8,25,26·CCZ8,25,29·CCZ8,25,31·CCZ8,25,34·CCZ8,25,35·CCZ8,26,30·CCZ8,26,31·CCZ8,26,32·CCZ8,26,34·CCZ8,26,35·CCZ8,27,33·CCZ8,28,32·CCZ8,28,33·CCZ8,28,35·CCZ8,29,33·CCZ8,29,35·CCZ8,30,31·CCZ8,30,32·CCZ8,30,33·CCZ8,30,35·CCZ8,31,34·CCZ8,31,35·CCZ8,32,34·CCZ8,32,35·CCZ8,33,35·CCZ8,34,35·CCZ9,10,12·CCZ9,10,23·CCZ9,10,27·CCZ9,10,28·CCZ9,10,29·CCZ9,10,31·CCZ9,10,32·CCZ9,10,33·CCZ9,10,34·CCZ9,11,12·CCZ9,11,16·CCZ9,11,17·CCZ9,11,19·CCZ9,11,21·CCZ9,11,27·CCZ9,11,28·CCZ9,11,30·CCZ9,11,31·CCZ9,11,33·CCZ9,11,35·CCZ9,12,13·CCZ9,12,14·CCZ9,12,16·CCZ9,12,18·CCZ9,12,19·CCZ9,12,20·CCZ9,12,21·CCZ9,12,23·CCZ9,12,25·CCZ9,12,26·CCZ9,12,27·CCZ9,12,28·CCZ9,12,30·CCZ9,12,31·CCZ9,12,32·CCZ9,12,33·CCZ9,13,15·CCZ9,13,16·CCZ9,13,18·CCZ9,13,19·CCZ9,13,20·CCZ9,13,22·CCZ9,13,24·CCZ9,13,26·CCZ9,13,29·CCZ9,13,35·CCZ9,14,15·CCZ9,14,16·CCZ9,14,18·CCZ9,14,21·CCZ9,14,23·CCZ9,14,26·CCZ9,14,27·CCZ9,14,29·CCZ9,14,30·CCZ9,14,31·CCZ9,14,32·CCZ9,14,33·CCZ9,15,16·CCZ9,15,19·CCZ9,15,20·CCZ9,15,21·CCZ9,15,28·CCZ9,15,29·CCZ9,15,31·CCZ9,15,32·CCZ9,16,18·CCZ9,16,20·CCZ9,16,21·CCZ9,16,22·CCZ9,16,23·CCZ9,16,25·CCZ9,16,26·CCZ9,16,30·CCZ9,16,33·CCZ9,16,34·CCZ9,17,18·CCZ9,17,23·CCZ9,17,24·CCZ9,17,25·CCZ9,17,26·CCZ9,17,27·CCZ9,17,29·CCZ9,17,30·CCZ9,17,31·CCZ9,17,32·CCZ9,17,34·CCZ9,17,35·CCZ9,18,19·CCZ9,18,20·CCZ9,18,21·CCZ9,18,22·CCZ9,18,23·CCZ9,18,24·CCZ9,18,25·CCZ9,18,28·CCZ9,18,29·CCZ9,18,35·CCZ9,19,22·CCZ9,19,23·CCZ9,19,24·CCZ9,19,27·CCZ9,19,28·CCZ9,19,30·CCZ9,19,31·CCZ9,19,35·CCZ9,20,21·CCZ9,20,26·CCZ9,20,27·CCZ9,20,29·CCZ9,20,30·CCZ9,20,33·CCZ9,20,35·CCZ9,21,25·CCZ9,21,27·CCZ9,21,28·CCZ9,21,29·CCZ9,21,31·CCZ9,21,32·CCZ9,21,34·CCZ9,21,35·CCZ9,22,23·CCZ9,22,24·CCZ9,22,26·CCZ9,22,27·CCZ9,22,28·CCZ9,22,29·CCZ9,22,30·CCZ9,22,31·CCZ9,22,32·CCZ9,22,33·CCZ9,23,27·CCZ9,23,29·CCZ9,23,31·CCZ9,23,32·CCZ9,23,33·CCZ9,24,25·CCZ9,24,28·CCZ9,24,29·CCZ9,24,33·CCZ9,24,35·CCZ9,25,26·CCZ9,25,27·CCZ9,25,30·CCZ9,25,31·CCZ9,25,32·CCZ9,25,33·CCZ9,26,29·CCZ9,26,34·CCZ9,26,35·CCZ9,27,28·CCZ9,27,29·CCZ9,27,30·CCZ9,27,32·CCZ9,27,35·CCZ9,28,29·CCZ9,28,31·CCZ9,28,32·CCZ9,28,33·CCZ9,28,34·CCZ9,29,33·CCZ9,29,35·CCZ9,30,31·CCZ9,30,32·CCZ9,30,33·CCZ9,30,34·CCZ9,31,33·CCZ9,31,35·CCZ9,32,34·CCZ9,32,35·CCZ9,33,35·CCZ10,11,12·CCZ10,11,14·CCZ10,11,17·CCZ10,11,19·CCZ10,11,22·CCZ10,11,23·CCZ10,11,24·CCZ10,11,26·CCZ10,11,27·CCZ10,11,29·CCZ10,11,31·CCZ10,11,33·CCZ10,11,34·CCZ10,12,13·CCZ10,12,18·CCZ10,12,21·CCZ10,12,22·CCZ10,12,24·CCZ10,12,25·CCZ10,12,27·CCZ10,12,29·CCZ10,12,30·CCZ10,12,31·CCZ10,12,33·CCZ10,12,35·CCZ10,13,15·CCZ10,13,16·CCZ10,13,18·CCZ10,13,19·CCZ10,13,24·CCZ10,13,27·CCZ10,13,29·CCZ10,13,30·CCZ10,13,31·CCZ10,13,33·CCZ10,13,34·CCZ10,14,17·CCZ10,14,20·CCZ10,14,25·CCZ10,14,27·CCZ10,14,28·CCZ10,14,29·CCZ10,14,30·CCZ10,14,32·CCZ10,14,33·CCZ10,14,35·CCZ10,15,17·CCZ10,15,20·CCZ10,15,22·CCZ10,15,23·CCZ10,15,24·CCZ10,15,25·CCZ10,15,27·CCZ10,15,28·CCZ10,15,30·CCZ10,15,31·CCZ10,15,35·CCZ10,16,17·CCZ10,16,18·CCZ10,16,20·CCZ10,16,24·CCZ10,16,26·CCZ10,16,27·CCZ10,16,28·CCZ10,16,29·CCZ10,16,30·CCZ10,16,31·CCZ10,16,32·CCZ10,17,21·CCZ10,17,23·CCZ10,17,24·CCZ10,17,27·CCZ10,17,28·CCZ10,17,29·CCZ10,17,30·CCZ10,17,31·CCZ10,17,33·CCZ10,17,34·CCZ10,17,35·CCZ10,18,19·CCZ10,18,20·CCZ10,18,22·CCZ10,18,23·CCZ10,18,24·CCZ10,18,25·CCZ10,18,28·CCZ10,18,29·CCZ10,18,30·CCZ10,18,32·CCZ10,18,33·CCZ10,18,34·CCZ10,19,21·CCZ10,19,22·CCZ10,19,24·CCZ10,19,25·CCZ10,19,29·CCZ10,19,31·CCZ10,19,34·CCZ10,19,35·CCZ10,20,21·CCZ10,20,22·CCZ10,20,24·CCZ10,20,25·CCZ10,20,26·CCZ10,20,28·CCZ10,20,34·CCZ10,21,25·CCZ10,21,26·CCZ10,21,27·CCZ10,21,29·CCZ10,21,30·CCZ10,21,31·CCZ10,21,32·CCZ10,21,34·CCZ10,22,23·CCZ10,22,24·CCZ10,22,27·CCZ10,22,28·CCZ10,22,31·CCZ10,22,32·CCZ10,23,24·CCZ10,23,27·CCZ10,23,28·CCZ10,23,29·CCZ10,23,35·CCZ10,24,27·CCZ10,24,28·CCZ10,24,30·CCZ10,24,33·CCZ10,24,34·CCZ10,24,35·CCZ10,25,32·CCZ10,25,35·CCZ10,26,28·CCZ10,26,31·CCZ10,26,32·CCZ10,27,28·CCZ10,27,29·CCZ10,27,30·CCZ10,27,31·CCZ10,27,33·CCZ10,27,34·CCZ10,27,35·CCZ10,28,29·CCZ10,28,33·CCZ10,28,34·CCZ10,29,30·CCZ10,29,31·CCZ10,29,32·CCZ10,29,35·CCZ10,30,32·CCZ10,30,33·CCZ10,30,34·CCZ10,30,35·CCZ10,31,33·CCZ10,31,34·CCZ10,31,35·CCZ10,33,34·CCZ10,33,35·CCZ11,12,13·CCZ11,12,14·CCZ11,12,15·CCZ11,12,16·CCZ11,12,17·CCZ11,12,19·CCZ11,12,20·CCZ11,12,23·CCZ11,12,25·CCZ11,12,26·CCZ11,12,28·CCZ11,12,29·CCZ11,12,32·CCZ11,12,34·CCZ11,12,35·CCZ11,13,17·CCZ11,13,18·CCZ11,13,19·CCZ11,13,20·CCZ11,13,21·CCZ11,13,22·CCZ11,13,24·CCZ11,13,25·CCZ11,13,28·CCZ11,13,29·CCZ11,13,33·CCZ11,13,34·CCZ11,13,35·CCZ11,14,18·CCZ11,14,20·CCZ11,14,23·CCZ11,14,29·CCZ11,14,32·CCZ11,14,33·CCZ11,14,34·CCZ11,15,17·CCZ11,15,18·CCZ11,15,20·CCZ11,15,21·CCZ11,15,24·CCZ11,15,27·CCZ11,15,29·CCZ11,15,30·CCZ11,15,32·CCZ11,15,33·CCZ11,15,34·CCZ11,16,19·CCZ11,16,20·CCZ11,16,22·CCZ11,16,23·CCZ11,16,25·CCZ11,16,26·CCZ11,16,28·CCZ11,16,29·CCZ11,16,30·CCZ11,16,31·CCZ11,16,32·CCZ11,16,33·CCZ11,16,35·CCZ11,17,21·CCZ11,17,23·CCZ11,17,24·CCZ11,17,25·CCZ11,17,26·CCZ11,17,27·CCZ11,17,30·CCZ11,17,31·CCZ11,17,32·CCZ11,17,34·CCZ11,17,35·CCZ11,18,19·CCZ11,18,20·CCZ11,18,21·CCZ11,18,23·CCZ11,18,25·CCZ11,18,27·CCZ11,18,28·CCZ11,18,29·CCZ11,18,32·CCZ11,18,33·CCZ11,19,20·CCZ11,19,23·CCZ11,19,25·CCZ11,19,28·CCZ11,19,29·CCZ11,19,33·CCZ11,19,34·CCZ11,20,21·CCZ11,20,23·CCZ11,20,24·CCZ11,20,26·CCZ11,20,28·CCZ11,20,30·CCZ11,20,32·CCZ11,20,33·CCZ11,20,34·CCZ11,20,35·CCZ11,21,23·CCZ11,21,26·CCZ11,21,28·CCZ11,21,29·CCZ11,21,32·CCZ11,21,35·CCZ11,22,24·CCZ11,22,26·CCZ11,22,28·CCZ11,22,29·CCZ11,22,34·CCZ11,23,24·CCZ11,23,25·CCZ11,23,26·CCZ11,23,30·CCZ11,23,31·CCZ11,24,28·CCZ11,24,32·CCZ11,24,33·CCZ11,24,34·CCZ11,24,35·CCZ11,25,27·CCZ11,25,28·CCZ11,25,31·CCZ11,25,33·CCZ11,26,29·CCZ11,26,30·CCZ11,26,32·CCZ11,26,33·CCZ11,26,34·CCZ11,27,28·CCZ11,27,31·CCZ11,27,32·CCZ11,27,34·CCZ11,27,35·CCZ11,28,30·CCZ11,28,31·CCZ11,28,32·CCZ11,29,32·CCZ11,29,33·CCZ11,30,31·CCZ11,30,32·CCZ11,30,33·CCZ11,30,34·CCZ11,30,35·CCZ11,31,33·CCZ11,31,35·CCZ11,32,33·CCZ11,32,34·CCZ11,32,35·CCZ11,33,34·CCZ11,33,35·CCZ11,34,35·CCZ12,13,14·CCZ12,13,19·CCZ12,13,20·CCZ12,13,21·CCZ12,13,24·CCZ12,13,26·CCZ12,13,28·CCZ12,13,31·CCZ12,13,32·CCZ12,13,33·CCZ12,13,34·CCZ12,14,16·CCZ12,14,17·CCZ12,14,18·CCZ12,14,20·CCZ12,14,21·CCZ12,14,23·CCZ12,14,26·CCZ12,14,28·CCZ12,14,30·CCZ12,14,31·CCZ12,14,33·CCZ12,14,35·CCZ12,15,17·CCZ12,15,18·CCZ12,15,24·CCZ12,15,26·CCZ12,15,33·CCZ12,16,17·CCZ12,16,18·CCZ12,16,20·CCZ12,16,21·CCZ12,16,22·CCZ12,16,23·CCZ12,16,24·CCZ12,16,25·CCZ12,16,26·CCZ12,16,28·CCZ12,16,30·CCZ12,16,33·CCZ12,16,34·CCZ12,16,35·CCZ12,17,18·CCZ12,17,19·CCZ12,17,21·CCZ12,17,24·CCZ12,17,25·CCZ12,17,26·CCZ12,17,30·CCZ12,17,33·CCZ12,17,34·CCZ12,18,22·CCZ12,18,23·CCZ12,18,25·CCZ12,18,26·CCZ12,18,27·CCZ12,18,29·CCZ12,18,31·CCZ12,18,32·CCZ12,19,24·CCZ12,19,25·CCZ12,19,26·CCZ12,19,27·CCZ12,19,29·CCZ12,19,30·CCZ12,19,35·CCZ12,20,21·CCZ12,20,22·CCZ12,20,23·CCZ12,20,28·CCZ12,20,29·CCZ12,20,30·CCZ12,20,32·CCZ12,20,34·CCZ12,21,22·CCZ12,21,23·CCZ12,21,24·CCZ12,21,26·CCZ12,21,27·CCZ12,21,28·CCZ12,21,29·CCZ12,21,30·CCZ12,21,31·CCZ12,21,32·CCZ12,22,23·CCZ12,22,24·CCZ12,22,26·CCZ12,22,27·CCZ12,22,28·CCZ12,22,29·CCZ12,22,30·CCZ12,22,31·CCZ12,22,32·CCZ12,23,25·CCZ12,23,26·CCZ12,23,27·CCZ12,23,31·CCZ12,23,34·CCZ12,23,35·CCZ12,24,25·CCZ12,24,27·CCZ12,24,29·CCZ12,24,31·CCZ12,24,32·CCZ12,24,33·CCZ12,24,34·CCZ12,25,26·CCZ12,25,27·CCZ12,25,32·CCZ12,25,34·CCZ12,26,30·CCZ12,26,32·CCZ12,26,34·CCZ12,27,28·CCZ12,27,30·CCZ12,27,32·CCZ12,27,33·CCZ12,27,34·CCZ12,27,35·CCZ12,29,30·CCZ12,29,32·CCZ12,29,34·CCZ12,30,35·CCZ12,31,34·CCZ12,32,33·CCZ12,32,34·CCZ12,32,35·CCZ12,33,34·CCZ12,33,35·CCZ12,34,35·CCZ13,14,16·CCZ13,14,20·CCZ13,14,23·CCZ13,14,25·CCZ13,14,26·CCZ13,14,28·CCZ13,14,29·CCZ13,15,17·CCZ13,15,18·CCZ13,15,21·CCZ13,15,22·CCZ13,15,23·CCZ13,15,24·CCZ13,15,25·CCZ13,15,26·CCZ13,15,27·CCZ13,15,28·CCZ13,15,29·CCZ13,15,31·CCZ13,15,33·CCZ13,16,20·CCZ13,16,22·CCZ13,16,23·CCZ13,16,25·CCZ13,16,26·CCZ13,16,27·CCZ13,16,29·CCZ13,16,30·CCZ13,16,32·CCZ13,17,18·CCZ13,17,19·CCZ13,17,21·CCZ13,17,23·CCZ13,17,26·CCZ13,17,29·CCZ13,17,32·CCZ13,18,22·CCZ13,18,23·CCZ13,18,26·CCZ13,18,29·CCZ13,18,32·CCZ13,18,33·CCZ13,18,34·CCZ13,19,22·CCZ13,19,24·CCZ13,19,31·CCZ13,19,32·CCZ13,19,33·CCZ13,19,35·CCZ13,20,21·CCZ13,20,22·CCZ13,20,26·CCZ13,20,28·CCZ13,20,30·CCZ13,20,33·CCZ13,21,23·CCZ13,21,24·CCZ13,21,25·CCZ13,21,26·CCZ13,21,27·CCZ13,21,32·CCZ13,21,33·CCZ13,21,34·CCZ13,22,23·CCZ13,22,24·CCZ13,22,25·CCZ13,22,26·CCZ13,22,28·CCZ13,22,29·CCZ13,22,31·CCZ13,22,32·CCZ13,22,33·CCZ13,22,34·CCZ13,23,27·CCZ13,23,29·CCZ13,23,32·CCZ13,23,34·CCZ13,24,28·CCZ13,24,31·CCZ13,24,33·CCZ13,24,34·CCZ13,24,35·CCZ13,25,29·CCZ13,25,31·CCZ13,25,32·CCZ13,25,34·CCZ13,25,35·CCZ13,26,27·CCZ13,26,31·CCZ13,26,32·CCZ13,26,35·CCZ13,27,28·CCZ13,27,29·CCZ13,27,31·CCZ13,27,32·CCZ13,27,33·CCZ13,27,35·CCZ13,28,29·CCZ13,28,34·CCZ13,29,30·CCZ13,29,31·CCZ13,29,32·CCZ13,29,34·CCZ13,29,35·CCZ13,30,31·CCZ13,30,33·CCZ13,30,35·CCZ13,31,33·CCZ13,31,34·CCZ13,31,35·CCZ14,15,20·CCZ14,15,23·CCZ14,15,24·CCZ14,15,26·CCZ14,15,27·CCZ14,15,28·CCZ14,15,29·CCZ14,15,32·CCZ14,15,33·CCZ14,15,34·CCZ14,16,17·CCZ14,16,18·CCZ14,16,22·CCZ14,16,24·CCZ14,16,29·CCZ14,16,32·CCZ14,16,33·CCZ14,16,35·CCZ14,17,18·CCZ14,17,19·CCZ14,17,20·CCZ14,17,21·CCZ14,17,22·CCZ14,17,23·CCZ14,17,26·CCZ14,17,31·CCZ14,17,32·CCZ14,17,34·CCZ14,18,19·CCZ14,18,22·CCZ14,18,24·CCZ14,18,27·CCZ14,18,28·CCZ14,18,31·CCZ14,18,32·CCZ14,19,20·CCZ14,19,21·CCZ14,19,24·CCZ14,19,25·CCZ14,19,26·CCZ14,19,27·CCZ14,19,29·CCZ14,19,32·CCZ14,19,35·CCZ14,20,21·CCZ14,20,24·CCZ14,20,28·CCZ14,20,32·CCZ14,21,22·CCZ14,21,24·CCZ14,21,25·CCZ14,21,27·CCZ14,21,29·CCZ14,21,31·CCZ14,21,32·CCZ14,22,24·CCZ14,22,27·CCZ14,22,28·CCZ14,22,30·CCZ14,22,31·CCZ14,22,32·CCZ14,22,35·CCZ14,23,24·CCZ14,23,26·CCZ14,23,27·CCZ14,23,33·CCZ14,23,34·CCZ14,24,27·CCZ14,24,30·CCZ14,24,32·CCZ14,24,33·CCZ14,25,26·CCZ14,25,28·CCZ14,25,31·CCZ14,25,32·CCZ14,25,33·CCZ14,25,34·CCZ14,26,27·CCZ14,26,28·CCZ14,26,30·CCZ14,26,31·CCZ14,26,33·CCZ14,26,35·CCZ14,27,28·CCZ14,27,30·CCZ14,27,33·CCZ14,27,35·CCZ14,28,33·CCZ14,29,30·CCZ14,29,32·CCZ14,29,34·CCZ14,29,35·CCZ14,30,32·CCZ14,30,33·CCZ14,30,34·CCZ14,30,35·CCZ14,31,35·CCZ14,32,35·CCZ14,34,35·CCZ15,16,17·CCZ15,16,19·CCZ15,16,22·CCZ15,16,23·CCZ15,16,25·CCZ15,16,27·CCZ15,16,28·CCZ15,16,32·CCZ15,16,33·CCZ15,17,18·CCZ15,17,20·CCZ15,17,21·CCZ15,17,26·CCZ15,17,32·CCZ15,17,33·CCZ15,18,20·CCZ15,18,23·CCZ15,18,26·CCZ15,18,27·CCZ15,18,28·CCZ15,18,30·CCZ15,18,31·CCZ15,18,32·CCZ15,18,33·CCZ15,18,35·CCZ15,19,21·CCZ15,19,23·CCZ15,19,25·CCZ15,19,26·CCZ15,19,27·CCZ15,19,29·CCZ15,19,31·CCZ15,19,32·CCZ15,19,33·CCZ15,19,34·CCZ15,19,35·CCZ15,20,21·CCZ15,20,22·CCZ15,20,23·CCZ15,20,25·CCZ15,20,27·CCZ15,20,28·CCZ15,20,30·CCZ15,20,31·CCZ15,20,32·CCZ15,20,34·CCZ15,20,35·CCZ15,21,22·CCZ15,21,23·CCZ15,21,24·CCZ15,21,25·CCZ15,21,26·CCZ15,21,27·CCZ15,21,28·CCZ15,21,30·CCZ15,21,31·CCZ15,21,32·CCZ15,21,34·CCZ15,22,24·CCZ15,22,28·CCZ15,22,30·CCZ15,22,34·CCZ15,23,25·CCZ15,23,28·CCZ15,23,29·CCZ15,23,30·CCZ15,23,31·CCZ15,23,32·CCZ15,23,34·CCZ15,24,26·CCZ15,24,27·CCZ15,24,28·CCZ15,24,29·CCZ15,24,31·CCZ15,25,26·CCZ15,25,27·CCZ15,25,30·CCZ15,26,31·CCZ15,26,33·CCZ15,26,34·CCZ15,26,35·CCZ15,27,31·CCZ15,27,32·CCZ15,27,33·CCZ15,27,34·CCZ15,28,33·CCZ15,28,35·CCZ15,29,30·CCZ15,29,33·CCZ15,30,31·CCZ15,30,32·CCZ15,30,33·CCZ15,30,34·CCZ15,31,33·CCZ15,32,33·CCZ15,33,35·CCZ16,17,19·CCZ16,17,21·CCZ16,17,23·CCZ16,17,24·CCZ16,17,25·CCZ16,17,26·CCZ16,17,27·CCZ16,17,28·CCZ16,17,31·CCZ16,17,33·CCZ16,17,34·CCZ16,18,19·CCZ16,18,20·CCZ16,18,21·CCZ16,18,24·CCZ16,18,25·CCZ16,18,27·CCZ16,18,29·CCZ16,18,30·CCZ16,18,32·CCZ16,18,33·CCZ16,19,23·CCZ16,19,24·CCZ16,19,25·CCZ16,19,27·CCZ16,19,28·CCZ16,19,29·CCZ16,19,30·CCZ16,19,32·CCZ16,19,33·CCZ16,19,34·CCZ16,19,35·CCZ16,20,23·CCZ16,20,25·CCZ16,20,26·CCZ16,20,32·CCZ16,21,22·CCZ16,21,23·CCZ16,21,25·CCZ16,21,26·CCZ16,21,27·CCZ16,21,28·CCZ16,21,31·CCZ16,21,33·CCZ16,21,34·CCZ16,21,35·CCZ16,22,23·CCZ16,22,25·CCZ16,22,26·CCZ16,22,27·CCZ16,22,29·CCZ16,22,31·CCZ16,22,33·CCZ16,22,35·CCZ16,23,25·CCZ16,23,26·CCZ16,23,28·CCZ16,23,30·CCZ16,23,33·CCZ16,23,35·CCZ16,24,27·CCZ16,24,30·CCZ16,24,34·CCZ16,24,35·CCZ16,25,27·CCZ16,25,29·CCZ16,25,30·CCZ16,25,31·CCZ16,25,32·CCZ16,25,33·CCZ16,25,35·CCZ16,26,28·CCZ16,26,30·CCZ16,26,34·CCZ16,27,28·CCZ16,27,31·CCZ16,27,35·CCZ16,28,30·CCZ16,29,31·CCZ16,29,34·CCZ16,29,35·CCZ16,30,31·CCZ16,30,33·CCZ16,30,35·CCZ16,31,33·CCZ16,32,34·CCZ16,32,35·CCZ16,33,34·CCZ16,33,35·CCZ16,34,35·CCZ17,18,19·CCZ17,18,26·CCZ17,18,29·CCZ17,18,30·CCZ17,18,32·CCZ17,18,35·CCZ17,19,21·CCZ17,19,22·CCZ17,19,24·CCZ17,19,27·CCZ17,19,30·CCZ17,19,33·CCZ17,19,34·CCZ17,20,22·CCZ17,20,23·CCZ17,20,24·CCZ17,20,25·CCZ17,20,26·CCZ17,20,28·CCZ17,20,31·CCZ17,20,33·CCZ17,21,23·CCZ17,21,24·CCZ17,21,25·CCZ17,21,26·CCZ17,21,28·CCZ17,21,29·CCZ17,21,30·CCZ17,21,31·CCZ17,21,32·CCZ17,21,34·CCZ17,21,35·CCZ17,22,27·CCZ17,22,28·CCZ17,22,31·CCZ17,22,33·CCZ17,22,34·CCZ17,23,24·CCZ17,23,25·CCZ17,23,26·CCZ17,23,27·CCZ17,23,28·CCZ17,23,31·CCZ17,23,33·CCZ17,23,35·CCZ17,24,25·CCZ17,24,26·CCZ17,24,28·CCZ17,24,31·CCZ17,24,32·CCZ17,24,33·CCZ17,25,26·CCZ17,25,27·CCZ17,25,30·CCZ17,25,31·CCZ17,25,34·CCZ17,25,35·CCZ17,26,27·CCZ17,26,28·CCZ17,26,29·CCZ17,26,30·CCZ17,26,31·CCZ17,26,35·CCZ17,27,33·CCZ17,27,34·CCZ17,27,35·CCZ17,28,32·CCZ17,28,34·CCZ17,28,35·CCZ17,29,31·CCZ17,29,32·CCZ17,29,33·CCZ17,30,34·CCZ17,31,33·CCZ17,31,34·CCZ17,32,33·CCZ17,32,34·CCZ17,33,35·CCZ17,34,35·CCZ18,19,20·CCZ18,19,22·CCZ18,19,24·CCZ18,19,27·CCZ18,19,30·CCZ18,19,31·CCZ18,19,33·CCZ18,19,35·CCZ18,20,21·CCZ18,20,25·CCZ18,20,27·CCZ18,20,28·CCZ18,20,29·CCZ18,20,31·CCZ18,20,32·CCZ18,20,33·CCZ18,21,24·CCZ18,21,30·CCZ18,21,32·CCZ18,21,35·CCZ18,22,23·CCZ18,22,25·CCZ18,22,27·CCZ18,22,28·CCZ18,22,33·CCZ18,22,35·CCZ18,23,25·CCZ18,23,26·CCZ18,23,27·CCZ18,23,29·CCZ18,23,31·CCZ18,23,33·CCZ18,23,35·CCZ18,24,27·CCZ18,24,32·CCZ18,24,33·CCZ18,24,34·CCZ18,25,26·CCZ18,25,30·CCZ18,25,33·CCZ18,25,34·CCZ18,26,29·CCZ18,26,30·CCZ18,26,32·CCZ18,26,33·CCZ18,26,34·CCZ18,27,28·CCZ18,27,32·CCZ18,28,29·CCZ18,28,30·CCZ18,29,32·CCZ18,29,33·CCZ18,29,34·CCZ18,29,35·CCZ18,30,31·CCZ18,30,34·CCZ18,31,32·CCZ18,32,34·CCZ18,33,34·CCZ18,33,35·CCZ18,34,35·CCZ19,20,22·CCZ19,20,26·CCZ19,20,27·CCZ19,20,31·CCZ19,20,32·CCZ19,20,33·CCZ19,21,23·CCZ19,21,27·CCZ19,21,28·CCZ19,21,30·CCZ19,21,32·CCZ19,21,34·CCZ19,22,24·CCZ19,22,30·CCZ19,22,32·CCZ19,22,35·CCZ19,23,25·CCZ19,23,26·CCZ19,23,29·CCZ19,23,30·CCZ19,23,32·CCZ19,24,25·CCZ19,24,28·CCZ19,24,30·CCZ19,24,31·CCZ19,24,33·CCZ19,24,35·CCZ19,25,27·CCZ19,25,29·CCZ19,25,34·CCZ19,26,31·CCZ19,26,32·CCZ19,26,34·CCZ19,27,32·CCZ19,27,33·CCZ19,27,34·CCZ19,28,34·CCZ19,29,30·CCZ19,29,32·CCZ19,29,34·CCZ19,29,35·CCZ19,30,32·CCZ19,30,34·CCZ19,30,35·CCZ19,31,32·CCZ19,31,34·CCZ19,32,34·CCZ19,33,34·CCZ20,21,22·CCZ20,21,29·CCZ20,21,30·CCZ20,21,33·CCZ20,21,34·CCZ20,21,35·CCZ20,22,23·CCZ20,22,24·CCZ20,22,25·CCZ20,22,26·CCZ20,22,34·CCZ20,22,35·CCZ20,23,24·CCZ20,23,28·CCZ20,23,32·CCZ20,23,33·CCZ20,24,25·CCZ20,24,26·CCZ20,24,28·CCZ20,24,31·CCZ20,24,34·CCZ20,25,29·CCZ20,25,30·CCZ20,25,31·CCZ20,25,33·CCZ20,26,29·CCZ20,26,31·CCZ20,26,32·CCZ20,26,33·CCZ20,26,35·CCZ20,27,30·CCZ20,27,34·CCZ20,27,35·CCZ20,28,30·CCZ20,28,31·CCZ20,28,32·CCZ20,28,33·CCZ20,28,34·CCZ20,29,30·CCZ20,29,31·CCZ20,29,33·CCZ20,29,35·CCZ20,30,33·CCZ20,30,34·CCZ20,31,32·CCZ20,31,33·CCZ20,32,34·CCZ20,32,35·CCZ20,33,34·CCZ20,33,35·CCZ20,34,35·CCZ21,22,25·CCZ21,22,28·CCZ21,22,30·CCZ21,22,31·CCZ21,22,32·CCZ21,22,34·CCZ21,22,35·CCZ21,23,24·CCZ21,23,25·CCZ21,23,27·CCZ21,23,30·CCZ21,23,31·CCZ21,23,32·CCZ21,23,33·CCZ21,24,31·CCZ21,24,32·CCZ21,24,33·CCZ21,24,34·CCZ21,25,29·CCZ21,25,30·CCZ21,25,31·CCZ21,26,27·CCZ21,26,28·CCZ21,26,35·CCZ21,27,28·CCZ21,27,30·CCZ21,27,31·CCZ21,27,32·CCZ21,27,35·CCZ21,28,30·CCZ21,28,31·CCZ21,28,34·CCZ21,28,35·CCZ21,29,30·CCZ21,29,31·CCZ21,29,34·CCZ21,29,35·CCZ21,30,33·CCZ21,31,32·CCZ21,32,34·CCZ21,32,35·CCZ21,33,35·CCZ21,34,35·CCZ22,23,24·CCZ22,23,27·CCZ22,23,29·CCZ22,23,30·CCZ22,23,34·CCZ22,24,25·CCZ22,24,26·CCZ22,24,29·CCZ22,24,30·CCZ22,24,31·CCZ22,24,32·CCZ22,24,33·CCZ22,24,35·CCZ22,25,26·CCZ22,25,27·CCZ22,25,35·CCZ22,26,27·CCZ22,26,28·CCZ22,26,33·CCZ22,26,34·CCZ22,26,35·CCZ22,27,28·CCZ22,27,29·CCZ22,27,34·CCZ22,28,29·CCZ22,28,31·CCZ22,28,32·CCZ22,28,35·CCZ22,29,30·CCZ22,29,31·CCZ22,29,33·CCZ22,29,34·CCZ22,29,35·CCZ22,30,31·CCZ22,30,32·CCZ22,31,32·CCZ22,31,33·CCZ22,31,34·CCZ22,31,35·CCZ22,32,33·CCZ22,32,35·CCZ22,33,34·CCZ22,33,35·CCZ23,24,25·CCZ23,24,26·CCZ23,24,27·CCZ23,24,28·CCZ23,24,30·CCZ23,24,32·CCZ23,24,35·CCZ23,25,27·CCZ23,25,29·CCZ23,25,31·CCZ23,25,32·CCZ23,25,33·CCZ23,26,28·CCZ23,26,31·CCZ23,26,32·CCZ23,26,33·CCZ23,27,28·CCZ23,27,29·CCZ23,27,31·CCZ23,27,35·CCZ23,28,31·CCZ23,29,30·CCZ23,29,31·CCZ23,29,32·CCZ23,29,35·CCZ23,30,32·CCZ23,30,33·CCZ23,32,34·CCZ23,32,35·CCZ23,33,34·CCZ23,33,35·CCZ23,34,35·CCZ24,25,26·CCZ24,25,28·CCZ24,25,29·CCZ24,25,30·CCZ24,25,31·CCZ24,25,33·CCZ24,25,35·CCZ24,26,29·CCZ24,26,31·CCZ24,26,33·CCZ24,26,34·CCZ24,27,30·CCZ24,27,32·CCZ24,27,33·CCZ24,28,29·CCZ24,28,33·CCZ24,28,35·CCZ24,29,30·CCZ24,29,33·CCZ24,29,34·CCZ24,30,35·CCZ24,31,32·CCZ24,31,35·CCZ24,32,33·CCZ24,32,35·CCZ24,33,34·CCZ24,33,35·CCZ24,34,35·CCZ25,26,29·CCZ25,26,30·CCZ25,26,31·CCZ25,26,33·CCZ25,26,34·CCZ25,27,28·CCZ25,27,29·CCZ25,27,30·CCZ25,27,31·CCZ25,27,33·CCZ25,27,34·CCZ25,27,35·CCZ25,28,29·CCZ25,28,33·CCZ25,28,34·CCZ25,28,35·CCZ25,29,30·CCZ25,29,31·CCZ25,29,32·CCZ25,30,32·CCZ25,30,33·CCZ25,30,34·CCZ25,30,35·CCZ25,31,33·CCZ25,31,35·CCZ25,32,33·CCZ25,32,34·CCZ25,32,35·CCZ25,34,35·CCZ26,27,29·CCZ26,27,30·CCZ26,27,32·CCZ26,27,33·CCZ26,27,34·CCZ26,27,35·CCZ26,28,30·CCZ26,28,31·CCZ26,28,33·CCZ26,28,34·CCZ26,29,31·CCZ26,29,35·CCZ26,30,34·CCZ26,31,35·CCZ26,32,33·CCZ26,32,34·CCZ26,34,35·CCZ27,28,29·CCZ27,28,32·CCZ27,28,34·CCZ27,29,31·CCZ27,29,32·CCZ27,29,35·CCZ27,30,31·CCZ27,30,35·CCZ27,31,33·CCZ27,31,35·CCZ27,32,33·CCZ27,32,35·CCZ27,34,35·CCZ28,29,30·CCZ28,29,32·CCZ28,29,33·CCZ28,30,32·CCZ28,30,35·CCZ28,31,35·CCZ28,32,33·CCZ28,32,34·CCZ28,33,34·CCZ29,30,31·CCZ29,30,32·CCZ29,30,34·CCZ29,31,32·CCZ29,32,35·CCZ29,33,34·CCZ29,33,35·CCZ29,34,35·CCZ30,31,33·CCZ30,32,33·CCZ30,32,34·CCZ30,32,35·CCZ30,33,35·CCZ31,32,33·CCZ31,32,34·CCZ31,32,35·CCZ32,33,34·CCZ32,34,35·CCZ33,34,35
+### 853. `[[496,36,4]]` — CCZ0,1,2·CCZ0,1,7·CCZ0,1,8·CCZ0,1,9·CCZ0,1,11·CCZ0,1,12·CCZ0,1,13·CCZ0,1,14·CCZ0,1,15·CCZ0,1,17·CCZ0,1,18·CCZ0,1,21·CCZ0,1,22·CCZ0,1,25·CCZ0,1,26·CCZ0,1,27·CCZ0,1,28·CCZ0,1,30·CCZ0,1,33·CCZ0,1,35·CCZ0,2,6·CCZ0,2,7·CCZ0,2,11·CCZ0,2,14·CCZ0,2,17·CCZ0,2,18·CCZ0,2,21·CCZ0,2,24·CCZ0,2,25·CCZ0,2,26·CCZ0,2,27·CCZ0,2,28·CCZ0,2,31·CCZ0,3,5·CCZ0,3,6·CCZ0,3,7·CCZ0,3,8·CCZ0,3,9·CCZ0,3,10·CCZ0,3,16·CCZ0,3,17·CCZ0,3,18·CCZ0,3,19·CCZ0,3,20·CCZ0,3,22·CCZ0,3,23·CCZ0,3,25·CCZ0,3,26·CCZ0,3,29·CCZ0,3,33·CCZ0,4,5·CCZ0,4,6·CCZ0,4,7·CCZ0,4,8·CCZ0,4,10·CCZ0,4,11·CCZ0,4,14·CCZ0,4,15·CCZ0,4,18·CCZ0,4,19·CCZ0,4,20·CCZ0,4,22·CCZ0,4,23·CCZ0,4,25·CCZ0,4,26·CCZ0,4,27·CCZ0,4,28·CCZ0,4,29·CCZ0,4,31·CCZ0,4,32·CCZ0,4,35·CCZ0,5,6·CCZ0,5,7·CCZ0,5,8·CCZ0,5,9·CCZ0,5,10·CCZ0,5,12·CCZ0,5,13·CCZ0,5,15·CCZ0,5,16·CCZ0,5,19·CCZ0,5,21·CCZ0,5,24·CCZ0,5,26·CCZ0,5,27·CCZ0,5,30·CCZ0,5,31·CCZ0,5,33·CCZ0,6,11·CCZ0,6,12·CCZ0,6,13·CCZ0,6,14·CCZ0,6,17·CCZ0,6,18·CCZ0,6,20·CCZ0,6,21·CCZ0,6,25·CCZ0,6,27·CCZ0,6,28·CCZ0,6,30·CCZ0,6,31·CCZ0,6,34·CCZ0,6,35·CCZ0,7,13·CCZ0,7,14·CCZ0,7,15·CCZ0,7,16·CCZ0,7,19·CCZ0,7,20·CCZ0,7,21·CCZ0,7,22·CCZ0,7,25·CCZ0,7,29·CCZ0,7,31·CCZ0,7,32·CCZ0,7,33·CCZ0,7,35·CCZ0,8,12·CCZ0,8,13·CCZ0,8,18·CCZ0,8,20·CCZ0,8,23·CCZ0,8,24·CCZ0,8,25·CCZ0,8,27·CCZ0,8,34·CCZ0,8,35·CCZ0,9,11·CCZ0,9,12·CCZ0,9,13·CCZ0,9,14·CCZ0,9,15·CCZ0,9,21·CCZ0,9,24·CCZ0,9,25·CCZ0,9,26·CCZ0,9,28·CCZ0,9,29·CCZ0,9,30·CCZ0,9,33·CCZ0,9,35·CCZ0,10,12·CCZ0,10,13·CCZ0,10,15·CCZ0,10,17·CCZ0,10,18·CCZ0,10,20·CCZ0,10,21·CCZ0,10,22·CCZ0,10,23·CCZ0,10,24·CCZ0,10,25·CCZ0,10,27·CCZ0,10,29·CCZ0,10,30·CCZ0,10,31·CCZ0,11,14·CCZ0,11,15·CCZ0,11,16·CCZ0,11,17·CCZ0,11,19·CCZ0,11,20·CCZ0,11,23·CCZ0,11,24·CCZ0,11,25·CCZ0,11,27·CCZ0,11,29·CCZ0,11,32·CCZ0,12,14·CCZ0,12,15·CCZ0,12,16·CCZ0,12,17·CCZ0,12,18·CCZ0,12,20·CCZ0,12,21·CCZ0,12,22·CCZ0,12,24·CCZ0,12,25·CCZ0,12,26·CCZ0,12,29·CCZ0,12,31·CCZ0,12,33·CCZ0,12,34·CCZ0,12,35·CCZ0,13,15·CCZ0,13,16·CCZ0,13,18·CCZ0,13,19·CCZ0,13,20·CCZ0,13,21·CCZ0,13,23·CCZ0,13,25·CCZ0,13,26·CCZ0,13,30·CCZ0,13,31·CCZ0,13,33·CCZ0,13,34·CCZ0,13,35·CCZ0,14,15·CCZ0,14,18·CCZ0,14,19·CCZ0,14,20·CCZ0,14,21·CCZ0,14,22·CCZ0,14,25·CCZ0,14,28·CCZ0,14,30·CCZ0,14,31·CCZ0,14,33·CCZ0,14,35·CCZ0,15,19·CCZ0,15,21·CCZ0,15,22·CCZ0,15,23·CCZ0,15,25·CCZ0,15,28·CCZ0,15,29·CCZ0,15,32·CCZ0,15,35·CCZ0,16,19·CCZ0,16,23·CCZ0,16,25·CCZ0,16,26·CCZ0,16,28·CCZ0,16,29·CCZ0,16,30·CCZ0,16,31·CCZ0,16,33·CCZ0,16,34·CCZ0,17,18·CCZ0,17,20·CCZ0,17,21·CCZ0,17,23·CCZ0,17,24·CCZ0,17,25·CCZ0,17,26·CCZ0,17,28·CCZ0,17,31·CCZ0,17,32·CCZ0,17,35·CCZ0,18,22·CCZ0,18,24·CCZ0,18,26·CCZ0,18,29·CCZ0,18,30·CCZ0,18,31·CCZ0,18,32·CCZ0,18,35·CCZ0,19,20·CCZ0,19,25·CCZ0,19,28·CCZ0,19,32·CCZ0,19,33·CCZ0,19,35·CCZ0,20,21·CCZ0,20,24·CCZ0,20,26·CCZ0,20,28·CCZ0,20,30·CCZ0,20,32·CCZ0,20,35·CCZ0,21,24·CCZ0,21,29·CCZ0,21,30·CCZ0,21,32·CCZ0,21,33·CCZ0,21,34·CCZ0,21,35·CCZ0,22,23·CCZ0,22,24·CCZ0,22,26·CCZ0,22,29·CCZ0,22,31·CCZ0,22,32·CCZ0,22,33·CCZ0,22,34·CCZ0,22,35·CCZ0,23,25·CCZ0,23,28·CCZ0,23,29·CCZ0,23,31·CCZ0,23,33·CCZ0,23,34·CCZ0,23,35·CCZ0,24,28·CCZ0,24,29·CCZ0,24,30·CCZ0,24,31·CCZ0,24,32·CCZ0,24,35·CCZ0,25,26·CCZ0,25,27·CCZ0,25,28·CCZ0,25,33·CCZ0,26,29·CCZ0,26,31·CCZ0,26,32·CCZ0,26,33·CCZ0,26,35·CCZ0,27,28·CCZ0,27,29·CCZ0,27,30·CCZ0,27,32·CCZ0,27,33·CCZ0,27,34·CCZ0,27,35·CCZ0,28,29·CCZ0,28,32·CCZ0,29,30·CCZ0,29,31·CCZ0,29,35·CCZ0,30,31·CCZ0,30,35·CCZ0,31,33·CCZ0,31,34·CCZ0,31,35·CCZ0,32,33·CCZ0,32,34·CCZ1,2,3·CCZ1,2,4·CCZ1,2,6·CCZ1,2,11·CCZ1,2,12·CCZ1,2,13·CCZ1,2,15·CCZ1,2,16·CCZ1,2,18·CCZ1,2,19·CCZ1,2,20·CCZ1,2,22·CCZ1,2,23·CCZ1,2,24·CCZ1,2,25·CCZ1,2,26·CCZ1,2,27·CCZ1,2,28·CCZ1,2,30·CCZ1,2,31·CCZ1,2,32·CCZ1,3,4·CCZ1,3,6·CCZ1,3,9·CCZ1,3,11·CCZ1,3,12·CCZ1,3,14·CCZ1,3,18·CCZ1,3,20·CCZ1,3,22·CCZ1,3,23·CCZ1,3,24·CCZ1,3,25·CCZ1,3,28·CCZ1,3,30·CCZ1,3,33·CCZ1,3,34·CCZ1,4,8·CCZ1,4,9·CCZ1,4,10·CCZ1,4,11·CCZ1,4,12·CCZ1,4,14·CCZ1,4,15·CCZ1,4,16·CCZ1,4,17·CCZ1,4,19·CCZ1,4,21·CCZ1,4,24·CCZ1,4,25·CCZ1,4,27·CCZ1,4,31·CCZ1,4,32·CCZ1,4,35·CCZ1,5,6·CCZ1,5,8·CCZ1,5,9·CCZ1,5,11·CCZ1,5,12·CCZ1,5,14·CCZ1,5,20·CCZ1,5,22·CCZ1,5,23·CCZ1,5,26·CCZ1,5,29·CCZ1,5,30·CCZ1,5,32·CCZ1,5,33·CCZ1,5,34·CCZ1,6,7·CCZ1,6,9·CCZ1,6,10·CCZ1,6,11·CCZ1,6,12·CCZ1,6,20·CCZ1,6,23·CCZ1,6,27·CCZ1,6,29·CCZ1,6,34·CCZ1,6,35·CCZ1,7,9·CCZ1,7,10·CCZ1,7,13·CCZ1,7,14·CCZ1,7,17·CCZ1,7,20·CCZ1,7,21·CCZ1,7,22·CCZ1,7,23·CCZ1,7,24·CCZ1,7,25·CCZ1,7,29·CCZ1,7,30·CCZ1,7,32·CCZ1,7,35·CCZ1,8,9·CCZ1,8,10·CCZ1,8,16·CCZ1,8,17·CCZ1,8,19·CCZ1,8,20·CCZ1,8,21·CCZ1,8,22·CCZ1,8,23·CCZ1,8,24·CCZ1,8,26·CCZ1,8,27·CCZ1,8,30·CCZ1,8,31·CCZ1,9,11·CCZ1,9,12·CCZ1,9,13·CCZ1,9,14·CCZ1,9,17·CCZ1,9,18·CCZ1,9,21·CCZ1,9,22·CCZ1,9,26·CCZ1,9,27·CCZ1,9,28·CCZ1,9,29·CCZ1,9,30·CCZ1,9,34·CCZ1,10,13·CCZ1,10,15·CCZ1,10,17·CCZ1,10,20·CCZ1,10,21·CCZ1,10,23·CCZ1,10,24·CCZ1,10,26·CCZ1,10,27·CCZ1,10,34·CCZ1,10,35·CCZ1,11,15·CCZ1,11,25·CCZ1,11,29·CCZ1,11,33·CCZ1,11,34·CCZ1,11,35·CCZ1,12,15·CCZ1,12,25·CCZ1,12,29·CCZ1,12,33·CCZ1,12,34·CCZ1,12,35·CCZ1,13,14·CCZ1,13,15·CCZ1,13,18·CCZ1,13,22·CCZ1,13,24·CCZ1,13,27·CCZ1,13,28·CCZ1,13,30·CCZ1,13,34·CCZ1,14,17·CCZ1,14,18·CCZ1,14,20·CCZ1,14,21·CCZ1,14,23·CCZ1,14,27·CCZ1,14,28·CCZ1,14,32·CCZ1,14,33·CCZ1,15,17·CCZ1,15,18·CCZ1,15,21·CCZ1,15,28·CCZ1,15,29·CCZ1,15,32·CCZ1,15,33·CCZ1,15,34·CCZ1,15,35·CCZ1,16,18·CCZ1,16,24·CCZ1,16,25·CCZ1,16,26·CCZ1,16,28·CCZ1,16,29·CCZ1,16,32·CCZ1,17,22·CCZ1,17,25·CCZ1,17,26·CCZ1,17,27·CCZ1,17,29·CCZ1,17,30·CCZ1,17,32·CCZ1,17,34·CCZ1,18,19·CCZ1,18,26·CCZ1,18,27·CCZ1,18,31·CCZ1,18,32·CCZ1,18,33·CCZ1,18,34·CCZ1,19,24·CCZ1,19,25·CCZ1,19,26·CCZ1,19,28·CCZ1,19,29·CCZ1,19,32·CCZ1,20,22·CCZ1,20,26·CCZ1,20,27·CCZ1,20,30·CCZ1,20,32·CCZ1,20,33·CCZ1,20,35·CCZ1,21,22·CCZ1,21,25·CCZ1,21,26·CCZ1,21,27·CCZ1,21,29·CCZ1,21,30·CCZ1,21,32·CCZ1,21,34·CCZ1,22,23·CCZ1,22,24·CCZ1,22,25·CCZ1,22,26·CCZ1,22,27·CCZ1,22,29·CCZ1,22,33·CCZ1,23,26·CCZ1,23,27·CCZ1,23,30·CCZ1,23,32·CCZ1,23,33·CCZ1,23,35·CCZ1,24,25·CCZ1,24,29·CCZ1,24,30·CCZ1,24,31·CCZ1,24,33·CCZ1,25,26·CCZ1,25,29·CCZ1,25,30·CCZ1,25,31·CCZ1,25,34·CCZ1,25,35·CCZ1,26,27·CCZ1,26,28·CCZ1,26,29·CCZ1,26,30·CCZ1,26,31·CCZ1,26,32·CCZ1,27,28·CCZ1,27,30·CCZ1,27,35·CCZ1,28,31·CCZ1,28,32·CCZ1,28,33·CCZ1,28,34·CCZ1,29,30·CCZ1,29,31·CCZ1,29,33·CCZ1,30,33·CCZ1,31,32·CCZ1,32,34·CCZ1,33,35·CCZ2,3,4·CCZ2,3,5·CCZ2,3,6·CCZ2,3,7·CCZ2,3,9·CCZ2,3,11·CCZ2,3,12·CCZ2,3,13·CCZ2,3,14·CCZ2,3,15·CCZ2,3,16·CCZ2,3,17·CCZ2,3,19·CCZ2,3,24·CCZ2,3,25·CCZ2,3,27·CCZ2,3,28·CCZ2,3,29·CCZ2,4,5·CCZ2,4,7·CCZ2,4,8·CCZ2,4,16·CCZ2,4,18·CCZ2,4,23·CCZ2,4,31·CCZ2,4,32·CCZ2,4,33·CCZ2,4,34·CCZ2,5,7·CCZ2,5,8·CCZ2,5,9·CCZ2,5,10·CCZ2,5,11·CCZ2,5,12·CCZ2,5,13·CCZ2,5,17·CCZ2,5,19·CCZ2,5,20·CCZ2,5,21·CCZ2,5,23·CCZ2,5,27·CCZ2,5,28·CCZ2,5,29·CCZ2,5,30·CCZ2,5,33·CCZ2,5,34·CCZ2,5,35·CCZ2,6,8·CCZ2,6,9·CCZ2,6,10·CCZ2,6,12·CCZ2,6,16·CCZ2,6,17·CCZ2,6,19·CCZ2,6,21·CCZ2,6,22·CCZ2,6,23·CCZ2,6,30·CCZ2,6,31·CCZ2,6,32·CCZ2,6,33·CCZ2,7,8·CCZ2,7,10·CCZ2,7,11·CCZ2,7,13·CCZ2,7,17·CCZ2,7,18·CCZ2,7,21·CCZ2,7,22·CCZ2,7,23·CCZ2,7,27·CCZ2,7,28·CCZ2,7,31·CCZ2,7,32·CCZ2,7,33·CCZ2,8,10·CCZ2,8,11·CCZ2,8,12·CCZ2,8,13·CCZ2,8,16·CCZ2,8,22·CCZ2,8,23·CCZ2,8,26·CCZ2,8,27·CCZ2,8,28·CCZ2,8,30·CCZ2,8,32·CCZ2,8,33·CCZ2,8,35·CCZ2,9,10·CCZ2,9,11·CCZ2,9,14·CCZ2,9,16·CCZ2,9,21·CCZ2,9,22·CCZ2,9,23·CCZ2,9,24·CCZ2,9,26·CCZ2,9,30·CCZ2,9,31·CCZ2,9,32·CCZ2,9,34·CCZ2,10,12·CCZ2,10,13·CCZ2,10,17·CCZ2,10,18·CCZ2,10,20·CCZ2,10,21·CCZ2,10,22·CCZ2,10,25·CCZ2,10,26·CCZ2,10,27·CCZ2,10,28·CCZ2,10,29·CCZ2,10,30·CCZ2,10,35·CCZ2,11,13·CCZ2,11,14·CCZ2,11,17·CCZ2,11,20·CCZ2,11,22·CCZ2,11,25·CCZ2,11,29·CCZ2,11,30·CCZ2,11,31·CCZ2,11,33·CCZ2,11,34·CCZ2,11,35·CCZ2,12,14·CCZ2,12,15·CCZ2,12,16·CCZ2,12,20·CCZ2,12,21·CCZ2,12,23·CCZ2,12,24·CCZ2,12,25·CCZ2,12,30·CCZ2,12,33·CCZ2,12,34·CCZ2,12,35·CCZ2,13,15·CCZ2,13,17·CCZ2,13,18·CCZ2,13,19·CCZ2,13,21·CCZ2,13,24·CCZ2,13,25·CCZ2,13,26·CCZ2,13,27·CCZ2,13,28·CCZ2,13,31·CCZ2,13,32·CCZ2,13,33·CCZ2,13,35·CCZ2,14,15·CCZ2,14,16·CCZ2,14,19·CCZ2,14,23·CCZ2,14,25·CCZ2,14,26·CCZ2,14,29·CCZ2,14,30·CCZ2,14,31·CCZ2,14,32·CCZ2,15,16·CCZ2,15,20·CCZ2,15,22·CCZ2,15,24·CCZ2,15,25·CCZ2,15,27·CCZ2,15,29·CCZ2,15,30·CCZ2,15,31·CCZ2,15,33·CCZ2,15,34·CCZ2,15,35·CCZ2,16,17·CCZ2,16,18·CCZ2,16,19·CCZ2,16,21·CCZ2,16,23·CCZ2,16,24·CCZ2,16,25·CCZ2,16,27·CCZ2,16,34·CCZ2,16,35·CCZ2,17,19·CCZ2,17,22·CCZ2,17,25·CCZ2,17,28·CCZ2,17,29·CCZ2,17,30·CCZ2,17,34·CCZ2,18,21·CCZ2,18,26·CCZ2,18,35·CCZ2,19,20·CCZ2,19,21·CCZ2,19,22·CCZ2,19,23·CCZ2,19,24·CCZ2,19,26·CCZ2,19,28·CCZ2,19,30·CCZ2,19,31·CCZ2,19,32·CCZ2,19,33·CCZ2,19,34·CCZ2,20,23·CCZ2,20,28·CCZ2,20,30·CCZ2,20,32·CCZ2,20,33·CCZ2,20,34·CCZ2,20,35·CCZ2,21,23·CCZ2,21,24·CCZ2,21,26·CCZ2,21,27·CCZ2,21,28·CCZ2,21,31·CCZ2,21,32·CCZ2,21,35·CCZ2,22,25·CCZ2,22,28·CCZ2,22,30·CCZ2,22,32·CCZ2,22,33·CCZ2,23,24·CCZ2,23,28·CCZ2,23,34·CCZ2,23,35·CCZ2,24,25·CCZ2,24,26·CCZ2,24,28·CCZ2,24,30·CCZ2,24,33·CCZ2,24,35·CCZ2,25,26·CCZ2,25,27·CCZ2,25,30·CCZ2,25,31·CCZ2,25,32·CCZ2,26,27·CCZ2,26,28·CCZ2,26,29·CCZ2,26,30·CCZ2,26,31·CCZ2,26,33·CCZ2,26,34·CCZ2,26,35·CCZ2,27,30·CCZ2,27,31·CCZ2,28,29·CCZ2,28,30·CCZ2,28,32·CCZ2,28,35·CCZ2,29,30·CCZ2,29,32·CCZ2,29,33·CCZ2,30,32·CCZ2,30,34·CCZ2,31,32·CCZ2,31,34·CCZ2,32,35·CCZ2,34,35·CCZ3,4,5·CCZ3,4,6·CCZ3,4,14·CCZ3,4,15·CCZ3,4,17·CCZ3,4,18·CCZ3,4,20·CCZ3,4,21·CCZ3,4,22·CCZ3,4,23·CCZ3,4,26·CCZ3,4,28·CCZ3,4,30·CCZ3,4,31·CCZ3,4,32·CCZ3,4,33·CCZ3,4,35·CCZ3,5,6·CCZ3,5,8·CCZ3,5,11·CCZ3,5,13·CCZ3,5,15·CCZ3,5,17·CCZ3,5,19·CCZ3,5,20·CCZ3,5,22·CCZ3,5,23·CCZ3,5,24·CCZ3,5,25·CCZ3,5,26·CCZ3,5,30·CCZ3,5,31·CCZ3,5,33·CCZ3,5,35·CCZ3,6,7·CCZ3,6,8·CCZ3,6,9·CCZ3,6,11·CCZ3,6,12·CCZ3,6,13·CCZ3,6,19·CCZ3,6,20·CCZ3,6,21·CCZ3,6,22·CCZ3,6,24·CCZ3,6,25·CCZ3,6,26·CCZ3,6,29·CCZ3,6,30·CCZ3,6,32·CCZ3,6,33·CCZ3,6,34·CCZ3,7,9·CCZ3,7,10·CCZ3,7,15·CCZ3,7,16·CCZ3,7,19·CCZ3,7,20·CCZ3,7,23·CCZ3,7,24·CCZ3,7,27·CCZ3,7,28·CCZ3,7,31·CCZ3,7,32·CCZ3,7,34·CCZ3,7,35·CCZ3,8,9·CCZ3,8,10·CCZ3,8,11·CCZ3,8,14·CCZ3,8,16·CCZ3,8,17·CCZ3,8,23·CCZ3,8,24·CCZ3,8,25·CCZ3,8,28·CCZ3,8,29·CCZ3,8,31·CCZ3,8,33·CCZ3,8,34·CCZ3,9,11·CCZ3,9,16·CCZ3,9,17·CCZ3,9,19·CCZ3,9,21·CCZ3,9,23·CCZ3,9,24·CCZ3,9,27·CCZ3,9,28·CCZ3,9,29·CCZ3,9,30·CCZ3,9,31·CCZ3,9,32·CCZ3,10,11·CCZ3,10,12·CCZ3,10,14·CCZ3,10,16·CCZ3,10,24·CCZ3,10,27·CCZ3,10,29·CCZ3,10,32·CCZ3,10,34·CCZ3,11,16·CCZ3,11,18·CCZ3,11,20·CCZ3,11,21·CCZ3,11,22·CCZ3,11,23·CCZ3,11,25·CCZ3,11,27·CCZ3,11,31·CCZ3,11,33·CCZ3,11,34·CCZ3,11,35·CCZ3,12,14·CCZ3,12,15·CCZ3,12,18·CCZ3,12,19·CCZ3,12,21·CCZ3,12,24·CCZ3,12,25·CCZ3,12,26·CCZ3,12,28·CCZ3,12,30·CCZ3,12,32·CCZ3,12,33·CCZ3,13,14·CCZ3,13,17·CCZ3,13,18·CCZ3,13,21·CCZ3,13,23·CCZ3,13,26·CCZ3,13,27·CCZ3,13,32·CCZ3,14,15·CCZ3,14,16·CCZ3,14,17·CCZ3,14,18·CCZ3,14,19·CCZ3,14,22·CCZ3,14,23·CCZ3,14,24·CCZ3,14,25·CCZ3,14,26·CCZ3,14,27·CCZ3,14,31·CCZ3,14,32·CCZ3,14,33·CCZ3,14,34·CCZ3,15,16·CCZ3,15,19·CCZ3,15,20·CCZ3,15,21·CCZ3,15,24·CCZ3,15,25·CCZ3,15,27·CCZ3,15,31·CCZ3,15,34·CCZ3,15,35·CCZ3,16,18·CCZ3,16,22·CCZ3,16,24·CCZ3,16,25·CCZ3,16,26·CCZ3,16,32·CCZ3,16,34·CCZ3,17,18·CCZ3,17,20·CCZ3,17,24·CCZ3,17,26·CCZ3,17,29·CCZ3,17,30·CCZ3,17,31·CCZ3,17,32·CCZ3,17,33·CCZ3,17,34·CCZ3,17,35·CCZ3,18,19·CCZ3,18,20·CCZ3,18,22·CCZ3,18,23·CCZ3,18,25·CCZ3,18,26·CCZ3,18,27·CCZ3,18,30·CCZ3,18,31·CCZ3,18,34·CCZ3,18,35·CCZ3,19,20·CCZ3,19,22·CCZ3,19,23·CCZ3,19,24·CCZ3,19,25·CCZ3,19,26·CCZ3,19,30·CCZ3,19,31·CCZ3,19,34·CCZ3,20,21·CCZ3,20,23·CCZ3,20,25·CCZ3,20,26·CCZ3,20,28·CCZ3,20,29·CCZ3,20,30·CCZ3,20,33·CCZ3,20,34·CCZ3,20,35·CCZ3,21,23·CCZ3,21,25·CCZ3,21,27·CCZ3,21,28·CCZ3,21,29·CCZ3,21,34·CCZ3,22,23·CCZ3,22,26·CCZ3,22,27·CCZ3,22,31·CCZ3,22,32·CCZ3,23,24·CCZ3,23,26·CCZ3,23,28·CCZ3,23,30·CCZ3,23,32·CCZ3,23,33·CCZ3,23,34·CCZ3,23,35·CCZ3,24,26·CCZ3,24,27·CCZ3,24,30·CCZ3,24,31·CCZ3,25,26·CCZ3,25,27·CCZ3,25,28·CCZ3,25,31·CCZ3,25,33·CCZ3,25,34·CCZ3,25,35·CCZ3,26,28·CCZ3,26,32·CCZ3,26,34·CCZ3,26,35·CCZ3,27,28·CCZ3,27,31·CCZ3,27,32·CCZ3,27,35·CCZ3,28,31·CCZ3,28,32·CCZ3,28,33·CCZ3,28,35·CCZ3,29,30·CCZ3,29,32·CCZ3,29,33·CCZ3,29,34·CCZ3,29,35·CCZ3,30,31·CCZ3,30,32·CCZ3,30,33·CCZ3,30,34·CCZ3,31,34·CCZ3,32,33·CCZ3,32,34·CCZ3,32,35·CCZ3,33,34·CCZ3,33,35·CCZ3,34,35·CCZ4,5,9·CCZ4,5,11·CCZ4,5,13·CCZ4,5,14·CCZ4,5,16·CCZ4,5,17·CCZ4,5,18·CCZ4,5,19·CCZ4,5,20·CCZ4,5,21·CCZ4,5,23·CCZ4,5,29·CCZ4,5,31·CCZ4,5,34·CCZ4,6,7·CCZ4,6,8·CCZ4,6,11·CCZ4,6,17·CCZ4,6,20·CCZ4,6,21·CCZ4,6,25·CCZ4,6,26·CCZ4,6,27·CCZ4,6,29·CCZ4,6,30·CCZ4,6,34·CCZ4,6,35·CCZ4,7,8·CCZ4,7,9·CCZ4,7,10·CCZ4,7,11·CCZ4,7,12·CCZ4,7,15·CCZ4,7,16·CCZ4,7,17·CCZ4,7,19·CCZ4,7,21·CCZ4,7,22·CCZ4,7,23·CCZ4,7,27·CCZ4,7,29·CCZ4,7,30·CCZ4,7,31·CCZ4,7,32·CCZ4,7,33·CCZ4,7,35·CCZ4,8,17·CCZ4,8,18·CCZ4,8,20·CCZ4,8,21·CCZ4,8,23·CCZ4,8,26·CCZ4,8,27·CCZ4,9,10·CCZ4,9,13·CCZ4,9,14·CCZ4,9,16·CCZ4,9,17·CCZ4,9,18·CCZ4,9,19·CCZ4,9,21·CCZ4,9,22·CCZ4,9,24·CCZ4,9,26·CCZ4,9,29·CCZ4,9,30·CCZ4,9,31·CCZ4,9,32·CCZ4,9,33·CCZ4,9,34·CCZ4,9,35·CCZ4,10,12·CCZ4,10,16·CCZ4,10,18·CCZ4,10,19·CCZ4,10,31·CCZ4,10,32·CCZ4,10,35·CCZ4,11,14·CCZ4,11,16·CCZ4,11,17·CCZ4,11,18·CCZ4,11,24·CCZ4,11,29·CCZ4,11,31·CCZ4,11,35·CCZ4,12,14·CCZ4,12,16·CCZ4,12,22·CCZ4,12,25·CCZ4,12,31·CCZ4,12,34·CCZ4,12,35·CCZ4,13,14·CCZ4,13,15·CCZ4,13,17·CCZ4,13,18·CCZ4,13,23·CCZ4,13,26·CCZ4,13,28·CCZ4,13,29·CCZ4,14,16·CCZ4,14,17·CCZ4,14,18·CCZ4,14,20·CCZ4,14,21·CCZ4,14,22·CCZ4,14,23·CCZ4,14,24·CCZ4,14,27·CCZ4,14,28·CCZ4,14,30·CCZ4,14,35·CCZ4,15,20·CCZ4,15,22·CCZ4,15,26·CCZ4,15,27·CCZ4,15,28·CCZ4,15,31·CCZ4,15,33·CCZ4,15,35·CCZ4,16,19·CCZ4,16,21·CCZ4,16,22·CCZ4,16,24·CCZ4,16,25·CCZ4,16,32·CCZ4,16,33·CCZ4,16,34·CCZ4,17,18·CCZ4,17,19·CCZ4,17,23·CCZ4,17,25·CCZ4,17,26·CCZ4,17,27·CCZ4,17,28·CCZ4,17,30·CCZ4,17,33·CCZ4,17,34·CCZ4,17,35·CCZ4,18,19·CCZ4,18,20·CCZ4,18,21·CCZ4,18,25·CCZ4,18,27·CCZ4,18,30·CCZ4,18,31·CCZ4,18,32·CCZ4,19,20·CCZ4,19,23·CCZ4,19,26·CCZ4,19,28·CCZ4,20,21·CCZ4,20,23·CCZ4,20,25·CCZ4,20,27·CCZ4,20,32·CCZ4,20,33·CCZ4,20,34·CCZ4,21,24·CCZ4,21,26·CCZ4,21,27·CCZ4,21,29·CCZ4,21,31·CCZ4,22,24·CCZ4,22,25·CCZ4,22,27·CCZ4,22,28·CCZ4,22,31·CCZ4,22,32·CCZ4,22,34·CCZ4,22,35·CCZ4,23,28·CCZ4,23,29·CCZ4,23,33·CCZ4,23,35·CCZ4,24,27·CCZ4,24,28·CCZ4,24,29·CCZ4,24,30·CCZ4,24,32·CCZ4,24,33·CCZ4,24,34·CCZ4,25,26·CCZ4,25,27·CCZ4,25,30·CCZ4,25,31·CCZ4,25,33·CCZ4,25,34·CCZ4,25,35·CCZ4,26,28·CCZ4,26,29·CCZ4,26,30·CCZ4,26,34·CCZ4,26,35·CCZ4,27,29·CCZ4,27,30·CCZ4,27,32·CCZ4,27,34·CCZ4,27,35·CCZ4,28,29·CCZ4,29,31·CCZ4,29,32·CCZ4,29,34·CCZ4,29,35·CCZ4,30,31·CCZ4,30,32·CCZ4,30,35·CCZ4,31,32·CCZ4,31,34·CCZ4,34,35·CCZ5,6,8·CCZ5,6,9·CCZ5,6,12·CCZ5,6,13·CCZ5,6,15·CCZ5,6,17·CCZ5,6,18·CCZ5,6,20·CCZ5,6,21·CCZ5,6,22·CCZ5,6,23·CCZ5,6,24·CCZ5,6,25·CCZ5,6,26·CCZ5,6,27·CCZ5,6,28·CCZ5,6,29·CCZ5,6,31·CCZ5,6,32·CCZ5,6,33·CCZ5,6,34·CCZ5,7,8·CCZ5,7,10·CCZ5,7,12·CCZ5,7,13·CCZ5,7,14·CCZ5,7,16·CCZ5,7,17·CCZ5,7,19·CCZ5,7,24·CCZ5,7,26·CCZ5,7,27·CCZ5,7,29·CCZ5,7,31·CCZ5,7,32·CCZ5,7,34·CCZ5,7,35·CCZ5,8,9·CCZ5,8,10·CCZ5,8,11·CCZ5,8,12·CCZ5,8,16·CCZ5,8,18·CCZ5,8,19·CCZ5,8,20·CCZ5,8,22·CCZ5,8,27·CCZ5,8,29·CCZ5,8,30·CCZ5,8,31·CCZ5,8,34·CCZ5,9,10·CCZ5,9,11·CCZ5,9,12·CCZ5,9,13·CCZ5,9,15·CCZ5,9,18·CCZ5,9,19·CCZ5,9,27·CCZ5,9,28·CCZ5,9,31·CCZ5,9,32·CCZ5,9,33·CCZ5,9,34·CCZ5,10,12·CCZ5,10,13·CCZ5,10,14·CCZ5,10,18·CCZ5,10,20·CCZ5,10,21·CCZ5,10,22·CCZ5,10,29·CCZ5,10,30·CCZ5,10,31·CCZ5,10,33·CCZ5,10,35·CCZ5,11,16·CCZ5,11,17·CCZ5,11,19·CCZ5,11,20·CCZ5,11,21·CCZ5,11,22·CCZ5,11,28·CCZ5,11,31·CCZ5,11,34·CCZ5,12,13·CCZ5,12,14·CCZ5,12,15·CCZ5,12,16·CCZ5,12,22·CCZ5,12,25·CCZ5,12,26·CCZ5,12,27·CCZ5,12,29·CCZ5,12,32·CCZ5,13,14·CCZ5,13,15·CCZ5,13,17·CCZ5,13,21·CCZ5,13,22·CCZ5,13,24·CCZ5,13,25·CCZ5,13,26·CCZ5,13,27·CCZ5,13,29·CCZ5,13,30·CCZ5,13,31·CCZ5,13,32·CCZ5,14,19·CCZ5,14,20·CCZ5,14,22·CCZ5,14,23·CCZ5,14,25·CCZ5,14,27·CCZ5,14,29·CCZ5,14,33·CCZ5,14,35·CCZ5,15,18·CCZ5,15,19·CCZ5,15,20·CCZ5,15,22·CCZ5,15,23·CCZ5,15,24·CCZ5,15,25·CCZ5,15,26·CCZ5,15,28·CCZ5,15,32·CCZ5,15,33·CCZ5,15,34·CCZ5,15,35·CCZ5,16,17·CCZ5,16,18·CCZ5,16,19·CCZ5,16,20·CCZ5,16,25·CCZ5,16,28·CCZ5,16,30·CCZ5,16,31·CCZ5,17,20·CCZ5,17,21·CCZ5,17,22·CCZ5,17,25·CCZ5,17,26·CCZ5,17,28·CCZ5,17,32·CCZ5,17,33·CCZ5,18,19·CCZ5,18,20·CCZ5,18,21·CCZ5,18,26·CCZ5,18,27·CCZ5,18,28·CCZ5,18,29·CCZ5,18,32·CCZ5,18,33·CCZ5,18,34·CCZ5,18,35·CCZ5,19,20·CCZ5,19,21·CCZ5,19,24·CCZ5,19,25·CCZ5,19,26·CCZ5,19,27·CCZ5,19,28·CCZ5,19,31·CCZ5,19,32·CCZ5,19,33·CCZ5,19,34·CCZ5,20,21·CCZ5,20,22·CCZ5,20,24·CCZ5,20,28·CCZ5,20,29·CCZ5,20,32·CCZ5,20,35·CCZ5,21,22·CCZ5,21,24·CCZ5,21,26·CCZ5,21,28·CCZ5,21,32·CCZ5,22,23·CCZ5,22,26·CCZ5,22,27·CCZ5,22,28·CCZ5,22,29·CCZ5,22,31·CCZ5,22,33·CCZ5,22,34·CCZ5,23,26·CCZ5,23,29·CCZ5,23,30·CCZ5,23,32·CCZ5,24,25·CCZ5,24,26·CCZ5,24,28·CCZ5,24,29·CCZ5,24,30·CCZ5,24,32·CCZ5,24,33·CCZ5,24,34·CCZ5,24,35·CCZ5,25,27·CCZ5,25,28·CCZ5,25,29·CCZ5,25,32·CCZ5,25,34·CCZ5,25,35·CCZ5,26,28·CCZ5,26,29·CCZ5,26,31·CCZ5,26,32·CCZ5,26,34·CCZ5,26,35·CCZ5,27,28·CCZ5,27,30·CCZ5,27,31·CCZ5,27,32·CCZ5,27,34·CCZ5,28,31·CCZ5,28,32·CCZ5,28,34·CCZ5,28,35·CCZ5,29,30·CCZ5,29,32·CCZ5,29,33·CCZ5,29,34·CCZ5,30,31·CCZ5,30,32·CCZ5,31,32·CCZ5,31,34·CCZ5,32,35·CCZ6,7,8·CCZ6,7,9·CCZ6,7,10·CCZ6,7,11·CCZ6,7,12·CCZ6,7,13·CCZ6,7,14·CCZ6,7,15·CCZ6,7,21·CCZ6,7,24·CCZ6,7,30·CCZ6,7,31·CCZ6,7,34·CCZ6,8,9·CCZ6,8,11·CCZ6,8,12·CCZ6,8,13·CCZ6,8,14·CCZ6,8,18·CCZ6,8,20·CCZ6,8,22·CCZ6,8,26·CCZ6,8,29·CCZ6,8,31·CCZ6,8,34·CCZ6,9,10·CCZ6,9,12·CCZ6,9,13·CCZ6,9,14·CCZ6,9,15·CCZ6,9,16·CCZ6,9,17·CCZ6,9,20·CCZ6,9,21·CCZ6,9,23·CCZ6,9,25·CCZ6,9,26·CCZ6,9,27·CCZ6,9,28·CCZ6,9,30·CCZ6,9,32·CCZ6,9,34·CCZ6,9,35·CCZ6,10,11·CCZ6,10,13·CCZ6,10,14·CCZ6,10,16·CCZ6,10,19·CCZ6,10,21·CCZ6,10,27·CCZ6,10,28·CCZ6,10,29·CCZ6,10,30·CCZ6,10,34·CCZ6,10,35·CCZ6,11,13·CCZ6,11,14·CCZ6,11,15·CCZ6,11,16·CCZ6,11,19·CCZ6,11,20·CCZ6,11,21·CCZ6,11,22·CCZ6,11,23·CCZ6,11,24·CCZ6,11,26·CCZ6,11,27·CCZ6,11,31·CCZ6,11,33·CCZ6,12,15·CCZ6,12,16·CCZ6,12,17·CCZ6,12,19·CCZ6,12,29·CCZ6,12,34·CCZ6,12,35·CCZ6,13,14·CCZ6,13,15·CCZ6,13,16·CCZ6,13,17·CCZ6,13,19·CCZ6,13,20·CCZ6,13,23·CCZ6,13,24·CCZ6,13,28·CCZ6,13,30·CCZ6,13,32·CCZ6,13,34·CCZ6,14,17·CCZ6,14,20·CCZ6,14,21·CCZ6,14,25·CCZ6,14,26·CCZ6,14,28·CCZ6,14,30·CCZ6,14,32·CCZ6,15,17·CCZ6,15,18·CCZ6,15,19·CCZ6,15,22·CCZ6,15,25·CCZ6,15,28·CCZ6,15,33·CCZ6,15,34·CCZ6,16,17·CCZ6,16,19·CCZ6,16,20·CCZ6,16,24·CCZ6,16,26·CCZ6,16,28·CCZ6,16,30·CCZ6,16,31·CCZ6,16,32·CCZ6,16,33·CCZ6,16,34·CCZ6,17,18·CCZ6,17,19·CCZ6,17,22·CCZ6,17,23·CCZ6,17,24·CCZ6,17,25·CCZ6,17,28·CCZ6,17,33·CCZ6,17,35·CCZ6,18,19·CCZ6,18,20·CCZ6,18,21·CCZ6,18,22·CCZ6,18,23·CCZ6,18,24·CCZ6,18,25·CCZ6,18,30·CCZ6,18,31·CCZ6,19,25·CCZ6,19,28·CCZ6,19,31·CCZ6,19,33·CCZ6,19,34·CCZ6,19,35·CCZ6,20,22·CCZ6,20,23·CCZ6,20,26·CCZ6,20,29·CCZ6,20,30·CCZ6,20,32·CCZ6,20,33·CCZ6,20,34·CCZ6,21,22·CCZ6,21,24·CCZ6,21,26·CCZ6,21,30·CCZ6,21,31·CCZ6,21,32·CCZ6,21,34·CCZ6,21,35·CCZ6,22,24·CCZ6,22,25·CCZ6,22,28·CCZ6,22,31·CCZ6,22,33·CCZ6,22,34·CCZ6,22,35·CCZ6,23,24·CCZ6,23,28·CCZ6,23,31·CCZ6,23,32·CCZ6,23,34·CCZ6,23,35·CCZ6,24,25·CCZ6,24,28·CCZ6,24,29·CCZ6,24,30·CCZ6,24,32·CCZ6,25,26·CCZ6,25,27·CCZ6,25,33·CCZ6,25,34·CCZ6,25,35·CCZ6,26,29·CCZ6,26,30·CCZ6,26,32·CCZ6,26,34·CCZ6,27,28·CCZ6,27,31·CCZ6,27,32·CCZ6,27,35·CCZ6,28,29·CCZ6,28,30·CCZ6,28,31·CCZ6,28,35·CCZ6,29,31·CCZ6,29,34·CCZ6,29,35·CCZ6,30,33·CCZ6,31,34·CCZ6,31,35·CCZ6,32,33·CCZ6,32,35·CCZ6,33,34·CCZ6,34,35·CCZ7,8,9·CCZ7,8,10·CCZ7,8,14·CCZ7,8,15·CCZ7,8,16·CCZ7,8,21·CCZ7,8,22·CCZ7,8,23·CCZ7,8,24·CCZ7,8,28·CCZ7,8,29·CCZ7,8,32·CCZ7,8,34·CCZ7,8,35·CCZ7,9,11·CCZ7,9,15·CCZ7,9,18·CCZ7,9,24·CCZ7,9,25·CCZ7,9,26·CCZ7,9,27·CCZ7,9,28·CCZ7,9,32·CCZ7,9,35·CCZ7,10,11·CCZ7,10,15·CCZ7,10,16·CCZ7,10,18·CCZ7,10,19·CCZ7,10,22·CCZ7,10,26·CCZ7,10,27·CCZ7,10,30·CCZ7,10,32·CCZ7,10,33·CCZ7,11,12·CCZ7,11,14·CCZ7,11,17·CCZ7,11,18·CCZ7,11,19·CCZ7,11,21·CCZ7,11,22·CCZ7,11,23·CCZ7,11,26·CCZ7,11,27·CCZ7,11,28·CCZ7,11,29·CCZ7,11,30·CCZ7,11,31·CCZ7,11,32·CCZ7,11,33·CCZ7,11,34·CCZ7,12,21·CCZ7,12,22·CCZ7,12,23·CCZ7,12,26·CCZ7,12,27·CCZ7,12,31·CCZ7,12,33·CCZ7,12,34·CCZ7,12,35·CCZ7,13,14·CCZ7,13,15·CCZ7,13,19·CCZ7,13,21·CCZ7,13,22·CCZ7,13,23·CCZ7,13,24·CCZ7,13,28·CCZ7,13,30·CCZ7,13,32·CCZ7,13,34·CCZ7,14,15·CCZ7,14,16·CCZ7,14,17·CCZ7,14,18·CCZ7,14,19·CCZ7,14,25·CCZ7,14,26·CCZ7,14,27·CCZ7,14,29·CCZ7,14,30·CCZ7,14,31·CCZ7,14,32·CCZ7,14,34·CCZ7,14,35·CCZ7,15,17·CCZ7,15,18·CCZ7,15,19·CCZ7,15,21·CCZ7,15,22·CCZ7,15,23·CCZ7,15,25·CCZ7,15,28·CCZ7,15,29·CCZ7,15,31·CCZ7,15,32·CCZ7,15,33·CCZ7,15,34·CCZ7,15,35·CCZ7,16,17·CCZ7,16,20·CCZ7,16,24·CCZ7,16,28·CCZ7,16,34·CCZ7,17,19·CCZ7,17,21·CCZ7,17,23·CCZ7,17,24·CCZ7,17,25·CCZ7,17,30·CCZ7,17,31·CCZ7,18,21·CCZ7,18,22·CCZ7,18,26·CCZ7,18,27·CCZ7,18,30·CCZ7,19,21·CCZ7,19,22·CCZ7,19,23·CCZ7,19,24·CCZ7,19,25·CCZ7,19,26·CCZ7,19,32·CCZ7,19,33·CCZ7,19,34·CCZ7,20,22·CCZ7,20,23·CCZ7,20,24·CCZ7,20,25·CCZ7,20,26·CCZ7,20,30·CCZ7,20,31·CCZ7,20,35·CCZ7,21,22·CCZ7,21,23·CCZ7,21,26·CCZ7,21,27·CCZ7,21,28·CCZ7,21,29·CCZ7,21,32·CCZ7,21,33·CCZ7,21,34·CCZ7,22,23·CCZ7,22,24·CCZ7,22,26·CCZ7,22,31·CCZ7,22,32·CCZ7,22,33·CCZ7,23,24·CCZ7,23,25·CCZ7,23,26·CCZ7,23,27·CCZ7,23,28·CCZ7,23,29·CCZ7,23,30·CCZ7,23,31·CCZ7,23,32·CCZ7,23,34·CCZ7,23,35·CCZ7,24,26·CCZ7,24,28·CCZ7,24,29·CCZ7,24,31·CCZ7,24,32·CCZ7,24,34·CCZ7,24,35·CCZ7,25,27·CCZ7,25,28·CCZ7,25,32·CCZ7,25,33·CCZ7,25,34·CCZ7,25,35·CCZ7,26,27·CCZ7,26,30·CCZ7,26,31·CCZ7,26,32·CCZ7,26,33·CCZ7,26,34·CCZ7,27,28·CCZ7,27,31·CCZ7,27,33·CCZ7,27,35·CCZ7,28,30·CCZ7,28,31·CCZ7,28,32·CCZ7,28,33·CCZ7,28,34·CCZ7,28,35·CCZ7,30,34·CCZ7,31,32·CCZ7,31,35·CCZ7,32,33·CCZ7,32,34·CCZ7,32,35·CCZ7,34,35·CCZ8,9,10·CCZ8,9,12·CCZ8,9,14·CCZ8,9,16·CCZ8,9,17·CCZ8,9,22·CCZ8,9,28·CCZ8,9,29·CCZ8,9,30·CCZ8,9,31·CCZ8,9,35·CCZ8,10,13·CCZ8,10,15·CCZ8,10,20·CCZ8,10,24·CCZ8,10,26·CCZ8,10,27·CCZ8,10,29·CCZ8,10,30·CCZ8,10,31·CCZ8,10,35·CCZ8,11,14·CCZ8,11,20·CCZ8,11,21·CCZ8,11,24·CCZ8,11,27·CCZ8,11,32·CCZ8,11,33·CCZ8,11,35·CCZ8,12,14·CCZ8,12,17·CCZ8,12,18·CCZ8,12,20·CCZ8,12,22·CCZ8,12,25·CCZ8,12,26·CCZ8,12,27·CCZ8,12,32·CCZ8,12,35·CCZ8,13,14·CCZ8,13,22·CCZ8,13,25·CCZ8,13,27·CCZ8,13,30·CCZ8,13,31·CCZ8,13,32·CCZ8,13,35·CCZ8,14,15·CCZ8,14,17·CCZ8,14,20·CCZ8,14,22·CCZ8,14,24·CCZ8,14,25·CCZ8,14,27·CCZ8,14,29·CCZ8,14,30·CCZ8,14,31·CCZ8,14,33·CCZ8,14,34·CCZ8,14,35·CCZ8,15,16·CCZ8,15,18·CCZ8,15,19·CCZ8,15,20·CCZ8,15,21·CCZ8,15,22·CCZ8,15,24·CCZ8,15,26·CCZ8,15,27·CCZ8,15,28·CCZ8,15,29·CCZ8,15,31·CCZ8,15,33·CCZ8,15,35·CCZ8,16,18·CCZ8,16,20·CCZ8,16,21·CCZ8,16,22·CCZ8,16,23·CCZ8,16,24·CCZ8,16,27·CCZ8,16,29·CCZ8,16,30·CCZ8,16,34·CCZ8,17,18·CCZ8,17,22·CCZ8,17,23·CCZ8,17,25·CCZ8,17,26·CCZ8,17,30·CCZ8,17,31·CCZ8,17,32·CCZ8,18,19·CCZ8,18,21·CCZ8,18,23·CCZ8,18,26·CCZ8,18,27·CCZ8,18,28·CCZ8,18,29·CCZ8,18,31·CCZ8,18,32·CCZ8,18,35·CCZ8,19,22·CCZ8,19,23·CCZ8,19,24·CCZ8,19,29·CCZ8,19,31·CCZ8,19,35·CCZ8,20,22·CCZ8,20,27·CCZ8,20,28·CCZ8,20,33·CCZ8,21,25·CCZ8,21,29·CCZ8,21,30·CCZ8,21,34·CCZ8,21,35·CCZ8,22,24·CCZ8,22,25·CCZ8,22,27·CCZ8,22,28·CCZ8,22,30·CCZ8,22,31·CCZ8,22,32·CCZ8,22,35·CCZ8,23,25·CCZ8,23,27·CCZ8,23,28·CCZ8,23,29·CCZ8,23,32·CCZ8,23,33·CCZ8,23,35·CCZ8,24,26·CCZ8,24,29·CCZ8,24,32·CCZ8,24,33·CCZ8,24,35·CCZ8,25,26·CCZ8,25,29·CCZ8,25,31·CCZ8,25,34·CCZ8,25,35·CCZ8,26,30·CCZ8,26,31·CCZ8,26,32·CCZ8,26,34·CCZ8,26,35·CCZ8,27,33·CCZ8,28,32·CCZ8,28,33·CCZ8,28,35·CCZ8,29,33·CCZ8,29,35·CCZ8,30,31·CCZ8,30,32·CCZ8,30,33·CCZ8,30,35·CCZ8,31,34·CCZ8,31,35·CCZ8,32,34·CCZ8,32,35·CCZ8,33,35·CCZ8,34,35·CCZ9,10,12·CCZ9,10,23·CCZ9,10,27·CCZ9,10,28·CCZ9,10,29·CCZ9,10,31·CCZ9,10,32·CCZ9,10,33·CCZ9,10,34·CCZ9,11,12·CCZ9,11,16·CCZ9,11,17·CCZ9,11,19·CCZ9,11,21·CCZ9,11,27·CCZ9,11,28·CCZ9,11,30·CCZ9,11,31·CCZ9,11,33·CCZ9,11,35·CCZ9,12,13·CCZ9,12,14·CCZ9,12,16·CCZ9,12,18·CCZ9,12,19·CCZ9,12,20·CCZ9,12,21·CCZ9,12,23·CCZ9,12,25·CCZ9,12,26·CCZ9,12,27·CCZ9,12,28·CCZ9,12,30·CCZ9,12,31·CCZ9,12,32·CCZ9,12,33·CCZ9,13,15·CCZ9,13,16·CCZ9,13,18·CCZ9,13,19·CCZ9,13,20·CCZ9,13,22·CCZ9,13,24·CCZ9,13,26·CCZ9,13,29·CCZ9,13,35·CCZ9,14,15·CCZ9,14,16·CCZ9,14,18·CCZ9,14,21·CCZ9,14,23·CCZ9,14,26·CCZ9,14,27·CCZ9,14,29·CCZ9,14,30·CCZ9,14,31·CCZ9,14,32·CCZ9,14,33·CCZ9,15,16·CCZ9,15,19·CCZ9,15,20·CCZ9,15,21·CCZ9,15,28·CCZ9,15,29·CCZ9,15,31·CCZ9,15,32·CCZ9,16,18·CCZ9,16,20·CCZ9,16,21·CCZ9,16,22·CCZ9,16,23·CCZ9,16,25·CCZ9,16,26·CCZ9,16,30·CCZ9,16,33·CCZ9,16,34·CCZ9,17,18·CCZ9,17,23·CCZ9,17,24·CCZ9,17,25·CCZ9,17,26·CCZ9,17,27·CCZ9,17,29·CCZ9,17,30·CCZ9,17,31·CCZ9,17,32·CCZ9,17,34·CCZ9,17,35·CCZ9,18,19·CCZ9,18,20·CCZ9,18,21·CCZ9,18,22·CCZ9,18,23·CCZ9,18,24·CCZ9,18,25·CCZ9,18,28·CCZ9,18,29·CCZ9,18,35·CCZ9,19,22·CCZ9,19,23·CCZ9,19,24·CCZ9,19,27·CCZ9,19,28·CCZ9,19,30·CCZ9,19,31·CCZ9,19,35·CCZ9,20,21·CCZ9,20,26·CCZ9,20,27·CCZ9,20,29·CCZ9,20,30·CCZ9,20,33·CCZ9,20,35·CCZ9,21,25·CCZ9,21,27·CCZ9,21,28·CCZ9,21,29·CCZ9,21,31·CCZ9,21,32·CCZ9,21,34·CCZ9,21,35·CCZ9,22,23·CCZ9,22,24·CCZ9,22,26·CCZ9,22,27·CCZ9,22,28·CCZ9,22,29·CCZ9,22,30·CCZ9,22,31·CCZ9,22,32·CCZ9,22,33·CCZ9,23,27·CCZ9,23,29·CCZ9,23,31·CCZ9,23,32·CCZ9,23,33·CCZ9,24,25·CCZ9,24,28·CCZ9,24,29·CCZ9,24,33·CCZ9,24,35·CCZ9,25,26·CCZ9,25,27·CCZ9,25,30·CCZ9,25,31·CCZ9,25,32·CCZ9,25,33·CCZ9,26,29·CCZ9,26,34·CCZ9,26,35·CCZ9,27,28·CCZ9,27,29·CCZ9,27,30·CCZ9,27,32·CCZ9,27,35·CCZ9,28,29·CCZ9,28,31·CCZ9,28,32·CCZ9,28,33·CCZ9,28,34·CCZ9,29,33·CCZ9,29,35·CCZ9,30,31·CCZ9,30,32·CCZ9,30,33·CCZ9,30,34·CCZ9,31,33·CCZ9,31,35·CCZ9,32,34·CCZ9,32,35·CCZ9,33,35·CCZ10,11,12·CCZ10,11,14·CCZ10,11,17·CCZ10,11,19·CCZ10,11,22·CCZ10,11,23·CCZ10,11,24·CCZ10,11,26·CCZ10,11,27·CCZ10,11,29·CCZ10,11,31·CCZ10,11,33·CCZ10,11,34·CCZ10,12,13·CCZ10,12,18·CCZ10,12,21·CCZ10,12,22·CCZ10,12,24·CCZ10,12,25·CCZ10,12,27·CCZ10,12,29·CCZ10,12,30·CCZ10,12,31·CCZ10,12,33·CCZ10,12,35·CCZ10,13,15·CCZ10,13,16·CCZ10,13,18·CCZ10,13,19·CCZ10,13,24·CCZ10,13,27·CCZ10,13,29·CCZ10,13,30·CCZ10,13,31·CCZ10,13,33·CCZ10,13,34·CCZ10,14,17·CCZ10,14,20·CCZ10,14,25·CCZ10,14,27·CCZ10,14,28·CCZ10,14,29·CCZ10,14,30·CCZ10,14,32·CCZ10,14,33·CCZ10,14,35·CCZ10,15,17·CCZ10,15,20·CCZ10,15,22·CCZ10,15,23·CCZ10,15,24·CCZ10,15,25·CCZ10,15,27·CCZ10,15,28·CCZ10,15,30·CCZ10,15,31·CCZ10,15,35·CCZ10,16,17·CCZ10,16,18·CCZ10,16,20·CCZ10,16,24·CCZ10,16,26·CCZ10,16,27·CCZ10,16,28·CCZ10,16,29·CCZ10,16,30·CCZ10,16,31·CCZ10,16,32·CCZ10,17,21·CCZ10,17,23·CCZ10,17,24·CCZ10,17,27·CCZ10,17,28·CCZ10,17,29·CCZ10,17,30·CCZ10,17,31·CCZ10,17,33·CCZ10,17,34·CCZ10,17,35·CCZ10,18,19·CCZ10,18,20·CCZ10,18,22·CCZ10,18,23·CCZ10,18,24·CCZ10,18,25·CCZ10,18,28·CCZ10,18,29·CCZ10,18,30·CCZ10,18,32·CCZ10,18,33·CCZ10,18,34·CCZ10,19,21·CCZ10,19,22·CCZ10,19,24·CCZ10,19,25·CCZ10,19,29·CCZ10,19,31·CCZ10,19,34·CCZ10,19,35·CCZ10,20,21·CCZ10,20,22·CCZ10,20,24·CCZ10,20,25·CCZ10,20,26·CCZ10,20,28·CCZ10,20,34·CCZ10,21,25·CCZ10,21,26·CCZ10,21,27·CCZ10,21,29·CCZ10,21,30·CCZ10,21,31·CCZ10,21,32·CCZ10,21,34·CCZ10,22,23·CCZ10,22,24·CCZ10,22,27·CCZ10,22,28·CCZ10,22,31·CCZ10,22,32·CCZ10,23,24·CCZ10,23,27·CCZ10,23,28·CCZ10,23,29·CCZ10,23,35·CCZ10,24,27·CCZ10,24,28·CCZ10,24,30·CCZ10,24,33·CCZ10,24,34·CCZ10,24,35·CCZ10,25,32·CCZ10,25,35·CCZ10,26,28·CCZ10,26,31·CCZ10,26,32·CCZ10,27,28·CCZ10,27,29·CCZ10,27,30·CCZ10,27,31·CCZ10,27,33·CCZ10,27,34·CCZ10,27,35·CCZ10,28,29·CCZ10,28,33·CCZ10,28,34·CCZ10,29,30·CCZ10,29,31·CCZ10,29,32·CCZ10,29,35·CCZ10,30,32·CCZ10,30,33·CCZ10,30,34·CCZ10,30,35·CCZ10,31,33·CCZ10,31,34·CCZ10,31,35·CCZ10,33,34·CCZ10,33,35·CCZ11,12,13·CCZ11,12,14·CCZ11,12,15·CCZ11,12,16·CCZ11,12,17·CCZ11,12,19·CCZ11,12,20·CCZ11,12,23·CCZ11,12,25·CCZ11,12,26·CCZ11,12,28·CCZ11,12,29·CCZ11,12,32·CCZ11,12,34·CCZ11,12,35·CCZ11,13,17·CCZ11,13,18·CCZ11,13,19·CCZ11,13,20·CCZ11,13,21·CCZ11,13,22·CCZ11,13,24·CCZ11,13,25·CCZ11,13,28·CCZ11,13,29·CCZ11,13,33·CCZ11,13,34·CCZ11,13,35·CCZ11,14,18·CCZ11,14,20·CCZ11,14,23·CCZ11,14,29·CCZ11,14,32·CCZ11,14,33·CCZ11,14,34·CCZ11,15,17·CCZ11,15,18·CCZ11,15,20·CCZ11,15,21·CCZ11,15,24·CCZ11,15,27·CCZ11,15,29·CCZ11,15,30·CCZ11,15,32·CCZ11,15,33·CCZ11,15,34·CCZ11,16,19·CCZ11,16,20·CCZ11,16,22·CCZ11,16,23·CCZ11,16,25·CCZ11,16,26·CCZ11,16,28·CCZ11,16,29·CCZ11,16,30·CCZ11,16,31·CCZ11,16,32·CCZ11,16,33·CCZ11,16,35·CCZ11,17,21·CCZ11,17,23·CCZ11,17,24·CCZ11,17,25·CCZ11,17,26·CCZ11,17,27·CCZ11,17,30·CCZ11,17,31·CCZ11,17,32·CCZ11,17,34·CCZ11,17,35·CCZ11,18,19·CCZ11,18,20·CCZ11,18,21·CCZ11,18,23·CCZ11,18,25·CCZ11,18,27·CCZ11,18,28·CCZ11,18,29·CCZ11,18,32·CCZ11,18,33·CCZ11,19,20·CCZ11,19,23·CCZ11,19,25·CCZ11,19,28·CCZ11,19,29·CCZ11,19,33·CCZ11,19,34·CCZ11,20,21·CCZ11,20,23·CCZ11,20,24·CCZ11,20,26·CCZ11,20,28·CCZ11,20,30·CCZ11,20,32·CCZ11,20,33·CCZ11,20,34·CCZ11,20,35·CCZ11,21,23·CCZ11,21,26·CCZ11,21,28·CCZ11,21,29·CCZ11,21,32·CCZ11,21,35·CCZ11,22,24·CCZ11,22,26·CCZ11,22,28·CCZ11,22,29·CCZ11,22,34·CCZ11,23,24·CCZ11,23,25·CCZ11,23,26·CCZ11,23,30·CCZ11,23,31·CCZ11,24,28·CCZ11,24,32·CCZ11,24,33·CCZ11,24,34·CCZ11,24,35·CCZ11,25,27·CCZ11,25,28·CCZ11,25,31·CCZ11,25,33·CCZ11,26,29·CCZ11,26,30·CCZ11,26,32·CCZ11,26,33·CCZ11,26,34·CCZ11,27,28·CCZ11,27,31·CCZ11,27,32·CCZ11,27,34·CCZ11,27,35·CCZ11,28,30·CCZ11,28,31·CCZ11,28,32·CCZ11,29,32·CCZ11,29,33·CCZ11,30,31·CCZ11,30,32·CCZ11,30,33·CCZ11,30,34·CCZ11,30,35·CCZ11,31,33·CCZ11,31,35·CCZ11,32,33·CCZ11,32,34·CCZ11,32,35·CCZ11,33,34·CCZ11,33,35·CCZ11,34,35·CCZ12,13,14·CCZ12,13,19·CCZ12,13,20·CCZ12,13,21·CCZ12,13,24·CCZ12,13,26·CCZ12,13,28·CCZ12,13,31·CCZ12,13,32·CCZ12,13,33·CCZ12,13,34·CCZ12,14,16·CCZ12,14,17·CCZ12,14,18·CCZ12,14,20·CCZ12,14,21·CCZ12,14,23·CCZ12,14,26·CCZ12,14,28·CCZ12,14,30·CCZ12,14,31·CCZ12,14,33·CCZ12,14,35·CCZ12,15,17·CCZ12,15,18·CCZ12,15,24·CCZ12,15,26·CCZ12,15,33·CCZ12,16,17·CCZ12,16,18·CCZ12,16,20·CCZ12,16,21·CCZ12,16,22·CCZ12,16,23·CCZ12,16,24·CCZ12,16,25·CCZ12,16,26·CCZ12,16,28·CCZ12,16,30·CCZ12,16,33·CCZ12,16,34·CCZ12,16,35·CCZ12,17,18·CCZ12,17,19·CCZ12,17,21·CCZ12,17,24·CCZ12,17,25·CCZ12,17,26·CCZ12,17,30·CCZ12,17,33·CCZ12,17,34·CCZ12,18,22·CCZ12,18,23·CCZ12,18,25·CCZ12,18,26·CCZ12,18,27·CCZ12,18,29·CCZ12,18,31·CCZ12,18,32·CCZ12,19,24·CCZ12,19,25·CCZ12,19,26·CCZ12,19,27·CCZ12,19,29·CCZ12,19,30·CCZ12,19,35·CCZ12,20,21·CCZ12,20,22·CCZ12,20,23·CCZ12,20,28·CCZ12,20,29·CCZ12,20,30·CCZ12,20,32·CCZ12,20,34·CCZ12,21,22·CCZ12,21,23·CCZ12,21,24·CCZ12,21,26·CCZ12,21,27·CCZ12,21,28·CCZ12,21,29·CCZ12,21,30·CCZ12,21,31·CCZ12,21,32·CCZ12,22,23·CCZ12,22,24·CCZ12,22,26·CCZ12,22,27·CCZ12,22,28·CCZ12,22,29·CCZ12,22,30·CCZ12,22,31·CCZ12,22,32·CCZ12,23,25·CCZ12,23,26·CCZ12,23,27·CCZ12,23,31·CCZ12,23,34·CCZ12,23,35·CCZ12,24,25·CCZ12,24,27·CCZ12,24,29·CCZ12,24,31·CCZ12,24,32·CCZ12,24,33·CCZ12,24,34·CCZ12,25,26·CCZ12,25,27·CCZ12,25,32·CCZ12,25,34·CCZ12,26,30·CCZ12,26,32·CCZ12,26,34·CCZ12,27,28·CCZ12,27,30·CCZ12,27,32·CCZ12,27,33·CCZ12,27,34·CCZ12,27,35·CCZ12,29,30·CCZ12,29,32·CCZ12,29,34·CCZ12,30,35·CCZ12,31,34·CCZ12,32,33·CCZ12,32,34·CCZ12,32,35·CCZ12,33,34·CCZ12,33,35·CCZ12,34,35·CCZ13,14,16·CCZ13,14,20·CCZ13,14,23·CCZ13,14,25·CCZ13,14,26·CCZ13,14,28·CCZ13,14,29·CCZ13,15,17·CCZ13,15,18·CCZ13,15,21·CCZ13,15,22·CCZ13,15,23·CCZ13,15,24·CCZ13,15,25·CCZ13,15,26·CCZ13,15,27·CCZ13,15,28·CCZ13,15,29·CCZ13,15,31·CCZ13,15,33·CCZ13,16,20·CCZ13,16,22·CCZ13,16,23·CCZ13,16,25·CCZ13,16,26·CCZ13,16,27·CCZ13,16,29·CCZ13,16,30·CCZ13,16,32·CCZ13,17,18·CCZ13,17,19·CCZ13,17,21·CCZ13,17,23·CCZ13,17,26·CCZ13,17,29·CCZ13,17,32·CCZ13,18,22·CCZ13,18,23·CCZ13,18,26·CCZ13,18,29·CCZ13,18,32·CCZ13,18,33·CCZ13,18,34·CCZ13,19,22·CCZ13,19,24·CCZ13,19,31·CCZ13,19,32·CCZ13,19,33·CCZ13,19,35·CCZ13,20,21·CCZ13,20,22·CCZ13,20,26·CCZ13,20,28·CCZ13,20,30·CCZ13,20,33·CCZ13,21,23·CCZ13,21,24·CCZ13,21,25·CCZ13,21,26·CCZ13,21,27·CCZ13,21,32·CCZ13,21,33·CCZ13,21,34·CCZ13,22,23·CCZ13,22,24·CCZ13,22,25·CCZ13,22,26·CCZ13,22,28·CCZ13,22,29·CCZ13,22,31·CCZ13,22,32·CCZ13,22,33·CCZ13,22,34·CCZ13,23,27·CCZ13,23,29·CCZ13,23,32·CCZ13,23,34·CCZ13,24,28·CCZ13,24,31·CCZ13,24,33·CCZ13,24,34·CCZ13,24,35·CCZ13,25,29·CCZ13,25,31·CCZ13,25,32·CCZ13,25,34·CCZ13,25,35·CCZ13,26,27·CCZ13,26,31·CCZ13,26,32·CCZ13,26,35·CCZ13,27,28·CCZ13,27,29·CCZ13,27,31·CCZ13,27,32·CCZ13,27,33·CCZ13,27,35·CCZ13,28,29·CCZ13,28,34·CCZ13,29,30·CCZ13,29,31·CCZ13,29,32·CCZ13,29,34·CCZ13,29,35·CCZ13,30,31·CCZ13,30,33·CCZ13,30,35·CCZ13,31,33·CCZ13,31,34·CCZ13,31,35·CCZ14,15,20·CCZ14,15,23·CCZ14,15,24·CCZ14,15,26·CCZ14,15,27·CCZ14,15,28·CCZ14,15,29·CCZ14,15,32·CCZ14,15,33·CCZ14,15,34·CCZ14,16,17·CCZ14,16,18·CCZ14,16,22·CCZ14,16,24·CCZ14,16,29·CCZ14,16,32·CCZ14,16,33·CCZ14,16,35·CCZ14,17,18·CCZ14,17,19·CCZ14,17,20·CCZ14,17,21·CCZ14,17,22·CCZ14,17,23·CCZ14,17,26·CCZ14,17,31·CCZ14,17,32·CCZ14,17,34·CCZ14,18,19·CCZ14,18,22·CCZ14,18,24·CCZ14,18,27·CCZ14,18,28·CCZ14,18,31·CCZ14,18,32·CCZ14,19,20·CCZ14,19,21·CCZ14,19,24·CCZ14,19,25·CCZ14,19,26·CCZ14,19,27·CCZ14,19,29·CCZ14,19,32·CCZ14,19,35·CCZ14,20,21·CCZ14,20,24·CCZ14,20,28·CCZ14,20,32·CCZ14,21,22·CCZ14,21,24·CCZ14,21,25·CCZ14,21,27·CCZ14,21,29·CCZ14,21,31·CCZ14,21,32·CCZ14,22,24·CCZ14,22,27·CCZ14,22,28·CCZ14,22,30·CCZ14,22,31·CCZ14,22,32·CCZ14,22,35·CCZ14,23,24·CCZ14,23,26·CCZ14,23,27·CCZ14,23,33·CCZ14,23,34·CCZ14,24,27·CCZ14,24,30·CCZ14,24,32·CCZ14,24,33·CCZ14,25,26·CCZ14,25,28·CCZ14,25,31·CCZ14,25,32·CCZ14,25,33·CCZ14,25,34·CCZ14,26,27·CCZ14,26,28·CCZ14,26,30·CCZ14,26,31·CCZ14,26,33·CCZ14,26,35·CCZ14,27,28·CCZ14,27,30·CCZ14,27,33·CCZ14,27,35·CCZ14,28,33·CCZ14,29,30·CCZ14,29,32·CCZ14,29,34·CCZ14,29,35·CCZ14,30,32·CCZ14,30,33·CCZ14,30,34·CCZ14,30,35·CCZ14,31,35·CCZ14,32,35·CCZ14,34,35·CCZ15,16,17·CCZ15,16,19·CCZ15,16,22·CCZ15,16,23·CCZ15,16,25·CCZ15,16,27·CCZ15,16,28·CCZ15,16,32·CCZ15,16,33·CCZ15,17,18·CCZ15,17,20·CCZ15,17,21·CCZ15,17,26·CCZ15,17,32·CCZ15,17,33·CCZ15,18,20·CCZ15,18,23·CCZ15,18,26·CCZ15,18,27·CCZ15,18,28·CCZ15,18,30·CCZ15,18,31·CCZ15,18,32·CCZ15,18,33·CCZ15,18,35·CCZ15,19,21·CCZ15,19,23·CCZ15,19,25·CCZ15,19,26·CCZ15,19,27·CCZ15,19,29·CCZ15,19,31·CCZ15,19,32·CCZ15,19,33·CCZ15,19,34·CCZ15,19,35·CCZ15,20,21·CCZ15,20,22·CCZ15,20,23·CCZ15,20,25·CCZ15,20,27·CCZ15,20,28·CCZ15,20,30·CCZ15,20,31·CCZ15,20,32·CCZ15,20,34·CCZ15,20,35·CCZ15,21,22·CCZ15,21,23·CCZ15,21,24·CCZ15,21,25·CCZ15,21,26·CCZ15,21,27·CCZ15,21,28·CCZ15,21,30·CCZ15,21,31·CCZ15,21,32·CCZ15,21,34·CCZ15,22,24·CCZ15,22,28·CCZ15,22,30·CCZ15,22,34·CCZ15,23,25·CCZ15,23,28·CCZ15,23,29·CCZ15,23,30·CCZ15,23,31·CCZ15,23,32·CCZ15,23,34·CCZ15,24,26·CCZ15,24,27·CCZ15,24,28·CCZ15,24,29·CCZ15,24,31·CCZ15,25,26·CCZ15,25,27·CCZ15,25,30·CCZ15,26,31·CCZ15,26,33·CCZ15,26,34·CCZ15,26,35·CCZ15,27,31·CCZ15,27,32·CCZ15,27,33·CCZ15,27,34·CCZ15,28,33·CCZ15,28,35·CCZ15,29,30·CCZ15,29,33·CCZ15,30,31·CCZ15,30,32·CCZ15,30,33·CCZ15,30,34·CCZ15,31,33·CCZ15,32,33·CCZ15,33,35·CCZ16,17,19·CCZ16,17,21·CCZ16,17,23·CCZ16,17,24·CCZ16,17,25·CCZ16,17,26·CCZ16,17,27·CCZ16,17,28·CCZ16,17,31·CCZ16,17,33·CCZ16,17,34·CCZ16,18,19·CCZ16,18,20·CCZ16,18,21·CCZ16,18,24·CCZ16,18,25·CCZ16,18,27·CCZ16,18,29·CCZ16,18,30·CCZ16,18,32·CCZ16,18,33·CCZ16,19,23·CCZ16,19,24·CCZ16,19,25·CCZ16,19,27·CCZ16,19,28·CCZ16,19,29·CCZ16,19,30·CCZ16,19,32·CCZ16,19,33·CCZ16,19,34·CCZ16,19,35·CCZ16,20,23·CCZ16,20,25·CCZ16,20,26·CCZ16,20,32·CCZ16,21,22·CCZ16,21,23·CCZ16,21,25·CCZ16,21,26·CCZ16,21,27·CCZ16,21,28·CCZ16,21,31·CCZ16,21,33·CCZ16,21,34·CCZ16,21,35·CCZ16,22,23·CCZ16,22,25·CCZ16,22,26·CCZ16,22,27·CCZ16,22,29·CCZ16,22,31·CCZ16,22,33·CCZ16,22,35·CCZ16,23,25·CCZ16,23,26·CCZ16,23,28·CCZ16,23,30·CCZ16,23,33·CCZ16,23,35·CCZ16,24,27·CCZ16,24,30·CCZ16,24,34·CCZ16,24,35·CCZ16,25,27·CCZ16,25,29·CCZ16,25,30·CCZ16,25,31·CCZ16,25,32·CCZ16,25,33·CCZ16,25,35·CCZ16,26,28·CCZ16,26,30·CCZ16,26,34·CCZ16,27,28·CCZ16,27,31·CCZ16,27,35·CCZ16,28,30·CCZ16,29,31·CCZ16,29,34·CCZ16,29,35·CCZ16,30,31·CCZ16,30,33·CCZ16,30,35·CCZ16,31,33·CCZ16,32,34·CCZ16,32,35·CCZ16,33,34·CCZ16,33,35·CCZ16,34,35·CCZ17,18,19·CCZ17,18,26·CCZ17,18,29·CCZ17,18,30·CCZ17,18,32·CCZ17,18,35·CCZ17,19,21·CCZ17,19,22·CCZ17,19,24·CCZ17,19,27·CCZ17,19,30·CCZ17,19,33·CCZ17,19,34·CCZ17,20,22·CCZ17,20,23·CCZ17,20,24·CCZ17,20,25·CCZ17,20,26·CCZ17,20,28·CCZ17,20,31·CCZ17,20,33·CCZ17,21,23·CCZ17,21,24·CCZ17,21,25·CCZ17,21,26·CCZ17,21,28·CCZ17,21,29·CCZ17,21,30·CCZ17,21,31·CCZ17,21,32·CCZ17,21,34·CCZ17,21,35·CCZ17,22,27·CCZ17,22,28·CCZ17,22,31·CCZ17,22,33·CCZ17,22,34·CCZ17,23,24·CCZ17,23,25·CCZ17,23,26·CCZ17,23,27·CCZ17,23,28·CCZ17,23,31·CCZ17,23,33·CCZ17,23,35·CCZ17,24,25·CCZ17,24,26·CCZ17,24,28·CCZ17,24,31·CCZ17,24,32·CCZ17,24,33·CCZ17,25,26·CCZ17,25,27·CCZ17,25,30·CCZ17,25,31·CCZ17,25,34·CCZ17,25,35·CCZ17,26,27·CCZ17,26,28·CCZ17,26,29·CCZ17,26,30·CCZ17,26,31·CCZ17,26,35·CCZ17,27,33·CCZ17,27,34·CCZ17,27,35·CCZ17,28,32·CCZ17,28,34·CCZ17,28,35·CCZ17,29,31·CCZ17,29,32·CCZ17,29,33·CCZ17,30,34·CCZ17,31,33·CCZ17,31,34·CCZ17,32,33·CCZ17,32,34·CCZ17,33,35·CCZ17,34,35·CCZ18,19,20·CCZ18,19,22·CCZ18,19,24·CCZ18,19,27·CCZ18,19,30·CCZ18,19,31·CCZ18,19,33·CCZ18,19,35·CCZ18,20,21·CCZ18,20,25·CCZ18,20,27·CCZ18,20,28·CCZ18,20,29·CCZ18,20,31·CCZ18,20,32·CCZ18,20,33·CCZ18,21,24·CCZ18,21,30·CCZ18,21,32·CCZ18,21,35·CCZ18,22,23·CCZ18,22,25·CCZ18,22,27·CCZ18,22,28·CCZ18,22,33·CCZ18,22,35·CCZ18,23,25·CCZ18,23,26·CCZ18,23,27·CCZ18,23,29·CCZ18,23,31·CCZ18,23,33·CCZ18,23,35·CCZ18,24,27·CCZ18,24,32·CCZ18,24,33·CCZ18,24,34·CCZ18,25,26·CCZ18,25,30·CCZ18,25,33·CCZ18,25,34·CCZ18,26,29·CCZ18,26,30·CCZ18,26,32·CCZ18,26,33·CCZ18,26,34·CCZ18,27,28·CCZ18,27,32·CCZ18,28,29·CCZ18,28,30·CCZ18,29,32·CCZ18,29,33·CCZ18,29,34·CCZ18,29,35·CCZ18,30,31·CCZ18,30,34·CCZ18,31,32·CCZ18,32,34·CCZ18,33,34·CCZ18,33,35·CCZ18,34,35·CCZ19,20,22·CCZ19,20,26·CCZ19,20,27·CCZ19,20,31·CCZ19,20,32·CCZ19,20,33·CCZ19,21,23·CCZ19,21,27·CCZ19,21,28·CCZ19,21,30·CCZ19,21,32·CCZ19,21,34·CCZ19,22,24·CCZ19,22,30·CCZ19,22,32·CCZ19,22,35·CCZ19,23,25·CCZ19,23,26·CCZ19,23,29·CCZ19,23,30·CCZ19,23,32·CCZ19,24,25·CCZ19,24,28·CCZ19,24,30·CCZ19,24,31·CCZ19,24,33·CCZ19,24,35·CCZ19,25,27·CCZ19,25,29·CCZ19,25,34·CCZ19,26,31·CCZ19,26,32·CCZ19,26,34·CCZ19,27,32·CCZ19,27,33·CCZ19,27,34·CCZ19,28,34·CCZ19,29,30·CCZ19,29,32·CCZ19,29,34·CCZ19,29,35·CCZ19,30,32·CCZ19,30,34·CCZ19,30,35·CCZ19,31,32·CCZ19,31,34·CCZ19,32,34·CCZ19,33,34·CCZ20,21,22·CCZ20,21,29·CCZ20,21,30·CCZ20,21,33·CCZ20,21,34·CCZ20,21,35·CCZ20,22,23·CCZ20,22,24·CCZ20,22,25·CCZ20,22,26·CCZ20,22,34·CCZ20,22,35·CCZ20,23,24·CCZ20,23,28·CCZ20,23,32·CCZ20,23,33·CCZ20,24,25·CCZ20,24,26·CCZ20,24,28·CCZ20,24,31·CCZ20,24,34·CCZ20,25,29·CCZ20,25,30·CCZ20,25,31·CCZ20,25,33·CCZ20,26,29·CCZ20,26,31·CCZ20,26,32·CCZ20,26,33·CCZ20,26,35·CCZ20,27,30·CCZ20,27,34·CCZ20,27,35·CCZ20,28,30·CCZ20,28,31·CCZ20,28,32·CCZ20,28,33·CCZ20,28,34·CCZ20,29,30·CCZ20,29,31·CCZ20,29,33·CCZ20,29,35·CCZ20,30,33·CCZ20,30,34·CCZ20,31,32·CCZ20,31,33·CCZ20,32,34·CCZ20,32,35·CCZ20,33,34·CCZ20,33,35·CCZ20,34,35·CCZ21,22,25·CCZ21,22,28·CCZ21,22,30·CCZ21,22,31·CCZ21,22,32·CCZ21,22,34·CCZ21,22,35·CCZ21,23,24·CCZ21,23,25·CCZ21,23,27·CCZ21,23,30·CCZ21,23,31·CCZ21,23,32·CCZ21,23,33·CCZ21,24,31·CCZ21,24,32·CCZ21,24,33·CCZ21,24,34·CCZ21,25,29·CCZ21,25,30·CCZ21,25,31·CCZ21,26,27·CCZ21,26,28·CCZ21,26,35·CCZ21,27,28·CCZ21,27,30·CCZ21,27,31·CCZ21,27,32·CCZ21,27,35·CCZ21,28,30·CCZ21,28,31·CCZ21,28,34·CCZ21,28,35·CCZ21,29,30·CCZ21,29,31·CCZ21,29,34·CCZ21,29,35·CCZ21,30,33·CCZ21,31,32·CCZ21,32,34·CCZ21,32,35·CCZ21,33,35·CCZ21,34,35·CCZ22,23,24·CCZ22,23,27·CCZ22,23,29·CCZ22,23,30·CCZ22,23,34·CCZ22,24,25·CCZ22,24,26·CCZ22,24,29·CCZ22,24,30·CCZ22,24,31·CCZ22,24,32·CCZ22,24,33·CCZ22,24,35·CCZ22,25,26·CCZ22,25,27·CCZ22,25,35·CCZ22,26,27·CCZ22,26,28·CCZ22,26,33·CCZ22,26,34·CCZ22,26,35·CCZ22,27,28·CCZ22,27,29·CCZ22,27,34·CCZ22,28,29·CCZ22,28,31·CCZ22,28,32·CCZ22,28,35·CCZ22,29,30·CCZ22,29,31·CCZ22,29,33·CCZ22,29,34·CCZ22,29,35·CCZ22,30,31·CCZ22,30,32·CCZ22,31,32·CCZ22,31,33·CCZ22,31,34·CCZ22,31,35·CCZ22,32,33·CCZ22,32,35·CCZ22,33,34·CCZ22,33,35·CCZ23,24,25·CCZ23,24,26·CCZ23,24,27·CCZ23,24,28·CCZ23,24,30·CCZ23,24,32·CCZ23,24,35·CCZ23,25,27·CCZ23,25,29·CCZ23,25,31·CCZ23,25,32·CCZ23,25,33·CCZ23,26,28·CCZ23,26,31·CCZ23,26,32·CCZ23,26,33·CCZ23,27,28·CCZ23,27,29·CCZ23,27,31·CCZ23,27,35·CCZ23,28,31·CCZ23,29,30·CCZ23,29,31·CCZ23,29,32·CCZ23,29,35·CCZ23,30,32·CCZ23,30,33·CCZ23,32,34·CCZ23,32,35·CCZ23,33,34·CCZ23,33,35·CCZ23,34,35·CCZ24,25,26·CCZ24,25,28·CCZ24,25,29·CCZ24,25,30·CCZ24,25,31·CCZ24,25,33·CCZ24,25,35·CCZ24,26,29·CCZ24,26,31·CCZ24,26,33·CCZ24,26,34·CCZ24,27,30·CCZ24,27,32·CCZ24,27,33·CCZ24,28,29·CCZ24,28,33·CCZ24,28,35·CCZ24,29,30·CCZ24,29,33·CCZ24,29,34·CCZ24,30,35·CCZ24,31,32·CCZ24,31,35·CCZ24,32,33·CCZ24,32,35·CCZ24,33,34·CCZ24,33,35·CCZ24,34,35·CCZ25,26,29·CCZ25,26,30·CCZ25,26,31·CCZ25,26,33·CCZ25,26,34·CCZ25,27,28·CCZ25,27,29·CCZ25,27,30·CCZ25,27,31·CCZ25,27,33·CCZ25,27,34·CCZ25,27,35·CCZ25,28,29·CCZ25,28,33·CCZ25,28,34·CCZ25,28,35·CCZ25,29,30·CCZ25,29,31·CCZ25,29,32·CCZ25,30,32·CCZ25,30,33·CCZ25,30,34·CCZ25,30,35·CCZ25,31,33·CCZ25,31,35·CCZ25,32,33·CCZ25,32,34·CCZ25,32,35·CCZ25,34,35·CCZ26,27,29·CCZ26,27,30·CCZ26,27,32·CCZ26,27,33·CCZ26,27,34·CCZ26,27,35·CCZ26,28,30·CCZ26,28,31·CCZ26,28,33·CCZ26,28,34·CCZ26,29,31·CCZ26,29,35·CCZ26,30,34·CCZ26,31,35·CCZ26,32,33·CCZ26,32,34·CCZ26,34,35·CCZ27,28,29·CCZ27,28,32·CCZ27,28,34·CCZ27,29,31·CCZ27,29,32·CCZ27,29,35·CCZ27,30,31·CCZ27,30,35·CCZ27,31,33·CCZ27,31,35·CCZ27,32,33·CCZ27,32,35·CCZ27,34,35·CCZ28,29,30·CCZ28,29,32·CCZ28,29,33·CCZ28,30,32·CCZ28,30,35·CCZ28,31,35·CCZ28,32,33·CCZ28,32,34·CCZ28,33,34·CCZ29,30,31·CCZ29,30,32·CCZ29,30,34·CCZ29,31,32·CCZ29,32,35·CCZ29,33,34·CCZ29,33,35·CCZ29,34,35·CCZ30,31,33·CCZ30,32,33·CCZ30,32,34·CCZ30,32,35·CCZ30,33,35·CCZ31,32,33·CCZ31,32,34·CCZ31,32,35·CCZ32,33,34·CCZ32,34,35·CCZ33,34,35
 
 - output gate: `0,1,2+0,1,7+0,1,8+0,1,9+0,1,11+0,1,12+0,1,13+0,1,14+0,1,15+0,1,17+0,1,18+0,1,21+0,1,22+0,1,25+0,1,26+0,1,27+0,1,28+0,1,30+0,1,33+0,1,35+0,2,6+0,2,7+0,2,11+0,2,14+0,2,17+0,2,18+0,2,21+0,2,24+0,2,25+0,2,26+0,2,27+0,2,28+0,2,31+0,3,5+0,3,6+0,3,7+0,3,8+0,3,9+0,3,10+0,3,16+0,3,17+0,3,18+0,3,19+0,3,20+0,3,22+0,3,23+0,3,25+0,3,26+0,3,29+0,3,33+0,4,5+0,4,6+0,4,7+0,4,8+0,4,10+0,4,11+0,4,14+0,4,15+0,4,18+0,4,19+0,4,20+0,4,22+0,4,23+0,4,25+0,4,26+0,4,27+0,4,28+0,4,29+0,4,31+0,4,32+0,4,35+0,5,6+0,5,7+0,5,8+0,5,9+0,5,10+0,5,12+0,5,13+0,5,15+0,5,16+0,5,19+0,5,21+0,5,24+0,5,26+0,5,27+0,5,30+0,5,31+0,5,33+0,6,11+0,6,12+0,6,13+0,6,14+0,6,17+0,6,18+0,6,20+0,6,21+0,6,25+0,6,27+0,6,28+0,6,30+0,6,31+0,6,34+0,6,35+0,7,13+0,7,14+0,7,15+0,7,16+0,7,19+0,7,20+0,7,21+0,7,22+0,7,25+0,7,29+0,7,31+0,7,32+0,7,33+0,7,35+0,8,12+0,8,13+0,8,18+0,8,20+0,8,23+0,8,24+0,8,25+0,8,27+0,8,34+0,8,35+0,9,11+0,9,12+0,9,13+0,9,14+0,9,15+0,9,21+0,9,24+0,9,25+0,9,26+0,9,28+0,9,29+0,9,30+0,9,33+0,9,35+0,10,12+0,10,13+0,10,15+0,10,17+0,10,18+0,10,20+0,10,21+0,10,22+0,10,23+0,10,24+0,10,25+0,10,27+0,10,29+0,10,30+0,10,31+0,11,14+0,11,15+0,11,16+0,11,17+0,11,19+0,11,20+0,11,23+0,11,24+0,11,25+0,11,27+0,11,29+0,11,32+0,12,14+0,12,15+0,12,16+0,12,17+0,12,18+0,12,20+0,12,21+0,12,22+0,12,24+0,12,25+0,12,26+0,12,29+0,12,31+0,12,33+0,12,34+0,12,35+0,13,15+0,13,16+0,13,18+0,13,19+0,13,20+0,13,21+0,13,23+0,13,25+0,13,26+0,13,30+0,13,31+0,13,33+0,13,34+0,13,35+0,14,15+0,14,18+0,14,19+0,14,20+0,14,21+0,14,22+0,14,25+0,14,28+0,14,30+0,14,31+0,14,33+0,14,35+0,15,19+0,15,21+0,15,22+0,15,23+0,15,25+0,15,28+0,15,29+0,15,32+0,15,35+0,16,19+0,16,23+0,16,25+0,16,26+0,16,28+0,16,29+0,16,30+0,16,31+0,16,33+0,16,34+0,17,18+0,17,20+0,17,21+0,17,23+0,17,24+0,17,25+0,17,26+0,17,28+0,17,31+0,17,32+0,17,35+0,18,22+0,18,24+0,18,26+0,18,29+0,18,30+0,18,31+0,18,32+0,18,35+0,19,20+0,19,25+0,19,28+0,19,32+0,19,33+0,19,35+0,20,21+0,20,24+0,20,26+0,20,28+0,20,30+0,20,32+0,20,35+0,21,24+0,21,29+0,21,30+0,21,32+0,21,33+0,21,34+0,21,35+0,22,23+0,22,24+0,22,26+0,22,29+0,22,31+0,22,32+0,22,33+0,22,34+0,22,35+0,23,25+0,23,28+0,23,29+0,23,31+0,23,33+0,23,34+0,23,35+0,24,28+0,24,29+0,24,30+0,24,31+0,24,32+0,24,35+0,25,26+0,25,27+0,25,28+0,25,33+0,26,29+0,26,31+0,26,32+0,26,33+0,26,35+0,27,28+0,27,29+0,27,30+0,27,32+0,27,33+0,27,34+0,27,35+0,28,29+0,28,32+0,29,30+0,29,31+0,29,35+0,30,31+0,30,35+0,31,33+0,31,34+0,31,35+0,32,33+0,32,34+1,2,3+1,2,4+1,2,6+1,2,11+1,2,12+1,2,13+1,2,15+1,2,16+1,2,18+1,2,19+1,2,20+1,2,22+1,2,23+1,2,24+1,2,25+1,2,26+1,2,27+1,2,28+1,2,30+1,2,31+1,2,32+1,3,4+1,3,6+1,3,9+1,3,11+1,3,12+1,3,14+1,3,18+1,3,20+1,3,22+1,3,23+1,3,24+1,3,25+1,3,28+1,3,30+1,3,33+1,3,34+1,4,8+1,4,9+1,4,10+1,4,11+1,4,12+1,4,14+1,4,15+1,4,16+1,4,17+1,4,19+1,4,21+1,4,24+1,4,25+1,4,27+1,4,31+1,4,32+1,4,35+1,5,6+1,5,8+1,5,9+1,5,11+1,5,12+1,5,14+1,5,20+1,5,22+1,5,23+1,5,26+1,5,29+1,5,30+1,5,32+1,5,33+1,5,34+1,6,7+1,6,9+1,6,10+1,6,11+1,6,12+1,6,20+1,6,23+1,6,27+1,6,29+1,6,34+1,6,35+1,7,9+1,7,10+1,7,13+1,7,14+1,7,17+1,7,20+1,7,21+1,7,22+1,7,23+1,7,24+1,7,25+1,7,29+1,7,30+1,7,32+1,7,35+1,8,9+1,8,10+1,8,16+1,8,17+1,8,19+1,8,20+1,8,21+1,8,22+1,8,23+1,8,24+1,8,26+1,8,27+1,8,30+1,8,31+1,9,11+1,9,12+1,9,13+1,9,14+1,9,17+1,9,18+1,9,21+1,9,22+1,9,26+1,9,27+1,9,28+1,9,29+1,9,30+1,9,34+1,10,13+1,10,15+1,10,17+1,10,20+1,10,21+1,10,23+1,10,24+1,10,26+1,10,27+1,10,34+1,10,35+1,11,15+1,11,25+1,11,29+1,11,33+1,11,34+1,11,35+1,12,15+1,12,25+1,12,29+1,12,33+1,12,34+1,12,35+1,13,14+1,13,15+1,13,18+1,13,22+1,13,24+1,13,27+1,13,28+1,13,30+1,13,34+1,14,17+1,14,18+1,14,20+1,14,21+1,14,23+1,14,27+1,14,28+1,14,32+1,14,33+1,15,17+1,15,18+1,15,21+1,15,28+1,15,29+1,15,32+1,15,33+1,15,34+1,15,35+1,16,18+1,16,24+1,16,25+1,16,26+1,16,28+1,16,29+1,16,32+1,17,22+1,17,25+1,17,26+1,17,27+1,17,29+1,17,30+1,17,32+1,17,34+1,18,19+1,18,26+1,18,27+1,18,31+1,18,32+1,18,33+1,18,34+1,19,24+1,19,25+1,19,26+1,19,28+1,19,29+1,19,32+1,20,22+1,20,26+1,20,27+1,20,30+1,20,32+1,20,33+1,20,35+1,21,22+1,21,25+1,21,26+1,21,27+1,21,29+1,21,30+1,21,32+1,21,34+1,22,23+1,22,24+1,22,25+1,22,26+1,22,27+1,22,29+1,22,33+1,23,26+1,23,27+1,23,30+1,23,32+1,23,33+1,23,35+1,24,25+1,24,29+1,24,30+1,24,31+1,24,33+1,25,26+1,25,29+1,25,30+1,25,31+1,25,34+1,25,35+1,26,27+1,26,28+1,26,29+1,26,30+1,26,31+1,26,32+1,27,28+1,27,30+1,27,35+1,28,31+1,28,32+1,28,33+1,28,34+1,29,30+1,29,31+1,29,33+1,30,33+1,31,32+1,32,34+1,33,35+2,3,4+2,3,5+2,3,6+2,3,7+2,3,9+2,3,11+2,3,12+2,3,13+2,3,14+2,3,15+2,3,16+2,3,17+2,3,19+2,3,24+2,3,25+2,3,27+2,3,28+2,3,29+2,4,5+2,4,7+2,4,8+2,4,16+2,4,18+2,4,23+2,4,31+2,4,32+2,4,33+2,4,34+2,5,7+2,5,8+2,5,9+2,5,10+2,5,11+2,5,12+2,5,13+2,5,17+2,5,19+2,5,20+2,5,21+2,5,23+2,5,27+2,5,28+2,5,29+2,5,30+2,5,33+2,5,34+2,5,35+2,6,8+2,6,9+2,6,10+2,6,12+2,6,16+2,6,17+2,6,19+2,6,21+2,6,22+2,6,23+2,6,30+2,6,31+2,6,32+2,6,33+2,7,8+2,7,10+2,7,11+2,7,13+2,7,17+2,7,18+2,7,21+2,7,22+2,7,23+2,7,27+2,7,28+2,7,31+2,7,32+2,7,33+2,8,10+2,8,11+2,8,12+2,8,13+2,8,16+2,8,22+2,8,23+2,8,26+2,8,27+2,8,28+2,8,30+2,8,32+2,8,33+2,8,35+2,9,10+2,9,11+2,9,14+2,9,16+2,9,21+2,9,22+2,9,23+2,9,24+2,9,26+2,9,30+2,9,31+2,9,32+2,9,34+2,10,12+2,10,13+2,10,17+2,10,18+2,10,20+2,10,21+2,10,22+2,10,25+2,10,26+2,10,27+2,10,28+2,10,29+2,10,30+2,10,35+2,11,13+2,11,14+2,11,17+2,11,20+2,11,22+2,11,25+2,11,29+2,11,30+2,11,31+2,11,33+2,11,34+2,11,35+2,12,14+2,12,15+2,12,16+2,12,20+2,12,21+2,12,23+2,12,24+2,12,25+2,12,30+2,12,33+2,12,34+2,12,35+2,13,15+2,13,17+2,13,18+2,13,19+2,13,21+2,13,24+2,13,25+2,13,26+2,13,27+2,13,28+2,13,31+2,13,32+2,13,33+2,13,35+2,14,15+2,14,16+2,14,19+2,14,23+2,14,25+2,14,26+2,14,29+2,14,30+2,14,31+2,14,32+2,15,16+2,15,20+2,15,22+2,15,24+2,15,25+2,15,27+2,15,29+2,15,30+2,15,31+2,15,33+2,15,34+2,15,35+2,16,17+2,16,18+2,16,19+2,16,21+2,16,23+2,16,24+2,16,25+2,16,27+2,16,34+2,16,35+2,17,19+2,17,22+2,17,25+2,17,28+2,17,29+2,17,30+2,17,34+2,18,21+2,18,26+2,18,35+2,19,20+2,19,21+2,19,22+2,19,23+2,19,24+2,19,26+2,19,28+2,19,30+2,19,31+2,19,32+2,19,33+2,19,34+2,20,23+2,20,28+2,20,30+2,20,32+2,20,33+2,20,34+2,20,35+2,21,23+2,21,24+2,21,26+2,21,27+2,21,28+2,21,31+2,21,32+2,21,35+2,22,25+2,22,28+2,22,30+2,22,32+2,22,33+2,23,24+2,23,28+2,23,34+2,23,35+2,24,25+2,24,26+2,24,28+2,24,30+2,24,33+2,24,35+2,25,26+2,25,27+2,25,30+2,25,31+2,25,32+2,26,27+2,26,28+2,26,29+2,26,30+2,26,31+2,26,33+2,26,34+2,26,35+2,27,30+2,27,31+2,28,29+2,28,30+2,28,32+2,28,35+2,29,30+2,29,32+2,29,33+2,30,32+2,30,34+2,31,32+2,31,34+2,32,35+2,34,35+3,4,5+3,4,6+3,4,14+3,4,15+3,4,17+3,4,18+3,4,20+3,4,21+3,4,22+3,4,23+3,4,26+3,4,28+3,4,30+3,4,31+3,4,32+3,4,33+3,4,35+3,5,6+3,5,8+3,5,11+3,5,13+3,5,15+3,5,17+3,5,19+3,5,20+3,5,22+3,5,23+3,5,24+3,5,25+3,5,26+3,5,30+3,5,31+3,5,33+3,5,35+3,6,7+3,6,8+3,6,9+3,6,11+3,6,12+3,6,13+3,6,19+3,6,20+3,6,21+3,6,22+3,6,24+3,6,25+3,6,26+3,6,29+3,6,30+3,6,32+3,6,33+3,6,34+3,7,9+3,7,10+3,7,15+3,7,16+3,7,19+3,7,20+3,7,23+3,7,24+3,7,27+3,7,28+3,7,31+3,7,32+3,7,34+3,7,35+3,8,9+3,8,10+3,8,11+3,8,14+3,8,16+3,8,17+3,8,23+3,8,24+3,8,25+3,8,28+3,8,29+3,8,31+3,8,33+3,8,34+3,9,11+3,9,16+3,9,17+3,9,19+3,9,21+3,9,23+3,9,24+3,9,27+3,9,28+3,9,29+3,9,30+3,9,31+3,9,32+3,10,11+3,10,12+3,10,14+3,10,16+3,10,24+3,10,27+3,10,29+3,10,32+3,10,34+3,11,16+3,11,18+3,11,20+3,11,21+3,11,22+3,11,23+3,11,25+3,11,27+3,11,31+3,11,33+3,11,34+3,11,35+3,12,14+3,12,15+3,12,18+3,12,19+3,12,21+3,12,24+3,12,25+3,12,26+3,12,28+3,12,30+3,12,32+3,12,33+3,13,14+3,13,17+3,13,18+3,13,21+3,13,23+3,13,26+3,13,27+3,13,32+3,14,15+3,14,16+3,14,17+3,14,18+3,14,19+3,14,22+3,14,23+3,14,24+3,14,25+3,14,26+3,14,27+3,14,31+3,14,32+3,14,33+3,14,34+3,15,16+3,15,19+3,15,20+3,15,21+3,15,24+3,15,25+3,15,27+3,15,31+3,15,34+3,15,35+3,16,18+3,16,22+3,16,24+3,16,25+3,16,26+3,16,32+3,16,34+3,17,18+3,17,20+3,17,24+3,17,26+3,17,29+3,17,30+3,17,31+3,17,32+3,17,33+3,17,34+3,17,35+3,18,19+3,18,20+3,18,22+3,18,23+3,18,25+3,18,26+3,18,27+3,18,30+3,18,31+3,18,34+3,18,35+3,19,20+3,19,22+3,19,23+3,19,24+3,19,25+3,19,26+3,19,30+3,19,31+3,19,34+3,20,21+3,20,23+3,20,25+3,20,26+3,20,28+3,20,29+3,20,30+3,20,33+3,20,34+3,20,35+3,21,23+3,21,25+3,21,27+3,21,28+3,21,29+3,21,34+3,22,23+3,22,26+3,22,27+3,22,31+3,22,32+3,23,24+3,23,26+3,23,28+3,23,30+3,23,32+3,23,33+3,23,34+3,23,35+3,24,26+3,24,27+3,24,30+3,24,31+3,25,26+3,25,27+3,25,28+3,25,31+3,25,33+3,25,34+3,25,35+3,26,28+3,26,32+3,26,34+3,26,35+3,27,28+3,27,31+3,27,32+3,27,35+3,28,31+3,28,32+3,28,33+3,28,35+3,29,30+3,29,32+3,29,33+3,29,34+3,29,35+3,30,31+3,30,32+3,30,33+3,30,34+3,31,34+3,32,33+3,32,34+3,32,35+3,33,34+3,33,35+3,34,35+4,5,9+4,5,11+4,5,13+4,5,14+4,5,16+4,5,17+4,5,18+4,5,19+4,5,20+4,5,21+4,5,23+4,5,29+4,5,31+4,5,34+4,6,7+4,6,8+4,6,11+4,6,17+4,6,20+4,6,21+4,6,25+4,6,26+4,6,27+4,6,29+4,6,30+4,6,34+4,6,35+4,7,8+4,7,9+4,7,10+4,7,11+4,7,12+4,7,15+4,7,16+4,7,17+4,7,19+4,7,21+4,7,22+4,7,23+4,7,27+4,7,29+4,7,30+4,7,31+4,7,32+4,7,33+4,7,35+4,8,17+4,8,18+4,8,20+4,8,21+4,8,23+4,8,26+4,8,27+4,9,10+4,9,13+4,9,14+4,9,16+4,9,17+4,9,18+4,9,19+4,9,21+4,9,22+4,9,24+4,9,26+4,9,29+4,9,30+4,9,31+4,9,32+4,9,33+4,9,34+4,9,35+4,10,12+4,10,16+4,10,18+4,10,19+4,10,31+4,10,32+4,10,35+4,11,14+4,11,16+4,11,17+4,11,18+4,11,24+4,11,29+4,11,31+4,11,35+4,12,14+4,12,16+4,12,22+4,12,25+4,12,31+4,12,34+4,12,35+4,13,14+4,13,15+4,13,17+4,13,18+4,13,23+4,13,26+4,13,28+4,13,29+4,14,16+4,14,17+4,14,18+4,14,20+4,14,21+4,14,22+4,14,23+4,14,24+4,14,27+4,14,28+4,14,30+4,14,35+4,15,20+4,15,22+4,15,26+4,15,27+4,15,28+4,15,31+4,15,33+4,15,35+4,16,19+4,16,21+4,16,22+4,16,24+4,16,25+4,16,32+4,16,33+4,16,34+4,17,18+4,17,19+4,17,23+4,17,25+4,17,26+4,17,27+4,17,28+4,17,30+4,17,33+4,17,34+4,17,35+4,18,19+4,18,20+4,18,21+4,18,25+4,18,27+4,18,30+4,18,31+4,18,32+4,19,20+4,19,23+4,19,26+4,19,28+4,20,21+4,20,23+4,20,25+4,20,27+4,20,32+4,20,33+4,20,34+4,21,24+4,21,26+4,21,27+4,21,29+4,21,31+4,22,24+4,22,25+4,22,27+4,22,28+4,22,31+4,22,32+4,22,34+4,22,35+4,23,28+4,23,29+4,23,33+4,23,35+4,24,27+4,24,28+4,24,29+4,24,30+4,24,32+4,24,33+4,24,34+4,25,26+4,25,27+4,25,30+4,25,31+4,25,33+4,25,34+4,25,35+4,26,28+4,26,29+4,26,30+4,26,34+4,26,35+4,27,29+4,27,30+4,27,32+4,27,34+4,27,35+4,28,29+4,29,31+4,29,32+4,29,34+4,29,35+4,30,31+4,30,32+4,30,35+4,31,32+4,31,34+4,34,35+5,6,8+5,6,9+5,6,12+5,6,13+5,6,15+5,6,17+5,6,18+5,6,20+5,6,21+5,6,22+5,6,23+5,6,24+5,6,25+5,6,26+5,6,27+5,6,28+5,6,29+5,6,31+5,6,32+5,6,33+5,6,34+5,7,8+5,7,10+5,7,12+5,7,13+5,7,14+5,7,16+5,7,17+5,7,19+5,7,24+5,7,26+5,7,27+5,7,29+5,7,31+5,7,32+5,7,34+5,7,35+5,8,9+5,8,10+5,8,11+5,8,12+5,8,16+5,8,18+5,8,19+5,8,20+5,8,22+5,8,27+5,8,29+5,8,30+5,8,31+5,8,34+5,9,10+5,9,11+5,9,12+5,9,13+5,9,15+5,9,18+5,9,19+5,9,27+5,9,28+5,9,31+5,9,32+5,9,33+5,9,34+5,10,12+5,10,13+5,10,14+5,10,18+5,10,20+5,10,21+5,10,22+5,10,29+5,10,30+5,10,31+5,10,33+5,10,35+5,11,16+5,11,17+5,11,19+5,11,20+5,11,21+5,11,22+5,11,28+5,11,31+5,11,34+5,12,13+5,12,14+5,12,15+5,12,16+5,12,22+5,12,25+5,12,26+5,12,27+5,12,29+5,12,32+5,13,14+5,13,15+5,13,17+5,13,21+5,13,22+5,13,24+5,13,25+5,13,26+5,13,27+5,13,29+5,13,30+5,13,31+5,13,32+5,14,19+5,14,20+5,14,22+5,14,23+5,14,25+5,14,27+5,14,29+5,14,33+5,14,35+5,15,18+5,15,19+5,15,20+5,15,22+5,15,23+5,15,24+5,15,25+5,15,26+5,15,28+5,15,32+5,15,33+5,15,34+5,15,35+5,16,17+5,16,18+5,16,19+5,16,20+5,16,25+5,16,28+5,16,30+5,16,31+5,17,20+5,17,21+5,17,22+5,17,25+5,17,26+5,17,28+5,17,32+5,17,33+5,18,19+5,18,20+5,18,21+5,18,26+5,18,27+5,18,28+5,18,29+5,18,32+5,18,33+5,18,34+5,18,35+5,19,20+5,19,21+5,19,24+5,19,25+5,19,26+5,19,27+5,19,28+5,19,31+5,19,32+5,19,33+5,19,34+5,20,21+5,20,22+5,20,24+5,20,28+5,20,29+5,20,32+5,20,35+5,21,22+5,21,24+5,21,26+5,21,28+5,21,32+5,22,23+5,22,26+5,22,27+5,22,28+5,22,29+5,22,31+5,22,33+5,22,34+5,23,26+5,23,29+5,23,30+5,23,32+5,24,25+5,24,26+5,24,28+5,24,29+5,24,30+5,24,32+5,24,33+5,24,34+5,24,35+5,25,27+5,25,28+5,25,29+5,25,32+5,25,34+5,25,35+5,26,28+5,26,29+5,26,31+5,26,32+5,26,34+5,26,35+5,27,28+5,27,30+5,27,31+5,27,32+5,27,34+5,28,31+5,28,32+5,28,34+5,28,35+5,29,30+5,29,32+5,29,33+5,29,34+5,30,31+5,30,32+5,31,32+5,31,34+5,32,35+6,7,8+6,7,9+6,7,10+6,7,11+6,7,12+6,7,13+6,7,14+6,7,15+6,7,21+6,7,24+6,7,30+6,7,31+6,7,34+6,8,9+6,8,11+6,8,12+6,8,13+6,8,14+6,8,18+6,8,20+6,8,22+6,8,26+6,8,29+6,8,31+6,8,34+6,9,10+6,9,12+6,9,13+6,9,14+6,9,15+6,9,16+6,9,17+6,9,20+6,9,21+6,9,23+6,9,25+6,9,26+6,9,27+6,9,28+6,9,30+6,9,32+6,9,34+6,9,35+6,10,11+6,10,13+6,10,14+6,10,16+6,10,19+6,10,21+6,10,27+6,10,28+6,10,29+6,10,30+6,10,34+6,10,35+6,11,13+6,11,14+6,11,15+6,11,16+6,11,19+6,11,20+6,11,21+6,11,22+6,11,23+6,11,24+6,11,26+6,11,27+6,11,31+6,11,33+6,12,15+6,12,16+6,12,17+6,12,19+6,12,29+6,12,34+6,12,35+6,13,14+6,13,15+6,13,16+6,13,17+6,13,19+6,13,20+6,13,23+6,13,24+6,13,28+6,13,30+6,13,32+6,13,34+6,14,17+6,14,20+6,14,21+6,14,25+6,14,26+6,14,28+6,14,30+6,14,32+6,15,17+6,15,18+6,15,19+6,15,22+6,15,25+6,15,28+6,15,33+6,15,34+6,16,17+6,16,19+6,16,20+6,16,24+6,16,26+6,16,28+6,16,30+6,16,31+6,16,32+6,16,33+6,16,34+6,17,18+6,17,19+6,17,22+6,17,23+6,17,24+6,17,25+6,17,28+6,17,33+6,17,35+6,18,19+6,18,20+6,18,21+6,18,22+6,18,23+6,18,24+6,18,25+6,18,30+6,18,31+6,19,25+6,19,28+6,19,31+6,19,33+6,19,34+6,19,35+6,20,22+6,20,23+6,20,26+6,20,29+6,20,30+6,20,32+6,20,33+6,20,34+6,21,22+6,21,24+6,21,26+6,21,30+6,21,31+6,21,32+6,21,34+6,21,35+6,22,24+6,22,25+6,22,28+6,22,31+6,22,33+6,22,34+6,22,35+6,23,24+6,23,28+6,23,31+6,23,32+6,23,34+6,23,35+6,24,25+6,24,28+6,24,29+6,24,30+6,24,32+6,25,26+6,25,27+6,25,33+6,25,34+6,25,35+6,26,29+6,26,30+6,26,32+6,26,34+6,27,28+6,27,31+6,27,32+6,27,35+6,28,29+6,28,30+6,28,31+6,28,35+6,29,31+6,29,34+6,29,35+6,30,33+6,31,34+6,31,35+6,32,33+6,32,35+6,33,34+6,34,35+7,8,9+7,8,10+7,8,14+7,8,15+7,8,16+7,8,21+7,8,22+7,8,23+7,8,24+7,8,28+7,8,29+7,8,32+7,8,34+7,8,35+7,9,11+7,9,15+7,9,18+7,9,24+7,9,25+7,9,26+7,9,27+7,9,28+7,9,32+7,9,35+7,10,11+7,10,15+7,10,16+7,10,18+7,10,19+7,10,22+7,10,26+7,10,27+7,10,30+7,10,32+7,10,33+7,11,12+7,11,14+7,11,17+7,11,18+7,11,19+7,11,21+7,11,22+7,11,23+7,11,26+7,11,27+7,11,28+7,11,29+7,11,30+7,11,31+7,11,32+7,11,33+7,11,34+7,12,21+7,12,22+7,12,23+7,12,26+7,12,27+7,12,31+7,12,33+7,12,34+7,12,35+7,13,14+7,13,15+7,13,19+7,13,21+7,13,22+7,13,23+7,13,24+7,13,28+7,13,30+7,13,32+7,13,34+7,14,15+7,14,16+7,14,17+7,14,18+7,14,19+7,14,25+7,14,26+7,14,27+7,14,29+7,14,30+7,14,31+7,14,32+7,14,34+7,14,35+7,15,17+7,15,18+7,15,19+7,15,21+7,15,22+7,15,23+7,15,25+7,15,28+7,15,29+7,15,31+7,15,32+7,15,33+7,15,34+7,15,35+7,16,17+7,16,20+7,16,24+7,16,28+7,16,34+7,17,19+7,17,21+7,17,23+7,17,24+7,17,25+7,17,30+7,17,31+7,18,21+7,18,22+7,18,26+7,18,27+7,18,30+7,19,21+7,19,22+7,19,23+7,19,24+7,19,25+7,19,26+7,19,32+7,19,33+7,19,34+7,20,22+7,20,23+7,20,24+7,20,25+7,20,26+7,20,30+7,20,31+7,20,35+7,21,22+7,21,23+7,21,26+7,21,27+7,21,28+7,21,29+7,21,32+7,21,33+7,21,34+7,22,23+7,22,24+7,22,26+7,22,31+7,22,32+7,22,33+7,23,24+7,23,25+7,23,26+7,23,27+7,23,28+7,23,29+7,23,30+7,23,31+7,23,32+7,23,34+7,23,35+7,24,26+7,24,28+7,24,29+7,24,31+7,24,32+7,24,34+7,24,35+7,25,27+7,25,28+7,25,32+7,25,33+7,25,34+7,25,35+7,26,27+7,26,30+7,26,31+7,26,32+7,26,33+7,26,34+7,27,28+7,27,31+7,27,33+7,27,35+7,28,30+7,28,31+7,28,32+7,28,33+7,28,34+7,28,35+7,30,34+7,31,32+7,31,35+7,32,33+7,32,34+7,32,35+7,34,35+8,9,10+8,9,12+8,9,14+8,9,16+8,9,17+8,9,22+8,9,28+8,9,29+8,9,30+8,9,31+8,9,35+8,10,13+8,10,15+8,10,20+8,10,24+8,10,26+8,10,27+8,10,29+8,10,30+8,10,31+8,10,35+8,11,14+8,11,20+8,11,21+8,11,24+8,11,27+8,11,32+8,11,33+8,11,35+8,12,14+8,12,17+8,12,18+8,12,20+8,12,22+8,12,25+8,12,26+8,12,27+8,12,32+8,12,35+8,13,14+8,13,22+8,13,25+8,13,27+8,13,30+8,13,31+8,13,32+8,13,35+8,14,15+8,14,17+8,14,20+8,14,22+8,14,24+8,14,25+8,14,27+8,14,29+8,14,30+8,14,31+8,14,33+8,14,34+8,14,35+8,15,16+8,15,18+8,15,19+8,15,20+8,15,21+8,15,22+8,15,24+8,15,26+8,15,27+8,15,28+8,15,29+8,15,31+8,15,33+8,15,35+8,16,18+8,16,20+8,16,21+8,16,22+8,16,23+8,16,24+8,16,27+8,16,29+8,16,30+8,16,34+8,17,18+8,17,22+8,17,23+8,17,25+8,17,26+8,17,30+8,17,31+8,17,32+8,18,19+8,18,21+8,18,23+8,18,26+8,18,27+8,18,28+8,18,29+8,18,31+8,18,32+8,18,35+8,19,22+8,19,23+8,19,24+8,19,29+8,19,31+8,19,35+8,20,22+8,20,27+8,20,28+8,20,33+8,21,25+8,21,29+8,21,30+8,21,34+8,21,35+8,22,24+8,22,25+8,22,27+8,22,28+8,22,30+8,22,31+8,22,32+8,22,35+8,23,25+8,23,27+8,23,28+8,23,29+8,23,32+8,23,33+8,23,35+8,24,26+8,24,29+8,24,32+8,24,33+8,24,35+8,25,26+8,25,29+8,25,31+8,25,34+8,25,35+8,26,30+8,26,31+8,26,32+8,26,34+8,26,35+8,27,33+8,28,32+8,28,33+8,28,35+8,29,33+8,29,35+8,30,31+8,30,32+8,30,33+8,30,35+8,31,34+8,31,35+8,32,34+8,32,35+8,33,35+8,34,35+9,10,12+9,10,23+9,10,27+9,10,28+9,10,29+9,10,31+9,10,32+9,10,33+9,10,34+9,11,12+9,11,16+9,11,17+9,11,19+9,11,21+9,11,27+9,11,28+9,11,30+9,11,31+9,11,33+9,11,35+9,12,13+9,12,14+9,12,16+9,12,18+9,12,19+9,12,20+9,12,21+9,12,23+9,12,25+9,12,26+9,12,27+9,12,28+9,12,30+9,12,31+9,12,32+9,12,33+9,13,15+9,13,16+9,13,18+9,13,19+9,13,20+9,13,22+9,13,24+9,13,26+9,13,29+9,13,35+9,14,15+9,14,16+9,14,18+9,14,21+9,14,23+9,14,26+9,14,27+9,14,29+9,14,30+9,14,31+9,14,32+9,14,33+9,15,16+9,15,19+9,15,20+9,15,21+9,15,28+9,15,29+9,15,31+9,15,32+9,16,18+9,16,20+9,16,21+9,16,22+9,16,23+9,16,25+9,16,26+9,16,30+9,16,33+9,16,34+9,17,18+9,17,23+9,17,24+9,17,25+9,17,26+9,17,27+9,17,29+9,17,30+9,17,31+9,17,32+9,17,34+9,17,35+9,18,19+9,18,20+9,18,21+9,18,22+9,18,23+9,18,24+9,18,25+9,18,28+9,18,29+9,18,35+9,19,22+9,19,23+9,19,24+9,19,27+9,19,28+9,19,30+9,19,31+9,19,35+9,20,21+9,20,26+9,20,27+9,20,29+9,20,30+9,20,33+9,20,35+9,21,25+9,21,27+9,21,28+9,21,29+9,21,31+9,21,32+9,21,34+9,21,35+9,22,23+9,22,24+9,22,26+9,22,27+9,22,28+9,22,29+9,22,30+9,22,31+9,22,32+9,22,33+9,23,27+9,23,29+9,23,31+9,23,32+9,23,33+9,24,25+9,24,28+9,24,29+9,24,33+9,24,35+9,25,26+9,25,27+9,25,30+9,25,31+9,25,32+9,25,33+9,26,29+9,26,34+9,26,35+9,27,28+9,27,29+9,27,30+9,27,32+9,27,35+9,28,29+9,28,31+9,28,32+9,28,33+9,28,34+9,29,33+9,29,35+9,30,31+9,30,32+9,30,33+9,30,34+9,31,33+9,31,35+9,32,34+9,32,35+9,33,35+10,11,12+10,11,14+10,11,17+10,11,19+10,11,22+10,11,23+10,11,24+10,11,26+10,11,27+10,11,29+10,11,31+10,11,33+10,11,34+10,12,13+10,12,18+10,12,21+10,12,22+10,12,24+10,12,25+10,12,27+10,12,29+10,12,30+10,12,31+10,12,33+10,12,35+10,13,15+10,13,16+10,13,18+10,13,19+10,13,24+10,13,27+10,13,29+10,13,30+10,13,31+10,13,33+10,13,34+10,14,17+10,14,20+10,14,25+10,14,27+10,14,28+10,14,29+10,14,30+10,14,32+10,14,33+10,14,35+10,15,17+10,15,20+10,15,22+10,15,23+10,15,24+10,15,25+10,15,27+10,15,28+10,15,30+10,15,31+10,15,35+10,16,17+10,16,18+10,16,20+10,16,24+10,16,26+10,16,27+10,16,28+10,16,29+10,16,30+10,16,31+10,16,32+10,17,21+10,17,23+10,17,24+10,17,27+10,17,28+10,17,29+10,17,30+10,17,31+10,17,33+10,17,34+10,17,35+10,18,19+10,18,20+10,18,22+10,18,23+10,18,24+10,18,25+10,18,28+10,18,29+10,18,30+10,18,32+10,18,33+10,18,34+10,19,21+10,19,22+10,19,24+10,19,25+10,19,29+10,19,31+10,19,34+10,19,35+10,20,21+10,20,22+10,20,24+10,20,25+10,20,26+10,20,28+10,20,34+10,21,25+10,21,26+10,21,27+10,21,29+10,21,30+10,21,31+10,21,32+10,21,34+10,22,23+10,22,24+10,22,27+10,22,28+10,22,31+10,22,32+10,23,24+10,23,27+10,23,28+10,23,29+10,23,35+10,24,27+10,24,28+10,24,30+10,24,33+10,24,34+10,24,35+10,25,32+10,25,35+10,26,28+10,26,31+10,26,32+10,27,28+10,27,29+10,27,30+10,27,31+10,27,33+10,27,34+10,27,35+10,28,29+10,28,33+10,28,34+10,29,30+10,29,31+10,29,32+10,29,35+10,30,32+10,30,33+10,30,34+10,30,35+10,31,33+10,31,34+10,31,35+10,33,34+10,33,35+11,12,13+11,12,14+11,12,15+11,12,16+11,12,17+11,12,19+11,12,20+11,12,23+11,12,25+11,12,26+11,12,28+11,12,29+11,12,32+11,12,34+11,12,35+11,13,17+11,13,18+11,13,19+11,13,20+11,13,21+11,13,22+11,13,24+11,13,25+11,13,28+11,13,29+11,13,33+11,13,34+11,13,35+11,14,18+11,14,20+11,14,23+11,14,29+11,14,32+11,14,33+11,14,34+11,15,17+11,15,18+11,15,20+11,15,21+11,15,24+11,15,27+11,15,29+11,15,30+11,15,32+11,15,33+11,15,34+11,16,19+11,16,20+11,16,22+11,16,23+11,16,25+11,16,26+11,16,28+11,16,29+11,16,30+11,16,31+11,16,32+11,16,33+11,16,35+11,17,21+11,17,23+11,17,24+11,17,25+11,17,26+11,17,27+11,17,30+11,17,31+11,17,32+11,17,34+11,17,35+11,18,19+11,18,20+11,18,21+11,18,23+11,18,25+11,18,27+11,18,28+11,18,29+11,18,32+11,18,33+11,19,20+11,19,23+11,19,25+11,19,28+11,19,29+11,19,33+11,19,34+11,20,21+11,20,23+11,20,24+11,20,26+11,20,28+11,20,30+11,20,32+11,20,33+11,20,34+11,20,35+11,21,23+11,21,26+11,21,28+11,21,29+11,21,32+11,21,35+11,22,24+11,22,26+11,22,28+11,22,29+11,22,34+11,23,24+11,23,25+11,23,26+11,23,30+11,23,31+11,24,28+11,24,32+11,24,33+11,24,34+11,24,35+11,25,27+11,25,28+11,25,31+11,25,33+11,26,29+11,26,30+11,26,32+11,26,33+11,26,34+11,27,28+11,27,31+11,27,32+11,27,34+11,27,35+11,28,30+11,28,31+11,28,32+11,29,32+11,29,33+11,30,31+11,30,32+11,30,33+11,30,34+11,30,35+11,31,33+11,31,35+11,32,33+11,32,34+11,32,35+11,33,34+11,33,35+11,34,35+12,13,14+12,13,19+12,13,20+12,13,21+12,13,24+12,13,26+12,13,28+12,13,31+12,13,32+12,13,33+12,13,34+12,14,16+12,14,17+12,14,18+12,14,20+12,14,21+12,14,23+12,14,26+12,14,28+12,14,30+12,14,31+12,14,33+12,14,35+12,15,17+12,15,18+12,15,24+12,15,26+12,15,33+12,16,17+12,16,18+12,16,20+12,16,21+12,16,22+12,16,23+12,16,24+12,16,25+12,16,26+12,16,28+12,16,30+12,16,33+12,16,34+12,16,35+12,17,18+12,17,19+12,17,21+12,17,24+12,17,25+12,17,26+12,17,30+12,17,33+12,17,34+12,18,22+12,18,23+12,18,25+12,18,26+12,18,27+12,18,29+12,18,31+12,18,32+12,19,24+12,19,25+12,19,26+12,19,27+12,19,29+12,19,30+12,19,35+12,20,21+12,20,22+12,20,23+12,20,28+12,20,29+12,20,30+12,20,32+12,20,34+12,21,22+12,21,23+12,21,24+12,21,26+12,21,27+12,21,28+12,21,29+12,21,30+12,21,31+12,21,32+12,22,23+12,22,24+12,22,26+12,22,27+12,22,28+12,22,29+12,22,30+12,22,31+12,22,32+12,23,25+12,23,26+12,23,27+12,23,31+12,23,34+12,23,35+12,24,25+12,24,27+12,24,29+12,24,31+12,24,32+12,24,33+12,24,34+12,25,26+12,25,27+12,25,32+12,25,34+12,26,30+12,26,32+12,26,34+12,27,28+12,27,30+12,27,32+12,27,33+12,27,34+12,27,35+12,29,30+12,29,32+12,29,34+12,30,35+12,31,34+12,32,33+12,32,34+12,32,35+12,33,34+12,33,35+12,34,35+13,14,16+13,14,20+13,14,23+13,14,25+13,14,26+13,14,28+13,14,29+13,15,17+13,15,18+13,15,21+13,15,22+13,15,23+13,15,24+13,15,25+13,15,26+13,15,27+13,15,28+13,15,29+13,15,31+13,15,33+13,16,20+13,16,22+13,16,23+13,16,25+13,16,26+13,16,27+13,16,29+13,16,30+13,16,32+13,17,18+13,17,19+13,17,21+13,17,23+13,17,26+13,17,29+13,17,32+13,18,22+13,18,23+13,18,26+13,18,29+13,18,32+13,18,33+13,18,34+13,19,22+13,19,24+13,19,31+13,19,32+13,19,33+13,19,35+13,20,21+13,20,22+13,20,26+13,20,28+13,20,30+13,20,33+13,21,23+13,21,24+13,21,25+13,21,26+13,21,27+13,21,32+13,21,33+13,21,34+13,22,23+13,22,24+13,22,25+13,22,26+13,22,28+13,22,29+13,22,31+13,22,32+13,22,33+13,22,34+13,23,27+13,23,29+13,23,32+13,23,34+13,24,28+13,24,31+13,24,33+13,24,34+13,24,35+13,25,29+13,25,31+13,25,32+13,25,34+13,25,35+13,26,27+13,26,31+13,26,32+13,26,35+13,27,28+13,27,29+13,27,31+13,27,32+13,27,33+13,27,35+13,28,29+13,28,34+13,29,30+13,29,31+13,29,32+13,29,34+13,29,35+13,30,31+13,30,33+13,30,35+13,31,33+13,31,34+13,31,35+14,15,20+14,15,23+14,15,24+14,15,26+14,15,27+14,15,28+14,15,29+14,15,32+14,15,33+14,15,34+14,16,17+14,16,18+14,16,22+14,16,24+14,16,29+14,16,32+14,16,33+14,16,35+14,17,18+14,17,19+14,17,20+14,17,21+14,17,22+14,17,23+14,17,26+14,17,31+14,17,32+14,17,34+14,18,19+14,18,22+14,18,24+14,18,27+14,18,28+14,18,31+14,18,32+14,19,20+14,19,21+14,19,24+14,19,25+14,19,26+14,19,27+14,19,29+14,19,32+14,19,35+14,20,21+14,20,24+14,20,28+14,20,32+14,21,22+14,21,24+14,21,25+14,21,27+14,21,29+14,21,31+14,21,32+14,22,24+14,22,27+14,22,28+14,22,30+14,22,31+14,22,32+14,22,35+14,23,24+14,23,26+14,23,27+14,23,33+14,23,34+14,24,27+14,24,30+14,24,32+14,24,33+14,25,26+14,25,28+14,25,31+14,25,32+14,25,33+14,25,34+14,26,27+14,26,28+14,26,30+14,26,31+14,26,33+14,26,35+14,27,28+14,27,30+14,27,33+14,27,35+14,28,33+14,29,30+14,29,32+14,29,34+14,29,35+14,30,32+14,30,33+14,30,34+14,30,35+14,31,35+14,32,35+14,34,35+15,16,17+15,16,19+15,16,22+15,16,23+15,16,25+15,16,27+15,16,28+15,16,32+15,16,33+15,17,18+15,17,20+15,17,21+15,17,26+15,17,32+15,17,33+15,18,20+15,18,23+15,18,26+15,18,27+15,18,28+15,18,30+15,18,31+15,18,32+15,18,33+15,18,35+15,19,21+15,19,23+15,19,25+15,19,26+15,19,27+15,19,29+15,19,31+15,19,32+15,19,33+15,19,34+15,19,35+15,20,21+15,20,22+15,20,23+15,20,25+15,20,27+15,20,28+15,20,30+15,20,31+15,20,32+15,20,34+15,20,35+15,21,22+15,21,23+15,21,24+15,21,25+15,21,26+15,21,27+15,21,28+15,21,30+15,21,31+15,21,32+15,21,34+15,22,24+15,22,28+15,22,30+15,22,34+15,23,25+15,23,28+15,23,29+15,23,30+15,23,31+15,23,32+15,23,34+15,24,26+15,24,27+15,24,28+15,24,29+15,24,31+15,25,26+15,25,27+15,25,30+15,26,31+15,26,33+15,26,34+15,26,35+15,27,31+15,27,32+15,27,33+15,27,34+15,28,33+15,28,35+15,29,30+15,29,33+15,30,31+15,30,32+15,30,33+15,30,34+15,31,33+15,32,33+15,33,35+16,17,19+16,17,21+16,17,23+16,17,24+16,17,25+16,17,26+16,17,27+16,17,28+16,17,31+16,17,33+16,17,34+16,18,19+16,18,20+16,18,21+16,18,24+16,18,25+16,18,27+16,18,29+16,18,30+16,18,32+16,18,33+16,19,23+16,19,24+16,19,25+16,19,27+16,19,28+16,19,29+16,19,30+16,19,32+16,19,33+16,19,34+16,19,35+16,20,23+16,20,25+16,20,26+16,20,32+16,21,22+16,21,23+16,21,25+16,21,26+16,21,27+16,21,28+16,21,31+16,21,33+16,21,34+16,21,35+16,22,23+16,22,25+16,22,26+16,22,27+16,22,29+16,22,31+16,22,33+16,22,35+16,23,25+16,23,26+16,23,28+16,23,30+16,23,33+16,23,35+16,24,27+16,24,30+16,24,34+16,24,35+16,25,27+16,25,29+16,25,30+16,25,31+16,25,32+16,25,33+16,25,35+16,26,28+16,26,30+16,26,34+16,27,28+16,27,31+16,27,35+16,28,30+16,29,31+16,29,34+16,29,35+16,30,31+16,30,33+16,30,35+16,31,33+16,32,34+16,32,35+16,33,34+16,33,35+16,34,35+17,18,19+17,18,26+17,18,29+17,18,30+17,18,32+17,18,35+17,19,21+17,19,22+17,19,24+17,19,27+17,19,30+17,19,33+17,19,34+17,20,22+17,20,23+17,20,24+17,20,25+17,20,26+17,20,28+17,20,31+17,20,33+17,21,23+17,21,24+17,21,25+17,21,26+17,21,28+17,21,29+17,21,30+17,21,31+17,21,32+17,21,34+17,21,35+17,22,27+17,22,28+17,22,31+17,22,33+17,22,34+17,23,24+17,23,25+17,23,26+17,23,27+17,23,28+17,23,31+17,23,33+17,23,35+17,24,25+17,24,26+17,24,28+17,24,31+17,24,32+17,24,33+17,25,26+17,25,27+17,25,30+17,25,31+17,25,34+17,25,35+17,26,27+17,26,28+17,26,29+17,26,30+17,26,31+17,26,35+17,27,33+17,27,34+17,27,35+17,28,32+17,28,34+17,28,35+17,29,31+17,29,32+17,29,33+17,30,34+17,31,33+17,31,34+17,32,33+17,32,34+17,33,35+17,34,35+18,19,20+18,19,22+18,19,24+18,19,27+18,19,30+18,19,31+18,19,33+18,19,35+18,20,21+18,20,25+18,20,27+18,20,28+18,20,29+18,20,31+18,20,32+18,20,33+18,21,24+18,21,30+18,21,32+18,21,35+18,22,23+18,22,25+18,22,27+18,22,28+18,22,33+18,22,35+18,23,25+18,23,26+18,23,27+18,23,29+18,23,31+18,23,33+18,23,35+18,24,27+18,24,32+18,24,33+18,24,34+18,25,26+18,25,30+18,25,33+18,25,34+18,26,29+18,26,30+18,26,32+18,26,33+18,26,34+18,27,28+18,27,32+18,28,29+18,28,30+18,29,32+18,29,33+18,29,34+18,29,35+18,30,31+18,30,34+18,31,32+18,32,34+18,33,34+18,33,35+18,34,35+19,20,22+19,20,26+19,20,27+19,20,31+19,20,32+19,20,33+19,21,23+19,21,27+19,21,28+19,21,30+19,21,32+19,21,34+19,22,24+19,22,30+19,22,32+19,22,35+19,23,25+19,23,26+19,23,29+19,23,30+19,23,32+19,24,25+19,24,28+19,24,30+19,24,31+19,24,33+19,24,35+19,25,27+19,25,29+19,25,34+19,26,31+19,26,32+19,26,34+19,27,32+19,27,33+19,27,34+19,28,34+19,29,30+19,29,32+19,29,34+19,29,35+19,30,32+19,30,34+19,30,35+19,31,32+19,31,34+19,32,34+19,33,34+20,21,22+20,21,29+20,21,30+20,21,33+20,21,34+20,21,35+20,22,23+20,22,24+20,22,25+20,22,26+20,22,34+20,22,35+20,23,24+20,23,28+20,23,32+20,23,33+20,24,25+20,24,26+20,24,28+20,24,31+20,24,34+20,25,29+20,25,30+20,25,31+20,25,33+20,26,29+20,26,31+20,26,32+20,26,33+20,26,35+20,27,30+20,27,34+20,27,35+20,28,30+20,28,31+20,28,32+20,28,33+20,28,34+20,29,30+20,29,31+20,29,33+20,29,35+20,30,33+20,30,34+20,31,32+20,31,33+20,32,34+20,32,35+20,33,34+20,33,35+20,34,35+21,22,25+21,22,28+21,22,30+21,22,31+21,22,32+21,22,34+21,22,35+21,23,24+21,23,25+21,23,27+21,23,30+21,23,31+21,23,32+21,23,33+21,24,31+21,24,32+21,24,33+21,24,34+21,25,29+21,25,30+21,25,31+21,26,27+21,26,28+21,26,35+21,27,28+21,27,30+21,27,31+21,27,32+21,27,35+21,28,30+21,28,31+21,28,34+21,28,35+21,29,30+21,29,31+21,29,34+21,29,35+21,30,33+21,31,32+21,32,34+21,32,35+21,33,35+21,34,35+22,23,24+22,23,27+22,23,29+22,23,30+22,23,34+22,24,25+22,24,26+22,24,29+22,24,30+22,24,31+22,24,32+22,24,33+22,24,35+22,25,26+22,25,27+22,25,35+22,26,27+22,26,28+22,26,33+22,26,34+22,26,35+22,27,28+22,27,29+22,27,34+22,28,29+22,28,31+22,28,32+22,28,35+22,29,30+22,29,31+22,29,33+22,29,34+22,29,35+22,30,31+22,30,32+22,31,32+22,31,33+22,31,34+22,31,35+22,32,33+22,32,35+22,33,34+22,33,35+23,24,25+23,24,26+23,24,27+23,24,28+23,24,30+23,24,32+23,24,35+23,25,27+23,25,29+23,25,31+23,25,32+23,25,33+23,26,28+23,26,31+23,26,32+23,26,33+23,27,28+23,27,29+23,27,31+23,27,35+23,28,31+23,29,30+23,29,31+23,29,32+23,29,35+23,30,32+23,30,33+23,32,34+23,32,35+23,33,34+23,33,35+23,34,35+24,25,26+24,25,28+24,25,29+24,25,30+24,25,31+24,25,33+24,25,35+24,26,29+24,26,31+24,26,33+24,26,34+24,27,30+24,27,32+24,27,33+24,28,29+24,28,33+24,28,35+24,29,30+24,29,33+24,29,34+24,30,35+24,31,32+24,31,35+24,32,33+24,32,35+24,33,34+24,33,35+24,34,35+25,26,29+25,26,30+25,26,31+25,26,33+25,26,34+25,27,28+25,27,29+25,27,30+25,27,31+25,27,33+25,27,34+25,27,35+25,28,29+25,28,33+25,28,34+25,28,35+25,29,30+25,29,31+25,29,32+25,30,32+25,30,33+25,30,34+25,30,35+25,31,33+25,31,35+25,32,33+25,32,34+25,32,35+25,34,35+26,27,29+26,27,30+26,27,32+26,27,33+26,27,34+26,27,35+26,28,30+26,28,31+26,28,33+26,28,34+26,29,31+26,29,35+26,30,34+26,31,35+26,32,33+26,32,34+26,34,35+27,28,29+27,28,32+27,28,34+27,29,31+27,29,32+27,29,35+27,30,31+27,30,35+27,31,33+27,31,35+27,32,33+27,32,35+27,34,35+28,29,30+28,29,32+28,29,33+28,30,32+28,30,35+28,31,35+28,32,33+28,32,34+28,33,34+29,30,31+29,30,32+29,30,34+29,31,32+29,32,35+29,33,34+29,33,35+29,34,35+30,31,33+30,32,33+30,32,34+30,32,35+30,33,35+31,32,33+31,32,34+31,32,35+32,33,34+32,34,35+33,34,35`
 - `N = 47` (36 outputs + 11 checks)
@@ -16897,9 +16922,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 - note (reduced degree): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 
-- 496 columns — see `master_catalog.json`, `factories[851]`
+- 496 columns — see `master_catalog.json`, `factories[852]`
 
-### 853. `[[502,92,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91
+### 854. `[[502,92,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91`
 - `N = 117` (92 outputs + 25 checks)
@@ -16913,9 +16938,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(92,2) and a punctured RM(92-4,92) coset, neither feasible at k=92
 - note (reduced degree): not computed: exact minimisation is over GL(92,2) and a punctured RM(92-4,92) coset, neither feasible at k=92
 
-- 502 columns — see `master_catalog.json`, `factories[852]`
+- 502 columns — see `master_catalog.json`, `factories[853]`
 
-### 854. `[[504,3,2]]` — CCZ012
+### 855. `[[504,3,2]]` — CCZ012
 
 - output gate: `012`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 7, reduced degree 3
@@ -16927,9 +16952,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row073-two-group (`two-group l=3 n=9 k=3 s_total=1 s_O=1 s_S=1`)
 
-- 504 columns — see `master_catalog.json`, `factories[853]`
+- 504 columns — see `master_catalog.json`, `factories[854]`
 
-### 855. `[[504,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+### 856. `[[504,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
 
 - output gate: `012+013+023+123`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 7, reduced degree 3
@@ -16941,9 +16966,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row115-two-group (`two-group l=3 n=10 k=4 s_total=2 s_O=1 s_S=1`)
 
-- 504 columns — see `master_catalog.json`, `factories[854]`
+- 504 columns — see `master_catalog.json`, `factories[855]`
 
-### 856. `[[508,2,2]]` — CS01
+### 857. `[[508,2,2]]` — CS01
 
 - output gate: `01`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 3, reduced degree 2
@@ -16955,9 +16980,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row040-two-group (`two-group l=3 n=9 k=2 s_total=1 s_O=1 s_S=1`)
 
-- 508 columns — see `master_catalog.json`, `factories[855]`
+- 508 columns — see `master_catalog.json`, `factories[856]`
 
-### 857. `[[508,3,2]]` — T0·T1·T2
+### 858. `[[508,3,2]]` — T0·T1·T2
 
 - output gate: `0+1+2`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 3, reduced degree 1
@@ -16969,9 +16994,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row074-two-group (`two-group l=3 n=10 k=3 s_total=1 s_O=3 s_S=1`)
 
-- 508 columns — see `master_catalog.json`, `factories[856]`
+- 508 columns — see `master_catalog.json`, `factories[857]`
 
-### 858. `[[508,132,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131
+### 859. `[[508,132,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131`
 - `N = 143` (132 outputs + 11 checks)
@@ -16985,9 +17010,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(132,2) and a punctured RM(132-4,132) coset, neither feasible at k=132
 - note (reduced degree): not computed: exact minimisation is over GL(132,2) and a punctured RM(132-4,132) coset, neither feasible at k=132
 
-- 508 columns — see `master_catalog.json`, `factories[857]`
+- 508 columns — see `master_catalog.json`, `factories[858]`
 
-### 859. `[[509,3,2]]` — T0·T1·T2
+### 860. `[[509,3,2]]` — T0·T1·T2
 
 - output gate: `0+1+2`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 3, reduced degree 1
@@ -16999,9 +17024,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row075-two-group (`two-group l=3 n=11 k=3 s_total=2 s_O=3 s_S=1`)
 
-- 509 columns — see `master_catalog.json`, `factories[858]`
+- 509 columns — see `master_catalog.json`, `factories[859]`
 
-### 860. `[[510,1,2]]` — T0
+### 861. `[[510,1,2]]` — T0
 
 - output gate: `0`
 - `N = 9` (1 output + 8 checks), exact minimal T-count 1, reduced degree 1
@@ -17013,9 +17038,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row013-two-group (`two-group l=3 n=9 k=1 s_total=1 s_O=1 s_S=1`)
 
-- 510 columns — see `master_catalog.json`, `factories[859]`
+- 510 columns — see `master_catalog.json`, `factories[860]`
 
-### 861. `[[510,2,2]]` — T0·T1
+### 862. `[[510,2,2]]` — T0·T1
 
 - output gate: `0+1`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 2, reduced degree 1
@@ -17027,9 +17052,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row041-two-group (`two-group l=3 n=10 k=2 s_total=2 s_O=1 s_S=1`)
 
-- 510 columns — see `master_catalog.json`, `factories[860]`
+- 510 columns — see `master_catalog.json`, `factories[861]`
 
-### 862. `[[511,1,3]]` — T0
+### 863. `[[511,1,3]]` — T0
 
 - output gate: `0`
 - `N = 10` (1 output + 9 checks), exact minimal T-count 1, reduced degree 1
@@ -17041,9 +17066,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row014-two-group (`two-group l=3 n=10 k=1 s_total=2 s_O=1 s_S=1`)
 
-- 511 columns — see `master_catalog.json`, `factories[861]`
+- 511 columns — see `master_catalog.json`, `factories[862]`
 
-### 863. `[[511,1,5]]` — T0
+### 864. `[[511,1,5]]` — T0
 
 - output gate: `0`
 - `N = 19` (1 output + 18 checks), exact minimal T-count 1, reduced degree 1
@@ -17055,9 +17080,9 @@ readable copy of exactly these rows.
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:389`)
 
-- 511 columns — see `master_catalog.json`, `factories[862]`
+- 511 columns — see `master_catalog.json`, `factories[863]`
 
-### 864. `[[511,2,5]]` — T0·T1
+### 865. `[[511,2,5]]` — T0·T1
 
 - output gate: `0+1`
 - `N = 20` (2 outputs + 18 checks), exact minimal T-count 2, reduced degree 1
@@ -17069,9 +17094,9 @@ readable copy of exactly these rows.
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search` · T0.T1 (`frontier_campaign · catalogue.jsonl:388`)
 
-- 511 columns — see `master_catalog.json`, `factories[863]`
+- 511 columns — see `master_catalog.json`, `factories[864]`
 
-### 865. `[[511,3,5]]` — T0·T1·T2
+### 866. `[[511,3,5]]` — T0·T1·T2
 
 - output gate: `0+1+2`
 - `N = 21` (3 outputs + 18 checks), exact minimal T-count 3, reduced degree 1
@@ -17083,9 +17108,9 @@ readable copy of exactly these rows.
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search` · T0.T1.T2 (`frontier_campaign · catalogue.jsonl:387`)
 
-- 511 columns — see `master_catalog.json`, `factories[864]`
+- 511 columns — see `master_catalog.json`, `factories[865]`
 
-### 866. `[[511,4,5]]` — T0·T1·T2·T3
+### 867. `[[511,4,5]]` — T0·T1·T2·T3
 
 - output gate: `0+1+2+3`
 - `N = 22` (4 outputs + 18 checks), exact minimal T-count 4, reduced degree 1
@@ -17097,9 +17122,9 @@ readable copy of exactly these rows.
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search` · T0.T1.T2.T3 (`frontier_campaign · catalogue.jsonl:386`)
 
-- 511 columns — see `master_catalog.json`, `factories[865]`
+- 511 columns — see `master_catalog.json`, `factories[866]`
 
-### 867. `[[511,5,5]]` — T0·T1·T2·T3·T4
+### 868. `[[511,5,5]]` — T0·T1·T2·T3·T4
 
 - output gate: `0+1+2+3+4`
 - `N = 23` (5 outputs + 18 checks), exact minimal T-count 5, reduced degree 1
@@ -17111,9 +17136,9 @@ readable copy of exactly these rows.
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search` · T0.T1.T2.T3.T4 (`frontier_campaign · catalogue.jsonl:385`)
 
-- 511 columns — see `master_catalog.json`, `factories[866]`
+- 511 columns — see `master_catalog.json`, `factories[867]`
 
-### 868. `[[511,6,5]]` — T0·T1·T2·T3·T4·T5
+### 869. `[[511,6,5]]` — T0·T1·T2·T3·T4·T5
 
 - output gate: `0+1+2+3+4+5`
 - `N = 24` (6 outputs + 18 checks), exact minimal T-count 6, reduced degree 1
@@ -17125,9 +17150,9 @@ readable copy of exactly these rows.
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search` · T0.T1.T2.T3.T4.T5 (`frontier_campaign · catalogue.jsonl:384`)
 
-- 511 columns — see `master_catalog.json`, `factories[867]`
+- 511 columns — see `master_catalog.json`, `factories[868]`
 
-### 869. `[[511,7,5]]` — T0·T1·T2·T3·T4·T5·T6
+### 870. `[[511,7,5]]` — T0·T1·T2·T3·T4·T5·T6
 
 - output gate: `0+1+2+3+4+5+6`
 - `N = 25` (7 outputs + 18 checks)
@@ -17141,9 +17166,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 - note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 
-- 511 columns — see `master_catalog.json`, `factories[868]`
+- 511 columns — see `master_catalog.json`, `factories[869]`
 
-### 870. `[[511,8,5]]` — T0·T1·T2·T3·T4·T5·T6·T7
+### 871. `[[511,8,5]]` — T0·T1·T2·T3·T4·T5·T6·T7
 
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 26` (8 outputs + 18 checks)
@@ -17157,9 +17182,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
-- 511 columns — see `master_catalog.json`, `factories[869]`
+- 511 columns — see `master_catalog.json`, `factories[870]`
 
-### 871. `[[511,9,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8
+### 872. `[[511,9,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8
 
 - output gate: `0+1+2+3+4+5+6+7+8`
 - `N = 27` (9 outputs + 18 checks)
@@ -17174,9 +17199,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 - note (reduced degree): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 
-- 511 columns — see `master_catalog.json`, `factories[870]`
+- 511 columns — see `master_catalog.json`, `factories[871]`
 
-### 872. `[[511,9,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8
+### 873. `[[511,9,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8
 
 - output gate: `0+1+2+3+4+5+6+7+8`
 - `N = 36` (9 outputs + 27 checks)
@@ -17190,9 +17215,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 - note (reduced degree): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 
-- 511 columns — see `master_catalog.json`, `factories[871]`
+- 511 columns — see `master_catalog.json`, `factories[872]`
 
-### 873. `[[511,10,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9
+### 874. `[[511,10,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9
 
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 28` (10 outputs + 18 checks)
@@ -17206,9 +17231,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(10,2) and a punctured RM(10-4,10) coset, neither feasible at k=10
 - note (reduced degree): not computed: exact minimisation is over GL(10,2) and a punctured RM(10-4,10) coset, neither feasible at k=10
 
-- 511 columns — see `master_catalog.json`, `factories[872]`
+- 511 columns — see `master_catalog.json`, `factories[873]`
 
-### 874. `[[511,11,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10
+### 875. `[[511,11,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 29` (11 outputs + 18 checks)
@@ -17223,9 +17248,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(11,2) and a punctured RM(11-4,11) coset, neither feasible at k=11
 - note (reduced degree): not computed: exact minimisation is over GL(11,2) and a punctured RM(11-4,11) coset, neither feasible at k=11
 
-- 511 columns — see `master_catalog.json`, `factories[873]`
+- 511 columns — see `master_catalog.json`, `factories[874]`
 
-### 875. `[[511,12,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11
+### 876. `[[511,12,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 30` (12 outputs + 18 checks)
@@ -17239,9 +17264,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
-- 511 columns — see `master_catalog.json`, `factories[874]`
+- 511 columns — see `master_catalog.json`, `factories[875]`
 
-### 876. `[[511,13,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12
+### 877. `[[511,13,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12`
 - `N = 31` (13 outputs + 18 checks)
@@ -17255,9 +17280,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(13,2) and a punctured RM(13-4,13) coset, neither feasible at k=13
 - note (reduced degree): not computed: exact minimisation is over GL(13,2) and a punctured RM(13-4,13) coset, neither feasible at k=13
 
-- 511 columns — see `master_catalog.json`, `factories[875]`
+- 511 columns — see `master_catalog.json`, `factories[876]`
 
-### 877. `[[511,14,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13
+### 878. `[[511,14,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13`
 - `N = 32` (14 outputs + 18 checks)
@@ -17271,9 +17296,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(14,2) and a punctured RM(14-4,14) coset, neither feasible at k=14
 - note (reduced degree): not computed: exact minimisation is over GL(14,2) and a punctured RM(14-4,14) coset, neither feasible at k=14
 
-- 511 columns — see `master_catalog.json`, `factories[876]`
+- 511 columns — see `master_catalog.json`, `factories[877]`
 
-### 878. `[[511,15,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·CS0,1·CS3,6·CS4,12·CS5,13·CS9,14·CCZ0,1,2·CCZ0,1,3·CCZ0,1,4·CCZ0,1,5·CCZ0,1,6·CCZ0,1,7·CCZ0,1,8·CCZ0,2,3·CCZ0,2,4·CCZ0,2,9·CCZ0,2,10·CCZ1,3,11·CCZ1,5,11·CCZ1,9,11·CCZ1,11,12·CCZ1,11,13·CCZ2,3,14·CCZ2,4,14·CCZ2,5,14·CCZ2,6,14·CCZ2,10,14·CCZ2,12,14·CCZ3,5,13·CCZ3,6,7·CCZ3,6,8·CCZ3,9,10·CCZ3,9,14·CCZ3,12,13·CCZ4,5,10·CCZ4,5,12·CCZ4,6,12·CCZ4,7,12·CCZ4,9,10·CCZ4,10,12·CCZ5,6,8·CCZ5,6,13·CCZ5,7,13·CCZ5,9,14·CCZ5,12,13·CCZ6,9,14·CCZ6,12,13·CCZ7,9,10·CCZ7,12,13·CCZ8,9,14·CCZ9,10,12·CCZ9,10,13·CCZ9,10,14·CCZ9,13,14
+### 879. `[[511,15,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·CS0,1·CS3,6·CS4,12·CS5,13·CS9,14·CCZ0,1,2·CCZ0,1,3·CCZ0,1,4·CCZ0,1,5·CCZ0,1,6·CCZ0,1,7·CCZ0,1,8·CCZ0,2,3·CCZ0,2,4·CCZ0,2,9·CCZ0,2,10·CCZ1,3,11·CCZ1,5,11·CCZ1,9,11·CCZ1,11,12·CCZ1,11,13·CCZ2,3,14·CCZ2,4,14·CCZ2,5,14·CCZ2,6,14·CCZ2,10,14·CCZ2,12,14·CCZ3,5,13·CCZ3,6,7·CCZ3,6,8·CCZ3,9,10·CCZ3,9,14·CCZ3,12,13·CCZ4,5,10·CCZ4,5,12·CCZ4,6,12·CCZ4,7,12·CCZ4,9,10·CCZ4,10,12·CCZ5,6,8·CCZ5,6,13·CCZ5,7,13·CCZ5,9,14·CCZ5,12,13·CCZ6,9,14·CCZ6,12,13·CCZ7,9,10·CCZ7,12,13·CCZ8,9,14·CCZ9,10,12·CCZ9,10,13·CCZ9,10,14·CCZ9,13,14
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+0,1+3,6+4,12+5,13+9,14+0,1,2+0,1,3+0,1,4+0,1,5+0,1,6+0,1,7+0,1,8+0,2,3+0,2,4+0,2,9+0,2,10+1,3,11+1,5,11+1,9,11+1,11,12+1,11,13+2,3,14+2,4,14+2,5,14+2,6,14+2,10,14+2,12,14+3,5,13+3,6,7+3,6,8+3,9,10+3,9,14+3,12,13+4,5,10+4,5,12+4,6,12+4,7,12+4,9,10+4,10,12+5,6,8+5,6,13+5,7,13+5,9,14+5,12,13+6,9,14+6,12,13+7,9,10+7,12,13+8,9,14+9,10,12+9,10,13+9,10,14+9,13,14`
 - `N = 33` (15 outputs + 18 checks)
@@ -17287,9 +17312,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(15,2) and a punctured RM(15-4,15) coset, neither feasible at k=15
 - note (reduced degree): not computed: exact minimisation is over GL(15,2) and a punctured RM(15-4,15) coset, neither feasible at k=15
 
-- 511 columns — see `master_catalog.json`, `factories[877]`
+- 511 columns — see `master_catalog.json`, `factories[878]`
 
-### 879. `[[511,15,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14
+### 880. `[[511,15,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14`
 - `N = 33` (15 outputs + 18 checks)
@@ -17303,9 +17328,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(15,2) and a punctured RM(15-4,15) coset, neither feasible at k=15
 - note (reduced degree): not computed: exact minimisation is over GL(15,2) and a punctured RM(15-4,15) coset, neither feasible at k=15
 
-- 511 columns — see `master_catalog.json`, `factories[878]`
+- 511 columns — see `master_catalog.json`, `factories[879]`
 
-### 880. `[[511,16,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15
+### 881. `[[511,16,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15`
 - `N = 34` (16 outputs + 18 checks)
@@ -17319,9 +17344,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
-- 511 columns — see `master_catalog.json`, `factories[879]`
+- 511 columns — see `master_catalog.json`, `factories[880]`
 
-### 881. `[[511,17,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16
+### 882. `[[511,17,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16`
 - `N = 35` (17 outputs + 18 checks)
@@ -17335,9 +17360,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(17,2) and a punctured RM(17-4,17) coset, neither feasible at k=17
 - note (reduced degree): not computed: exact minimisation is over GL(17,2) and a punctured RM(17-4,17) coset, neither feasible at k=17
 
-- 511 columns — see `master_catalog.json`, `factories[880]`
+- 511 columns — see `master_catalog.json`, `factories[881]`
 
-### 882. `[[511,81,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80
+### 883. `[[511,81,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80`
 - `N = 90` (81 outputs + 9 checks)
@@ -17351,9 +17376,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(81,2) and a punctured RM(81-4,81) coset, neither feasible at k=81
 - note (reduced degree): not computed: exact minimisation is over GL(81,2) and a punctured RM(81-4,81) coset, neither feasible at k=81
 
-- 511 columns — see `master_catalog.json`, `factories[881]`
+- 511 columns — see `master_catalog.json`, `factories[882]`
 
-### 883. `[[511,85,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84
+### 884. `[[511,85,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84`
 - `N = 94` (85 outputs + 9 checks)
@@ -17367,9 +17392,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(85,2) and a punctured RM(85-4,85) coset, neither feasible at k=85
 - note (reduced degree): not computed: exact minimisation is over GL(85,2) and a punctured RM(85-4,85) coset, neither feasible at k=85
 
-- 511 columns — see `master_catalog.json`, `factories[882]`
+- 511 columns — see `master_catalog.json`, `factories[883]`
 
-### 884. `[[511,89,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88
+### 885. `[[511,89,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88`
 - `N = 98` (89 outputs + 9 checks)
@@ -17383,9 +17408,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(89,2) and a punctured RM(89-4,89) coset, neither feasible at k=89
 - note (reduced degree): not computed: exact minimisation is over GL(89,2) and a punctured RM(89-4,89) coset, neither feasible at k=89
 
-- 511 columns — see `master_catalog.json`, `factories[883]`
+- 511 columns — see `master_catalog.json`, `factories[884]`
 
-### 885. `[[512,39,≥6]]` — CCZ0,1,2·CCZ3,4,5·CCZ6,7,8·CCZ9,10,11·CCZ12,13,14·CCZ15,16,17·CCZ18,19,20·CCZ21,22,23·CCZ24,25,26·CCZ27,28,29·CCZ30,31,32·CCZ33,34,35·CCZ36,37,38
+### 886. `[[512,39,≥6]]` — CCZ0,1,2·CCZ3,4,5·CCZ6,7,8·CCZ9,10,11·CCZ12,13,14·CCZ15,16,17·CCZ18,19,20·CCZ21,22,23·CCZ24,25,26·CCZ27,28,29·CCZ30,31,32·CCZ33,34,35·CCZ36,37,38
 
 - output gate: `0,1,2+3,4,5+6,7,8+9,10,11+12,13,14+15,16,17+18,19,20+21,22,23+24,25,26+27,28,29+30,31,32+33,34,35+36,37,38`
 - `N = 85` (39 outputs + 46 checks)
@@ -17398,9 +17423,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(39,2) and a punctured RM(39-4,39) coset, neither feasible at k=39
 - note (reduced degree): not computed: exact minimisation is over GL(39,2) and a punctured RM(39-4,39) coset, neither feasible at k=39
 
-- 512 columns — see `master_catalog.json`, `factories[884]`
+- 512 columns — see `master_catalog.json`, `factories[885]`
 
-### 886. `[[512,84,≥6]]` — CCZ0,64,83·CCZ0,65,82·CCZ0,66,81·CCZ0,67,80·CCZ0,68,79·CCZ0,69,78·CCZ0,70,77·CCZ0,71,76·CCZ0,72,75·CCZ0,73,74·CCZ1,54,83·CCZ1,55,82·CCZ1,56,81·CCZ1,57,80·CCZ1,58,79·CCZ1,59,78·CCZ1,60,77·CCZ1,61,76·CCZ1,62,75·CCZ1,63,74·CCZ2,50,83·CCZ2,51,82·CCZ2,52,81·CCZ2,53,80·CCZ2,58,73·CCZ2,59,72·CCZ2,60,71·CCZ2,61,70·CCZ2,62,69·CCZ2,63,68·CCZ3,49,83·CCZ3,51,79·CCZ3,52,78·CCZ3,53,77·CCZ3,55,73·CCZ3,56,72·CCZ3,57,71·CCZ3,61,67·CCZ3,62,66·CCZ3,63,65·CCZ4,49,82·CCZ4,50,79·CCZ4,52,76·CCZ4,53,75·CCZ4,54,73·CCZ4,56,70·CCZ4,57,69·CCZ4,59,67·CCZ4,60,66·CCZ4,63,64·CCZ5,49,81·CCZ5,50,78·CCZ5,51,76·CCZ5,53,74·CCZ5,54,72·CCZ5,55,70·CCZ5,57,68·CCZ5,58,67·CCZ5,60,65·CCZ5,62,64·CCZ6,49,80·CCZ6,50,77·CCZ6,51,75·CCZ6,52,74·CCZ6,54,71·CCZ6,55,69·CCZ6,56,68·CCZ6,58,66·CCZ6,59,65·CCZ6,61,64·CCZ7,39,83·CCZ7,40,82·CCZ7,41,81·CCZ7,42,80·CCZ7,43,79·CCZ7,44,78·CCZ7,45,77·CCZ7,46,76·CCZ7,47,75·CCZ7,48,74·CCZ8,35,83·CCZ8,36,82·CCZ8,37,81·CCZ8,38,80·CCZ8,43,73·CCZ8,44,72·CCZ8,45,71·CCZ8,46,70·CCZ8,47,69·CCZ8,48,68·CCZ9,34,83·CCZ9,36,79·CCZ9,37,78·CCZ9,38,77·CCZ9,40,73·CCZ9,41,72·CCZ9,42,71·CCZ9,46,67·CCZ9,47,66·CCZ9,48,65·CCZ10,34,82·CCZ10,35,79·CCZ10,37,76·CCZ10,38,75·CCZ10,39,73·CCZ10,41,70·CCZ10,42,69·CCZ10,44,67·CCZ10,45,66·CCZ10,48,64·CCZ11,34,81·CCZ11,35,78·CCZ11,36,76·CCZ11,38,74·CCZ11,39,72·CCZ11,40,70·CCZ11,42,68·CCZ11,43,67·CCZ11,45,65·CCZ11,47,64·CCZ12,34,80·CCZ12,35,77·CCZ12,36,75·CCZ12,37,74·CCZ12,39,71·CCZ12,40,69·CCZ12,41,68·CCZ12,43,66·CCZ12,44,65·CCZ12,46,64·CCZ13,30,83·CCZ13,31,82·CCZ13,32,81·CCZ13,33,80·CCZ13,43,63·CCZ13,44,62·CCZ13,45,61·CCZ13,46,60·CCZ13,47,59·CCZ13,48,58·CCZ14,29,83·CCZ14,31,79·CCZ14,32,78·CCZ14,33,77·CCZ14,40,63·CCZ14,41,62·CCZ14,42,61·CCZ14,46,57·CCZ14,47,56·CCZ14,48,55·CCZ15,29,82·CCZ15,30,79·CCZ15,32,76·CCZ15,33,75·CCZ15,39,63·CCZ15,41,60·CCZ15,42,59·CCZ15,44,57·CCZ15,45,56·CCZ15,48,54·CCZ16,29,81·CCZ16,30,78·CCZ16,31,76·CCZ16,33,74·CCZ16,39,62·CCZ16,40,60·CCZ16,42,58·CCZ16,43,57·CCZ16,45,55·CCZ16,47,54·CCZ17,29,80·CCZ17,30,77·CCZ17,31,75·CCZ17,32,74·CCZ17,39,61·CCZ17,40,59·CCZ17,41,58·CCZ17,43,56·CCZ17,44,55·CCZ17,46,54·CCZ18,28,83·CCZ18,31,73·CCZ18,32,72·CCZ18,33,71·CCZ18,36,63·CCZ18,37,62·CCZ18,38,61·CCZ18,46,53·CCZ18,47,52·CCZ18,48,51·CCZ19,28,82·CCZ19,30,73·CCZ19,32,70·CCZ19,33,69·CCZ19,35,63·CCZ19,37,60·CCZ19,38,59·CCZ19,44,53·CCZ19,45,52·CCZ19,48,50·CCZ20,28,81·CCZ20,30,72·CCZ20,31,70·CCZ20,33,68·CCZ20,35,62·CCZ20,36,60·CCZ20,38,58·CCZ20,43,53·CCZ20,45,51·CCZ20,47,50·CCZ21,28,80·CCZ21,30,71·CCZ21,31,69·CCZ21,32,68·CCZ21,35,61·CCZ21,36,59·CCZ21,37,58·CCZ21,43,52·CCZ21,44,51·CCZ21,46,50·CCZ22,28,79·CCZ22,29,73·CCZ22,32,67·CCZ22,33,66·CCZ22,34,63·CCZ22,37,57·CCZ22,38,56·CCZ22,41,53·CCZ22,42,52·CCZ22,48,49·CCZ23,28,78·CCZ23,29,72·CCZ23,31,67·CCZ23,33,65·CCZ23,34,62·CCZ23,36,57·CCZ23,38,55·CCZ23,40,53·CCZ23,42,51·CCZ23,47,49·CCZ24,28,77·CCZ24,29,71·CCZ24,31,66·CCZ24,32,65·CCZ24,34,61·CCZ24,36,56·CCZ24,37,55·CCZ24,40,52·CCZ24,41,51·CCZ24,46,49·CCZ25,28,76·CCZ25,29,70·CCZ25,30,67·CCZ25,33,64·CCZ25,34,60·CCZ25,35,57·CCZ25,38,54·CCZ25,39,53·CCZ25,42,50·CCZ25,45,49·CCZ26,28,75·CCZ26,29,69·CCZ26,30,66·CCZ26,32,64·CCZ26,34,59·CCZ26,35,56·CCZ26,37,54·CCZ26,39,52·CCZ26,41,50·CCZ26,44,49·CCZ27,28,74·CCZ27,29,68·CCZ27,30,65·CCZ27,31,64·CCZ27,34,58·CCZ27,35,55·CCZ27,36,54·CCZ27,39,51·CCZ27,40,50·CCZ27,43,49
+### 887. `[[512,84,≥6]]` — CCZ0,64,83·CCZ0,65,82·CCZ0,66,81·CCZ0,67,80·CCZ0,68,79·CCZ0,69,78·CCZ0,70,77·CCZ0,71,76·CCZ0,72,75·CCZ0,73,74·CCZ1,54,83·CCZ1,55,82·CCZ1,56,81·CCZ1,57,80·CCZ1,58,79·CCZ1,59,78·CCZ1,60,77·CCZ1,61,76·CCZ1,62,75·CCZ1,63,74·CCZ2,50,83·CCZ2,51,82·CCZ2,52,81·CCZ2,53,80·CCZ2,58,73·CCZ2,59,72·CCZ2,60,71·CCZ2,61,70·CCZ2,62,69·CCZ2,63,68·CCZ3,49,83·CCZ3,51,79·CCZ3,52,78·CCZ3,53,77·CCZ3,55,73·CCZ3,56,72·CCZ3,57,71·CCZ3,61,67·CCZ3,62,66·CCZ3,63,65·CCZ4,49,82·CCZ4,50,79·CCZ4,52,76·CCZ4,53,75·CCZ4,54,73·CCZ4,56,70·CCZ4,57,69·CCZ4,59,67·CCZ4,60,66·CCZ4,63,64·CCZ5,49,81·CCZ5,50,78·CCZ5,51,76·CCZ5,53,74·CCZ5,54,72·CCZ5,55,70·CCZ5,57,68·CCZ5,58,67·CCZ5,60,65·CCZ5,62,64·CCZ6,49,80·CCZ6,50,77·CCZ6,51,75·CCZ6,52,74·CCZ6,54,71·CCZ6,55,69·CCZ6,56,68·CCZ6,58,66·CCZ6,59,65·CCZ6,61,64·CCZ7,39,83·CCZ7,40,82·CCZ7,41,81·CCZ7,42,80·CCZ7,43,79·CCZ7,44,78·CCZ7,45,77·CCZ7,46,76·CCZ7,47,75·CCZ7,48,74·CCZ8,35,83·CCZ8,36,82·CCZ8,37,81·CCZ8,38,80·CCZ8,43,73·CCZ8,44,72·CCZ8,45,71·CCZ8,46,70·CCZ8,47,69·CCZ8,48,68·CCZ9,34,83·CCZ9,36,79·CCZ9,37,78·CCZ9,38,77·CCZ9,40,73·CCZ9,41,72·CCZ9,42,71·CCZ9,46,67·CCZ9,47,66·CCZ9,48,65·CCZ10,34,82·CCZ10,35,79·CCZ10,37,76·CCZ10,38,75·CCZ10,39,73·CCZ10,41,70·CCZ10,42,69·CCZ10,44,67·CCZ10,45,66·CCZ10,48,64·CCZ11,34,81·CCZ11,35,78·CCZ11,36,76·CCZ11,38,74·CCZ11,39,72·CCZ11,40,70·CCZ11,42,68·CCZ11,43,67·CCZ11,45,65·CCZ11,47,64·CCZ12,34,80·CCZ12,35,77·CCZ12,36,75·CCZ12,37,74·CCZ12,39,71·CCZ12,40,69·CCZ12,41,68·CCZ12,43,66·CCZ12,44,65·CCZ12,46,64·CCZ13,30,83·CCZ13,31,82·CCZ13,32,81·CCZ13,33,80·CCZ13,43,63·CCZ13,44,62·CCZ13,45,61·CCZ13,46,60·CCZ13,47,59·CCZ13,48,58·CCZ14,29,83·CCZ14,31,79·CCZ14,32,78·CCZ14,33,77·CCZ14,40,63·CCZ14,41,62·CCZ14,42,61·CCZ14,46,57·CCZ14,47,56·CCZ14,48,55·CCZ15,29,82·CCZ15,30,79·CCZ15,32,76·CCZ15,33,75·CCZ15,39,63·CCZ15,41,60·CCZ15,42,59·CCZ15,44,57·CCZ15,45,56·CCZ15,48,54·CCZ16,29,81·CCZ16,30,78·CCZ16,31,76·CCZ16,33,74·CCZ16,39,62·CCZ16,40,60·CCZ16,42,58·CCZ16,43,57·CCZ16,45,55·CCZ16,47,54·CCZ17,29,80·CCZ17,30,77·CCZ17,31,75·CCZ17,32,74·CCZ17,39,61·CCZ17,40,59·CCZ17,41,58·CCZ17,43,56·CCZ17,44,55·CCZ17,46,54·CCZ18,28,83·CCZ18,31,73·CCZ18,32,72·CCZ18,33,71·CCZ18,36,63·CCZ18,37,62·CCZ18,38,61·CCZ18,46,53·CCZ18,47,52·CCZ18,48,51·CCZ19,28,82·CCZ19,30,73·CCZ19,32,70·CCZ19,33,69·CCZ19,35,63·CCZ19,37,60·CCZ19,38,59·CCZ19,44,53·CCZ19,45,52·CCZ19,48,50·CCZ20,28,81·CCZ20,30,72·CCZ20,31,70·CCZ20,33,68·CCZ20,35,62·CCZ20,36,60·CCZ20,38,58·CCZ20,43,53·CCZ20,45,51·CCZ20,47,50·CCZ21,28,80·CCZ21,30,71·CCZ21,31,69·CCZ21,32,68·CCZ21,35,61·CCZ21,36,59·CCZ21,37,58·CCZ21,43,52·CCZ21,44,51·CCZ21,46,50·CCZ22,28,79·CCZ22,29,73·CCZ22,32,67·CCZ22,33,66·CCZ22,34,63·CCZ22,37,57·CCZ22,38,56·CCZ22,41,53·CCZ22,42,52·CCZ22,48,49·CCZ23,28,78·CCZ23,29,72·CCZ23,31,67·CCZ23,33,65·CCZ23,34,62·CCZ23,36,57·CCZ23,38,55·CCZ23,40,53·CCZ23,42,51·CCZ23,47,49·CCZ24,28,77·CCZ24,29,71·CCZ24,31,66·CCZ24,32,65·CCZ24,34,61·CCZ24,36,56·CCZ24,37,55·CCZ24,40,52·CCZ24,41,51·CCZ24,46,49·CCZ25,28,76·CCZ25,29,70·CCZ25,30,67·CCZ25,33,64·CCZ25,34,60·CCZ25,35,57·CCZ25,38,54·CCZ25,39,53·CCZ25,42,50·CCZ25,45,49·CCZ26,28,75·CCZ26,29,69·CCZ26,30,66·CCZ26,32,64·CCZ26,34,59·CCZ26,35,56·CCZ26,37,54·CCZ26,39,52·CCZ26,41,50·CCZ26,44,49·CCZ27,28,74·CCZ27,29,68·CCZ27,30,65·CCZ27,31,64·CCZ27,34,58·CCZ27,35,55·CCZ27,36,54·CCZ27,39,51·CCZ27,40,50·CCZ27,43,49
 
 - output gate: `0,64,83+0,65,82+0,66,81+0,67,80+0,68,79+0,69,78+0,70,77+0,71,76+0,72,75+0,73,74+1,54,83+1,55,82+1,56,81+1,57,80+1,58,79+1,59,78+1,60,77+1,61,76+1,62,75+1,63,74+2,50,83+2,51,82+2,52,81+2,53,80+2,58,73+2,59,72+2,60,71+2,61,70+2,62,69+2,63,68+3,49,83+3,51,79+3,52,78+3,53,77+3,55,73+3,56,72+3,57,71+3,61,67+3,62,66+3,63,65+4,49,82+4,50,79+4,52,76+4,53,75+4,54,73+4,56,70+4,57,69+4,59,67+4,60,66+4,63,64+5,49,81+5,50,78+5,51,76+5,53,74+5,54,72+5,55,70+5,57,68+5,58,67+5,60,65+5,62,64+6,49,80+6,50,77+6,51,75+6,52,74+6,54,71+6,55,69+6,56,68+6,58,66+6,59,65+6,61,64+7,39,83+7,40,82+7,41,81+7,42,80+7,43,79+7,44,78+7,45,77+7,46,76+7,47,75+7,48,74+8,35,83+8,36,82+8,37,81+8,38,80+8,43,73+8,44,72+8,45,71+8,46,70+8,47,69+8,48,68+9,34,83+9,36,79+9,37,78+9,38,77+9,40,73+9,41,72+9,42,71+9,46,67+9,47,66+9,48,65+10,34,82+10,35,79+10,37,76+10,38,75+10,39,73+10,41,70+10,42,69+10,44,67+10,45,66+10,48,64+11,34,81+11,35,78+11,36,76+11,38,74+11,39,72+11,40,70+11,42,68+11,43,67+11,45,65+11,47,64+12,34,80+12,35,77+12,36,75+12,37,74+12,39,71+12,40,69+12,41,68+12,43,66+12,44,65+12,46,64+13,30,83+13,31,82+13,32,81+13,33,80+13,43,63+13,44,62+13,45,61+13,46,60+13,47,59+13,48,58+14,29,83+14,31,79+14,32,78+14,33,77+14,40,63+14,41,62+14,42,61+14,46,57+14,47,56+14,48,55+15,29,82+15,30,79+15,32,76+15,33,75+15,39,63+15,41,60+15,42,59+15,44,57+15,45,56+15,48,54+16,29,81+16,30,78+16,31,76+16,33,74+16,39,62+16,40,60+16,42,58+16,43,57+16,45,55+16,47,54+17,29,80+17,30,77+17,31,75+17,32,74+17,39,61+17,40,59+17,41,58+17,43,56+17,44,55+17,46,54+18,28,83+18,31,73+18,32,72+18,33,71+18,36,63+18,37,62+18,38,61+18,46,53+18,47,52+18,48,51+19,28,82+19,30,73+19,32,70+19,33,69+19,35,63+19,37,60+19,38,59+19,44,53+19,45,52+19,48,50+20,28,81+20,30,72+20,31,70+20,33,68+20,35,62+20,36,60+20,38,58+20,43,53+20,45,51+20,47,50+21,28,80+21,30,71+21,31,69+21,32,68+21,35,61+21,36,59+21,37,58+21,43,52+21,44,51+21,46,50+22,28,79+22,29,73+22,32,67+22,33,66+22,34,63+22,37,57+22,38,56+22,41,53+22,42,52+22,48,49+23,28,78+23,29,72+23,31,67+23,33,65+23,34,62+23,36,57+23,38,55+23,40,53+23,42,51+23,47,49+24,28,77+24,29,71+24,31,66+24,32,65+24,34,61+24,36,56+24,37,55+24,40,52+24,41,51+24,46,49+25,28,76+25,29,70+25,30,67+25,33,64+25,34,60+25,35,57+25,38,54+25,39,53+25,42,50+25,45,49+26,28,75+26,29,69+26,30,66+26,32,64+26,34,59+26,35,56+26,37,54+26,39,52+26,41,50+26,44,49+27,28,74+27,29,68+27,30,65+27,31,64+27,34,58+27,35,55+27,36,54+27,39,51+27,40,50+27,43,49`
 - `N = 130` (84 outputs + 46 checks)
@@ -17414,9 +17439,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(84,2) and a punctured RM(84-4,84) coset, neither feasible at k=84
 - note (reduced degree): not computed: exact minimisation is over GL(84,2) and a punctured RM(84-4,84) coset, neither feasible at k=84
 
-- 512 columns — see `master_catalog.json`, `factories[885]`
+- 512 columns — see `master_catalog.json`, `factories[886]`
 
-### 887. `[[516,6,2]]` — CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
+### 888. `[[516,6,2]]` — CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
 
 - output gate: `012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 11` (6 outputs + 5 checks), exact minimal T-count 11, reduced degree 3
@@ -17429,9 +17454,9 @@ readable copy of exactly these rows.
 - source: `borrowed-identity search: two-group` · l3-row171-two-group (`two-group l=3 n=11 k=6 s_total=4 s_O=1 s_S=1`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
-- 516 columns — see `master_catalog.json`, `factories[886]`
+- 516 columns — see `master_catalog.json`, `factories[887]`
 
-### 888. `[[522,5,2]]` — CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34·CCZ012·CCZ013·CCZ014·CCZ023·CCZ024·CCZ034·CCZ123·CCZ124·CCZ134·CCZ234
+### 889. `[[522,5,2]]` — CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34·CCZ012·CCZ013·CCZ014·CCZ023·CCZ024·CCZ034·CCZ123·CCZ124·CCZ134·CCZ234
 
 - output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 6, reduced degree 2
@@ -17444,9 +17469,9 @@ readable copy of exactly these rows.
 - source: `borrowed-identity search: two-group` · l3-row145-two-group (`two-group l=3 n=11 k=5 s_total=4 s_O=1 s_S=1`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
-- 522 columns — see `master_catalog.json`, `factories[887]`
+- 522 columns — see `master_catalog.json`, `factories[888]`
 
-### 889. `[[524,4,2]]` — T0·T1·T2·T3
+### 890. `[[524,4,2]]` — T0·T1·T2·T3
 
 - output gate: `0+1+2+3`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 4, reduced degree 1
@@ -17458,9 +17483,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row116-two-group (`two-group l=3 n=11 k=4 s_total=4 s_O=1 s_S=1`)
 
-- 524 columns — see `master_catalog.json`, `factories[888]`
+- 524 columns — see `master_catalog.json`, `factories[889]`
 
-### 890. `[[525,3,2]]` — T0·T1·T2
+### 891. `[[525,3,2]]` — T0·T1·T2
 
 - output gate: `0+1+2`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 3, reduced degree 1
@@ -17472,9 +17497,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row076-two-group (`two-group l=3 n=11 k=3 s_total=4 s_O=1 s_S=1`)
 
-- 525 columns — see `master_catalog.json`, `factories[889]`
+- 525 columns — see `master_catalog.json`, `factories[890]`
 
-### 891. `[[526,2,2]]` — T0·T1
+### 892. `[[526,2,2]]` — T0·T1
 
 - output gate: `0+1`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 2, reduced degree 1
@@ -17486,9 +17511,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row042-two-group (`two-group l=3 n=11 k=2 s_total=4 s_O=1 s_S=1`)
 
-- 526 columns — see `master_catalog.json`, `factories[890]`
+- 526 columns — see `master_catalog.json`, `factories[891]`
 
-### 892. `[[527,1,3]]` — T0
+### 893. `[[527,1,3]]` — T0
 
 - output gate: `0`
 - `N = 11` (1 output + 10 checks), exact minimal T-count 1, reduced degree 1
@@ -17500,9 +17525,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row015-two-group (`two-group l=3 n=11 k=1 s_total=4 s_O=1 s_S=1`)
 
-- 527 columns — see `master_catalog.json`, `factories[891]`
+- 527 columns — see `master_catalog.json`, `factories[892]`
 
-### 893. `[[558,146,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145
+### 894. `[[558,146,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145`
 - `N = 158` (146 outputs + 12 checks)
@@ -17516,9 +17541,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(146,2) and a punctured RM(146-4,146) coset, neither feasible at k=146
 - note (reduced degree): not computed: exact minimisation is over GL(146,2) and a punctured RM(146-4,146) coset, neither feasible at k=146
 
-- 558 columns — see `master_catalog.json`, `factories[892]`
+- 558 columns — see `master_catalog.json`, `factories[893]`
 
-### 894. `[[567,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+### 895. `[[567,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
 
 - output gate: `012+013+023+123`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 7, reduced degree 3
@@ -17530,9 +17555,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row117-two-group (`two-group l=3 n=10 k=4 s_total=1 s_O=2 s_S=1`)
 
-- 567 columns — see `master_catalog.json`, `factories[893]`
+- 567 columns — see `master_catalog.json`, `factories[894]`
 
-### 895. `[[568,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+### 896. `[[568,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
 
 - output gate: `012+013+023+123`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 7, reduced degree 3
@@ -17544,9 +17569,24 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row118-two-group (`two-group l=3 n=11 k=4 s_total=2 s_O=2 s_S=1`)
 
-- 568 columns — see `master_catalog.json`, `factories[894]`
+- 568 columns — see `master_catalog.json`, `factories[895]`
 
-### 896. `[[599,1,≥6]]` — T0
+### 897. `[[575,1,≥6]]` — T0
+
+- output gate: `0`
+- `N = 148` (1 output + 147 checks), exact minimal T-count 1, reduced degree 1
+- distance: proved `6 <= d <= 15`; the upper bound is the fault on columns [0, 79, 158, 227, 296, 343, 390, 435, 480, 503, 526, 543, 560, 567, 574]
+- certified distance: `d >= 15`, from Jain and Albert (arXiv:2408.12752), Table I: [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[417,1,13]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 15, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not re-measured here
+- Clifford correction, every rotation a `T`: `S on 0`, `Z on 51`, `Z on 52`, `Z on 53`, `Z on 54`, `Z on 55`, `Z on 56`, `Z on 57`, `Z on 58`, `Z on 59`, `Z on 60`, `Z on 61` and 57 more (36 single-wire, 33 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 82, 85, 86, 87, 88, 89, 91, 94, 96, 101, 102, 107 and 156 more; `T†` on columns 0, 1, 2, 4, 5, 11, 13, 14, 16, 18, 19, 20 and 11 more, `T` on the rest
+- discovery: pre-existing
+- regime: Jain-Albert doubling: triorthogonal family — a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum
+- citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
+- source: `Jain-Albert doubling: triorthogonal family` · JA-575 (`[[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[417,1,13]] (Table I)`)
+
+- 575 columns — see `master_catalog.json`, `factories[896]`
+
+### 898. `[[599,1,≥6]]` — T0
 
 - output gate: `0`
 - `N = 154` (1 output + 153 checks), exact minimal T-count 1, reduced degree 1
@@ -17559,9 +17599,9 @@ readable copy of exactly these rows.
 - citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
 - source: `Jain-Albert doubling: weak triply even family` · JA-599 (`[[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[441,1,13]] (Table II)`)
 
-- 599 columns — see `master_catalog.json`, `factories[895]`
+- 599 columns — see `master_catalog.json`, `factories[897]`
 
-### 897. `[[606,162,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161
+### 899. `[[606,162,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161`
 - `N = 174` (162 outputs + 12 checks)
@@ -17575,9 +17615,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(162,2) and a punctured RM(162-4,162) coset, neither feasible at k=162
 - note (reduced degree): not computed: exact minimisation is over GL(162,2) and a punctured RM(162-4,162) coset, neither feasible at k=162
 
-- 606 columns — see `master_catalog.json`, `factories[896]`
+- 606 columns — see `master_catalog.json`, `factories[898]`
 
-### 898. `[[635,3,2]]` — CS01·CS02·CS12·CCZ012
+### 900. `[[635,3,2]]` — CS01·CS02·CS12·CCZ012
 
 - output gate: `01+02+12+012`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 4, reduced degree 2
@@ -17589,9 +17629,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row077-two-group (`two-group l=3 n=10 k=3 s_total=1 s_O=2 s_S=1`)
 
-- 635 columns — see `master_catalog.json`, `factories[897]`
+- 635 columns — see `master_catalog.json`, `factories[899]`
 
-### 899. `[[635,4,2]]` — T0·T1·T2·T3
+### 901. `[[635,4,2]]` — T0·T1·T2·T3
 
 - output gate: `0+1+2+3`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 4, reduced degree 1
@@ -17603,9 +17643,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row119-two-group (`two-group l=3 n=11 k=4 s_total=1 s_O=4 s_S=1`)
 
-- 635 columns — see `master_catalog.json`, `factories[898]`
+- 635 columns — see `master_catalog.json`, `factories[900]`
 
-### 900. `[[636,3,2]]` — CS01·CS02·CS12·CCZ012
+### 902. `[[636,3,2]]` — CS01·CS02·CS12·CCZ012
 
 - output gate: `01+02+12+012`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 4, reduced degree 2
@@ -17617,9 +17657,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row078-two-group (`two-group l=3 n=11 k=3 s_total=2 s_O=2 s_S=1`)
 
-- 636 columns — see `master_catalog.json`, `factories[899]`
+- 636 columns — see `master_catalog.json`, `factories[901]`
 
-### 901. `[[655,177,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176
+### 903. `[[655,177,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176`
 - `N = 189` (177 outputs + 12 checks)
@@ -17633,9 +17673,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(177,2) and a punctured RM(177-4,177) coset, neither feasible at k=177
 - note (reduced degree): not computed: exact minimisation is over GL(177,2) and a punctured RM(177-4,177) coset, neither feasible at k=177
 
-- 655 columns — see `master_catalog.json`, `factories[900]`
+- 655 columns — see `master_catalog.json`, `factories[902]`
 
-### 902. `[[660,7,2]]` — CS01·CS02·CS03·CS04·CS05·CS06·CS12·CS13·CS14·CS15·CS16·CS23·CS24·CS25·CS26·CS34·CS35·CS36·CS45·CS46·CS56·CCZ012·CCZ013·CCZ014·CCZ015·CCZ016·CCZ023·CCZ024·CCZ025·CCZ026·CCZ034·CCZ035·CCZ036·CCZ045·CCZ046·CCZ056·CCZ123·CCZ124·CCZ125·CCZ126·CCZ134·CCZ135·CCZ136·CCZ145·CCZ146·CCZ156·CCZ234·CCZ235·CCZ236·CCZ245·CCZ246·CCZ256·CCZ345·CCZ346·CCZ356·CCZ456
+### 904. `[[660,7,2]]` — CS01·CS02·CS03·CS04·CS05·CS06·CS12·CS13·CS14·CS15·CS16·CS23·CS24·CS25·CS26·CS34·CS35·CS36·CS45·CS46·CS56·CCZ012·CCZ013·CCZ014·CCZ015·CCZ016·CCZ023·CCZ024·CCZ025·CCZ026·CCZ034·CCZ035·CCZ036·CCZ045·CCZ046·CCZ056·CCZ123·CCZ124·CCZ125·CCZ126·CCZ134·CCZ135·CCZ136·CCZ145·CCZ146·CCZ156·CCZ234·CCZ235·CCZ236·CCZ245·CCZ246·CCZ256·CCZ345·CCZ346·CCZ356·CCZ456
 
 - output gate: `01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156+234+235+236+245+246+256+345+346+356+456`
 - `N = 11` (7 outputs + 4 checks)
@@ -17649,9 +17689,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 - note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 
-- 660 columns — see `master_catalog.json`, `factories[901]`
+- 660 columns — see `master_catalog.json`, `factories[903]`
 
-### 903. `[[679,185,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184
+### 905. `[[679,185,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184`
 - `N = 197` (185 outputs + 12 checks)
@@ -17665,9 +17705,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(185,2) and a punctured RM(185-4,185) coset, neither feasible at k=185
 - note (reduced degree): not computed: exact minimisation is over GL(185,2) and a punctured RM(185-4,185) coset, neither feasible at k=185
 
-- 679 columns — see `master_catalog.json`, `factories[902]`
+- 679 columns — see `master_catalog.json`, `factories[904]`
 
-### 904. `[[682,6,2]]` — T0·T1·T2·T3·T4·T5·CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
+### 906. `[[682,6,2]]` — T0·T1·T2·T3·T4·T5·CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
 
 - output gate: `0+1+2+3+4+5+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 11` (6 outputs + 5 checks), exact minimal T-count 6, reduced degree 2
@@ -17680,9 +17720,9 @@ readable copy of exactly these rows.
 - source: `borrowed-identity search: two-group` · l3-row172-two-group (`two-group l=3 n=11 k=6 s_total=1 s_O=3 s_S=1`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
 
-- 682 columns — see `master_catalog.json`, `factories[903]`
+- 682 columns — see `master_catalog.json`, `factories[905]`
 
-### 905. `[[684,132,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131
+### 907. `[[684,132,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131`
 - `N = 168` (132 outputs + 36 checks)
@@ -17696,9 +17736,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(132,2) and a punctured RM(132-4,132) coset, neither feasible at k=132
 - note (reduced degree): not computed: exact minimisation is over GL(132,2) and a punctured RM(132-4,132) coset, neither feasible at k=132
 
-- 684 columns — see `master_catalog.json`, `factories[904]`
+- 684 columns — see `master_catalog.json`, `factories[906]`
 
-### 906. `[[691,189,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188
+### 908. `[[691,189,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188`
 - `N = 201` (189 outputs + 12 checks)
@@ -17712,9 +17752,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(189,2) and a punctured RM(189-4,189) coset, neither feasible at k=189
 - note (reduced degree): not computed: exact minimisation is over GL(189,2) and a punctured RM(189-4,189) coset, neither feasible at k=189
 
-- 691 columns — see `master_catalog.json`, `factories[905]`
+- 691 columns — see `master_catalog.json`, `factories[907]`
 
-### 907. `[[693,5,2]]` — T0·T1·T2·T3·T4·CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34
+### 909. `[[693,5,2]]` — T0·T1·T2·T3·T4·CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34
 
 - output gate: `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 10, reduced degree 2
@@ -17727,9 +17767,9 @@ readable copy of exactly these rows.
 - source: `borrowed-identity search: two-group` · l3-row146-two-group (`two-group l=3 n=11 k=5 s_total=1 s_O=3 s_S=1`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
 
-- 693 columns — see `master_catalog.json`, `factories[906]`
+- 693 columns — see `master_catalog.json`, `factories[908]`
 
-### 908. `[[702,194,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193
+### 910. `[[702,194,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193`
 - `N = 205` (194 outputs + 11 checks)
@@ -17743,9 +17783,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(194,2) and a punctured RM(194-4,194) coset, neither feasible at k=194
 - note (reduced degree): not computed: exact minimisation is over GL(194,2) and a punctured RM(194-4,194) coset, neither feasible at k=194
 
-- 702 columns — see `master_catalog.json`, `factories[907]`
+- 702 columns — see `master_catalog.json`, `factories[909]`
 
-### 909. `[[715,197,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196
+### 911. `[[715,197,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196`
 - `N = 209` (197 outputs + 12 checks)
@@ -17759,9 +17799,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(197,2) and a punctured RM(197-4,197) coset, neither feasible at k=197
 - note (reduced degree): not computed: exact minimisation is over GL(197,2) and a punctured RM(197-4,197) coset, neither feasible at k=197
 
-- 715 columns — see `master_catalog.json`, `factories[908]`
+- 715 columns — see `master_catalog.json`, `factories[910]`
 
-### 910. `[[727,201,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200
+### 912. `[[727,201,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198+199+200`
 - `N = 213` (201 outputs + 12 checks)
@@ -17775,9 +17815,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(201,2) and a punctured RM(201-4,201) coset, neither feasible at k=201
 - note (reduced degree): not computed: exact minimisation is over GL(201,2) and a punctured RM(201-4,201) coset, neither feasible at k=201
 
-- 727 columns — see `master_catalog.json`, `factories[909]`
+- 727 columns — see `master_catalog.json`, `factories[911]`
 
-### 911. `[[742,36,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35
+### 913. `[[742,36,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35`
 - `N = 78` (36 outputs + 42 checks)
@@ -17792,9 +17832,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 - note (reduced degree): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 
-- 742 columns — see `master_catalog.json`, `factories[910]`
+- 742 columns — see `master_catalog.json`, `factories[912]`
 
-### 912. `[[750,210,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200·T201·T202·T203·T204·T205·T206·T207·T208·T209
+### 914. `[[750,210,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200·T201·T202·T203·T204·T205·T206·T207·T208·T209
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198+199+200+201+202+203+204+205+206+207+208+209`
 - `N = 221` (210 outputs + 11 checks)
@@ -17808,9 +17848,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(210,2) and a punctured RM(210-4,210) coset, neither feasible at k=210
 - note (reduced degree): not computed: exact minimisation is over GL(210,2) and a punctured RM(210-4,210) coset, neither feasible at k=210
 
-- 750 columns — see `master_catalog.json`, `factories[911]`
+- 750 columns — see `master_catalog.json`, `factories[913]`
 
-### 913. `[[756,32,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31
+### 915. `[[756,32,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31`
 - `N = 80` (32 outputs + 48 checks)
@@ -17825,9 +17865,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 - note (reduced degree): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 
-- 756 columns — see `master_catalog.json`, `factories[912]`
+- 756 columns — see `master_catalog.json`, `factories[914]`
 
-### 914. `[[762,4,2]]` — CS01·CS02·CS03·CS12·CS13·CS23·CCZ012·CCZ013·CCZ023·CCZ123
+### 916. `[[762,4,2]]` — CS01·CS02·CS03·CS12·CS13·CS23·CCZ012·CCZ013·CCZ023·CCZ123
 
 - output gate: `01+02+03+12+13+23+012+013+023+123`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
@@ -17839,9 +17879,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row120-two-group (`two-group l=3 n=11 k=4 s_total=1 s_O=3 s_S=1`)
 
-- 762 columns — see `master_catalog.json`, `factories[913]`
+- 762 columns — see `master_catalog.json`, `factories[915]`
 
-### 915. `[[765,2,2]]` — T0·T1
+### 917. `[[765,2,2]]` — T0·T1
 
 - output gate: `0+1`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 2, reduced degree 1
@@ -17853,9 +17893,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row043-two-group (`two-group l=3 n=10 k=2 s_total=1 s_O=2 s_S=1`)
 
-- 765 columns — see `master_catalog.json`, `factories[914]`
+- 765 columns — see `master_catalog.json`, `factories[916]`
 
-### 916. `[[766,2,2]]` — T0·T1
+### 918. `[[766,2,2]]` — T0·T1
 
 - output gate: `0+1`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 2, reduced degree 1
@@ -17867,9 +17907,24 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row044-two-group (`two-group l=3 n=11 k=2 s_total=2 s_O=2 s_S=1`)
 
-- 766 columns — see `master_catalog.json`, `factories[915]`
+- 766 columns — see `master_catalog.json`, `factories[917]`
 
-### 917. `[[800,224,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200·T201·T202·T203·T204·T205·T206·T207·T208·T209·T210·T211·T212·T213·T214·T215·T216·T217·T218·T219·T220·T221·T222·T223
+### 919. `[[777,1,≥6]]` — T0
+
+- output gate: `0`
+- `N = 199` (1 output + 198 checks), exact minimal T-count 1, reduced degree 1
+- distance: proved `6 <= d <= 17`; the upper bound is the fault on columns [0, 101, 202, 281, 360, 429, 498, 545, 592, 637, 682, 705, 728, 745, 762, 769, 776]
+- certified distance: `d >= 17`, from Jain and Albert (arXiv:2408.12752), Table I: [[101,1,17]] code of the self-dual [102,51,18] code sub(XQ103) doubled onto [[575,1,15]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 17, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not re-measured here
+- Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 8`, `Z on 10`, `Z on 12`, `Z on 16`, `Z on 17`, `Z on 21`, `Z on 26`, `Z on 27` and 101 more (58 single-wire, 55 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 0, 3, 6, 7, 8, 9, 10, 11, 14, 16, 19, 20 and 152 more, `T` on the rest
+- discovery: pre-existing
+- regime: Jain-Albert doubling: triorthogonal family — a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum
+- citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
+- source: `Jain-Albert doubling: triorthogonal family` · JA-777 (`[[101,1,17]] code of the self-dual [102,51,18] code sub(XQ103) doubled onto [[575,1,15]] (Table I)`)
+
+- 777 columns — see `master_catalog.json`, `factories[918]`
+
+### 920. `[[800,224,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200·T201·T202·T203·T204·T205·T206·T207·T208·T209·T210·T211·T212·T213·T214·T215·T216·T217·T218·T219·T220·T221·T222·T223
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198+199+200+201+202+203+204+205+206+207+208+209+210+211+212+213+214+215+216+217+218+219+220+221+222+223`
 - `N = 237` (224 outputs + 13 checks)
@@ -17883,9 +17938,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(224,2) and a punctured RM(224-4,224) coset, neither feasible at k=224
 - note (reduced degree): not computed: exact minimisation is over GL(224,2) and a punctured RM(224-4,224) coset, neither feasible at k=224
 
-- 800 columns — see `master_catalog.json`, `factories[916]`
+- 800 columns — see `master_catalog.json`, `factories[919]`
 
-### 918. `[[805,1,≥6]]` — T0
+### 921. `[[805,1,≥6]]` — T0
 
 - output gate: `0`
 - `N = 206` (1 output + 205 checks), exact minimal T-count 1, reduced degree 1
@@ -17898,9 +17953,9 @@ readable copy of exactly these rows.
 - citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
 - source: `Jain-Albert doubling: weak triply even family` · JA-805 (`[[103,1,19]] quantum QR code (extended QR [104,52,20]) doubled onto [[599,1,15]] (Table II)`)
 
-- 805 columns — see `master_catalog.json`, `factories[917]`
+- 805 columns — see `master_catalog.json`, `factories[920]`
 
-### 919. `[[825,199,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198
+### 922. `[[825,199,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198`
 - `N = 237` (199 outputs + 38 checks)
@@ -17914,9 +17969,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(199,2) and a punctured RM(199-4,199) coset, neither feasible at k=199
 - note (reduced degree): not computed: exact minimisation is over GL(199,2) and a punctured RM(199-4,199) coset, neither feasible at k=199
 
-- 825 columns — see `master_catalog.json`, `factories[918]`
+- 825 columns — see `master_catalog.json`, `factories[921]`
 
-### 920. `[[846,122,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121
+### 923. `[[846,122,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121`
 - `N = 161` (122 outputs + 39 checks)
@@ -17930,9 +17985,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(122,2) and a punctured RM(122-4,122) coset, neither feasible at k=122
 - note (reduced degree): not computed: exact minimisation is over GL(122,2) and a punctured RM(122-4,122) coset, neither feasible at k=122
 
-- 846 columns — see `master_catalog.json`, `factories[919]`
+- 846 columns — see `master_catalog.json`, `factories[922]`
 
-### 921. `[[848,122,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121
+### 924. `[[848,122,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121`
 - `N = 162` (122 outputs + 40 checks)
@@ -17946,9 +18001,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(122,2) and a punctured RM(122-4,122) coset, neither feasible at k=122
 - note (reduced degree): not computed: exact minimisation is over GL(122,2) and a punctured RM(122-4,122) coset, neither feasible at k=122
 
-- 848 columns — see `master_catalog.json`, `factories[920]`
+- 848 columns — see `master_catalog.json`, `factories[923]`
 
-### 922. `[[850,126,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125
+### 925. `[[850,126,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125`
 - `N = 165` (126 outputs + 39 checks)
@@ -17962,9 +18017,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(126,2) and a punctured RM(126-4,126) coset, neither feasible at k=126
 - note (reduced degree): not computed: exact minimisation is over GL(126,2) and a punctured RM(126-4,126) coset, neither feasible at k=126
 
-- 850 columns — see `master_catalog.json`, `factories[921]`
+- 850 columns — see `master_catalog.json`, `factories[924]`
 
-### 923. `[[850,128,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127
+### 926. `[[850,128,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127`
 - `N = 166` (128 outputs + 38 checks)
@@ -17978,9 +18033,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
 - note (reduced degree): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
 
-- 850 columns — see `master_catalog.json`, `factories[922]`
+- 850 columns — see `master_catalog.json`, `factories[925]`
 
-### 924. `[[852,126,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125
+### 927. `[[852,126,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125`
 - `N = 166` (126 outputs + 40 checks)
@@ -17994,9 +18049,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(126,2) and a punctured RM(126-4,126) coset, neither feasible at k=126
 - note (reduced degree): not computed: exact minimisation is over GL(126,2) and a punctured RM(126-4,126) coset, neither feasible at k=126
 
-- 852 columns — see `master_catalog.json`, `factories[923]`
+- 852 columns — see `master_catalog.json`, `factories[926]`
 
-### 925. `[[852,128,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127
+### 928. `[[852,128,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127`
 - `N = 167` (128 outputs + 39 checks)
@@ -18010,9 +18065,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
 - note (reduced degree): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
 
-- 852 columns — see `master_catalog.json`, `factories[924]`
+- 852 columns — see `master_catalog.json`, `factories[927]`
 
-### 926. `[[854,124,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123
+### 929. `[[854,124,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123`
 - `N = 166` (124 outputs + 42 checks)
@@ -18026,9 +18081,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(124,2) and a punctured RM(124-4,124) coset, neither feasible at k=124
 - note (reduced degree): not computed: exact minimisation is over GL(124,2) and a punctured RM(124-4,124) coset, neither feasible at k=124
 
-- 854 columns — see `master_catalog.json`, `factories[925]`
+- 854 columns — see `master_catalog.json`, `factories[928]`
 
-### 927. `[[854,126,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125
+### 930. `[[854,126,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125`
 - `N = 167` (126 outputs + 41 checks)
@@ -18042,9 +18097,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(126,2) and a punctured RM(126-4,126) coset, neither feasible at k=126
 - note (reduced degree): not computed: exact minimisation is over GL(126,2) and a punctured RM(126-4,126) coset, neither feasible at k=126
 
-- 854 columns — see `master_catalog.json`, `factories[926]`
+- 854 columns — see `master_catalog.json`, `factories[929]`
 
-### 928. `[[854,128,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127
+### 931. `[[854,128,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127`
 - `N = 168` (128 outputs + 40 checks)
@@ -18058,9 +18113,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
 - note (reduced degree): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
 
-- 854 columns — see `master_catalog.json`, `factories[927]`
+- 854 columns — see `master_catalog.json`, `factories[930]`
 
-### 929. `[[856,128,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127
+### 932. `[[856,128,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127`
 - `N = 169` (128 outputs + 41 checks)
@@ -18074,9 +18129,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
 - note (reduced degree): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
 
-- 856 columns — see `master_catalog.json`, `factories[928]`
+- 856 columns — see `master_catalog.json`, `factories[931]`
 
-### 930. `[[858,128,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127
+### 933. `[[858,128,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127`
 - `N = 170` (128 outputs + 42 checks)
@@ -18090,9 +18145,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
 - note (reduced degree): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
 
-- 858 columns — see `master_catalog.json`, `factories[929]`
+- 858 columns — see `master_catalog.json`, `factories[932]`
 
-### 931. `[[860,124,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123
+### 934. `[[860,124,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123`
 - `N = 169` (124 outputs + 45 checks)
@@ -18106,9 +18161,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(124,2) and a punctured RM(124-4,124) coset, neither feasible at k=124
 - note (reduced degree): not computed: exact minimisation is over GL(124,2) and a punctured RM(124-4,124) coset, neither feasible at k=124
 
-- 860 columns — see `master_catalog.json`, `factories[930]`
+- 860 columns — see `master_catalog.json`, `factories[933]`
 
-### 932. `[[860,126,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125
+### 935. `[[860,126,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125`
 - `N = 170` (126 outputs + 44 checks)
@@ -18122,9 +18177,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(126,2) and a punctured RM(126-4,126) coset, neither feasible at k=126
 - note (reduced degree): not computed: exact minimisation is over GL(126,2) and a punctured RM(126-4,126) coset, neither feasible at k=126
 
-- 860 columns — see `master_catalog.json`, `factories[931]`
+- 860 columns — see `master_catalog.json`, `factories[934]`
 
-### 933. `[[860,128,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127
+### 936. `[[860,128,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127`
 - `N = 171` (128 outputs + 43 checks)
@@ -18138,9 +18193,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
 - note (reduced degree): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
 
-- 860 columns — see `master_catalog.json`, `factories[932]`
+- 860 columns — see `master_catalog.json`, `factories[935]`
 
-### 934. `[[862,162,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161
+### 937. `[[862,162,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161`
 - `N = 176` (162 outputs + 14 checks)
@@ -18155,9 +18210,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(162,2) and a punctured RM(162-4,162) coset, neither feasible at k=162
 - note (reduced degree): not computed: exact minimisation is over GL(162,2) and a punctured RM(162-4,162) coset, neither feasible at k=162
 
-- 862 columns — see `master_catalog.json`, `factories[933]`
+- 862 columns — see `master_catalog.json`, `factories[936]`
 
-### 935. `[[863,161,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160
+### 938. `[[863,161,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160`
 - `N = 176` (161 outputs + 15 checks)
@@ -18172,9 +18227,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(161,2) and a punctured RM(161-4,161) coset, neither feasible at k=161
 - note (reduced degree): not computed: exact minimisation is over GL(161,2) and a punctured RM(161-4,161) coset, neither feasible at k=161
 
-- 863 columns — see `master_catalog.json`, `factories[934]`
+- 863 columns — see `master_catalog.json`, `factories[937]`
 
-### 936. `[[870,154,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153
+### 939. `[[870,154,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153`
 - `N = 176` (154 outputs + 22 checks)
@@ -18188,9 +18243,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(154,2) and a punctured RM(154-4,154) coset, neither feasible at k=154
 - note (reduced degree): not computed: exact minimisation is over GL(154,2) and a punctured RM(154-4,154) coset, neither feasible at k=154
 
-- 870 columns — see `master_catalog.json`, `factories[935]`
+- 870 columns — see `master_catalog.json`, `factories[938]`
 
-### 937. `[[871,153,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152
+### 940. `[[871,153,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152`
 - `N = 176` (153 outputs + 23 checks)
@@ -18204,9 +18259,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(153,2) and a punctured RM(153-4,153) coset, neither feasible at k=153
 - note (reduced degree): not computed: exact minimisation is over GL(153,2) and a punctured RM(153-4,153) coset, neither feasible at k=153
 
-- 871 columns — see `master_catalog.json`, `factories[936]`
+- 871 columns — see `master_catalog.json`, `factories[939]`
 
-### 938. `[[872,152,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151
+### 941. `[[872,152,4]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151`
 - `N = 176` (152 outputs + 24 checks)
@@ -18220,9 +18275,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(152,2) and a punctured RM(152-4,152) coset, neither feasible at k=152
 - note (reduced degree): not computed: exact minimisation is over GL(152,2) and a punctured RM(152-4,152) coset, neither feasible at k=152
 
-- 872 columns — see `master_catalog.json`, `factories[937]`
+- 872 columns — see `master_catalog.json`, `factories[940]`
 
-### 939. `[[879,145,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144
+### 942. `[[879,145,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144`
 - `N = 176` (145 outputs + 31 checks)
@@ -18236,9 +18291,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(145,2) and a punctured RM(145-4,145) coset, neither feasible at k=145
 - note (reduced degree): not computed: exact minimisation is over GL(145,2) and a punctured RM(145-4,145) coset, neither feasible at k=145
 
-- 879 columns — see `master_catalog.json`, `factories[938]`
+- 879 columns — see `master_catalog.json`, `factories[941]`
 
-### 940. `[[880,144,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143
+### 943. `[[880,144,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143`
 - `N = 176` (144 outputs + 32 checks)
@@ -18253,9 +18308,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(144,2) and a punctured RM(144-4,144) coset, neither feasible at k=144
 - note (reduced degree): not computed: exact minimisation is over GL(144,2) and a punctured RM(144-4,144) coset, neither feasible at k=144
 
-- 880 columns — see `master_catalog.json`, `factories[939]`
+- 880 columns — see `master_catalog.json`, `factories[942]`
 
-### 941. `[[880,176,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175
+### 944. `[[880,176,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175`
 - `N = 209` (176 outputs + 33 checks)
@@ -18269,9 +18324,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(176,2) and a punctured RM(176-4,176) coset, neither feasible at k=176
 - note (reduced degree): not computed: exact minimisation is over GL(176,2) and a punctured RM(176-4,176) coset, neither feasible at k=176
 
-- 880 columns — see `master_catalog.json`, `factories[940]`
+- 880 columns — see `master_catalog.json`, `factories[943]`
 
-### 942. `[[887,137,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136
+### 945. `[[887,137,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136`
 - `N = 176` (137 outputs + 39 checks)
@@ -18285,9 +18340,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(137,2) and a punctured RM(137-4,137) coset, neither feasible at k=137
 - note (reduced degree): not computed: exact minimisation is over GL(137,2) and a punctured RM(137-4,137) coset, neither feasible at k=137
 
-- 887 columns — see `master_catalog.json`, `factories[941]`
+- 887 columns — see `master_catalog.json`, `factories[944]`
 
-### 943. `[[896,128,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127
+### 946. `[[896,128,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127`
 - `N = 189` (128 outputs + 61 checks)
@@ -18301,9 +18356,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
 - note (reduced degree): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
 
-- 896 columns — see `master_catalog.json`, `factories[942]`
+- 896 columns — see `master_catalog.json`, `factories[945]`
 
-### 944. `[[901,123,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122
+### 947. `[[901,123,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122`
 - `N = 176` (123 outputs + 53 checks)
@@ -18317,9 +18372,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(123,2) and a punctured RM(123-4,123) coset, neither feasible at k=123
 - note (reduced degree): not computed: exact minimisation is over GL(123,2) and a punctured RM(123-4,123) coset, neither feasible at k=123
 
-- 901 columns — see `master_catalog.json`, `factories[943]`
+- 901 columns — see `master_catalog.json`, `factories[946]`
 
-### 945. `[[902,122,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121
+### 948. `[[902,122,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121`
 - `N = 176` (122 outputs + 54 checks)
@@ -18333,9 +18388,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(122,2) and a punctured RM(122-4,122) coset, neither feasible at k=122
 - note (reduced degree): not computed: exact minimisation is over GL(122,2) and a punctured RM(122-4,122) coset, neither feasible at k=122
 
-- 902 columns — see `master_catalog.json`, `factories[944]`
+- 902 columns — see `master_catalog.json`, `factories[947]`
 
-### 946. `[[904,120,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119
+### 949. `[[904,120,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119`
 - `N = 176` (120 outputs + 56 checks)
@@ -18349,9 +18404,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(120,2) and a punctured RM(120-4,120) coset, neither feasible at k=120
 - note (reduced degree): not computed: exact minimisation is over GL(120,2) and a punctured RM(120-4,120) coset, neither feasible at k=120
 
-- 904 columns — see `master_catalog.json`, `factories[945]`
+- 904 columns — see `master_catalog.json`, `factories[948]`
 
-### 947. `[[905,119,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118
+### 950. `[[905,119,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118`
 - `N = 176` (119 outputs + 57 checks)
@@ -18365,9 +18420,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(119,2) and a punctured RM(119-4,119) coset, neither feasible at k=119
 - note (reduced degree): not computed: exact minimisation is over GL(119,2) and a punctured RM(119-4,119) coset, neither feasible at k=119
 
-- 905 columns — see `master_catalog.json`, `factories[946]`
+- 905 columns — see `master_catalog.json`, `factories[949]`
 
-### 948. `[[906,118,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117
+### 951. `[[906,118,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117`
 - `N = 176` (118 outputs + 58 checks)
@@ -18381,9 +18436,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(118,2) and a punctured RM(118-4,118) coset, neither feasible at k=118
 - note (reduced degree): not computed: exact minimisation is over GL(118,2) and a punctured RM(118-4,118) coset, neither feasible at k=118
 
-- 906 columns — see `master_catalog.json`, `factories[947]`
+- 906 columns — see `master_catalog.json`, `factories[950]`
 
-### 949. `[[907,117,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116
+### 952. `[[907,117,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116`
 - `N = 176` (117 outputs + 59 checks)
@@ -18397,9 +18452,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(117,2) and a punctured RM(117-4,117) coset, neither feasible at k=117
 - note (reduced degree): not computed: exact minimisation is over GL(117,2) and a punctured RM(117-4,117) coset, neither feasible at k=117
 
-- 907 columns — see `master_catalog.json`, `factories[948]`
+- 907 columns — see `master_catalog.json`, `factories[951]`
 
-### 950. `[[908,116,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115
+### 953. `[[908,116,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115`
 - `N = 176` (116 outputs + 60 checks)
@@ -18414,9 +18469,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(116,2) and a punctured RM(116-4,116) coset, neither feasible at k=116
 - note (reduced degree): not computed: exact minimisation is over GL(116,2) and a punctured RM(116-4,116) coset, neither feasible at k=116
 
-- 908 columns — see `master_catalog.json`, `factories[949]`
+- 908 columns — see `master_catalog.json`, `factories[952]`
 
-### 951. `[[909,115,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114
+### 954. `[[909,115,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114`
 - `N = 176` (115 outputs + 61 checks)
@@ -18430,9 +18485,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(115,2) and a punctured RM(115-4,115) coset, neither feasible at k=115
 - note (reduced degree): not computed: exact minimisation is over GL(115,2) and a punctured RM(115-4,115) coset, neither feasible at k=115
 
-- 909 columns — see `master_catalog.json`, `factories[950]`
+- 909 columns — see `master_catalog.json`, `factories[953]`
 
-### 952. `[[909,171,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170
+### 955. `[[909,171,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170`
 - `N = 225` (171 outputs + 54 checks)
@@ -18446,9 +18501,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(171,2) and a punctured RM(171-4,171) coset, neither feasible at k=171
 - note (reduced degree): not computed: exact minimisation is over GL(171,2) and a punctured RM(171-4,171) coset, neither feasible at k=171
 
-- 909 columns — see `master_catalog.json`, `factories[951]`
+- 909 columns — see `master_catalog.json`, `factories[954]`
 
-### 953. `[[910,114,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113
+### 956. `[[910,114,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113`
 - `N = 176` (114 outputs + 62 checks)
@@ -18462,9 +18517,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(114,2) and a punctured RM(114-4,114) coset, neither feasible at k=114
 - note (reduced degree): not computed: exact minimisation is over GL(114,2) and a punctured RM(114-4,114) coset, neither feasible at k=114
 
-- 910 columns — see `master_catalog.json`, `factories[952]`
+- 910 columns — see `master_catalog.json`, `factories[955]`
 
-### 954. `[[911,113,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112
+### 957. `[[911,113,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112`
 - `N = 176` (113 outputs + 63 checks)
@@ -18478,9 +18533,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(113,2) and a punctured RM(113-4,113) coset, neither feasible at k=113
 - note (reduced degree): not computed: exact minimisation is over GL(113,2) and a punctured RM(113-4,113) coset, neither feasible at k=113
 
-- 911 columns — see `master_catalog.json`, `factories[953]`
+- 911 columns — see `master_catalog.json`, `factories[956]`
 
-### 955. `[[912,112,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111
+### 958. `[[912,112,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111`
 - `N = 176` (112 outputs + 64 checks)
@@ -18494,9 +18549,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(112,2) and a punctured RM(112-4,112) coset, neither feasible at k=112
 - note (reduced degree): not computed: exact minimisation is over GL(112,2) and a punctured RM(112-4,112) coset, neither feasible at k=112
 
-- 912 columns — see `master_catalog.json`, `factories[954]`
+- 912 columns — see `master_catalog.json`, `factories[957]`
 
-### 956. `[[935,89,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88
+### 959. `[[935,89,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88`
 - `N = 176` (89 outputs + 87 checks)
@@ -18510,9 +18565,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(89,2) and a punctured RM(89-4,89) coset, neither feasible at k=89
 - note (reduced degree): not computed: exact minimisation is over GL(89,2) and a punctured RM(89-4,89) coset, neither feasible at k=89
 
-- 935 columns — see `master_catalog.json`, `factories[955]`
+- 935 columns — see `master_catalog.json`, `factories[958]`
 
-### 957. `[[936,88,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87
+### 960. `[[936,88,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87`
 - `N = 176` (88 outputs + 88 checks)
@@ -18526,9 +18581,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(88,2) and a punctured RM(88-4,88) coset, neither feasible at k=88
 - note (reduced degree): not computed: exact minimisation is over GL(88,2) and a punctured RM(88-4,88) coset, neither feasible at k=88
 
-- 936 columns — see `master_catalog.json`, `factories[956]`
+- 936 columns — see `master_catalog.json`, `factories[959]`
 
-### 958. `[[937,87,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86
+### 961. `[[937,87,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86`
 - `N = 176` (87 outputs + 89 checks)
@@ -18542,9 +18597,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(87,2) and a punctured RM(87-4,87) coset, neither feasible at k=87
 - note (reduced degree): not computed: exact minimisation is over GL(87,2) and a punctured RM(87-4,87) coset, neither feasible at k=87
 
-- 937 columns — see `master_catalog.json`, `factories[957]`
+- 937 columns — see `master_catalog.json`, `factories[960]`
 
-### 959. `[[959,65,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64
+### 962. `[[959,65,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64`
 - `N = 176` (65 outputs + 111 checks)
@@ -18558,9 +18613,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(65,2) and a punctured RM(65-4,65) coset, neither feasible at k=65
 - note (reduced degree): not computed: exact minimisation is over GL(65,2) and a punctured RM(65-4,65) coset, neither feasible at k=65
 
-- 959 columns — see `master_catalog.json`, `factories[958]`
+- 959 columns — see `master_catalog.json`, `factories[961]`
 
-### 960. `[[960,184,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183
+### 963. `[[960,184,3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183`
 - `N = 212` (184 outputs + 28 checks)
@@ -18574,9 +18629,24 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(184,2) and a punctured RM(184-4,184) coset, neither feasible at k=184
 - note (reduced degree): not computed: exact minimisation is over GL(184,2) and a punctured RM(184-4,184) coset, neither feasible at k=184
 
-- 960 columns — see `master_catalog.json`, `factories[959]`
+- 960 columns — see `master_catalog.json`, `factories[962]`
 
-### 961. `[[988,36,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35
+### 964. `[[983,1,≥6]]` — T0
+
+- output gate: `0`
+- `N = 251` (1 output + 250 checks), exact minimal T-count 1, reduced degree 1
+- distance: proved `6 <= d <= 19`; the upper bound is the fault on columns [0, 103, 206, 307, 408, 487, 566, 635, 704, 751, 798, 843, 888, 911, 934, 951, 968, 975, 982]
+- certified distance: `d >= 19`, from Jain and Albert (arXiv:2408.12752), Table I: [[103,1,19]] quantum QR code (extended QR [104,52,20]) doubled onto [[777,1,17]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 19, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not re-measured here
+- Clifford correction, every rotation a `T`: `S on 0`, `Z on 52`, `Z on 53`, `Z on 54`, `Z on 55`, `Z on 59`, `Z on 61`, `Z on 63`, `Z on 67`, `Z on 68`, `Z on 72`, `Z on 77` and 102 more (59 single-wire, 55 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 105, 107, 108, 109, 110, 113, 114, 119, 124, 125, 126, 127 and 228 more; `T†` on columns 0, 1, 3, 8, 9, 12, 13, 14, 15, 17, 18, 19 and 15 more, `T` on the rest
+- discovery: pre-existing
+- regime: Jain-Albert doubling: triorthogonal family — a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum
+- citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
+- source: `Jain-Albert doubling: triorthogonal family` · JA-983 (`[[103,1,19]] quantum QR code (extended QR [104,52,20]) doubled onto [[777,1,17]] (Table I)`)
+
+- 983 columns — see `master_catalog.json`, `factories[963]`
+
+### 965. `[[988,36,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35`
 - `N = 176` (36 outputs + 140 checks)
@@ -18590,9 +18660,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 - note (reduced degree): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 
-- 988 columns — see `master_catalog.json`, `factories[960]`
+- 988 columns — see `master_catalog.json`, `factories[964]`
 
-### 962. `[[998,26,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25
+### 966. `[[998,26,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25`
 - `N = 176` (26 outputs + 150 checks)
@@ -18606,9 +18676,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(26,2) and a punctured RM(26-4,26) coset, neither feasible at k=26
 - note (reduced degree): not computed: exact minimisation is over GL(26,2) and a punctured RM(26-4,26) coset, neither feasible at k=26
 
-- 998 columns — see `master_catalog.json`, `factories[961]`
+- 998 columns — see `master_catalog.json`, `factories[965]`
 
-### 963. `[[1011,1,≥6]]` — T0
+### 967. `[[1011,1,≥6]]` — T0
 
 - output gate: `0`
 - `N = 258` (1 output + 257 checks), exact minimal T-count 1, reduced degree 1
@@ -18621,9 +18691,9 @@ readable copy of exactly these rows.
 - citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
 - source: `Jain-Albert doubling: weak triply even family` · JA-1011 (`[[103,1,19]] quantum QR code (extended QR [104,52,20]) doubled onto [[805,1,17]] (Table II)`)
 
-- 1011 columns — see `master_catalog.json`, `factories[962]`
+- 1011 columns — see `master_catalog.json`, `factories[966]`
 
-### 964. `[[1016,3,2]]` — CCZ012
+### 968. `[[1016,3,2]]` — CCZ012
 
 - output gate: `012`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 7, reduced degree 3
@@ -18635,9 +18705,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row079-two-group (`two-group l=3 n=10 k=3 s_total=1 s_O=1 s_S=1`)
 
-- 1016 columns — see `master_catalog.json`, `factories[963]`
+- 1016 columns — see `master_catalog.json`, `factories[967]`
 
-### 965. `[[1016,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+### 969. `[[1016,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
 
 - output gate: `012+013+023+123`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 7, reduced degree 3
@@ -18649,9 +18719,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row121-two-group (`two-group l=3 n=11 k=4 s_total=2 s_O=1 s_S=1`)
 
-- 1016 columns — see `master_catalog.json`, `factories[964]`
+- 1016 columns — see `master_catalog.json`, `factories[968]`
 
-### 966. `[[1020,2,2]]` — CS01
+### 970. `[[1020,2,2]]` — CS01
 
 - output gate: `01`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 3, reduced degree 2
@@ -18663,9 +18733,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row045-two-group (`two-group l=3 n=10 k=2 s_total=1 s_O=1 s_S=1`)
 
-- 1020 columns — see `master_catalog.json`, `factories[965]`
+- 1020 columns — see `master_catalog.json`, `factories[969]`
 
-### 967. `[[1020,3,2]]` — T0·T1·T2
+### 971. `[[1020,3,2]]` — T0·T1·T2
 
 - output gate: `0+1+2`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 3, reduced degree 1
@@ -18677,9 +18747,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row080-two-group (`two-group l=3 n=11 k=3 s_total=1 s_O=3 s_S=1`)
 
-- 1020 columns — see `master_catalog.json`, `factories[966]`
+- 1020 columns — see `master_catalog.json`, `factories[970]`
 
-### 968. `[[1022,1,2]]` — T0
+### 972. `[[1022,1,2]]` — T0
 
 - output gate: `0`
 - `N = 10` (1 output + 9 checks), exact minimal T-count 1, reduced degree 1
@@ -18691,9 +18761,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row016-two-group (`two-group l=3 n=10 k=1 s_total=1 s_O=1 s_S=1`)
 
-- 1022 columns — see `master_catalog.json`, `factories[967]`
+- 1022 columns — see `master_catalog.json`, `factories[971]`
 
-### 969. `[[1022,2,2]]` — T0·T1
+### 973. `[[1022,2,2]]` — T0·T1
 
 - output gate: `0+1`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 2, reduced degree 1
@@ -18705,9 +18775,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row046-two-group (`two-group l=3 n=11 k=2 s_total=2 s_O=1 s_S=1`)
 
-- 1022 columns — see `master_catalog.json`, `factories[968]`
+- 1022 columns — see `master_catalog.json`, `factories[972]`
 
-### 970. `[[1023,1,3]]` — T0
+### 974. `[[1023,1,3]]` — T0
 
 - output gate: `0`
 - `N = 11` (1 output + 10 checks), exact minimal T-count 1, reduced degree 1
@@ -18719,9 +18789,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row017-two-group (`two-group l=3 n=11 k=1 s_total=2 s_O=1 s_S=1`)
 
-- 1023 columns — see `master_catalog.json`, `factories[969]`
+- 1023 columns — see `master_catalog.json`, `factories[973]`
 
-### 971. `[[1023,1,5]]` — T0
+### 975. `[[1023,1,5]]` — T0
 
 - output gate: `0`
 - `N = 21` (1 output + 20 checks), exact minimal T-count 1, reduced degree 1
@@ -18733,9 +18803,9 @@ readable copy of exactly these rows.
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:424`)
 
-- 1023 columns — see `master_catalog.json`, `factories[970]`
+- 1023 columns — see `master_catalog.json`, `factories[974]`
 
-### 972. `[[1023,2,5]]` — T0·T1
+### 976. `[[1023,2,5]]` — T0·T1
 
 - output gate: `0+1`
 - `N = 22` (2 outputs + 20 checks), exact minimal T-count 2, reduced degree 1
@@ -18747,9 +18817,9 @@ readable copy of exactly these rows.
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search` · T0.T1 (`frontier_campaign · catalogue.jsonl:423`)
 
-- 1023 columns — see `master_catalog.json`, `factories[971]`
+- 1023 columns — see `master_catalog.json`, `factories[975]`
 
-### 973. `[[1023,3,5]]` — T0·T1·T2
+### 977. `[[1023,3,5]]` — T0·T1·T2
 
 - output gate: `0+1+2`
 - `N = 23` (3 outputs + 20 checks), exact minimal T-count 3, reduced degree 1
@@ -18761,9 +18831,9 @@ readable copy of exactly these rows.
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search` · T0.T1.T2 (`frontier_campaign · catalogue.jsonl:422`)
 
-- 1023 columns — see `master_catalog.json`, `factories[972]`
+- 1023 columns — see `master_catalog.json`, `factories[976]`
 
-### 974. `[[1023,4,5]]` — T0·T1·T2·T3
+### 978. `[[1023,4,5]]` — T0·T1·T2·T3
 
 - output gate: `0+1+2+3`
 - `N = 24` (4 outputs + 20 checks), exact minimal T-count 4, reduced degree 1
@@ -18775,9 +18845,9 @@ readable copy of exactly these rows.
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search` · T0.T1.T2.T3 (`frontier_campaign · catalogue.jsonl:421`)
 
-- 1023 columns — see `master_catalog.json`, `factories[973]`
+- 1023 columns — see `master_catalog.json`, `factories[977]`
 
-### 975. `[[1023,5,5]]` — T0·T1·T2·T3·T4
+### 979. `[[1023,5,5]]` — T0·T1·T2·T3·T4
 
 - output gate: `0+1+2+3+4`
 - `N = 25` (5 outputs + 20 checks), exact minimal T-count 5, reduced degree 1
@@ -18789,9 +18859,9 @@ readable copy of exactly these rows.
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search` · T0.T1.T2.T3.T4 (`frontier_campaign · catalogue.jsonl:420`)
 
-- 1023 columns — see `master_catalog.json`, `factories[974]`
+- 1023 columns — see `master_catalog.json`, `factories[978]`
 
-### 976. `[[1023,6,5]]` — T0·T1·T2·T3·T4·T5
+### 980. `[[1023,6,5]]` — T0·T1·T2·T3·T4·T5
 
 - output gate: `0+1+2+3+4+5`
 - `N = 26` (6 outputs + 20 checks), exact minimal T-count 6, reduced degree 1
@@ -18803,9 +18873,9 @@ readable copy of exactly these rows.
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search` · T0.T1.T2.T3.T4.T5 (`frontier_campaign · catalogue.jsonl:419`)
 
-- 1023 columns — see `master_catalog.json`, `factories[975]`
+- 1023 columns — see `master_catalog.json`, `factories[979]`
 
-### 977. `[[1023,7,5]]` — T0·T1·T2·T3·T4·T5·T6
+### 981. `[[1023,7,5]]` — T0·T1·T2·T3·T4·T5·T6
 
 - output gate: `0+1+2+3+4+5+6`
 - `N = 27` (7 outputs + 20 checks)
@@ -18819,9 +18889,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 - note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
 
-- 1023 columns — see `master_catalog.json`, `factories[976]`
+- 1023 columns — see `master_catalog.json`, `factories[980]`
 
-### 978. `[[1023,8,5]]` — T0·T1·T2·T3·T4·T5·T6·T7
+### 982. `[[1023,8,5]]` — T0·T1·T2·T3·T4·T5·T6·T7
 
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 28` (8 outputs + 20 checks)
@@ -18835,9 +18905,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
-- 1023 columns — see `master_catalog.json`, `factories[977]`
+- 1023 columns — see `master_catalog.json`, `factories[981]`
 
-### 979. `[[1023,9,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8
+### 983. `[[1023,9,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8
 
 - output gate: `0+1+2+3+4+5+6+7+8`
 - `N = 29` (9 outputs + 20 checks)
@@ -18851,9 +18921,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 - note (reduced degree): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 
-- 1023 columns — see `master_catalog.json`, `factories[978]`
+- 1023 columns — see `master_catalog.json`, `factories[982]`
 
-### 980. `[[1023,10,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9
+### 984. `[[1023,10,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9
 
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 30` (10 outputs + 20 checks)
@@ -18867,9 +18937,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(10,2) and a punctured RM(10-4,10) coset, neither feasible at k=10
 - note (reduced degree): not computed: exact minimisation is over GL(10,2) and a punctured RM(10-4,10) coset, neither feasible at k=10
 
-- 1023 columns — see `master_catalog.json`, `factories[979]`
+- 1023 columns — see `master_catalog.json`, `factories[983]`
 
-### 981. `[[1023,11,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10
+### 985. `[[1023,11,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 31` (11 outputs + 20 checks)
@@ -18883,9 +18953,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(11,2) and a punctured RM(11-4,11) coset, neither feasible at k=11
 - note (reduced degree): not computed: exact minimisation is over GL(11,2) and a punctured RM(11-4,11) coset, neither feasible at k=11
 
-- 1023 columns — see `master_catalog.json`, `factories[980]`
+- 1023 columns — see `master_catalog.json`, `factories[984]`
 
-### 982. `[[1023,12,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11
+### 986. `[[1023,12,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 32` (12 outputs + 20 checks)
@@ -18899,9 +18969,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
-- 1023 columns — see `master_catalog.json`, `factories[981]`
+- 1023 columns — see `master_catalog.json`, `factories[985]`
 
-### 983. `[[1023,13,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12
+### 987. `[[1023,13,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12`
 - `N = 33` (13 outputs + 20 checks)
@@ -18915,9 +18985,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(13,2) and a punctured RM(13-4,13) coset, neither feasible at k=13
 - note (reduced degree): not computed: exact minimisation is over GL(13,2) and a punctured RM(13-4,13) coset, neither feasible at k=13
 
-- 1023 columns — see `master_catalog.json`, `factories[982]`
+- 1023 columns — see `master_catalog.json`, `factories[986]`
 
-### 984. `[[1023,14,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13
+### 988. `[[1023,14,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13`
 - `N = 34` (14 outputs + 20 checks)
@@ -18931,9 +19001,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(14,2) and a punctured RM(14-4,14) coset, neither feasible at k=14
 - note (reduced degree): not computed: exact minimisation is over GL(14,2) and a punctured RM(14-4,14) coset, neither feasible at k=14
 
-- 1023 columns — see `master_catalog.json`, `factories[983]`
+- 1023 columns — see `master_catalog.json`, `factories[987]`
 
-### 985. `[[1023,15,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14
+### 989. `[[1023,15,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14`
 - `N = 35` (15 outputs + 20 checks)
@@ -18947,9 +19017,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(15,2) and a punctured RM(15-4,15) coset, neither feasible at k=15
 - note (reduced degree): not computed: exact minimisation is over GL(15,2) and a punctured RM(15-4,15) coset, neither feasible at k=15
 
-- 1023 columns — see `master_catalog.json`, `factories[984]`
+- 1023 columns — see `master_catalog.json`, `factories[988]`
 
-### 986. `[[1023,16,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15
+### 990. `[[1023,16,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15`
 - `N = 36` (16 outputs + 20 checks)
@@ -18963,9 +19033,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
-- 1023 columns — see `master_catalog.json`, `factories[985]`
+- 1023 columns — see `master_catalog.json`, `factories[989]`
 
-### 987. `[[1023,17,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16
+### 991. `[[1023,17,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16`
 - `N = 37` (17 outputs + 20 checks)
@@ -18979,9 +19049,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(17,2) and a punctured RM(17-4,17) coset, neither feasible at k=17
 - note (reduced degree): not computed: exact minimisation is over GL(17,2) and a punctured RM(17-4,17) coset, neither feasible at k=17
 
-- 1023 columns — see `master_catalog.json`, `factories[986]`
+- 1023 columns — see `master_catalog.json`, `factories[990]`
 
-### 988. `[[1023,18,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17
+### 992. `[[1023,18,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17`
 - `N = 38` (18 outputs + 20 checks)
@@ -18995,9 +19065,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(18,2) and a punctured RM(18-4,18) coset, neither feasible at k=18
 - note (reduced degree): not computed: exact minimisation is over GL(18,2) and a punctured RM(18-4,18) coset, neither feasible at k=18
 
-- 1023 columns — see `master_catalog.json`, `factories[987]`
+- 1023 columns — see `master_catalog.json`, `factories[991]`
 
-### 989. `[[1023,19,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18
+### 993. `[[1023,19,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18`
 - `N = 39` (19 outputs + 20 checks)
@@ -19011,9 +19081,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(19,2) and a punctured RM(19-4,19) coset, neither feasible at k=19
 - note (reduced degree): not computed: exact minimisation is over GL(19,2) and a punctured RM(19-4,19) coset, neither feasible at k=19
 
-- 1023 columns — see `master_catalog.json`, `factories[988]`
+- 1023 columns — see `master_catalog.json`, `factories[992]`
 
-### 990. `[[1023,20,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19
+### 994. `[[1023,20,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19`
 - `N = 40` (20 outputs + 20 checks)
@@ -19027,9 +19097,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
-- 1023 columns — see `master_catalog.json`, `factories[989]`
+- 1023 columns — see `master_catalog.json`, `factories[993]`
 
-### 991. `[[1023,21,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20
+### 995. `[[1023,21,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20`
 - `N = 41` (21 outputs + 20 checks)
@@ -19044,9 +19114,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(21,2) and a punctured RM(21-4,21) coset, neither feasible at k=21
 - note (reduced degree): not computed: exact minimisation is over GL(21,2) and a punctured RM(21-4,21) coset, neither feasible at k=21
 
-- 1023 columns — see `master_catalog.json`, `factories[990]`
+- 1023 columns — see `master_catalog.json`, `factories[994]`
 
-### 992. `[[1023,22,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21
+### 996. `[[1023,22,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21`
 - `N = 42` (22 outputs + 20 checks)
@@ -19060,9 +19130,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(22,2) and a punctured RM(22-4,22) coset, neither feasible at k=22
 - note (reduced degree): not computed: exact minimisation is over GL(22,2) and a punctured RM(22-4,22) coset, neither feasible at k=22
 
-- 1023 columns — see `master_catalog.json`, `factories[991]`
+- 1023 columns — see `master_catalog.json`, `factories[995]`
 
-### 993. `[[1023,23,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22
+### 997. `[[1023,23,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22`
 - `N = 43` (23 outputs + 20 checks)
@@ -19076,9 +19146,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(23,2) and a punctured RM(23-4,23) coset, neither feasible at k=23
 - note (reduced degree): not computed: exact minimisation is over GL(23,2) and a punctured RM(23-4,23) coset, neither feasible at k=23
 
-- 1023 columns — see `master_catalog.json`, `factories[992]`
+- 1023 columns — see `master_catalog.json`, `factories[996]`
 
-### 994. `[[1023,24,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23
+### 998. `[[1023,24,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23`
 - `N = 44` (24 outputs + 20 checks)
@@ -19092,9 +19162,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
-- 1023 columns — see `master_catalog.json`, `factories[993]`
+- 1023 columns — see `master_catalog.json`, `factories[997]`
 
-### 995. `[[1023,25,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24
+### 999. `[[1023,25,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24`
 - `N = 45` (25 outputs + 20 checks)
@@ -19108,9 +19178,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(25,2) and a punctured RM(25-4,25) coset, neither feasible at k=25
 - note (reduced degree): not computed: exact minimisation is over GL(25,2) and a punctured RM(25-4,25) coset, neither feasible at k=25
 
-- 1023 columns — see `master_catalog.json`, `factories[994]`
+- 1023 columns — see `master_catalog.json`, `factories[998]`
 
-### 996. `[[1023,26,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25
+### 1000. `[[1023,26,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25`
 - `N = 46` (26 outputs + 20 checks)
@@ -19124,9 +19194,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(26,2) and a punctured RM(26-4,26) coset, neither feasible at k=26
 - note (reduced degree): not computed: exact minimisation is over GL(26,2) and a punctured RM(26-4,26) coset, neither feasible at k=26
 
-- 1023 columns — see `master_catalog.json`, `factories[995]`
+- 1023 columns — see `master_catalog.json`, `factories[999]`
 
-### 997. `[[1023,27,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26
+### 1001. `[[1023,27,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26`
 - `N = 47` (27 outputs + 20 checks)
@@ -19140,9 +19210,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(27,2) and a punctured RM(27-4,27) coset, neither feasible at k=27
 - note (reduced degree): not computed: exact minimisation is over GL(27,2) and a punctured RM(27-4,27) coset, neither feasible at k=27
 
-- 1023 columns — see `master_catalog.json`, `factories[996]`
+- 1023 columns — see `master_catalog.json`, `factories[1000]`
 
-### 998. `[[1023,28,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27
+### 1002. `[[1023,28,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27`
 - `N = 48` (28 outputs + 20 checks)
@@ -19156,9 +19226,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 - note (reduced degree): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 
-- 1023 columns — see `master_catalog.json`, `factories[997]`
+- 1023 columns — see `master_catalog.json`, `factories[1001]`
 
-### 999. `[[1023,29,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28
+### 1003. `[[1023,29,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28`
 - `N = 49` (29 outputs + 20 checks)
@@ -19172,9 +19242,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(29,2) and a punctured RM(29-4,29) coset, neither feasible at k=29
 - note (reduced degree): not computed: exact minimisation is over GL(29,2) and a punctured RM(29-4,29) coset, neither feasible at k=29
 
-- 1023 columns — see `master_catalog.json`, `factories[998]`
+- 1023 columns — see `master_catalog.json`, `factories[1002]`
 
-### 1000. `[[1023,30,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29
+### 1004. `[[1023,30,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29`
 - `N = 50` (30 outputs + 20 checks)
@@ -19188,9 +19258,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(30,2) and a punctured RM(30-4,30) coset, neither feasible at k=30
 - note (reduced degree): not computed: exact minimisation is over GL(30,2) and a punctured RM(30-4,30) coset, neither feasible at k=30
 
-- 1023 columns — see `master_catalog.json`, `factories[999]`
+- 1023 columns — see `master_catalog.json`, `factories[1003]`
 
-### 1001. `[[1023,31,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30
+### 1005. `[[1023,31,5]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30`
 - `N = 51` (31 outputs + 20 checks)
@@ -19204,9 +19274,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(31,2) and a punctured RM(31-4,31) coset, neither feasible at k=31
 - note (reduced degree): not computed: exact minimisation is over GL(31,2) and a punctured RM(31-4,31) coset, neither feasible at k=31
 
-- 1023 columns — see `master_catalog.json`, `factories[1000]`
+- 1023 columns — see `master_catalog.json`, `factories[1004]`
 
-### 1002. `[[1143,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+### 1006. `[[1143,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
 
 - output gate: `012+013+023+123`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 7, reduced degree 3
@@ -19218,9 +19288,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row122-two-group (`two-group l=3 n=11 k=4 s_total=1 s_O=2 s_S=1`)
 
-- 1143 columns — see `master_catalog.json`, `factories[1001]`
+- 1143 columns — see `master_catalog.json`, `factories[1005]`
 
-### 1003. `[[1275,3,2]]` — CS01·CS02·CS12·CCZ012
+### 1007. `[[1275,3,2]]` — CS01·CS02·CS12·CCZ012
 
 - output gate: `01+02+12+012`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 4, reduced degree 2
@@ -19232,9 +19302,24 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row081-two-group (`two-group l=3 n=11 k=3 s_total=1 s_O=2 s_S=1`)
 
-- 1275 columns — see `master_catalog.json`, `factories[1002]`
+- 1275 columns — see `master_catalog.json`, `factories[1006]`
 
-### 1004. `[[1345,1,≥3]]` — T0
+### 1008. `[[1317,1,≥3]]` — T0
+
+- output gate: `0`
+- `N = 335` (1 output + 334 checks), exact minimal T-count 1, reduced degree 1
+- distance: proved `3 <= d <= 21`; the upper bound is the fault on columns [0, 167, 334, 437, 540, 641, 742, 821, 900, 969, 1038, 1085, 1132, 1177, 1222, 1245, 1268, 1285, 1302, 1309, 1316]
+- certified distance: `d >= 21`, from Jain and Albert (arXiv:2408.12752), Table I: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[983,1,19]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not re-measured here
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 135`, `Z on 136`, `Z on 137`, `Z on 138`, `Z on 142`, `Z on 144`, `Z on 146`, `Z on 150`, `Z on 151`, `Z on 155`, `Z on 160` and 104 more (60 single-wire, 56 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 1, 4, 6, 8, 10, 12, 13, 17, 19, 23, 24, 25 and 453 more; `T⁵` on column 167; `T†` on column 0, `T` on the rest
+- discovery: pre-existing
+- regime: Jain-Albert doubling: triorthogonal family — a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum
+- citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
+- source: `Jain-Albert doubling: triorthogonal family` · JA-1317 (`[[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[983,1,19]] (Table I)`)
+
+- 1317 columns — see `master_catalog.json`, `factories[1007]`
+
+### 1009. `[[1345,1,≥3]]` — T0
 
 - output gate: `0`
 - `N = 342` (1 output + 341 checks), exact minimal T-count 1, reduced degree 1
@@ -19247,9 +19332,9 @@ readable copy of exactly these rows.
 - citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
 - source: `Jain-Albert doubling: weak triply even family` · JA-1345 (`[[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1011,1,19]] (Table II)`)
 
-- 1345 columns — see `master_catalog.json`, `factories[1003]`
+- 1345 columns — see `master_catalog.json`, `factories[1008]`
 
-### 1005. `[[1533,2,2]]` — T0·T1
+### 1010. `[[1533,2,2]]` — T0·T1
 
 - output gate: `0+1`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 2, reduced degree 1
@@ -19261,9 +19346,24 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row047-two-group (`two-group l=3 n=11 k=2 s_total=1 s_O=2 s_S=1`)
 
-- 1533 columns — see `master_catalog.json`, `factories[1004]`
+- 1533 columns — see `master_catalog.json`, `factories[1009]`
 
-### 1006. `[[1675,373,≥3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200·T201·T202·T203·T204·T205·T206·T207·T208·T209·T210·T211·T212·T213·T214·T215·T216·T217·T218·T219·T220·T221·T222·T223·T224·T225·T226·T227·T228·T229·T230·T231·T232·T233·T234·T235·T236·T237·T238·T239·T240·T241·T242·T243·T244·T245·T246·T247·T248·T249·T250·T251·T252·T253·T254·T255·T256·T257·T258·T259·T260·T261·T262·T263·T264·T265·T266·T267·T268·T269·T270·T271·T272·T273·T274·T275·T276·T277·T278·T279·T280·T281·T282·T283·T284·T285·T286·T287·T288·T289·T290·T291·T292·T293·T294·T295·T296·T297·T298·T299·T300·T301·T302·T303·T304·T305·T306·T307·T308·T309·T310·T311·T312·T313·T314·T315·T316·T317·T318·T319·T320·T321·T322·T323·T324·T325·T326·T327·T328·T329·T330·T331·T332·T333·T334·T335·T336·T337·T338·T339·T340·T341·T342·T343·T344·T345·T346·T347·T348·T349·T350·T351·T352·T353·T354·T355·T356·T357·T358·T359·T360·T361·T362·T363·T364·T365·T366·T367·T368·T369·T370·T371·T372
+### 1011. `[[1651,1,≥3]]` — T0
+
+- output gate: `0`
+- `N = 419` (1 output + 418 checks), exact minimal T-count 1, reduced degree 1
+- distance: proved `3 <= d <= 23`; the upper bound is the fault on columns [0, 167, 334, 501, 668, 771, 874, 975, 1076, 1155, 1234, 1303, 1372, 1419, 1466, 1511, 1556, 1579, 1602, 1619, 1636, 1643, 1650]
+- certified distance: `d >= 23`, from Jain and Albert (arXiv:2408.12752), Table I: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1317,1,21]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not re-measured here
+- Clifford correction, every rotation a `T`: `S† on 0`, `Z on 218`, `Z on 219`, `Z on 220`, `Z on 221`, `Z on 225`, `Z on 227`, `Z on 229`, `Z on 233`, `Z on 234`, `Z on 238`, `Z on 243` and 106 more (61 single-wire, 57 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 169, 170, 172, 174, 176, 178, 181, 182, 183, 185, 187, 188 and 360 more; `T†` on columns 0, 1, 4, 6, 8, 10, 12, 13, 17, 19, 23, 24 and 33 more, `T` on the rest
+- discovery: pre-existing
+- regime: Jain-Albert doubling: triorthogonal family — a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum
+- citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
+- source: `Jain-Albert doubling: triorthogonal family` · JA-1651 (`[[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1317,1,21]] (Table I)`)
+
+- 1651 columns — see `master_catalog.json`, `factories[1010]`
+
+### 1012. `[[1675,373,≥3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200·T201·T202·T203·T204·T205·T206·T207·T208·T209·T210·T211·T212·T213·T214·T215·T216·T217·T218·T219·T220·T221·T222·T223·T224·T225·T226·T227·T228·T229·T230·T231·T232·T233·T234·T235·T236·T237·T238·T239·T240·T241·T242·T243·T244·T245·T246·T247·T248·T249·T250·T251·T252·T253·T254·T255·T256·T257·T258·T259·T260·T261·T262·T263·T264·T265·T266·T267·T268·T269·T270·T271·T272·T273·T274·T275·T276·T277·T278·T279·T280·T281·T282·T283·T284·T285·T286·T287·T288·T289·T290·T291·T292·T293·T294·T295·T296·T297·T298·T299·T300·T301·T302·T303·T304·T305·T306·T307·T308·T309·T310·T311·T312·T313·T314·T315·T316·T317·T318·T319·T320·T321·T322·T323·T324·T325·T326·T327·T328·T329·T330·T331·T332·T333·T334·T335·T336·T337·T338·T339·T340·T341·T342·T343·T344·T345·T346·T347·T348·T349·T350·T351·T352·T353·T354·T355·T356·T357·T358·T359·T360·T361·T362·T363·T364·T365·T366·T367·T368·T369·T370·T371·T372
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198+199+200+201+202+203+204+205+206+207+208+209+210+211+212+213+214+215+216+217+218+219+220+221+222+223+224+225+226+227+228+229+230+231+232+233+234+235+236+237+238+239+240+241+242+243+244+245+246+247+248+249+250+251+252+253+254+255+256+257+258+259+260+261+262+263+264+265+266+267+268+269+270+271+272+273+274+275+276+277+278+279+280+281+282+283+284+285+286+287+288+289+290+291+292+293+294+295+296+297+298+299+300+301+302+303+304+305+306+307+308+309+310+311+312+313+314+315+316+317+318+319+320+321+322+323+324+325+326+327+328+329+330+331+332+333+334+335+336+337+338+339+340+341+342+343+344+345+346+347+348+349+350+351+352+353+354+355+356+357+358+359+360+361+362+363+364+365+366+367+368+369+370+371+372`
 - `N = 397` (373 outputs + 24 checks)
@@ -19278,9 +19378,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(373,2) and a punctured RM(373-4,373) coset, neither feasible at k=373
 - note (reduced degree): not computed: exact minimisation is over GL(373,2) and a punctured RM(373-4,373) coset, neither feasible at k=373
 
-- 1675 columns — see `master_catalog.json`, `factories[1005]`
+- 1675 columns — see `master_catalog.json`, `factories[1011]`
 
-### 1007. `[[1676,372,≥3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200·T201·T202·T203·T204·T205·T206·T207·T208·T209·T210·T211·T212·T213·T214·T215·T216·T217·T218·T219·T220·T221·T222·T223·T224·T225·T226·T227·T228·T229·T230·T231·T232·T233·T234·T235·T236·T237·T238·T239·T240·T241·T242·T243·T244·T245·T246·T247·T248·T249·T250·T251·T252·T253·T254·T255·T256·T257·T258·T259·T260·T261·T262·T263·T264·T265·T266·T267·T268·T269·T270·T271·T272·T273·T274·T275·T276·T277·T278·T279·T280·T281·T282·T283·T284·T285·T286·T287·T288·T289·T290·T291·T292·T293·T294·T295·T296·T297·T298·T299·T300·T301·T302·T303·T304·T305·T306·T307·T308·T309·T310·T311·T312·T313·T314·T315·T316·T317·T318·T319·T320·T321·T322·T323·T324·T325·T326·T327·T328·T329·T330·T331·T332·T333·T334·T335·T336·T337·T338·T339·T340·T341·T342·T343·T344·T345·T346·T347·T348·T349·T350·T351·T352·T353·T354·T355·T356·T357·T358·T359·T360·T361·T362·T363·T364·T365·T366·T367·T368·T369·T370·T371
+### 1013. `[[1676,372,≥3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200·T201·T202·T203·T204·T205·T206·T207·T208·T209·T210·T211·T212·T213·T214·T215·T216·T217·T218·T219·T220·T221·T222·T223·T224·T225·T226·T227·T228·T229·T230·T231·T232·T233·T234·T235·T236·T237·T238·T239·T240·T241·T242·T243·T244·T245·T246·T247·T248·T249·T250·T251·T252·T253·T254·T255·T256·T257·T258·T259·T260·T261·T262·T263·T264·T265·T266·T267·T268·T269·T270·T271·T272·T273·T274·T275·T276·T277·T278·T279·T280·T281·T282·T283·T284·T285·T286·T287·T288·T289·T290·T291·T292·T293·T294·T295·T296·T297·T298·T299·T300·T301·T302·T303·T304·T305·T306·T307·T308·T309·T310·T311·T312·T313·T314·T315·T316·T317·T318·T319·T320·T321·T322·T323·T324·T325·T326·T327·T328·T329·T330·T331·T332·T333·T334·T335·T336·T337·T338·T339·T340·T341·T342·T343·T344·T345·T346·T347·T348·T349·T350·T351·T352·T353·T354·T355·T356·T357·T358·T359·T360·T361·T362·T363·T364·T365·T366·T367·T368·T369·T370·T371
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198+199+200+201+202+203+204+205+206+207+208+209+210+211+212+213+214+215+216+217+218+219+220+221+222+223+224+225+226+227+228+229+230+231+232+233+234+235+236+237+238+239+240+241+242+243+244+245+246+247+248+249+250+251+252+253+254+255+256+257+258+259+260+261+262+263+264+265+266+267+268+269+270+271+272+273+274+275+276+277+278+279+280+281+282+283+284+285+286+287+288+289+290+291+292+293+294+295+296+297+298+299+300+301+302+303+304+305+306+307+308+309+310+311+312+313+314+315+316+317+318+319+320+321+322+323+324+325+326+327+328+329+330+331+332+333+334+335+336+337+338+339+340+341+342+343+344+345+346+347+348+349+350+351+352+353+354+355+356+357+358+359+360+361+362+363+364+365+366+367+368+369+370+371`
 - `N = 397` (372 outputs + 25 checks)
@@ -19295,9 +19395,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(372,2) and a punctured RM(372-4,372) coset, neither feasible at k=372
 - note (reduced degree): not computed: exact minimisation is over GL(372,2) and a punctured RM(372-4,372) coset, neither feasible at k=372
 
-- 1676 columns — see `master_catalog.json`, `factories[1006]`
+- 1676 columns — see `master_catalog.json`, `factories[1012]`
 
-### 1008. `[[1679,1,≥3]]` — T0
+### 1014. `[[1679,1,≥3]]` — T0
 
 - output gate: `0`
 - `N = 426` (1 output + 425 checks), exact minimal T-count 1, reduced degree 1
@@ -19310,9 +19410,9 @@ readable copy of exactly these rows.
 - citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
 - source: `Jain-Albert doubling: weak triply even family` · JA-1679 (`[[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1345,1,21]] (Table II)`)
 
-- 1679 columns — see `master_catalog.json`, `factories[1007]`
+- 1679 columns — see `master_catalog.json`, `factories[1013]`
 
-### 1009. `[[1683,365,≥3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200·T201·T202·T203·T204·T205·T206·T207·T208·T209·T210·T211·T212·T213·T214·T215·T216·T217·T218·T219·T220·T221·T222·T223·T224·T225·T226·T227·T228·T229·T230·T231·T232·T233·T234·T235·T236·T237·T238·T239·T240·T241·T242·T243·T244·T245·T246·T247·T248·T249·T250·T251·T252·T253·T254·T255·T256·T257·T258·T259·T260·T261·T262·T263·T264·T265·T266·T267·T268·T269·T270·T271·T272·T273·T274·T275·T276·T277·T278·T279·T280·T281·T282·T283·T284·T285·T286·T287·T288·T289·T290·T291·T292·T293·T294·T295·T296·T297·T298·T299·T300·T301·T302·T303·T304·T305·T306·T307·T308·T309·T310·T311·T312·T313·T314·T315·T316·T317·T318·T319·T320·T321·T322·T323·T324·T325·T326·T327·T328·T329·T330·T331·T332·T333·T334·T335·T336·T337·T338·T339·T340·T341·T342·T343·T344·T345·T346·T347·T348·T349·T350·T351·T352·T353·T354·T355·T356·T357·T358·T359·T360·T361·T362·T363·T364
+### 1015. `[[1683,365,≥3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200·T201·T202·T203·T204·T205·T206·T207·T208·T209·T210·T211·T212·T213·T214·T215·T216·T217·T218·T219·T220·T221·T222·T223·T224·T225·T226·T227·T228·T229·T230·T231·T232·T233·T234·T235·T236·T237·T238·T239·T240·T241·T242·T243·T244·T245·T246·T247·T248·T249·T250·T251·T252·T253·T254·T255·T256·T257·T258·T259·T260·T261·T262·T263·T264·T265·T266·T267·T268·T269·T270·T271·T272·T273·T274·T275·T276·T277·T278·T279·T280·T281·T282·T283·T284·T285·T286·T287·T288·T289·T290·T291·T292·T293·T294·T295·T296·T297·T298·T299·T300·T301·T302·T303·T304·T305·T306·T307·T308·T309·T310·T311·T312·T313·T314·T315·T316·T317·T318·T319·T320·T321·T322·T323·T324·T325·T326·T327·T328·T329·T330·T331·T332·T333·T334·T335·T336·T337·T338·T339·T340·T341·T342·T343·T344·T345·T346·T347·T348·T349·T350·T351·T352·T353·T354·T355·T356·T357·T358·T359·T360·T361·T362·T363·T364
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198+199+200+201+202+203+204+205+206+207+208+209+210+211+212+213+214+215+216+217+218+219+220+221+222+223+224+225+226+227+228+229+230+231+232+233+234+235+236+237+238+239+240+241+242+243+244+245+246+247+248+249+250+251+252+253+254+255+256+257+258+259+260+261+262+263+264+265+266+267+268+269+270+271+272+273+274+275+276+277+278+279+280+281+282+283+284+285+286+287+288+289+290+291+292+293+294+295+296+297+298+299+300+301+302+303+304+305+306+307+308+309+310+311+312+313+314+315+316+317+318+319+320+321+322+323+324+325+326+327+328+329+330+331+332+333+334+335+336+337+338+339+340+341+342+343+344+345+346+347+348+349+350+351+352+353+354+355+356+357+358+359+360+361+362+363+364`
 - `N = 397` (365 outputs + 32 checks)
@@ -19327,9 +19427,9 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(365,2) and a punctured RM(365-4,365) coset, neither feasible at k=365
 - note (reduced degree): not computed: exact minimisation is over GL(365,2) and a punctured RM(365-4,365) coset, neither feasible at k=365
 
-- 1683 columns — see `master_catalog.json`, `factories[1008]`
+- 1683 columns — see `master_catalog.json`, `factories[1014]`
 
-### 1010. `[[1715,287,≥3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200·T201·T202·T203·T204·T205·T206·T207·T208·T209·T210·T211·T212·T213·T214·T215·T216·T217·T218·T219·T220·T221·T222·T223·T224·T225·T226·T227·T228·T229·T230·T231·T232·T233·T234·T235·T236·T237·T238·T239·T240·T241·T242·T243·T244·T245·T246·T247·T248·T249·T250·T251·T252·T253·T254·T255·T256·T257·T258·T259·T260·T261·T262·T263·T264·T265·T266·T267·T268·T269·T270·T271·T272·T273·T274·T275·T276·T277·T278·T279·T280·T281·T282·T283·T284·T285·T286
+### 1016. `[[1715,287,≥3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200·T201·T202·T203·T204·T205·T206·T207·T208·T209·T210·T211·T212·T213·T214·T215·T216·T217·T218·T219·T220·T221·T222·T223·T224·T225·T226·T227·T228·T229·T230·T231·T232·T233·T234·T235·T236·T237·T238·T239·T240·T241·T242·T243·T244·T245·T246·T247·T248·T249·T250·T251·T252·T253·T254·T255·T256·T257·T258·T259·T260·T261·T262·T263·T264·T265·T266·T267·T268·T269·T270·T271·T272·T273·T274·T275·T276·T277·T278·T279·T280·T281·T282·T283·T284·T285·T286
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198+199+200+201+202+203+204+205+206+207+208+209+210+211+212+213+214+215+216+217+218+219+220+221+222+223+224+225+226+227+228+229+230+231+232+233+234+235+236+237+238+239+240+241+242+243+244+245+246+247+248+249+250+251+252+253+254+255+256+257+258+259+260+261+262+263+264+265+266+267+268+269+270+271+272+273+274+275+276+277+278+279+280+281+282+283+284+285+286`
 - `N = 329` (287 outputs + 42 checks)
@@ -19344,9 +19444,24 @@ readable copy of exactly these rows.
 - note (T-count): not computed: exact minimisation is over GL(287,2) and a punctured RM(287-4,287) coset, neither feasible at k=287
 - note (reduced degree): not computed: exact minimisation is over GL(287,2) and a punctured RM(287-4,287) coset, neither feasible at k=287
 
-- 1715 columns — see `master_catalog.json`, `factories[1009]`
+- 1715 columns — see `master_catalog.json`, `factories[1015]`
 
-### 1011. `[[2040,3,2]]` — CCZ012
+### 1017. `[[2033,1,≥3]]` — T0
+
+- output gate: `0`
+- `N = 515` (1 output + 514 checks), exact minimal T-count 1, reduced degree 1
+- distance: proved `3 <= d <= 25`; the upper bound is the fault on columns [0, 191, 382, 549, 716, 883, 1050, 1153, 1256, 1357, 1458, 1537, 1616, 1685, 1754, 1801, 1848, 1893, 1938, 1961, 1984, 2001, 2018, 2025, 2032]
+- certified distance: `d >= 25`, from Jain and Albert (arXiv:2408.12752), Table I: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1651,1,23]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not re-measured here
+- Clifford correction, every rotation a `T`: `Z on 313`, `Z on 314`, `Z on 315`, `Z on 316`, `Z on 320`, `Z on 322`, `Z on 324`, `Z on 328`, `Z on 329`, `Z on 333`, `Z on 338`, `Z on 339` and 108 more (61 single-wire, 59 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 1, 2, 3, 4, 5, 6, 11, 12, 13, 16, 17, 19 and 563 more; `T⁵` on columns 191, 716, 883; `T†` on column 0, `T` on the rest
+- discovery: pre-existing
+- regime: Jain-Albert doubling: triorthogonal family — a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum
+- citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
+- source: `Jain-Albert doubling: triorthogonal family` · JA-2033 (`[[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1651,1,23]] (Table I)`)
+
+- 2033 columns — see `master_catalog.json`, `factories[1016]`
+
+### 1018. `[[2040,3,2]]` — CCZ012
 
 - output gate: `012`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 7, reduced degree 3
@@ -19358,9 +19473,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row082-two-group (`two-group l=3 n=11 k=3 s_total=1 s_O=1 s_S=1`)
 
-- 2040 columns — see `master_catalog.json`, `factories[1010]`
+- 2040 columns — see `master_catalog.json`, `factories[1017]`
 
-### 1012. `[[2044,2,2]]` — CS01
+### 1019. `[[2044,2,2]]` — CS01
 
 - output gate: `01`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 3, reduced degree 2
@@ -19372,9 +19487,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row048-two-group (`two-group l=3 n=11 k=2 s_total=1 s_O=1 s_S=1`)
 
-- 2044 columns — see `master_catalog.json`, `factories[1011]`
+- 2044 columns — see `master_catalog.json`, `factories[1018]`
 
-### 1013. `[[2046,1,2]]` — T0
+### 1020. `[[2046,1,2]]` — T0
 
 - output gate: `0`
 - `N = 11` (1 output + 10 checks), exact minimal T-count 1, reduced degree 1
@@ -19386,9 +19501,9 @@ readable copy of exactly these rows.
 - citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
 - source: `borrowed-identity search: two-group` · l3-row018-two-group (`two-group l=3 n=11 k=1 s_total=1 s_O=1 s_S=1`)
 
-- 2046 columns — see `master_catalog.json`, `factories[1012]`
+- 2046 columns — see `master_catalog.json`, `factories[1019]`
 
-### 1014. `[[2061,1,≥3]]` — T0
+### 1021. `[[2061,1,≥3]]` — T0
 
 - output gate: `0`
 - `N = 522` (1 output + 521 checks), exact minimal T-count 1, reduced degree 1
@@ -19401,9 +19516,24 @@ readable copy of exactly these rows.
 - citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
 - source: `Jain-Albert doubling: weak triply even family` · JA-2061 (`[[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1679,1,23]] (Table II)`)
 
-- 2061 columns — see `master_catalog.json`, `factories[1013]`
+- 2061 columns — see `master_catalog.json`, `factories[1020]`
 
-### 1015. `[[2443,1,≥3]]` — T0
+### 1022. `[[2415,1,≥3]]` — T0
+
+- output gate: `0`
+- `N = 611` (1 output + 610 checks), exact minimal T-count 1, reduced degree 1
+- distance: proved `3 <= d <= 27`; the upper bound is the fault on columns [0, 191, 382, 573, 764, 931, 1098, 1265, 1432, 1535, 1638, 1739, 1840, 1919, 1998, 2067, 2136, 2183, 2230, 2275, 2320, 2343, 2366, 2383, 2400, 2407, 2414]
+- certified distance: `d >= 27`, from Jain and Albert (arXiv:2408.12752), Table I: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2033,1,25]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not re-measured here
+- Clifford correction, every rotation a `T`: `S on 0`, `Z on 408`, `Z on 409`, `Z on 410`, `Z on 411`, `Z on 415`, `Z on 417`, `Z on 419`, `Z on 423`, `Z on 424`, `Z on 428`, `Z on 433` and 111 more (62 single-wire, 61 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 198, 199, 200, 201, 205, 206, 209, 212, 214, 215, 217, 219 and 707 more; `T⁵` on columns 573, 1098, 1265; `T†` on columns 0, 1, 2, 3, 4, 5, 6, 11, 12, 13, 16, 17 and 36 more, `T` on the rest
+- discovery: pre-existing
+- regime: Jain-Albert doubling: triorthogonal family — a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum
+- citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
+- source: `Jain-Albert doubling: triorthogonal family` · JA-2415 (`[[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2033,1,25]] (Table I)`)
+
+- 2415 columns — see `master_catalog.json`, `factories[1021]`
+
+### 1023. `[[2443,1,≥3]]` — T0
 
 - output gate: `0`
 - `N = 618` (1 output + 617 checks), exact minimal T-count 1, reduced degree 1
@@ -19416,9 +19546,24 @@ readable copy of exactly these rows.
 - citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
 - source: `Jain-Albert doubling: weak triply even family` · JA-2443 (`[[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2061,1,25]] (Table II)`)
 
-- 2443 columns — see `master_catalog.json`, `factories[1014]`
+- 2443 columns — see `master_catalog.json`, `factories[1022]`
 
-### 1016. `[[2841,1,≥3]]` — T0
+### 1024. `[[2813,1,≥3]]` — T0
+
+- output gate: `0`
+- `N = 711` (1 output + 710 checks), exact minimal T-count 1, reduced degree 1
+- distance: proved `3 <= d <= 29`; the upper bound is the fault on columns [0, 199, 398, 589, 780, 971, 1162, 1329, 1496, 1663, 1830, 1933, 2036, 2137, 2238, 2317, 2396, 2465, 2534, 2581, 2628, 2673, 2718, 2741, 2764, 2781, 2798, 2805, 2812]
+- certified distance: `d >= 29`, from Jain and Albert (arXiv:2408.12752), Table I: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2415,1,27]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not re-measured here
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 507`, `Z on 508`, `Z on 509`, `Z on 510`, `Z on 514`, `Z on 516`, `Z on 518`, `Z on 522`, `Z on 523`, `Z on 527`, `Z on 532` and 115 more (63 single-wire, 64 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 1, 3, 5, 6, 8, 10, 12, 14, 17, 21, 22, 23 and 952 more; `T⁵` on columns 199, 971, 1496, 1663; `T†` on columns 0, 780, `T` on the rest
+- discovery: pre-existing
+- regime: Jain-Albert doubling: triorthogonal family — a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum
+- citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
+- source: `Jain-Albert doubling: triorthogonal family` · JA-2813 (`[[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2415,1,27]] (Table I)`)
+
+- 2813 columns — see `master_catalog.json`, `factories[1023]`
+
+### 1025. `[[2841,1,≥3]]` — T0
 
 - output gate: `0`
 - `N = 718` (1 output + 717 checks), exact minimal T-count 1, reduced degree 1
@@ -19431,9 +19576,24 @@ readable copy of exactly these rows.
 - citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
 - source: `Jain-Albert doubling: weak triply even family` · JA-2841 (`[[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2443,1,27]] (Table II)`)
 
-- 2841 columns — see `master_catalog.json`, `factories[1015]`
+- 2841 columns — see `master_catalog.json`, `factories[1024]`
 
-### 1017. `[[3239,1,≥3]]` — T0
+### 1026. `[[3211,1,≥3]]` — T0
+
+- output gate: `0`
+- `N = 811` (1 output + 810 checks), exact minimal T-count 1, reduced degree 1
+- distance: proved `3 <= d <= 31`; the upper bound is the fault on columns [0, 199, 398, 597, 796, 987, 1178, 1369, 1560, 1727, 1894, 2061, 2228, 2331, 2434, 2535, 2636, 2715, 2794, 2863, 2932, 2979, 3026, 3071, 3116, 3139, 3162, 3179, 3196, 3203, 3210]
+- certified distance: `d >= 31`, from Jain and Albert (arXiv:2408.12752), Table I: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2813,1,29]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not re-measured here
+- Clifford correction, every rotation a `T`: `S† on 0`, `Z on 606`, `Z on 607`, `Z on 608`, `Z on 609`, `Z on 613`, `Z on 615`, `Z on 617`, `Z on 621`, `Z on 622`, `Z on 626`, `Z on 631` and 119 more (64 single-wire, 67 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 201, 203, 206, 208, 210, 212, 214, 215, 217, 218, 219, 223 and 811 more; `T⁵` on columns 1369, 1894, 2061; `T†` on columns 0, 1, 3, 5, 6, 8, 10, 12, 14, 17, 21, 22 and 42 more, `T` on the rest
+- discovery: pre-existing
+- regime: Jain-Albert doubling: triorthogonal family — a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum
+- citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
+- source: `Jain-Albert doubling: triorthogonal family` · JA-3211 (`[[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2813,1,29]] (Table I)`)
+
+- 3211 columns — see `master_catalog.json`, `factories[1025]`
+
+### 1027. `[[3239,1,≥3]]` — T0
 
 - output gate: `0`
 - `N = 818` (1 output + 817 checks), exact minimal T-count 1, reduced degree 1
@@ -19446,7 +19606,7 @@ readable copy of exactly these rows.
 - citation: [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832)
 - source: `Jain-Albert doubling: weak triply even family` · JA-3239 (`[[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2841,1,29]] (Table II)`)
 
-- 3239 columns — see `master_catalog.json`, `factories[1016]`
+- 3239 columns — see `master_catalog.json`, `factories[1026]`
 
 ## References
 
@@ -19457,7 +19617,7 @@ Newest first.
 - <a id="ref-gong2026magic"></a>**Gong et al. (2026)** (`gong2026magic`, 4 rows) — A. Gong, C. A. Pattison, P. Rall, and A. Wills, "Magic State Distillation via Codes over Binary Extension Fields," arXiv:2608.09727 (2026). <https://arxiv.org/abs/2608.09727>
 - <a id="ref-singh2026borrowed"></a>**Singh et al. (2026)** (`singh2026borrowed`, 173 rows) — S. Singh, C. Gidney, and C. Jones, "Borrowed Identities: Malleable Distillation Factories and a Unified Numerical Search," arXiv:2606.28518 (2026). <https://arxiv.org/abs/2606.28518>
 - <a id="ref-jacinto2026exploring"></a>**Jacinto et al. (2026)** (`jacinto2026exploring`, 5 rows) — H. Jacinto, X. Valcarce, V. Barizien, É. Gouzien, and N. Sangouard, "Exploring the landscape of compact magic-state distillation factories," arXiv:2606.07734 (2026). <https://arxiv.org/abs/2606.07734>
-- <a id="ref-jain2025transversal"></a>**Jain & Albert (2025)** (`jain2025transversal`, 14 rows) — S. P. Jain and V. V. Albert, "Transversal Clifford and T-gate codes of short length and high distance," IEEE J. Sel. Areas Inf. Theory 6, 127-137 (2025); arXiv:2408.12752. <https://doi.org/10.1109/JSAIT.2025.3570832>
+- <a id="ref-jain2025transversal"></a>**Jain & Albert (2025)** (`jain2025transversal`, 24 rows) — S. P. Jain and V. V. Albert, "Transversal Clifford and T-gate codes of short length and high distance," IEEE J. Sel. Areas Inf. Theory 6, 127-137 (2025); arXiv:2408.12752. <https://doi.org/10.1109/JSAIT.2025.3570832>
 - <a id="ref-gong2024computation"></a>**Gong & Renes (2024)** (`gong2024computation`, 1 rows) — A. Gong and J. M. Renes, "Computation with quantum Reed-Muller codes and their mapping onto 2D atom arrays," arXiv:2410.23263 (2024). <https://arxiv.org/abs/2410.23263>
 - <a id="ref-shi2024triorthogonal"></a>**Shi et al. (2024)** (`shi2024triorthogonal`, 11 rows) — M. Shi, H. Lu, J.-L. Kim, and P. Solé, "Triorthogonal codes and self-dual codes," Quantum Inf. Process. 23, 280 (2024). <https://doi.org/10.1007/s11128-024-04485-9>
 - <a id="ref-sullivan2024code"></a>**Sullivan (2024)** (`sullivan2024code`, 1 rows) — M. Sullivan, "Code conversion with the quantum Golay code for a universal transversal gate set," Phys. Rev. A 109, 042416 (2024). <https://doi.org/10.1103/PhysRevA.109.042416>

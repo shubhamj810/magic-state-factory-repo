@@ -322,20 +322,24 @@ verdict and the credit.
 
 The codes of S. P. Jain and V. V. Albert (IEEE JSAIT 6, 127 (2025),
 arXiv:2408.12752) are built from the paper's doubling construction in
-[`transversal_t_codes/`](transversal_t_codes/) and came in through one
-migration:
+[`transversal_t_codes/`](transversal_t_codes/) and came in through two
+migrations:
 
 ```bash
-.venv/bin/python transversal_t_codes/build_codes.py --check          # build and check all 17 codes, ~15 s
-.venv/bin/python -m unittest discover -s transversal_t_codes/tests   # re-checks, small distances by enumeration, catalogue rows, ~1 min
-.venv/bin/python master_catalog/migrations/transversal_t_codes_2026_10_10.py --dry-run   # ~4 min
+.venv/bin/python transversal_t_codes/search_sd70.py                  # the [70,35,12] code behind [[69,1,13]], ~2 min on 16 cores
+.venv/bin/python transversal_t_codes/build_codes.py --check          # build and check all 27 codes, ~20 s
+.venv/bin/python -m unittest discover -s transversal_t_codes/tests   # re-checks, small distances by enumeration, the 2^34-word proof, catalogue rows, ~1.5 min
+.venv/bin/python master_catalog/migrations/transversal_t_codes_table1_2026_10_10.py --dry-run   # ~5 min
 ```
 
-The build prints `up to date`. Run against the catalogue before the migration,
-the migration reports `15 accepted, 2 duplicate`: `[[15,1,3]]` and
-`[[49,1,5]]` were held already. Against the shipped catalogue it reports `17
-duplicate` and writes nothing. Most of its time is the distance sweep of the
-`n = 805` and `n = 1011` codes.
+The search reports 386 codes and one usable: `u = (1, g2, g42)`, a `[70,35,12]`
+code whose words of weight 12 or less all miss coordinate 69. The build prints
+`up to date`. The first migration merged seventeen codes (`15 accepted, 2
+duplicate`: `[[15,1,3]]` and `[[49,1,5]]` were held already). The second
+merged the ten more Table I codes the build now makes (`10 accepted, 17
+duplicate`). Against the shipped catalogue either reports `27 duplicate` and
+writes nothing. Most of the time is the distance sweep of the codes from
+`n = 777` to `n = 1011`.
 
 ### Clifford corrections
 
@@ -346,8 +350,8 @@ migration, which checks every row before it writes:
 .venv/bin/python master_catalog/migrations/clifford_corrections_2026_10_10.py --dry-run   # ~1 min
 ```
 
-Against the shipped catalogue it reports, for 1017 rows, `S, CZ: 456,
-T-powers: 551, none: 10` and `nothing written`. `verify_catalog.py`
+Against the shipped catalogue it reports, for 1027 rows, `S, CZ: 456,
+T-powers: 561, none: 10` and `nothing written`. `verify_catalog.py`
 re-derives both fields on every row, evaluates each corrected circuit's
 logical action, re-proves every `null` power list, and simulates the small
 circuits gate by gate.

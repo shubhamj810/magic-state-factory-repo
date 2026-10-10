@@ -10,7 +10,7 @@ anywhere else in the repository, so the site cannot drift from the database:
 merge a result into `master_catalog.json`, push, and the deploy rebuilds every
 page's data from it.
 
-    master_catalog/master_catalog.json      1017 rows, 35 MB, with columns
+    master_catalog/master_catalog.json      1027 rows, 39 MB, with columns
                  |
                  |  build_site.py  (standard library only)
                  v

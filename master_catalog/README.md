@@ -49,17 +49,22 @@ merge_results                        imports verify_catalog, so "verified to
 
 ## What is in it
 
-**1017 distinct `(n, k, d, GL(k,2) gate)` classes**. 181 of them are at
+**1027 distinct `(n, k, d, GL(k,2) gate)` classes**. 181 of them are at
 distance 2, and 217 are at `d ≥ 3` with `n ≤ 54`. Widths run `k = 1..373`,
 injection counts `n = 8..3239`, and distances proved here `d = 2..7`. Sources
 certify up to `d ≥ 31` on the transversal-T codes.
 
 **Transversal-T codes.**
 [`migrations/transversal_t_codes_2026_10_10.py`](migrations/transversal_t_codes_2026_10_10.py)
+and
+[`migrations/transversal_t_codes_table1_2026_10_10.py`](migrations/transversal_t_codes_table1_2026_10_10.py)
 merged the codes of S. P. Jain and V. V. Albert (IEEE JSAIT 6, 127 (2025),
 arXiv:2408.12752). They are rebuilt from the paper's doubling construction in
 [`../transversal_t_codes/`](../transversal_t_codes/README.md): `[[15,1,3]]` to
-`[[3239,1,31]]`, seventeen codes, fifteen of them new classes. Above `n = 95`
+`[[3239,1,31]]`, all 27 codes of its two tables, 25 of them new classes. Ten of
+them rest on a `[[69,1,13]]` code from a self-dual `[70,35,12]` code found by
+the search in that folder, in place of the paper's formally self-dual
+`[70,35,14]`. Above `n = 95`
 the sweep here proves only a floor, from 7 down to 3. Each of those rows
 carries the paper's distance as a certified lower bound (`d_certified`) and an
 explicit fault of exactly that weight (`d_upper`, `d_witness`). Together they
@@ -68,7 +73,7 @@ pin the distance, though the label, as always, uses the proved one.
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running
 some rotations as `T³`, `T⁵` or `T†` makes that unnecessary
-(`rotation_powers`). 10 classes need nothing, 551 need only powers, and 456
+(`rotation_powers`). 10 classes need nothing, 561 need only powers, and 456
 need `S` or `CZ` gates whatever the powers.
 [`migrations/clifford_corrections_2026_10_10.py`](migrations/clifford_corrections_2026_10_10.py)
 added the fields, and [`clifford.py`](clifford.py) explains the method.

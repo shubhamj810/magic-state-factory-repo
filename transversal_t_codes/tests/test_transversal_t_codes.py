@@ -30,11 +30,13 @@ import faultcore as FC                                            # noqa: E402
 import glcanon as GC                                              # noqa: E402
 
 CATALOGUE = REPO / "master_catalog" / "master_catalog.json"
-#: The paper's Table II and the part of its Table I built here, as [[n,1,d]].
+#: The paper's Tables II and I, as [[n,1,d]].
 TABLE_II = [(15, 3), (49, 5), (95, 7), (189, 9), (283, 11), (441, 13),
             (599, 15), (805, 17), (1011, 19), (1345, 21), (1679, 23),
             (2061, 25), (2443, 27), (2841, 29), (3239, 31)]
-TABLE_I_BUILT = [(15, 3), (49, 5), (95, 7), (185, 9), (279, 11)]
+TABLE_I = [(15, 3), (49, 5), (95, 7), (185, 9), (279, 11), (417, 13),
+           (575, 15), (777, 17), (983, 19), (1317, 21), (1651, 23), (2033, 25),
+           (2415, 27), (2813, 29), (3211, 31)]
 #: Held before the import, with a smaller circuit: the merge left them alone.
 HELD = {15: "15.1.3.a", 49: "49.1.5.a"}
 
@@ -95,7 +97,7 @@ class Codes(unittest.TestCase):
         table2 = sorted((c.n, c.d) for c in self.codes.values() if "II" in c.tables)
         table1 = sorted((c.n, c.d) for c in self.codes.values() if "I" in c.tables)
         self.assertEqual(table2, TABLE_II)
-        self.assertEqual(table1, TABLE_I_BUILT)
+        self.assertEqual(table1, TABLE_I)
 
     def test_every_code_is_a_factory_by_the_catalogue_s_own_test(self):
         """`faultcore`: no odd parity touching a check, gate T on the output,
@@ -156,6 +158,67 @@ class Codes(unittest.TestCase):
                 self.assertEqual(len(C), (n + 1) // 2)
                 weights = span_weights(C)
                 self.assertEqual(int(weights[weights % 2 == 1].min()), d)
+
+    def test_the_70_bit_code_gives_a_69_1_13(self):
+        """SD70 is the code `search_sd70.py` finds, and every one of its 2^34
+        words through the fixed coordinate 69 weighs at least 14 -- exactly 14
+        at the least.  Enumerated through the code's own structure: a word
+        through 69 is (cycle 1 + 69) or (all ones), plus lam*u + v with lam in
+        the field I1 (2048 values) and v in M2, itself fixed by its parts on
+        cycles 2 and 3 (2048 x 2048 values)."""
+        import search_sd70 as S
+        u = tuple(B.mask(f) for f in B.SD70_U)
+        rows = S.code(u)
+        built = B.sd70()
+        self.assertEqual(len(B.basis(built)), 35)
+        self.assertEqual(len(B.basis(built + rows)), 35)     # the same code
+        W = np.zeros(1 << 23, dtype=np.uint8)
+        for b in range(23):
+            W[1 << b:1 << (b + 1)] = W[:1 << b] + 1
+        full = (1 << 23) - 1
+
+        def part(v, i):
+            return (v >> (23 * i)) & full
+
+        m2 = rows[2 + 23:]
+        self.assertEqual(len(m2), 22)
+        # v1 as a linear function of (v2, v3), by elimination on the M2 rows
+        reduced = []
+        for r in m2:
+            key, val = part(r, 1) | (part(r, 2) << 23), part(r, 0)
+            for k, v, piv in reduced:
+                if (key >> piv) & 1:
+                    key, val = key ^ k, val ^ v
+            self.assertTrue(key)
+            piv = (key & -key).bit_length() - 1
+            reduced = [(k ^ key, v ^ val, q) if (k >> piv) & 1 else (k, v, q)
+                       for k, v, q in reduced]
+            reduced.append((key, val, piv))
+
+        def v1(key):
+            val = 0
+            for k, v, piv in reduced:
+                if (key >> piv) & 1:
+                    key, val = key ^ k, val ^ v
+            return val
+
+        I2 = np.array(sorted(S.I2), dtype=np.int64)
+        L2 = np.array([v1(int(v)) for v in I2], dtype=np.int64)
+        L3 = np.array([v1(int(v) << 23) for v in I2], dtype=np.int64)
+        least = 99
+        for lam in sorted(S.I1):
+            a1, a2, a3 = (S.mul(lam, f) for f in u)
+            w1 = W[a1 ^ L2[:, None] ^ L3[None, :]].astype(np.int32)
+            w2 = W[a2 ^ I2].astype(np.int32)[:, None]
+            w3 = W[a3 ^ I2].astype(np.int32)[None, :]
+            least = min(least,
+                        int((1 + (23 - w1) + w2 + w3).min()),
+                        int((1 + (23 - w1) + (23 - w2) + (23 - w3)).min()))
+        self.assertEqual(least, 14)
+
+    def test_the_102_bit_subtraction_code_is_self_dual(self):
+        rows = B.subtract(B.extend(B.quadratic_residue_code(103), 103), 104, 102, 103)
+        self.assertTrue(B.is_self_dual(rows, 102))
 
     def test_the_46_bit_subtraction_code_is_a_self_dual_46_23_10(self):
         rows = B.subtract(B.extend(B.quadratic_residue_code(47), 47), 48, 46, 47)
@@ -274,7 +337,7 @@ class Catalogue(unittest.TestCase):
     def test_no_code_needs_s_or_cz_gates(self):
         """Every code has a transversal T: some choice of T, T^3, T^5, T^7 per
         qubit is the logical T exactly -- Table II's T/T-dagger partition, and
-        for the two Table I codes powers 1 and 3 (and 7) found by the solver."""
+        for the Table I codes powers 1, 3, 5 and 7 found by the solver."""
         for record in self.records:
             row = self.row_of(record["label"])
             if row is None:

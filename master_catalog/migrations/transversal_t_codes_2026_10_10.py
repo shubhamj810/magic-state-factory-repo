@@ -45,6 +45,10 @@ its Table I, seventeen distinct codes -- and writes them as factory records in
 
 Every changed row then passes `verify_catalog.verify_row` in full before
 anything is written.  A second run finds every code held and writes nothing.
+
+(As first run, ``factories.json`` held the seventeen codes above.  The build
+now makes all of Table I, and `transversal_t_codes_table1_2026_10_10.py`, which
+runs these same steps, merged the ten more.)
 """
 from __future__ import annotations
 
