@@ -122,8 +122,11 @@ links each published one to its DOI or arXiv page.
   found them.
   * **In the literature.** Nine are attributed to a published protocol by the
     classification's Pareto table (Table `tab:complete-pareto`): Bravyi & Kitaev,
-    Nezami & Haah, Jacinto et al. and Gong et al. These are credited to that
-    work **alone**.
+    Nezami & Haah, Jacinto et al. and Gong et al. A tenth, `[[49,1,5]]`, is
+    the 49-qubit code of Bravyi & Haah (2012, Appendix B), which that table
+    does not attribute
+    ([`migrations/bravyi_haah_49_2026_10_10.py`](migrations/bravyi_haah_49_2026_10_10.py)).
+    These are credited to that work **alone**.
   * **Also found by our searches.** A Pareto point that this project's own
     symmetry-SAT or AI searches also found is credited to the
     classification (Wills, Jain and Singh,

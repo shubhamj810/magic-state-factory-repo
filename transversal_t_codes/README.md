@@ -139,7 +139,7 @@ syndromes. Together they pin the distance.
 | code | paper | catalogue row | proved here | certified | fault | credit |
 |---|---|---|---|---|---|---|
 | `[[15,1,3]]` | I, II | `15.1.3.a` (held) | `d = 3` | — | — | Bravyi & Kitaev (2005) |
-| `[[49,1,5]]` | I, II | `49.1.5.a` (held) | `d = 5` | — | — | as held |
+| `[[49,1,5]]` | I, II | `49.1.5.a` (held) | `d = 5` | — | — | Bravyi & Haah (2012) |
 | `[[95,1,7]]` | I, II | `95.1.7.a` | `d = 7` | — | 7 | Sullivan (2024) |
 | `[[185,1,9]]` | I | `185.1.7.a` | `d ≥ 7` | `≥ 9` | 9 | Jain & Albert |
 | `[[189,1,9]]` | II | `189.1.7.a` | `d ≥ 7` | `≥ 9` | 9 | Jain & Albert |

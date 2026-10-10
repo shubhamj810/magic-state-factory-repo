@@ -86,9 +86,12 @@ NOT_AI = (PARETO, "exhaustive classification n<=54", SAT, COMMUNITY) \
 WILLS, JAIN = "wills2026classification", "jain2026symmetry"
 #: The Pareto points the classification's own table (Table tab:complete-pareto)
 #: attributes to published protocols, by their index in the frontier file, with
-#: the works: these, and only these, are credited to that literature alone.
+#: the works -- plus point 4, the [[49,1,5]] code of Bravyi and Haah (2012,
+#: Appendix B), which that table does not attribute: these, and only these, are
+#: credited to that literature alone.
 PUBLISHED_PARETO = {
     0: ["bravyi2005universal"],             # 15T -> T
+    4: ["bravyi2012magic"],                 # 49T -> T, d = 5
     5: ["nezami2022classification"],        # 35T -> 2T (restriction of 35T -> 3T)
     6: ["nezami2022classification"],        # 28T -> 2T
     7: ["nezami2022classification"],        # 35T -> CS (restriction of 35T -> 3T)

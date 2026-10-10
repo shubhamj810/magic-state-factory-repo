@@ -330,7 +330,7 @@ entries are under [References](#references).
 | 220 | `48.6.3.e` | `[[48,6,3]]` | — | 12 | `01+24+023+145` | 11 | 3 | S, CZ | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
 | 221 | `48.7.3.a` | `[[48,7,3]]` | — | 13 | `01+012+034+035+046+134+156` | — | — | S, CZ | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
 | 222 | `48.7.3.b` | `[[48,7,3]]` | — | 13 | `01+35+012+034+156+235` | — | — | S, CZ | pre-existing | exhaustive classification n<=54 (Pareto point) | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860) |
-| 223 | `49.1.5.a` | `[[49,1,5]]` | — | 12 | `0` | 1 | 1 | none | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 223 | `49.1.5.a` | `[[49,1,5]]` | — | 12 | `0` | 1 | 1 | none | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Bravyi & Haah (2012)](https://doi.org/10.1103/PhysRevA.86.052329) |
 | 224 | `49.3.3.a` | `[[49,3,3]]` | — | 11 | `0+1+2` | 3 | 1 | T-powers | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 225 | `50.4.3.a` | `[[50,4,3]]` | — | 14 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 226 | `51.1.3.a` | `[[51,1,3]]` | — | 8 | `0` | 1 | 1 | S, CZ | AI search | AI search (gamma frontier): logical restriction of a length-54 Pareto point | [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
@@ -6231,7 +6231,7 @@ readable copy of exactly these rows.
 - Clifford correction, every rotation a `T`: none
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
-- citation: [Wills et al. (2026)](https://arxiv.org/abs/2609.30860); [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
+- citation: [Bravyi & Haah (2012)](https://doi.org/10.1103/PhysRevA.86.052329)
 - source: `symmetry-SAT search` · T0 (`explicit circuit from ansatz-free SAT; archived result: bh49_automorphism_seeded.json`)
 - source: `AI search` · T0 (`frontier_campaign · catalogue.jsonl:346`)
 - source: `exhaustive classification n<=54 (Pareto point)` · protocol 4 (`Pareto point 4 of the length-54 classification: output class Q1_0000000000000001 (T), (n, S, d_Z) = (49, 12, 5), leading error coefficient 1819; the outputs are its 1 logical rows`)
@@ -19452,8 +19452,8 @@ readable copy of exactly these rows.
 
 Newest first.
 
-- <a id="ref-jain2026symmetry"></a>**Jain et al. (2026)** (`jain2026symmetry`, 736 rows) — S. P. Jain, A. Wills, and S. Singh, "Symmetry and AI-assisted discovery of magic-state factories," arXiv:2610.06535 (2026). <https://arxiv.org/abs/2610.06535>
-- <a id="ref-wills2026classification"></a>**Wills et al. (2026)** (`wills2026classification`, 208 rows) — A. Wills, S. P. Jain, and S. Singh, "Classification of Generalised Triorthogonal Codes through Length 54," arXiv:2609.30860 (2026). <https://arxiv.org/abs/2609.30860>
+- <a id="ref-jain2026symmetry"></a>**Jain et al. (2026)** (`jain2026symmetry`, 735 rows) — S. P. Jain, A. Wills, and S. Singh, "Symmetry and AI-assisted discovery of magic-state factories," arXiv:2610.06535 (2026). <https://arxiv.org/abs/2610.06535>
+- <a id="ref-wills2026classification"></a>**Wills et al. (2026)** (`wills2026classification`, 207 rows) — A. Wills, S. P. Jain, and S. Singh, "Classification of Generalised Triorthogonal Codes through Length 54," arXiv:2609.30860 (2026). <https://arxiv.org/abs/2609.30860>
 - <a id="ref-gong2026magic"></a>**Gong et al. (2026)** (`gong2026magic`, 4 rows) — A. Gong, C. A. Pattison, P. Rall, and A. Wills, "Magic State Distillation via Codes over Binary Extension Fields," arXiv:2608.09727 (2026). <https://arxiv.org/abs/2608.09727>
 - <a id="ref-singh2026borrowed"></a>**Singh et al. (2026)** (`singh2026borrowed`, 173 rows) — S. Singh, C. Gidney, and C. Jones, "Borrowed Identities: Malleable Distillation Factories and a Unified Numerical Search," arXiv:2606.28518 (2026). <https://arxiv.org/abs/2606.28518>
 - <a id="ref-jacinto2026exploring"></a>**Jacinto et al. (2026)** (`jacinto2026exploring`, 5 rows) — H. Jacinto, X. Valcarce, V. Barizien, É. Gouzien, and N. Sangouard, "Exploring the landscape of compact magic-state distillation factories," arXiv:2606.07734 (2026). <https://arxiv.org/abs/2606.07734>
@@ -19469,5 +19469,5 @@ Newest first.
 - <a id="ref-campbell2017unified"></a>**Campbell & Howard (2017)** (`campbell2017unified`, 3 rows) — E. T. Campbell and M. Howard, "Unified framework for magic state distillation and multiqubit gate synthesis with reduced resource cost," Phys. Rev. A 95, 022316 (2017). <https://doi.org/10.1103/PhysRevA.95.022316>
 - <a id="ref-eastin2013distilling"></a>**Eastin (2013)** (`eastin2013distilling`, 1 rows) — B. Eastin, "Distilling one-qubit magic states into Toffoli states," Phys. Rev. A 87, 032321 (2013). <https://doi.org/10.1103/PhysRevA.87.032321>
 - <a id="ref-jones2013low"></a>**Jones (2013)** (`jones2013low`, 1 rows) — C. Jones, "Low-overhead constructions for the fault-tolerant Toffoli gate," Phys. Rev. A 87, 022328 (2013). <https://doi.org/10.1103/PhysRevA.87.022328>
-- <a id="ref-bravyi2012magic"></a>**Bravyi & Haah (2012)** (`bravyi2012magic`, 3 rows) — S. Bravyi and J. Haah, "Magic-state distillation with low overhead," Phys. Rev. A 86, 052329 (2012). <https://doi.org/10.1103/PhysRevA.86.052329>
+- <a id="ref-bravyi2012magic"></a>**Bravyi & Haah (2012)** (`bravyi2012magic`, 4 rows) — S. Bravyi and J. Haah, "Magic-state distillation with low overhead," Phys. Rev. A 86, 052329 (2012). <https://doi.org/10.1103/PhysRevA.86.052329>
 - <a id="ref-bravyi2005universal"></a>**Bravyi & Kitaev (2005)** (`bravyi2005universal`, 1 rows) — S. Bravyi and A. Kitaev, "Universal quantum computation with ideal Clifford gates and noisy ancillas," Phys. Rev. A 71, 022316 (2005). <https://doi.org/10.1103/PhysRevA.71.022316>
