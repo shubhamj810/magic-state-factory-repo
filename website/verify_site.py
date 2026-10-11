@@ -13,7 +13,8 @@ not evidence that the page it lands on RENDERED.  This script asserts on the
 DOM that comes out, against numbers it computes itself from `data/index.json`
 and the per-factory files:
 
-    index.html    stat bar, the paged [[n,k,d]] table, its links
+    index.html    stat bar, the paged [[n,k,d]] table, its links, one frontier
+                  panel per well-populated distance
     search.html   result counts for a set of URL searches, each recomputed here
                   in Python, the typed-query syntax, and the CSV export
     params.html   one row per factory at those parameters, each linking on
@@ -29,6 +30,7 @@ Plus, on every page visited: no console error, no failed request, no
 from __future__ import annotations
 
 import argparse
+import collections
 import contextlib
 import functools
 import http.server
@@ -123,6 +125,10 @@ def _monomials(gate: str, k: int) -> set[tuple[int, ...]]:
         out.add(tuple(sorted(int(w) for w in wires)))
     return out
 
+
+#: the frontier plot draws a panel only for a distance with this many ranked
+#: parameter sets (MIN_PANEL in static/js/highlights.js)
+MIN_PANEL = 10
 
 #: the project's own two reports; "from the literature" means citing another paper
 OWN = ("wills2026classification", "jain2026symmetry")
@@ -482,7 +488,13 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
             page.click(f"#metric-switch [data-metric={metric}]")
             stairs = 0
             ranked = [p for p in parameters if _ranked_value(p, metric) is not None]
-            for dc in {p["d_claim"] for p in ranked}:
+            per_d = collections.Counter(p["d_claim"] for p in ranked)
+            plotted = sorted(dc for dc, sets in per_d.items() if sets >= MIN_PANEL)
+            titles = [t.text_content() for t in page.query_selector_all("#frontier-plot .ptitle")]
+            failures.check(titles == [f"d = {dc}" for dc in plotted],
+                           f"index.html [{metric}]: panels {titles}, expected one for each distance with "
+                           f"at least {MIN_PANEL} parameter sets {plotted}")
+            for dc in plotted:
                 best = float("inf")
                 for p in sorted((p for p in ranked if p["d_claim"] == dc),
                                 key=lambda p: (p["n"], _ranked_value(p, metric))):
