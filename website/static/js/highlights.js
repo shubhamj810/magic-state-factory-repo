@@ -160,7 +160,7 @@
    * A distance with only a handful of parameter sets has no frontier worth
    * drawing -- one or two points -- so it gets no panel, and the axes are
    * fitted to the panels that are drawn.  The record table above still gives
-   * the best at every distance, and the caption says what is left out. */
+   * the best at every distance. */
   var panels = [];                       /* [{d, pts, svg}] for the hover layer */
   var W = 380, H = 236, L = 44, R = 12, T = 30, B = 34;
   var MIN_PANEL = 10;                    /* fewest parameter sets a panel needs */
@@ -171,9 +171,8 @@
              !Number.isNaN(r.gamma_rho) && r.n > 0;
     });
     var skipped = parameters.length - pts.length;
-    var sparse = byDistance(pts).filter(function (group) { return group.rows.length < MIN_PANEL; });
-    var sparseD = sparse.map(function (group) { return group.d; });
-    var sparseSets = sparse.reduce(function (sum, group) { return sum + group.rows.length; }, 0);
+    var sparseD = byDistance(pts).filter(function (group) { return group.rows.length < MIN_PANEL; })
+                                 .map(function (group) { return group.d; });
     pts = pts.filter(function (p) { return sparseD.indexOf(p.d) < 0; });
     if (pts.length < 2) return "";
 
@@ -291,21 +290,7 @@
       (skipped ? " " + skipped + " parameter set" + (skipped === 1 ? " is" : "s are") + " left out because " +
                  (M === METRICS.gamma ? "they hold no pure " + C.tex("T^{\\otimes k}") + " gate."
                                       : "their gates have no " + C.tex(C.TEX.vex) + ".") : "") +
-      (sparse.length ? " " + sparseNote(sparseD, sparseSets, panels.map(function (panel) { return panel.d; })) : "") +
       "</figcaption></figure>";
-  }
-
-  /* "Distances 7 and up have fewer than 10 parameter sets each (30 in all) and
-   * are not plotted", or the list itself when the sparse distances are not
-   * all above the plotted ones. */
-  function sparseNote(sparseD, sets, plottedD) {
-    var above = !plottedD.length || Math.min.apply(null, sparseD) > Math.max.apply(null, plottedD);
-    var which = sparseD.length === 1 ? "Distance " + sparseD[0] + " has"
-              : above ? "Distances " + sparseD[0] + " and up have"
-              : "Distances " + sparseD.slice(0, -1).join(", ") + " and " + sparseD[sparseD.length - 1] + " have";
-    return which + " fewer than " + MIN_PANEL + " parameter sets" + (sparseD.length === 1 ? "" : " each") +
-      " (" + sets + " in all) and " + (sparseD.length === 1 ? "is" : "are") + " not plotted; " +
-      "the table above gives the best at every distance.";
   }
 
   /* ------------------------------------------------------- plot hover layer */
