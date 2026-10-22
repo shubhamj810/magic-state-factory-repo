@@ -426,7 +426,8 @@ class TestMasterCatalogueRow(unittest.TestCase):
         floor and a one-field edit: flipping only the flag leaves `d_upper`
         equal to `d`, and a harmful fault AT the floor is exactly what makes a
         distance exact, so the edited row contradicts itself.  Demoting the row
-        coherently -- flag, upper bound and witness together -- is accepted,
+        coherently -- flag, upper bound, witness and error coefficient
+        together, since a floor has no ``A_d`` -- is accepted,
         which is asserted here so the rule is pinned somewhere rather than
         merely permitted by an omission.
         """
@@ -434,6 +435,7 @@ class TestMasterCatalogueRow(unittest.TestCase):
         floor["d_is_exact"] = False
         floor["d_upper"] = None
         floor["d_witness"] = None
+        floor["A_d"] = None
         self.assertEqual(self._validate(floor), [],
                          "a row that honestly says only 'nothing lighter than "
                          "d is harmful' must be accepted")

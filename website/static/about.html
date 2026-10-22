@@ -69,6 +69,15 @@
     both. Rankings and exponents use the certified one and mark it &dagger;. Where a
     source certifies a lower bound and a damaging fault of that weight is shown here, the
     two together give the distance, and the tag shows it without the &ge;.</p>
+    <p>Where the distance is exact, each factory page also gives the error coefficient
+    <span class="tex">A_d</span>: the number of faults of weight <span class="tex">d</span>
+    that pass every check and damage the output. If each T state is faulty with probability
+    <span class="tex">p</span>, an accepted run has a damaged output with probability
+    <span class="tex">A_d\,p^d</span> to leading order. The 15-to-1 factory has
+    <span class="tex">A_3=35</span>, and the 8-T CCZ factory has <span class="tex">A_2=28</span>.
+    The count belongs to the circuit stored for the row. Another circuit in the same class can
+    have a different one: the stored [[20,4,2]] circuit has <span class="tex">A_2=22</span>, and
+    Bravyi and Haah's code with the same parameters has 13.</p>
 
     <h2 id="clifford">Clifford corrections</h2>
     <p>The output gate names only the non-Clifford part of what the rotations deposit. With
@@ -95,6 +104,7 @@
         <tr><td>output gate</td><td>Recomputed from the row overlaps of the circuit.</td><td>exact</td></tr>
         <tr><td>valid factory</td><td>Every parity that touches a check row is checked to be even.</td><td>exact</td></tr>
         <tr><td>distance</td><td>Every fault below <span class="tex">d</span> is enumerated. An explicit damaging fault of weight <span class="tex">d</span> makes it exact. Without one it is a lower bound, and an explicit fault of larger weight gives an upper bound.</td><td>proved</td></tr>
+        <tr><td>error coefficient <span class="tex">A_d</span></td><td>Counted exactly, as the faults the checks accept less those that leave the output intact. Each part is counted with the MacWilliams identity or by enumerating faults. Where enumerating the damaging faults directly also finishes, the two counts must agree. Left blank where neither method reaches, and on a lower bound.</td><td>exact or blank</td></tr>
         <tr><td>certified distance</td><td>Taken from the factory's source where the search above was out of reach. Not re-checked.</td><td>from source</td></tr>
         <tr><td>Clifford correction</td><td>Derived from the circuit, then checked by evaluating the corrected circuit's phase on every input that matters, and by simulating small circuits gate by gate. That no choice of powers of T removes it is proved by solving a linear system over <span class="tex">\mathbb{Z}_4</span>.</td><td>exact</td></tr>
         <tr><td>T-count, degree</td><td>Exact minimisation where it is feasible, about <span class="tex">k\le 6</span>. Left blank above that, never estimated.</td><td>exact or blank</td></tr>

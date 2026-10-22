@@ -175,6 +175,12 @@ as a column. A factory page whose matrix has more than 1.5 million cells, the
 widest transversal-T codes, offers the CSV and the columns instead of drawing
 it.
 
+Every factory page with an exact distance gives the **error coefficient**
+`A_d`, the catalogue's count of accepted damaging faults of weight `d`, in the
+summary, the figures of merit and the distance section. It is `A_d` in the
+index, the factory record (`distance.A_d`) and the CSV, and `null` where the
+distance is a lower bound or the count is out of reach.
+
 A factory's id on the site is its `catalog_label`. The earlier hash id
 `n{n:04}-k{k:03}-d{d}-{sha256(n|k|d|gate)[:8]}` is still computed, as
 `legacy_id`, only so old links can be redirected.

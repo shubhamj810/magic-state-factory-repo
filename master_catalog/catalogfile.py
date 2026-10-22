@@ -35,6 +35,10 @@ re-derivation, so this list is also the list of things that get checked.
   ``d_is_exact``  ``true`` iff a clean sweep below ``d`` met a witness AT ``d``
   ``d_upper``     the weight of an explicit harmful fault, or ``null``
   ``d_witness``   that fault, as column indices
+  ``A_d``         how many faults of weight ``d`` are accepted and harmful --
+                 the leading coefficient of the output error, ``A_d p^d`` --
+                 counted exactly by `errorcoeff`; ``null`` on a floor, where
+                 it is undefined, and where neither counting method reaches
   ``t_count``     exact minimal level-3 T-count, or ``null`` with a note
   ``poly_degree`` CNOT-frame-reduced phase-polynomial degree, or ``null``
   ``effective_width``  rank of the output rows modulo the check span; ``== k``
@@ -100,7 +104,7 @@ INLINE_COLUMNS = 200
 REQUIRED_FIELDS = (
     "n", "k", "N", "d", "level", "columns", "gate", "gate_human",
     "sk_key", "sk_canonical_frame", "sk_fingerprint",
-    "d_is_exact", "d_upper", "d_witness",
+    "d_is_exact", "d_upper", "d_witness", "A_d",
     "t_count", "poly_degree", "effective_width",
     "regimes", "discovery", "strongest_claim",
     # ``relabelled_into_canonical_frame`` is PROVENANCE: whether the ingest
@@ -161,6 +165,7 @@ FIELD_TYPES = {
     "n": "int", "k": "int", "N": "int", "d": "int", "level": "int",
     "effective_width": "int",
     "t_count": "int?", "poly_degree": "int?", "d_upper": "int?",
+    "A_d": "int?",
     "gate": "str", "gate_human": "str", "sk_fingerprint": "str",
     "discovery": "str", "strongest_claim": "str",
     "sk_key_note": "str", "t_count_note": "str", "poly_degree_note": "str",
@@ -669,6 +674,9 @@ def render_markdown(payload: dict) -> str:
               f"upper bound is the fault on columns {row['d_witness']}")
         else:
             A(f"- distance: proved `d >= {row['d']}`")
+        if row["A_d"] is not None:
+            A(f"- leading error coefficient: `A_{row['d']} = {row['A_d']}` "
+              f"accepted harmful faults of weight {row['d']}")
         if row.get("d_certified") is not None:
             relation = "=" if row.get("d_certified_is_exact") else ">="
             A(f"- certified distance: `d {relation} {row['d_certified']}`, "

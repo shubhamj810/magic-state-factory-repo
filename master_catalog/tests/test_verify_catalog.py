@@ -187,6 +187,8 @@ class TestGoodRows(unittest.TestCase):
         row["d_is_exact"] = False
         row["d_upper"] = row["d"]
         row["d"] -= 1
+        # a floor has no leading coefficient: A_d is null on every floor
+        row["A_d"] = None
         # a row published at the lower distance is named for it: the label's d
         # is the row's d (see `label_problems`)
         row["catalog_label"] = f"{row['n']}.{row['k']}.{row['d']}.a"

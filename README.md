@@ -91,6 +91,21 @@ corrected circuit's phase input by input, and on small circuits it simulates
 the circuit gate by gate. The website can filter on whether a factory needs a
 correction.
 
+### Error coefficients
+
+Where the distance is exact, every row also stores `A_d`: how many faults of
+weight `d` pass every check and damage the output. An accepted run then has a
+damaged output with probability `A_d p^d` to leading order, with `p` the error
+rate of one input `T` state. The 15-to-1 has `A_3 = 35`, the 8-`T` `CCZ`
+factory `A_2 = 28`.
+[`master_catalog/errorcoeff.py`](master_catalog/errorcoeff.py) counts it
+exactly, as the accepted faults less the harmless ones, each counted by the
+MacWilliams identity or by enumeration. Of the 977 exact rows, 957 have a
+count, and 902 of those are confirmed by enumerating the damaging faults
+directly. The other 20 are distance 6 at `n` near 850 and distance 7 at
+`n = 255`, out of reach of both methods. The count belongs to the stored
+circuit: another circuit of the same class can have a different `A_d`.
+
 ## Where the protocols come from
 
 Each row's **regime** says briefly how the class was found. Its **citation**

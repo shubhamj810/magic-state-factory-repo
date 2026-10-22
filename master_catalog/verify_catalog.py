@@ -78,10 +78,17 @@ WHAT IS RE-DERIVED, PER ROW
     way, with no correction applied -- or ``null``, which claims that no such
     list exists and is re-proved by solving the ``Z_4`` system.  On small
     circuits `statevector_problems` simulates both, gate by gate.
+10. **The error coefficient** (`errorcoeff.py`).  ``A_d``, the number of
+    weight-``d`` faults the checks accept and the outputs do not survive, is
+    counted again -- as accepted faults less harmless ones, each by the
+    MacWilliams identity or by enumeration, whichever is cheap -- and compared
+    with the row; where the direct enumeration of harmful faults also
+    finishes, it must agree.  A floor has no ``A_d``, and a ``null`` on an
+    exact row must be one this count cannot reach either.
 
 AND, ONCE, OVER THE WHOLE FILE
 ------------------------------
-10. **No duplicate classes.**  A class is ``(n, k, d, GL(k,2) gate)``: the
+11. **No duplicate classes.**  A class is ``(n, k, d, GL(k,2) gate)``: the
     distance, and the gate up to an invertible change of the output basis and
     diagonal Cliffords.  Two rows with equal ``d`` and equal PROVED ``S_k`` keys
     are one class outright (a permutation is a frame change), and then every
@@ -91,18 +98,18 @@ AND, ONCE, OVER THE WHOLE FILE
     ``dedup_note``: the file may hold a class whose distinctness is unproved,
     at the widths where proving it is out of reach, but it may not do so
     silently -- and a note on a row whose every pair WAS decided is refused.
-11. **The provenance labels resolve.**  Every name in a row's ``regimes`` is
+12. **The provenance labels resolve.**  Every name in a row's ``regimes`` is
     one the file's own header defines, the names are listed strongest-first in
     the header's order, and ``strongest_claim`` is the header's sentence for
     the first of them.  This is the one published field a row cannot check
     alone -- it is a statement about the row AND the header -- which is why it
     lives here rather than in `verify_row`.
-12. **The header is there and counts its rows.**  Every key
+13. **The header is there and counts its rows.**  Every key
     `catalogfile.HEADER_KEYS` names is present and typed, the two definition
     maps really map names to sentences, and ``n_classes`` equals the number of
     rows -- the one header value that is DERIVABLE, and so the one that can go
     stale without anything else noticing.
-13. **The citations resolve.**  Every row cites at least one work, no key twice,
+14. **The citations resolve.**  Every row cites at least one work, no key twice,
     and every key is an entry of the header's ``references`` map.  Which works
     a class is credited to is a curation decision and nothing here re-derives
     it; what is checked is that a reader following a citation finds one.
@@ -139,6 +146,7 @@ sys.path.insert(0, str(REPO))          # shared factorylib package
 
 import catalogfile as CF                                          # noqa: E402
 import clifford as CL                                             # noqa: E402
+import errorcoeff as EC                                           # noqa: E402
 import faultcore as FC                                            # noqa: E402
 import glcanon as GC                                              # noqa: E402
 import skcanon as SK                                              # noqa: E402
@@ -651,6 +659,25 @@ def confirm_distance(columns, k, N, d, d_is_exact, d_witness, d_upper,
     return problems
 
 
+def error_coefficient_problems(columns, row):
+    """Re-count ``A_d`` and compare it with the row (see `errorcoeff`)."""
+    stored = row["A_d"]
+    if not row["d_is_exact"]:
+        if stored is not None:
+            return [("A_d-mismatch", f"A_d={stored} on a floor d >= {row['d']}: "
+                                     f"the lighter weights are not all proved "
+                                     f"clean, so there is no leading coefficient")]
+        return []
+    try:
+        got = EC.error_coefficient(columns, row["k"], row["N"], row["d"])["count"]
+    except AssertionError as failure:
+        return [("A_d-disagreement", str(failure))]
+    if got != stored:
+        return [("A_d-mismatch", f"row says A_d={stored!r}, counted "
+                                 f"{got!r} at weight {row['d']}")]
+    return []
+
+
 def measure_distance(columns, k, N, budget=None):
     """Find the distance of a NEW circuit: `faultcore.distance_report` verbatim.
 
@@ -902,6 +929,7 @@ def verify_row(row, budget=None, reference=True):
     problems += confirm_distance(facts["columns"], row["k"], row["N"], row["d"],
                                  row["d_is_exact"], row["d_witness"],
                                  row["d_upper"], budget)
+    problems += error_coefficient_problems(facts["columns"], row)
 
     if reference and row["k"] <= REFERENCE_K_CAP \
             and facts["n"] <= REFERENCE_N_CAP \
@@ -1581,8 +1609,8 @@ def main(argv=None):
           f"degree where computable, the Clifford correction with the "
           f"corrected logical action evaluated (and simulated gate by gate on "
           f"small circuits), the rotation powers that avoid it or the proof "
-          f"that none do, and a circuit its own sources published or a note "
-          f"saying why not"
+          f"that none do, the error coefficient A_d recounted, and a circuit "
+          f"its own sources published or a note saying why not"
           + (f" (the rows that differ from {against}; every other row is "
              f"byte-identical as a circuit to one already verified there)"
              if against else "")

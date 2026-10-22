@@ -186,6 +186,7 @@ def build_rows(catalog: dict):
             "gamma": gamma, "gamma_t": gamma_t, "gamma_rho": gamma_rho,
             "v_ex": v_ex, "rate": k / n,
             "d_is_exact": bool(row.get("d_is_exact")),
+            "A_d": row.get("A_d"),
             "d_cert": d_cert,
             "d_cert_exact": row.get("d_certified_is_exact") if d_cert else None,
             "d_cert_met": d_cert_met,
@@ -216,6 +217,7 @@ def build_rows(catalog: dict):
             "circuit": {"columns": row["columns"]},
             "distance": {"d": d, "is_exact": bool(row.get("d_is_exact")),
                          "upper": row.get("d_upper"), "witness": row.get("d_witness"),
+                         "A_d": row.get("A_d"),
                          "certified": ({"d": d_cert,
                                         "is_exact": row.get("d_certified_is_exact"),
                                         "met": d_cert_met,
@@ -276,7 +278,7 @@ def parameter_groups(factories: list[dict]) -> list[dict]:
     return out
 
 
-CSV_FIELDS = ("id", "n", "k", "d", "d_is_exact", "d_cert", "d_cert_exact", "N", "r", "gate_human", "terms", "t_terms",
+CSV_FIELDS = ("id", "n", "k", "d", "d_is_exact", "A_d", "d_cert", "d_cert_exact", "N", "r", "gate_human", "terms", "t_terms",
               "cs_terms", "ccz_terms", "pure_t", "t_count", "poly_degree", "clifford",
               "gamma", "gamma_t", "gamma_rho", "v_ex", "rate",
               "discovery", "regimes", "citations", "row")

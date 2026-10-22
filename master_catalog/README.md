@@ -19,13 +19,14 @@ AI-assisted and SAT searches, the literature and
 | [`catalogfile.py`](catalogfile.py) | reading, writing and rendering the two files; no verification logic |
 | [`attribute_classification.py`](attribute_classification.py) | credit a classification catalogue on the rows it certifies -- provenance only, no circuit field is touched; needed because a class first merged from a search and later covered by a classification is a `duplicate` to `merge_results.py`, which changes nothing |
 | [`faultcore.py`](faultcore.py), [`glcanon.py`](glcanon.py), [`skcanon.py`](skcanon.py), [`gatelabels.py`](gatelabels.py) | the primitives: fault search, the `GL(k,2)` class decision, the `S_k` frame, reading a claimed gate string |
+| [`errorcoeff.py`](errorcoeff.py) | the leading error coefficient `A_d`, counted exactly by the MacWilliams identity and by enumeration |
 | [`clifford.py`](clifford.py) | the Clifford correction a circuit needs, the rotation powers that avoid it (or the proof that none do), and a direct evaluation of the logical action |
 | [`migrations/`](migrations/) | the one-off scripts that made structural changes to the file (keying on `GL(k,2)` classes, citations, distance certificates, the length-54 classification, source paths, header wording, the distance-2 floor and the Borrowed Identities import, the Clifford corrections, the transversal-T codes), kept so each can be re-run and read |
 | [`reduced_degree_cache.json`](reduced_degree_cache.json) | memoised reduced-degree bounds, so re-verifying a `k = 5, 6` row is a lookup rather than a ~100 s re-search |
 | [`tests/`](tests/) | an independent re-derivation of the shipped file, plus the verifier's and merger's own suites |
 
 ```bash
-.venv/bin/python master_catalog/verify_catalog.py            # all rows, plus the file-level checks (~20 min)
+.venv/bin/python master_catalog/verify_catalog.py            # all rows, plus the file-level checks (~35 min)
 .venv/bin/python master_catalog/verify_catalog.py --changed  # only the rows that differ from HEAD, plus the file-level checks (seconds)
 .venv/bin/python master_catalog/verify_catalog.py --rows 1-20
 .venv/bin/python master_catalog/merge_results.py new.json    # see "Merging" below
@@ -194,6 +195,7 @@ is also the list of what gets checked.
 | `d_is_exact` | `true` iff a clean sweep below `d` met a witness **at** `d` |
 | `d_upper` | the weight of an explicit harmful fault, or `null` |
 | `d_witness` | that fault, as column indices into this row's `columns` |
+| `A_d` | the number of faults of weight `d` that the checks accept and that damage the output, so the output error is `A_d p^d` to leading order: `35` for the 15-to-1, `28` for the 8-`T` `CCZ` factory. Counted exactly by [`errorcoeff.py`](errorcoeff.py); `null` on a floor, where it is undefined, and where neither counting method reaches |
 | `t_count` | exact minimal level-3 T-count, or `null` with `t_count_note` |
 | `poly_degree` | CNOT-frame-reduced phase-polynomial degree, or `null` with a note |
 | `effective_width` | rank of the output rows modulo the check span; must equal `k` |
@@ -274,6 +276,12 @@ For every row, from `columns`, `k` and `N` alone:
    CNOT ladders and single-qubit `T`s, then the correction. Every output basis
    state, with the checks in `|+⟩`, must come back with exactly the gate's
    phase.
+10. **The error coefficient** `A_d`, counted again: the accepted faults of
+    weight `d` less the harmless ones, each by the MacWilliams identity (from
+    the `2^rank` words of the row space) or by enumeration, whichever is
+    cheap. Where the direct enumeration of the harmful faults also finishes,
+    it must give the same number. A floor carries `null`, and so does an exact
+    row only where the recount cannot reach either.
 
 Then, across the file, three checks a single row cannot make about itself:
 

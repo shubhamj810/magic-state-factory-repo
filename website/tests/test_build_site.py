@@ -140,6 +140,24 @@ class TheBuiltSite(unittest.TestCase):
         self.assertIn("more (listed below)", long)
         self.assertNotIn("<p><details", long.replace(" ", ""))
 
+    def test_a_factory_page_states_its_error_coefficient(self):
+        """A_d in the summary, the figures of merit and the distance panel:
+        35 for the 15-to-1 and 28 for the 8-T CCZ factory."""
+        for label, d, a_d in (("15.1.3.a", 3, 35), ("8.3.2.a", 2, 28)):
+            summary = next(f for f in self.index["factories"] if f["id"] == label)
+            self.assertEqual(summary["A_d"], a_d)
+            record = json.loads((self.out / "data" / "factories" / f"{label}.json")
+                                .read_text(encoding="utf-8"))
+            self.assertEqual(record["distance"]["A_d"], a_d)
+            text = (self.out / "f" / label / "index.html").read_text(encoding="utf-8")
+            self.assertIn(f"A_{{{d}}}={a_d}", text)
+            panel = text.split('id="distance-panel">', 1)[1].split("</div>", 1)[0]
+            self.assertIn(f"Exactly {a_d} faults of weight {d}", panel)
+        floor = next(f for f in self.index["factories"] if not f["d_is_exact"])
+        self.assertIsNone(floor["A_d"])
+        text = (self.out / "f" / floor["id"] / "index.html").read_text(encoding="utf-8")
+        self.assertIn("Undefined while the distance is only a lower bound.", text)
+
     def test_a_met_certificate_reads_as_the_distance(self):
         """A source's lower bound that the row's own fault meets is shown as
         the distance, without the >=; one it does not meet keeps the >=."""

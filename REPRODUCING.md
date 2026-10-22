@@ -252,7 +252,7 @@ through `merge_results.py`. So what there is to reproduce is the VERIFICATION,
 which reads nothing but the file itself:
 
 ```bash
-.venv/bin/python master_catalog/verify_catalog.py            # every row, ~20 min on one core
+.venv/bin/python master_catalog/verify_catalog.py            # every row, ~35 min on one core
 .venv/bin/python master_catalog/verify_catalog.py --changed  # rows that differ from HEAD, seconds
 ```
 
@@ -355,6 +355,20 @@ T-powers: 561, none: 10` and `nothing written`. `verify_catalog.py`
 re-derives both fields on every row, evaluates each corrected circuit's
 logical action, re-proves every `null` power list, and simulates the small
 circuits gate by gate.
+
+### Error coefficients
+
+Every row's `A_d` was added by one migration:
+
+```bash
+.venv/bin/python master_catalog/migrations/error_coefficients_2026_10_22.py --dry-run   # ~5 min on 12 cores
+```
+
+Against the shipped catalogue it reports, for 1027 rows, `counted: 55, counted
+twice: 902, floor: 50, not reached: 20` and `nothing written`. "Counted twice"
+means the MacWilliams-or-enumeration difference and a direct enumeration of
+the damaging faults agree. `verify_catalog.py` recounts every `A_d`, which
+adds about fifteen minutes to a full run, most of it on the widest rows.
 
 ## 8. Community contributions and the agent context pack
 

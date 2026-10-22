@@ -220,6 +220,39 @@ therefore means "no damaging fault of weight 4 or less", not "exactly 5". Every
 catalogued circuit carries an independently recomputed distance; the search
 modules and the verifiers deliberately share no code.
 
+## The error coefficient
+
+The distance says how fast the output error falls with `p`, the probability
+that one injected `T` state is faulty; the *error coefficient* says how large
+it is. `A_w` counts the faults of weight `w` that are accepted and damaging,
+
+```text
+A_w = #{ F : |F| = w,  XOR_{m in F} S_m = 0  and  XOR_{m in F} P_m != 0 },
+```
+
+so `A_w = 0` below `d`, and an accepted run has a damaged output with
+probability `A_d p^d + O(p^(d+1))`. The 15-to-1 factory has `A_3 = 35`, the
+Bravyi-Kitaev `35 p^3`. The 8-`T` `CCZ` factory has `A_2 = 28`: every pair of
+its eight columns. Bravyi and Haah's `[[3k+8, k, 2]]` factories have
+`A_2 = 3k + 1`. The count belongs to a circuit, not to its class: the
+catalogue's `[[20,4,2]]`, a borrowed-identity circuit with three checks, has
+`A_2 = 22`, where Bravyi and Haah's code with the same parameters has 13.
+
+The accepted faults are the kernel of the check rows `C` and the harmless
+accepted ones the kernel of all `N` rows `M`, so
+`A_w = B_w(ker C) - B_w(ker M)`, with `B_w` the number of words of weight `w`.
+Each kernel is the dual of a row space with only `2^rank` words, so the
+MacWilliams identity gives its weight distribution exactly:
+`B_w = 2^(-rank) sum_i D_i K_w(i)`, with `D_i` the number of row-space words
+of weight `i` and `K_w` the Krawtchouk polynomial. That is cheap when there are
+few checks, which is when accepted faults are most numerous. When the rank is
+large, accepted faults are rare and the meet-in-the-middle sweeps above
+enumerate them instead.
+[`master_catalog/errorcoeff.py`](../master_catalog/errorcoeff.py) chooses
+between the two and, wherever the sweep over damaging faults itself finishes,
+checks the difference against it. Each exactly-measured row of the catalogue
+carries `A_d`, or `null` where neither method reaches.
+
 ## Distance three as finite geometry
 
 Put the two previous sections together. At distance three a factory is

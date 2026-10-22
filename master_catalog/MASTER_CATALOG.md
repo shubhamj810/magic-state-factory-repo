@@ -1154,6 +1154,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 4` (3 outputs + 1 check), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 1]
+- leading error coefficient: `A_2 = 28` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 3, 7, `T` on the rest
 - discovery: pre-existing
@@ -1170,6 +1171,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 4` (2 outputs + 2 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 3]
+- leading error coefficient: `A_2 = 18` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 7, 8, 9, 10; `T⁵` on columns 3, 5, `T` on the rest
 - discovery: pre-existing
@@ -1186,6 +1188,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+12+012`
 - `N = 5` (3 outputs + 2 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 5]
+- leading error coefficient: `A_2 = 18` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -1202,6 +1205,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+024+134`
 - `N = 6` (5 outputs + 1 check), exact minimal T-count 11, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 1]
+- leading error coefficient: `A_2 = 66` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 4`, `Z on 5`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (4,5)`
 - or no correction at all, with rotations run as `T³` on columns 1, 3, 9, 11; `T†` on columns 4, 6, `T` on the rest
 - discovery: pre-existing
@@ -1219,6 +1223,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 4` (1 output + 3 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 7]
+- leading error coefficient: `A_2 = 7` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -1235,6 +1240,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 5` (2 outputs + 3 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 10]
+- leading error coefficient: `A_2 = 7` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -1251,6 +1257,7 @@ readable copy of exactly these rows.
 - output gate: `012+345`
 - `N = 7` (6 outputs + 1 check), exact minimal T-count 13, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 1]
+- leading error coefficient: `A_2 = 91` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `S† on 3`, `Z on 4`, `Z on 5`, `S on 6`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`, `CZ on (3,4)`, `CZ on (3,5)` and 2 more (7 single-wire, 7 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 3, 4, 5, 12, 13; `T⁵` on columns 0, 6; `T†` on column 1, `T` on the rest
 - discovery: pre-existing
@@ -1268,6 +1275,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 5` (1 output + 4 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 35` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -1291,6 +1299,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+014`
 - `N = 6` (5 outputs + 1 check), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 1]
+- leading error coefficient: `A_2 = 120` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 2`, `Z on 3`, `Z on 4`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)`
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 4, 7, 8, 11, 13, 14, `T` on the rest
 - discovery: pre-existing
@@ -1307,6 +1316,7 @@ readable copy of exactly these rows.
 - output gate: `0+012`
 - `N = 6` (3 outputs + 3 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 1]
+- leading error coefficient: `A_2 = 21` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,2)`
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 4, 5, 9, 10, 12, 15, 17, `T` on the rest
 - discovery: pre-existing
@@ -1323,6 +1333,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+12+13+23+012+013+023+123`
 - `N = 6` (4 outputs + 2 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 3]
+- leading error coefficient: `A_2 = 45` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 4`, `Z on 5`, `CZ on (4,5)`
 - or no correction at all, with rotations run as `T³` on columns 0, 16, 17; `T†` on columns 3, 5, 7, 9, `T` on the rest
 - discovery: pre-existing
@@ -1339,6 +1350,7 @@ readable copy of exactly these rows.
 - output gate: `01+23`
 - `N = 6` (4 outputs + 2 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 2]
+- leading error coefficient: `A_2 = 45` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S on 3`, `Z on 4`, `Z on 5`, `CZ on (2,4)`, `CZ on (2,5)`, `CZ on (4,5)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -1355,6 +1367,7 @@ readable copy of exactly these rows.
 - output gate: `01+234`
 - `N = 7` (5 outputs + 2 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 4]
+- leading error coefficient: `A_2 = 57` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `S on 6`, `CZ on (2,3)`, `CZ on (2,4)`, `CZ on (3,4)`
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 3, 12, 13, 14, 15, 16; `T⁵` on columns 5, 6; `T†` on column 0, `T` on the rest
 - discovery: pre-existing
@@ -1371,6 +1384,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 6` (2 outputs + 4 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 1]
+- leading error coefficient: `A_2 = 30` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `CZ on (0,1)`
 - or no correction at all, with rotations run as `T³` on columns 4, 7, 8, 11, 12, 15, 17, 18; `T†` on columns 1, 2, `T` on the rest
 - discovery: pre-existing
@@ -1387,6 +1401,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+012`
 - `N = 6` (3 outputs + 3 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 1]
+- leading error coefficient: `A_2 = 30` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S† on 2`, `Z on 4`, `Z on 5`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (2,4)`, `CZ on (2,5)`
 - or no correction at all, with rotations run as `T³` on columns 1, 10, 11, 14, 15, 16, 19; `T⁵` on column 2; `T†` on columns 0, 4, 5, `T` on the rest
 - discovery: pre-existing
@@ -1403,6 +1418,7 @@ readable copy of exactly these rows.
 - output gate: `0+12`
 - `N = 6` (3 outputs + 3 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 6]
+- leading error coefficient: `A_2 = 22` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 2`, `Z on 3`, `Z on 4`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (3,4)`
 - or no correction at all, with rotations run as `T³` on columns 8, 11, 12, 15, 16, 17, 19; `T⁵` on columns 6, 9; `T†` on columns 2, 3, `T` on the rest
 - discovery: pre-existing
@@ -1419,6 +1435,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+012`
 - `N = 6` (4 outputs + 2 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 1]
+- leading error coefficient: `A_2 = 62` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `Z on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (2,4)`, `CZ on (3,4)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -1435,6 +1452,7 @@ readable copy of exactly these rows.
 - output gate: `0+123`
 - `N = 7` (4 outputs + 3 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 5]
+- leading error coefficient: `A_2 = 34` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `S on 5`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 2, 3, 4, 14, 15, 16, 17, 18; `T⁵` on column 6, `T` on the rest
 - discovery: pre-existing
@@ -1451,6 +1469,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 7` (4 outputs + 3 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 16]
+- leading error coefficient: `A_2 = 22` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `CZ on (4,5)`, `CZ on (4,6)`, `CZ on (5,6)`
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 18, 19; `T†` on columns 4, 7, 10, 13, `T` on the rest
 - discovery: pre-existing
@@ -1467,6 +1486,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+023+124`
 - `N = 6` (5 outputs + 1 check), exact minimal T-count 11, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 1]
+- leading error coefficient: `A_2 = 190` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `S† on 2`, `Z on 4`, `Z on 5`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (2,4)`, `CZ on (2,5)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -1483,6 +1503,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+234`
 - `N = 8` (5 outputs + 3 checks), exact minimal T-count 8, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 12]
+- leading error coefficient: `A_2 = 34` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `S on 5`, `CZ on (2,3)`, `CZ on (2,4)`, `CZ on (3,4)`
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 3, 11, 15, 17, 18, 19; `T⁵` on columns 0, 4, 5, 6; `T†` on column 7, `T` on the rest
 - discovery: pre-existing
@@ -1500,6 +1521,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 6` (2 outputs + 4 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [6, 7]
+- leading error coefficient: `A_2 = 9` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)` and 3 more (6 single-wire, 9 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 14, 16, 17, 18, 19, 20; `T⁵` on column 2; `T†` on columns 0, 1, `T` on the rest
 - discovery: pre-existing
@@ -1516,6 +1538,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23`
 - `N = 7` (4 outputs + 3 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 3]
+- leading error coefficient: `A_2 = 31` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `CZ on (0,4)`, `CZ on (0,5)`
 - or no correction at all, with rotations run as `T³` on columns 7, 10, 11, 14, 17, 18, 20, 21; `T⁵` on columns 1, 2, 5, 8; `T†` on columns 0, 3, `T` on the rest
 - discovery: pre-existing
@@ -1532,6 +1555,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 7` (1 output + 6 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
+- leading error coefficient: `A_3 = 31` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 5`, `Z on 6`, `CZ on (0,5)`, `CZ on (5,6)`
 - or no correction at all, with rotations run as `T³` on columns 5, 11, 17; `T⁵` on columns 0, 1, 2, 3, 4, `T` on the rest
 - discovery: pre-existing
@@ -1550,6 +1574,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 5` (3 outputs + 2 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 3]
+- leading error coefficient: `A_2 = 84` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`
 - or no correction at all, with rotations run as `T³` on columns 3, 5, 7, 21, `T` on the rest
 - discovery: pre-existing
@@ -1566,6 +1591,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01+02`
 - `N = 6` (3 outputs + 3 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 1]
+- leading error coefficient: `A_2 = 36` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (1,2)`, `CZ on (1,5)`, `CZ on (2,5)` and 1 more (6 single-wire, 7 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -1582,6 +1608,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+023+123`
 - `N = 6` (4 outputs + 2 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 6]
+- leading error coefficient: `A_2 = 84` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -1598,6 +1625,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+05+12+13+14+15+23+24+25+34+35+45+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 8` (6 outputs + 2 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 3]
+- leading error coefficient: `A_2 = 84` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 15, 16, 17, 18, 19, 20, 21, 22; `T⁵` on columns 3, 5, 7, 9, 11, 13, `T` on the rest
 - discovery: pre-existing
@@ -1615,6 +1643,7 @@ readable copy of exactly these rows.
 - output gate: `01+23+45`
 - `N = 8` (6 outputs + 2 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 5]
+- leading error coefficient: `A_2 = 84` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S† on 3`, `S on 4`, `S on 5`, `CZ on (2,7)`, `CZ on (3,6)`, `CZ on (3,7)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -1632,6 +1661,7 @@ readable copy of exactly these rows.
 - output gate: `0+01`
 - `N = 6` (2 outputs + 4 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [3, 4]
+- leading error coefficient: `A_2 = 15` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (1,2)`, `CZ on (1,3)` and 4 more (5 single-wire, 11 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 9, 11, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23; `T⁵` on columns 0, 1, 2, 3; `T†` on column 4, `T` on the rest
 - discovery: pre-existing
@@ -1648,6 +1678,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34`
 - `N = 8` (5 outputs + 3 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 6]
+- leading error coefficient: `A_2 = 49` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S† on 3`, `S† on 4`, `CZ on (3,5)`, `CZ on (3,6)`, `CZ on (4,5)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -1665,6 +1696,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+345`
 - `N = 9` (6 outputs + 3 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 11]
+- leading error coefficient: `A_2 = 61` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `S† on 7`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (3,4)`, `CZ on (3,5)` and 2 more (8 single-wire, 6 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 3, 4, 12, 15, 19, 21, 22, 24; `T⁵` on columns 11, 14; `T†` on columns 5, 7, `T` on the rest
 - discovery: pre-existing
@@ -1682,6 +1714,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 9` (6 outputs + 3 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 22]
+- leading error coefficient: `A_2 = 49` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -1698,6 +1731,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 7` (1 output + 6 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
+- leading error coefficient: `A_3 = 45` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `Z on 2`, `CZ on (0,5)`, `CZ on (1,2)`, `CZ on (3,4)`, `CZ on (5,6)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -1718,6 +1752,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 8` (1 output + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 28` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 7`
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 and 1 more; `T⁵` on column 14; `T†` on column 0, `T` on the rest
 - discovery: pre-existing
@@ -1736,6 +1771,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 5` (2 outputs + 3 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 7]
+- leading error coefficient: `A_2 = 42` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T³` on columns 22, 23, 24, 25, 26, 27; `T†` on columns 0, 7, 10, `T` on the rest
 - discovery: pre-existing
@@ -1752,6 +1788,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 56` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 8`
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 17, 18, 19, 20, 21, 22, 23; `T⁵` on column 14; `T†` on columns 0, 7, 8, 9, `T` on the rest
 - discovery: pre-existing
@@ -1777,6 +1814,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 6` (3 outputs + 3 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 7]
+- leading error coefficient: `A_2 = 42` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -1793,6 +1831,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 7` (4 outputs + 3 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 3]
+- leading error coefficient: `A_2 = 42` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -1809,6 +1848,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23+45`
 - `N = 9` (6 outputs + 3 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 6]
+- leading error coefficient: `A_2 = 62` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S† on 4`, `S on 5`, `S† on 6`, `S† on 7`, `CZ on (4,6)`, `CZ on (4,7)`, `CZ on (6,7)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -1826,6 +1866,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 9` (1 output + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 28` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `CZ on (5,6)`, `CZ on (5,7)`, `CZ on (5,8)`, `CZ on (6,7)`, `CZ on (6,8)`, `CZ on (7,8)`
 - or no correction at all, with rotations run as `T³` on columns 2, 11, 12, 13; `T⁵` on columns 3, 7; `T†` on columns 0, 1, `T` on the rest
 - discovery: pre-existing
@@ -1843,6 +1884,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 7` (3 outputs + 4 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [8, 14]
+- leading error coefficient: `A_2 = 21` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -1859,6 +1901,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 5` (1 output + 4 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 15` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -1875,6 +1918,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 9` (1 output + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 35` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -1892,6 +1936,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 6` (2 outputs + 4 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 22]
+- leading error coefficient: `A_2 = 15` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -1908,6 +1953,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 70` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -1927,6 +1973,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+34`
 - `N = 8` (5 outputs + 3 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 2]
+- leading error coefficient: `A_2 = 55` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 2`, `Z on 3`, `S on 4`, `S† on 5`, `S on 7`, `CZ on (0,6)`, `CZ on (3,5)`, `CZ on (3,6)`, `CZ on (6,7)`
 - or no correction at all, with rotations run as `T³` on columns 13, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26; `T⁵` on columns 4, 5, 11; `T†` on columns 1, 2, 3, `T` on the rest
 - discovery: pre-existing
@@ -1944,6 +1991,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 6` (1 output + 5 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 75` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `CZ on (0,1)`
 - or no correction at all, with rotations run as `T³` on columns 27, 28, 29, 30; `T†` on columns 0, 1, 2, `T` on the rest
 - discovery: pre-existing
@@ -1962,6 +2010,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+01`
 - `N = 7` (2 outputs + 5 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 107` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `CZ on (0,2)`, `CZ on (1,2)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -1980,6 +2029,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01+02+12+012`
 - `N = 8` (3 outputs + 5 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 123` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `CZ on (0,3)`, `CZ on (1,3)`, `CZ on (2,3)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -1998,6 +2048,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01+02+03+12+13+23+012+013+023+123`
 - `N = 9` (4 outputs + 5 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 155` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S on 3`, `CZ on (0,4)`, `CZ on (1,4)`, `CZ on (2,4)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2016,6 +2067,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
 - `N = 10` (5 outputs + 5 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 155` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2034,6 +2086,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 8` (1 output + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 7, 10]
+- leading error coefficient: `A_3 = 26` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 3`, `S† on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (3,4)`, `CZ on (3,7)`, `CZ on (4,5)`, `CZ on (4,6)` and 2 more (5 single-wire, 9 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 13, 16, 18, 19, 20, 22, 23, 24, 25, 26, 27 and 3 more; `T⁵` on columns 2, 3; `T†` on column 1, `T` on the rest
 - discovery: pre-existing
@@ -2052,6 +2105,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 7, 10]
+- leading error coefficient: `A_3 = 52` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `Z on 4`, `S† on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (4,5)` and 5 more (6 single-wire, 11 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 4, 6, 16, 18, 20, 22, 24, 25, 27, 28, 29 and 1 more; `T⁵` on column 3; `T†` on columns 1, 2, `T` on the rest
 - discovery: pre-existing
@@ -2073,6 +2127,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 9` (1 output + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 38` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `CZ on (0,3)`, `CZ on (3,4)`, `CZ on (5,6)`
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 6, 9, 29, 30, 31, 32, `T` on the rest
 - discovery: pre-existing
@@ -2090,6 +2145,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 9` (1 output + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 25` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 3`, `Z on 4`, `S on 5`, `S on 6`, `CZ on (0,3)`, `CZ on (3,4)`
 - or no correction at all, with rotations run as `T³` on columns 22, 25, 26, 29, 31, 32; `T⁵` on columns 3, 6; `T†` on columns 0, 1, 2, `T` on the rest
 - discovery: pre-existing
@@ -2107,6 +2163,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 50` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 4`, `Z on 5`, `S on 6`, `S on 7`, `CZ on (0,4)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (4,5)`
 - or no correction at all, with rotations run as `T³` on columns 30, 31, 32, 33; `T†` on columns 0, 1, 2, 9, `T` on the rest
 - discovery: pre-existing
@@ -2126,6 +2183,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 7` (1 output + 6 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 49` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,3)`, `CZ on (2,6)`, `CZ on (4,5)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2148,6 +2206,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 8` (2 outputs + 6 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
+- leading error coefficient: `A_3 = 84` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (1,3)`, `CZ on (2,4)`, `CZ on (3,7)`, `CZ on (5,6)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2175,6 +2234,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+01`
 - `N = 8` (2 outputs + 6 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 73` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (2,4)`, `CZ on (3,7)`, `CZ on (5,6)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2195,6 +2255,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 8` (2 outputs + 6 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 77` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (2,4)`, `CZ on (3,7)`, `CZ on (5,6)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2222,6 +2283,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01+02+12+012`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 105` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (2,3)`, `CZ on (2,4)` and 4 more (3 single-wire, 13 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2242,6 +2304,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 105` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,3)`, `CZ on (3,5)`, `CZ on (4,8)`, `CZ on (6,7)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2291,6 +2354,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 8` (1 output + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 11]
+- leading error coefficient: `A_3 = 32` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 4`, `Z on 6`, `S† on 7`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (4,7)`, `CZ on (6,7)`
 - or no correction at all, with rotations run as `T³` on columns 3, 8, 14, 15, 21, 26, 32, 33; `T†` on columns 0, 18, `T` on the rest
 - discovery: pre-existing
@@ -2309,6 +2373,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 8` (2 outputs + 6 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 90` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `Z on 4`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (1,4)`, `CZ on (2,4)`, `CZ on (3,7)`, `CZ on (5,6)`
 - or no correction at all, with rotations run as `T³` on columns 1, 4, 6, 8, 11, 14, 18, 20, 23, 24, 25, 26 and 3 more; `T⁵` on column 0; `T†` on columns 2, 3, `T` on the rest
 - discovery: pre-existing
@@ -2329,6 +2394,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+01`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 11]
+- leading error coefficient: `A_3 = 40` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 5`, `Z on 7`, `S† on 8`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (1,5)`, `CZ on (1,7)`, `CZ on (5,8)`, `CZ on (7,8)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2347,6 +2413,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 11]
+- leading error coefficient: `A_3 = 64` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `Z on 5`, `Z on 7`, `S† on 8`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (5,8)`, `CZ on (7,8)`
 - or no correction at all, with rotations run as `T³` on columns 3, 8, 14, 15, 21, 26, 30, 31, 32, 33, 34, 35; `T†` on columns 0, 1, 4, 5, 18, `T` on the rest
 - discovery: pre-existing
@@ -2368,6 +2435,7 @@ readable copy of exactly these rows.
 - output gate: `01+02`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 120` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `Z on 3`, `Z on 5`, `CZ on (0,5)`, `CZ on (1,3)`, `CZ on (1,7)`, `CZ on (2,3)`, `CZ on (2,4)`, `CZ on (2,7)`, `CZ on (3,5)` and 2 more (5 single-wire, 9 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2395,6 +2463,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01+02+12+012`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 11]
+- leading error coefficient: `A_3 = 44` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `Z on 6`, `Z on 8`, `S† on 9`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (1,6)`, `CZ on (1,8)`, `CZ on (2,6)`, `CZ on (2,8)` and 2 more (6 single-wire, 8 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2413,6 +2482,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 11]
+- leading error coefficient: `A_3 = 68` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `Z on 6`, `Z on 8`, `S† on 9`, `CZ on (2,6)`, `CZ on (2,8)`, `CZ on (6,9)`, `CZ on (8,9)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2440,6 +2510,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 11]
+- leading error coefficient: `A_3 = 72` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `S on 3`, `Z on 7`, `Z on 9`, `S† on 10`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (1,7)`, `CZ on (1,9)`, `CZ on (7,10)` and 1 more (7 single-wire, 6 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2476,6 +2547,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 9` (1 output + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 32` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 4`, `S† on 5`, `S† on 6`, `S on 7`, `S on 8`, `CZ on (4,5)`, `CZ on (4,6)`, `CZ on (4,7)`, `CZ on (4,8)`, `CZ on (5,7)`, `CZ on (5,8)` and 3 more (6 single-wire, 9 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 23, 24, 26, 27, 29, 30, 32; `T⁵` on columns 5, 7, 15; `T†` on columns 0, 1, 2, `T` on the rest
 - discovery: pre-existing
@@ -2493,6 +2565,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+01`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 52` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 5`, `S† on 6`, `S† on 7`, `S on 8`, `S on 9`, `CZ on (5,6)`, `CZ on (5,7)`, `CZ on (5,8)`, `CZ on (5,9)`, `CZ on (6,8)` and 4 more (7 single-wire, 9 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2510,6 +2583,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01+02+12+012`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 52` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 6`, `S† on 7`, `S† on 8`, `S on 9`, `S on 10`, `CZ on (6,7)`, `CZ on (6,8)`, `CZ on (6,9)`, `CZ on (6,10)` and 5 more (8 single-wire, 9 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2527,6 +2601,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 9` (1 output + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
+- leading error coefficient: `A_3 = 31` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 5`, `S† on 6`, `S on 7`, `S on 8`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (5,7)`, `CZ on (5,8)`, `CZ on (6,7)`, `CZ on (6,8)`, `CZ on (7,8)`
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 24, 25, 27, 29, 30, 32, 33; `T⁵` on columns 8, 16; `T†` on column 3, `T` on the rest
 - discovery: pre-existing
@@ -2544,6 +2619,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+01`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
+- leading error coefficient: `A_3 = 35` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 6`, `S† on 7`, `S on 8`, `S on 9`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (6,8)`, `CZ on (6,9)` and 3 more (6 single-wire, 9 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2561,6 +2637,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
+- leading error coefficient: `A_3 = 54` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S† on 6`, `S† on 7`, `S on 8`, `S on 9`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (6,8)`, `CZ on (6,9)` and 3 more (6 single-wire, 9 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 24, 25, 27, 29, 30, 32, 33; `T⁵` on columns 4, 6, 7, 8, 16; `T†` on columns 1, 2, 3, `T` on the rest
 - discovery: pre-existing
@@ -2580,6 +2657,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01+02+12+012`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
+- leading error coefficient: `A_3 = 43` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `Z on 7`, `Z on 8`, `CZ on (7,8)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2597,6 +2675,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
+- leading error coefficient: `A_3 = 54` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 2`, `S† on 7`, `S† on 8`, `S on 9`, `S on 10`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (1,7)`, `CZ on (1,8)`, `CZ on (2,7)` and 6 more (7 single-wire, 11 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2620,6 +2699,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01+23`
 - `N = 12` (4 outputs + 8 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
+- leading error coefficient: `A_3 = 78` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `CZ on (8,9)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2649,6 +2729,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 7` (1 output + 6 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 71` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 5`, `Z on 6`, `CZ on (5,6)`
 - or no correction at all, with rotations run as `T³` on columns 3, 9, 23, 27, 28, 29, 30, 32, 37, 38; `T⁵` on column 19; `T†` on columns 0, 2, `T` on the rest
 - discovery: pre-existing
@@ -2666,6 +2747,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 8` (2 outputs + 6 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 118` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 6`, `Z on 7`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (6,7)`
 - or no correction at all, with rotations run as `T³` on columns 2, 3, 14, 15, 18, 24, 25, 28, 29, 32, 33, `T` on the rest
 - discovery: pre-existing
@@ -2683,6 +2765,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+01`
 - `N = 8` (2 outputs + 6 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 103` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 6`, `Z on 7`, `CZ on (6,7)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2700,6 +2783,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 8` (2 outputs + 6 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 109` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 6`, `Z on 7`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (6,7)`
 - or no correction at all, with rotations run as `T³` on columns 5, 16, 17, 18, 26, 27, 28, 29, 32, 35; `T⁵` on columns 0, 3; `T†` on column 2, `T` on the rest
 - discovery: pre-existing
@@ -2719,6 +2803,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+12`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
+- leading error coefficient: `A_3 = 130` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 7`, `Z on 8`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,5)`, `CZ on (1,8)`, `CZ on (7,8)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2738,6 +2823,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01+02+12+012`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 151` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 2`, `Z on 7`, `Z on 8`, `CZ on (0,7)`, `CZ on (7,8)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2755,6 +2841,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 125` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `Z on 7`, `Z on 8`, `CZ on (0,2)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (2,3)`, `CZ on (2,5)`, `CZ on (2,7)`, `CZ on (7,8)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2778,6 +2865,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 145` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `Z on 7`, `Z on 8`, `CZ on (7,8)`
 - or no correction at all, with rotations run as `T³` on columns 0, 2, 4, 9, 11, 17, 19, 23, 24, 27, 28, 29 and 4 more; `T⁵` on column 1; `T†` on columns 7, 14, `T` on the rest
 - discovery: pre-existing
@@ -2807,6 +2895,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+13+23+012+123`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
+- leading error coefficient: `A_3 = 134` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 2`, `Z on 8`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (1,4)` and 6 more (4 single-wire, 14 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2828,6 +2917,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01+02+03+12+13+23+012+013+023+123`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 151` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,9)`, `CZ on (1,8)`, `CZ on (8,9)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2845,6 +2935,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01+23`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 129` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `S† on 2`, `S on 3`, `Z on 8`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (1,4)`, `CZ on (1,6)` and 3 more (5 single-wire, 10 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2874,6 +2965,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 151` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 3`, `Z on 8`, `Z on 9`, `CZ on (0,2)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (2,4)`, `CZ on (2,6)`, `CZ on (2,8)`, `CZ on (3,4)` and 2 more (5 single-wire, 9 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2941,6 +3033,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+012+013+014+023+024+034`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 144` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `Z on 9`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,2)`, `CZ on (1,9)`, `CZ on (1,10)`, `CZ on (2,9)` and 1 more (4 single-wire, 9 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 4, 5, 6, 7, 9, 10, 17, 21, 22, 23 and 7 more, `T` on the rest
 - discovery: pre-existing
@@ -2960,6 +3053,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 151` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `S on 3`, `S on 4`, `Z on 9`, `Z on 10`, `CZ on (0,2)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (2,9)`, `CZ on (9,10)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -2977,6 +3071,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+12+34+012`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 135` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `S† on 3`, `S† on 4`, `Z on 9`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,10)`, `CZ on (1,3)`, `CZ on (1,4)` and 6 more (7 single-wire, 11 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3002,6 +3097,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+23`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 151` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `S† on 2`, `S on 3`, `S† on 4`, `Z on 9`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (1,5)` and 6 more (6 single-wire, 12 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3153,6 +3249,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+01+02+03+04+05+12+13+14+15+23+24+25+34+35+45+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 12` (6 outputs + 6 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 151` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S on 2`, `S† on 3`, `S† on 4`, `S on 5`, `Z on 10`, `Z on 11`, `CZ on (1,10)`, `CZ on (3,10)`, `CZ on (4,10)`, `CZ on (10,11)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3169,6 +3266,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+01+23+45`
 - `N = 12` (6 outputs + 6 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 151` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 2`, `Z on 3`, `S† on 4`, `S on 5`, `Z on 10`, `Z on 11`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,11)` and 11 more (8 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3332,6 +3430,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 8` (1 output + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 15, 18]
+- leading error coefficient: `A_3 = 50` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 3`, `Z on 4`, `Z on 7`, `CZ on (0,4)`, `CZ on (2,3)`, `CZ on (3,4)`, `CZ on (3,5)`, `CZ on (3,6)`, `CZ on (3,7)`, `CZ on (4,5)`, `CZ on (5,6)` and 1 more (4 single-wire, 9 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 14, 20, 23, 25, 27, 28, 29, 32, 37, 38, 39; `T⁵` on columns 0, 1, 2, `T` on the rest
 - discovery: pre-existing
@@ -3348,6 +3447,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 8` (2 outputs + 6 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 120` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `Z on 6`, `Z on 7`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,6)`, `CZ on (6,7)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3364,6 +3464,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+01`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
+- leading error coefficient: `A_3 = 62` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 4`, `Z on 5`, `Z on 8`, `CZ on (0,5)`, `CZ on (1,5)`, `CZ on (3,4)`, `CZ on (4,5)`, `CZ on (4,6)`, `CZ on (4,7)`, `CZ on (4,8)` and 3 more (5 single-wire, 10 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3380,6 +3481,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 66` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 4`, `S† on 5`, `Z on 6`, `CZ on (2,5)`, `CZ on (3,5)`, `CZ on (3,8)`, `CZ on (4,6)`, `CZ on (5,6)`
 - or no correction at all, with rotations run as `T³` on columns 0, 2, 9, 16, 17, 20, 21, 24, 27, 28, 29, 32 and 4 more; `T⁵` on column 7; `T†` on columns 4, 8, 11, `T` on the rest
 - discovery: pre-existing
@@ -3398,6 +3500,7 @@ readable copy of exactly these rows.
 - output gate: `01+02`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 160` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S† on 2`, `Z on 7`, `Z on 8`, `CZ on (0,3)`, `CZ on (0,7)`, `CZ on (1,4)`, `CZ on (2,4)`, `CZ on (2,7)`, `CZ on (7,8)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3416,6 +3519,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01+02+12+012`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 26, 28]
+- leading error coefficient: `A_3 = 74` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 5`, `Z on 6`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (1,2)`, `CZ on (1,5)`, `CZ on (1,7)` and 13 more (3 single-wire, 22 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3432,6 +3536,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 88` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `Z on 2`, `S on 5`, `Z on 6`, `Z on 9`, `CZ on (1,2)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (2,8)`, `CZ on (4,5)`, `CZ on (5,6)` and 6 more (6 single-wire, 12 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3451,6 +3556,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01+02+03+12+13+23+012+013+023+123`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
+- leading error coefficient: `A_3 = 64` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `S† on 3`, `Z on 4`, `Z on 10`, `CZ on (0,4)`, `CZ on (2,4)`, `CZ on (3,4)`, `CZ on (4,10)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3467,6 +3573,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 100` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 6`, `Z on 7`, `Z on 10`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,10)`, `CZ on (1,2)`, `CZ on (1,3)` and 19 more (5 single-wire, 26 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3489,6 +3596,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+12+34+012`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
+- leading error coefficient: `A_3 = 80` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S† on 3`, `S† on 4`, `Z on 5`, `Z on 11`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,5)`, `CZ on (1,2)`, `CZ on (1,5)`, `CZ on (3,5)` and 2 more (6 single-wire, 8 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3514,6 +3622,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 9` (1 output + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 44` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 2`, `S† on 5`, `S on 6`, `S† on 7`, `S on 8`, `CZ on (2,5)`, `CZ on (2,6)`, `CZ on (2,7)`, `CZ on (2,8)`, `CZ on (4,5)`, `CZ on (5,6)` and 4 more (6 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 20, 22, 26, 31, 32, 34, 38, 39, 40; `T⁵` on columns 2, 9, 11, 15; `T†` on columns 0, 4, `T` on the rest
 - discovery: AI search
@@ -3530,6 +3639,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 12` (2 outputs + 10 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 80` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `CZ on (1,6)`, `CZ on (6,11)`, `CZ on (7,8)`, `CZ on (7,9)`, `CZ on (7,10)`, `CZ on (8,9)` and 2 more (6 single-wire, 8 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -3546,6 +3656,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+12+13+23+012+013+023+123`
 - `N = 7` (4 outputs + 3 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 7]
+- leading error coefficient: `A_2 = 105` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T³` on columns 0, 36, 37, 38, 39, 40, 41; `T†` on columns 7, 10, 13, 16, `T` on the rest
 - discovery: pre-existing
@@ -3562,6 +3673,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 8` (5 outputs + 3 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 7]
+- leading error coefficient: `A_2 = 105` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -3578,6 +3690,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 9` (6 outputs + 3 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 3]
+- leading error coefficient: `A_2 = 105` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -3594,6 +3707,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 8` (1 output + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 16]
+- leading error coefficient: `A_3 = 69` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 3`, `Z on 5`, `Z on 6`, `Z on 7`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (2,4)`, `CZ on (2,5)`, `CZ on (3,4)`, `CZ on (3,6)` and 3 more (5 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 5, 6, 18, 21, 22, 23, 24, 26, 27, 28 and 9 more, `T` on the rest
 - discovery: pre-existing
@@ -3611,6 +3725,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 17]
+- leading error coefficient: `A_3 = 84` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 6`, `Z on 7`, `Z on 8`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (3,5)` and 6 more (7 single-wire, 11 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 14, 15, 16, 18, 19, 21, 26, 27, 28, 29, 30 and 6 more; `T⁵` on columns 0, 2, 3, 5, 6; `T†` on columns 1, 4, `T` on the rest
 - discovery: pre-existing
@@ -3628,6 +3743,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+01`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 69` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `Z on 6`, `S on 8`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,8)` and 4 more (7 single-wire, 9 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3644,6 +3760,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 93` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)` and 27 more (8 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3661,6 +3778,7 @@ readable copy of exactly these rows.
 - output gate: `01+02`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 104` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,7)` and 28 more (8 single-wire, 32 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3679,6 +3797,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+12`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 120` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `CZ on (0,2)`, `CZ on (0,4)` and 28 more (10 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3696,6 +3815,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01+02+12+012`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 77` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `Z on 3`, `Z on 5`, `Z on 6`, `Z on 7`, `S on 9`, `CZ on (1,3)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,7)` and 5 more (8 single-wire, 9 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3712,6 +3832,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+02`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
+- leading error coefficient: `A_3 = 119` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 2`, `Z on 3`, `Z on 5`, `Z on 7`, `Z on 8`, `Z on 9`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (1,4)`, `CZ on (1,6)`, `CZ on (1,7)` and 9 more (7 single-wire, 14 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3738,6 +3859,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 109` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `CZ on (0,2)`, `CZ on (0,5)` and 28 more (10 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3757,6 +3879,7 @@ readable copy of exactly these rows.
 - output gate: `0+12`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 103` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 9`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (1,3)` and 10 more (7 single-wire, 15 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 6, 7, 11, 16, 21, 25, 26, 28, 29, 31, 33 and 6 more; `T⁵` on column 0; `T†` on columns 3, 4, `T` on the rest
 - discovery: pre-existing
@@ -3781,6 +3904,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 115` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `Z on 5`, `Z on 7`, `S† on 9`, `CZ on (3,4)`, `CZ on (3,8)`, `CZ on (3,9)`, `CZ on (4,9)`, `CZ on (5,9)`, `CZ on (7,9)` and 1 more (6 single-wire, 7 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 7, 8, 19, 20, 22, 31, 32, 34, 35, 36, 37 and 4 more; `T⁵` on column 2; `T†` on columns 1, 4, 11, 18, `T` on the rest
 - discovery: pre-existing
@@ -3805,6 +3929,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+13+23+012+123`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 126` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 2`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)` and 32 more (9 single-wire, 35 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3823,6 +3948,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01+02+03+12+13+23+012+013+023+123`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 85` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `S on 3`, `Z on 4`, `Z on 6`, `Z on 7`, `Z on 8`, `S on 10`, `CZ on (2,4)`, `CZ on (2,6)`, `CZ on (2,7)` and 6 more (9 single-wire, 9 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3839,6 +3965,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 105` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `CZ on (0,1)` and 33 more (11 single-wire, 34 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3861,6 +3988,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 133` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 2`, `S on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `CZ on (0,2)` and 36 more (11 single-wire, 37 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3902,6 +4030,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+13`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 117` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S† on 2`, `S on 3`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,7)` and 29 more (9 single-wire, 32 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -3975,6 +4104,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 9` (5 outputs + 4 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [8, 14]
+- leading error coefficient: `A_2 = 70` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -3991,6 +4121,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+012+013+014+023+024+034`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 12, 20]
+- leading error coefficient: `A_3 = 94` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `S on 11`, `CZ on (0,11)`, `CZ on (1,2)` and 25 more (10 single-wire, 27 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 20, 23, 25, 27, 35, 36, 42; `T⁵` on columns 0, 2, 4, 8, 12; `T†` on columns 1, 3, 5, 13, 14, 21, `T` on the rest
 - discovery: pre-existing
@@ -4010,6 +4141,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 117` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `S† on 3`, `S on 4`, `Z on 5`, `Z on 7`, `Z on 8`, `Z on 9`, `S on 11`, `CZ on (0,1)`, `CZ on (0,2)` and 21 more (10 single-wire, 23 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4026,6 +4158,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+12+34+012`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 15, 17]
+- leading error coefficient: `A_3 = 75` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `S on 3`, `S on 4`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `S on 11`, `CZ on (0,1)`, `CZ on (0,2)` and 8 more (10 single-wire, 10 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4051,6 +4184,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+23`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 133` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S† on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `Z on 11` and 29 more (12 single-wire, 29 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4134,6 +4268,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+05+012+013+014+015+023+024+025+034+035+045`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 133` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 12`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (2,3)` and 5 more (7 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 26, 27, 28, 29, 30, 31, 34, 35, 36, 37 and 5 more; `T⁵` on column 22; `T†` on columns 0, 3, 10, 11, `T` on the rest
 - discovery: pre-existing
@@ -4156,6 +4291,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+01+02+03+04+05+12+13+14+15+23+24+25+34+35+45+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 101` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `Z on 6`, `S on 8`, `Z on 11`, `Z on 12`, `CZ on (6,8)`, `CZ on (8,11)` and 1 more (10 single-wire, 3 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4172,6 +4308,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+01+02+12+34+35+45+012+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 105` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 12`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4201,6 +4338,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+01+23+45`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 12, 20]
+- leading error coefficient: `A_3 = 101` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 2`, `S on 3`, `Z on 4`, `Z on 5`, `Z on 8`, `Z on 9`, `Z on 10`, `Z on 11`, `S on 12`, `CZ on (0,1)` and 21 more (11 single-wire, 22 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4364,6 +4502,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+01+02+12+34+56+012`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 133` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 13`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4668,6 +4807,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 8` (1 output + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 52` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `S on 7`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (1,7)`, `CZ on (2,7)`, `CZ on (3,7)` and 2 more (7 single-wire, 7 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 6, 10, 13, 17, 18, 24, 25, 26, 27, 29, 30 and 9 more; `T⁵` on column 22; `T†` on column 0, `T` on the rest
 - discovery: pre-existing
@@ -4684,6 +4824,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 106` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 6`, `Z on 7`, `Z on 8`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)` and 24 more (4 single-wire, 32 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 2, 11, 14, 16, 19, 22, 23, 26, 27, 28, 31 and 6 more; `T⁵` on columns 4, 8; `T†` on column 3, `T` on the rest
 - discovery: pre-existing
@@ -4700,6 +4841,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+01`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 68` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `S on 8`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)` and 8 more (8 single-wire, 12 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4716,6 +4858,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 88` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S† on 2`, `S† on 4`, `Z on 5`, `Z on 6`, `CZ on (1,3)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (1,8)`, `CZ on (2,3)`, `CZ on (2,4)` and 10 more (6 single-wire, 16 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 4, 7, 12, 16, 17, 22, 23, 28, 29, 31, 32 and 6 more; `T†` on columns 2, 8, 19, `T` on the rest
 - discovery: pre-existing
@@ -4734,6 +4877,7 @@ readable copy of exactly these rows.
 - output gate: `01+02`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 136` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 7`, `Z on 8`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,9)`, `CZ on (1,2)` and 29 more (5 single-wire, 36 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4752,6 +4896,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+12`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 116` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `Z on 7`, `Z on 8`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (1,2)`, `CZ on (1,4)` and 30 more (5 single-wire, 37 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4769,6 +4914,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01+02+12+012`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 80` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `S on 9`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (1,3)` and 11 more (9 single-wire, 14 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4785,6 +4931,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 108` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `S on 9`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,6)` and 11 more (8 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4804,6 +4951,7 @@ readable copy of exactly these rows.
 - output gate: `0+12`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 7]
+- leading error coefficient: `A_3 = 117` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 2`, `Z on 3`, `Z on 6`, `S† on 7`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (1,4)` and 14 more (6 single-wire, 20 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4827,6 +4975,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 113` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 2`, `Z on 4`, `S† on 5`, `Z on 9`, `CZ on (0,6)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,8)`, `CZ on (1,9)`, `CZ on (2,4)`, `CZ on (2,5)` and 9 more (4 single-wire, 17 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4849,6 +4998,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 8` (4 outputs + 4 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 36]
+- leading error coefficient: `A_2 = 50` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -4865,6 +5015,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+13+23+012+123`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
+- leading error coefficient: `A_3 = 92` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 3`, `Z on 5`, `Z on 6`, `S† on 8`, `Z on 9`, `CZ on (0,2)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (1,5)`, `CZ on (1,6)` and 13 more (7 single-wire, 18 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4883,6 +5034,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+13+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 136` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 2`, `Z on 8`, `Z on 9`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (1,2)` and 37 more (5 single-wire, 44 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4908,6 +5060,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01+02+03+12+13+23+012+013+023+123`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 88` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 2`, `S on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `S on 10`, `CZ on (0,1)`, `CZ on (0,4)` and 18 more (10 single-wire, 20 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4924,6 +5077,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 112` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `S on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `S on 10`, `CZ on (0,2)`, `CZ on (0,4)` and 22 more (10 single-wire, 24 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -4946,6 +5100,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
+- leading error coefficient: `A_3 = 132` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 2`, `S on 3`, `S† on 4`, `Z on 7`, `Z on 9`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,8)` and 16 more (7 single-wire, 21 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35; `T⁵` on columns 0, 4, 5; `T†` on columns 1, 2, 3, 6, 7, 8, `T` on the rest
 - discovery: pre-existing
@@ -5032,6 +5187,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+012+034`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
+- leading error coefficient: `A_3 = 112` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `Z on 2`, `S† on 3`, `Z on 6`, `Z on 7`, `S† on 9`, `Z on 10`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,10)`, `CZ on (0,11)` and 16 more (8 single-wire, 20 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5071,6 +5227,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 100` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `Z on 2`, `S† on 3`, `S† on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `S on 11`, `CZ on (0,1)` and 29 more (11 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5087,6 +5244,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+12+34+012`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 120` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `Z on 3`, `S on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `S on 11`, `CZ on (0,1)`, `CZ on (0,3)` and 26 more (10 single-wire, 28 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5112,6 +5270,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+01+02+03+04+05+12+13+14+15+23+24+25+34+35+45+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
+- leading error coefficient: `A_3 = 108` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `S on 8`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)` and 16 more (7 single-wire, 21 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5128,6 +5287,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+01+02+12+34+35+45+012+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 120` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 3`, `S† on 4`, `S† on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `S on 12`, `CZ on (0,7)` and 29 more (11 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5157,6 +5317,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+01+02+03+12+13+23+45+46+56+012+013+023+123+456`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
+- leading error coefficient: `A_3 = 136` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 9`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,9)` and 6 more (8 single-wire, 10 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5192,6 +5353,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 9` (1 output + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 120` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`
 - or no correction at all, with rotations run as `T⁵` on every rotation
 - discovery: AI search
@@ -5209,6 +5371,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 6` (2 outputs + 4 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 45` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -5225,6 +5388,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
+- leading error coefficient: `A_3 = 71` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 4`, `S on 6`, `Z on 9`, `CZ on (0,3)`, `CZ on (0,9)`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,6)`, `CZ on (2,4)`, `CZ on (2,6)`, `CZ on (2,7)` and 9 more (4 single-wire, 17 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -5241,6 +5405,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 25]
+- leading error coefficient: `A_3 = 77` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -5258,6 +5423,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 28]
+- leading error coefficient: `A_3 = 112` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -5276,6 +5442,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 9` (1 output + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 35]
+- leading error coefficient: `A_3 = 43` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -5292,6 +5459,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 7` (2 outputs + 5 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [16, 26]
+- leading error coefficient: `A_2 = 15` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -5308,6 +5476,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 19]
+- leading error coefficient: `A_3 = 102` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -5324,6 +5493,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 7` (1 output + 6 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 115` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -5341,6 +5511,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 8` (2 outputs + 6 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 205` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (1,5)`, `CZ on (1,7)`
 - or no correction at all, with rotations run as `T³` on columns 11, 19, 23, 24, 26, 29, 35, 36, 37, 38, 39, 41 and 2 more; `T⁵` on column 1; `T†` on columns 3, 7, 15, `T` on the rest
 - discovery: AI search
@@ -5357,6 +5528,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 244` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (2,4)`, `CZ on (2,5)`, `CZ on (2,6)`, `CZ on (2,7)`, `CZ on (2,8)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5377,6 +5549,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+012`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
+- leading error coefficient: `A_3 = 253` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (1,4)`, `CZ on (1,6)`, `CZ on (1,8)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5393,6 +5566,7 @@ readable copy of exactly these rows.
 - output gate: `0+012`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
+- leading error coefficient: `A_3 = 231` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`
 - or no correction at all, with rotations run as `T³` on columns 4, 14, 23, 24, 27, 28, 38, 42, 44, 45, 46; `T†` on columns 1, 7, 31, `T` on the rest
 - discovery: pre-existing
@@ -5409,6 +5583,7 @@ readable copy of exactly these rows.
 - output gate: `0+12`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 235` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (1,3)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (2,6)`, `CZ on (2,8)`
 - or no correction at all, with rotations run as `T³` on columns 1, 11, 17, 19, 21, 22, 23, 24, 25, 27, 33, 34 and 6 more; `T†` on columns 5, 7, `T` on the rest
 - discovery: pre-existing
@@ -5425,6 +5600,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 241` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 2`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (2,4)`, `CZ on (2,5)`, `CZ on (2,7)` and 1 more (2 single-wire, 11 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 4, 12, 15, 18, 19, 20, 21, 22, 28, 29, 31 and 7 more; `T⁵` on column 8; `T†` on columns 1, 2, 7, `T` on the rest
 - discovery: AI search
@@ -5444,6 +5620,7 @@ readable copy of exactly these rows.
 - output gate: `01+23+012`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 255` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S on 2`, `Z on 3`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)` and 13 more (3 single-wire, 22 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5460,6 +5637,7 @@ readable copy of exactly these rows.
 - output gate: `01+023`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 262` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (2,4)`, `CZ on (2,6)`, `CZ on (3,4)`, `CZ on (3,6)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5476,6 +5654,7 @@ readable copy of exactly these rows.
 - output gate: `01+23`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 253` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `S on 3`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,9)`, `CZ on (2,3)`, `CZ on (2,6)` and 4 more (4 single-wire, 12 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -5493,6 +5672,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+23+012+123`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 264` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 2`, `S† on 3`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (1,2)`, `CZ on (1,5)`, `CZ on (1,7)`, `CZ on (2,3)` and 5 more (3 single-wire, 14 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5509,6 +5689,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+023`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 253` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (1,3)`, `CZ on (1,4)` and 1 more (2 single-wire, 11 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5525,6 +5706,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+23+023`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 254` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `S† on 2`, `S on 3`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,9)`, `CZ on (1,2)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,7)` and 8 more (4 single-wire, 16 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5541,6 +5723,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+123`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
+- leading error coefficient: `A_3 = 253` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,7)`, `CZ on (1,8)`, `CZ on (1,9)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5557,6 +5740,7 @@ readable copy of exactly these rows.
 - output gate: `0+13+012+123`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 255` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S† on 3`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,6)`, `CZ on (1,7)` and 6 more (3 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5573,6 +5757,7 @@ readable copy of exactly these rows.
 - output gate: `0+13+012`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 255` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (1,8)`, `CZ on (1,9)` and 1 more (3 single-wire, 10 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5589,6 +5774,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+123`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 271` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 2`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (2,3)`, `CZ on (2,5)`, `CZ on (2,6)`, `CZ on (2,7)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5605,6 +5791,7 @@ readable copy of exactly these rows.
 - output gate: `0+123`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 259` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `Z on 2`, `S† on 3`, `CZ on (0,1)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,5)` and 6 more (4 single-wire, 14 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -5622,6 +5809,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 264` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S† on 3`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,6)`, `CZ on (1,7)` and 6 more (4 single-wire, 14 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -5639,6 +5827,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 18]
+- leading error coefficient: `A_3 = 250` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 2`, `S on 3`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (1,4)`, `CZ on (1,6)`, `CZ on (1,8)`
 - or no correction at all, with rotations run as `T³` on columns 1, 6, 18, 19, 20, 21, 23, 26, 29, 30, 34, 36 and 5 more; `T⁵` on columns 3, 12, 22, 28; `T†` on columns 2, 4, 17, `T` on the rest
 - discovery: pre-existing
@@ -5660,6 +5849,7 @@ readable copy of exactly these rows.
 - output gate: `012+034`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 260` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (0,10)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5677,6 +5867,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+4+01+04+14+012+013+023+024+124+234`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 267` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 3`, `Z on 4`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (1,2)`, `CZ on (1,8)`, `CZ on (1,9)`, `CZ on (1,10)`, `CZ on (2,3)`, `CZ on (2,8)` and 6 more (3 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5697,6 +5888,7 @@ readable copy of exactly these rows.
 - output gate: `0+012+034`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
+- leading error coefficient: `A_3 = 255` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `CZ on (0,5)`, `CZ on (0,9)`, `CZ on (0,10)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5714,6 +5906,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+012+034`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 275` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S on 2`, `S† on 3`, `S† on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,2)`, `CZ on (1,5)`, `CZ on (1,6)` and 8 more (5 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5731,6 +5924,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+012+134`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 275` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `CZ on (1,3)`, `CZ on (1,5)`, `CZ on (1,7)`, `CZ on (1,8)`, `CZ on (1,9)`, `CZ on (1,10)`, `CZ on (2,9)`, `CZ on (4,7)`, `CZ on (4,8)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5748,6 +5942,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 275` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S on 2`, `S† on 3`, `S† on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)` and 17 more (5 single-wire, 24 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -5769,6 +5964,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01+02+03+12+13+23+012+013+014+015+023+024+025+034+035+045+123+124+125+145`
 - `N = 12` (6 outputs + 6 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 275` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 2`, `S† on 3`, `S on 4`, `S on 5`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (1,3)`, `CZ on (1,4)` and 17 more (6 single-wire, 23 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5787,6 +5983,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 8` (1 output + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 4]
+- leading error coefficient: `A_3 = 70` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S on 7`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (2,3)`, `CZ on (2,5)` and 2 more (2 single-wire, 12 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 4, 21, 24, 25, 28, 29, 31, 32, 37, 38, 41 and 4 more; `T⁵` on columns 1, 8, 34; `T†` on columns 3, 14, `T` on the rest
 - discovery: AI search
@@ -5803,6 +6000,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 11` (1 output + 10 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 6, 7]
+- leading error coefficient: `A_4 = 143` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: none
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
@@ -5820,6 +6018,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 14` (2 outputs + 12 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 73` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `Z on 8`, `Z on 9`, `Z on 10`, `Z on 11`, `CZ on (1,8)`, `CZ on (8,9)`, `CZ on (10,11)`
 - or no correction at all, with rotations run as `T³` on columns 8, 9, 20, 22, 24, 26, 30, 31, 32, 33, 34, 35 and 8 more; `T†` on columns 0, 1, 4, `T` on the rest
 - discovery: AI search
@@ -5836,6 +6035,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 9]
+- leading error coefficient: `A_4 = 792` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `CZ on (0,1)`
 - or no correction at all, with rotations run as `T³` on columns 11, 21, 24, 26, 30, 31, 32, 33, 34, 35, 36, 37 and 10 more; `T⁵` on columns 1, 2, 3, 6, 8, 12, `T` on the rest
 - discovery: AI search
@@ -5857,6 +6057,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
+- leading error coefficient: `A_3 = 224` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `CZ on (1,3)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (2,5)`, `CZ on (2,6)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -5873,6 +6074,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 7]
+- leading error coefficient: `A_3 = 115` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 3`, `S on 9`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,7)` and 14 more (3 single-wire, 23 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -5889,6 +6091,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+012`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 824` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 13, 16, 17, 20, 21, 22, 26, 27, 29, 33 and 8 more; `T⁵` on columns 5, 6, 10; `T†` on columns 1, 4, `T` on the rest
 - discovery: AI search
@@ -5908,6 +6111,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 8]
+- leading error coefficient: `A_4 = 2880` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `CZ on (1,3)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (2,5)`, `CZ on (2,6)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -5925,6 +6129,7 @@ readable copy of exactly these rows.
 - output gate: `01+23`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 6]
+- leading error coefficient: `A_3 = 244` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S† on 2`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (1,8)`, `CZ on (1,9)`, `CZ on (2,3)` and 6 more (2 single-wire, 16 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5945,6 +6150,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
+- leading error coefficient: `A_3 = 140` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `S† on 2`, `Z on 3`, `S on 6`, `S† on 7`, `S on 10`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,9)`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,6)` and 24 more (6 single-wire, 30 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 4, 14, 20, 21, 23, 24, 25, 29, 31, 32, 33 and 7 more; `T⁵` on columns 2, 6, 26; `T†` on columns 0, 5, 11, `T` on the rest
 - discovery: AI search
@@ -5962,6 +6168,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+012+013+023`
 - `N = 12` (4 outputs + 8 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 840` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - or no correction at all, with rotations run as `T³` on columns 4, 5, 14, 17, 20, 21, 22, 24, 29, 30, 32, 33 and 7 more; `T⁵` on columns 10, 12; `T†` on columns 1, 6, 13, `T` on the rest
 - discovery: AI search
@@ -5981,6 +6188,7 @@ readable copy of exactly these rows.
 - output gate: `01+23+012+023+134`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
+- leading error coefficient: `A_3 = 248` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `Z on 2`, `Z on 3`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (2,3)`, `CZ on (2,4)` and 4 more (3 single-wire, 13 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -5998,6 +6206,7 @@ readable copy of exactly these rows.
 - output gate: `01+34+012+023+234`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
+- leading error coefficient: `A_3 = 236` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S on 3`, `Z on 4`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,4)`, `CZ on (1,6)`, `CZ on (1,8)`, `CZ on (2,4)`, `CZ on (3,6)`, `CZ on (3,8)` and 3 more (4 single-wire, 11 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6015,6 +6224,7 @@ readable copy of exactly these rows.
 - output gate: `01+012+034`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
+- leading error coefficient: `A_3 = 256` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,8)`, `CZ on (3,4)`, `CZ on (4,5)`, `CZ on (4,6)` and 2 more (1 single-wire, 13 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6032,6 +6242,7 @@ readable copy of exactly these rows.
 - output gate: `01+34+012+234`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
+- leading error coefficient: `A_3 = 256` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 3`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,7)`, `CZ on (1,8)` and 5 more (2 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6049,6 +6260,7 @@ readable copy of exactly these rows.
 - output gate: `01+023+124`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 11, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
+- leading error coefficient: `A_3 = 248` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,8)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6066,6 +6278,7 @@ readable copy of exactly these rows.
 - output gate: `01+24+023`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 17, 33]
+- leading error coefficient: `A_3 = 248` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S on 2`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (1,3)`, `CZ on (1,7)`, `CZ on (2,4)`, `CZ on (2,7)`, `CZ on (3,4)`, `CZ on (4,6)`, `CZ on (4,7)` and 1 more (3 single-wire, 10 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6083,6 +6296,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+23+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 4]
+- leading error coefficient: `A_3 = 140` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 5`, `S on 11`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,8)` and 26 more (6 single-wire, 32 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6100,6 +6314,7 @@ readable copy of exactly these rows.
 - output gate: `012+034`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 3120` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (0,11)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6117,6 +6332,7 @@ readable copy of exactly these rows.
 - output gate: `01+35+012+023+034+145+235`
 - `N = 12` (6 outputs + 6 checks), exact minimal T-count 12, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
+- leading error coefficient: `A_3 = 240` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (1,3)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (1,8)` and 8 more (1 single-wire, 19 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6134,6 +6350,7 @@ readable copy of exactly these rows.
 - output gate: `01+012+034+135`
 - `N = 12` (6 outputs + 6 checks), exact minimal T-count 12, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
+- leading error coefficient: `A_3 = 256` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,5)`, `CZ on (1,9)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6151,6 +6368,7 @@ readable copy of exactly these rows.
 - output gate: `01+35+012+034+235`
 - `N = 12` (6 outputs + 6 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
+- leading error coefficient: `A_3 = 256` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 3`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (1,8)` and 6 more (2 single-wire, 16 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6168,6 +6386,7 @@ readable copy of exactly these rows.
 - output gate: `01+023+024+035+123+145`
 - `N = 12` (6 outputs + 6 checks), exact minimal T-count 15, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
+- leading error coefficient: `A_3 = 256` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (1,3)`, `CZ on (1,5)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6185,6 +6404,7 @@ readable copy of exactly these rows.
 - output gate: `01+24+023+145`
 - `N = 12` (6 outputs + 6 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
+- leading error coefficient: `A_3 = 252` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 2`, `Z on 4`, `CZ on (0,2)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,7)`, `CZ on (1,8)` and 4 more (3 single-wire, 13 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6202,6 +6422,7 @@ readable copy of exactly these rows.
 - output gate: `01+012+034+035+046+134+156`
 - `N = 13` (7 outputs + 6 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
+- leading error coefficient: `A_3 = 256` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,6)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6220,6 +6441,7 @@ readable copy of exactly these rows.
 - output gate: `01+35+012+034+156+235`
 - `N = 13` (7 outputs + 6 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 32]
+- leading error coefficient: `A_3 = 256` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 3`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,3)`, `CZ on (1,7)`, `CZ on (1,8)`, `CZ on (3,5)`, `CZ on (3,6)` and 7 more (2 single-wire, 17 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6238,6 +6460,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 12` (1 output + 11 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [3, 20, 26, 27, 28]
+- leading error coefficient: `A_5 = 1819` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: none
 - discovery: pre-existing
 - regime: exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search — a Pareto point of the exhaustive classification of generalised triorthogonal protocols through length 54 (classification/length54/): no protocol with n <= 54, the same CNOT+S output class and the same exact distance has n and S both no larger and one of them smaller, where S counts every matrix row -- the N of this table
@@ -6255,6 +6478,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 10]
+- leading error coefficient: `A_3 = 94` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `Z on 2`, `Z on 4`, `S on 6`, `Z on 7`, `S† on 9`, `S† on 10`, `CZ on (0,10)`, `CZ on (2,6)`, `CZ on (4,6)`, `CZ on (6,7)`
 - or no correction at all, with rotations run as `T³` on columns 2, 4, 6, 13, 15, 21, 23, 24, 27, 29, 32, 34 and 7 more; `T⁵` on column 0; `T†` on columns 1, 8, 12, 18, `T` on the rest
 - discovery: AI search
@@ -6272,6 +6496,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 14` (4 outputs + 10 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
+- leading error coefficient: `A_3 = 140` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `S on 3`, `CZ on (4,5)`, `CZ on (4,6)`, `CZ on (4,9)`, `CZ on (4,10)`, `CZ on (5,6)`, `CZ on (5,7)`, `CZ on (5,10)`, `CZ on (6,7)` and 6 more (4 single-wire, 14 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6291,6 +6516,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 8` (1 output + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
+- leading error coefficient: `A_3 = 97` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `Z on 4`, `Z on 6`, `S† on 7`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (1,4)`, `CZ on (1,6)`, `CZ on (1,7)` and 3 more (5 single-wire, 10 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6307,6 +6533,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
+- leading error coefficient: `A_3 = 141` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `S† on 2`, `Z on 5`, `Z on 7`, `S† on 8`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (1,3)` and 10 more (6 single-wire, 16 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6323,6 +6550,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 16` (3 outputs + 13 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 10]
+- leading error coefficient: `A_3 = 87` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 2`, `Z on 7`, `Z on 8`, `S on 15`, `CZ on (0,7)`, `CZ on (7,8)`
 - or no correction at all, with rotations run as `T³` on columns 1, 11, 12, 15, 25, 28, 30, 32, 34, 36, 39, 41 and 4 more; `T⁵` on columns 0, 13; `T†` on columns 2, 4, 6, 8, 18, 19, 22, 37, `T` on the rest
 - discovery: AI search
@@ -6339,6 +6567,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 180` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 2`, `S† on 3`, `Z on 5`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,2)`, `CZ on (1,4)` and 14 more (6 single-wire, 20 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6355,6 +6584,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 154` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `Z on 3`, `S on 4`, `Z on 5`, `Z on 8`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,7)`, `CZ on (1,9)` and 21 more (7 single-wire, 26 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6371,6 +6601,7 @@ readable copy of exactly these rows.
 - output gate: `01+34+012`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 170` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S on 3`, `S on 4`, `S on 5`, `Z on 6`, `Z on 9`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)` and 30 more (8 single-wire, 34 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6388,6 +6619,7 @@ readable copy of exactly these rows.
 - output gate: `01+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 193` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `Z on 2`, `S on 3`, `S on 4`, `S† on 5`, `Z on 8`, `Z on 10`, `S† on 11`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,8)` and 18 more (9 single-wire, 21 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6404,6 +6636,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+24+012+013+024+134`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 165` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S† on 3`, `S on 5`, `Z on 6`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,10)`, `CZ on (0,11)` and 36 more (6 single-wire, 42 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6421,6 +6654,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+34+012+034`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 173` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S† on 2`, `S on 3`, `S on 4`, `S on 5`, `Z on 6`, `Z on 9`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)` and 31 more (8 single-wire, 35 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6438,6 +6672,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 182` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 2`, `S on 3`, `S on 4`, `S† on 5`, `Z on 8`, `Z on 10`, `S† on 11`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,8)` and 24 more (9 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6455,6 +6690,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+012+013+123`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 170` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 2`, `S on 4`, `S on 5`, `Z on 6`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)` and 37 more (7 single-wire, 42 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6472,6 +6708,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+012+034`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 192` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S on 2`, `S† on 3`, `S on 4`, `S† on 5`, `Z on 8`, `Z on 10`, `S† on 11`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,8)` and 17 more (8 single-wire, 21 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6489,6 +6726,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+012+034+134`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 184` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 2`, `S on 3`, `S on 4`, `S† on 5`, `Z on 8`, `Z on 10`, `S† on 11`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,5)`, `CZ on (0,6)` and 24 more (8 single-wire, 28 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6506,6 +6744,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+012`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 162` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `Z on 6`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)` and 33 more (8 single-wire, 37 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6523,6 +6762,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 17]
+- leading error coefficient: `A_3 = 189` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 3`, `S on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `S† on 8`, `Z on 9`, `S† on 10`, `S† on 11`, `CZ on (2,5)` and 25 more (11 single-wire, 26 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 4, 19, 25, 26, 28, 32, 33, 34, 35, 41 and 4 more; `T⁵` on columns 0, 3, 13; `T†` on columns 7, 8, 10, 17, 21, `T` on the rest
 - discovery: pre-existing
@@ -6543,6 +6783,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+012+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 173` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S† on 5`, `S on 6`, `Z on 7`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)` and 38 more (9 single-wire, 41 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6560,6 +6801,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+012+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 193` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S† on 2`, `S† on 3`, `S on 4`, `Z on 5`, `S† on 6`, `Z on 9`, `Z on 11`, `S† on 12`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)` and 23 more (9 single-wire, 26 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6577,6 +6819,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 8` (1 output + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
+- leading error coefficient: `A_3 = 96` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 3`, `Z on 5`, `CZ on (0,6)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (2,3)`, `CZ on (3,7)`
 - or no correction at all, with rotations run as `T³` on columns 25, 27, 32, 34, 36, 38, 41, 42, 45, 46, 48, 51; `T⁵` on columns 12, 28; `T†` on columns 0, 1, 4, 7, `T` on the rest
 - discovery: AI search
@@ -6593,6 +6836,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 10` (1 output + 9 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 6, 51]
+- leading error coefficient: `A_4 = 257` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `S† on 6`, `S† on 7`, `S† on 8`, `S† on 9`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)` and 33 more (9 single-wire, 36 CZ in all)
 - or no correction at all, with rotations run as `T³` on column 51; `T⁵` on columns 4, 12, 13, 15, 24, `T` on the rest
 - discovery: pre-existing
@@ -6612,6 +6856,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 18]
+- leading error coefficient: `A_3 = 130` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `Z on 8`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (2,6)`, `CZ on (3,7)`, `CZ on (4,5)`, `CZ on (4,6)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6628,6 +6873,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
+- leading error coefficient: `A_3 = 136` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `Z on 4`, `Z on 6`, `CZ on (0,3)`, `CZ on (0,8)`, `CZ on (1,7)`, `CZ on (2,3)`, `CZ on (2,4)`, `CZ on (2,7)`, `CZ on (2,8)`, `CZ on (3,4)` and 1 more (4 single-wire, 9 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 19, 20, 23, 24, 25, 26, 31, 33, 38, 39, 42 and 3 more; `T⁵` on columns 2, 3; `T†` on columns 0, 1, `T` on the rest
 - discovery: AI search
@@ -6645,6 +6891,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+01`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 51]
+- leading error coefficient: `A_4 = 289` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `S† on 6`, `S† on 7`, `S† on 8`, `S† on 9`, `S† on 10`, `CZ on (0,1)`, `CZ on (2,3)`, `CZ on (2,4)` and 34 more (9 single-wire, 37 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6663,6 +6910,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
+- leading error coefficient: `A_3 = 155` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S on 2`, `Z on 5`, `Z on 7`, `CZ on (0,1)`, `CZ on (1,3)`, `CZ on (2,3)`, `CZ on (2,4)`, `CZ on (2,8)`, `CZ on (2,9)`, `CZ on (3,4)` and 5 more (5 single-wire, 12 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6679,6 +6927,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 162` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `Z on 3`, `Z on 6`, `Z on 9`, `Z on 10`, `CZ on (3,6)`, `CZ on (3,9)`, `CZ on (4,9)`, `CZ on (5,7)`, `CZ on (6,8)`
 - or no correction at all, with rotations run as `T³` on columns 2, 9, 14, 16, 19, 22, 23, 26, 28, 34, 35, 36 and 8 more; `T⁵` on columns 0, 7, 15; `T†` on columns 1, 4, 8, 11, `T` on the rest
 - discovery: AI search
@@ -6697,6 +6946,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+24+023+124`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
+- leading error coefficient: `A_3 = 164` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S† on 3`, `S† on 4`, `S† on 7`, `S† on 8`, `S on 9`, `S on 10`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,6)` and 26 more (8 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6714,6 +6964,7 @@ readable copy of exactly these rows.
 - output gate: `0+13+24+012+013+024`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
+- leading error coefficient: `A_3 = 169` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 3`, `S† on 4`, `Z on 7`, `Z on 9`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,10)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,5)`, `CZ on (2,3)` and 13 more (5 single-wire, 20 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6731,6 +6982,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+012+123`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
+- leading error coefficient: `A_3 = 170` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S† on 2`, `S on 3`, `S† on 4`, `Z on 7`, `Z on 9`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,10)` and 16 more (7 single-wire, 21 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6748,6 +7000,7 @@ readable copy of exactly these rows.
 - output gate: `0+13+24+012`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
+- leading error coefficient: `A_3 = 173` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 3`, `S† on 4`, `Z on 7`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,7)` and 12 more (4 single-wire, 20 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6765,6 +7018,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+123`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
+- leading error coefficient: `A_3 = 174` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S† on 2`, `S on 4`, `Z on 5`, `S† on 7`, `S† on 8`, `S† on 9`, `Z on 10`, `Z on 11`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)` and 30 more (9 single-wire, 33 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6782,6 +7036,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
+- leading error coefficient: `A_3 = 173` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `S† on 3`, `S on 4`, `Z on 7`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)` and 24 more (7 single-wire, 29 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6799,6 +7054,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 4]
+- leading error coefficient: `A_3 = 188` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S on 2`, `S on 3`, `S† on 4`, `S† on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,9)`, `CZ on (0,10)` and 16 more (8 single-wire, 20 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6815,6 +7071,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+23+45+123+145`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
+- leading error coefficient: `A_3 = 176` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S on 2`, `S† on 3`, `S† on 4`, `S on 5`, `Z on 8`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)` and 30 more (8 single-wire, 34 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6832,6 +7089,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 4]
+- leading error coefficient: `A_3 = 200` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 2`, `S on 3`, `S on 4`, `S† on 5`, `S† on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)` and 24 more (9 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -6849,6 +7107,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 11` (1 output + 10 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [20, 24, 26, 27, 36]
+- leading error coefficient: `A_5 = 3149` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `S† on 6`, `S† on 7`, `Z on 9`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (2,6)`, `CZ on (2,7)` and 2 more (6 single-wire, 8 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 24, 26, 42, 43, 45, 48, 49, 50, 51, 52; `T⁵` on columns 4, 5, `T` on the rest
 - discovery: pre-existing
@@ -6866,6 +7125,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 17` (3 outputs + 14 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 10]
+- leading error coefficient: `A_3 = 101` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 2`, `Z on 7`, `Z on 8`, `CZ on (0,7)`, `CZ on (7,8)`
 - or no correction at all, with rotations run as `T³` on columns 1, 25, 28, 30, 32, 34, 36, 37, 39, 41, 43, 45 and 3 more; `T⁵` on column 0; `T†` on columns 2, 4, 6, 8, 11, 12, 15, 18, 19, 22, `T` on the rest
 - discovery: AI search
@@ -6882,6 +7142,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 13` (5 outputs + 8 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 132` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S† on 3`, `S on 4`, `S† on 8`, `S† on 9`, `S on 10`, `S on 11`, `S on 12`, `CZ on (2,4)`, `CZ on (2,6)` and 17 more (10 single-wire, 19 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6898,6 +7159,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 10]
+- leading error coefficient: `A_3 = 64` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S† on 2`, `Z on 3`, `S† on 4`, `S† on 5`, `Z on 6`, `S on 7`, `S on 8`, `S on 9`, `CZ on (0,4)`, `CZ on (0,5)` and 14 more (10 single-wire, 16 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6914,6 +7176,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 12` (4 outputs + 8 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 134` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 2`, `S on 3`, `Z on 7`, `Z on 9`, `S on 10`, `Z on 11`, `CZ on (0,4)`, `CZ on (1,4)`, `CZ on (1,8)`, `CZ on (1,9)`, `CZ on (1,11)` and 8 more (7 single-wire, 13 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6930,6 +7193,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 15, 18]
+- leading error coefficient: `A_3 = 190` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `CZ on (0,1)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)` and 9 more (7 single-wire, 14 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6947,6 +7211,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 16` (3 outputs + 13 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 101` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 2`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `S on 15`, `CZ on (0,3)`, `CZ on (3,8)`, `CZ on (4,5)`, `CZ on (4,6)` and 4 more (8 single-wire, 8 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6963,6 +7228,7 @@ readable copy of exactly these rows.
 - output gate: `0+123`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 13]
+- leading error coefficient: `A_3 = 207` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)` and 15 more (8 single-wire, 19 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -6979,6 +7245,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 224` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 3`, `Z on 7`, `Z on 8`, `CZ on (0,2)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,10)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)` and 13 more (4 single-wire, 21 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 13, 14, 15, 16, 20, 22, 25, 29, 30, 31, 33, 36 and 10 more; `T⁵` on column 0; `T†` on columns 2, 5, 7, 11, `T` on the rest
 - discovery: AI search
@@ -6995,6 +7262,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 25, 26]
+- leading error coefficient: `A_3 = 223` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S† on 4`, `S on 5`, `S on 6`, `S on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `Z on 11` and 21 more (12 single-wire, 21 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 10, 15, 19, 20, 21, 29, 32, 33, 41, 42, 43, 46 and 7 more; `T⁵` on columns 5, 7, 13; `T†` on columns 0, 1, 2, 3, 6, 16, `T` on the rest
 - discovery: AI search
@@ -7014,6 +7282,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+01+02+03+04+05+12+13+14+15+23+24+25+34+35+012+013+014+015+023+024+025+034+035+123+124+135+245+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 239` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `Z on 6`, `Z on 7`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,10)` and 16 more (4 single-wire, 24 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7031,6 +7300,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+01+02+03+04+12+13+14+23+24+25+34+012+013+014+015+023+024+035+045+123+124+234+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 239` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `Z on 6`, `Z on 7`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,9)` and 15 more (8 single-wire, 19 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7048,6 +7318,7 @@ readable copy of exactly these rows.
 - output gate: `0+2+4+01+02+03+14+012+013+014+015+023+024+035+124+125+134+135+145+234+235+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 303` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `Z on 2`, `Z on 3`, `S† on 5`, `Z on 6`, `Z on 7`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)` and 30 more (7 single-wire, 35 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7065,6 +7336,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+12+14+23+34+012+013+024+035+045+135+245+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 287` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `S† on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `CZ on (0,1)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (1,4)`, `CZ on (1,5)` and 15 more (7 single-wire, 20 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7082,6 +7354,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+4+5+01+04+012+013+023+024+025+034+035+124+125+135+145+235+245+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 207` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)` and 19 more (7 single-wire, 24 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7099,6 +7372,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+01+02+03+04+05+12+13+14+15+23+24+25+012+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 239` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 2`, `S† on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 12`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,10)`, `CZ on (0,11)` and 22 more (7 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7116,6 +7390,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+5+01+02+03+15+25+35+045+124+134+234`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 207` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S† on 2`, `S† on 5`, `Z on 6`, `Z on 7`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (1,2)` and 15 more (6 single-wire, 21 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7133,6 +7408,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
+- leading error coefficient: `A_3 = 215` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S† on 6`, `S† on 7`, `S on 8`, `S† on 9`, `S† on 10`, `Z on 11` and 10 more (12 single-wire, 10 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7151,6 +7427,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
+- leading error coefficient: `A_3 = 219` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `Z on 6`, `S† on 7`, `S† on 8`, `S on 9`, `S† on 10`, `S† on 11` and 16 more (13 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7171,6 +7448,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 18]
+- leading error coefficient: `A_3 = 136` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 5`, `Z on 6`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,7)`, `CZ on (1,3)`, `CZ on (1,5)`, `CZ on (1,7)`, `CZ on (1,8)`, `CZ on (5,6)`
 - or no correction at all, with rotations run as `T³` on columns 1, 8, 11, 16, 21, 23, 24, 30, 31, 33, 35, 37 and 7 more; `T⁵` on columns 0, 4, 6; `T†` on column 2, `T` on the rest
 - discovery: AI search
@@ -7187,6 +7465,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 6` (3 outputs + 3 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 7]
+- leading error coefficient: `A_2 = 196` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`
 - or no correction at all, with rotations run as `T³` on columns 7, 10, 13, 49, `T` on the rest
 - discovery: pre-existing
@@ -7203,6 +7482,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+023+123`
 - `N = 7` (4 outputs + 3 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 16]
+- leading error coefficient: `A_2 = 196` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -7219,6 +7499,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
+- leading error coefficient: `A_3 = 252` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (2,4)`, `CZ on (2,5)` and 7 more (8 single-wire, 11 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 7, 10, 21, 24, 25, 29, 32, 36, 37, 38, 39 and 7 more; `T⁵` on columns 6, 13, 19; `T†` on columns 3, 26, 27, `T` on the rest
 - discovery: AI search
@@ -7236,6 +7517,7 @@ readable copy of exactly these rows.
 - output gate: `012+034`
 - `N = 13` (5 outputs + 8 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 4, 5]
+- leading error coefficient: `A_4 = 3128` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `Z on 2`, `S† on 4`, `Z on 5`, `Z on 6`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,10)`, `CZ on (1,2)` and 26 more (6 single-wire, 32 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7253,6 +7535,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+05+12+13+14+15+23+24+25+34+35+45+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 9` (6 outputs + 3 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 7]
+- leading error coefficient: `A_2 = 196` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
 - or no correction at all, with rotations run as `T³` on columns 50, 51, 52, 53, 54, 55; `T†` on columns 0, 7, 10, 13, 16, 19, 22, `T` on the rest
 - discovery: pre-existing
@@ -7270,6 +7553,7 @@ readable copy of exactly these rows.
 - output gate: `0+3+4+5+01+02+23+24+25+34+35+45+012+013+014+015+034+134+234+235+245`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 12, 16]
+- leading error coefficient: `A_3 = 224` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 3`, `S on 4`, `S† on 5`, `Z on 6`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,10)`, `CZ on (0,11)` and 15 more (6 single-wire, 21 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7287,6 +7571,7 @@ readable copy of exactly these rows.
 - output gate: `0+2+3+4+5+01+02+03+04+12+13+14+15+23+24+34+012+013+014+025+035+045+123+124+134+235+245+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 20, 21]
+- leading error coefficient: `A_3 = 228` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `Z on 2`, `Z on 4`, `S† on 5`, `S† on 6`, `Z on 7`, `Z on 12`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (0,11)`, `CZ on (1,2)` and 23 more (8 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7304,6 +7589,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 7, 8]
+- leading error coefficient: `A_3 = 212` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S on 2`, `S on 4`, `S on 5`, `S† on 8`, `S on 9`, `S on 10`, `Z on 11`, `S on 12`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)` and 30 more (9 single-wire, 33 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7321,6 +7607,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6`
 - `N = 10` (7 outputs + 3 checks)
 - distance: exactly 2, witnessed by the fault on columns [0, 7]
+- leading error coefficient: `A_2 = 196` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -7339,6 +7626,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 15` (8 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 224` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `Z on 12`
 - or no correction at all, with rotations run as `T³` on columns 0, 8, 9, 11, 14, 16, 23, 24, 27, 30, 31, 34 and 8 more; `T⁵` on columns 1, 7, 21, 28, 35, 42; `T†` on columns 2, 4, 18, 49, `T` on the rest
 - discovery: AI search
@@ -7357,6 +7645,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 21]
+- leading error coefficient: `A_3 = 118` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `S† on 3`, `S† on 4`, `Z on 5`, `Z on 6`, `S on 7`, `S† on 8`, `S† on 9`, `Z on 10`, `CZ on (0,1)` and 24 more (11 single-wire, 25 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 6, 8, 17, 18, 20, 23, 24, 26, 28, 30, 35, 36 and 12 more; `T⁵` on columns 1, 4; `T†` on columns 3, 15, 19, `T` on the rest
 - discovery: AI search
@@ -7373,6 +7662,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 13` (5 outputs + 8 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 171` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `S on 3`, `S on 4`, `S† on 5`, `Z on 6`, `S on 7`, `S† on 9`, `S on 10`, `S† on 12`, `CZ on (1,5)`, `CZ on (1,6)` and 7 more (10 single-wire, 9 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 8, 21, 22, 23, 24, 25, 26, 28, 29, 31, 35 and 9 more; `T⁵` on columns 0, 7, 27; `T†` on columns 1, 4, 9, 20, 34, `T` on the rest
 - discovery: AI search
@@ -7389,6 +7679,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6`
 - `N = 11` (7 outputs + 4 checks)
 - distance: exactly 2, witnessed by the fault on columns [8, 14]
+- leading error coefficient: `A_2 = 147` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -7407,6 +7698,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 19` (4 outputs + 15 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 126` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 10`
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 4, 30, 32, 34, 36, 38, 40, 42, 44, 46 and 5 more; `T⁵` on column 2; `T†` on columns 7, 8, 11, 14, 15, 18, 21, 22, 25, 28, `T` on the rest
 - discovery: AI search
@@ -7423,6 +7715,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 10` (6 outputs + 4 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 50]
+- leading error coefficient: `A_2 = 113` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -7439,6 +7732,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 14` (6 outputs + 8 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 10]
+- leading error coefficient: `A_3 = 250` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S† on 2`, `S† on 4`, `S† on 5`, `S† on 7`, `S† on 9`, `Z on 10`, `Z on 11`, `S on 12`, `CZ on (0,10)`, `CZ on (0,11)` and 24 more (10 single-wire, 26 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7455,6 +7749,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 328` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 3`, `Z on 10`, `CZ on (0,3)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,7)` and 11 more (4 single-wire, 19 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7471,6 +7766,7 @@ readable copy of exactly these rows.
 - output gate: `01+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 338` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 3`, `S† on 4`, `Z on 6`, `Z on 11`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,2)` and 20 more (4 single-wire, 28 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7487,6 +7783,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+23+012+023+134`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 259` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 7`, `S† on 8`, `S on 9`, `Z on 11`, `CZ on (0,2)`, `CZ on (0,5)` and 31 more (10 single-wire, 33 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7504,6 +7801,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+012+134`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 253` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `Z on 3`, `S on 4`, `Z on 5`, `S on 6`, `S† on 7`, `S† on 8`, `Z on 10`, `S on 11`, `CZ on (0,1)` and 31 more (11 single-wire, 32 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7521,6 +7819,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+34+012+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 263` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `Z on 2`, `S† on 3`, `S† on 5`, `S on 6`, `S on 8`, `S on 9`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)` and 30 more (9 single-wire, 33 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7538,6 +7837,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+24+023`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 247` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S on 2`, `S on 4`, `S on 5`, `Z on 6`, `S† on 8`, `S† on 9`, `Z on 10`, `S† on 11`, `CZ on (0,3)`, `CZ on (0,4)` and 27 more (10 single-wire, 29 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7555,6 +7855,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+012+013+024+123`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 254` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `Z on 4`, `S on 9`, `S on 11`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,9)`, `CZ on (0,10)` and 33 more (6 single-wire, 39 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7572,6 +7873,7 @@ readable copy of exactly these rows.
 - output gate: `0+13+24+012+013+024+123`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 251` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `Z on 3`, `S on 4`, `S† on 5`, `S on 7`, `Z on 8`, `S† on 9`, `S on 11`, `CZ on (0,1)`, `CZ on (0,2)` and 34 more (10 single-wire, 36 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7589,6 +7891,7 @@ readable copy of exactly these rows.
 - output gate: `0+13+012+134`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 257` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `S on 4`, `Z on 5`, `S on 6`, `Z on 8`, `S† on 9`, `S on 10`, `S on 11`, `CZ on (0,3)`, `CZ on (0,4)` and 30 more (10 single-wire, 32 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7606,6 +7909,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 322` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S† on 2`, `Z on 3`, `Z on 11`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (0,11)`, `CZ on (1,5)` and 15 more (5 single-wire, 22 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7623,6 +7927,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 16` (5 outputs + 11 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 225` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 12`, `S on 13`, `S on 14`, `S on 15`, `CZ on (0,1)`, `CZ on (0,5)`, `CZ on (0,6)` and 22 more (9 single-wire, 25 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 9, 10, 14, 25, 26, 27, 28, 39, 40, 41, 42, 43 and 7 more; `T⁵` on column 2; `T†` on columns 3, 4, 15, 16, 17, 29, 30, 31, `T` on the rest
 - discovery: AI search
@@ -7640,6 +7945,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+4+5+01+02+24+25+012+013+014+015+023+034+035+124+135+145+235+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 13, 14]
+- leading error coefficient: `A_3 = 257` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `S on 3`, `S† on 4`, `S on 5`, `S† on 6`, `Z on 7`, `S† on 8`, `S† on 9`, `S† on 10`, `S† on 11`, `Z on 12` and 31 more (12 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7657,6 +7963,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+04+13+23+34+012+013+014+023+025+034+035+045+123+135+234+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
+- leading error coefficient: `A_3 = 273` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 2`, `S† on 3`, `S† on 4`, `Z on 8`, `S† on 10`, `S† on 11`, `Z on 12`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,8)` and 27 more (8 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7674,6 +7981,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+12+13+14+15+23+24+25+34+35+45+023+024+025+034+035+045`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 6]
+- leading error coefficient: `A_3 = 260` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S on 2`, `S on 4`, `Z on 5`, `S on 6`, `S on 7`, `S on 8`, `Z on 9`, `S on 10`, `S† on 11`, `S on 12` and 37 more (12 single-wire, 37 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7691,6 +7999,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 341` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S† on 2`, `Z on 3`, `Z on 5`, `Z on 12`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (0,9)` and 30 more (6 single-wire, 36 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7708,6 +8017,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 285` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S on 4`, `S† on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `Z on 11`, `Z on 12`, `S on 13`, `CZ on (2,7)` and 21 more (11 single-wire, 22 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7727,6 +8037,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 10` (1 output + 9 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 3, 35, 36]
+- leading error coefficient: `A_4 = 537` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `CZ on (1,2)`, `CZ on (1,3)` and 25 more (10 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7743,6 +8054,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 6` (2 outputs + 4 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 90` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T³` on columns 52, 53, 54, 55, 56, 57; `T†` on columns 0, 15, 19, `T` on the rest
 - discovery: pre-existing
@@ -7759,6 +8071,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 4, 13, 22]
+- leading error coefficient: `A_4 = 717` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `CZ on (2,3)` and 26 more (11 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7786,6 +8099,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 7` (3 outputs + 4 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 90` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -7802,6 +8116,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 9, 10]
+- leading error coefficient: `A_3 = 259` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `Z on 2`, `S on 3`, `Z on 7`, `Z on 8`, `Z on 10`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)` and 18 more (7 single-wire, 23 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7818,6 +8133,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
+- leading error coefficient: `A_3 = 312` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 8`, `S on 9`, `S on 10`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)` and 12 more (8 single-wire, 16 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 17, 18, 23, 24, 26, 29, 33, 35, 36, 37, 38, 39 and 12 more; `T⁵` on columns 7, 8; `T†` on columns 2, 3, 22, 30, `T` on the rest
 - discovery: AI search
@@ -7835,6 +8151,7 @@ readable copy of exactly these rows.
 - output gate: `01+34+012+034`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 264` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `Z on 2`, `S on 4`, `Z on 9`, `S† on 10`, `Z on 11`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)` and 22 more (7 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7852,6 +8169,7 @@ readable copy of exactly these rows.
 - output gate: `01+012+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 271` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 2`, `Z on 3`, `S† on 4`, `S on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `S on 10`, `CZ on (0,1)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,8)` and 34 more (8 single-wire, 38 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7869,6 +8187,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+34+012+013+124`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
+- leading error coefficient: `A_3 = 283` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 2`, `S† on 3`, `Z on 4`, `S on 5`, `S† on 6`, `S† on 7`, `Z on 8`, `S on 9`, `S on 10`, `Z on 11` and 28 more (12 single-wire, 28 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7886,6 +8205,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+34+012+023+124`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 256` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 3`, `S† on 4`, `S on 6`, `S† on 9`, `S† on 10`, `S† on 11`, `CZ on (0,1)`, `CZ on (0,6)`, `CZ on (0,11)`, `CZ on (1,2)`, `CZ on (1,3)` and 25 more (7 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7903,6 +8223,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+34+012+023+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 262` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 3`, `S on 4`, `Z on 6`, `Z on 8`, `S on 9`, `Z on 10`, `S† on 11`, `CZ on (0,5)`, `CZ on (0,9)`, `CZ on (1,2)`, `CZ on (1,4)` and 33 more (8 single-wire, 37 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7920,6 +8241,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+012+034`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 7]
+- leading error coefficient: `A_3 = 269` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 2`, `S† on 4`, `S† on 5`, `S† on 6`, `S on 7`, `S on 8`, `S† on 10`, `S† on 11`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)` and 33 more (9 single-wire, 36 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7937,6 +8259,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+34+012+123`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 257` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 2`, `Z on 3`, `Z on 4`, `S† on 5`, `Z on 6`, `S on 7`, `S† on 8`, `S on 9`, `Z on 10`, `S on 11`, `CZ on (0,1)`, `CZ on (0,2)` and 29 more (10 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7954,6 +8277,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+23+012+134`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
+- leading error coefficient: `A_3 = 270` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `Z on 2`, `S on 3`, `S† on 4`, `S† on 5`, `Z on 7`, `S on 8`, `Z on 9`, `S on 10`, `Z on 11`, `CZ on (0,1)` and 34 more (11 single-wire, 35 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7971,6 +8295,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+34+012+134`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 9]
+- leading error coefficient: `A_3 = 256` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 3`, `S on 5`, `S† on 6`, `Z on 7`, `S on 8`, `S† on 9`, `Z on 10`, `S on 11`, `CZ on (0,2)`, `CZ on (0,3)` and 30 more (10 single-wire, 32 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -7988,6 +8313,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+012+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 255` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `Z on 4`, `S on 5`, `S† on 6`, `S† on 7`, `Z on 9`, `S on 10`, `Z on 11`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)` and 33 more (9 single-wire, 36 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8005,6 +8331,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+34+012`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 266` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S on 2`, `Z on 3`, `Z on 4`, `S† on 7`, `S† on 8`, `S† on 10`, `Z on 11`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,7)` and 29 more (9 single-wire, 32 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8022,6 +8349,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+023+124`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 9, 10]
+- leading error coefficient: `A_3 = 272` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `S on 7`, `Z on 8`, `S on 10`, `Z on 11`, `CZ on (0,1)`, `CZ on (0,2)` and 29 more (10 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8039,6 +8367,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+34+023+124`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
+- leading error coefficient: `A_3 = 264` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 3`, `Z on 4`, `S on 5`, `S† on 6`, `S† on 7`, `S† on 8`, `S† on 9`, `S on 10`, `CZ on (0,3)`, `CZ on (0,10)` and 28 more (10 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8056,6 +8385,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+24+023+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 7, 8]
+- leading error coefficient: `A_3 = 273` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S† on 2`, `S† on 3`, `Z on 5`, `S on 6`, `Z on 7`, `S on 8`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)` and 33 more (7 single-wire, 38 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8073,6 +8403,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+24+123`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 267` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S on 2`, `Z on 3`, `Z on 4`, `S† on 5`, `S on 7`, `Z on 8`, `S on 10`, `Z on 11`, `CZ on (1,2)`, `CZ on (1,5)` and 20 more (10 single-wire, 22 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8090,6 +8421,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+012+013+024+034`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 261` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 2`, `Z on 3`, `Z on 4`, `S on 5`, `S on 6`, `S on 8`, `S† on 9`, `S† on 10`, `Z on 11`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)` and 32 more (9 single-wire, 35 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8107,6 +8439,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+012+013+024`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 7]
+- leading error coefficient: `A_3 = 264` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 2`, `S† on 3`, `S† on 4`, `Z on 5`, `S on 8`, `Z on 9`, `S on 10`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,9)` and 26 more (7 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8124,6 +8457,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+012+013`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 275` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 2`, `S† on 3`, `S on 6`, `S on 7`, `S on 8`, `S† on 9`, `S† on 10`, `S† on 11`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,6)` and 31 more (9 single-wire, 34 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8141,6 +8475,7 @@ readable copy of exactly these rows.
 - output gate: `0+34+012+013+124`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 264` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 2`, `Z on 3`, `S on 5`, `S on 7`, `S on 8`, `Z on 9`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,10)`, `CZ on (1,2)` and 26 more (7 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8158,6 +8493,7 @@ readable copy of exactly these rows.
 - output gate: `0+13+012+034+123`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 6]
+- leading error coefficient: `A_3 = 270` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S on 3`, `S† on 4`, `S† on 5`, `S† on 7`, `Z on 8`, `S† on 9`, `Z on 11`, `CZ on (0,1)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (1,3)` and 27 more (8 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8175,6 +8511,7 @@ readable copy of exactly these rows.
 - output gate: `0+13+24+012+034`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 259` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `S† on 4`, `S† on 5`, `S† on 7`, `Z on 8`, `Z on 9`, `S on 10`, `Z on 11`, `CZ on (0,4)`, `CZ on (0,8)` and 33 more (10 single-wire, 35 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8192,6 +8529,7 @@ readable copy of exactly these rows.
 - output gate: `0+13+24+012+123`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
+- leading error coefficient: `A_3 = 277` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S† on 2`, `S† on 4`, `S on 6`, `S† on 8`, `S on 9`, `S on 10`, `S on 11`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,8)` and 22 more (9 single-wire, 25 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8209,6 +8547,7 @@ readable copy of exactly these rows.
 - output gate: `0+34+012+123`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 272` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 2`, `S on 3`, `S on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `S† on 8`, `S on 9`, `CZ on (0,2)`, `CZ on (0,3)` and 28 more (10 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8226,6 +8565,7 @@ readable copy of exactly these rows.
 - output gate: `0+13+012+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 4]
+- leading error coefficient: `A_3 = 265` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 2`, `S† on 3`, `Z on 4`, `S on 5`, `S† on 6`, `S† on 7`, `S† on 8`, `S† on 10`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)` and 31 more (9 single-wire, 34 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8243,6 +8583,7 @@ readable copy of exactly these rows.
 - output gate: `0+34+012+134`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 272` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S† on 4`, `S† on 5`, `Z on 6`, `S on 7`, `S† on 8`, `S on 11`, `CZ on (0,1)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (1,2)` and 26 more (8 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8260,6 +8601,7 @@ readable copy of exactly these rows.
 - output gate: `0+34+012`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
+- leading error coefficient: `A_3 = 267` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 2`, `S† on 4`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 8`, `Z on 10`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,9)` and 30 more (8 single-wire, 34 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8277,6 +8619,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+134`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
+- leading error coefficient: `A_3 = 265` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `Z on 3`, `S on 4`, `S† on 6`, `S on 9`, `Z on 10`, `Z on 11`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,6)` and 23 more (8 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8294,6 +8637,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+05+12+23+24+25+012+013+014+023+125+245`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 12, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 15, 17]
+- leading error coefficient: `A_3 = 276` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `Z on 2`, `Z on 4`, `S† on 5`, `S† on 6`, `S† on 7`, `S† on 8`, `S† on 11`, `S† on 12`, `CZ on (0,1)`, `CZ on (0,3)` and 36 more (10 single-wire, 38 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8311,6 +8655,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+05+012+013+014+123+124+134+235+245+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 272` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 2`, `S on 3`, `Z on 4`, `Z on 7`, `S† on 8`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 12`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)` and 37 more (9 single-wire, 40 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8328,6 +8673,7 @@ readable copy of exactly these rows.
 - output gate: `01+05+23+24+012+013+014+023+024+025+035+045+123+124+235+245`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 264` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `Z on 3`, `Z on 4`, `Z on 6`, `Z on 9`, `S on 10`, `S on 12`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)` and 38 more (9 single-wire, 41 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8345,6 +8691,7 @@ readable copy of exactly these rows.
 - output gate: `0+3+4+01+02+03+04+13+14+23+24+34+35+45+012+013+014+015+023+024+035+045+123+124+134+234+235+245`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 10]
+- leading error coefficient: `A_3 = 268` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `S on 2`, `S on 4`, `Z on 5`, `S on 6`, `Z on 8`, `Z on 9`, `S on 10`, `S on 11`, `S on 12`, `CZ on (0,4)` and 36 more (11 single-wire, 37 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8362,6 +8709,7 @@ readable copy of exactly these rows.
 - output gate: `0+2+3+4+5+01+02+03+04+05+12+13+14+15+25+35+45+012+013+014+015+023+024+125+135+145+234+235+245`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 6]
+- leading error coefficient: `A_3 = 272` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 2`, `Z on 4`, `S† on 6`, `S† on 7`, `S† on 8`, `S on 10`, `S on 11`, `S on 12`, `CZ on (0,3)`, `CZ on (0,5)` and 38 more (10 single-wire, 40 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8379,6 +8727,7 @@ readable copy of exactly these rows.
 - output gate: `0+3+5+01+02+03+04+05+13+15+23+25+34+45+012+013+014+015+023+024+123+125+134+145+234+235+245`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 12, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
+- leading error coefficient: `A_3 = 280` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S on 3`, `S on 4`, `S on 5`, `S† on 7`, `S† on 9`, `Z on 10`, `S on 12`, `CZ on (0,2)`, `CZ on (0,5)` and 38 more (10 single-wire, 40 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8396,6 +8745,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+05+12+15+25+35+45+012+013+014+023+024+034+123+124+135+235`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 266` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `S† on 3`, `Z on 4`, `Z on 5`, `S† on 6`, `S on 7`, `S on 8`, `S† on 9`, `S on 10`, `Z on 11` and 33 more (12 single-wire, 33 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8413,6 +8763,7 @@ readable copy of exactly these rows.
 - output gate: `0+2+3+4+5+01+02+03+04+12+13+14+15+24+25+34+012+013+014+023+025+124+125+134+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 264` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `Z on 3`, `S† on 4`, `S on 5`, `S on 6`, `S† on 10`, `S on 11`, `S on 12`, `CZ on (0,1)`, `CZ on (0,3)` and 44 more (10 single-wire, 46 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8430,6 +8781,7 @@ readable copy of exactly these rows.
 - output gate: `0+2+3+4+5+01+02+03+04+12+13+14+15+25+35+45+012+013+014+023+025+125+135+145+234+245`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
+- leading error coefficient: `A_3 = 276` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `Z on 2`, `S on 3`, `S on 4`, `Z on 5`, `S† on 6`, `S† on 7`, `S† on 8`, `S on 9`, `Z on 11`, `S† on 12` and 40 more (12 single-wire, 40 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8447,6 +8799,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+4+5+01+02+03+13+15+23+34+35+012+013+014+023+025+045+135+145+245`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 268` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S† on 2`, `S on 3`, `S on 4`, `S on 7`, `S on 8`, `S† on 9`, `S on 10`, `S† on 11`, `S on 12`, `CZ on (0,2)` and 40 more (11 single-wire, 41 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8464,6 +8817,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+01+02+03+14+24+34+35+45+012+013+014+023+025+045+135+234+245`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
+- leading error coefficient: `A_3 = 273` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 2`, `Z on 3`, `Z on 5`, `Z on 7`, `Z on 8`, `Z on 9`, `S on 10`, `S† on 12`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)` and 49 more (9 single-wire, 52 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8481,6 +8835,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+3+4+5+01+02+05+12+15+23+24+25+012+013+014+025+035+125+135+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 7, 9]
+- leading error coefficient: `A_3 = 276` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S† on 4`, `S on 6`, `Z on 7`, `S on 9`, `Z on 10`, `Z on 11`, `Z on 12`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)` and 46 more (8 single-wire, 50 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8498,6 +8853,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+02+03+04+05+012+013+024+123+125+134+135+145`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
+- leading error coefficient: `A_3 = 272` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 2`, `S on 3`, `Z on 4`, `Z on 5`, `S on 7`, `S† on 10`, `S on 12`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,9)`, `CZ on (0,10)` and 30 more (7 single-wire, 35 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8515,6 +8871,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+4+01+04+15+25+45+012+013+023+024+025+034+035+123+124+125+234+235+245`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 10]
+- leading error coefficient: `A_3 = 272` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `S† on 4`, `Z on 5`, `S† on 6`, `Z on 7`, `S† on 8`, `Z on 9`, `Z on 10`, `Z on 11`, `S on 12` and 41 more (12 single-wire, 41 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8532,6 +8889,7 @@ readable copy of exactly these rows.
 - output gate: `0+4+5+01+02+03+12+13+14+15+23+24+25+34+35+045`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
+- leading error coefficient: `A_3 = 280` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S on 2`, `Z on 4`, `Z on 5`, `S on 6`, `S on 8`, `S on 10`, `S on 11`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)` and 33 more (9 single-wire, 36 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8549,6 +8907,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+4+23+012+013+014+025+035+125+135+234+235+245+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
+- leading error coefficient: `A_3 = 280` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S† on 2`, `Z on 4`, `S† on 5`, `S on 6`, `Z on 8`, `S on 9`, `Z on 10`, `S on 12`, `CZ on (0,2)`, `CZ on (0,3)` and 41 more (10 single-wire, 43 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8566,6 +8925,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 270` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `Z on 11`, `CZ on (6,12)` and 1 more (11 single-wire, 2 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 9, 16, 19, 24, 25, 31, 32, 39, 40, 41, 43 and 9 more; `T⁵` on columns 1, 7, 35; `T†` on columns 0, 4, 8, 11, 14, 21, 28, `T` on the rest
 - discovery: AI search
@@ -8582,6 +8942,7 @@ readable copy of exactly these rows.
 - output gate: `0+2+4+01+02+03+04+05+12+14+16+23+25+26+36+45+46+012+013+014+015+016+023+024+025+034+035+046+123+125+146+156+234+235+256+345+356`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 9]
+- leading error coefficient: `A_3 = 276` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `S† on 3`, `Z on 4`, `Z on 7`, `S on 8`, `S† on 11`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,5)`, `CZ on (0,6)` and 45 more (8 single-wire, 49 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8600,6 +8961,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+02+03+04+12+13+23+45+56+012+013+014+023+024+034+123+145+156+245+256+345+356`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 4]
+- leading error coefficient: `A_3 = 280` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 4`, `S on 7`, `Z on 9`, `S on 10`, `Z on 11`, `S on 13`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)` and 41 more (9 single-wire, 44 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8618,6 +8980,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 15` (8 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 308` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `S on 3`, `S† on 5`, `S on 6`, `S on 7`, `Z on 8`, `S on 9`, `S on 11`, `Z on 14`, `CZ on (1,4)`, `CZ on (1,5)` and 14 more (10 single-wire, 16 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8636,6 +8999,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 8` (3 outputs + 5 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [16, 26]
+- leading error coefficient: `A_2 = 45` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -8652,6 +9016,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 16` (3 outputs + 13 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 145` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `CZ on (2,11)`
 - or no correction at all, with rotations run as `T³` on columns 25, 27, 29, 31, 33, 35, 37, 39, 47, 48, 50, 57 and 2 more; `T⁵` on columns 15, 20; `T†` on columns 0, 1, 4, 7, 8, 11, 14, `T` on the rest
 - discovery: AI search
@@ -8668,6 +9033,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6`
 - `N = 15` (7 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 204` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S† on 4`, `S on 5`, `S† on 7`, `Z on 8`, `Z on 9`, `S† on 11`, `S† on 13`, `CZ on (4,6)` and 14 more (11 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8686,6 +9052,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 6` (1 output + 5 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 31` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -8702,6 +9069,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 7` (2 outputs + 5 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 46]
+- leading error coefficient: `A_2 = 31` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -8718,6 +9086,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 12` (4 outputs + 8 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 11, 42]
+- leading error coefficient: `A_3 = 122` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S on 5`, `S† on 6`, `S on 7`, `S† on 9`, `Z on 10`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,10)`, `CZ on (1,6)` and 20 more (8 single-wire, 24 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8734,6 +9103,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+03+04+05+12+13+14+15+23+24+25+34+35+45+012+013+014+023+024+034`
 - `N = 16` (6 outputs + 10 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 302` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `Z on 4`, `Z on 5`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,11)`, `CZ on (1,13)` and 20 more (4 single-wire, 28 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8751,6 +9121,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 14` (6 outputs + 8 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 268` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S on 3`, `S on 4`, `S on 5`, `Z on 6`, `Z on 8`, `Z on 10`, `S on 11`, `Z on 12`, `Z on 13` and 8 more (12 single-wire, 8 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8768,6 +9139,7 @@ readable copy of exactly these rows.
 - output gate: `0+01+02+03+04+05+06+012+013+014+015+016+023+024+035+046+056+234+236+245`
 - `N = 17` (7 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 310` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,12)`, `CZ on (0,14)`, `CZ on (0,15)` and 17 more (5 single-wire, 24 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8786,6 +9158,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 16` (8 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 290` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `Z on 7`, `Z on 8`, `S† on 9`, `S† on 11`, `Z on 12` and 14 more (13 single-wire, 13 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8804,6 +9177,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 7` (1 output + 6 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 32]
+- leading error coefficient: `A_3 = 651` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -8820,6 +9194,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 8` (2 outputs + 6 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 56]
+- leading error coefficient: `A_3 = 490` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (1,3)`, `CZ on (1,7)`
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 36, 38, 39, 42, 43, 44, 45, 48, 49, 51 and 5 more; `T⁵` on columns 1, 5, 8; `T†` on column 6, `T` on the rest
 - discovery: AI search
@@ -8839,6 +9214,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 49]
+- leading error coefficient: `A_3 = 564` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,8)`, `CZ on (2,3)`, `CZ on (2,5)`
 - or no correction at all, with rotations run as `T³` on columns 7, 27, 31, 32, 34, 37, 38, 39, 41, 42, 44, 46 and 10 more; `T⁵` on columns 1, 4; `T†` on columns 3, 5, 6, 8, `T` on the rest
 - discovery: AI search
@@ -8858,6 +9234,7 @@ readable copy of exactly these rows.
 - output gate: `0+12`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 56]
+- leading error coefficient: `A_3 = 575` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 2`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (1,7)`, `CZ on (1,8)`, `CZ on (2,3)`, `CZ on (2,7)`
 - or no correction at all, with rotations run as `T³` on columns 6, 26, 28, 31, 33, 36, 37, 38, 39, 40, 41, 45 and 8 more; `T⁵` on column 7; `T†` on columns 3, 4, `T` on the rest
 - discovery: AI search
@@ -8877,6 +9254,7 @@ readable copy of exactly these rows.
 - output gate: `01+23`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
+- leading error coefficient: `A_3 = 567` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (2,4)` and 5 more (4 single-wire, 13 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 3, 7, 25, 26, 27, 34, 35, 36, 40, 41, 42 and 10 more; `T⁵` on columns 6, 13; `T†` on columns 0, 8, 9, `T` on the rest
 - discovery: pre-existing
@@ -8904,6 +9282,7 @@ readable copy of exactly these rows.
 - output gate: `0+123`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 56]
+- leading error coefficient: `A_3 = 603` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 3`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (1,3)`, `CZ on (1,8)`, `CZ on (1,9)`, `CZ on (2,3)` and 9 more (2 single-wire, 19 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 5, 6, 7, 19, 20, 22, 23, 25, 29, 30 and 17 more; `T⁵` on column 8; `T†` on columns 1, 9, `T` on the rest
 - discovery: AI search
@@ -8923,6 +9302,7 @@ readable copy of exactly these rows.
 - output gate: `01+234`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 56]
+- leading error coefficient: `A_3 = 629` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S† on 3`, `Z on 4`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,3)`, `CZ on (1,6)`, `CZ on (1,10)` and 7 more (4 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8940,6 +9320,7 @@ readable copy of exactly these rows.
 - output gate: `012+034`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 56]
+- leading error coefficient: `A_3 = 636` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 4`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (1,4)`, `CZ on (1,6)`, `CZ on (1,9)`, `CZ on (1,10)`, `CZ on (2,6)`, `CZ on (2,10)` and 5 more (2 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8960,6 +9341,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 629` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,6)` and 10 more (5 single-wire, 17 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8977,6 +9359,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+34`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 40]
+- leading error coefficient: `A_3 = 628` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S on 2`, `Z on 3`, `S on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (1,2)`, `CZ on (1,4)` and 12 more (4 single-wire, 20 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -8994,6 +9377,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 3]
+- leading error coefficient: `A_3 = 651` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S† on 3`, `S on 4`, `CZ on (3,8)`, `CZ on (3,9)`, `CZ on (3,10)`, `CZ on (4,8)`, `CZ on (4,9)`, `CZ on (4,10)`
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 9, 10, 27, 32, 33, 34, 35, 38, 41, 43 and 10 more; `T⁵` on column 8; `T†` on columns 1, 7, 19, 28, 31, `T` on the rest
 - discovery: AI search
@@ -9015,6 +9399,7 @@ readable copy of exactly these rows.
 - output gate: `01+23+45`
 - `N = 12` (6 outputs + 6 checks), exact minimal T-count 9, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 644` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S on 2`, `Z on 3`, `Z on 4`, `S on 5`, `CZ on (0,2)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,2)` and 20 more (6 single-wire, 26 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9032,6 +9417,7 @@ readable copy of exactly these rows.
 - output gate: `012+345`
 - `N = 12` (6 outputs + 6 checks), exact minimal T-count 13, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 56]
+- leading error coefficient: `A_3 = 641` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 2`, `S on 3`, `Z on 4`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,10)`, `CZ on (0,11)`, `CZ on (1,4)` and 19 more (4 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9050,6 +9436,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+5+01+02+25+012+013+014+023+024+034+035+123+124+125+134+145+245+345`
 - `N = 16` (6 outputs + 10 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 283` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `Z on 2`, `S† on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,12)`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,11)` and 8 more (4 single-wire, 16 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9067,6 +9454,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+01+02+04+12+13+14+15+23+24+25+34+45+012+013+023+034+035+124+134+245`
 - `N = 16` (6 outputs + 10 checks), exact minimal T-count 12, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 283` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 2`, `S on 4`, `Z on 5`, `CZ on (0,2)`, `CZ on (0,12)`, `CZ on (0,13)`, `CZ on (2,5)`, `CZ on (3,5)`, `CZ on (3,13)`, `CZ on (5,12)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9084,6 +9472,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+12+14+23+012+013+024+034+035+045+134+135+234+245`
 - `N = 16` (6 outputs + 10 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 271` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `CZ on (0,5)`, `CZ on (0,10)`, `CZ on (0,11)`, `CZ on (0,12)`, `CZ on (1,11)`, `CZ on (1,13)`, `CZ on (2,3)`, `CZ on (2,4)`, `CZ on (2,5)` and 3 more (3 single-wire, 12 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9101,6 +9490,7 @@ readable copy of exactly these rows.
 - output gate: `0+2+3+4+01+14+23+24+012+013+045+145+245+345`
 - `N = 16` (6 outputs + 10 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 283` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 2`, `S on 3`, `CZ on (0,1)`, `CZ on (0,12)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,5)`, `CZ on (1,11)`, `CZ on (1,13)`, `CZ on (2,3)` and 10 more (4 single-wire, 18 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9118,6 +9508,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+13+14+15+26+36+46+56+123+124+125+126+134+135+146+235+256+345+346+456`
 - `N = 17` (7 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 287` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S on 5`, `S on 6`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,6)`, `CZ on (1,13)` and 13 more (7 single-wire, 18 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9136,6 +9527,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+13+26+36+45+123+124+125+134+145+236+245+246+256+345+346`
 - `N = 17` (7 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 291` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 6`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,12)`, `CZ on (1,14)`, `CZ on (2,4)` and 14 more (6 single-wire, 20 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9154,6 +9546,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+13+14+15+16+123+124+125+136+146+234+345+346`
 - `N = 17` (7 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 291` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S† on 3`, `S on 4`, `S on 5`, `S† on 6`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,14)` and 9 more (7 single-wire, 14 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9172,6 +9565,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+35+56+123+134+135+145+146+234+236+246+256`
 - `N = 17` (7 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 287` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S on 2`, `S† on 3`, `S on 5`, `S on 6`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,12)`, `CZ on (1,13)` and 8 more (6 single-wire, 14 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9190,6 +9584,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+123+134+135+145+146+236+245`
 - `N = 17` (7 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 275` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S on 4`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (2,3)`, `CZ on (3,4)`, `CZ on (3,5)`, `CZ on (3,11)`, `CZ on (3,12)` and 5 more (5 single-wire, 12 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9208,6 +9603,7 @@ readable copy of exactly these rows.
 - output gate: `0+123+456`
 - `N = 13` (7 outputs + 6 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 651` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S† on 3`, `S† on 4`, `S on 5`, `S† on 6`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)` and 28 more (7 single-wire, 33 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9226,6 +9622,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6`
 - `N = 13` (7 outputs + 6 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 56]
+- leading error coefficient: `A_3 = 651` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `Z on 3`, `S on 4`, `Z on 6`, `CZ on (0,1)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (0,10)`, `CZ on (0,11)`, `CZ on (0,12)`, `CZ on (1,2)`, `CZ on (1,3)` and 21 more (4 single-wire, 29 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9249,6 +9646,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+123+145+146+157+245+267`
 - `N = 18` (8 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 291` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `CZ on (1,3)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (1,15)`, `CZ on (2,3)`, `CZ on (2,4)`, `CZ on (2,5)`, `CZ on (2,14)`, `CZ on (2,15)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9267,6 +9665,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+46+123+145+267+346`
 - `N = 18` (8 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 291` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `Z on 4`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,7)`, `CZ on (1,13)`, `CZ on (1,14)`, `CZ on (1,15)`, `CZ on (2,4)`, `CZ on (2,13)`, `CZ on (2,14)` and 7 more (3 single-wire, 16 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9285,6 +9684,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 14` (8 outputs + 6 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 644` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -9306,6 +9706,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8`
 - `N = 15` (9 outputs + 6 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 651` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -9333,6 +9734,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 16` (10 outputs + 6 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 56]
+- leading error coefficient: `A_3 = 645` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,9)` and 18 more (6 single-wire, 24 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 4, 6, 7, 8, 17, 25, 28, 30, 31, 34 and 13 more; `T⁵` on columns 2, 9, 10, 13; `T†` on columns 5, 12, `T` on the rest
 - discovery: AI search
@@ -9352,6 +9754,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 17` (11 outputs + 6 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 56]
+- leading error coefficient: `A_3 = 651` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,5)`, `CZ on (1,6)` and 25 more (6 single-wire, 31 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 7, 25, 26, 31, 33, 34, 35, 36, 38, 39, 40 and 10 more; `T⁵` on columns 2, 9; `T†` on columns 5, 10, 12, 13, `T` on the rest
 - discovery: AI search
@@ -9371,6 +9774,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9,10,11`
 - `N = 18` (12 outputs + 6 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 58]
+- leading error coefficient: `A_3 = 651` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `Z on 9`, `Z on 10`, `Z on 11` and 3 more (12 single-wire, 3 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 9, 24, 27, 30, 33, 35, 37, 39, 41, 42, 43 and 8 more; `T⁵` on columns 0, 2, 6, 7, 8, 32; `T†` on columns 5, 10, 11, 13, 16, 18, 31, `T` on the rest
 - discovery: AI search
@@ -9389,6 +9793,7 @@ readable copy of exactly these rows.
 - output gate: `0+1,2,3+1,4,5+1,6,7+2,8,9+2,10,11+3,12,13+3,14,15+4,8,12+4,10,14+5,9,13+5,11,15+6,8,15+6,10,13+7,9,14+7,11,12`
 - `N = 22` (16 outputs + 6 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 651` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -9407,6 +9812,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 10` (1 output + 9 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 2, 22, 60]
+- leading error coefficient: `A_4 = 495` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `CZ on (0,1)`, `CZ on (0,2)` and 25 more (10 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -9426,6 +9832,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 9]
+- leading error coefficient: `A_4 = 1224` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `CZ on (0,1)`
 - or no correction at all, with rotations run as `T³` on columns 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62 and 1 more; `T†` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, `T` on the rest
 - discovery: AI search
@@ -9442,6 +9849,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 2, 8, 43]
+- leading error coefficient: `A_4 = 1011` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `CZ on (0,1)` and 36 more (11 single-wire, 37 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9465,6 +9873,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 9104` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (1,4)`, `CZ on (1,6)`, `CZ on (1,8)`, `CZ on (1,9)`, `CZ on (2,3)`, `CZ on (2,5)`, `CZ on (2,6)` and 1 more (2 single-wire, 11 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 24, 25, 30, 31, 36, 38, 44, 46, 52, 54, 57 and 1 more; `T⁵` on column 0; `T†` on columns 1, 3, 6, `T` on the rest
 - discovery: AI search
@@ -9496,6 +9905,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 18` (4 outputs + 14 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 19]
+- leading error coefficient: `A_3 = 104` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 3`, `Z on 6`, `S† on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `Z on 13`, `S† on 14`, `Z on 15`, `Z on 16`, `Z on 17` and 22 more (12 single-wire, 22 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 12, 14, 18, 19, 21, 32, 34, 38, 39, 41, 42 and 14 more; `T⁵` on columns 0, 4, 6, 8, 9, 20, 24, 26, 28, 29; `T†` on columns 2, 17, 22, 37, `T` on the rest
 - discovery: AI search
@@ -9512,6 +9922,7 @@ readable copy of exactly these rows.
 - output gate: `012+034`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 10088` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 1`, `Z on 2`, `Z on 4`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,11)`, `CZ on (1,5)`, `CZ on (1,8)`, `CZ on (1,10)`, `CZ on (2,3)` and 16 more (3 single-wire, 25 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9534,6 +9945,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+014+023+024+035+123+125+135+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 15, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 10252` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 3`, `S on 4`, `S on 5`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,11)`, `CZ on (0,12)`, `CZ on (1,3)` and 20 more (5 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9552,6 +9964,7 @@ readable copy of exactly these rows.
 - output gate: `012+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 13, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 10256` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `Z on 2`, `S† on 3`, `S on 4`, `S on 5`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)` and 21 more (6 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9570,6 +9983,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 15` (8 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 328` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 7`, `Z on 8`, `Z on 11`, `CZ on (2,9)`, `CZ on (2,10)`, `CZ on (5,8)` and 18 more (9 single-wire, 21 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9588,6 +10002,7 @@ readable copy of exactly these rows.
 - output gate: `0,1,2+0,3,4+0,5,6+1,7,8+1,9,10+2,11,12+2,13,14+3,7,11+3,9,13+4,8,12+4,10,14+5,7,14+5,9,12+6,8,13+6,10,11`
 - `N = 22` (15 outputs + 7 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 10416` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: none
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
@@ -9605,6 +10020,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 13` (5 outputs + 8 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 246` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `S on 3`, `S on 4`, `S† on 5`, `S† on 6`, `S† on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `S on 12` and 16 more (12 single-wire, 16 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 6, 22, 23, 24, 25, 26, 27, 31, 37, 39, 40 and 8 more; `T⁵` on columns 3, 4, 7, 35; `T†` on columns 13, 19, `T` on the rest
 - discovery: AI search
@@ -9622,6 +10038,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6`
 - `N = 15` (7 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 246` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 5`, `S† on 6`, `S† on 7`, `S† on 8`, `S† on 9`, `Z on 10`, `Z on 11`, `Z on 12` and 23 more (13 single-wire, 22 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9640,6 +10057,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8`
 - `N = 17` (9 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 350` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `S on 3`, `Z on 4`, `S on 5`, `S on 6`, `S† on 9`, `S† on 10`, `S† on 12`, `S† on 13`, `S† on 14` and 16 more (12 single-wire, 16 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9658,6 +10076,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 12` (3 outputs + 9 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 4, 22]
+- leading error coefficient: `A_4 = 2478` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 29 more (12 single-wire, 29 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, 27, 28, 29 and 15 more, `T` on the rest
 - discovery: pre-existing
@@ -9676,6 +10095,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 12` (4 outputs + 8 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 170` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S† on 4`, `Z on 5`, `Z on 7`, `Z on 8`, `Z on 10`, `Z on 11`, `CZ on (4,9)`, `CZ on (5,6)` and 10 more (10 single-wire, 12 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 7, 14, 16, 25, 26, 27, 31, 32, 33, 34, 38 and 13 more; `T⁵` on columns 0, 8, 21; `T†` on columns 1, 4, 9, 11, 18, `T` on the rest
 - discovery: AI search
@@ -9692,6 +10112,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 14` (6 outputs + 8 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 216` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `Z on 4`, `S† on 5`, `S† on 6`, `S† on 8`, `S on 9`, `S† on 10`, `S on 11`, `S on 12`, `S† on 13` and 31 more (12 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9708,6 +10129,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 16` (8 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 346` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S† on 5`, `S on 6`, `Z on 9`, `Z on 10`, `Z on 11`, `Z on 12`, `S† on 13` and 30 more (13 single-wire, 29 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9726,6 +10148,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 432` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `S on 2`, `S† on 3`, `Z on 10`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,10)`, `CZ on (1,2)`, `CZ on (1,3)` and 11 more (5 single-wire, 18 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9742,6 +10165,7 @@ readable copy of exactly these rows.
 - output gate: `01+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 452` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 2`, `S on 3`, `S† on 4`, `Z on 11`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,11)` and 22 more (5 single-wire, 29 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9758,6 +10182,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 451` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 2`, `Z on 3`, `Z on 4`, `Z on 11`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,8)`, `CZ on (0,11)`, `CZ on (1,2)`, `CZ on (1,8)`, `CZ on (1,9)`, `CZ on (2,3)` and 13 more (4 single-wire, 21 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9775,6 +10200,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 465` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S† on 2`, `S on 3`, `S on 4`, `Z on 5`, `Z on 12`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,9)` and 35 more (7 single-wire, 40 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9792,6 +10218,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8`
 - `N = 16` (9 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 398` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `S on 3`, `S† on 4`, `S† on 5`, `S on 7`, `S on 8`, `Z on 9`, `Z on 10`, `Z on 12`, `Z on 13` and 21 more (13 single-wire, 20 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9810,6 +10237,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 8]
+- leading error coefficient: `A_3 = 371` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 2`, `S on 3`, `Z on 7`, `Z on 8`, `CZ on (0,1)`, `CZ on (0,5)`, `CZ on (0,9)`, `CZ on (1,5)`, `CZ on (1,8)`, `CZ on (1,9)` and 12 more (6 single-wire, 18 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9826,6 +10254,7 @@ readable copy of exactly these rows.
 - output gate: `01+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 8]
+- leading error coefficient: `A_3 = 385` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `S on 4`, `Z on 8`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,9)`, `CZ on (0,10)` and 22 more (7 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9842,6 +10271,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 8]
+- leading error coefficient: `A_3 = 377` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 2`, `Z on 3`, `S on 4`, `Z on 8`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (0,9)` and 18 more (6 single-wire, 24 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9859,6 +10289,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 14` (6 outputs + 8 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 392` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `Z on 6`, `S† on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S† on 11`, `S† on 12` and 25 more (13 single-wire, 24 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 7, 18, 19, 20, 25, 26, 27, 31, 32, 36, 40 and 14 more; `T⁵` on columns 2, 8, 14, 21; `T†` on columns 0, 4, 9, 11, 28, `T` on the rest
 - discovery: AI search
@@ -9875,6 +10306,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 15` (8 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 381` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S on 2`, `Z on 3`, `S on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 8`, `Z on 14`, `CZ on (1,5)`, `CZ on (1,10)` and 17 more (10 single-wire, 19 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9894,6 +10326,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 17` (10 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 432` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S† on 6`, `S on 7`, `S on 9`, `S† on 10`, `Z on 11`, `S on 12` and 34 more (16 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9912,6 +10345,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8`
 - `N = 17` (9 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 367` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `S on 3`, `S† on 4`, `S on 5`, `S on 6`, `S† on 7`, `S on 8`, `S on 10`, `S† on 13`, `S on 14` and 20 more (14 single-wire, 18 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 2, 4, 7, 8, 14, 17, 21, 23, 25, 29, 30 and 15 more; `T⁵` on columns 1, 16, 27, 48; `T†` on columns 11, 18, 34, `T` on the rest
 - discovery: AI search
@@ -9930,6 +10364,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 14` (6 outputs + 8 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 12, 25]
+- leading error coefficient: `A_3 = 206` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 2`, `S† on 3`, `Z on 5`, `S on 6`, `Z on 7`, `S† on 8`, `S on 9`, `S† on 10`, `S† on 11`, `S† on 13`, `CZ on (0,6)` and 43 more (11 single-wire, 44 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 18, 21, 24, 32, 33, 36, 37, 38, 41, 43, 44, 45 and 16 more; `T⁵` on columns 0, 2, 4, 6, 15, 29; `T†` on columns 8, 9, 10, 19, `T` on the rest
 - discovery: AI search
@@ -9946,6 +10381,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 19` (8 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 254` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `Z on 7`, `S† on 12`, `S† on 13`, `S on 14`, `S† on 15` and 17 more (14 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9964,6 +10400,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 18` (10 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 238` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `Z on 10`, `Z on 12` and 15 more (14 single-wire, 13 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -9982,6 +10419,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 516` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 3`, `Z on 7`, `Z on 8`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (1,2)` and 10 more (4 single-wire, 18 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 4, 10, 13, 17, 19, 20, 23, 24, 25, 27 and 19 more; `T⁵` on columns 3, 31; `T†` on column 7, `T` on the rest
 - discovery: AI search
@@ -9998,6 +10436,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 540` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 2`, `S on 3`, `Z on 4`, `Z on 8`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,11)`, `CZ on (1,2)`, `CZ on (1,3)` and 14 more (5 single-wire, 21 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10015,6 +10454,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 538` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 2`, `Z on 4`, `S on 5`, `Z on 9`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,7)`, `CZ on (1,8)` and 14 more (6 single-wire, 20 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10032,6 +10472,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 551` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `Z on 5`, `Z on 9`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)` and 27 more (8 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10049,6 +10490,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 10` (1 output + 9 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 1109` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 4`, `Z on 5`, `Z on 6`, `S† on 7`, `S† on 8`, `S† on 9`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)` and 10 more (7 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10065,6 +10507,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 3, 13, 48]
+- leading error coefficient: `A_4 = 1764` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `CZ on (0,1)` and 9 more (11 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39 and 23 more; `T⁵` on columns 12, 15, 18; `T†` on column 27, `T` on the rest
 - discovery: AI search
@@ -10081,6 +10524,7 @@ readable copy of exactly these rows.
 - output gate: `01+02`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 3, 11, 20]
+- leading error coefficient: `A_4 = 4032` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `S† on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `CZ on (0,1)` and 22 more (11 single-wire, 23 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10105,6 +10549,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 12` (3 outputs + 9 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 6, 24]
+- leading error coefficient: `A_4 = 3384` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `Z on 11`, `CZ on (0,1)`, `CZ on (0,3)` and 35 more (10 single-wire, 37 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 and 28 more; `T⁵` on columns 3, 4, 5; `T†` on columns 0, 2, `T` on the rest
 - discovery: AI search
@@ -10121,6 +10566,7 @@ readable copy of exactly these rows.
 - output gate: `01+23`
 - `N = 13` (4 outputs + 9 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 6, 15]
+- leading error coefficient: `A_4 = 2160` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 2`, `Z on 3`, `S† on 4`, `S† on 5`, `S† on 6`, `S† on 7`, `S† on 8`, `S† on 9`, `S† on 10`, `S† on 11` and 20 more (13 single-wire, 19 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10140,6 +10586,7 @@ readable copy of exactly these rows.
 - output gate: `01+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 9, 10]
+- leading error coefficient: `A_3 = 412` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `S† on 3`, `S† on 4`, `Z on 8`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,9)` and 15 more (6 single-wire, 21 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10156,6 +10603,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 17` (10 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 508` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S† on 7`, `Z on 8`, `Z on 9`, `S on 11`, `S on 12` and 24 more (16 single-wire, 20 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10174,6 +10622,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 10` (1 output + 9 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 20, 57]
+- leading error coefficient: `A_4 = 946` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `CZ on (1,6)`, `CZ on (1,8)` and 7 more (10 single-wire, 9 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 38, 39, 40, 44, 47, 48, 55, 56, 62; `T⁵` on columns 1, 3, 5, 6, 7, 8, 20, `T` on the rest
 - discovery: AI search
@@ -10190,6 +10639,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 14` (6 outputs + 8 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 462` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `Z on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 12`, `S on 13` and 11 more (12 single-wire, 11 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 7, 9, 11, 14, 20, 25, 26, 27, 32, 33 and 21 more; `T⁵` on columns 8, 21, 28; `T†` on columns 4, 15, 35, `T` on the rest
 - discovery: AI search
@@ -10206,6 +10656,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 16` (8 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 458` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `Z on 8`, `S on 9`, `S† on 11`, `Z on 12`, `S on 13` and 27 more (14 single-wire, 25 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10224,6 +10675,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 18` (10 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 489` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `Z on 6`, `Z on 7`, `S on 9`, `Z on 11`, `S on 12`, `S on 13` and 34 more (15 single-wire, 31 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 11, 17, 18, 25, 26, 27, 29, 30, 31, 32, 33 and 22 more; `T⁵` on columns 0, 7, 21, 35; `T†` on columns 1, 4, 8, 9, 14, 28, `T` on the rest
 - discovery: AI search
@@ -10242,6 +10694,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+12+012`
 - `N = 7` (3 outputs + 4 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 150` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T³` on columns 67, 68, 69, 70, 71, 72; `T†` on columns 15, 19, 23, `T` on the rest
 - discovery: pre-existing
@@ -10258,6 +10711,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 8` (4 outputs + 4 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 150` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -10274,6 +10728,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 528` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 3`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,8)`, `CZ on (0,10)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)` and 13 more (4 single-wire, 21 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 6, 8, 15, 17, 18, 22, 25, 29, 30, 31, 36, 39 and 18 more; `T⁵` on columns 11, 23; `T†` on columns 0, 1, 2, 3, 9, `T` on the rest
 - discovery: AI search
@@ -10290,6 +10745,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 544` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 2`, `Z on 11`, `CZ on (0,4)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,11)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (1,8)`, `CZ on (1,9)`, `CZ on (1,10)` and 13 more (2 single-wire, 23 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10307,6 +10763,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 546` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S on 4`, `S† on 5`, `Z on 12`, `CZ on (0,3)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,11)`, `CZ on (1,2)` and 29 more (7 single-wire, 34 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10324,6 +10781,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 557` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `S on 3`, `S† on 5`, `Z on 12`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,9)` and 26 more (6 single-wire, 32 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10341,6 +10799,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 10` (1 output + 9 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 3, 57, 70]
+- leading error coefficient: `A_4 = 973` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 8`, `S on 9`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (8,9)`
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 17, 24, 63, 64, 67, 68, 69, 70, `T` on the rest
 - discovery: AI search
@@ -10357,6 +10816,7 @@ readable copy of exactly these rows.
 - output gate: `0+01`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 3, 10, 14]
+- leading error coefficient: `A_4 = 2149` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `CZ on (2,3)`, `CZ on (2,4)` and 25 more (10 single-wire, 27 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59 and 16 more; `T⁵` on columns 0, 1, 3, 4, 6, 7, 30, `T` on the rest
 - discovery: AI search
@@ -10373,6 +10833,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+12+012`
 - `N = 8` (3 outputs + 5 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [16, 26]
+- leading error coefficient: `A_2 = 90` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T³` on columns 68, 69, 70, 71, 72, 73; `T†` on columns 16, 26, 36, `T` on the rest
 - discovery: pre-existing
@@ -10389,6 +10850,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 9` (4 outputs + 5 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [16, 26]
+- leading error coefficient: `A_2 = 90` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -10405,6 +10867,7 @@ readable copy of exactly these rows.
 - output gate: `012+013`
 - `N = 13` (4 outputs + 9 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 9]
+- leading error coefficient: `A_4 = 4528` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `Z on 11` and 48 more (13 single-wire, 47 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10422,6 +10885,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+01+23`
 - `N = 13` (4 outputs + 9 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 75]
+- leading error coefficient: `A_4 = 2605` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `Z on 11` and 51 more (13 single-wire, 50 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10439,6 +10903,7 @@ readable copy of exactly these rows.
 - output gate: `01+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 8]
+- leading error coefficient: `A_3 = 514` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 2`, `Z on 3`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (0,11)` and 21 more (3 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10455,6 +10920,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 8]
+- leading error coefficient: `A_3 = 524` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S† on 3`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (0,11)`, `CZ on (1,7)`, `CZ on (1,10)`, `CZ on (1,11)`, `CZ on (2,9)` and 13 more (3 single-wire, 22 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10472,6 +10938,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+234`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 8, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 544` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `Z on 3`, `S on 4`, `Z on 6`, `Z on 11`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,6)` and 25 more (7 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10489,6 +10956,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+34`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 8]
+- leading error coefficient: `A_3 = 511` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 3`, `S† on 4`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (0,10)` and 22 more (4 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10506,6 +10974,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 17` (10 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 592` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S† on 8`, `S on 9`, `Z on 10`, `S on 11`, `Z on 13` and 26 more (15 single-wire, 23 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10524,6 +10993,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 19` (12 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 584` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S† on 8`, `Z on 9`, `Z on 10`, `S on 11` and 32 more (17 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10542,6 +11012,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 11` (1 output + 10 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 3, 7, 37]
+- leading error coefficient: `A_4 = 960` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 0`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,8)`
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 2, 6, 11, 18, 26, 33, 34, 36, 41, 42 and 18 more, `T` on the rest
 - discovery: AI search
@@ -10558,6 +11029,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 13` (3 outputs + 10 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 5, 16]
+- leading error coefficient: `A_4 = 1860` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,8)`, `CZ on (1,10)`, `CZ on (1,11)`, `CZ on (1,12)`, `CZ on (2,3)` and 2 more (2 single-wire, 12 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 4, 5, 7, 10, 11, 30, 31, 33, 35, 39 and 18 more, `T` on the rest
 - discovery: AI search
@@ -10575,6 +11047,7 @@ readable copy of exactly these rows.
 - output gate: `0+123`
 - `N = 14` (4 outputs + 10 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 5, 16]
+- leading error coefficient: `A_4 = 2120` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,11)`, `CZ on (1,4)`, `CZ on (1,7)`, `CZ on (1,10)`, `CZ on (1,11)`, `CZ on (2,3)`, `CZ on (2,4)`, `CZ on (2,7)` and 13 more (2 single-wire, 23 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 2, 4, 5, 6, 7, 8, 9, 10, 13, 29, 30 and 18 more, `T` on the rest
 - discovery: AI search
@@ -10592,6 +11065,7 @@ readable copy of exactly these rows.
 - output gate: `012+034`
 - `N = 15` (5 outputs + 10 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 5, 16]
+- leading error coefficient: `A_4 = 2140` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,11)`, `CZ on (0,12)`, `CZ on (1,4)`, `CZ on (1,5)` and 16 more (4 single-wire, 24 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 4, 6, 8, 14, 30, 31, 33, 34, 36, 38, 41 and 19 more, `T` on the rest
 - discovery: AI search
@@ -10610,6 +11084,7 @@ readable copy of exactly these rows.
 - output gate: `012+345`
 - `N = 16` (6 outputs + 10 checks), exact minimal T-count 13, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 5, 16]
+- leading error coefficient: `A_4 = 2250` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `CZ on (0,2)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,9)`, `CZ on (0,12)`, `CZ on (0,13)`, `CZ on (1,5)`, `CZ on (1,11)`, `CZ on (1,13)`, `CZ on (1,14)` and 24 more (2 single-wire, 34 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 5, 6, 7, 9, 11, 13, 15, 27, 29, 30, 31 and 19 more, `T` on the rest
 - discovery: AI search
@@ -10628,6 +11103,7 @@ readable copy of exactly these rows.
 - output gate: `0+123+456`
 - `N = 17` (7 outputs + 10 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 5, 57]
+- leading error coefficient: `A_4 = 2270` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,9)`, `CZ on (1,3)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (1,10)`, `CZ on (1,13)`, `CZ on (1,14)` and 28 more (2 single-wire, 38 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 4, 5, 8, 10, 11, 12, 13, 20, 30, 36, 38 and 18 more, `T` on the rest
 - discovery: AI search
@@ -10646,6 +11122,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 22` (12 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 686` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `Z on 9`, `Z on 10`, `CZ on (1,8)`, `CZ on (1,9)`, `CZ on (1,10)`, `CZ on (1,11)`, `CZ on (2,6)` and 26 more (7 single-wire, 31 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 12, 15, 26, 27, 30, 33, 40, 42, 44, 45, 50, 53 and 13 more; `T⁵` on columns 8, 10, 38; `T†` on columns 0, 1, 4, 7, 11, 13, 16, 24, `T` on the rest
 - discovery: AI search
@@ -10664,6 +11141,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 497` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 4`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,10)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,8)` and 12 more (3 single-wire, 21 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10681,6 +11159,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+34`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 498` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 3`, `CZ on (0,2)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,11)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)` and 17 more (3 single-wire, 26 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 7, 8, 9, 14, 16, 21, 22, 23, 27, 28, 29 and 19 more; `T⁵` on columns 2, 3, 5, 15; `T†` on column 4, `T` on the rest
 - discovery: AI search
@@ -10698,6 +11177,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 501` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S on 2`, `S on 3`, `Z on 4`, `S† on 5`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (1,3)` and 28 more (6 single-wire, 34 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10715,6 +11195,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 505` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S† on 2`, `Z on 5`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,12)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,6)` and 17 more (3 single-wire, 26 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10732,6 +11213,7 @@ readable copy of exactly these rows.
 - output gate: `0+123+456`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 515` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `Z on 2`, `Z on 3`, `S on 4`, `S on 6`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (1,3)`, `CZ on (1,4)` and 28 more (6 single-wire, 34 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10750,6 +11232,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8`
 - `N = 16` (9 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 771` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -10768,6 +11251,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 18` (11 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 45]
+- leading error coefficient: `A_3 = 771` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,5)`, `CZ on (1,6)` and 25 more (6 single-wire, 31 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 7, 8, 13, 22, 24, 27, 30, 34, 36, 37, 38 and 11 more; `T⁵` on columns 6, 9, 31; `T†` on columns 3, 4, 17, `T` on the rest
 - discovery: AI search
@@ -10786,6 +11270,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12`
 - `N = 20` (13 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 771` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S† on 7`, `S† on 8`, `S on 9`, `S on 10`, `S† on 11` and 29 more (13 single-wire, 28 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10804,6 +11289,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 7432` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,7)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10824,6 +11310,7 @@ readable copy of exactly these rows.
 - output gate: `01+02`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 3, 6, 9]
+- leading error coefficient: `A_4 = 7432` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (2,3)` and 2 more (3 single-wire, 11 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10844,6 +11331,7 @@ readable copy of exactly these rows.
 - output gate: `01+23`
 - `N = 12` (4 outputs + 8 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 30]
+- leading error coefficient: `A_4 = 9476` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `Z on 2`, `S† on 3`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (1,7)`, `CZ on (1,8)`, `CZ on (1,9)` and 5 more (4 single-wire, 13 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10860,6 +11348,7 @@ readable copy of exactly these rows.
 - output gate: `01+234`
 - `N = 13` (5 outputs + 8 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 3, 50]
+- leading error coefficient: `A_4 = 9800` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 4`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,10)`, `CZ on (0,11)`, `CZ on (0,12)`, `CZ on (1,4)`, `CZ on (1,5)` and 7 more (3 single-wire, 16 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10876,6 +11365,7 @@ readable copy of exactly these rows.
 - output gate: `012+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 13, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 18]
+- leading error coefficient: `A_3 = 504` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 4`, `S† on 5`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)` and 22 more (4 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10893,6 +11383,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 15` (8 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 640` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -10911,6 +11402,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 16` (8 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 366` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 8`, `Z on 9`, `Z on 12`, `Z on 14`, `Z on 15` and 10 more (12 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 7, 9, 11, 14, 20, 25, 26, 27, 30, 33, 38 and 21 more; `T⁵` on columns 0, 8, 21, 42; `T†` on columns 1, 4, 15, 28, 35, 49, `T` on the rest
 - discovery: AI search
@@ -10929,6 +11421,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 18` (10 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 610` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 8`, `S† on 9`, `S on 10`, `Z on 12`, `Z on 16` and 30 more (13 single-wire, 29 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10947,6 +11440,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8,9,10`
 - `N = 19` (11 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 618` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `Z on 9`, `S† on 10`, `S† on 11`, `S† on 13`, `S† on 15` and 40 more (15 single-wire, 37 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10965,6 +11459,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 20` (12 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 610` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `Z on 8`, `Z on 9`, `Z on 11`, `S† on 12` and 48 more (17 single-wire, 43 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -10983,6 +11478,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 704` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `S† on 3`, `Z on 10`, `CZ on (0,2)`, `CZ on (0,8)`, `CZ on (1,2)`, `CZ on (1,6)`, `CZ on (1,9)`, `CZ on (1,10)`, `CZ on (2,4)` and 9 more (5 single-wire, 16 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 30, 33, 36, 39, 42, 46, 50, 51, 53, 54, 58 and 14 more; `T⁵` on columns 3, 5, 8; `T†` on columns 4, 47, `T` on the rest
 - discovery: AI search
@@ -10999,6 +11495,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 728` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `S† on 4`, `Z on 11`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (0,10)`, `CZ on (0,11)`, `CZ on (1,2)` and 21 more (4 single-wire, 29 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11016,6 +11513,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 727` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `Z on 4`, `Z on 5`, `Z on 12`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,11)`, `CZ on (0,12)`, `CZ on (1,3)`, `CZ on (1,5)` and 27 more (6 single-wire, 33 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11033,6 +11531,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 3]
+- leading error coefficient: `A_3 = 745` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 2`, `S on 3`, `S on 4`, `Z on 5`, `Z on 12`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,10)`, `CZ on (1,2)` and 22 more (6 single-wire, 28 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11050,6 +11549,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 10` (1 output + 9 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 10, 44, 55]
+- leading error coefficient: `A_4 = 1589` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)` and 8 more (9 single-wire, 11 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 2, 3, 4, 5, 6, 55, 56, 57, 61, 62 and 7 more, `T` on the rest
 - discovery: AI search
@@ -11067,6 +11567,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 12` (3 outputs + 9 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 3, 9]
+- leading error coefficient: `A_4 = 6912` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 2`, `CZ on (0,1)`, `CZ on (1,2)`, `CZ on (2,3)`, `CZ on (2,4)`, `CZ on (2,5)`, `CZ on (2,6)`, `CZ on (2,7)`, `CZ on (2,8)`, `CZ on (2,9)`, `CZ on (2,10)` and 28 more (2 single-wire, 38 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11083,6 +11584,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+34`
 - `N = 12` (5 outputs + 7 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
+- leading error coefficient: `A_3 = 730` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S on 3`, `Z on 5`, `Z on 8`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,11)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)` and 17 more (4 single-wire, 25 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 6, 14, 15, 23, 26, 27, 28, 30, 32, 34, 41 and 20 more; `T⁵` on columns 1, 5, 12; `T†` on columns 3, 20, 36, `T` on the rest
 - discovery: AI search
@@ -11100,6 +11602,7 @@ readable copy of exactly these rows.
 - output gate: `012+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 13, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
+- leading error coefficient: `A_3 = 747` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S† on 2`, `S on 3`, `S† on 4`, `S† on 5`, `Z on 6`, `Z on 9`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,7)` and 33 more (8 single-wire, 37 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11117,6 +11620,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
+- leading error coefficient: `A_3 = 745` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S† on 4`, `S† on 5`, `Z on 6`, `Z on 9`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,9)` and 31 more (6 single-wire, 37 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11134,6 +11638,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23+45`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
+- leading error coefficient: `A_3 = 744` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S on 2`, `S† on 4`, `S on 5`, `Z on 6`, `Z on 9`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,12)`, `CZ on (1,2)` and 26 more (6 single-wire, 32 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11151,6 +11656,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+456`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 5]
+- leading error coefficient: `A_3 = 760` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `Z on 7`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)` and 39 more (8 single-wire, 43 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11169,6 +11675,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 19` (12 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 784` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 11 more (14 single-wire, 9 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 7, 14, 20, 25, 26, 27, 32, 33, 34, 36 and 20 more; `T⁵` on columns 9, 21, 28, 35, 56, 63; `T†` on columns 4, 8, 11, 15, 42, 49, 70, 77, `T` on the rest
 - discovery: AI search
@@ -11187,6 +11694,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 11` (1 output + 10 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [10, 14, 35, 49, 56]
+- leading error coefficient: `A_5 = 32581` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `CZ on (0,6)`, `CZ on (0,7)` and 48 more (10 single-wire, 50 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 19, 74, 80, 81, 82, 83, 84; `T⁵` on columns 0, 1, 2, 3, 4, 5; `T†` on columns 6, 7, 8, 9, 10, `T` on the rest
 - discovery: pre-existing
@@ -11205,6 +11713,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+01`
 - `N = 18` (2 outputs + 16 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [21, 22, 39, 59, 75]
+- leading error coefficient: `A_5 = 357` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,10)`, `CZ on (0,11)`, `CZ on (0,12)`, `CZ on (0,13)`, `CZ on (0,15)`, `CZ on (0,16)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11222,6 +11731,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 16` (8 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 416` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S† on 8`, `Z on 9`, `Z on 12`, `Z on 14` and 10 more (13 single-wire, 9 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 19, 20, 21, 27, 30, 33, 39, 40, 41, 46, 47 and 15 more; `T⁵` on columns 1, 35, 42; `T†` on columns 2, 4, 8, 9, 11, 18, 22, 28, 49, `T` on the rest
 - discovery: AI search
@@ -11240,6 +11750,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 18` (10 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 678` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `Z on 10`, `Z on 11` and 19 more (17 single-wire, 14 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 7, 9, 16, 19, 25, 26, 27, 28, 34, 39, 40 and 20 more; `T⁵` on columns 0, 21, 35, 49, 56, 63; `T†` on columns 1, 2, 11, 14, 29, 42, `T` on the rest
 - discovery: AI search
@@ -11258,6 +11769,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 20` (12 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 686` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `Z on 9`, `S† on 11`, `S† on 13` and 29 more (16 single-wire, 25 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11276,6 +11788,7 @@ readable copy of exactly these rows.
 - output gate: `012+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 13, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 755` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 9`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)` and 28 more (8 single-wire, 32 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11293,6 +11806,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 914` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 2`, `S on 3`, `Z on 4`, `Z on 9`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (0,10)` and 26 more (7 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11310,6 +11824,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23+45`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 911` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 2`, `S on 3`, `S on 4`, `Z on 9`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)` and 30 more (7 single-wire, 35 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11327,6 +11842,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 917` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 3`, `S† on 4`, `S on 5`, `Z on 9`, `Z on 10`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,10)` and 26 more (7 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11344,6 +11860,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 19` (11 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 45]
+- leading error coefficient: `A_3 = 799` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `Z on 11`, `Z on 13`, `Z on 14`, `Z on 15`, `Z on 16`, `CZ on (0,7)` and 34 more (11 single-wire, 35 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 7, 8, 13, 22, 24, 27, 30, 34, 36, 37, 38 and 15 more; `T⁵` on columns 6, 9, 31; `T†` on columns 3, 4, 17, `T` on the rest
 - discovery: AI search
@@ -11362,6 +11879,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12`
 - `N = 20` (13 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 927` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 12`, `Z on 13` and 40 more (17 single-wire, 35 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11380,6 +11898,7 @@ readable copy of exactly these rows.
 - output gate: `012+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 13, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 9, 10]
+- leading error coefficient: `A_3 = 793` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `Z on 3`, `S on 4`, `S on 5`, `Z on 9`, `Z on 10`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)` and 17 more (7 single-wire, 22 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11397,6 +11916,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 9, 10]
+- leading error coefficient: `A_3 = 788` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `Z on 2`, `S† on 3`, `S on 5`, `Z on 9`, `Z on 10`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,9)` and 24 more (7 single-wire, 29 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11414,6 +11934,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23+45`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 9, 10]
+- leading error coefficient: `A_3 = 789` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 3`, `S on 4`, `Z on 5`, `Z on 9`, `Z on 10`, `CZ on (0,3)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,5)` and 27 more (6 single-wire, 33 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11431,6 +11952,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 17` (10 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 896` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 13`, `Z on 14` and 4 more (13 single-wire, 3 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 4, 11, 15, 20, 25, 26, 27, 32, 33, 34 and 22 more; `T⁵` on columns 2, 8, 21, 28, 35, 42, 56; `T†` on columns 7, 9, 14, 49, 63, `T` on the rest
 - discovery: AI search
@@ -11449,6 +11971,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 19` (12 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 896` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `Z on 11`, `S on 15` and 13 more (15 single-wire, 10 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11467,6 +11990,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10,11,12`
 - `N = 20` (13 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 896` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `Z on 10`, `S on 16` and 17 more (14 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11485,6 +12009,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13`
 - `N = 21` (14 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 896` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `Z on 10`, `S on 12` and 24 more (17 single-wire, 19 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11503,6 +12028,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+12+13+23+012+013+023+123`
 - `N = 8` (4 outputs + 4 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 225` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T³` on columns 0, 82, 83, 84, 85, 86, 87; `T†` on columns 15, 19, 23, 27, `T` on the rest
 - discovery: pre-existing
@@ -11519,6 +12045,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 9` (5 outputs + 4 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 225` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -11535,6 +12062,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 16` (8 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 508` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `Z on 8`, `Z on 10`, `CZ on (8,9)`, `CZ on (8,10)` and 12 more (10 single-wire, 14 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 4, 14, 15, 20, 25, 26, 27, 32, 33, 34, 39 and 26 more; `T⁵` on columns 16, 21, 28, 35, 42, 49; `T†` on columns 1, 7, 9, 11, `T` on the rest
 - discovery: AI search
@@ -11553,6 +12081,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 18` (10 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 778` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `Z on 11` and 17 more (17 single-wire, 12 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 9, 11, 15, 20, 25, 26, 27, 32, 33, 34, 38 and 20 more; `T⁵` on columns 2, 21, 28, 42, 56; `T†` on columns 0, 1, 8, 14, 35, 49, 63, `T` on the rest
 - discovery: AI search
@@ -11571,6 +12100,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8,9,10`
 - `N = 19` (11 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 506` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S† on 8`, `S† on 9`, `Z on 10`, `S† on 11` and 32 more (17 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11589,6 +12119,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 20` (12 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 770` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S† on 9`, `S† on 10`, `S† on 11` and 27 more (17 single-wire, 22 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11607,6 +12138,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13`
 - `N = 22` (14 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 770` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S† on 11` and 38 more (22 single-wire, 28 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11625,6 +12157,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 13` (1 output + 12 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 78]
+- leading error coefficient: `A_3 = 364` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`
 - or no correction at all, with rotations run as `T³` on every rotation
 - discovery: AI search
@@ -11642,6 +12175,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 968` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `S† on 2`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,2)`, `CZ on (1,3)` and 12 more (3 single-wire, 21 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 30, 37, 38, 39, 40, 41, 42, 43, 47, 52, 53 and 15 more; `T⁵` on column 9; `T†` on columns 1, 2, 3, 15, 31, `T` on the rest
 - discovery: AI search
@@ -11658,6 +12192,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 10` (5 outputs + 5 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [16, 26]
+- leading error coefficient: `A_2 = 150` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -11674,6 +12209,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 1019` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `S† on 4`, `Z on 12`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,10)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,6)` and 23 more (5 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11691,6 +12227,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 9, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 992` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `Z on 3`, `S† on 4`, `S on 5`, `Z on 12`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (1,2)`, `CZ on (1,4)`, `CZ on (1,5)` and 20 more (7 single-wire, 25 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11708,6 +12245,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+56`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 1024` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 2`, `S on 3`, `Z on 4`, `S on 5`, `Z on 6`, `Z on 13`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,8)` and 43 more (7 single-wire, 48 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11726,6 +12264,7 @@ readable copy of exactly these rows.
 - output gate: `0+123+456`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 897` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `Z on 7`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,5)` and 34 more (9 single-wire, 37 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11744,6 +12283,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 19` (11 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 45]
+- leading error coefficient: `A_3 = 837` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `S on 12`, `Z on 14`, `Z on 15`, `Z on 16`, `Z on 18`, `CZ on (0,7)` and 34 more (11 single-wire, 35 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 7, 13, 17, 22, 24, 27, 30, 34, 36, 37, 38 and 17 more; `T⁵` on columns 2, 5, 6, 10, 12, 16, 31; `T†` on columns 3, 4, 8, `T` on the rest
 - discovery: AI search
@@ -11762,6 +12302,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12`
 - `N = 20` (13 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1029` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S† on 9`, `S† on 10`, `Z on 12` and 27 more (16 single-wire, 23 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11781,6 +12322,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14`
 - `N = 22` (15 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1029` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `Z on 10`, `S on 11` and 30 more (18 single-wire, 24 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11799,6 +12341,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 9` (4 outputs + 5 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 76]
+- leading error coefficient: `A_2 = 106` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -11815,6 +12358,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 10, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 8]
+- leading error coefficient: `A_3 = 941` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `S on 2`, `Z on 3`, `S on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,9)`, `CZ on (1,11)` and 24 more (5 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11832,6 +12376,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23+45`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 8]
+- leading error coefficient: `A_3 = 942` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S on 3`, `S† on 5`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (1,3)` and 25 more (5 single-wire, 32 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11849,6 +12394,7 @@ readable copy of exactly these rows.
 - output gate: `012+345`
 - `N = 14` (6 outputs + 8 checks), exact minimal T-count 13, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 4, 5]
+- leading error coefficient: `A_4 = 22462` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 4`, `S† on 5`, `Z on 13`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,10)` and 29 more (5 single-wire, 36 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11866,6 +12412,7 @@ readable copy of exactly these rows.
 - output gate: `0+123+456`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 8]
+- leading error coefficient: `A_3 = 949` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 2`, `S† on 4`, `S† on 5`, `S† on 6`, `CZ on (0,8)`, `CZ on (0,10)`, `CZ on (0,12)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)` and 23 more (4 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11884,6 +12431,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 19` (12 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1008` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 6 more (15 single-wire, 3 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 7, 8, 16, 18, 25, 26, 27, 32, 33, 34 and 26 more; `T⁵` on columns 21, 28, 35, 49, 70, 77; `T†` on columns 4, 11, 14, 42, 56, 63, `T` on the rest
 - discovery: AI search
@@ -11902,6 +12450,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13`
 - `N = 21` (14 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1008` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `Z on 11` and 20 more (17 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11920,6 +12469,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12,13,14`
 - `N = 22` (15 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1008` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 20 more (17 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -11938,6 +12488,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 7` (2 outputs + 5 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 93` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -11954,6 +12505,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 19` (11 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 45]
+- leading error coefficient: `A_3 = 798` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `S on 11`, `S on 12`, `S on 13`, `S on 16`, `S on 18`, `CZ on (0,7)` and 40 more (11 single-wire, 41 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 7, 8, 13, 22, 24, 27, 30, 34, 36, 37, 38 and 17 more; `T⁵` on columns 6, 9, 10, 12, 31; `T†` on columns 0, 4, 17, 64, `T` on the rest
 - discovery: AI search
@@ -11972,6 +12524,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 8` (2 outputs + 6 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [32, 47]
+- leading error coefficient: `A_2 = 31` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -11988,6 +12541,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 16` (8 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 476` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `Z on 11`, `CZ on (8,9)`, `CZ on (8,11)` and 11 more (10 single-wire, 13 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 4, 9, 14, 18, 22, 27, 32, 33, 34, 39, 40 and 25 more; `T⁵` on columns 8, 28, 35, 42, 49; `T†` on columns 0, 7, 11, 16, 21, `T` on the rest
 - discovery: AI search
@@ -12006,6 +12560,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 20` (12 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 882` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `Z on 11` and 33 more (18 single-wire, 27 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 9, 11, 17, 19, 24, 25, 30, 33, 36, 38, 40 and 26 more; `T⁵` on columns 0, 14, 16, 35, 49, 56; `T†` on columns 1, 4, 8, 15, 21, 28, 42, `T` on the rest
 - discovery: AI search
@@ -12024,6 +12579,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13`
 - `N = 22` (14 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 870` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S† on 10`, `S† on 11` and 47 more (18 single-wire, 41 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12042,6 +12598,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 26` (1 output + 25 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 7, witnessed by the fault on columns [15, 38, 51, 63, 75, 78, 79]
+- leading error coefficient: `A_7 = 48645` accepted harmful faults of weight 7
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -12058,6 +12615,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+56`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 1133` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `S on 2`, `S on 3`, `Z on 4`, `S on 5`, `S† on 6`, `CZ on (0,2)`, `CZ on (0,8)`, `CZ on (0,13)`, `CZ on (1,2)`, `CZ on (1,5)` and 22 more (7 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12076,6 +12634,7 @@ readable copy of exactly these rows.
 - output gate: `0+123+456`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 1140` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `Z on 5`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,9)` and 30 more (6 single-wire, 36 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12094,6 +12653,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23+456`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 1139` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `Z on 2`, `S on 4`, `S† on 6`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,12)` and 28 more (5 single-wire, 35 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12112,6 +12672,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8`
 - `N = 16` (9 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 1147` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -12130,6 +12691,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 19` (11 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 45]
+- leading error coefficient: `A_3 = 895` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `S† on 11`, `S† on 16`, `S† on 18`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)` and 44 more (9 single-wire, 47 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 7, 13, 22, 24, 27, 30, 34, 36, 37, 38, 40 and 17 more; `T⁵` on columns 6, 10, 12, 16, 20, 31, 65; `T†` on columns 0, 3, 8, 17, 63, `T` on the rest
 - discovery: AI search
@@ -12148,6 +12710,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9,10,11`
 - `N = 19` (12 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 1147` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S† on 10`, `S on 11`, `CZ on (9,11)` and 10 more (11 single-wire, 11 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 4, 11, 18, 25, 26, 27, 31, 32, 37, 40, 43 and 30 more; `T⁵` on columns 9, 14, 21, 56; `T†` on columns 1, 7, 8, 15, 16, 28, 35, 42, 49, `T` on the rest
 - discovery: AI search
@@ -12166,6 +12729,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12`
 - `N = 20` (13 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1147` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S† on 9`, `S† on 10`, `Z on 11` and 15 more (12 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12184,6 +12748,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14`
 - `N = 22` (15 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1147` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S† on 12` and 27 more (14 single-wire, 25 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12202,6 +12767,7 @@ readable copy of exactly these rows.
 - output gate: `012+345`
 - `N = 13` (6 outputs + 7 checks), exact minimal T-count 13, reduced degree 3
 - distance: exactly 3, witnessed by the fault on columns [0, 32, 33]
+- leading error coefficient: `A_3 = 1014` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 2`, `Z on 3`, `S on 4`, `Z on 5`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,10)`, `CZ on (1,3)`, `CZ on (1,6)` and 24 more (5 single-wire, 31 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 4, 7, 16, 18, 21, 25, 27, 29, 35, 36 and 34 more; `T⁵` on columns 3, 5, 6, 12; `T†` on columns 2, 8, `T` on the rest
 - discovery: AI search
@@ -12219,6 +12785,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 15` (8 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1028` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -12237,6 +12804,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 19` (12 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1088` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `Z on 8`, `Z on 9`, `S on 10`, `S† on 11` and 27 more (12 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12255,6 +12823,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8,9+10,11,12`
 - `N = 20` (13 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1087` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S† on 8`, `S† on 9`, `Z on 10`, `Z on 11` and 22 more (13 single-wire, 21 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12273,6 +12842,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 19` (11 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 45]
+- leading error coefficient: `A_3 = 836` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `S† on 11`, `S on 12`, `S on 13`, `S† on 15`, `S† on 17`, `S on 18` and 48 more (12 single-wire, 48 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 4, 7, 13, 17, 22, 24, 27, 30, 34, 36 and 22 more; `T⁵` on columns 1, 2, 5, 20, 31, 63; `T†` on column 8, `T` on the rest
 - discovery: AI search
@@ -12291,6 +12861,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13`
 - `N = 22` (14 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 630` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 4 more (15 single-wire, 1 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 4, 15, 20, 25, 26, 27, 30, 31, 34, 36, 37 and 20 more; `T⁵` on columns 21, 28, 35, 42, 50, 63; `T†` on columns 2, 8, 9, 11, 14, 56, 70, 77, 84, 91, `T` on the rest
 - discovery: AI search
@@ -12309,6 +12880,7 @@ readable copy of exactly these rows.
 - output gate: `012+345+678`
 - `N = 16` (9 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 7]
+- leading error coefficient: `A_3 = 1182` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 15`
 - or no correction at all, with rotations run as `T†` on column 49, `T` on the rest
 - discovery: AI search
@@ -12327,6 +12899,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 19` (11 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 45]
+- leading error coefficient: `A_3 = 865` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `S† on 11`, `Z on 12`, `S on 13`, `Z on 14`, `S† on 16`, `Z on 17` and 48 more (12 single-wire, 48 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 4, 8, 22, 24, 27, 30, 34, 36, 37, 38 and 21 more; `T⁵` on columns 1, 5, 9, 10, 16, 20, 31; `T†` on columns 7, 13, 17, `T` on the rest
 - discovery: AI search
@@ -12345,6 +12918,7 @@ readable copy of exactly these rows.
 - output gate: `0,1,2+3,4,5+6,7,8+9,10,11`
 - `N = 19` (12 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
+- leading error coefficient: `A_3 = 1219` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 18`
 - or no correction at all, with rotations run as `T†` on column 49, `T` on the rest
 - discovery: AI search
@@ -12363,6 +12937,7 @@ readable copy of exactly these rows.
 - output gate: `0+1,2,3+4,5,6+7,8,9+10,11,12`
 - `N = 20` (13 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 8]
+- leading error coefficient: `A_3 = 1222` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 19`
 - or no correction at all, with rotations run as `T†` on column 49, `T` on the rest
 - discovery: AI search
@@ -12381,6 +12956,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12`
 - `N = 20` (13 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1281` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 12 more (15 single-wire, 9 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 7, 9, 16, 19, 25, 26, 27, 32, 33, 34, 39 and 25 more; `T⁵` on columns 0, 21, 28, 35, 42, 49, 56, 63, 77; `T†` on columns 1, 2, 11, 14, 70, 84, `T` on the rest
 - discovery: AI search
@@ -12399,6 +12975,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14`
 - `N = 22` (15 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1281` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `Z on 11` and 29 more (17 single-wire, 24 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12417,6 +12994,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13,14,15`
 - `N = 23` (16 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1281` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 30 more (17 single-wire, 25 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12435,6 +13013,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 12` (2 outputs + 10 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 57, 59, 72]
+- leading error coefficient: `A_4 = 3676` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `Z on 11`, `CZ on (1,9)` and 23 more (11 single-wire, 24 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12452,6 +13031,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+014+023+125+145+245+345`
 - `N = 15` (6 outputs + 9 checks), exact minimal T-count 17, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 4]
+- leading error coefficient: `A_4 = 15580` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 3`, `S† on 4`, `Z on 6`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,12)`, `CZ on (1,2)`, `CZ on (1,3)` and 35 more (5 single-wire, 42 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12470,6 +13050,7 @@ readable copy of exactly these rows.
 - output gate: `012+345+678`
 - `N = 17` (9 outputs + 8 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 7, 8]
+- leading error coefficient: `A_4 = 30128` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 15`, `Z on 16`, `CZ on (15,16)`
 - or no correction at all, with rotations run as `T†` on columns 0, 50, `T` on the rest
 - discovery: AI search
@@ -12488,6 +13069,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 19` (12 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1284` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 9 more (16 single-wire, 5 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 7, 9, 11, 14, 20, 25, 26, 27, 32, 33 and 28 more; `T⁵` on columns 8, 21, 28, 35, 42, 63, 70; `T†` on columns 4, 15, 49, 56, 77, `T` on the rest
 - discovery: AI search
@@ -12506,6 +13088,7 @@ readable copy of exactly these rows.
 - output gate: `0,1,2+3,4,5+6,7,8+9,10,11`
 - `N = 20` (12 outputs + 8 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 6, 9]
+- leading error coefficient: `A_4 = 30847` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 18`, `Z on 19`, `CZ on (18,19)`
 - or no correction at all, with rotations run as `T†` on columns 0, 50, `T` on the rest
 - discovery: AI search
@@ -12524,6 +13107,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12`
 - `N = 20` (13 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1286` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 13 more (16 single-wire, 9 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 4, 11, 20, 25, 26, 27, 32, 33, 34, 37, 38 and 30 more; `T⁵` on columns 7, 18, 21, 28, 35, 42, 77; `T†` on columns 2, 8, 9, 14, 15, 49, 56, 63, 70, `T` on the rest
 - discovery: AI search
@@ -12542,6 +13126,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13`
 - `N = 21` (14 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1288` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 18 more (18 single-wire, 12 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 14, 19, 24, 25, 29, 34, 37, 40, 43, 45, 47 and 19 more; `T⁵` on columns 0, 42, 49, 70; `T†` on columns 1, 4, 8, 9, 11, 16, 21, 28, 35, 56, 63, 77, `T` on the rest
 - discovery: AI search
@@ -12560,6 +13145,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12,13,14`
 - `N = 23` (15 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 744` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 33 more (20 single-wire, 25 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12578,6 +13164,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15`
 - `N = 23` (16 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1272` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S† on 11` and 31 more (17 single-wire, 26 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12596,6 +13183,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 19` (11 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 45]
+- leading error coefficient: `A_3 = 874` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `S† on 11`, `S† on 12`, `S on 13`, `S† on 14`, `Z on 15`, `Z on 16` and 46 more (14 single-wire, 44 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 8, 22, 24, 27, 30, 34, 36, 37, 38, 40, 46, 47 and 19 more; `T⁵` on columns 1, 5, 6, 9, 12, 31, 63, 66; `T†` on columns 0, 3, 4, 7, 13, 17, `T` on the rest
 - discovery: AI search
@@ -12614,6 +13202,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23+456`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 1420` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 3`, `S on 4`, `S† on 5`, `Z on 10`, `Z on 11`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)` and 31 more (7 single-wire, 36 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12632,6 +13221,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+567`
 - `N = 15` (8 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 1422` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `Z on 2`, `Z on 3`, `S† on 4`, `S† on 5`, `Z on 7`, `Z on 11`, `Z on 12`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)` and 43 more (9 single-wire, 46 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12650,6 +13240,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+567`
 - `N = 15` (8 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 1431` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 4`, `Z on 5`, `Z on 6`, `S† on 7`, `Z on 11`, `Z on 12`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,8)` and 37 more (9 single-wire, 40 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12668,6 +13259,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 19` (11 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 45]
+- leading error coefficient: `A_3 = 903` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `S† on 12`, `S on 13`, `Z on 14`, `Z on 15`, `Z on 16`, `Z on 17` and 43 more (13 single-wire, 42 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 8, 17, 22, 24, 27, 30, 34, 36, 37, 38, 40, 46 and 21 more; `T⁵` on columns 2, 9, 12, 16, 31; `T†` on columns 0, 3, 4, 7, 13, `T` on the rest
 - discovery: AI search
@@ -12686,6 +13278,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14`
 - `N = 22` (15 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1431` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S† on 11` and 43 more (19 single-wire, 36 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12704,6 +13297,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16`
 - `N = 24` (17 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1431` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 38 more (22 single-wire, 28 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12722,6 +13316,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23+456`
 - `N = 14` (7 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 4]
+- leading error coefficient: `A_3 = 1430` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 3`, `S† on 4`, `S on 5`, `Z on 10`, `Z on 11`, `CZ on (0,3)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (0,11)`, `CZ on (1,5)`, `CZ on (1,7)`, `CZ on (1,8)` and 23 more (5 single-wire, 30 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12740,6 +13335,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+567`
 - `N = 15` (8 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 4]
+- leading error coefficient: `A_3 = 1437` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `Z on 2`, `S† on 3`, `Z on 4`, `S on 5`, `S on 6`, `Z on 11`, `Z on 12`, `CZ on (0,1)`, `CZ on (0,5)`, `CZ on (0,7)` and 38 more (9 single-wire, 41 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12758,6 +13354,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
 - `N = 9` (5 outputs + 4 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 315` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T³` on columns 97, 98, 99, 100, 101, 102; `T⁵` on column 0; `T†` on columns 15, 19, 23, 27, 31, `T` on the rest
 - discovery: pre-existing
@@ -12775,6 +13372,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 10` (6 outputs + 4 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 315` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -12791,6 +13389,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
 - `N = 10` (5 outputs + 5 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [16, 26]
+- leading error coefficient: `A_2 = 225` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T³` on columns 98, 99, 100, 101, 102, 103; `T⁵` on columns 0, 1; `T†` on columns 16, 26, 36, 46, 56, `T` on the rest
 - discovery: pre-existing
@@ -12808,6 +13407,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 11` (6 outputs + 5 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [16, 26]
+- leading error coefficient: `A_2 = 225` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -12824,6 +13424,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18`
 - `N = 28` (19 outputs + 9 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 12, 71]
+- leading error coefficient: `A_3 = 463` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `Z on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `Z on 10`, `S on 11` and 25 more (22 single-wire, 15 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 8, 11, 27, 28, 30, 31, 32, 33, 38, 41, 42 and 30 more; `T⁵` on columns 0, 7, 9, 14, 18, 53; `T†` on columns 2, 4, 12, 13, 26, 29, 54, 55, 65, 80, `T` on the rest
 - discovery: AI search
@@ -12842,6 +13443,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18`
 - `N = 29` (19 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 14, 73]
+- leading error coefficient: `A_3 = 324` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 7 more (19 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -12860,6 +13462,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17`
 - `N = 29` (18 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 15, 26]
+- leading error coefficient: `A_3 = 210` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 6 more (18 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -12878,6 +13481,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+23`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 1668` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,5)` and 10 more (2 single-wire, 20 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 58, 59, 61, 62, 67, 68, 71, 72, 74, 75, 79 and 18 more; `T⁵` on columns 2, 6, 15, 31; `T†` on columns 1, 63, `T` on the rest
 - discovery: AI search
@@ -12894,6 +13498,7 @@ readable copy of exactly these rows.
 - output gate: `0+12+34+567`
 - `N = 15` (8 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 1765` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 2`, `S† on 3`, `Z on 4`, `S on 7`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,14)`, `CZ on (1,2)`, `CZ on (1,6)`, `CZ on (1,7)` and 29 more (4 single-wire, 37 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12912,6 +13517,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+345+678`
 - `N = 16` (9 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 1777` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 2`, `S† on 3`, `S on 5`, `Z on 6`, `Z on 7`, `S† on 8`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)` and 55 more (7 single-wire, 60 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12930,6 +13536,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16`
 - `N = 24` (17 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 1779` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 20 more (15 single-wire, 17 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12949,6 +13556,7 @@ readable copy of exactly these rows.
 - output gate: `0,1,2+3,4,5+6,7,8+9,10,11`
 - `N = 19` (12 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 5]
+- leading error coefficient: `A_3 = 1743` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: none
 - discovery: AI search
 - regime: AI search: punctured r=7 simplex parents — found by the 48 < n < 128 AI campaigns, from punctured r=7 simplex parents with free-row appending; a verified witness, not a maximum
@@ -12966,6 +13574,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4,5,6+7,8,9+10,11,12+13,14,15`
 - `N = 23` (16 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 4]
+- leading error coefficient: `A_3 = 1792` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (0,15)`, `CZ on (0,16)`, `CZ on (0,22)`, `CZ on (1,9)`, `CZ on (1,15)` and 8 more (3 single-wire, 17 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -12984,6 +13593,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15`
 - `N = 29` (16 outputs + 13 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 14, 78]
+- leading error coefficient: `A_3 = 96` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 4 more (16 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -13004,6 +13614,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13`
 - `N = 29` (14 outputs + 15 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 14, 101]
+- leading error coefficient: `A_3 = 30` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 2 more (14 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -13023,6 +13634,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 12` (2 outputs + 10 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 13, 89]
+- leading error coefficient: `A_4 = 4860` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 11`, `CZ on (0,1)`, `CZ on (2,11)`, `CZ on (3,11)`, `CZ on (4,11)`, `CZ on (5,11)`, `CZ on (6,11)`, `CZ on (7,11)`, `CZ on (8,11)`, `CZ on (9,11)` and 1 more (3 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 3, 4, 6, 8, 28, 64, 69, 74, 76, 78 and 14 more; `T†` on columns 0, 5, 7, `T` on the rest
 - discovery: AI search
@@ -13039,6 +13651,7 @@ readable copy of exactly these rows.
 - output gate: `0+12`
 - `N = 13` (3 outputs + 10 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 52, 68]
+- leading error coefficient: `A_4 = 6067` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `Z on 12`, `CZ on (1,2)`, `CZ on (3,12)`, `CZ on (4,12)`, `CZ on (5,12)`, `CZ on (6,12)`, `CZ on (7,12)`, `CZ on (8,12)`, `CZ on (9,12)` and 2 more (4 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 20, 21, 26, 27, 51, 53, 55, 56, 62, 63, 65, 69 and 20 more; `T⁵` on columns 2, 5, 7, 9; `T†` on columns 0, 1, 3, 4, 6, 10, 58, `T` on the rest
 - discovery: AI search
@@ -13057,6 +13670,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 29` (12 outputs + 17 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 105]
+- leading error coefficient: `A_4 = 495` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -13075,6 +13689,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 11` (1 output + 10 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 3, 98]
+- leading error coefficient: `A_4 = 5684` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 8`, `Z on 9`, `Z on 10`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (1,8)` and 33 more (4 single-wire, 41 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 11, 28, 72, 75, 76, 77, 79, 80, 83, 84, 86 and 21 more; `T⁵` on column 10; `T†` on columns 2, 3, 4, 6, `T` on the rest
 - discovery: AI search
@@ -13091,6 +13706,7 @@ readable copy of exactly these rows.
 - output gate: `0+01`
 - `N = 12` (2 outputs + 10 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 29]
+- leading error coefficient: `A_4 = 8526` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `Z on 9`, `Z on 10`, `Z on 11`, `CZ on (0,1)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (0,11)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)` and 45 more (5 single-wire, 52 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13108,6 +13724,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 15` (5 outputs + 10 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 3, 98]
+- leading error coefficient: `A_4 = 11579` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `Z on 12`, `Z on 13`, `Z on 14`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,12)`, `CZ on (0,13)` and 64 more (7 single-wire, 69 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13124,6 +13741,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 29` (10 outputs + 19 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 2, 68, 83]
+- leading error coefficient: `A_4 = 210` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -13142,6 +13760,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16`
 - `N = 25` (17 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 5]
+- leading error coefficient: `A_3 = 1071` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 5 more (17 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -13160,6 +13779,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17,18,19`
 - `N = 28` (20 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 57]
+- leading error coefficient: `A_3 = 1071` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 26 more (19 single-wire, 19 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13178,6 +13798,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 7` (3 outputs + 4 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 420` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`
 - or no correction at all, with rotations run as `T³` on columns 109, 110, 111, 115, 116, 117, 119; `T†` on columns 15, 19, 23, `T` on the rest
 - discovery: pre-existing
@@ -13194,6 +13815,7 @@ readable copy of exactly these rows.
 - output gate: `01+02`
 - `N = 13` (3 outputs + 10 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 62, 90]
+- leading error coefficient: `A_4 = 7344` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `Z on 10`, `Z on 11`, `Z on 12`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,10)`, `CZ on (0,11)`, `CZ on (0,12)`, `CZ on (1,3)` and 16 more (6 single-wire, 22 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13211,6 +13833,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+023+123`
 - `N = 8` (4 outputs + 4 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 36]
+- leading error coefficient: `A_2 = 420` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -13227,6 +13850,7 @@ readable copy of exactly these rows.
 - output gate: `012+013`
 - `N = 14` (4 outputs + 10 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 9, 119]
+- leading error coefficient: `A_4 = 14690` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 1`, `Z on 2`, `S on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)` and 17 more (9 single-wire, 20 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 6, 7, 37, 46, 50, 52, 54, 55, 58, 60 and 31 more; `T⁵` on columns 0, 3; `T†` on columns 4, 22, 23, `T` on the rest
 - discovery: AI search
@@ -13243,6 +13867,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+05+12+13+14+15+23+24+25+34+35+45+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 10` (6 outputs + 4 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 420` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
 - or no correction at all, with rotations run as `T³` on columns 112, 113, 114, 115, 116, 117; `T†` on columns 0, 15, 19, 23, 27, 31, 35, `T` on the rest
 - discovery: pre-existing
@@ -13260,6 +13885,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6`
 - `N = 11` (7 outputs + 4 checks)
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 420` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -13278,6 +13904,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 11` (6 outputs + 5 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 106]
+- leading error coefficient: `A_2 = 241` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -13294,6 +13921,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 7` (2 outputs + 5 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 186` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T³` on columns 0, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123; `T†` on columns 31, 36, `T` on the rest
 - discovery: pre-existing
@@ -13310,6 +13938,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 8` (3 outputs + 5 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 186` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -13326,6 +13955,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 9` (6 outputs + 3 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 78]
+- leading error coefficient: `A_2 = 1050` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 5, 6, 7, 18, 75, 105, 106, 119, 122, 123; `T⁵` on column 2, `T` on the rest
 - discovery: pre-existing
@@ -13343,6 +13973,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [32, 47]
+- leading error coefficient: `A_2 = 93` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -13359,6 +13990,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 29` (3 outputs + 26 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [0, 93, 94, 95, 96]
+- leading error coefficient: `A_5 = 31` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -13375,6 +14007,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 7` (1 output + 6 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 63]
+- leading error coefficient: `A_2 = 63` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -13391,6 +14024,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 8` (2 outputs + 6 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 94]
+- leading error coefficient: `A_2 = 63` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -13407,6 +14041,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 8` (1 output + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 64]
+- leading error coefficient: `A_3 = 2667` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -13423,6 +14058,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 22` (1 output + 21 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 7, witnessed by the fault on columns [32, 41, 54, 67, 72, 81, 82]
+- leading error coefficient: `A_7 = 48387` accepted harmful faults of weight 7
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -13439,6 +14075,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 19` (5 outputs + 14 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [13, 72, 86, 97, 113]
+- leading error coefficient: `A_5 = 16002` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 1`, `S† on 2`, `Z on 3`, `S on 4`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,11)`, `CZ on (0,14)` and 36 more (4 single-wire, 44 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13456,6 +14093,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 18` (11 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 2667` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,5)`, `CZ on (1,6)` and 25 more (6 single-wire, 31 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 13, 15, 17, 21, 29, 33, 35, 36, 39, 40 and 11 more; `T⁵` on columns 8, 9, 12, 16, 23; `T†` on columns 2, 10, 14, `T` on the rest
 - discovery: AI search
@@ -13474,6 +14112,7 @@ readable copy of exactly these rows.
 - output gate: `0,1,2+3,4,5+6,7,8+9,10,11`
 - `N = 19` (12 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 2543` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: none
 - discovery: AI search
 - regime: AI search: punctured r=7 simplex parents — found by the 48 < n < 128 AI campaigns, from punctured r=7 simplex parents with free-row appending; a verified witness, not a maximum
@@ -13491,6 +14130,7 @@ readable copy of exactly these rows.
 - output gate: `0+1,2,3+4,5,6+7,8,9+10,11,12+13,14,15`
 - `N = 23` (16 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 124]
+- leading error coefficient: `A_3 = 2656` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 13`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,10)`, `CZ on (0,13)`, `CZ on (0,15)`, `CZ on (0,16)`, `CZ on (0,21)`, `CZ on (0,22)`, `CZ on (3,13)` and 14 more (2 single-wire, 24 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13509,6 +14149,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5,6,7+8,9,10+11,12,13+14,15,16`
 - `N = 24` (17 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 2667` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S on 2`, `S on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,11)`, `CZ on (0,16)`, `CZ on (0,17)`, `CZ on (0,19)`, `CZ on (0,20)`, `CZ on (0,23)` and 22 more (3 single-wire, 31 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13527,6 +14168,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18`
 - `N = 26` (19 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 2667` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 32 more (16 single-wire, 28 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13545,6 +14187,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20`
 - `N = 28` (21 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 2667` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 29 more (19 single-wire, 22 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13563,6 +14206,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22`
 - `N = 30` (23 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 2667` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 44 more (23 single-wire, 33 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13581,6 +14225,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11,12,13+11,14,15+11,16,17+12,18,19+12,20,21+13,22,23+13,24,25+14,18,22+14,20,24+15,19,23+15,21,25+16,18,25+16,20,23+17,19,24+17,21,22`
 - `N = 33` (26 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 2667` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 8`, `Z on 9`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,5)`, `CZ on (1,6)` and 25 more (6 single-wire, 31 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 13, 15, 17, 21, 29, 33, 35, 36, 39, 40 and 11 more; `T⁵` on columns 8, 9, 12, 16, 23; `T†` on columns 2, 10, 14, `T` on the rest
 - discovery: AI search
@@ -13600,6 +14245,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+0,1+0,2+0,3+0,4+0,5+0,6+0,7+0,8+0,9+0,10+0,11+0,12+0,13+0,14+0,15+0,16+0,17+0,18+0,19+0,20+0,21+1,2+1,3+1,4+1,5+1,6+1,7+1,8+1,9+1,10+1,11+1,12+1,13+1,14+1,15+1,16+1,17+1,18+1,19+1,20+1,21+2,3+2,4+2,5+2,6+2,7+2,8+2,9+2,10+2,11+2,12+2,13+2,14+2,15+2,16+2,17+2,18+2,19+2,20+2,21+3,4+3,5+3,6+3,7+3,8+3,9+3,10+3,11+3,12+3,13+3,14+3,15+3,16+3,17+3,18+3,19+3,20+3,21+4,5+4,6+4,7+4,8+4,9+4,10+4,11+4,12+4,13+4,14+4,15+4,16+4,17+4,18+4,19+4,20+4,21+5,6+5,7+5,8+5,9+5,10+5,11+5,12+5,13+5,14+5,15+5,16+5,17+5,18+5,19+5,20+5,21+6,7+6,8+6,9+6,10+6,11+6,12+6,13+6,14+6,15+6,16+6,17+6,18+6,19+6,20+6,21+7,8+7,9+7,10+7,11+7,12+7,13+7,14+7,15+7,16+7,17+7,18+7,19+7,20+7,21+8,9+8,10+8,11+8,12+8,13+8,14+8,15+8,16+8,17+8,18+8,19+8,20+8,21+9,10+9,11+9,12+9,13+9,14+9,15+9,16+9,17+9,18+9,19+9,20+9,21+10,11+10,12+10,13+10,14+10,15+10,16+10,17+10,18+10,19+10,20+10,21+11,12+11,13+11,14+11,15+11,16+11,17+11,18+11,19+11,20+11,21+12,13+12,14+12,15+12,16+12,17+12,18+12,19+12,20+12,21+13,14+13,15+13,16+13,17+13,18+13,19+13,20+13,21+14,15+14,16+14,17+14,18+14,19+14,20+14,21+15,16+15,17+15,18+15,19+15,20+15,21+16,17+16,18+16,19+16,20+16,21+17,18+17,19+17,20+17,21+18,19+18,20+18,21+19,20+19,21+20,21+0,1,2+0,1,3+0,1,4+0,1,5+0,1,6+0,1,7+0,1,8+0,1,9+0,1,10+0,1,11+0,1,12+0,1,13+0,1,14+0,1,15+0,1,16+0,1,17+0,1,18+0,1,19+0,1,20+0,1,21+0,2,3+0,2,4+0,2,5+0,2,6+0,2,7+0,2,8+0,2,9+0,2,10+0,2,11+0,2,12+0,2,13+0,2,14+0,2,15+0,2,16+0,2,17+0,2,18+0,2,19+0,2,20+0,2,21+0,3,4+0,3,5+0,3,6+0,3,7+0,3,8+0,3,9+0,3,10+0,3,11+0,3,12+0,3,13+0,3,14+0,3,15+0,3,16+0,3,17+0,3,18+0,3,19+0,3,20+0,3,21+0,4,5+0,4,6+0,4,7+0,4,8+0,4,9+0,4,10+0,4,11+0,4,12+0,4,13+0,4,14+0,4,15+0,4,16+0,4,17+0,4,18+0,4,19+0,4,20+0,4,21+0,5,6+0,5,7+0,5,8+0,5,9+0,5,10+0,5,11+0,5,12+0,5,13+0,5,14+0,5,15+0,5,16+0,5,17+0,5,18+0,5,19+0,5,20+0,5,21+0,6,7+0,6,8+0,6,9+0,6,10+0,6,11+0,6,12+0,6,13+0,6,14+0,6,15+0,6,16+0,6,17+0,6,18+0,6,19+0,6,20+0,6,21+0,7,8+0,7,9+0,7,10+0,7,11+0,7,12+0,7,13+0,7,14+0,7,15+0,7,16+0,7,17+0,7,18+0,7,19+0,7,20+0,7,21+0,8,9+0,8,10+0,8,11+0,8,12+0,8,13+0,8,14+0,8,15+0,8,16+0,8,17+0,8,18+0,8,19+0,8,20+0,8,21+0,9,10+0,9,11+0,9,12+0,9,13+0,9,14+0,9,15+0,9,16+0,9,17+0,9,18+0,9,19+0,9,20+0,9,21+0,10,11+0,10,12+0,10,13+0,10,14+0,10,15+0,10,16+0,10,17+0,10,18+0,10,19+0,10,20+0,10,21+0,11,12+0,11,13+0,11,14+0,11,15+0,11,16+0,11,17+0,11,18+0,11,19+0,11,20+0,11,21+0,12,13+0,12,14+0,12,15+0,12,16+0,12,17+0,12,18+0,12,19+0,12,20+0,12,21+0,13,14+0,13,15+0,13,16+0,13,17+0,13,18+0,13,19+0,13,20+0,13,21+0,14,15+0,14,16+0,14,17+0,14,18+0,14,19+0,14,20+0,14,21+0,15,16+0,15,17+0,15,18+0,15,19+0,15,20+0,15,21+0,16,17+0,16,18+0,16,19+0,16,20+0,16,21+0,17,18+0,17,19+0,17,20+0,17,21+0,18,19+0,18,20+0,18,21+0,19,20+0,19,21+0,20,21+1,2,3+1,2,4+1,2,5+1,2,6+1,2,7+1,2,8+1,2,9+1,2,10+1,2,11+1,2,12+1,2,13+1,2,14+1,2,15+1,2,16+1,2,17+1,2,18+1,2,19+1,2,20+1,2,21+1,3,4+1,3,5+1,3,6+1,3,7+1,3,8+1,3,9+1,3,10+1,3,11+1,3,12+1,3,13+1,3,14+1,3,15+1,3,16+1,3,17+1,3,18+1,3,19+1,3,20+1,3,21+1,4,5+1,4,6+1,4,7+1,4,8+1,4,9+1,4,10+1,4,11+1,4,12+1,4,13+1,4,14+1,4,15+1,4,16+1,4,17+1,4,18+1,4,19+1,4,20+1,4,21+1,5,6+1,5,7+1,5,8+1,5,9+1,5,10+1,5,11+1,5,12+1,5,13+1,5,14+1,5,15+1,5,16+1,5,17+1,5,18+1,5,19+1,5,20+1,5,21+1,6,7+1,6,8+1,6,9+1,6,10+1,6,11+1,6,12+1,6,13+1,6,14+1,6,15+1,6,16+1,6,17+1,6,18+1,6,19+1,6,20+1,6,21+1,7,8+1,7,9+1,7,10+1,7,11+1,7,12+1,7,13+1,7,14+1,7,15+1,7,16+1,7,17+1,7,18+1,7,19+1,7,20+1,7,21+1,8,9+1,8,10+1,8,11+1,8,12+1,8,13+1,8,14+1,8,15+1,8,16+1,8,17+1,8,18+1,8,19+1,8,20+1,8,21+1,9,10+1,9,11+1,9,12+1,9,13+1,9,14+1,9,15+1,9,16+1,9,17+1,9,18+1,9,19+1,9,20+1,9,21+1,10,11+1,10,12+1,10,13+1,10,14+1,10,15+1,10,16+1,10,17+1,10,18+1,10,19+1,10,20+1,10,21+1,11,12+1,11,13+1,11,14+1,11,15+1,11,16+1,11,17+1,11,18+1,11,19+1,11,20+1,11,21+1,12,13+1,12,14+1,12,15+1,12,16+1,12,17+1,12,18+1,12,19+1,12,20+1,12,21+1,13,14+1,13,15+1,13,16+1,13,17+1,13,18+1,13,19+1,13,20+1,13,21+1,14,15+1,14,16+1,14,17+1,14,18+1,14,19+1,14,20+1,14,21+1,15,16+1,15,17+1,15,18+1,15,19+1,15,20+1,15,21+1,16,17+1,16,18+1,16,19+1,16,20+1,16,21+1,17,18+1,17,19+1,17,20+1,17,21+1,18,19+1,18,20+1,18,21+1,19,20+1,19,21+1,20,21+2,3,4+2,3,5+2,3,6+2,3,7+2,3,8+2,3,9+2,3,10+2,3,11+2,3,12+2,3,13+2,3,14+2,3,15+2,3,16+2,3,17+2,3,18+2,3,19+2,3,20+2,3,21+2,4,5+2,4,6+2,4,7+2,4,8+2,4,9+2,4,10+2,4,11+2,4,12+2,4,13+2,4,14+2,4,15+2,4,16+2,4,17+2,4,18+2,4,19+2,4,20+2,4,21+2,5,6+2,5,7+2,5,8+2,5,9+2,5,10+2,5,11+2,5,12+2,5,13+2,5,14+2,5,15+2,5,16+2,5,17+2,5,18+2,5,19+2,5,20+2,5,21+2,6,7+2,6,8+2,6,9+2,6,10+2,6,11+2,6,12+2,6,13+2,6,14+2,6,15+2,6,16+2,6,17+2,6,18+2,6,19+2,6,20+2,6,21+2,7,8+2,7,9+2,7,10+2,7,11+2,7,12+2,7,13+2,7,14+2,7,15+2,7,16+2,7,17+2,7,18+2,7,19+2,7,20+2,7,21+2,8,9+2,8,10+2,8,11+2,8,12+2,8,13+2,8,14+2,8,15+2,8,16+2,8,17+2,8,18+2,8,19+2,8,20+2,8,21+2,9,10+2,9,11+2,9,12+2,9,13+2,9,14+2,9,15+2,9,16+2,9,17+2,9,18+2,9,19+2,9,20+2,9,21+2,10,11+2,10,12+2,10,13+2,10,14+2,10,15+2,10,16+2,10,17+2,10,18+2,10,19+2,10,20+2,10,21+2,11,12+2,11,13+2,11,14+2,11,15+2,11,16+2,11,17+2,11,18+2,11,19+2,11,20+2,11,21+2,12,13+2,12,14+2,12,15+2,12,16+2,12,17+2,12,18+2,12,19+2,12,20+2,12,21+2,13,14+2,13,15+2,13,16+2,13,17+2,13,18+2,13,19+2,13,20+2,13,21+2,14,15+2,14,16+2,14,17+2,14,18+2,14,19+2,14,20+2,14,21+2,15,16+2,15,17+2,15,18+2,15,19+2,15,20+2,15,21+2,16,17+2,16,18+2,16,19+2,16,20+2,16,21+2,17,18+2,17,19+2,17,20+2,17,21+2,18,19+2,18,20+2,18,21+2,19,20+2,19,21+2,20,21+3,4,5+3,4,6+3,4,7+3,4,8+3,4,9+3,4,10+3,4,11+3,4,12+3,4,13+3,4,14+3,4,15+3,4,16+3,4,17+3,4,18+3,4,19+3,4,20+3,4,21+3,5,6+3,5,7+3,5,8+3,5,9+3,5,10+3,5,11+3,5,12+3,5,13+3,5,14+3,5,15+3,5,16+3,5,17+3,5,18+3,5,19+3,5,20+3,5,21+3,6,7+3,6,8+3,6,9+3,6,10+3,6,11+3,6,12+3,6,13+3,6,14+3,6,15+3,6,16+3,6,17+3,6,18+3,6,19+3,6,20+3,6,21+3,7,8+3,7,9+3,7,10+3,7,11+3,7,12+3,7,13+3,7,14+3,7,15+3,7,16+3,7,17+3,7,18+3,7,19+3,7,20+3,7,21+3,8,9+3,8,10+3,8,11+3,8,12+3,8,13+3,8,14+3,8,15+3,8,16+3,8,17+3,8,18+3,8,19+3,8,20+3,8,21+3,9,10+3,9,11+3,9,12+3,9,13+3,9,14+3,9,15+3,9,16+3,9,17+3,9,18+3,9,19+3,9,20+3,9,21+3,10,11+3,10,12+3,10,13+3,10,14+3,10,15+3,10,16+3,10,17+3,10,18+3,10,19+3,10,20+3,10,21+3,11,12+3,11,13+3,11,14+3,11,15+3,11,16+3,11,17+3,11,18+3,11,19+3,11,20+3,11,21+3,12,13+3,12,14+3,12,15+3,12,16+3,12,17+3,12,18+3,12,19+3,12,20+3,12,21+3,13,14+3,13,15+3,13,16+3,13,17+3,13,18+3,13,19+3,13,20+3,13,21+3,14,15+3,14,16+3,14,17+3,14,18+3,14,19+3,14,20+3,14,21+3,15,16+3,15,17+3,15,18+3,15,19+3,15,20+3,15,21+3,16,17+3,16,18+3,16,19+3,16,20+3,16,21+3,17,18+3,17,19+3,17,20+3,17,21+3,18,19+3,18,20+3,18,21+3,19,20+3,19,21+3,20,21+4,5,6+4,5,7+4,5,8+4,5,9+4,5,10+4,5,11+4,5,12+4,5,13+4,5,14+4,5,15+4,5,16+4,5,17+4,5,18+4,5,19+4,5,20+4,5,21+4,6,7+4,6,8+4,6,9+4,6,10+4,6,11+4,6,12+4,6,13+4,6,14+4,6,15+4,6,16+4,6,17+4,6,18+4,6,19+4,6,20+4,6,21+4,7,8+4,7,9+4,7,10+4,7,11+4,7,12+4,7,13+4,7,14+4,7,15+4,7,16+4,7,17+4,7,18+4,7,19+4,7,20+4,7,21+4,8,9+4,8,10+4,8,11+4,8,12+4,8,13+4,8,14+4,8,15+4,8,16+4,8,17+4,8,18+4,8,19+4,8,20+4,8,21+4,9,10+4,9,11+4,9,12+4,9,13+4,9,14+4,9,15+4,9,16+4,9,17+4,9,18+4,9,19+4,9,20+4,9,21+4,10,11+4,10,12+4,10,13+4,10,14+4,10,15+4,10,16+4,10,17+4,10,18+4,10,19+4,10,20+4,10,21+4,11,12+4,11,13+4,11,14+4,11,15+4,11,16+4,11,17+4,11,18+4,11,19+4,11,20+4,11,21+4,12,13+4,12,14+4,12,15+4,12,16+4,12,17+4,12,18+4,12,19+4,12,20+4,12,21+4,13,14+4,13,15+4,13,16+4,13,17+4,13,18+4,13,19+4,13,20+4,13,21+4,14,15+4,14,16+4,14,17+4,14,18+4,14,19+4,14,20+4,14,21+4,15,16+4,15,17+4,15,18+4,15,19+4,15,20+4,15,21+4,16,17+4,16,18+4,16,19+4,16,20+4,16,21+4,17,18+4,17,19+4,17,20+4,17,21+4,18,19+4,18,20+4,18,21+4,19,20+4,19,21+4,20,21+5,6,7+5,6,8+5,6,9+5,6,10+5,6,11+5,6,12+5,6,13+5,6,14+5,6,15+5,6,16+5,6,17+5,6,18+5,6,19+5,6,20+5,6,21+5,7,8+5,7,9+5,7,10+5,7,11+5,7,12+5,7,13+5,7,14+5,7,15+5,7,16+5,7,17+5,7,18+5,7,19+5,7,20+5,7,21+5,8,9+5,8,10+5,8,11+5,8,12+5,8,13+5,8,14+5,8,15+5,8,16+5,8,17+5,8,18+5,8,19+5,8,20+5,8,21+5,9,10+5,9,11+5,9,12+5,9,13+5,9,14+5,9,15+5,9,16+5,9,17+5,9,18+5,9,19+5,9,20+5,9,21+5,10,11+5,10,12+5,10,13+5,10,14+5,10,15+5,10,16+5,10,17+5,10,18+5,10,19+5,10,20+5,10,21+5,11,12+5,11,13+5,11,14+5,11,15+5,11,16+5,11,17+5,11,18+5,11,19+5,11,20+5,11,21+5,12,13+5,12,14+5,12,15+5,12,16+5,12,17+5,12,18+5,12,19+5,12,20+5,12,21+5,13,14+5,13,15+5,13,16+5,13,17+5,13,18+5,13,19+5,13,20+5,13,21+5,14,15+5,14,16+5,14,17+5,14,18+5,14,19+5,14,20+5,14,21+5,15,16+5,15,17+5,15,18+5,15,19+5,15,20+5,15,21+5,16,17+5,16,18+5,16,19+5,16,20+5,16,21+5,17,18+5,17,19+5,17,20+5,17,21+5,18,19+5,18,20+5,18,21+5,19,20+5,19,21+5,20,21+6,7,8+6,7,9+6,7,10+6,7,11+6,7,12+6,7,13+6,7,14+6,7,15+6,7,16+6,7,17+6,7,18+6,7,19+6,7,20+6,7,21+6,8,9+6,8,10+6,8,11+6,8,12+6,8,13+6,8,14+6,8,15+6,8,16+6,8,17+6,8,18+6,8,19+6,8,20+6,8,21+6,9,10+6,9,11+6,9,12+6,9,13+6,9,14+6,9,15+6,9,16+6,9,17+6,9,18+6,9,19+6,9,20+6,9,21+6,10,11+6,10,12+6,10,13+6,10,14+6,10,15+6,10,16+6,10,17+6,10,18+6,10,19+6,10,20+6,10,21+6,11,12+6,11,13+6,11,14+6,11,15+6,11,16+6,11,17+6,11,18+6,11,19+6,11,20+6,11,21+6,12,13+6,12,14+6,12,15+6,12,16+6,12,17+6,12,18+6,12,19+6,12,20+6,12,21+6,13,14+6,13,15+6,13,16+6,13,17+6,13,18+6,13,19+6,13,20+6,13,21+6,14,15+6,14,16+6,14,17+6,14,18+6,14,19+6,14,20+6,14,21+6,15,16+6,15,17+6,15,18+6,15,19+6,15,20+6,15,21+6,16,17+6,16,18+6,16,19+6,16,20+6,16,21+6,17,18+6,17,19+6,17,20+6,17,21+6,18,19+6,18,20+6,18,21+6,19,20+6,19,21+6,20,21+7,8,9+7,8,10+7,8,11+7,8,12+7,8,13+7,8,14+7,8,15+7,8,16+7,8,17+7,8,18+7,8,19+7,8,20+7,8,21+7,9,10+7,9,11+7,9,12+7,9,13+7,9,14+7,9,15+7,9,16+7,9,17+7,9,18+7,9,19+7,9,20+7,9,21+7,10,11+7,10,12+7,10,13+7,10,14+7,10,15+7,10,16+7,10,17+7,10,18+7,10,19+7,10,20+7,10,21+7,11,12+7,11,13+7,11,14+7,11,15+7,11,16+7,11,17+7,11,18+7,11,19+7,11,20+7,11,21+7,12,13+7,12,14+7,12,15+7,12,16+7,12,17+7,12,18+7,12,19+7,12,20+7,12,21+7,13,14+7,13,15+7,13,16+7,13,17+7,13,18+7,13,19+7,13,20+7,13,21+7,14,15+7,14,16+7,14,17+7,14,18+7,14,19+7,14,20+7,14,21+7,15,16+7,15,17+7,15,18+7,15,19+7,15,20+7,15,21+7,16,17+7,16,18+7,16,19+7,16,20+7,16,36+7,17,18+7,17,19+7,17,21+7,17,35+7,18,20+7,18,21+7,18,34+7,19,20+7,19,21+7,19,33+7,20,21+7,20,32+7,21,31+7,31,36+7,32,35+7,33,34+8,9,10+8,9,11+8,9,12+8,9,13+8,9,14+8,9,15+8,9,16+8,9,17+8,9,18+8,9,19+8,9,20+8,9,21+8,10,11+8,10,12+8,10,13+8,10,14+8,10,15+8,10,16+8,10,17+8,10,18+8,10,19+8,10,20+8,10,21+8,11,12+8,11,13+8,11,14+8,11,15+8,11,16+8,11,17+8,11,18+8,11,19+8,11,20+8,11,21+8,12,13+8,12,14+8,12,15+8,12,16+8,12,17+8,12,18+8,12,19+8,12,20+8,12,21+8,13,14+8,13,15+8,13,16+8,13,17+8,13,18+8,13,19+8,13,20+8,13,36+8,14,15+8,14,16+8,14,17+8,14,18+8,14,19+8,14,21+8,14,35+8,15,16+8,15,17+8,15,18+8,15,20+8,15,21+8,15,34+8,16,17+8,16,18+8,16,19+8,16,20+8,16,21+8,17,18+8,17,19+8,17,20+8,17,21+8,18,19+8,18,20+8,18,21+8,19,20+8,19,21+8,19,30+8,20,21+8,20,29+8,21,28+8,28,36+8,29,35+8,30,34+9,10,11+9,10,12+9,10,13+9,10,14+9,10,15+9,10,16+9,10,17+9,10,18+9,10,19+9,10,20+9,10,21+9,11,12+9,11,13+9,11,14+9,11,15+9,11,16+9,11,17+9,11,18+9,11,19+9,11,20+9,11,21+9,12,13+9,12,14+9,12,15+9,12,16+9,12,17+9,12,18+9,12,19+9,12,20+9,12,36+9,13,14+9,13,15+9,13,16+9,13,17+9,13,18+9,13,19+9,13,20+9,13,21+9,14,15+9,14,16+9,14,17+9,14,19+9,14,20+9,14,21+9,14,33+9,15,16+9,15,18+9,15,19+9,15,20+9,15,21+9,15,32+9,16,17+9,16,18+9,16,19+9,16,20+9,16,21+9,17,18+9,17,19+9,17,20+9,17,21+9,17,30+9,18,19+9,18,20+9,18,21+9,18,29+9,19,20+9,19,21+9,20,21+9,21,27+9,27,36+9,29,33+9,30,32+10,11,12+10,11,13+10,11,14+10,11,15+10,11,16+10,11,17+10,11,18+10,11,19+10,11,20+10,11,21+10,12,13+10,12,14+10,12,15+10,12,16+10,12,17+10,12,18+10,12,19+10,12,21+10,12,35+10,13,14+10,13,15+10,13,16+10,13,17+10,13,19+10,13,20+10,13,21+10,13,33+10,14,15+10,14,16+10,14,17+10,14,18+10,14,19+10,14,20+10,14,21+10,15,17+10,15,18+10,15,19+10,15,20+10,15,21+10,15,31+10,16,17+10,16,18+10,16,19+10,16,20+10,16,21+10,16,30+10,17,18+10,17,19+10,17,20+10,17,21+10,18,19+10,18,20+10,18,21+10,18,28+10,19,20+10,19,21+10,20,21+10,20,27+10,27,35+10,28,33+10,30,31+11,12,13+11,12,14+11,12,15+11,12,16+11,12,17+11,12,18+11,12,20+11,12,21+11,12,34+11,13,14+11,13,15+11,13,16+11,13,18+11,13,19+11,13,20+11,13,21+11,13,32+11,14,15+11,14,17+11,14,18+11,14,19+11,14,20+11,14,21+11,14,31+11,15,16+11,15,17+11,15,18+11,15,19+11,15,20+11,15,21+11,16,17+11,16,18+11,16,19+11,16,20+11,16,21+11,16,29+11,17,18+11,17,19+11,17,20+11,17,21+11,17,28+11,18,19+11,18,20+11,18,21+11,19,20+11,19,21+11,19,27+11,20,21+11,27,34+11,28,32+11,29,31+12,13,14+12,13,15+12,13,16+12,13,17+12,13,18+12,13,19+12,13,20+12,13,21+12,14,15+12,14,16+12,14,17+12,14,18+12,14,19+12,14,20+12,14,21+12,15,16+12,15,17+12,15,18+12,15,19+12,15,20+12,15,21+12,16,17+12,16,18+12,16,19+12,16,20+12,16,21+12,17,18+12,17,19+12,17,20+12,17,21+12,18,19+12,18,20+12,18,21+12,19,20+12,19,21+12,19,26+12,20,21+12,20,25+12,21,24+12,24,36+12,25,35+12,26,34+13,14,15+13,14,16+13,14,17+13,14,18+13,14,19+13,14,20+13,14,21+13,15,16+13,15,17+13,15,18+13,15,19+13,15,20+13,15,21+13,16,17+13,16,18+13,16,19+13,16,20+13,16,21+13,17,18+13,17,19+13,17,20+13,17,21+13,17,26+13,18,19+13,18,20+13,18,21+13,18,25+13,19,20+13,19,21+13,20,21+13,21,23+13,23,36+13,25,33+13,26,32+14,15,16+14,15,17+14,15,18+14,15,19+14,15,20+14,15,21+14,16,17+14,16,18+14,16,19+14,16,20+14,16,21+14,16,26+14,17,18+14,17,19+14,17,20+14,17,21+14,18,19+14,18,20+14,18,21+14,18,24+14,19,20+14,19,21+14,20,21+14,20,23+14,23,35+14,24,33+14,26,31+15,16,17+15,16,18+15,16,19+15,16,20+15,16,21+15,16,25+15,17,18+15,17,19+15,17,20+15,17,21+15,17,24+15,18,19+15,18,20+15,18,21+15,19,20+15,19,21+15,19,23+15,20,21+15,23,34+15,24,32+15,25,31+16,17,18+16,17,19+16,17,20+16,17,21+16,18,19+16,18,20+16,18,21+16,19,20+16,19,21+16,20,21+16,21,22+16,22,36+16,25,30+16,26,29+17,18,19+17,18,20+17,18,21+17,19,20+17,19,21+17,20,21+17,20,22+17,22,35+17,24,30+17,26,28+18,19,20+18,19,21+18,19,22+18,20,21+18,22,34+18,24,29+18,25,28+19,20,21+19,22,33+19,23,30+19,26,27+20,22,32+20,23,29+20,25,27+21,22,31+21,23,28+21,24,27`
 - `N = 44` (37 outputs + 7 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 2667` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 10 more (22 single-wire, 0 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13619,6 +14265,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 18` (3 outputs + 15 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 6, witnessed by the fault on columns [6, 20, 27, 37, 86, 122]
+- leading error coefficient: `A_6 = 298720` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,10)`, `CZ on (0,13)`, `CZ on (0,16)`, `CZ on (0,17)` and 15 more (2 single-wire, 25 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13635,6 +14282,7 @@ readable copy of exactly these rows.
 - output gate: `0,1,2+3,4,5+6,7,8+9,10,11`
 - `N = 20` (12 outputs + 8 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 83387` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: none
 - discovery: AI search
 - regime: AI search: punctured r=7 simplex parents — found by the 48 < n < 128 AI campaigns, from punctured r=7 simplex parents with free-row appending; a verified witness, not a maximum
@@ -13652,6 +14300,7 @@ readable copy of exactly these rows.
 - output gate: `0,1,2+3,4,5+6,7,8+9,10,11+12,13,14`
 - `N = 23` (15 outputs + 8 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 84984` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 12`, `S on 14`, `CZ on (0,12)`, `CZ on (0,13)`, `CZ on (1,12)`, `CZ on (1,13)`, `CZ on (2,12)`, `CZ on (2,13)`, `CZ on (3,12)`, `CZ on (3,13)`, `CZ on (4,12)`, `CZ on (4,13)` and 14 more (2 single-wire, 24 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13670,6 +14319,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
 - `N = 9` (5 outputs + 4 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 109]
+- leading error coefficient: `A_2 = 525` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T³` on columns 4, 5, 103, 104, 105, 106, 107, 108, 121, 122, 123, 124 and 4 more; `T†` on columns 6, 7, 8, `T` on the rest
 - discovery: pre-existing
@@ -13687,6 +14337,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 9` (4 outputs + 5 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 126]
+- leading error coefficient: `A_2 = 246` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -13703,6 +14354,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156+234+235+236+245+246+256+345+346+356+456`
 - `N = 9` (7 outputs + 2 checks)
 - distance: exactly 2, witnessed by the fault on columns [0, 3]
+- leading error coefficient: `A_2 = 2838` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `S† on 6`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)` and 16 more (7 single-wire, 21 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125 and 6 more; `T⁵` on columns 5, 7, 9, 11, 13, 15; `T†` on columns 0, 1, `T` on the rest
 - discovery: pre-existing
@@ -13721,6 +14373,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [12, 27]
+- leading error coefficient: `A_2 = 105` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -13737,6 +14390,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [28, 63]
+- leading error coefficient: `A_2 = 35` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -13753,6 +14407,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 9` (1 output + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 99]
+- leading error coefficient: `A_3 = 1575` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -13769,6 +14424,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+023+123`
 - `N = 8` (4 outputs + 4 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 540` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -13785,6 +14441,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156+234+235+236+245+246+256+345+346+356+456`
 - `N = 11` (7 outputs + 4 checks)
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 540` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`
 - or no correction at all, with rotations run as `T³` on columns 127, 128, 129, 130, 131, 132; `T†` on columns 15, 19, 23, 27, 31, 35, 39, `T` on the rest
 - discovery: pre-existing
@@ -13803,6 +14460,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13`
 - `N = 22` (14 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 18]
+- leading error coefficient: `A_3 = 1547` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 2 more (14 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -13821,6 +14479,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14`
 - `N = 23` (15 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 18]
+- leading error coefficient: `A_3 = 1565` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 3 more (15 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -13840,6 +14499,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16`
 - `N = 25` (17 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 18]
+- leading error coefficient: `A_3 = 1575` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 5 more (17 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -13858,6 +14518,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+023+123`
 - `N = 9` (4 outputs + 5 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [16, 26]
+- leading error coefficient: `A_2 = 420` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -13874,6 +14535,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+014+015+016+023+024+025+034+056+126+135+136+146+235+236+246+345+346+456`
 - `N = 16` (7 outputs + 9 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 76]
+- leading error coefficient: `A_4 = 52726` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 2`, `S† on 3`, `Z on 6`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,13)` and 37 more (5 single-wire, 44 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13892,6 +14554,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+014+015+023+024+034+125+236+256+345+346+356+456`
 - `N = 17` (7 outputs + 10 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 76]
+- leading error coefficient: `A_4 = 26019` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `Z on 5`, `S† on 6`, `Z on 7`, `Z on 8`, `Z on 10`, `Z on 12`, `Z on 13` and 44 more (13 single-wire, 43 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -13910,6 +14573,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 12` (2 outputs + 10 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 22, 89]
+- leading error coefficient: `A_4 = 11382` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 1`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,7)`, `CZ on (1,8)`, `CZ on (2,5)`, `CZ on (2,6)`, `CZ on (3,6)`, `CZ on (3,7)` and 3 more (1 single-wire, 14 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 6, 73, 74, 104, 105, 106, 116, 117, 118, 119, 120 and 11 more; `T⁵` on column 0; `T†` on columns 2, 56, `T` on the rest
 - discovery: pre-existing
@@ -13927,6 +14591,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 9` (6 outputs + 3 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 7]
+- leading error coefficient: `A_2 = 1617` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (1,2)` and 9 more (6 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -13944,6 +14609,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27`
 - `N = 37` (28 outputs + 9 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 101]
+- leading error coefficient: `A_3 = 1142` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 2`, `S on 3`, `S† on 7`, `S† on 8`, `Z on 9`, `S on 10`, `S† on 13`, `S on 14`, `Z on 16`, `Z on 17`, `S† on 19` and 193 more (24 single-wire, 181 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 8, 19, 23, 24, 25, 26, 35, 40, 42, 43, 44, 48 and 56 more; `T⁵` on columns 3, 5, 15, 18, 22, 39; `T†` on columns 0, 1, 2, 6, 9, 10, 20, 27, 32, 79, 80, `T` on the rest
 - discovery: AI search
@@ -13962,6 +14628,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+12+012`
 - `N = 8` (3 outputs + 5 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 310` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T³` on columns 145, 146, 147, 148, 149, 150, 151, 152, 153, 154; `T⁵` on column 0; `T†` on columns 31, 36, 41, `T` on the rest
 - discovery: pre-existing
@@ -13978,6 +14645,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 9` (4 outputs + 5 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 310` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -13994,6 +14662,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15`
 - `N = 26` (16 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 123]
+- leading error coefficient: `A_3 = 1063` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 4 more (16 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -14012,6 +14681,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16`
 - `N = 27` (17 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 123]
+- leading error coefficient: `A_3 = 1085` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 5 more (17 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 11, 37, 56, 60, 62, 70, 72, 75, 76, 77, 83 and 38 more; `T⁵` on columns 2, 5, 6, 7, 9, 10, 13, 34, 40; `T†` on columns 1, 14, 15, 17, 20, 39, 61, 65, 73, `T` on the rest
 - discovery: AI search
@@ -14030,6 +14700,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18`
 - `N = 29` (19 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 123]
+- leading error coefficient: `A_3 = 1067` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 7 more (19 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -14049,6 +14720,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20`
 - `N = 31` (21 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 123]
+- leading error coefficient: `A_3 = 1083` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 29 more (19 single-wire, 22 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 45, 46, 47, 50, 53, 54, 55, 56, 58, 59, 61 and 40 more; `T⁵` on columns 11, 12, 16, 34, 35, 36, 80; `T†` on columns 0, 4, 7, 8, 9, 10, 14, 15, 21, 27, 29, 41 and 3 more, `T` on the rest
 - discovery: AI search
@@ -14067,6 +14739,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+12+012`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [32, 47]
+- leading error coefficient: `A_2 = 186` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T³` on columns 146, 147, 148, 149, 150, 151, 152, 153, 154, 155; `T⁵` on columns 0, 1; `T†` on columns 32, 47, 62, `T` on the rest
 - discovery: pre-existing
@@ -14083,6 +14756,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [32, 47]
+- leading error coefficient: `A_2 = 186` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -14099,6 +14773,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27`
 - `N = 38` (28 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 103]
+- leading error coefficient: `A_3 = 676` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 2`, `S on 3`, `S† on 5`, `S† on 8`, `Z on 9`, `S on 10`, `S† on 12`, `S† on 13`, `Z on 14`, `Z on 16` and 168 more (32 single-wire, 148 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 10, 24, 28, 37, 39, 42, 44, 45, 47, 50, 54 and 42 more; `T⁵` on columns 4, 8, 9, 17, 41, 82; `T†` on columns 0, 3, 6, 16, 20, 21, 26, 27, 29, 81, `T` on the rest
 - discovery: AI search
@@ -14117,6 +14792,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28`
 - `N = 38` (29 outputs + 9 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 44]
+- leading error coefficient: `A_3 = 1230` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `Z on 2`, `S† on 3`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 12` and 385 more (36 single-wire, 361 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 9, 10, 12, 20, 26, 28, 35, 36, 38, 39, 44 and 54 more; `T⁵` on columns 1, 2, 3, 6, 15, 18, 21, 22, 23, 24, 27, 41 and 4 more; `T†` on columns 5, 16, 19, 43, 49, 81, `T` on the rest
 - discovery: AI search
@@ -14135,6 +14811,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27`
 - `N = 39` (28 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 104]
+- leading error coefficient: `A_3 = 480` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 3`, `S on 5`, `S on 8`, `Z on 9`, `S† on 10`, `S† on 12`, `S† on 13`, `S† on 16`, `S on 17`, `S on 19` and 146 more (27 single-wire, 131 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 10, 26, 28, 37, 39, 44, 45, 47, 50, 54, 56 and 41 more; `T⁵` on columns 4, 18, 23, 25, 32, 41, 48, 82, 84; `T†` on columns 1, 3, 6, 16, 20, 21, 24, 27, 29, 42, 80, 81, `T` on the rest
 - discovery: AI search
@@ -14153,6 +14830,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28`
 - `N = 39` (29 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 157]
+- leading error coefficient: `A_3 = 709` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `Z on 2`, `S on 3`, `S† on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `S on 8`, `Z on 9`, `S on 10`, `S on 11` and 300 more (36 single-wire, 276 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 5, 10, 12, 17, 19, 35, 36, 38, 40, 44, 46 and 58 more; `T⁵` on columns 3, 8, 18, 20, 21, 22, 29, 43, 45, 49, 70, 81; `T†` on columns 2, 6, 9, 23, 24, 25, 28, 42, 80, 84, 105, `T` on the rest
 - discovery: AI search
@@ -14171,6 +14849,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03`
 - `N = 13` (4 outputs + 9 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 71880` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `S on 3`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (0,11)` and 13 more (3 single-wire, 22 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 68, 69, 70, 82, 85, 86, 87, 88, 100, 109, 112 and 34 more; `T⁵` on columns 3, 7, 13, 20, 41; `T†` on columns 0, 1, `T` on the rest
 - discovery: AI search
@@ -14189,6 +14868,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27`
 - `N = 40` (28 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 34, 39]
+- leading error coefficient: `A_3 = 318` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S on 3`, `S† on 4`, `S on 5`, `S† on 6`, `S† on 7`, `S on 8`, `S on 9`, `S† on 10`, `S† on 11` and 41 more (34 single-wire, 19 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 3, 10, 24, 26, 29, 38, 40, 45, 46, 48, 51 and 45 more; `T⁵` on columns 2, 4, 8, 9, 17, 25, 41, 42, 70, 80, 83; `T†` on columns 0, 6, 16, 20, 21, 27, 30, 43, 105, `T` on the rest
 - discovery: AI search
@@ -14207,6 +14887,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29`
 - `N = 40` (30 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 77]
+- leading error coefficient: `A_3 = 658` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 27 more (33 single-wire, 6 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 8, 9, 12, 13, 14, 27, 28, 38, 40, 43, 45 and 55 more; `T⁵` on columns 1, 21, 37, 39, 41; `T†` on columns 0, 3, 4, 6, 15, 16, 17, 18, 19, 20, 23, 26 and 2 more, `T` on the rest
 - discovery: AI search
@@ -14225,6 +14906,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28`
 - `N = 40` (29 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 159]
+- leading error coefficient: `A_3 = 412` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `S on 5`, `S on 6`, `Z on 7`, `Z on 8`, `S on 9`, `Z on 10`, `Z on 11` and 254 more (35 single-wire, 231 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 10, 21, 26, 36, 39, 44, 47, 48, 52, 54, 55 and 54 more; `T⁵` on columns 17, 19, 22, 23, 42, 43, 50, 58, 82, 86; `T†` on columns 1, 2, 6, 8, 9, 15, 20, 24, 25, 27, 28, 30 and 4 more, `T` on the rest
 - discovery: AI search
@@ -14243,6 +14925,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30`
 - `N = 41` (31 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 17, 101]
+- leading error coefficient: `A_3 = 670` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 19 more (31 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -14261,6 +14944,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 10` (1 output + 9 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 4, witnessed by the fault on columns [0, 2, 22, 120]
+- leading error coefficient: `A_4 = 18900` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 0`
 - or no correction at all, with rotations run as `T⁵` on every rotation
 - discovery: AI search
@@ -14277,6 +14961,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34`
 - `N = 9` (5 outputs + 4 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 825` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)` and 3 more (5 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on every rotation
 - discovery: pre-existing
@@ -14294,6 +14979,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156+234+235+236+245+246+256+345+346+356+456`
 - `N = 10` (7 outputs + 3 checks)
 - distance: exactly 2, witnessed by the fault on columns [0, 25]
+- leading error coefficient: `A_2 = 2604` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`
 - or no correction at all, with rotations run as `T³` on columns 7, 10, 13, 16, 19, 22, 150, 151, 152, 153, 154, 155 and 11 more; `T†` on columns 0, 1, 2, 4, `T` on the rest
 - discovery: pre-existing
@@ -14312,6 +14998,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 10` (6 outputs + 4 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 50]
+- leading error coefficient: `A_2 = 1065` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -14328,6 +15015,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 10` (5 outputs + 5 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 91]
+- leading error coefficient: `A_2 = 390` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -14344,6 +15032,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+12`
 - `N = 13` (3 outputs + 10 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 3, 4, 10]
+- leading error coefficient: `A_4 = 47460` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 2`, `CZ on (0,2)`, `CZ on (0,10)`, `CZ on (0,11)`, `CZ on (0,12)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)`, `CZ on (1,7)` and 16 more (3 single-wire, 25 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -14361,6 +15050,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 26` (2 outputs + 24 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 5, witnessed by the fault on columns [1, 28, 40, 58, 88]
+- leading error coefficient: `A_5 = 1072` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,10)`, `CZ on (0,12)`, `CZ on (0,14)`, `CZ on (0,16)`, `CZ on (0,20)`, `CZ on (0,21)` and 17 more (0 single-wire, 29 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -14378,6 +15068,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 27` (3 outputs + 24 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 5, witnessed by the fault on columns [1, 28, 40, 58, 88]
+- leading error coefficient: `A_5 = 1292` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (0,14)`, `CZ on (0,15)`, `CZ on (0,22)`, `CZ on (0,23)` and 17 more (2 single-wire, 27 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -14397,6 +15088,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 28` (3 outputs + 25 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 6, witnessed by the fault on columns [32, 34, 106, 118, 156, 170]
+- leading error coefficient: `A_6 = 31088` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S on 2`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,10)`, `CZ on (0,12)`, `CZ on (0,13)`, `CZ on (0,14)`, `CZ on (0,15)` and 33 more (3 single-wire, 42 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -14413,6 +15105,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+12+13+24+34+012+013+023`
 - `N = 29` (5 outputs + 24 checks), exact minimal T-count 8, reduced degree 2
 - distance: exactly 5, witnessed by the fault on columns [1, 28, 40, 58, 88]
+- leading error coefficient: `A_5 = 1408` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (0,10)`, `CZ on (0,14)` and 56 more (5 single-wire, 63 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -14431,6 +15124,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+014+015+016+017+023+024+025+028+034+035+046+067+068+078+126+127+128+135+145+147+148+156+158+168+234+236+237+245+246+247+258+278+346+357+358+456+478+568+578`
 - `N = 20` (9 outputs + 11 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 3, 127]
+- leading error coefficient: `A_4 = 50537` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 3`, `Z on 6`, `S† on 7`, `Z on 8`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,11)` and 57 more (5 single-wire, 64 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -14449,6 +15143,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31`
 - `N = 42` (32 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 13, 49]
+- leading error coefficient: `A_3 = 864` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `S† on 3`, `S† on 4`, `S on 5`, `S on 6`, `S† on 7`, `S on 8`, `S† on 9`, `S on 10`, `S on 11` and 152 more (36 single-wire, 128 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 9, 12, 13, 14, 16, 23, 26, 27, 37, 38, 40 and 50 more; `T⁵` on columns 4, 5, 8, 10, 21, 22, 25, 43, 48, 50, 61, 85 and 2 more; `T†` on columns 1, 2, 3, 6, 11, 15, 45, 46, 86, 96, `T` on the rest
 - discovery: AI search
@@ -14484,6 +15179,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+12+13+23+012+013+023+123`
 - `N = 9` (4 outputs + 5 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 465` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T³` on columns 176, 177, 178, 179, 180, 181, 182, 183, 184, 185; `T†` on columns 0, 31, 36, 41, 46, `T` on the rest
 - discovery: pre-existing
@@ -14500,6 +15196,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 10` (5 outputs + 5 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 465` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -14516,6 +15213,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [32, 47]
+- leading error coefficient: `A_2 = 310` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -14532,6 +15230,7 @@ readable copy of exactly these rows.
 - output gate: `01+02`
 - `N = 13` (3 outputs + 10 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 6, 39]
+- leading error coefficient: `A_4 = 67576` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `S† on 6`, `S† on 7`, `S† on 8`, `S† on 9`, `S† on 10`, `S† on 11` and 38 more (13 single-wire, 37 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 4, 6, 86, 95, 97, 104, 107, 108, 109, 110, 132 and 27 more; `T⁵` on columns 3, 7, 9; `T†` on columns 5, 36, 45, `T` on the rest
 - discovery: AI search
@@ -14549,6 +15248,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 156]
+- leading error coefficient: `A_2 = 218` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -14565,6 +15265,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35`
 - `N = 46` (36 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 35]
+- leading error coefficient: `A_3 = 1106` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 56 more (37 single-wire, 31 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 4, 6, 9, 10, 21, 23, 24, 31, 35, 42, 43 and 63 more; `T⁵` on columns 2, 5, 7, 8, 14, 15, 20, 25, 26, 49, 50, 55 and 3 more; `T†` on columns 3, 12, 13, 16, 18, 52, 74, 98, 118, `T` on the rest
 - discovery: AI search
@@ -14600,6 +15301,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 8` (2 outputs + 6 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 63]
+- leading error coefficient: `A_2 = 189` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -14616,6 +15318,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34`
 - `N = 46` (35 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 15, 99]
+- leading error coefficient: `A_3 = 722` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 93 more (36 single-wire, 69 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 8, 15, 25, 26, 33, 34, 35, 43, 48, 53, 59 and 68 more; `T⁵` on columns 1, 2, 3, 11, 12, 27, 32, 36, 40, 50, 51, 95 and 2 more; `T†` on columns 0, 10, 13, 19, 23, 28, 37, 52, 55, 57, 97, 99 and 1 more, `T` on the rest
 - discovery: AI search
@@ -14634,6 +15337,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [64, 85]
+- leading error coefficient: `A_2 = 63` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -14650,6 +15354,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 10` (6 outputs + 4 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 1170` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`
 - or no correction at all, with rotations run as `T³` on columns 15, 19, 23, 27, 31, 35, 168, 172, 176, 180, 184, 188 and 6 more, `T` on the rest
 - discovery: pre-existing
@@ -14667,6 +15372,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 168]
+- leading error coefficient: `A_2 = 238` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -14683,6 +15389,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 11` (6 outputs + 5 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [16, 26]
+- leading error coefficient: `A_2 = 990` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`
 - or no correction at all, with rotations run as `T³` on columns 16, 26, 36, 46, 56, 66, 169, 170, 174, 175, 179, 180 and 6 more, `T` on the rest
 - discovery: pre-existing
@@ -14700,6 +15407,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36`
 - `N = 50` (37 outputs + 13 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 174]
+- leading error coefficient: `A_3 = 646` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S† on 3`, `S on 4`, `S† on 5`, `S on 6`, `S† on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 105 more (43 single-wire, 74 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 2, 7, 10, 12, 14, 25, 40, 41, 44, 48 and 71 more; `T⁵` on columns 3, 4, 9, 11, 27, 28, 29, 31, 33, 38, 39, 53 and 7 more; `T†` on columns 8, 13, 18, 32, 52, 54, 86, 99, `T` on the rest
 - discovery: AI search
@@ -14716,6 +15424,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40`
 - `N = 51` (41 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 60]
+- leading error coefficient: `A_3 = 1339` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `Z on 6`, `S† on 7`, `S† on 8`, `S† on 9`, `S† on 10`, `S† on 12`, `S on 13`, `S on 14` and 254 more (45 single-wire, 221 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 6, 10, 11, 17, 18, 25, 37, 39, 40, 48, 52 and 81 more; `T⁵` on columns 1, 9, 12, 19, 20, 23, 27, 28, 32, 34, 47, 100 and 1 more; `T†` on columns 3, 4, 13, 15, 21, 22, 29, 33, 41, 50, 59, 98, `T` on the rest
 - discovery: AI search
@@ -14732,6 +15441,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39`
 - `N = 50` (40 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 160]
+- leading error coefficient: `A_3 = 1250` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 3`, `S on 4`, `S† on 5`, `S† on 6`, `S† on 8`, `Z on 9`, `S† on 12`, `S on 13`, `Z on 14`, `S on 15`, `S† on 17` and 628 more (36 single-wire, 604 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 6, 7, 9, 11, 12, 20, 21, 22, 25, 26, 28 and 77 more; `T⁵` on columns 3, 8, 14, 15, 16, 50, 52; `T†` on columns 4, 10, 13, 18, 19, 41, 56, 106, 107, `T` on the rest
 - discovery: AI search
@@ -14748,6 +15458,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40`
 - `N = 52` (41 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 136]
+- leading error coefficient: `A_3 = 744` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `S on 6`, `S† on 7`, `S† on 8`, `S† on 9`, `Z on 10`, `S† on 11` and 178 more (49 single-wire, 141 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 6, 9, 10, 11, 15, 22, 26, 27, 38, 50, 54, 55 and 71 more; `T⁵` on columns 0, 2, 3, 4, 20, 31, 32, 39, 42, 49, 100, 102 and 1 more; `T†` on columns 5, 8, 12, 14, 16, 17, 18, 19, 21, 23, 28, 34 and 3 more, `T` on the rest
 - discovery: AI search
@@ -14764,6 +15475,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42`
 - `N = 53` (43 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 99]
+- leading error coefficient: `A_3 = 1386` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S† on 3`, `S on 4`, `S on 5`, `S† on 6`, `S on 7`, `S† on 8`, `S on 9`, `S on 10`, `S on 11` and 145 more (52 single-wire, 105 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 6, 8, 9, 11, 14, 16, 20, 21, 30, 39 and 78 more; `T⁵` on columns 0, 13, 15, 18, 27, 31, 33, 36, 41, 43; `T†` on columns 4, 7, 12, 19, 23, 25, 26, 29, 32, 34, 53, 54 and 3 more, `T` on the rest
 - discovery: AI search
@@ -14780,6 +15492,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39`
 - `N = 51` (40 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 162]
+- leading error coefficient: `A_3 = 688` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `Z on 3`, `S on 5`, `Z on 6`, `S† on 7`, `Z on 8`, `S on 10`, `S on 11`, `S on 13`, `Z on 14` and 546 more (41 single-wire, 517 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 9, 10, 16, 17, 26, 27, 29, 36, 37, 51, 59 and 71 more; `T⁵` on columns 11, 14, 15, 18, 20, 23, 25, 28, 33, 38, 108; `T†` on columns 0, 1, 5, 12, 13, 21, 22, 24, 30, 31, 32, 34 and 4 more, `T` on the rest
 - discovery: AI search
@@ -14796,6 +15509,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41`
 - `N = 52` (42 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 57]
+- leading error coefficient: `A_3 = 1282` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `S on 2`, `Z on 3`, `S on 4`, `Z on 5`, `S on 6`, `S on 7`, `Z on 8`, `S† on 9`, `S on 10`, `Z on 11` and 536 more (52 single-wire, 496 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 17, 18, 27, 32, 34, 51, 55, 57, 62, 65, 67, 71 and 59 more; `T⁵` on columns 1, 2, 3, 5, 9, 11, 13, 15, 19, 21, 23, 29 and 5 more; `T†` on columns 4, 6, 8, 10, 12, 20, 24, 33, 38, 53, 104, `T` on the rest
 - discovery: AI search
@@ -14812,6 +15526,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40`
 - `N = 53` (41 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 137]
+- leading error coefficient: `A_3 = 495` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `S on 2`, `S on 3`, `S† on 4`, `S on 5`, `S on 6`, `S on 7`, `S† on 8`, `S on 9`, `S† on 10`, `S on 11` and 213 more (49 single-wire, 176 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 5, 9, 14, 16, 22, 26, 28, 37, 50, 51, 54 and 72 more; `T⁵` on columns 2, 11, 19, 29, 32, 33, 36, 39, 100, 102; `T†` on columns 3, 4, 7, 15, 18, 20, 21, 23, 30, 31, 34, 35 and 3 more, `T` on the rest
 - discovery: AI search
@@ -14828,6 +15543,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42`
 - `N = 54` (43 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 203]
+- leading error coefficient: `A_3 = 887` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S† on 3`, `S on 4`, `S on 5`, `S† on 6`, `S on 7`, `S† on 8`, `S on 9`, `S on 10`, `S on 11` and 144 more (53 single-wire, 103 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 14, 15, 16, 18, 19, 21, 36, 41, 46, 51, 56 and 68 more; `T⁵` on columns 1, 3, 6, 7, 8, 9, 10, 17, 23, 27, 30, 32 and 6 more; `T†` on columns 0, 2, 20, 22, 24, 28, 33, 34, 35, 129, `T` on the rest
 - discovery: AI search
@@ -14844,6 +15560,7 @@ readable copy of exactly these rows.
 - output gate: `012+034`
 - `N = 14` (5 outputs + 9 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 271230` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 4`, `CZ on (0,3)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,2)`, `CZ on (2,5)`, `CZ on (2,6)`, `CZ on (2,7)`, `CZ on (4,5)`, `CZ on (4,6)` and 4 more (2 single-wire, 14 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 4, 7, 16, 68, 109, 122, 123, 124, 127, 134, 135 and 26 more; `T⁵` on columns 20, 23, 26, 32; `T†` on columns 0, 5, `T` on the rest
 - discovery: AI search
@@ -14861,6 +15578,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39`
 - `N = 52` (40 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 21, 73]
+- leading error coefficient: `A_3 = 398` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 3`, `S† on 4`, `S on 5`, `Z on 6`, `S† on 7`, `S on 8`, `S† on 9`, `Z on 10`, `Z on 11`, `S† on 12` and 548 more (49 single-wire, 511 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 5, 10, 11, 13, 23, 27, 28, 30, 37, 38 and 73 more; `T⁵` on columns 3, 4, 8, 9, 20, 21, 26, 29, 34, 39, 109; `T†` on columns 2, 6, 14, 17, 18, 22, 25, 31, 32, 33, 35, 45 and 3 more, `T` on the rest
 - discovery: AI search
@@ -14877,6 +15595,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41`
 - `N = 53` (42 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 22, 34]
+- leading error coefficient: `A_3 = 838` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 2`, `Z on 3`, `S on 4`, `Z on 5`, `S on 6`, `S on 7`, `Z on 8`, `S on 9`, `S on 10`, `Z on 11` and 424 more (50 single-wire, 386 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 4, 7, 11, 12, 14, 15, 16, 20, 21, 28, 29 and 75 more; `T⁵` on columns 8, 17, 22, 24, 34, 42, 43, 55, 104, 106, 111; `T†` on columns 2, 6, 9, 10, 30, 31, 39, 44, 54, 56, 61, 105, `T` on the rest
 - discovery: AI search
@@ -14893,6 +15612,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43`
 - `N = 54` (44 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 96]
+- leading error coefficient: `A_3 = 1398` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `S† on 5`, `S on 6`, `S† on 7`, `Z on 8`, `S on 9`, `Z on 10`, `Z on 11` and 561 more (51 single-wire, 522 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 9, 10, 12, 13, 14, 26, 29, 32, 37, 40, 42 and 81 more; `T⁵` on columns 11, 15, 20, 22, 27, 30, 57, 63, 100, 108, 129; `T†` on columns 0, 2, 4, 6, 16, 18, 25, 28, 35, 39, 50, 53 and 1 more, `T` on the rest
 - discovery: AI search
@@ -14909,6 +15629,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39`
 - `N = 53` (40 outputs + 13 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 21, 75]
+- leading error coefficient: `A_3 = 228` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 3`, `S on 5`, `S on 6`, `Z on 7`, `S† on 9`, `S† on 10`, `S† on 11`, `S on 13`, `Z on 14`, `S on 15` and 381 more (44 single-wire, 349 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 9, 21, 25, 27, 35, 40, 45, 57, 59, 60, 61 and 67 more; `T⁵` on columns 1, 10, 11, 13, 14, 15, 18, 29, 38, 41, 111; `T†` on columns 0, 5, 7, 8, 20, 22, 30, 31, 33, 34, 39, 55 and 2 more, `T` on the rest
 - discovery: AI search
@@ -14925,6 +15646,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41`
 - `N = 54` (42 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 69, 181]
+- leading error coefficient: `A_3 = 466` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 49 more (47 single-wire, 14 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 4, 7, 9, 10, 14, 15, 28, 29, 31, 33 and 79 more; `T⁵` on columns 0, 5, 8, 18, 19, 23, 34, 42, 43, 57, 106, 108 and 1 more; `T†` on columns 6, 11, 12, 16, 20, 21, 30, 39, 107, `T` on the rest
 - discovery: AI search
@@ -14941,6 +15663,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43`
 - `N = 55` (44 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 46]
+- leading error coefficient: `A_3 = 762` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `S on 3`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `S on 8`, `S on 9`, `Z on 10`, `Z on 11` and 364 more (51 single-wire, 325 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 5, 8, 16, 19, 21, 23, 25, 29, 34, 56, 62 and 60 more; `T⁵` on columns 1, 2, 6, 17, 18, 20, 24, 27, 31, 33, 35, 41 and 4 more; `T†` on columns 11, 22, 26, 28, 30, 32, 36, 52, 55, 65, 110, `T` on the rest
 - discovery: AI search
@@ -14957,6 +15680,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45`
 - `N = 56` (46 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 11, 198]
+- leading error coefficient: `A_3 = 1382` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 34 more (46 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -14973,6 +15697,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40`
 - `N = 54` (41 outputs + 13 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 140]
+- leading error coefficient: `A_3 = 204` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S† on 3`, `S on 4`, `S on 5`, `S† on 6`, `S† on 7`, `S on 8`, `S† on 9`, `S† on 10`, `S on 11` and 128 more (49 single-wire, 91 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 3, 7, 13, 21, 24, 29, 30, 34, 37, 39, 52 and 70 more; `T⁵` on columns 1, 4, 23, 28, 31, 43, 50, 104; `T†` on columns 5, 6, 9, 10, 11, 15, 17, 19, 20, 22, 25, 26 and 7 more, `T` on the rest
 - discovery: AI search
@@ -14989,6 +15714,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42`
 - `N = 55` (43 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 6, 207]
+- leading error coefficient: `A_3 = 404` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 45 more (47 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 11, 13, 14, 18, 21, 27, 36, 41, 52, 54, 57, 58 and 64 more; `T⁵` on columns 4, 7, 8, 10, 12, 17, 23, 35, 37, 107, 108, 109 and 2 more; `T†` on columns 2, 3, 6, 9, 20, 22, 24, 28, 30, 32, 33, 34 and 4 more, `T` on the rest
 - discovery: AI search
@@ -15005,6 +15731,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39`
 - `N = 54` (40 outputs + 14 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 53, 160]
+- leading error coefficient: `A_3 = 128` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `S on 3`, `Z on 4`, `S on 5`, `S on 6`, `Z on 7`, `Z on 8`, `S on 9`, `S on 10`, `S on 11` and 279 more (51 single-wire, 240 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 4, 6, 9, 17, 19, 21, 28, 32, 36, 37, 40 and 75 more; `T⁵` on columns 5, 13, 15, 22, 30, 31, 33, 39, 55, 81, 114; `T†` on columns 0, 1, 7, 8, 10, 11, 14, 18, 20, 29, 34, 38 and 3 more, `T` on the rest
 - discovery: AI search
@@ -15021,6 +15748,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41`
 - `N = 55` (42 outputs + 13 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 69, 183]
+- leading error coefficient: `A_3 = 283` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 44 more (46 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 2, 3, 5, 6, 8, 11, 13, 16, 18, 19, 24 and 77 more; `T⁵` on columns 14, 21, 23, 34, 43, 114, 121; `T†` on columns 1, 7, 9, 10, 15, 17, 20, 30, 39, 42, 57, 108, `T` on the rest
 - discovery: AI search
@@ -15037,6 +15765,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40`
 - `N = 55` (41 outputs + 14 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 141]
+- leading error coefficient: `A_3 = 108` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 34 more (43 single-wire, 3 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 5, 10, 13, 15, 17, 19, 20, 24, 29, 30, 33 and 77 more; `T⁵` on columns 4, 8, 12, 14, 18, 23, 28, 32, 43, 50, 104, 109 and 1 more; `T†` on columns 3, 6, 7, 9, 11, 21, 22, 25, 26, 27, 34, 37 and 1 more, `T` on the rest
 - discovery: AI search
@@ -15053,6 +15782,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39`
 - `N = 55` (40 outputs + 15 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 53, 161]
+- leading error coefficient: `A_3 = 103` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 72 more (48 single-wire, 36 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 4, 7, 8, 17, 20, 28, 32, 36, 37, 40, 41 and 74 more; `T⁵` on columns 2, 13, 16, 26, 27, 30, 31, 33, 39, 54, 114, 136; `T†` on columns 1, 3, 6, 9, 10, 11, 14, 18, 19, 21, 29, 34 and 5 more, `T` on the rest
 - discovery: AI search
@@ -15069,6 +15799,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
 - `N = 10` (5 outputs + 5 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 651` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T³` on columns 207, 208, 209, 210, 211, 212, 213, 214, 215, 216; `T†` on columns 31, 36, 41, 46, 51, `T` on the rest
 - discovery: pre-existing
@@ -15084,6 +15815,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 11` (6 outputs + 5 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 651` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -15098,6 +15830,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [32, 47]
+- leading error coefficient: `A_2 = 465` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T³` on columns 208, 209, 210, 211, 212, 213, 214, 215, 216, 217; `T†` on columns 32, 47, 62, 77, 92, `T` on the rest
 - discovery: pre-existing
@@ -15113,6 +15846,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56`
 - `N = 11` (7 outputs + 4 checks)
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 1575` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: none
 - discovery: pre-existing
 - regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
@@ -15128,6 +15862,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18`
 - `N = 27` (19 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 144]
+- leading error coefficient: `A_3 = 7044` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 7 more (19 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -15144,6 +15879,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25`
 - `N = 42` (26 outputs + 16 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 9]
+- leading error coefficient: `A_3 = 1049` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 14 more (26 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -15161,6 +15897,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26`
 - `N = 43` (27 outputs + 16 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 9]
+- leading error coefficient: `A_3 = 1050` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 15 more (27 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 5, 16, 17, 19, 32, 38, 46, 49, 54, 55, 56 and 62 more; `T⁵` on columns 0, 36, 44, 62, 75, 108, 150, 168; `T†` on columns 1, 2, 8, 10, 11, 12, 13, 18, 30, 33, 34, 35 and 9 more, `T` on the rest
 - discovery: AI search
@@ -15178,6 +15915,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27`
 - `N = 36` (28 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 144]
+- leading error coefficient: `A_3 = 7326` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 16 more (28 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -15194,6 +15932,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28`
 - `N = 37` (29 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 144]
+- leading error coefficient: `A_3 = 7350` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 17 more (29 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 10, 14, 15, 16, 20, 21, 23, 46, 79, 84, 105, 107 and 67 more; `T⁵` on columns 0, 3, 7, 9, 17, 26, 30, 47, 60; `T†` on columns 1, 2, 4, 5, 6, 8, 11, 12, 13, 18, 19, 24 and 7 more, `T` on the rest
 - discovery: AI search
@@ -15210,6 +15949,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34`
 - `N = 43` (35 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 144]
+- leading error coefficient: `A_3 = 7350` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 79 more (33 single-wire, 58 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -15226,6 +15966,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 12` (2 outputs + 10 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 5]
+- leading error coefficient: `A_4 = 66780` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)` and 30 more (7 single-wire, 35 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 4, 5, 140, 145, 150, 155, 156, 157, 158, 168, 169 and 30 more; `T⁵` on columns 0, 16, 17, 18, 76, `T` on the rest
 - discovery: AI search
@@ -15241,6 +15982,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 8` (3 outputs + 5 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 868` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`
 - or no correction at all, with rotations run as `T³` on columns 232, 233, 234, 235, 236, 237, 247; `T†` on columns 31, 36, 41, `T` on the rest
 - discovery: pre-existing
@@ -15255,6 +15997,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+023+123`
 - `N = 9` (4 outputs + 5 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 76]
+- leading error coefficient: `A_2 = 868` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -15269,6 +16012,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+05+12+13+14+15+23+24+25+34+35+45+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 11` (6 outputs + 5 checks), exact minimal T-count 7, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 868` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
 - or no correction at all, with rotations run as `T³` on columns 0, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247; `T†` on columns 31, 36, 41, 46, 51, 56, `T` on the rest
 - discovery: pre-existing
@@ -15284,6 +16028,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 53` (8 outputs + 45 checks)
 - distance: exactly 6, witnessed by the fault on columns [23, 50, 66, 102, 165, 237]
+- leading error coefficient: `A_6 = 4340` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -15300,6 +16045,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 8` (2 outputs + 6 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 63]
+- leading error coefficient: `A_2 = 378` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T³` on columns 0, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249; `T†` on columns 63, 69, `T` on the rest
 - discovery: pre-existing
@@ -15314,6 +16060,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 63]
+- leading error coefficient: `A_2 = 378` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -15328,6 +16075,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45`
 - `N = 59` (46 outputs + 13 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 5208` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 118 more (46 single-wire, 84 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -15344,6 +16092,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [64, 85]
+- leading error coefficient: `A_2 = 189` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -15358,6 +16107,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 8` (1 output + 7 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 127]
+- leading error coefficient: `A_2 = 127` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -15372,6 +16122,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 190]
+- leading error coefficient: `A_2 = 127` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -15386,6 +16137,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 9` (1 output + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 128]
+- leading error coefficient: `A_3 = 10795` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -15400,6 +16152,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 17` (1 output + 16 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [5, 41, 88, 184, 203]
+- leading error coefficient: `A_5 = 62442` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,11)`, `CZ on (0,12)`, `CZ on (0,13)`, `CZ on (0,16)`
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 2, 3, 4, 163, 166, 168, 169, 180, 181, 184 and 33 more; `T⁵` on columns 15, 17; `T†` on columns 5, 6, `T` on the rest
 - discovery: AI search
@@ -15415,6 +16168,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 18` (2 outputs + 16 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [10, 127, 146, 171, 179]
+- leading error coefficient: `A_5 = 95496` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,9)`, `CZ on (0,11)`, `CZ on (0,12)`, `CZ on (0,13)`, `CZ on (0,14)` and 10 more (2 single-wire, 20 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 15, 17, 31, 63, 119, 127, 145, 146, 147, 148 and 43 more; `T⁵` on columns 2, 3, 5, 8, 9, 62; `T†` on columns 4, 7, 19, `T` on the rest
 - discovery: AI search
@@ -15429,6 +16183,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 61, 62]
+- leading error coefficient: `A_3 = 4581` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `Z on 2`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (1,3)` and 11 more (2 single-wire, 21 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 31, 62, 181, 183, 203, 209, 214, 215, 224, 230, 231, 236 and 10 more; `T⁵` on columns 1, 3, 7; `T†` on columns 0, 15, 117, 119, `T` on the rest
 - discovery: AI search
@@ -15444,6 +16199,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 19` (3 outputs + 16 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [14, 45, 163, 200, 214]
+- leading error coefficient: `A_5 = 113694` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,10)`, `CZ on (0,12)`, `CZ on (0,13)`, `CZ on (0,14)` and 16 more (2 single-wire, 26 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 5, 7, 123, 125, 131, 132, 135, 136, 138, 140, 142 and 48 more; `T⁵` on columns 0, 1, 8, 9, 10, 12, 15, 16, 32, 58; `T†` on columns 3, 11, `T` on the rest
 - discovery: AI search
@@ -15475,6 +16231,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 20` (4 outputs + 16 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [10, 127, 146, 171, 179]
+- leading error coefficient: `A_5 = 123508` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,11)`, `CZ on (0,13)`, `CZ on (0,14)` and 27 more (3 single-wire, 36 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 4, 11, 15, 31, 102, 104, 108, 110, 114, 117 and 66 more; `T⁵` on columns 1, 8, 9, 17, 19, 63; `T†` on columns 2, 5, 62, `T` on the rest
 - discovery: AI search
@@ -15506,6 +16263,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 21` (5 outputs + 16 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [10, 127, 146, 171, 179]
+- leading error coefficient: `A_5 = 128978` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 3`, `S† on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,12)` and 38 more (4 single-wire, 46 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 19, 63, 78, 80, 81, 84, 85, 91, 95, 97, 99 and 73 more; `T⁵` on columns 2, 17, 62, 88; `T†` on columns 3, 4, 5, 7, 11, 15, 69, `T` on the rest
 - discovery: AI search
@@ -15536,6 +16294,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 22` (6 outputs + 16 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [10, 127, 146, 171, 179]
+- leading error coefficient: `A_5 = 131863` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 3`, `S† on 4`, `Z on 5`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)` and 49 more (5 single-wire, 56 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 8, 17, 19, 57, 58, 60, 61, 65, 66, 70, 71 and 101 more; `T⁵` on columns 1, 7, 69, 127; `T†` on columns 2, 43, 102, `T` on the rest
 - discovery: AI search
@@ -15565,6 +16324,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6`
 - `N = 23` (7 outputs + 16 checks)
 - distance: exactly 5, witnessed by the fault on columns [10, 127, 146, 171, 179]
+- leading error coefficient: `A_5 = 133387` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 3`, `S† on 4`, `Z on 5`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (0,11)` and 63 more (5 single-wire, 70 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -15581,6 +16341,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 24` (8 outputs + 16 checks)
 - distance: exactly 5, witnessed by the fault on columns [10, 127, 146, 171, 179]
+- leading error coefficient: `A_5 = 134195` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 3`, `S† on 4`, `Z on 5`, `S on 7`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,10)` and 76 more (6 single-wire, 82 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -15597,6 +16358,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8`
 - `N = 25` (9 outputs + 16 checks)
 - distance: exactly 5, witnessed by the fault on columns [10, 127, 146, 171, 179]
+- leading error coefficient: `A_5 = 134946` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 3`, `S† on 4`, `Z on 5`, `S on 7`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)` and 89 more (6 single-wire, 95 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -15613,6 +16375,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26`
 - `N = 35` (27 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 25]
+- leading error coefficient: `A_3 = 10647` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 15 more (27 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -15630,6 +16393,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39`
 - `N = 48` (40 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 10795` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 80 more (38 single-wire, 54 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -15647,6 +16411,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40`
 - `N = 49` (41 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 10795` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 85 more (38 single-wire, 59 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -15663,6 +16428,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42`
 - `N = 51` (43 outputs + 8 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 10795` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 100 more (38 single-wire, 74 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -15679,6 +16445,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46`
 - `N = 62` (47 outputs + 15 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 38]
+- leading error coefficient: `A_3 = 1995` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 2`, `S on 3`, `S on 4`, `S† on 6`, `S on 7`, `Z on 8`, `Z on 9`, `S† on 10`, `S on 11`, `S on 12`, `S on 13` and 615 more (43 single-wire, 584 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 5, 6, 13, 15, 16, 23, 25, 30, 36, 38, 39 and 91 more; `T⁵` on columns 3, 10, 62, 66, 68, 71, 115, 119, 122, 125, 128, 174 and 3 more; `T†` on columns 0, 1, 4, 7, 14, 57, 61, 64, 72, 117, 121, 129 and 5 more, `T` on the rest
 - discovery: AI search
@@ -15695,6 +16462,7 @@ readable copy of exactly these rows.
 - output gate: `012+345`
 - `N = 23` (6 outputs + 17 checks), exact minimal T-count 13, reduced degree 3
 - distance: exactly 6, witnessed by the fault on columns [80, 114, 151, 184, 231, 234]
+- leading error coefficient: `A_6 = 5667792` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S† on 2`, `Z on 3`, `S on 4`, `Z on 5`, `CZ on (0,3)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (0,11)` and 53 more (6 single-wire, 59 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 11, 53, 54, 60, 61, 66, 69, 70, 72, 74 and 93 more; `T⁵` on columns 3, 6, 7, 8, 9, 14, 16, 17, 18, 20; `T†` on columns 12, 13, 15, 64, 128, `T` on the rest
 - discovery: AI search
@@ -15711,6 +16479,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+014+015+023+024+026+035+036+045+046+056+127+128+137+138+147+148+157+158+237+238+247+248+267+268+357+358+367+368+457+458+467+468+567+568`
 - `N = 24` (9 outputs + 15 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 72, 73]
+- leading error coefficient: `A_4 = 14765` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 2`, `Z on 5`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,13)`, `CZ on (0,14)`, `CZ on (0,19)`, `CZ on (0,20)` and 64 more (2 single-wire, 74 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 52, 54, 56, 58, 60, 61, 62, 63, 70, 72, 73, 75 and 72 more; `T⁵` on columns 1, 2, 5, 8, 17, 32, 40, 80; `T†` on columns 64, 112, 128, 136, `T` on the rest
 - discovery: AI search
@@ -15727,6 +16496,7 @@ readable copy of exactly these rows.
 - output gate: `0,1,2+0,1,3+0,1,4+0,1,5+0,1,6+0,1,7+0,1,8+0,1,9+0,1,10`
 - `N = 35` (11 outputs + 24 checks)
 - distance: exactly 6, witnessed by the fault on columns [2, 7, 168, 169, 241, 245]
+- leading error coefficient: `A_6 = 298492` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `Z on 9`, `Z on 10`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)` and 145 more (2 single-wire, 155 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -15743,6 +16513,7 @@ readable copy of exactly these rows.
 - output gate: `0,1,2+0,1,4+0,1,9+0,1,10+0,1,12+0,1,14+0,2,4+0,2,8+0,2,10+0,2,11+0,2,12+0,2,13+0,2,14+0,2,15+0,4,8+0,4,9+0,4,11+0,4,13+0,4,15+0,8,9+0,8,10+0,8,12+0,8,14+0,9,10+0,9,11+0,9,12+0,9,13+0,9,14+0,9,15+0,10,11+0,10,13+0,10,15+0,11,12+0,11,14+0,12,13+0,12,15+0,13,14+0,14,15+1,2,3+1,2,4+1,2,7+1,2,10+1,2,11+1,2,12+1,2,13+1,2,14+1,2,15+1,3,10+1,3,12+1,4,6+1,4,8+1,4,10+1,4,11+1,4,13+1,4,15+1,6,7+1,6,8+1,6,10+1,6,12+1,6,13+1,6,14+1,6,15+1,7,9+1,7,12+1,7,13+1,7,15+1,8,10+1,8,13+1,8,14+1,8,15+1,9,11+1,9,13+1,9,15+1,10,11+1,10,12+1,10,13+1,10,14+1,10,15+1,11,12+1,11,14+1,13,14+1,14,15+2,3,6+2,3,9+2,3,11+2,3,13+2,3,14+2,4,5+2,4,7+2,4,10+2,4,11+2,4,12+2,4,13+2,4,15+2,5,6+2,5,7+2,5,8+2,5,9+2,5,10+2,5,11+2,5,14+2,6,7+2,6,8+2,6,9+2,6,11+2,6,12+2,6,13+2,7,8+2,7,9+2,7,11+2,7,13+2,7,14+2,7,15+2,8,10+2,8,11+2,8,12+2,8,13+2,8,14+2,8,15+2,9,10+2,9,14+2,9,15+2,10,13+2,10,14+2,11,13+2,13,15+2,14,15+3,4,5+3,4,7+3,4,8+3,4,9+3,4,11+3,4,13+3,5,6+3,5,10+3,5,11+3,5,15+3,6,7+3,6,8+3,6,10+3,6,12+3,7,8+3,7,10+3,7,13+3,7,14+3,7,15+3,8,11+3,8,14+3,9,11+3,10,14+3,11,12+3,11,15+3,12,13+3,13,14+3,13,15+3,14,15+4,5,8+4,5,9+4,5,10+4,5,11+4,5,12+4,5,13+4,5,14+4,6,8+4,6,12+4,6,13+4,6,15+4,7,9+4,7,12+4,7,13+4,8,9+4,8,10+4,8,11+4,8,14+4,8,15+4,9,10+4,9,13+4,10,11+4,10,12+4,11,13+4,12,13+4,12,14+4,12,15+4,13,14+4,14,15+5,6,11+5,6,14+5,6,15+5,7,8+5,7,10+5,7,11+5,7,14+5,8,9+5,8,10+5,8,11+5,9,10+5,9,11+5,9,14+5,9,15+5,10,11+5,10,15+5,11,12+5,11,13+5,11,15+5,12,13+5,12,14+5,12,15+5,13,14+5,14,15+6,7,8+6,7,9+6,7,10+6,7,12+6,7,15+6,8,9+6,8,12+6,9,11+6,9,13+6,9,14+6,10,12+6,10,13+6,10,14+6,10,15+6,11,12+6,11,13+6,11,15+6,13,14+6,13,15+7,8,9+7,8,10+7,8,11+7,8,12+7,8,13+7,8,14+7,8,15+7,9,11+7,9,12+7,9,13+7,10,11+7,10,13+7,10,14+7,11,12+7,11,13+7,13,14+8,9,12+8,9,13+8,9,14+8,9,15+8,10,11+8,10,12+8,10,13+8,10,14+8,11,13+8,12,15+8,13,15+8,14,15+9,10,11+9,10,14+9,10,15+9,11,12+9,11,13+9,11,15+9,12,13+9,12,14+9,12,15+9,13,14+10,11,12+10,11,13+10,11,14+10,12,15+10,13,15+11,12,14+11,13,15+11,14,15+12,13,14+12,13,15+12,14,15+13,14,15`
 - `N = 28` (16 outputs + 12 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 60, 61]
+- leading error coefficient: `A_4 = 91734` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `S on 3`, `S† on 4`, `Z on 5`, `Z on 6`, `Z on 8`, `S on 9`, `Z on 10`, `S† on 11`, `S on 12` and 165 more (14 single-wire, 163 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -15760,6 +16531,7 @@ readable copy of exactly these rows.
 - output gate: `0,64,83+0,65,82+0,66,81+0,67,80+0,68,79+0,69,78+0,70,77+0,71,76+0,72,75+0,73,74+1,54,83+1,55,82+1,56,81+1,57,80+1,58,79+1,59,78+1,60,77+1,61,76+1,62,75+1,63,74+2,50,83+2,51,82+2,52,81+2,53,80+2,58,73+2,59,72+2,60,71+2,61,70+2,62,69+2,63,68+3,49,83+3,51,79+3,52,78+3,53,77+3,55,73+3,56,72+3,57,71+3,61,67+3,62,66+3,63,65+4,49,82+4,50,79+4,52,76+4,53,75+4,54,73+4,56,70+4,57,69+4,59,67+4,60,66+4,63,64+5,49,81+5,50,78+5,51,76+5,53,74+5,54,72+5,55,70+5,57,68+5,58,67+5,60,65+5,62,64+6,49,80+6,50,77+6,51,75+6,52,74+6,54,71+6,55,69+6,56,68+6,58,66+6,59,65+6,61,64+7,39,83+7,40,82+7,41,81+7,42,80+7,43,79+7,44,78+7,45,77+7,46,76+7,47,75+7,48,74+8,35,83+8,36,82+8,37,81+8,38,80+8,43,73+8,44,72+8,45,71+8,46,70+8,47,69+8,48,68+9,34,83+9,36,79+9,37,78+9,38,77+9,40,73+9,41,72+9,42,71+9,46,67+9,47,66+9,48,65+10,34,82+10,35,79+10,37,76+10,38,75+10,39,73+10,41,70+10,42,69+10,44,67+10,45,66+10,48,64+11,34,81+11,35,78+11,36,76+11,38,74+11,39,72+11,40,70+11,42,68+11,43,67+11,45,65+11,47,64+12,34,80+12,35,77+12,36,75+12,37,74+12,39,71+12,40,69+12,41,68+12,43,66+12,44,65+12,46,64+13,30,83+13,31,82+13,32,81+13,33,80+13,43,63+13,44,62+13,45,61+13,46,60+13,47,59+13,48,58+14,29,83+14,31,79+14,32,78+14,33,77+14,40,63+14,41,62+14,42,61+14,46,57+14,47,56+14,48,55+15,29,82+15,30,79+15,32,76+15,33,75+15,39,63+15,41,60+15,42,59+15,44,57+15,45,56+15,48,54+16,29,81+16,30,78+16,31,76+16,33,74+16,39,62+16,40,60+16,42,58+16,43,57+16,45,55+16,47,54+17,29,80+17,30,77+17,31,75+17,32,74+17,39,61+17,40,59+17,41,58+17,43,56+17,44,55+17,46,54+18,28,83+18,31,73+18,32,72+18,33,71+18,36,63+18,37,62+18,38,61+18,46,53+18,47,52+18,48,51+19,28,82+19,30,73+19,32,70+19,33,69+19,35,63+19,37,60+19,38,59+19,44,53+19,45,52+19,48,50+20,28,81+20,30,72+20,31,70+20,33,68+20,35,62+20,36,60+20,38,58+20,43,53+20,45,51+20,47,50+21,28,80+21,30,71+21,31,69+21,32,68+21,35,61+21,36,59+21,37,58+21,43,52+21,44,51+21,46,50+22,28,79+22,29,73+22,32,67+22,33,66+22,34,63+22,37,57+22,38,56+22,41,53+22,42,52+22,48,49+23,28,78+23,29,72+23,31,67+23,33,65+23,34,62+23,36,57+23,38,55+23,40,53+23,42,51+23,47,49+24,28,77+24,29,71+24,31,66+24,32,65+24,34,61+24,36,56+24,37,55+24,40,52+24,41,51+24,46,49+25,28,76+25,29,70+25,30,67+25,33,64+25,34,60+25,35,57+25,38,54+25,39,53+25,42,50+25,45,49+26,28,75+26,29,69+26,30,66+26,32,64+26,34,59+26,35,56+26,37,54+26,39,52+26,41,50+26,44,49+27,28,74+27,29,68+27,30,65+27,31,64+27,34,58+27,35,55+27,36,54+27,39,51+27,40,50+27,43,49+28,39,83+28,40,82+28,41,81+28,42,80+28,43,79+28,44,78+28,45,77+28,46,76+28,47,75+28,48,74+28,54,83+28,55,82+28,56,81+28,57,80+28,58,79+28,59,78+28,60,77+28,61,76+28,62,75+28,63,74+28,64,83+28,65,82+28,66,81+28,67,80+28,68,79+28,69,78+28,70,77+28,71,76+28,72,75+28,73,74+28,74,79+28,74,82+28,74,83+28,75,78+28,75,81+28,75,83+28,76,77+28,76,80+28,76,83+28,77,81+28,77,82+28,78,80+28,78,82+28,79,80+28,79,81+29,35,83+29,36,82+29,37,81+29,38,80+29,43,73+29,44,72+29,45,71+29,46,70+29,47,69+29,48,68+29,50,83+29,51,82+29,52,81+29,53,80+29,58,73+29,59,72+29,60,71+29,61,70+29,62,69+29,63,68+29,64,83+29,65,82+29,66,81+29,67,80+29,68,73+29,68,79+29,68,82+29,68,83+29,69,72+29,69,78+29,69,81+29,69,83+29,70,71+29,70,77+29,70,80+29,70,83+29,71,76+29,71,81+29,71,82+29,72,75+29,72,80+29,72,82+29,73,74+29,73,80+29,73,81+30,34,83+30,36,79+30,37,78+30,38,77+30,40,73+30,41,72+30,42,71+30,46,67+30,47,66+30,48,65+30,49,83+30,51,79+30,52,78+30,53,77+30,55,73+30,56,72+30,57,71+30,61,67+30,62,66+30,63,65+30,64,83+30,65,73+30,65,79+30,65,82+30,65,83+30,66,72+30,66,78+30,66,81+30,66,83+30,67,71+30,67,77+30,67,80+30,67,83+30,68,79+30,69,78+30,70,77+30,71,76+30,71,78+30,71,79+30,72,75+30,72,77+30,72,79+30,73,74+30,73,77+30,73,78+31,34,82+31,35,79+31,37,76+31,38,75+31,39,73+31,41,70+31,42,69+31,44,67+31,45,66+31,48,64+31,49,82+31,50,79+31,52,76+31,53,75+31,54,73+31,56,70+31,57,69+31,59,67+31,60,66+31,63,64+31,64,73+31,64,79+31,64,82+31,64,83+31,65,82+31,66,70+31,66,76+31,66,81+31,66,82+31,67,69+31,67,75+31,67,80+31,67,82+31,68,79+31,69,76+31,69,78+31,69,79+31,70,75+31,70,77+31,70,79+31,71,76+31,72,75+31,73,74+31,73,75+31,73,76+32,34,81+32,35,78+32,36,76+32,38,74+32,39,72+32,40,70+32,42,68+32,43,67+32,45,65+32,47,64+32,49,81+32,50,78+32,51,76+32,53,74+32,54,72+32,55,70+32,57,68+32,58,67+32,60,65+32,62,64+32,64,72+32,64,78+32,64,81+32,64,83+32,65,70+32,65,76+32,65,81+32,65,82+32,66,81+32,67,68+32,67,74+32,67,80+32,67,81+32,68,76+32,68,78+32,68,79+32,69,78+32,70,74+32,70,77+32,70,78+32,71,76+32,72,74+32,72,75+32,72,76+32,73,74+33,34,80+33,35,77+33,36,75+33,37,74+33,39,71+33,40,69+33,41,68+33,43,66+33,44,65+33,46,64+33,49,80+33,50,77+33,51,75+33,52,74+33,54,71+33,55,69+33,56,68+33,58,66+33,59,65+33,61,64+33,64,71+33,64,77+33,64,80+33,64,83+33,65,69+33,65,75+33,65,80+33,65,82+33,66,68+33,66,74+33,66,80+33,66,81+33,67,80+33,68,75+33,68,77+33,68,79+33,69,74+33,69,77+33,69,78+33,70,77+33,71,74+33,71,75+33,71,76+33,72,75+33,73,74+34,43,63+34,44,62+34,45,61+34,46,60+34,47,59+34,48,58+34,50,83+34,51,82+34,52,81+34,53,80+34,54,83+34,55,82+34,56,81+34,57,80+34,58,63+34,58,73+34,58,79+34,58,82+34,58,83+34,59,62+34,59,72+34,59,78+34,59,81+34,59,83+34,60,61+34,60,71+34,60,77+34,60,80+34,60,83+34,61,70+34,61,76+34,61,81+34,61,82+34,62,69+34,62,75+34,62,80+34,62,82+34,63,68+34,63,74+34,63,80+34,63,81+35,40,63+35,41,62+35,42,61+35,46,57+35,47,56+35,48,55+35,49,83+35,51,79+35,52,78+35,53,77+35,54,83+35,55,63+35,55,73+35,55,79+35,55,82+35,55,83+35,56,62+35,56,72+35,56,78+35,56,81+35,56,83+35,57,61+35,57,71+35,57,77+35,57,80+35,57,83+35,58,79+35,59,78+35,60,77+35,61,67+35,61,76+35,61,78+35,61,79+35,62,66+35,62,75+35,62,77+35,62,79+35,63,65+35,63,74+35,63,77+35,63,78+36,39,63+36,41,60+36,42,59+36,44,57+36,45,56+36,48,54+36,49,82+36,50,79+36,52,76+36,53,75+36,54,63+36,54,73+36,54,79+36,54,82+36,54,83+36,55,82+36,56,60+36,56,70+36,56,76+36,56,81+36,56,82+36,57,59+36,57,69+36,57,75+36,57,80+36,57,82+36,58,79+36,59,67+36,59,76+36,59,78+36,59,79+36,60,66+36,60,75+36,60,77+36,60,79+36,61,76+36,62,75+36,63,64+36,63,74+36,63,75+36,63,76+37,39,62+37,40,60+37,42,58+37,43,57+37,45,55+37,47,54+37,49,81+37,50,78+37,51,76+37,53,74+37,54,62+37,54,72+37,54,78+37,54,81+37,54,83+37,55,60+37,55,70+37,55,76+37,55,81+37,55,82+37,56,81+37,57,58+37,57,68+37,57,74+37,57,80+37,57,81+37,58,67+37,58,76+37,58,78+37,58,79+37,59,78+37,60,65+37,60,74+37,60,77+37,60,78+37,61,76+37,62,64+37,62,74+37,62,75+37,62,76+37,63,74+38,39,61+38,40,59+38,41,58+38,43,56+38,44,55+38,46,54+38,49,80+38,50,77+38,51,75+38,52,74+38,54,61+38,54,71+38,54,77+38,54,80+38,54,83+38,55,59+38,55,69+38,55,75+38,55,80+38,55,82+38,56,58+38,56,68+38,56,74+38,56,80+38,56,81+38,57,80+38,58,66+38,58,75+38,58,77+38,58,79+38,59,65+38,59,74+38,59,77+38,59,78+38,60,77+38,61,64+38,61,74+38,61,75+38,61,76+38,62,75+38,63,74+39,46,53+39,47,52+39,48,51+39,49,83+39,50,83+39,51,63+39,51,73+39,51,79+39,51,82+39,51,83+39,52,62+39,52,72+39,52,78+39,52,81+39,52,83+39,53,61+39,53,71+39,53,77+39,53,80+39,53,83+39,55,73+39,56,72+39,57,71+39,58,73+39,59,72+39,60,71+39,61,67+39,61,70+39,61,72+39,61,73+39,62,66+39,62,69+39,62,71+39,62,73+39,63,65+39,63,68+39,63,71+39,63,72+40,44,53+40,45,52+40,48,50+40,49,82+40,50,63+40,50,73+40,50,79+40,50,82+40,50,83+40,51,82+40,52,60+40,52,70+40,52,76+40,52,81+40,52,82+40,53,59+40,53,69+40,53,75+40,53,80+40,53,82+40,54,73+40,56,70+40,57,69+40,58,73+40,59,67+40,59,70+40,59,72+40,59,73+40,60,66+40,60,69+40,60,71+40,60,73+40,61,70+40,62,69+40,63,64+40,63,68+40,63,69+40,63,70+41,43,53+41,45,51+41,47,50+41,49,81+41,50,62+41,50,72+41,50,78+41,50,81+41,50,83+41,51,60+41,51,70+41,51,76+41,51,81+41,51,82+41,52,81+41,53,58+41,53,68+41,53,74+41,53,80+41,53,81+41,54,72+41,55,70+41,57,68+41,58,67+41,58,70+41,58,72+41,58,73+41,59,72+41,60,65+41,60,68+41,60,71+41,60,72+41,61,70+41,62,64+41,62,68+41,62,69+41,62,70+41,63,68+42,43,52+42,44,51+42,46,50+42,49,80+42,50,61+42,50,71+42,50,77+42,50,80+42,50,83+42,51,59+42,51,69+42,51,75+42,51,80+42,51,82+42,52,58+42,52,68+42,52,74+42,52,80+42,52,81+42,53,80+42,54,71+42,55,69+42,56,68+42,58,66+42,58,69+42,58,71+42,58,73+42,59,65+42,59,68+42,59,71+42,59,72+42,60,71+42,61,64+42,61,68+42,61,69+42,61,70+42,62,69+42,63,68+43,48,49+43,49,63+43,49,73+43,49,79+43,49,82+43,49,83+43,50,79+43,51,79+43,52,57+43,52,67+43,52,76+43,52,78+43,52,79+43,53,56+43,53,66+43,53,75+43,53,77+43,53,79+43,54,73+43,55,73+43,56,67+43,56,70+43,56,72+43,56,73+43,57,66+43,57,69+43,57,71+43,57,73+43,59,67+43,60,66+43,61,67+43,62,66+43,63,64+43,63,65+43,63,66+43,63,67+44,47,49+44,49,62+44,49,72+44,49,78+44,49,81+44,49,83+44,50,78+44,51,57+44,51,67+44,51,76+44,51,78+44,51,79+44,52,78+44,53,55+44,53,65+44,53,74+44,53,77+44,53,78+44,54,72+44,55,67+44,55,70+44,55,72+44,55,73+44,56,72+44,57,65+44,57,68+44,57,71+44,57,72+44,58,67+44,60,65+44,61,67+44,62,64+44,62,65+44,62,66+44,62,67+44,63,65+45,46,49+45,49,61+45,49,71+45,49,77+45,49,80+45,49,83+45,50,77+45,51,56+45,51,66+45,51,75+45,51,77+45,51,79+45,52,55+45,52,65+45,52,74+45,52,77+45,52,78+45,53,77+45,54,71+45,55,66+45,55,69+45,55,71+45,55,73+45,56,65+45,56,68+45,56,71+45,56,72+45,57,71+45,58,66+45,59,65+45,61,64+45,61,65+45,61,66+45,61,67+45,62,66+45,63,65+46,49,60+46,49,70+46,49,76+46,49,81+46,49,82+46,50,57+46,50,67+46,50,76+46,50,78+46,50,79+46,51,76+46,52,76+46,53,54+46,53,64+46,53,74+46,53,75+46,53,76+46,54,67+46,54,70+46,54,72+46,54,73+46,55,70+46,56,70+46,57,64+46,57,68+46,57,69+46,57,70+46,58,67+46,59,67+46,60,64+46,60,65+46,60,66+46,60,67+46,62,64+46,63,64+47,49,59+47,49,69+47,49,75+47,49,80+47,49,82+47,50,56+47,50,66+47,50,75+47,50,77+47,50,79+47,51,75+47,52,54+47,52,64+47,52,74+47,52,75+47,52,76+47,53,75+47,54,66+47,54,69+47,54,71+47,54,73+47,55,69+47,56,64+47,56,68+47,56,69+47,56,70+47,57,69+47,58,66+47,59,64+47,59,65+47,59,66+47,59,67+47,60,66+47,61,64+47,63,64+48,49,58+48,49,68+48,49,74+48,49,80+48,49,81+48,50,55+48,50,65+48,50,74+48,50,77+48,50,78+48,51,54+48,51,64+48,51,74+48,51,75+48,51,76+48,52,74+48,53,74+48,54,65+48,54,68+48,54,71+48,54,72+48,55,64+48,55,68+48,55,69+48,55,70+48,56,68+48,57,68+48,58,64+48,58,65+48,58,66+48,58,67+48,59,65+48,60,65+48,61,64+48,62,64`
 - `N = 93` (84 outputs + 9 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 2, 3]
+- leading error coefficient: `A_4 = 690880` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: none
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
@@ -15776,6 +16548,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 10` (6 outputs + 4 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 190]
+- leading error coefficient: `A_2 = 2166` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`
 - or no correction at all, with rotations run as `T³` on columns 256, 257, 258, 259; `T†` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, `T` on the rest
 - discovery: pre-existing
@@ -15791,6 +16564,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58`
 - `N = 69` (59 outputs + 10 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 108]
+- leading error coefficient: `A_3 = 2872` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 47 more (59 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -15807,6 +16581,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
 - `N = 10` (5 outputs + 5 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 231]
+- leading error coefficient: `A_2 = 1065` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T³` on columns 256, 257, 258, 259, 260, 261, 262, 263, 264, 265; `T†` on columns 0, 1, 2, 3, 4, `T` on the rest
 - discovery: pre-existing
@@ -15822,6 +16597,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 256]
+- leading error coefficient: `A_2 = 498` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -15836,6 +16612,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [28, 63]
+- leading error coefficient: `A_2 = 213` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -15850,6 +16627,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [64, 134]
+- leading error coefficient: `A_2 = 71` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -15864,6 +16642,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 10` (1 output + 9 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 9, 192]
+- leading error coefficient: `A_3 = 6435` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -15878,6 +16657,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [64, 134]
+- leading error coefficient: `A_2 = 213` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -15907,6 +16687,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+023+123`
 - `N = 9` (4 outputs + 5 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 1116` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -15921,6 +16702,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+023+123`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [32, 47]
+- leading error coefficient: `A_2 = 868` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -15950,6 +16732,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63`
 - `N = 75` (64 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 21, 130]
+- leading error coefficient: `A_3 = 1736` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 124 more (65 single-wire, 71 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 6, 18, 25, 26, 27, 29, 31, 32, 55, 57, 67, 71 and 87 more; `T⁵` on columns 0, 1, 2, 3, 4, 13, 17, 19, 20, 30, 36, 38 and 9 more; `T†` on columns 10, 34, 42, 44, 48, 50, 52, 53, 73, 74, 92, 150 and 1 more, `T` on the rest
 - discovery: AI search
@@ -15966,6 +16749,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67`
 - `N = 79` (68 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 15, 63]
+- leading error coefficient: `A_3 = 1952` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 318 more (74 single-wire, 256 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 8, 10, 19, 26, 32, 33, 51, 55, 57, 71, 74, 77 and 88 more; `T⁵` on columns 3, 4, 5, 12, 14, 16, 18, 20, 25, 27, 30, 34 and 16 more; `T†` on columns 0, 1, 9, 15, 28, 29, 31, 35, 45, 48, 60, 73 and 4 more, `T` on the rest
 - discovery: AI search
@@ -15982,6 +16766,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156+234+235+236+245+246+256+345+346+356+456`
 - `N = 10` (7 outputs + 3 checks)
 - distance: exactly 2, witnessed by the fault on columns [0, 7]
+- leading error coefficient: `A_2 = 6622` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `S† on 6`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)` and 16 more (7 single-wire, 21 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 301, 302, 303, 304, 305, 306, 307, `T` on the rest
 - discovery: pre-existing
@@ -15998,6 +16783,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69`
 - `N = 81` (70 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 63]
+- leading error coefficient: `A_3 = 2164` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `Z on 3`, `Z on 5`, `S† on 7`, `S† on 9`, `S† on 10`, `S† on 12`, `S on 13`, `S on 15`, `S† on 16` and 1244 more (62 single-wire, 1194 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 2, 8, 10, 14, 16, 22, 25, 34, 38, 44, 45 and 110 more; `T⁵` on columns 1, 3, 5, 6, 7, 11, 26, 27, 29, 35, 40, 47 and 8 more; `T†` on columns 9, 13, 18, 23, 31, 32, 36, 41, 42, 49, 55, 56 and 9 more, `T` on the rest
 - discovery: AI search
@@ -16014,6 +16800,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70`
 - `N = 82` (71 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 11, 47]
+- leading error coefficient: `A_3 = 2060` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `S on 3`, `S on 4`, `Z on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `Z on 10`, `Z on 11` and 856 more (79 single-wire, 789 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 7, 8, 17, 20, 22, 27, 28, 31, 32, 33, 36 and 116 more; `T⁵` on columns 6, 9, 11, 21, 37, 43, 45, 46, 48, 50, 54, 55 and 10 more; `T†` on columns 3, 4, 12, 13, 15, 18, 23, 25, 47, 59, 61, 72 and 3 more, `T` on the rest
 - discovery: AI search
@@ -16030,6 +16817,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69`
 - `N = 82` (70 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 63]
+- leading error coefficient: `A_3 = 1146` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `S on 4`, `Z on 5`, `S on 6`, `S† on 7`, `S on 8`, `Z on 9`, `Z on 10`, `S† on 11` and 1204 more (80 single-wire, 1136 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 9, 13, 16, 22, 25, 32, 34, 46, 49, 54, 70, 79 and 106 more; `T⁵` on columns 15, 26, 27, 28, 30, 33, 35, 37, 39, 47, 61, 80 and 2 more; `T†` on columns 0, 2, 8, 10, 14, 18, 23, 31, 36, 38, 41, 42 and 14 more, `T` on the rest
 - discovery: AI search
@@ -16046,6 +16834,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71`
 - `N = 83` (72 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 94]
+- leading error coefficient: `A_3 = 2254` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `S on 3`, `S on 4`, `Z on 5`, `S on 6`, `S on 7`, `Z on 8`, `S on 9`, `S on 10`, `S on 11` and 766 more (75 single-wire, 703 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 11, 17, 24, 27, 29, 30, 32, 33, 34, 35, 43 and 117 more; `T⁵` on columns 5, 10, 14, 15, 16, 18, 21, 23, 25, 39, 41, 48 and 7 more; `T†` on columns 0, 1, 2, 3, 4, 9, 13, 20, 26, 28, 37, 38 and 10 more, `T` on the rest
 - discovery: AI search
@@ -16062,6 +16851,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70`
 - `N = 83` (71 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 16, 200]
+- leading error coefficient: `A_3 = 1056` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 2`, `S on 3`, `Z on 4`, `S on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `S on 9`, `S on 10`, `Z on 11` and 804 more (75 single-wire, 741 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 8, 16, 27, 36, 47, 59, 62, 68, 80, 81, 82, 86 and 97 more; `T⁵` on columns 0, 4, 5, 10, 13, 15, 20, 22, 25, 32, 33, 38 and 11 more; `T†` on columns 1, 3, 19, 26, 28, 40, 50, 61, 63, 130, 183, `T` on the rest
 - discovery: AI search
@@ -16078,6 +16868,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72`
 - `N = 84` (73 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 7, 185]
+- leading error coefficient: `A_3 = 2263` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 61 more (73 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -16094,6 +16885,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69`
 - `N = 83` (70 outputs + 13 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 63]
+- leading error coefficient: `A_3 = 601` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 2`, `S on 3`, `S on 4`, `Z on 5`, `S on 6`, `Z on 7`, `S on 8`, `Z on 9`, `S on 10`, `Z on 11` and 1147 more (78 single-wire, 1081 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 5, 7, 11, 24, 29, 34, 37, 39, 43, 47, 50 and 111 more; `T⁵` on columns 4, 12, 15, 25, 30, 31, 32, 35, 70, 79, 87; `T†` on columns 0, 1, 3, 10, 13, 19, 20, 22, 36, 40, 41, 42 and 10 more, `T` on the rest
 - discovery: AI search
@@ -16110,6 +16902,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+12+012`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 63]
+- leading error coefficient: `A_2 = 630` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T³` on columns 303, 304, 305, 306, 307, 308, 309, 310, 311, 312; `T⁵` on column 0; `T†` on columns 63, 69, 75, `T` on the rest
 - discovery: pre-existing
@@ -16124,6 +16917,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 63]
+- leading error coefficient: `A_2 = 630` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -16138,6 +16932,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+12+012`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [64, 85]
+- leading error coefficient: `A_2 = 378` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T³` on columns 304, 305, 306, 307, 308, 309, 310, 311, 312, 313; `T⁵` on columns 0, 1; `T†` on columns 64, 85, 106, `T` on the rest
 - discovery: pre-existing
@@ -16152,6 +16947,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [64, 85]
+- leading error coefficient: `A_2 = 378` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -16166,6 +16962,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75`
 - `N = 87` (76 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 19]
+- leading error coefficient: `A_3 = 3022` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 328 more (78 single-wire, 262 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 19, 20, 23, 24, 25, 26, 31, 32, 33, 34, 38 and 132 more; `T⁵` on columns 2, 4, 7, 10, 13, 16, 17, 21, 36, 46, 49, 50 and 14 more; `T†` on columns 0, 8, 11, 14, 18, 22, 30, 59, 63, 69, 80, 168, `T` on the rest
 - discovery: AI search
@@ -16182,6 +16979,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 10` (6 outputs + 4 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 3465` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (1,2)` and 9 more (6 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -16197,6 +16995,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79`
 - `N = 91` (80 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 178]
+- leading error coefficient: `A_3 = 2664` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 194 more (80 single-wire, 126 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 12, 13, 16, 21, 25, 32, 33, 35, 44, 51, 52 and 126 more; `T⁵` on columns 8, 9, 11, 18, 24, 27, 31, 41, 45, 46, 59, 60 and 4 more; `T†` on columns 0, 2, 6, 14, 17, 19, 34, 38, 39, 40, 48, 50 and 10 more, `T` on the rest
 - discovery: AI search
@@ -16213,6 +17012,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34`
 - `N = 10` (5 outputs + 5 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 1705` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)` and 3 more (5 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on every rotation
 - discovery: pre-existing
@@ -16228,6 +17028,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156+234+235+236+245+246+256+345+346+356+456`
 - `N = 11` (7 outputs + 4 checks)
 - distance: exactly 2, witnessed by the fault on columns [0, 57]
+- leading error coefficient: `A_2 = 5236` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`
 - or no correction at all, with rotations run as `T³` on columns 338, 339, 340, 341, 342, 343; `T†` on columns 8, 14, 20, 26, 32, 38, 44, `T` on the rest
 - discovery: pre-existing
@@ -16244,6 +17045,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 11` (6 outputs + 5 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 106]
+- leading error coefficient: `A_2 = 2145` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -16258,6 +17060,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 187]
+- leading error coefficient: `A_2 = 790` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -16272,6 +17075,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85`
 - `N = 97` (86 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 311]
+- leading error coefficient: `A_3 = 3116` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 2`, `S on 3`, `Z on 4`, `Z on 5`, `S on 6`, `S on 7`, `S on 8`, `Z on 9`, `S on 10`, `S on 11` and 549 more (92 single-wire, 469 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 6, 10, 16, 18, 25, 28, 36, 45, 52, 55 and 130 more; `T⁵` on columns 3, 7, 12, 14, 20, 27, 31, 42, 49, 54, 73, 74 and 6 more; `T†` on columns 2, 11, 17, 19, 23, 32, 33, 37, 38, 39, 41, 43 and 14 more, `T` on the rest
 - discovery: AI search
@@ -16288,6 +17092,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86`
 - `N = 98` (87 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 130]
+- leading error coefficient: `A_3 = 3365` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `Z on 3`, `Z on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 1026 more (92 single-wire, 946 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 10, 11, 30, 33, 39, 41, 45, 55, 57, 67 and 137 more; `T⁵` on columns 1, 5, 6, 7, 8, 9, 13, 16, 17, 19, 24, 28 and 9 more; `T†` on columns 2, 4, 12, 14, 18, 20, 22, 23, 29, 34, 36, 37 and 23 more, `T` on the rest
 - discovery: AI search
@@ -16304,6 +17109,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85`
 - `N = 98` (86 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 312]
+- leading error coefficient: `A_3 = 1559` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 83 more (89 single-wire, 6 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 2, 6, 10, 23, 28, 33, 36, 37, 39, 45 and 135 more; `T⁵` on columns 5, 12, 15, 22, 26, 29, 35, 42, 49, 54, 58, 63 and 9 more; `T†` on columns 11, 16, 17, 18, 19, 25, 32, 38, 41, 43, 47, 48 and 10 more, `T` on the rest
 - discovery: AI search
@@ -16320,6 +17126,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87`
 - `N = 99` (88 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 10]
+- leading error coefficient: `A_3 = 3298` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 76 more (88 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -16336,6 +17143,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+12+13+23+012+013+023+123`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 63]
+- leading error coefficient: `A_2 = 945` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T³` on columns 366, 367, 368, 369, 370, 371, 372, 373, 374, 375; `T†` on columns 0, 63, 69, 75, 81, `T` on the rest
 - discovery: pre-existing
@@ -16350,6 +17158,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 63]
+- leading error coefficient: `A_2 = 945` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -16364,6 +17173,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 316]
+- leading error coefficient: `A_2 = 442` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -16378,6 +17188,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 127]
+- leading error coefficient: `A_2 = 381` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -16392,6 +17203,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [128, 156]
+- leading error coefficient: `A_2 = 127` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -16406,6 +17218,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93`
 - `N = 105` (94 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 11, 38]
+- leading error coefficient: `A_3 = 4290` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 196 more (97 single-wire, 111 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 15, 20, 21, 23, 24, 25, 26, 27, 30, 32, 35 and 147 more; `T⁵` on columns 0, 3, 6, 10, 13, 16, 22, 36, 40, 47, 53, 55 and 9 more; `T†` on columns 1, 2, 4, 5, 8, 9, 11, 12, 14, 29, 33, 37 and 23 more, `T` on the rest
 - discovery: AI search
@@ -16422,6 +17235,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76`
 - `N = 98` (77 outputs + 21 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 38]
+- leading error coefficient: `A_3 = 3395` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `S on 3`, `Z on 4`, `S† on 6`, `S on 7`, `S† on 8`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13` and 556 more (75 single-wire, 493 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 4, 5, 6, 13, 15, 16, 23, 25, 30, 36 and 145 more; `T⁵` on columns 8, 9, 10, 58, 66, 67, 71, 121, 122, 124, 128, 175 and 13 more; `T†` on columns 0, 7, 14, 60, 61, 64, 171, 182, 185, 229, 232, 234 and 8 more, `T` on the rest
 - discovery: AI search
@@ -16438,6 +17252,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 11` (6 outputs + 5 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 2418` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`
 - or no correction at all, with rotations run as `T³` on columns 31, 36, 41, 46, 51, 56, 371, 376, 381, 386, 391, 396 and 6 more, `T` on the rest
 - discovery: pre-existing
@@ -16453,6 +17268,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99`
 - `N = 111` (100 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 315]
+- leading error coefficient: `A_3 = 4900` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `S on 10`, `S† on 11` and 1782 more (108 single-wire, 1686 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 8, 9, 10, 15, 21, 26, 27, 30, 32, 39, 42 and 157 more; `T⁵` on columns 2, 4, 6, 12, 14, 20, 25, 28, 29, 33, 40, 44 and 15 more; `T†` on columns 1, 3, 5, 11, 13, 17, 18, 19, 22, 24, 31, 34 and 19 more, `T` on the rest
 - discovery: AI search
@@ -16469,6 +17285,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100`
 - `N = 112` (101 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 214]
+- leading error coefficient: `A_3 = 4698` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 2`, `Z on 3`, `S on 4`, `S† on 5`, `S† on 6`, `S† on 7`, `S† on 8`, `S† on 10`, `Z on 11`, `Z on 12` and 3168 more (99 single-wire, 3081 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 7, 8, 14, 20, 22, 23, 26, 33, 35, 36, 42 and 166 more; `T⁵` on columns 2, 3, 4, 6, 9, 10, 11, 13, 15, 16, 25, 28 and 18 more; `T†` on columns 0, 12, 19, 21, 24, 31, 32, 38, 43, 50, 55, 70 and 10 more, `T` on the rest
 - discovery: AI search
@@ -16485,6 +17302,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [136, 262]
+- leading error coefficient: `A_2 = 135` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -16499,6 +17317,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99`
 - `N = 112` (100 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 316]
+- leading error coefficient: `A_3 = 2617` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `S on 4`, `Z on 5`, `S on 6`, `S on 7`, `S on 8`, `Z on 9`, `Z on 10`, `Z on 11` and 1826 more (109 single-wire, 1729 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 4, 8, 10, 19, 31, 33, 42, 44, 51, 57 and 123 more; `T⁵` on columns 1, 2, 9, 12, 16, 17, 20, 21, 23, 24, 29, 34 and 25 more; `T†` on columns 26, 35, 36, 38, 46, 49, 64, 65, 78, 80, 82, 86 and 6 more, `T` on the rest
 - discovery: AI search
@@ -16515,6 +17334,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101`
 - `N = 113` (102 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 161]
+- leading error coefficient: `A_3 = 4726` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `Z on 3`, `S on 4`, `S on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `S on 10`, `Z on 11` and 1497 more (112 single-wire, 1397 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 3, 6, 10, 13, 20, 23, 25, 26, 41, 47 and 120 more; `T⁵` on columns 5, 8, 14, 27, 28, 33, 38, 43, 48, 49, 51, 53 and 20 more; `T†` on columns 11, 15, 31, 36, 39, 42, 46, 50, 52, 64, 69, 76 and 8 more, `T` on the rest
 - discovery: AI search
@@ -16531,6 +17351,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72`
 - `N = 92` (73 outputs + 19 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 46, 47]
+- leading error coefficient: `A_4 = 6527` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 61 more (73 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -16547,6 +17368,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100`
 - `N = 113` (101 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 216]
+- leading error coefficient: `A_3 = 2352` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S on 2`, `Z on 3`, `S on 4`, `S† on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `Z on 11` and 2857 more (111 single-wire, 2758 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 8, 9, 21, 28, 33, 36, 40, 51, 55, 62, 63 and 120 more; `T⁵` on columns 2, 4, 13, 19, 20, 22, 23, 24, 25, 29, 32, 34 and 24 more; `T†` on columns 5, 6, 10, 16, 39, 42, 44, 50, 54, 69, 75, 80 and 9 more, `T` on the rest
 - discovery: AI search
@@ -16563,6 +17385,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99`
 - `N = 113` (100 outputs + 13 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 318]
+- leading error coefficient: `A_3 = 1434` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `Z on 11` and 795 more (107 single-wire, 700 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 4, 8, 10, 12, 15, 20, 21, 23, 24, 28, 33 and 153 more; `T⁵` on columns 3, 5, 7, 14, 16, 27, 35, 38, 42, 45, 46, 47 and 13 more; `T†` on columns 1, 6, 9, 11, 13, 17, 19, 26, 29, 32, 36, 37 and 25 more, `T` on the rest
 - discovery: AI search
@@ -16579,6 +17402,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101`
 - `N = 114` (102 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 36, 74]
+- leading error coefficient: `A_3 = 2390` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `Z on 3`, `S on 4`, `S on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `S on 10`, `Z on 11` and 1474 more (108 single-wire, 1378 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 3, 6, 10, 11, 13, 20, 23, 25, 26, 31, 39 and 123 more; `T⁵` on columns 5, 7, 12, 14, 21, 22, 30, 33, 37, 38, 40, 43 and 17 more; `T†` on columns 0, 15, 36, 42, 46, 50, 52, 62, 64, 69, 70, 76 and 6 more, `T` on the rest
 - discovery: AI search
@@ -16595,6 +17419,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103`
 - `N = 115` (104 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 197]
+- leading error coefficient: `A_3 = 4806` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 92 more (104 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -16611,6 +17436,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100`
 - `N = 114` (101 outputs + 13 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 216]
+- leading error coefficient: `A_3 = 1585` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `Z on 3`, `Z on 4`, `S on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `S on 9`, `Z on 10`, `Z on 11` and 1987 more (108 single-wire, 1891 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 8, 16, 21, 28, 44, 62, 63, 77, 87, 92, 94 and 120 more; `T⁵` on columns 0, 2, 3, 11, 12, 13, 15, 18, 20, 24, 26, 34 and 20 more; `T†` on columns 6, 7, 9, 10, 33, 36, 39, 40, 42, 50, 51, 54 and 10 more, `T` on the rest
 - discovery: AI search
@@ -16627,6 +17453,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99`
 - `N = 114` (100 outputs + 14 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 4, 319]
+- leading error coefficient: `A_3 = 771` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 93 more (102 single-wire, 3 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 7, 8, 21, 23, 24, 25, 28, 29, 30, 33, 36 and 163 more; `T⁵` on columns 0, 1, 5, 13, 27, 31, 35, 37, 40, 46, 47, 59 and 13 more; `T†` on columns 11, 14, 15, 20, 22, 48, 50, 51, 63, 65, 67, 70 and 8 more, `T` on the rest
 - discovery: AI search
@@ -16658,6 +17485,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79`
 - `N = 99` (80 outputs + 19 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 10, 11]
+- leading error coefficient: `A_4 = 9091` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 3`, `S on 4`, `Z on 5`, `Z on 6`, `S† on 7`, `Z on 9`, `S† on 10`, `Z on 11`, `S† on 12`, `Z on 13` and 2174 more (91 single-wire, 2095 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 4, 5, 9, 12, 13, 14, 16, 17, 21, 23 and 172 more; `T⁵` on columns 15, 19, 20, 31, 32, 33, 39, 45, 56, 83, 100, 101 and 2 more; `T†` on columns 0, 6, 8, 10, 11, 25, 29, 30, 34, 35, 41, 51 and 17 more, `T` on the rest
 - discovery: AI search
@@ -16674,6 +17502,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80`
 - `N = 100` (81 outputs + 19 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 2, 135, 149]
+- leading error coefficient: `A_4 = 9296` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `S† on 3`, `S† on 4`, `Z on 5`, `S on 6`, `S† on 7`, `S on 8`, `S† on 9`, `S on 10`, `S† on 11` and 1861 more (93 single-wire, 1780 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 2, 6, 7, 11, 14, 18, 22, 34, 36, 40, 44 and 177 more; `T⁵` on columns 5, 13, 20, 24, 30, 37, 39, 46, 62, 70, 109, 111 and 9 more; `T†` on columns 1, 4, 10, 15, 19, 26, 32, 35, 47, 48, 55, 56 and 20 more, `T` on the rest
 - discovery: AI search
@@ -16690,6 +17519,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84`
 - `N = 115` (85 outputs + 30 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 106` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 73 more (85 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -16706,6 +17536,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79`
 - `N = 100` (80 outputs + 20 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 10, 11]
+- leading error coefficient: `A_4 = 7936` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `S† on 3`, `Z on 4`, `S on 5`, `S† on 6`, `S† on 7`, `Z on 8`, `Z on 9`, `S† on 10`, `Z on 11` and 1487 more (92 single-wire, 1407 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 6, 15, 16, 17, 27, 38, 41, 44, 53, 55, 56 and 138 more; `T⁵` on columns 0, 1, 2, 7, 10, 11, 12, 20, 22, 25, 32, 34 and 16 more; `T†` on columns 3, 5, 9, 13, 18, 19, 21, 30, 31, 33, 35, 40 and 12 more, `T` on the rest
 - discovery: AI search
@@ -16722,6 +17553,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81`
 - `N = 101` (82 outputs + 19 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 3, 16, 144]
+- leading error coefficient: `A_4 = 9650` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `Z on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 103 more (87 single-wire, 28 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 14, 18, 20, 21, 24, 26, 29, 36, 39, 63, 65, 70 and 176 more; `T⁵` on columns 0, 2, 4, 7, 9, 10, 23, 27, 30, 33, 35, 42 and 18 more; `T†` on columns 1, 3, 5, 6, 12, 16, 28, 31, 32, 52, 55, 69 and 13 more, `T` on the rest
 - discovery: AI search
@@ -16738,6 +17570,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80`
 - `N = 101` (81 outputs + 20 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 2, 136, 150]
+- leading error coefficient: `A_4 = 8343` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `S on 8`, `Z on 9`, `S on 10`, `Z on 11` and 1677 more (93 single-wire, 1596 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 6, 7, 11, 14, 18, 31, 32, 33, 34, 35, 41, 45 and 168 more; `T⁵` on columns 2, 3, 8, 10, 13, 22, 23, 24, 26, 30, 38, 55 and 18 more; `T†` on columns 0, 5, 9, 15, 16, 17, 19, 39, 46, 58, 70, 72 and 14 more, `T` on the rest
 - discovery: AI search
@@ -16754,6 +17587,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82`
 - `N = 102` (83 outputs + 19 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 7, 26, 35]
+- leading error coefficient: `A_4 = 9971` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 71 more (83 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -16770,6 +17604,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79`
 - `N = 101` (80 outputs + 21 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 10, 11]
+- leading error coefficient: `A_4 = 7262` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `Z on 3`, `Z on 4`, `S on 5`, `Z on 6`, `Z on 7`, `S on 8`, `Z on 9`, `Z on 10`, `Z on 11` and 1205 more (89 single-wire, 1128 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 4, 5, 6, 17, 18, 27, 38, 41, 44, 56, 57 and 137 more; `T⁵` on columns 1, 10, 11, 12, 22, 25, 32, 34, 36, 46, 52, 54 and 13 more; `T†` on columns 9, 13, 15, 16, 19, 21, 30, 31, 33, 35, 40, 42 and 14 more, `T` on the rest
 - discovery: AI search
@@ -16786,6 +17621,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81`
 - `N = 102` (82 outputs + 20 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 6, 130, 342]
+- leading error coefficient: `A_4 = 8585` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 70 more (82 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -16802,6 +17638,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80`
 - `N = 102` (81 outputs + 21 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 2, 136, 150]
+- leading error coefficient: `A_4 = 7681` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 69 more (81 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -16818,6 +17655,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79`
 - `N = 102` (80 outputs + 22 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 10, 11]
+- leading error coefficient: `A_4 = 6964` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 68 more (80 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -16849,6 +17687,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 63]
+- leading error coefficient: `A_2 = 1323` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T³` on columns 429, 430, 431, 432, 433, 434, 435, 436, 437, 438; `T†` on columns 63, 69, 75, 81, 87, `T` on the rest
 - discovery: pre-existing
@@ -16864,6 +17703,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115`
 - `N = 128` (116 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 5]
+- leading error coefficient: `A_3 = 3395` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 104 more (116 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -16880,6 +17720,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98`
 - `N = 118` (99 outputs + 19 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 38]
+- leading error coefficient: `A_3 = 3971` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S on 3`, `S† on 4`, `S† on 5`, `Z on 6`, `Z on 7`, `S on 8`, `S† on 10`, `Z on 12`, `S on 13`, `S on 14` and 1850 more (69 single-wire, 1793 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 6, 11, 14, 21, 23, 28, 35, 36, 38, 39, 43 and 184 more; `T⁵` on columns 2, 62, 64, 71, 111, 115, 119, 121, 166, 171, 175, 176 and 16 more; `T†` on columns 0, 1, 4, 5, 10, 13, 41, 56, 58, 60, 65, 68 and 22 more, `T` on the rest
 - discovery: AI search
@@ -16912,6 +17753,7 @@ readable copy of exactly these rows.
 - output gate: `0,1,2+0,1,7+0,1,8+0,1,9+0,1,11+0,1,12+0,1,13+0,1,14+0,1,15+0,1,17+0,1,18+0,1,21+0,1,22+0,1,25+0,1,26+0,1,27+0,1,28+0,1,30+0,1,33+0,1,35+0,2,6+0,2,7+0,2,11+0,2,14+0,2,17+0,2,18+0,2,21+0,2,24+0,2,25+0,2,26+0,2,27+0,2,28+0,2,31+0,3,5+0,3,6+0,3,7+0,3,8+0,3,9+0,3,10+0,3,16+0,3,17+0,3,18+0,3,19+0,3,20+0,3,22+0,3,23+0,3,25+0,3,26+0,3,29+0,3,33+0,4,5+0,4,6+0,4,7+0,4,8+0,4,10+0,4,11+0,4,14+0,4,15+0,4,18+0,4,19+0,4,20+0,4,22+0,4,23+0,4,25+0,4,26+0,4,27+0,4,28+0,4,29+0,4,31+0,4,32+0,4,35+0,5,6+0,5,7+0,5,8+0,5,9+0,5,10+0,5,12+0,5,13+0,5,15+0,5,16+0,5,19+0,5,21+0,5,24+0,5,26+0,5,27+0,5,30+0,5,31+0,5,33+0,6,11+0,6,12+0,6,13+0,6,14+0,6,17+0,6,18+0,6,20+0,6,21+0,6,25+0,6,27+0,6,28+0,6,30+0,6,31+0,6,34+0,6,35+0,7,13+0,7,14+0,7,15+0,7,16+0,7,19+0,7,20+0,7,21+0,7,22+0,7,25+0,7,29+0,7,31+0,7,32+0,7,33+0,7,35+0,8,12+0,8,13+0,8,18+0,8,20+0,8,23+0,8,24+0,8,25+0,8,27+0,8,34+0,8,35+0,9,11+0,9,12+0,9,13+0,9,14+0,9,15+0,9,21+0,9,24+0,9,25+0,9,26+0,9,28+0,9,29+0,9,30+0,9,33+0,9,35+0,10,12+0,10,13+0,10,15+0,10,17+0,10,18+0,10,20+0,10,21+0,10,22+0,10,23+0,10,24+0,10,25+0,10,27+0,10,29+0,10,30+0,10,31+0,11,14+0,11,15+0,11,16+0,11,17+0,11,19+0,11,20+0,11,23+0,11,24+0,11,25+0,11,27+0,11,29+0,11,32+0,12,14+0,12,15+0,12,16+0,12,17+0,12,18+0,12,20+0,12,21+0,12,22+0,12,24+0,12,25+0,12,26+0,12,29+0,12,31+0,12,33+0,12,34+0,12,35+0,13,15+0,13,16+0,13,18+0,13,19+0,13,20+0,13,21+0,13,23+0,13,25+0,13,26+0,13,30+0,13,31+0,13,33+0,13,34+0,13,35+0,14,15+0,14,18+0,14,19+0,14,20+0,14,21+0,14,22+0,14,25+0,14,28+0,14,30+0,14,31+0,14,33+0,14,35+0,15,19+0,15,21+0,15,22+0,15,23+0,15,25+0,15,28+0,15,29+0,15,32+0,15,35+0,16,19+0,16,23+0,16,25+0,16,26+0,16,28+0,16,29+0,16,30+0,16,31+0,16,33+0,16,34+0,17,18+0,17,20+0,17,21+0,17,23+0,17,24+0,17,25+0,17,26+0,17,28+0,17,31+0,17,32+0,17,35+0,18,22+0,18,24+0,18,26+0,18,29+0,18,30+0,18,31+0,18,32+0,18,35+0,19,20+0,19,25+0,19,28+0,19,32+0,19,33+0,19,35+0,20,21+0,20,24+0,20,26+0,20,28+0,20,30+0,20,32+0,20,35+0,21,24+0,21,29+0,21,30+0,21,32+0,21,33+0,21,34+0,21,35+0,22,23+0,22,24+0,22,26+0,22,29+0,22,31+0,22,32+0,22,33+0,22,34+0,22,35+0,23,25+0,23,28+0,23,29+0,23,31+0,23,33+0,23,34+0,23,35+0,24,28+0,24,29+0,24,30+0,24,31+0,24,32+0,24,35+0,25,26+0,25,27+0,25,28+0,25,33+0,26,29+0,26,31+0,26,32+0,26,33+0,26,35+0,27,28+0,27,29+0,27,30+0,27,32+0,27,33+0,27,34+0,27,35+0,28,29+0,28,32+0,29,30+0,29,31+0,29,35+0,30,31+0,30,35+0,31,33+0,31,34+0,31,35+0,32,33+0,32,34+1,2,3+1,2,4+1,2,6+1,2,11+1,2,12+1,2,13+1,2,15+1,2,16+1,2,18+1,2,19+1,2,20+1,2,22+1,2,23+1,2,24+1,2,25+1,2,26+1,2,27+1,2,28+1,2,30+1,2,31+1,2,32+1,3,4+1,3,6+1,3,9+1,3,11+1,3,12+1,3,14+1,3,18+1,3,20+1,3,22+1,3,23+1,3,24+1,3,25+1,3,28+1,3,30+1,3,33+1,3,34+1,4,8+1,4,9+1,4,10+1,4,11+1,4,12+1,4,14+1,4,15+1,4,16+1,4,17+1,4,19+1,4,21+1,4,24+1,4,25+1,4,27+1,4,31+1,4,32+1,4,35+1,5,6+1,5,8+1,5,9+1,5,11+1,5,12+1,5,14+1,5,20+1,5,22+1,5,23+1,5,26+1,5,29+1,5,30+1,5,32+1,5,33+1,5,34+1,6,7+1,6,9+1,6,10+1,6,11+1,6,12+1,6,20+1,6,23+1,6,27+1,6,29+1,6,34+1,6,35+1,7,9+1,7,10+1,7,13+1,7,14+1,7,17+1,7,20+1,7,21+1,7,22+1,7,23+1,7,24+1,7,25+1,7,29+1,7,30+1,7,32+1,7,35+1,8,9+1,8,10+1,8,16+1,8,17+1,8,19+1,8,20+1,8,21+1,8,22+1,8,23+1,8,24+1,8,26+1,8,27+1,8,30+1,8,31+1,9,11+1,9,12+1,9,13+1,9,14+1,9,17+1,9,18+1,9,21+1,9,22+1,9,26+1,9,27+1,9,28+1,9,29+1,9,30+1,9,34+1,10,13+1,10,15+1,10,17+1,10,20+1,10,21+1,10,23+1,10,24+1,10,26+1,10,27+1,10,34+1,10,35+1,11,15+1,11,25+1,11,29+1,11,33+1,11,34+1,11,35+1,12,15+1,12,25+1,12,29+1,12,33+1,12,34+1,12,35+1,13,14+1,13,15+1,13,18+1,13,22+1,13,24+1,13,27+1,13,28+1,13,30+1,13,34+1,14,17+1,14,18+1,14,20+1,14,21+1,14,23+1,14,27+1,14,28+1,14,32+1,14,33+1,15,17+1,15,18+1,15,21+1,15,28+1,15,29+1,15,32+1,15,33+1,15,34+1,15,35+1,16,18+1,16,24+1,16,25+1,16,26+1,16,28+1,16,29+1,16,32+1,17,22+1,17,25+1,17,26+1,17,27+1,17,29+1,17,30+1,17,32+1,17,34+1,18,19+1,18,26+1,18,27+1,18,31+1,18,32+1,18,33+1,18,34+1,19,24+1,19,25+1,19,26+1,19,28+1,19,29+1,19,32+1,20,22+1,20,26+1,20,27+1,20,30+1,20,32+1,20,33+1,20,35+1,21,22+1,21,25+1,21,26+1,21,27+1,21,29+1,21,30+1,21,32+1,21,34+1,22,23+1,22,24+1,22,25+1,22,26+1,22,27+1,22,29+1,22,33+1,23,26+1,23,27+1,23,30+1,23,32+1,23,33+1,23,35+1,24,25+1,24,29+1,24,30+1,24,31+1,24,33+1,25,26+1,25,29+1,25,30+1,25,31+1,25,34+1,25,35+1,26,27+1,26,28+1,26,29+1,26,30+1,26,31+1,26,32+1,27,28+1,27,30+1,27,35+1,28,31+1,28,32+1,28,33+1,28,34+1,29,30+1,29,31+1,29,33+1,30,33+1,31,32+1,32,34+1,33,35+2,3,4+2,3,5+2,3,6+2,3,7+2,3,9+2,3,11+2,3,12+2,3,13+2,3,14+2,3,15+2,3,16+2,3,17+2,3,19+2,3,24+2,3,25+2,3,27+2,3,28+2,3,29+2,4,5+2,4,7+2,4,8+2,4,16+2,4,18+2,4,23+2,4,31+2,4,32+2,4,33+2,4,34+2,5,7+2,5,8+2,5,9+2,5,10+2,5,11+2,5,12+2,5,13+2,5,17+2,5,19+2,5,20+2,5,21+2,5,23+2,5,27+2,5,28+2,5,29+2,5,30+2,5,33+2,5,34+2,5,35+2,6,8+2,6,9+2,6,10+2,6,12+2,6,16+2,6,17+2,6,19+2,6,21+2,6,22+2,6,23+2,6,30+2,6,31+2,6,32+2,6,33+2,7,8+2,7,10+2,7,11+2,7,13+2,7,17+2,7,18+2,7,21+2,7,22+2,7,23+2,7,27+2,7,28+2,7,31+2,7,32+2,7,33+2,8,10+2,8,11+2,8,12+2,8,13+2,8,16+2,8,22+2,8,23+2,8,26+2,8,27+2,8,28+2,8,30+2,8,32+2,8,33+2,8,35+2,9,10+2,9,11+2,9,14+2,9,16+2,9,21+2,9,22+2,9,23+2,9,24+2,9,26+2,9,30+2,9,31+2,9,32+2,9,34+2,10,12+2,10,13+2,10,17+2,10,18+2,10,20+2,10,21+2,10,22+2,10,25+2,10,26+2,10,27+2,10,28+2,10,29+2,10,30+2,10,35+2,11,13+2,11,14+2,11,17+2,11,20+2,11,22+2,11,25+2,11,29+2,11,30+2,11,31+2,11,33+2,11,34+2,11,35+2,12,14+2,12,15+2,12,16+2,12,20+2,12,21+2,12,23+2,12,24+2,12,25+2,12,30+2,12,33+2,12,34+2,12,35+2,13,15+2,13,17+2,13,18+2,13,19+2,13,21+2,13,24+2,13,25+2,13,26+2,13,27+2,13,28+2,13,31+2,13,32+2,13,33+2,13,35+2,14,15+2,14,16+2,14,19+2,14,23+2,14,25+2,14,26+2,14,29+2,14,30+2,14,31+2,14,32+2,15,16+2,15,20+2,15,22+2,15,24+2,15,25+2,15,27+2,15,29+2,15,30+2,15,31+2,15,33+2,15,34+2,15,35+2,16,17+2,16,18+2,16,19+2,16,21+2,16,23+2,16,24+2,16,25+2,16,27+2,16,34+2,16,35+2,17,19+2,17,22+2,17,25+2,17,28+2,17,29+2,17,30+2,17,34+2,18,21+2,18,26+2,18,35+2,19,20+2,19,21+2,19,22+2,19,23+2,19,24+2,19,26+2,19,28+2,19,30+2,19,31+2,19,32+2,19,33+2,19,34+2,20,23+2,20,28+2,20,30+2,20,32+2,20,33+2,20,34+2,20,35+2,21,23+2,21,24+2,21,26+2,21,27+2,21,28+2,21,31+2,21,32+2,21,35+2,22,25+2,22,28+2,22,30+2,22,32+2,22,33+2,23,24+2,23,28+2,23,34+2,23,35+2,24,25+2,24,26+2,24,28+2,24,30+2,24,33+2,24,35+2,25,26+2,25,27+2,25,30+2,25,31+2,25,32+2,26,27+2,26,28+2,26,29+2,26,30+2,26,31+2,26,33+2,26,34+2,26,35+2,27,30+2,27,31+2,28,29+2,28,30+2,28,32+2,28,35+2,29,30+2,29,32+2,29,33+2,30,32+2,30,34+2,31,32+2,31,34+2,32,35+2,34,35+3,4,5+3,4,6+3,4,14+3,4,15+3,4,17+3,4,18+3,4,20+3,4,21+3,4,22+3,4,23+3,4,26+3,4,28+3,4,30+3,4,31+3,4,32+3,4,33+3,4,35+3,5,6+3,5,8+3,5,11+3,5,13+3,5,15+3,5,17+3,5,19+3,5,20+3,5,22+3,5,23+3,5,24+3,5,25+3,5,26+3,5,30+3,5,31+3,5,33+3,5,35+3,6,7+3,6,8+3,6,9+3,6,11+3,6,12+3,6,13+3,6,19+3,6,20+3,6,21+3,6,22+3,6,24+3,6,25+3,6,26+3,6,29+3,6,30+3,6,32+3,6,33+3,6,34+3,7,9+3,7,10+3,7,15+3,7,16+3,7,19+3,7,20+3,7,23+3,7,24+3,7,27+3,7,28+3,7,31+3,7,32+3,7,34+3,7,35+3,8,9+3,8,10+3,8,11+3,8,14+3,8,16+3,8,17+3,8,23+3,8,24+3,8,25+3,8,28+3,8,29+3,8,31+3,8,33+3,8,34+3,9,11+3,9,16+3,9,17+3,9,19+3,9,21+3,9,23+3,9,24+3,9,27+3,9,28+3,9,29+3,9,30+3,9,31+3,9,32+3,10,11+3,10,12+3,10,14+3,10,16+3,10,24+3,10,27+3,10,29+3,10,32+3,10,34+3,11,16+3,11,18+3,11,20+3,11,21+3,11,22+3,11,23+3,11,25+3,11,27+3,11,31+3,11,33+3,11,34+3,11,35+3,12,14+3,12,15+3,12,18+3,12,19+3,12,21+3,12,24+3,12,25+3,12,26+3,12,28+3,12,30+3,12,32+3,12,33+3,13,14+3,13,17+3,13,18+3,13,21+3,13,23+3,13,26+3,13,27+3,13,32+3,14,15+3,14,16+3,14,17+3,14,18+3,14,19+3,14,22+3,14,23+3,14,24+3,14,25+3,14,26+3,14,27+3,14,31+3,14,32+3,14,33+3,14,34+3,15,16+3,15,19+3,15,20+3,15,21+3,15,24+3,15,25+3,15,27+3,15,31+3,15,34+3,15,35+3,16,18+3,16,22+3,16,24+3,16,25+3,16,26+3,16,32+3,16,34+3,17,18+3,17,20+3,17,24+3,17,26+3,17,29+3,17,30+3,17,31+3,17,32+3,17,33+3,17,34+3,17,35+3,18,19+3,18,20+3,18,22+3,18,23+3,18,25+3,18,26+3,18,27+3,18,30+3,18,31+3,18,34+3,18,35+3,19,20+3,19,22+3,19,23+3,19,24+3,19,25+3,19,26+3,19,30+3,19,31+3,19,34+3,20,21+3,20,23+3,20,25+3,20,26+3,20,28+3,20,29+3,20,30+3,20,33+3,20,34+3,20,35+3,21,23+3,21,25+3,21,27+3,21,28+3,21,29+3,21,34+3,22,23+3,22,26+3,22,27+3,22,31+3,22,32+3,23,24+3,23,26+3,23,28+3,23,30+3,23,32+3,23,33+3,23,34+3,23,35+3,24,26+3,24,27+3,24,30+3,24,31+3,25,26+3,25,27+3,25,28+3,25,31+3,25,33+3,25,34+3,25,35+3,26,28+3,26,32+3,26,34+3,26,35+3,27,28+3,27,31+3,27,32+3,27,35+3,28,31+3,28,32+3,28,33+3,28,35+3,29,30+3,29,32+3,29,33+3,29,34+3,29,35+3,30,31+3,30,32+3,30,33+3,30,34+3,31,34+3,32,33+3,32,34+3,32,35+3,33,34+3,33,35+3,34,35+4,5,9+4,5,11+4,5,13+4,5,14+4,5,16+4,5,17+4,5,18+4,5,19+4,5,20+4,5,21+4,5,23+4,5,29+4,5,31+4,5,34+4,6,7+4,6,8+4,6,11+4,6,17+4,6,20+4,6,21+4,6,25+4,6,26+4,6,27+4,6,29+4,6,30+4,6,34+4,6,35+4,7,8+4,7,9+4,7,10+4,7,11+4,7,12+4,7,15+4,7,16+4,7,17+4,7,19+4,7,21+4,7,22+4,7,23+4,7,27+4,7,29+4,7,30+4,7,31+4,7,32+4,7,33+4,7,35+4,8,17+4,8,18+4,8,20+4,8,21+4,8,23+4,8,26+4,8,27+4,9,10+4,9,13+4,9,14+4,9,16+4,9,17+4,9,18+4,9,19+4,9,21+4,9,22+4,9,24+4,9,26+4,9,29+4,9,30+4,9,31+4,9,32+4,9,33+4,9,34+4,9,35+4,10,12+4,10,16+4,10,18+4,10,19+4,10,31+4,10,32+4,10,35+4,11,14+4,11,16+4,11,17+4,11,18+4,11,24+4,11,29+4,11,31+4,11,35+4,12,14+4,12,16+4,12,22+4,12,25+4,12,31+4,12,34+4,12,35+4,13,14+4,13,15+4,13,17+4,13,18+4,13,23+4,13,26+4,13,28+4,13,29+4,14,16+4,14,17+4,14,18+4,14,20+4,14,21+4,14,22+4,14,23+4,14,24+4,14,27+4,14,28+4,14,30+4,14,35+4,15,20+4,15,22+4,15,26+4,15,27+4,15,28+4,15,31+4,15,33+4,15,35+4,16,19+4,16,21+4,16,22+4,16,24+4,16,25+4,16,32+4,16,33+4,16,34+4,17,18+4,17,19+4,17,23+4,17,25+4,17,26+4,17,27+4,17,28+4,17,30+4,17,33+4,17,34+4,17,35+4,18,19+4,18,20+4,18,21+4,18,25+4,18,27+4,18,30+4,18,31+4,18,32+4,19,20+4,19,23+4,19,26+4,19,28+4,20,21+4,20,23+4,20,25+4,20,27+4,20,32+4,20,33+4,20,34+4,21,24+4,21,26+4,21,27+4,21,29+4,21,31+4,22,24+4,22,25+4,22,27+4,22,28+4,22,31+4,22,32+4,22,34+4,22,35+4,23,28+4,23,29+4,23,33+4,23,35+4,24,27+4,24,28+4,24,29+4,24,30+4,24,32+4,24,33+4,24,34+4,25,26+4,25,27+4,25,30+4,25,31+4,25,33+4,25,34+4,25,35+4,26,28+4,26,29+4,26,30+4,26,34+4,26,35+4,27,29+4,27,30+4,27,32+4,27,34+4,27,35+4,28,29+4,29,31+4,29,32+4,29,34+4,29,35+4,30,31+4,30,32+4,30,35+4,31,32+4,31,34+4,34,35+5,6,8+5,6,9+5,6,12+5,6,13+5,6,15+5,6,17+5,6,18+5,6,20+5,6,21+5,6,22+5,6,23+5,6,24+5,6,25+5,6,26+5,6,27+5,6,28+5,6,29+5,6,31+5,6,32+5,6,33+5,6,34+5,7,8+5,7,10+5,7,12+5,7,13+5,7,14+5,7,16+5,7,17+5,7,19+5,7,24+5,7,26+5,7,27+5,7,29+5,7,31+5,7,32+5,7,34+5,7,35+5,8,9+5,8,10+5,8,11+5,8,12+5,8,16+5,8,18+5,8,19+5,8,20+5,8,22+5,8,27+5,8,29+5,8,30+5,8,31+5,8,34+5,9,10+5,9,11+5,9,12+5,9,13+5,9,15+5,9,18+5,9,19+5,9,27+5,9,28+5,9,31+5,9,32+5,9,33+5,9,34+5,10,12+5,10,13+5,10,14+5,10,18+5,10,20+5,10,21+5,10,22+5,10,29+5,10,30+5,10,31+5,10,33+5,10,35+5,11,16+5,11,17+5,11,19+5,11,20+5,11,21+5,11,22+5,11,28+5,11,31+5,11,34+5,12,13+5,12,14+5,12,15+5,12,16+5,12,22+5,12,25+5,12,26+5,12,27+5,12,29+5,12,32+5,13,14+5,13,15+5,13,17+5,13,21+5,13,22+5,13,24+5,13,25+5,13,26+5,13,27+5,13,29+5,13,30+5,13,31+5,13,32+5,14,19+5,14,20+5,14,22+5,14,23+5,14,25+5,14,27+5,14,29+5,14,33+5,14,35+5,15,18+5,15,19+5,15,20+5,15,22+5,15,23+5,15,24+5,15,25+5,15,26+5,15,28+5,15,32+5,15,33+5,15,34+5,15,35+5,16,17+5,16,18+5,16,19+5,16,20+5,16,25+5,16,28+5,16,30+5,16,31+5,17,20+5,17,21+5,17,22+5,17,25+5,17,26+5,17,28+5,17,32+5,17,33+5,18,19+5,18,20+5,18,21+5,18,26+5,18,27+5,18,28+5,18,29+5,18,32+5,18,33+5,18,34+5,18,35+5,19,20+5,19,21+5,19,24+5,19,25+5,19,26+5,19,27+5,19,28+5,19,31+5,19,32+5,19,33+5,19,34+5,20,21+5,20,22+5,20,24+5,20,28+5,20,29+5,20,32+5,20,35+5,21,22+5,21,24+5,21,26+5,21,28+5,21,32+5,22,23+5,22,26+5,22,27+5,22,28+5,22,29+5,22,31+5,22,33+5,22,34+5,23,26+5,23,29+5,23,30+5,23,32+5,24,25+5,24,26+5,24,28+5,24,29+5,24,30+5,24,32+5,24,33+5,24,34+5,24,35+5,25,27+5,25,28+5,25,29+5,25,32+5,25,34+5,25,35+5,26,28+5,26,29+5,26,31+5,26,32+5,26,34+5,26,35+5,27,28+5,27,30+5,27,31+5,27,32+5,27,34+5,28,31+5,28,32+5,28,34+5,28,35+5,29,30+5,29,32+5,29,33+5,29,34+5,30,31+5,30,32+5,31,32+5,31,34+5,32,35+6,7,8+6,7,9+6,7,10+6,7,11+6,7,12+6,7,13+6,7,14+6,7,15+6,7,21+6,7,24+6,7,30+6,7,31+6,7,34+6,8,9+6,8,11+6,8,12+6,8,13+6,8,14+6,8,18+6,8,20+6,8,22+6,8,26+6,8,29+6,8,31+6,8,34+6,9,10+6,9,12+6,9,13+6,9,14+6,9,15+6,9,16+6,9,17+6,9,20+6,9,21+6,9,23+6,9,25+6,9,26+6,9,27+6,9,28+6,9,30+6,9,32+6,9,34+6,9,35+6,10,11+6,10,13+6,10,14+6,10,16+6,10,19+6,10,21+6,10,27+6,10,28+6,10,29+6,10,30+6,10,34+6,10,35+6,11,13+6,11,14+6,11,15+6,11,16+6,11,19+6,11,20+6,11,21+6,11,22+6,11,23+6,11,24+6,11,26+6,11,27+6,11,31+6,11,33+6,12,15+6,12,16+6,12,17+6,12,19+6,12,29+6,12,34+6,12,35+6,13,14+6,13,15+6,13,16+6,13,17+6,13,19+6,13,20+6,13,23+6,13,24+6,13,28+6,13,30+6,13,32+6,13,34+6,14,17+6,14,20+6,14,21+6,14,25+6,14,26+6,14,28+6,14,30+6,14,32+6,15,17+6,15,18+6,15,19+6,15,22+6,15,25+6,15,28+6,15,33+6,15,34+6,16,17+6,16,19+6,16,20+6,16,24+6,16,26+6,16,28+6,16,30+6,16,31+6,16,32+6,16,33+6,16,34+6,17,18+6,17,19+6,17,22+6,17,23+6,17,24+6,17,25+6,17,28+6,17,33+6,17,35+6,18,19+6,18,20+6,18,21+6,18,22+6,18,23+6,18,24+6,18,25+6,18,30+6,18,31+6,19,25+6,19,28+6,19,31+6,19,33+6,19,34+6,19,35+6,20,22+6,20,23+6,20,26+6,20,29+6,20,30+6,20,32+6,20,33+6,20,34+6,21,22+6,21,24+6,21,26+6,21,30+6,21,31+6,21,32+6,21,34+6,21,35+6,22,24+6,22,25+6,22,28+6,22,31+6,22,33+6,22,34+6,22,35+6,23,24+6,23,28+6,23,31+6,23,32+6,23,34+6,23,35+6,24,25+6,24,28+6,24,29+6,24,30+6,24,32+6,25,26+6,25,27+6,25,33+6,25,34+6,25,35+6,26,29+6,26,30+6,26,32+6,26,34+6,27,28+6,27,31+6,27,32+6,27,35+6,28,29+6,28,30+6,28,31+6,28,35+6,29,31+6,29,34+6,29,35+6,30,33+6,31,34+6,31,35+6,32,33+6,32,35+6,33,34+6,34,35+7,8,9+7,8,10+7,8,14+7,8,15+7,8,16+7,8,21+7,8,22+7,8,23+7,8,24+7,8,28+7,8,29+7,8,32+7,8,34+7,8,35+7,9,11+7,9,15+7,9,18+7,9,24+7,9,25+7,9,26+7,9,27+7,9,28+7,9,32+7,9,35+7,10,11+7,10,15+7,10,16+7,10,18+7,10,19+7,10,22+7,10,26+7,10,27+7,10,30+7,10,32+7,10,33+7,11,12+7,11,14+7,11,17+7,11,18+7,11,19+7,11,21+7,11,22+7,11,23+7,11,26+7,11,27+7,11,28+7,11,29+7,11,30+7,11,31+7,11,32+7,11,33+7,11,34+7,12,21+7,12,22+7,12,23+7,12,26+7,12,27+7,12,31+7,12,33+7,12,34+7,12,35+7,13,14+7,13,15+7,13,19+7,13,21+7,13,22+7,13,23+7,13,24+7,13,28+7,13,30+7,13,32+7,13,34+7,14,15+7,14,16+7,14,17+7,14,18+7,14,19+7,14,25+7,14,26+7,14,27+7,14,29+7,14,30+7,14,31+7,14,32+7,14,34+7,14,35+7,15,17+7,15,18+7,15,19+7,15,21+7,15,22+7,15,23+7,15,25+7,15,28+7,15,29+7,15,31+7,15,32+7,15,33+7,15,34+7,15,35+7,16,17+7,16,20+7,16,24+7,16,28+7,16,34+7,17,19+7,17,21+7,17,23+7,17,24+7,17,25+7,17,30+7,17,31+7,18,21+7,18,22+7,18,26+7,18,27+7,18,30+7,19,21+7,19,22+7,19,23+7,19,24+7,19,25+7,19,26+7,19,32+7,19,33+7,19,34+7,20,22+7,20,23+7,20,24+7,20,25+7,20,26+7,20,30+7,20,31+7,20,35+7,21,22+7,21,23+7,21,26+7,21,27+7,21,28+7,21,29+7,21,32+7,21,33+7,21,34+7,22,23+7,22,24+7,22,26+7,22,31+7,22,32+7,22,33+7,23,24+7,23,25+7,23,26+7,23,27+7,23,28+7,23,29+7,23,30+7,23,31+7,23,32+7,23,34+7,23,35+7,24,26+7,24,28+7,24,29+7,24,31+7,24,32+7,24,34+7,24,35+7,25,27+7,25,28+7,25,32+7,25,33+7,25,34+7,25,35+7,26,27+7,26,30+7,26,31+7,26,32+7,26,33+7,26,34+7,27,28+7,27,31+7,27,33+7,27,35+7,28,30+7,28,31+7,28,32+7,28,33+7,28,34+7,28,35+7,30,34+7,31,32+7,31,35+7,32,33+7,32,34+7,32,35+7,34,35+8,9,10+8,9,12+8,9,14+8,9,16+8,9,17+8,9,22+8,9,28+8,9,29+8,9,30+8,9,31+8,9,35+8,10,13+8,10,15+8,10,20+8,10,24+8,10,26+8,10,27+8,10,29+8,10,30+8,10,31+8,10,35+8,11,14+8,11,20+8,11,21+8,11,24+8,11,27+8,11,32+8,11,33+8,11,35+8,12,14+8,12,17+8,12,18+8,12,20+8,12,22+8,12,25+8,12,26+8,12,27+8,12,32+8,12,35+8,13,14+8,13,22+8,13,25+8,13,27+8,13,30+8,13,31+8,13,32+8,13,35+8,14,15+8,14,17+8,14,20+8,14,22+8,14,24+8,14,25+8,14,27+8,14,29+8,14,30+8,14,31+8,14,33+8,14,34+8,14,35+8,15,16+8,15,18+8,15,19+8,15,20+8,15,21+8,15,22+8,15,24+8,15,26+8,15,27+8,15,28+8,15,29+8,15,31+8,15,33+8,15,35+8,16,18+8,16,20+8,16,21+8,16,22+8,16,23+8,16,24+8,16,27+8,16,29+8,16,30+8,16,34+8,17,18+8,17,22+8,17,23+8,17,25+8,17,26+8,17,30+8,17,31+8,17,32+8,18,19+8,18,21+8,18,23+8,18,26+8,18,27+8,18,28+8,18,29+8,18,31+8,18,32+8,18,35+8,19,22+8,19,23+8,19,24+8,19,29+8,19,31+8,19,35+8,20,22+8,20,27+8,20,28+8,20,33+8,21,25+8,21,29+8,21,30+8,21,34+8,21,35+8,22,24+8,22,25+8,22,27+8,22,28+8,22,30+8,22,31+8,22,32+8,22,35+8,23,25+8,23,27+8,23,28+8,23,29+8,23,32+8,23,33+8,23,35+8,24,26+8,24,29+8,24,32+8,24,33+8,24,35+8,25,26+8,25,29+8,25,31+8,25,34+8,25,35+8,26,30+8,26,31+8,26,32+8,26,34+8,26,35+8,27,33+8,28,32+8,28,33+8,28,35+8,29,33+8,29,35+8,30,31+8,30,32+8,30,33+8,30,35+8,31,34+8,31,35+8,32,34+8,32,35+8,33,35+8,34,35+9,10,12+9,10,23+9,10,27+9,10,28+9,10,29+9,10,31+9,10,32+9,10,33+9,10,34+9,11,12+9,11,16+9,11,17+9,11,19+9,11,21+9,11,27+9,11,28+9,11,30+9,11,31+9,11,33+9,11,35+9,12,13+9,12,14+9,12,16+9,12,18+9,12,19+9,12,20+9,12,21+9,12,23+9,12,25+9,12,26+9,12,27+9,12,28+9,12,30+9,12,31+9,12,32+9,12,33+9,13,15+9,13,16+9,13,18+9,13,19+9,13,20+9,13,22+9,13,24+9,13,26+9,13,29+9,13,35+9,14,15+9,14,16+9,14,18+9,14,21+9,14,23+9,14,26+9,14,27+9,14,29+9,14,30+9,14,31+9,14,32+9,14,33+9,15,16+9,15,19+9,15,20+9,15,21+9,15,28+9,15,29+9,15,31+9,15,32+9,16,18+9,16,20+9,16,21+9,16,22+9,16,23+9,16,25+9,16,26+9,16,30+9,16,33+9,16,34+9,17,18+9,17,23+9,17,24+9,17,25+9,17,26+9,17,27+9,17,29+9,17,30+9,17,31+9,17,32+9,17,34+9,17,35+9,18,19+9,18,20+9,18,21+9,18,22+9,18,23+9,18,24+9,18,25+9,18,28+9,18,29+9,18,35+9,19,22+9,19,23+9,19,24+9,19,27+9,19,28+9,19,30+9,19,31+9,19,35+9,20,21+9,20,26+9,20,27+9,20,29+9,20,30+9,20,33+9,20,35+9,21,25+9,21,27+9,21,28+9,21,29+9,21,31+9,21,32+9,21,34+9,21,35+9,22,23+9,22,24+9,22,26+9,22,27+9,22,28+9,22,29+9,22,30+9,22,31+9,22,32+9,22,33+9,23,27+9,23,29+9,23,31+9,23,32+9,23,33+9,24,25+9,24,28+9,24,29+9,24,33+9,24,35+9,25,26+9,25,27+9,25,30+9,25,31+9,25,32+9,25,33+9,26,29+9,26,34+9,26,35+9,27,28+9,27,29+9,27,30+9,27,32+9,27,35+9,28,29+9,28,31+9,28,32+9,28,33+9,28,34+9,29,33+9,29,35+9,30,31+9,30,32+9,30,33+9,30,34+9,31,33+9,31,35+9,32,34+9,32,35+9,33,35+10,11,12+10,11,14+10,11,17+10,11,19+10,11,22+10,11,23+10,11,24+10,11,26+10,11,27+10,11,29+10,11,31+10,11,33+10,11,34+10,12,13+10,12,18+10,12,21+10,12,22+10,12,24+10,12,25+10,12,27+10,12,29+10,12,30+10,12,31+10,12,33+10,12,35+10,13,15+10,13,16+10,13,18+10,13,19+10,13,24+10,13,27+10,13,29+10,13,30+10,13,31+10,13,33+10,13,34+10,14,17+10,14,20+10,14,25+10,14,27+10,14,28+10,14,29+10,14,30+10,14,32+10,14,33+10,14,35+10,15,17+10,15,20+10,15,22+10,15,23+10,15,24+10,15,25+10,15,27+10,15,28+10,15,30+10,15,31+10,15,35+10,16,17+10,16,18+10,16,20+10,16,24+10,16,26+10,16,27+10,16,28+10,16,29+10,16,30+10,16,31+10,16,32+10,17,21+10,17,23+10,17,24+10,17,27+10,17,28+10,17,29+10,17,30+10,17,31+10,17,33+10,17,34+10,17,35+10,18,19+10,18,20+10,18,22+10,18,23+10,18,24+10,18,25+10,18,28+10,18,29+10,18,30+10,18,32+10,18,33+10,18,34+10,19,21+10,19,22+10,19,24+10,19,25+10,19,29+10,19,31+10,19,34+10,19,35+10,20,21+10,20,22+10,20,24+10,20,25+10,20,26+10,20,28+10,20,34+10,21,25+10,21,26+10,21,27+10,21,29+10,21,30+10,21,31+10,21,32+10,21,34+10,22,23+10,22,24+10,22,27+10,22,28+10,22,31+10,22,32+10,23,24+10,23,27+10,23,28+10,23,29+10,23,35+10,24,27+10,24,28+10,24,30+10,24,33+10,24,34+10,24,35+10,25,32+10,25,35+10,26,28+10,26,31+10,26,32+10,27,28+10,27,29+10,27,30+10,27,31+10,27,33+10,27,34+10,27,35+10,28,29+10,28,33+10,28,34+10,29,30+10,29,31+10,29,32+10,29,35+10,30,32+10,30,33+10,30,34+10,30,35+10,31,33+10,31,34+10,31,35+10,33,34+10,33,35+11,12,13+11,12,14+11,12,15+11,12,16+11,12,17+11,12,19+11,12,20+11,12,23+11,12,25+11,12,26+11,12,28+11,12,29+11,12,32+11,12,34+11,12,35+11,13,17+11,13,18+11,13,19+11,13,20+11,13,21+11,13,22+11,13,24+11,13,25+11,13,28+11,13,29+11,13,33+11,13,34+11,13,35+11,14,18+11,14,20+11,14,23+11,14,29+11,14,32+11,14,33+11,14,34+11,15,17+11,15,18+11,15,20+11,15,21+11,15,24+11,15,27+11,15,29+11,15,30+11,15,32+11,15,33+11,15,34+11,16,19+11,16,20+11,16,22+11,16,23+11,16,25+11,16,26+11,16,28+11,16,29+11,16,30+11,16,31+11,16,32+11,16,33+11,16,35+11,17,21+11,17,23+11,17,24+11,17,25+11,17,26+11,17,27+11,17,30+11,17,31+11,17,32+11,17,34+11,17,35+11,18,19+11,18,20+11,18,21+11,18,23+11,18,25+11,18,27+11,18,28+11,18,29+11,18,32+11,18,33+11,19,20+11,19,23+11,19,25+11,19,28+11,19,29+11,19,33+11,19,34+11,20,21+11,20,23+11,20,24+11,20,26+11,20,28+11,20,30+11,20,32+11,20,33+11,20,34+11,20,35+11,21,23+11,21,26+11,21,28+11,21,29+11,21,32+11,21,35+11,22,24+11,22,26+11,22,28+11,22,29+11,22,34+11,23,24+11,23,25+11,23,26+11,23,30+11,23,31+11,24,28+11,24,32+11,24,33+11,24,34+11,24,35+11,25,27+11,25,28+11,25,31+11,25,33+11,26,29+11,26,30+11,26,32+11,26,33+11,26,34+11,27,28+11,27,31+11,27,32+11,27,34+11,27,35+11,28,30+11,28,31+11,28,32+11,29,32+11,29,33+11,30,31+11,30,32+11,30,33+11,30,34+11,30,35+11,31,33+11,31,35+11,32,33+11,32,34+11,32,35+11,33,34+11,33,35+11,34,35+12,13,14+12,13,19+12,13,20+12,13,21+12,13,24+12,13,26+12,13,28+12,13,31+12,13,32+12,13,33+12,13,34+12,14,16+12,14,17+12,14,18+12,14,20+12,14,21+12,14,23+12,14,26+12,14,28+12,14,30+12,14,31+12,14,33+12,14,35+12,15,17+12,15,18+12,15,24+12,15,26+12,15,33+12,16,17+12,16,18+12,16,20+12,16,21+12,16,22+12,16,23+12,16,24+12,16,25+12,16,26+12,16,28+12,16,30+12,16,33+12,16,34+12,16,35+12,17,18+12,17,19+12,17,21+12,17,24+12,17,25+12,17,26+12,17,30+12,17,33+12,17,34+12,18,22+12,18,23+12,18,25+12,18,26+12,18,27+12,18,29+12,18,31+12,18,32+12,19,24+12,19,25+12,19,26+12,19,27+12,19,29+12,19,30+12,19,35+12,20,21+12,20,22+12,20,23+12,20,28+12,20,29+12,20,30+12,20,32+12,20,34+12,21,22+12,21,23+12,21,24+12,21,26+12,21,27+12,21,28+12,21,29+12,21,30+12,21,31+12,21,32+12,22,23+12,22,24+12,22,26+12,22,27+12,22,28+12,22,29+12,22,30+12,22,31+12,22,32+12,23,25+12,23,26+12,23,27+12,23,31+12,23,34+12,23,35+12,24,25+12,24,27+12,24,29+12,24,31+12,24,32+12,24,33+12,24,34+12,25,26+12,25,27+12,25,32+12,25,34+12,26,30+12,26,32+12,26,34+12,27,28+12,27,30+12,27,32+12,27,33+12,27,34+12,27,35+12,29,30+12,29,32+12,29,34+12,30,35+12,31,34+12,32,33+12,32,34+12,32,35+12,33,34+12,33,35+12,34,35+13,14,16+13,14,20+13,14,23+13,14,25+13,14,26+13,14,28+13,14,29+13,15,17+13,15,18+13,15,21+13,15,22+13,15,23+13,15,24+13,15,25+13,15,26+13,15,27+13,15,28+13,15,29+13,15,31+13,15,33+13,16,20+13,16,22+13,16,23+13,16,25+13,16,26+13,16,27+13,16,29+13,16,30+13,16,32+13,17,18+13,17,19+13,17,21+13,17,23+13,17,26+13,17,29+13,17,32+13,18,22+13,18,23+13,18,26+13,18,29+13,18,32+13,18,33+13,18,34+13,19,22+13,19,24+13,19,31+13,19,32+13,19,33+13,19,35+13,20,21+13,20,22+13,20,26+13,20,28+13,20,30+13,20,33+13,21,23+13,21,24+13,21,25+13,21,26+13,21,27+13,21,32+13,21,33+13,21,34+13,22,23+13,22,24+13,22,25+13,22,26+13,22,28+13,22,29+13,22,31+13,22,32+13,22,33+13,22,34+13,23,27+13,23,29+13,23,32+13,23,34+13,24,28+13,24,31+13,24,33+13,24,34+13,24,35+13,25,29+13,25,31+13,25,32+13,25,34+13,25,35+13,26,27+13,26,31+13,26,32+13,26,35+13,27,28+13,27,29+13,27,31+13,27,32+13,27,33+13,27,35+13,28,29+13,28,34+13,29,30+13,29,31+13,29,32+13,29,34+13,29,35+13,30,31+13,30,33+13,30,35+13,31,33+13,31,34+13,31,35+14,15,20+14,15,23+14,15,24+14,15,26+14,15,27+14,15,28+14,15,29+14,15,32+14,15,33+14,15,34+14,16,17+14,16,18+14,16,22+14,16,24+14,16,29+14,16,32+14,16,33+14,16,35+14,17,18+14,17,19+14,17,20+14,17,21+14,17,22+14,17,23+14,17,26+14,17,31+14,17,32+14,17,34+14,18,19+14,18,22+14,18,24+14,18,27+14,18,28+14,18,31+14,18,32+14,19,20+14,19,21+14,19,24+14,19,25+14,19,26+14,19,27+14,19,29+14,19,32+14,19,35+14,20,21+14,20,24+14,20,28+14,20,32+14,21,22+14,21,24+14,21,25+14,21,27+14,21,29+14,21,31+14,21,32+14,22,24+14,22,27+14,22,28+14,22,30+14,22,31+14,22,32+14,22,35+14,23,24+14,23,26+14,23,27+14,23,33+14,23,34+14,24,27+14,24,30+14,24,32+14,24,33+14,25,26+14,25,28+14,25,31+14,25,32+14,25,33+14,25,34+14,26,27+14,26,28+14,26,30+14,26,31+14,26,33+14,26,35+14,27,28+14,27,30+14,27,33+14,27,35+14,28,33+14,29,30+14,29,32+14,29,34+14,29,35+14,30,32+14,30,33+14,30,34+14,30,35+14,31,35+14,32,35+14,34,35+15,16,17+15,16,19+15,16,22+15,16,23+15,16,25+15,16,27+15,16,28+15,16,32+15,16,33+15,17,18+15,17,20+15,17,21+15,17,26+15,17,32+15,17,33+15,18,20+15,18,23+15,18,26+15,18,27+15,18,28+15,18,30+15,18,31+15,18,32+15,18,33+15,18,35+15,19,21+15,19,23+15,19,25+15,19,26+15,19,27+15,19,29+15,19,31+15,19,32+15,19,33+15,19,34+15,19,35+15,20,21+15,20,22+15,20,23+15,20,25+15,20,27+15,20,28+15,20,30+15,20,31+15,20,32+15,20,34+15,20,35+15,21,22+15,21,23+15,21,24+15,21,25+15,21,26+15,21,27+15,21,28+15,21,30+15,21,31+15,21,32+15,21,34+15,22,24+15,22,28+15,22,30+15,22,34+15,23,25+15,23,28+15,23,29+15,23,30+15,23,31+15,23,32+15,23,34+15,24,26+15,24,27+15,24,28+15,24,29+15,24,31+15,25,26+15,25,27+15,25,30+15,26,31+15,26,33+15,26,34+15,26,35+15,27,31+15,27,32+15,27,33+15,27,34+15,28,33+15,28,35+15,29,30+15,29,33+15,30,31+15,30,32+15,30,33+15,30,34+15,31,33+15,32,33+15,33,35+16,17,19+16,17,21+16,17,23+16,17,24+16,17,25+16,17,26+16,17,27+16,17,28+16,17,31+16,17,33+16,17,34+16,18,19+16,18,20+16,18,21+16,18,24+16,18,25+16,18,27+16,18,29+16,18,30+16,18,32+16,18,33+16,19,23+16,19,24+16,19,25+16,19,27+16,19,28+16,19,29+16,19,30+16,19,32+16,19,33+16,19,34+16,19,35+16,20,23+16,20,25+16,20,26+16,20,32+16,21,22+16,21,23+16,21,25+16,21,26+16,21,27+16,21,28+16,21,31+16,21,33+16,21,34+16,21,35+16,22,23+16,22,25+16,22,26+16,22,27+16,22,29+16,22,31+16,22,33+16,22,35+16,23,25+16,23,26+16,23,28+16,23,30+16,23,33+16,23,35+16,24,27+16,24,30+16,24,34+16,24,35+16,25,27+16,25,29+16,25,30+16,25,31+16,25,32+16,25,33+16,25,35+16,26,28+16,26,30+16,26,34+16,27,28+16,27,31+16,27,35+16,28,30+16,29,31+16,29,34+16,29,35+16,30,31+16,30,33+16,30,35+16,31,33+16,32,34+16,32,35+16,33,34+16,33,35+16,34,35+17,18,19+17,18,26+17,18,29+17,18,30+17,18,32+17,18,35+17,19,21+17,19,22+17,19,24+17,19,27+17,19,30+17,19,33+17,19,34+17,20,22+17,20,23+17,20,24+17,20,25+17,20,26+17,20,28+17,20,31+17,20,33+17,21,23+17,21,24+17,21,25+17,21,26+17,21,28+17,21,29+17,21,30+17,21,31+17,21,32+17,21,34+17,21,35+17,22,27+17,22,28+17,22,31+17,22,33+17,22,34+17,23,24+17,23,25+17,23,26+17,23,27+17,23,28+17,23,31+17,23,33+17,23,35+17,24,25+17,24,26+17,24,28+17,24,31+17,24,32+17,24,33+17,25,26+17,25,27+17,25,30+17,25,31+17,25,34+17,25,35+17,26,27+17,26,28+17,26,29+17,26,30+17,26,31+17,26,35+17,27,33+17,27,34+17,27,35+17,28,32+17,28,34+17,28,35+17,29,31+17,29,32+17,29,33+17,30,34+17,31,33+17,31,34+17,32,33+17,32,34+17,33,35+17,34,35+18,19,20+18,19,22+18,19,24+18,19,27+18,19,30+18,19,31+18,19,33+18,19,35+18,20,21+18,20,25+18,20,27+18,20,28+18,20,29+18,20,31+18,20,32+18,20,33+18,21,24+18,21,30+18,21,32+18,21,35+18,22,23+18,22,25+18,22,27+18,22,28+18,22,33+18,22,35+18,23,25+18,23,26+18,23,27+18,23,29+18,23,31+18,23,33+18,23,35+18,24,27+18,24,32+18,24,33+18,24,34+18,25,26+18,25,30+18,25,33+18,25,34+18,26,29+18,26,30+18,26,32+18,26,33+18,26,34+18,27,28+18,27,32+18,28,29+18,28,30+18,29,32+18,29,33+18,29,34+18,29,35+18,30,31+18,30,34+18,31,32+18,32,34+18,33,34+18,33,35+18,34,35+19,20,22+19,20,26+19,20,27+19,20,31+19,20,32+19,20,33+19,21,23+19,21,27+19,21,28+19,21,30+19,21,32+19,21,34+19,22,24+19,22,30+19,22,32+19,22,35+19,23,25+19,23,26+19,23,29+19,23,30+19,23,32+19,24,25+19,24,28+19,24,30+19,24,31+19,24,33+19,24,35+19,25,27+19,25,29+19,25,34+19,26,31+19,26,32+19,26,34+19,27,32+19,27,33+19,27,34+19,28,34+19,29,30+19,29,32+19,29,34+19,29,35+19,30,32+19,30,34+19,30,35+19,31,32+19,31,34+19,32,34+19,33,34+20,21,22+20,21,29+20,21,30+20,21,33+20,21,34+20,21,35+20,22,23+20,22,24+20,22,25+20,22,26+20,22,34+20,22,35+20,23,24+20,23,28+20,23,32+20,23,33+20,24,25+20,24,26+20,24,28+20,24,31+20,24,34+20,25,29+20,25,30+20,25,31+20,25,33+20,26,29+20,26,31+20,26,32+20,26,33+20,26,35+20,27,30+20,27,34+20,27,35+20,28,30+20,28,31+20,28,32+20,28,33+20,28,34+20,29,30+20,29,31+20,29,33+20,29,35+20,30,33+20,30,34+20,31,32+20,31,33+20,32,34+20,32,35+20,33,34+20,33,35+20,34,35+21,22,25+21,22,28+21,22,30+21,22,31+21,22,32+21,22,34+21,22,35+21,23,24+21,23,25+21,23,27+21,23,30+21,23,31+21,23,32+21,23,33+21,24,31+21,24,32+21,24,33+21,24,34+21,25,29+21,25,30+21,25,31+21,26,27+21,26,28+21,26,35+21,27,28+21,27,30+21,27,31+21,27,32+21,27,35+21,28,30+21,28,31+21,28,34+21,28,35+21,29,30+21,29,31+21,29,34+21,29,35+21,30,33+21,31,32+21,32,34+21,32,35+21,33,35+21,34,35+22,23,24+22,23,27+22,23,29+22,23,30+22,23,34+22,24,25+22,24,26+22,24,29+22,24,30+22,24,31+22,24,32+22,24,33+22,24,35+22,25,26+22,25,27+22,25,35+22,26,27+22,26,28+22,26,33+22,26,34+22,26,35+22,27,28+22,27,29+22,27,34+22,28,29+22,28,31+22,28,32+22,28,35+22,29,30+22,29,31+22,29,33+22,29,34+22,29,35+22,30,31+22,30,32+22,31,32+22,31,33+22,31,34+22,31,35+22,32,33+22,32,35+22,33,34+22,33,35+23,24,25+23,24,26+23,24,27+23,24,28+23,24,30+23,24,32+23,24,35+23,25,27+23,25,29+23,25,31+23,25,32+23,25,33+23,26,28+23,26,31+23,26,32+23,26,33+23,27,28+23,27,29+23,27,31+23,27,35+23,28,31+23,29,30+23,29,31+23,29,32+23,29,35+23,30,32+23,30,33+23,32,34+23,32,35+23,33,34+23,33,35+23,34,35+24,25,26+24,25,28+24,25,29+24,25,30+24,25,31+24,25,33+24,25,35+24,26,29+24,26,31+24,26,33+24,26,34+24,27,30+24,27,32+24,27,33+24,28,29+24,28,33+24,28,35+24,29,30+24,29,33+24,29,34+24,30,35+24,31,32+24,31,35+24,32,33+24,32,35+24,33,34+24,33,35+24,34,35+25,26,29+25,26,30+25,26,31+25,26,33+25,26,34+25,27,28+25,27,29+25,27,30+25,27,31+25,27,33+25,27,34+25,27,35+25,28,29+25,28,33+25,28,34+25,28,35+25,29,30+25,29,31+25,29,32+25,30,32+25,30,33+25,30,34+25,30,35+25,31,33+25,31,35+25,32,33+25,32,34+25,32,35+25,34,35+26,27,29+26,27,30+26,27,32+26,27,33+26,27,34+26,27,35+26,28,30+26,28,31+26,28,33+26,28,34+26,29,31+26,29,35+26,30,34+26,31,35+26,32,33+26,32,34+26,34,35+27,28,29+27,28,32+27,28,34+27,29,31+27,29,32+27,29,35+27,30,31+27,30,35+27,31,33+27,31,35+27,32,33+27,32,35+27,34,35+28,29,30+28,29,32+28,29,33+28,30,32+28,30,35+28,31,35+28,32,33+28,32,34+28,33,34+29,30,31+29,30,32+29,30,34+29,31,32+29,32,35+29,33,34+29,33,35+29,34,35+30,31,33+30,32,33+30,32,34+30,32,35+30,33,35+31,32,33+31,32,34+31,32,35+32,33,34+32,34,35+33,34,35`
 - `N = 47` (36 outputs + 11 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 1, 3, 385]
+- leading error coefficient: `A_4 = 2434503` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S† on 4`, `Z on 5`, `S† on 6`, `S on 7`, `S on 8`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 16` and 540 more (27 single-wire, 525 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -16929,6 +17771,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91`
 - `N = 117` (92 outputs + 25 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 4]
+- leading error coefficient: `A_3 = 10292` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 258 more (94 single-wire, 176 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -16945,6 +17788,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 9` (3 outputs + 6 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 63]
+- leading error coefficient: `A_2 = 1764` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`
 - or no correction at all, with rotations run as `T³` on columns 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 497, 498 and 3 more; `T⁵` on columns 1, 2, 3, 4, 5; `T†` on columns 63, 69, 75, `T` on the rest
 - discovery: pre-existing
@@ -16959,6 +17803,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+023+123`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 156]
+- leading error coefficient: `A_2 = 1764` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -16973,6 +17818,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 9` (2 outputs + 7 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 127]
+- leading error coefficient: `A_2 = 762` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T³` on columns 494, 495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505 and 2 more; `T†` on columns 0, 127, 134, `T` on the rest
 - discovery: pre-existing
@@ -16987,6 +17833,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 127]
+- leading error coefficient: `A_2 = 762` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -17001,6 +17848,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131`
 - `N = 143` (132 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 484]
+- leading error coefficient: `A_3 = 12730` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 120 more (132 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -17017,6 +17865,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [128, 156]
+- leading error coefficient: `A_2 = 381` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -17031,6 +17880,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 9` (1 output + 8 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 255]
+- leading error coefficient: `A_2 = 255` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -17045,6 +17895,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 382]
+- leading error coefficient: `A_2 = 255` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -17059,6 +17910,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 10` (1 output + 9 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 256]
+- leading error coefficient: `A_3 = 43435` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -17073,6 +17925,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 19` (1 output + 18 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [85, 172, 234, 364, 380]
+- leading error coefficient: `A_5 = 409422` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,10)`, `CZ on (0,12)`, `CZ on (0,14)`, `CZ on (0,18)`
 - or no correction at all, with rotations run as `T³` on columns 369, 370, 373, 374, 377, 378, 381, 382, 407, 409, 411, 413 and 48 more; `T⁵` on columns 4, 5, 8, 17, 19, 126, `T` on the rest
 - discovery: AI search
@@ -17087,6 +17940,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 20` (2 outputs + 18 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [85, 172, 234, 364, 380]
+- leading error coefficient: `A_5 = 647596` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (0,11)`, `CZ on (0,13)`, `CZ on (0,15)`, `CZ on (0,19)`, `CZ on (1,4)`, `CZ on (1,10)` and 2 more (1 single-wire, 13 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 2, 4, 9, 15, 23, 63, 127, 243, 364, 365, 369 and 70 more; `T⁵` on columns 3, 7, 19; `T†` on columns 5, 8, 11, 17, 31, 255, `T` on the rest
 - discovery: AI search
@@ -17101,6 +17955,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 21` (3 outputs + 18 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 808766` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (0,10)`, `CZ on (0,12)`, `CZ on (0,14)`, `CZ on (0,16)`, `CZ on (0,20)`, `CZ on (1,5)` and 18 more (1 single-wire, 29 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 5, 7, 8, 11, 15, 19, 221, 345, 347, 349, 351 and 70 more; `T⁵` on columns 3, 255; `T†` on columns 9, 17, 23, 31, 243, `T` on the rest
 - discovery: AI search
@@ -17115,6 +17970,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 22` (4 outputs + 18 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 899170` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,9)`, `CZ on (0,11)`, `CZ on (0,13)`, `CZ on (0,15)`, `CZ on (0,17)`, `CZ on (0,21)` and 28 more (2 single-wire, 38 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 63, 221, 240, 243, 255, 331, 332, 333, 335, 336, 337 and 85 more; `T⁵` on columns 0, 1, 2, 8, 11, 23; `T†` on columns 7, 15, 17, 19, 127, `T` on the rest
 - discovery: AI search
@@ -17129,6 +17985,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 23` (5 outputs + 18 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 960690` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,10)`, `CZ on (0,12)`, `CZ on (0,14)`, `CZ on (0,16)`, `CZ on (0,18)`, `CZ on (0,22)` and 37 more (2 single-wire, 47 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 3, 4, 15, 23, 221, 243, 304, 305, 307, 308, 309 and 93 more; `T⁵` on columns 0, 5, 7, 9, 17, 63, 127, 255; `T†` on columns 2, 8, 19, 31, 237, 240, `T` on the rest
 - discovery: AI search
@@ -17143,6 +18000,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 24` (6 outputs + 18 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 1001544` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,11)`, `CZ on (0,13)`, `CZ on (0,15)`, `CZ on (0,17)`, `CZ on (0,19)` and 49 more (3 single-wire, 58 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 4, 11, 127, 221, 237, 239, 280, 282, 283, 284, 285 and 117 more; `T⁵` on columns 1, 2, 5, 15, 19, 255; `T†` on columns 3, 8, 9, 17, 23, 63, 240, 243, `T` on the rest
 - discovery: AI search
@@ -17157,6 +18015,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6`
 - `N = 25` (7 outputs + 18 checks)
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 1026759` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,12)`, `CZ on (0,14)`, `CZ on (0,16)`, `CZ on (0,18)` and 58 more (3 single-wire, 67 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 11, 17, 63, 237, 254, 257, 258, 260, 261, 264, 265, 270 and 105 more; `T⁵` on columns 2, 4, 5, 8, 9, 15, 19, 126, 218, 239, 240; `T†` on columns 0, 7, 23, 127, 221, `T` on the rest
 - discovery: AI search
@@ -17173,6 +18032,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 26` (8 outputs + 18 checks)
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 1048288` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 7`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (0,13)`, `CZ on (0,15)`, `CZ on (0,17)` and 69 more (4 single-wire, 77 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 7, 17, 215, 225, 226, 229, 230, 233, 239, 241, 243 and 134 more; `T⁵` on columns 3, 8, 11, 19, 23, 63, 126, 240; `T†` on columns 1, 2, 31, 218, 221, 255, `T` on the rest
 - discovery: AI search
@@ -17189,6 +18049,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8`
 - `N = 27` (9 outputs + 18 checks)
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 1065590` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 7`, `Z on 8`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (0,10)`, `CZ on (0,11)`, `CZ on (0,14)`, `CZ on (0,16)` and 87 more (5 single-wire, 94 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 7, 15, 31, 192, 194, 196, 198, 200, 201, 202, 204 and 135 more; `T⁵` on columns 1, 4, 17, 19, 127; `T†` on columns 2, 8, 9, 11, 126, 186, 218, 221, 237, 240, `T` on the rest
 - discovery: AI search
@@ -17222,6 +18083,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 28` (10 outputs + 18 checks)
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 1075358` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 7`, `Z on 8`, `S on 9`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (0,9)`, `CZ on (0,11)`, `CZ on (0,12)` and 99 more (6 single-wire, 105 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 5, 9, 19, 127, 167, 168, 169, 172, 176, 177, 179 and 163 more; `T⁵` on columns 4, 8, 23, 63, 126, 215, 237, 240; `T†` on columns 1, 2, 7, 11, 31, 160, 218, 239, `T` on the rest
 - discovery: AI search
@@ -17238,6 +18100,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 29` (11 outputs + 18 checks)
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 1094562` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `Z on 4`, `S on 5`, `Z on 6`, `S† on 7`, `Z on 8`, `Z on 9`, `S† on 10`, `CZ on (0,3)` and 120 more (11 single-wire, 121 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 4, 6, 14, 17, 18, 21, 31, 87, 90, 91, 93 and 177 more; `T⁵` on columns 0, 1, 3, 9, 11, 13, 15, 16, 22, 24, 127; `T†` on columns 8, 10, 12, 19, 63, `T` on the rest
 - discovery: AI search
@@ -17255,6 +18118,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 30` (12 outputs + 18 checks)
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 1087842` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 7`, `Z on 8`, `S on 9`, `S on 11`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (0,9)`, `CZ on (0,10)` and 126 more (7 single-wire, 131 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 23, 99, 104, 107, 109, 113, 115, 117, 121, 122, 124 and 198 more; `T⁵` on columns 2, 5, 31, 63, 127, 160, 240; `T†` on columns 0, 1, 4, 7, 8, 9, 11, 17, 221, 239, `T` on the rest
 - discovery: AI search
@@ -17271,6 +18135,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12`
 - `N = 31` (13 outputs + 18 checks)
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 1091011` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 7`, `Z on 8`, `S on 9`, `S on 11`, `S† on 12`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (0,9)` and 141 more (8 single-wire, 145 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 9, 23, 31, 68, 71, 73, 75, 83, 84, 86, 88 and 218 more; `T⁵` on columns 1, 2, 8, 11, 17, 100, 127, 131, 160, 237, 239, 240; `T†` on columns 0, 5, 63, 215, 218, `T` on the rest
 - discovery: AI search
@@ -17287,6 +18152,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13`
 - `N = 32` (14 outputs + 18 checks)
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 1091790` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 7`, `Z on 8`, `S on 9`, `S on 11`, `S† on 12`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (0,9)` and 158 more (8 single-wire, 162 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 7, 9, 17, 50, 51, 52, 53, 54, 58, 59, 62 and 227 more; `T⁵` on columns 0, 1, 4, 5, 19, 31, 218, 237, 243; `T†` on columns 23, 71, 100, 127, 131, 215, 239, `T` on the rest
 - discovery: AI search
@@ -17303,6 +18169,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+0,1+3,6+4,12+5,13+9,14+0,1,2+0,1,3+0,1,4+0,1,5+0,1,6+0,1,7+0,1,8+0,2,3+0,2,4+0,2,9+0,2,10+1,3,11+1,5,11+1,9,11+1,11,12+1,11,13+2,3,14+2,4,14+2,5,14+2,6,14+2,10,14+2,12,14+3,5,13+3,6,7+3,6,8+3,9,10+3,9,14+3,12,13+4,5,10+4,5,12+4,6,12+4,7,12+4,9,10+4,10,12+5,6,8+5,6,13+5,7,13+5,9,14+5,12,13+6,9,14+6,12,13+7,9,10+7,12,13+8,9,14+9,10,12+9,10,13+9,10,14+9,13,14`
 - `N = 33` (15 outputs + 18 checks)
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 1094097` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S† on 2`, `Z on 3`, `S† on 6`, `S on 7`, `S on 8`, `S on 9`, `Z on 10`, `Z on 12`, `S on 13`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,5)` and 178 more (9 single-wire, 181 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -17319,6 +18186,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14`
 - `N = 33` (15 outputs + 18 checks)
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 1093172` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 7`, `Z on 8`, `S on 9`, `S on 11`, `S† on 12`, `S on 14`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)` and 172 more (9 single-wire, 175 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -17335,6 +18203,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15`
 - `N = 34` (16 outputs + 18 checks)
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 1093845` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 7`, `Z on 8`, `S on 9`, `S on 11`, `S† on 12`, `Z on 15`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)` and 186 more (9 single-wire, 189 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -17351,6 +18220,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16`
 - `N = 35` (17 outputs + 18 checks)
 - distance: exactly 5, witnessed by the fault on columns [28, 194, 199, 448, 470]
+- leading error coefficient: `A_5 = 1094562` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 7`, `Z on 8`, `S on 9`, `S on 11`, `S† on 12`, `Z on 15`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)` and 199 more (9 single-wire, 202 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -17367,6 +18237,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80`
 - `N = 90` (81 outputs + 9 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 6]
+- leading error coefficient: `A_3 = 43435` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 202 more (77 single-wire, 137 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -17383,6 +18254,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84`
 - `N = 94` (85 outputs + 9 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 43435` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 127 more (85 single-wire, 54 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -17399,6 +18271,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88`
 - `N = 98` (89 outputs + 9 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 43435` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 247 more (86 single-wire, 173 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -17446,6 +18319,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 11` (6 outputs + 5 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 386]
+- leading error coefficient: `A_2 = 4150` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`
 - or no correction at all, with rotations run as `T³` on columns 506, 507, 509, 512; `T†` on columns 0, 1, 2, 3, 6, 11, 16, 21, 26, 31, `T` on the rest
 - discovery: pre-existing
@@ -17461,6 +18335,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 447]
+- leading error coefficient: `A_2 = 2025` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
 - or no correction at all, with rotations run as `T³` on columns 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519 and 2 more; `T⁵` on columns 4, 5; `T†` on columns 12, 27, 42, 57, 72, `T` on the rest
 - discovery: pre-existing
@@ -17476,6 +18351,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 496]
+- leading error coefficient: `A_2 = 946` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -17490,6 +18366,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [64, 134]
+- leading error coefficient: `A_2 = 405` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -17504,6 +18381,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [136, 262]
+- leading error coefficient: `A_2 = 135` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -17518,6 +18396,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 11` (1 output + 10 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 356]
+- leading error coefficient: `A_3 = 23715` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -17532,6 +18411,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145`
 - `N = 158` (146 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 342]
+- leading error coefficient: `A_3 = 6309` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 134 more (146 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -17548,6 +18428,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+023+123`
 - `N = 10` (4 outputs + 6 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 63]
+- leading error coefficient: `A_2 = 2268` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -17562,6 +18443,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+023+123`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [64, 85]
+- leading error coefficient: `A_2 = 1764` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -17606,6 +18488,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161`
 - `N = 174` (162 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 8, 269]
+- leading error coefficient: `A_3 = 7338` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 150 more (162 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -17622,6 +18505,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+12+012`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 127]
+- leading error coefficient: `A_2 = 1270` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T³` on columns 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632 and 2 more; `T†` on columns 127, 134, 141, `T` on the rest
 - discovery: pre-existing
@@ -17636,6 +18520,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 127]
+- leading error coefficient: `A_2 = 1270` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -17650,6 +18535,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+12+012`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [128, 156]
+- leading error coefficient: `A_2 = 762` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T³` on columns 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633 and 2 more; `T†` on columns 128, 156, 184, `T` on the rest
 - discovery: pre-existing
@@ -17664,6 +18550,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176`
 - `N = 189` (177 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 212]
+- leading error coefficient: `A_3 = 10252` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 165 more (177 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -17680,6 +18567,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156+234+235+236+245+246+256+345+346+356+456`
 - `N = 11` (7 outputs + 4 checks)
 - distance: exactly 2, witnessed by the fault on columns [0, 15]
+- leading error coefficient: `A_2 = 14190` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `S† on 6`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)` and 16 more (7 single-wire, 21 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 649, 650, 651, 652, 653, 654, 659, `T` on the rest
 - discovery: pre-existing
@@ -17696,6 +18584,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184`
 - `N = 197` (185 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 56]
+- leading error coefficient: `A_3 = 11230` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 475 more (186 single-wire, 301 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 9, 16, 19, 22, 24, 39, 41, 42, 53, 57, 59 and 286 more; `T⁵` on columns 2, 8, 10, 11, 12, 14, 15, 17, 23, 26, 29, 30 and 46 more; `T†` on columns 1, 4, 7, 13, 18, 21, 28, 35, 47, 52, 54, 55 and 33 more, `T` on the rest
 - discovery: AI search
@@ -17712,6 +18601,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
 - `N = 11` (6 outputs + 5 checks), exact minimal T-count 6, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 31]
+- leading error coefficient: `A_2 = 7161` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (1,2)` and 9 more (6 single-wire, 15 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -17727,6 +18617,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131`
 - `N = 168` (132 outputs + 36 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 38]
+- leading error coefficient: `A_3 = 5760` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `S on 3`, `Z on 4`, `S† on 6`, `S on 7`, `S† on 8`, `Z on 9`, `Z on 10`, `S on 11`, `S on 12` and 1140 more (120 single-wire, 1032 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 7, 14, 16, 23, 25, 30, 36, 38, 39, 40, 42 and 272 more; `T⁵` on columns 3, 8, 9, 10, 27, 60, 65, 67, 84, 117, 122, 124 and 28 more; `T†` on columns 0, 2, 4, 5, 6, 13, 15, 59, 61, 62, 63, 70 and 52 more, `T` on the rest
 - discovery: AI search
@@ -17743,6 +18634,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188`
 - `N = 201` (189 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 217]
+- leading error coefficient: `A_3 = 11721` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 885 more (192 single-wire, 705 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 9, 14, 15, 18, 26, 32, 33, 36, 37, 40 and 285 more; `T⁵` on columns 2, 3, 6, 7, 8, 17, 20, 21, 25, 28, 30, 34 and 39 more; `T†` on columns 4, 5, 11, 13, 24, 27, 39, 45, 48, 52, 54, 61 and 38 more, `T` on the rest
 - discovery: AI search
@@ -17759,6 +18651,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34`
 - `N = 11` (5 outputs + 6 checks), exact minimal T-count 10, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 63]
+- leading error coefficient: `A_2 = 3465` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)` and 3 more (5 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on every rotation
 - discovery: pre-existing
@@ -17774,6 +18667,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193`
 - `N = 205` (194 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 605]
+- leading error coefficient: `A_3 = 33352` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 182 more (194 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -17790,6 +18684,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196`
 - `N = 209` (197 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 10, 218]
+- leading error coefficient: `A_3 = 12786` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 891 more (200 single-wire, 703 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 7, 10, 15, 18, 19, 22, 29, 30, 32, 34, 35 and 314 more; `T⁵` on columns 9, 13, 28, 33, 36, 39, 40, 46, 54, 66, 68, 111 and 14 more; `T†` on columns 1, 3, 4, 12, 14, 16, 74, 75, 98, 99, 106, 109 and 9 more, `T` on the rest
 - discovery: AI search
@@ -17806,6 +18701,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198+199+200`
 - `N = 213` (201 outputs + 12 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 465]
+- leading error coefficient: `A_3 = 13301` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 479 more (202 single-wire, 289 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 5, 6, 7, 8, 12, 15, 16, 18, 20, 22 and 328 more; `T⁵` on columns 3, 10, 30, 36, 51, 62, 65, 85, 93, 96, 112, 138 and 6 more; `T†` on columns 2, 11, 21, 23, 52, 53, 60, 64, 72, 77, 78, 82 and 15 more, `T` on the rest
 - discovery: AI search
@@ -17839,6 +18735,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198+199+200+201+202+203+204+205+206+207+208+209`
 - `N = 221` (210 outputs + 11 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 2, 19]
+- leading error coefficient: `A_3 = 41524` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 198 more (210 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -17872,6 +18769,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+03+12+13+23+012+013+023+123`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 5, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 127]
+- leading error coefficient: `A_2 = 1905` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
 - or no correction at all, with rotations run as `T³` on columns 0, 748, 749, 750, 751, 752, 753, 754, 755, 756, 757, 758 and 3 more; `T†` on columns 127, 134, 141, 148, `T` on the rest
 - discovery: pre-existing
@@ -17886,6 +18784,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 255]
+- leading error coefficient: `A_2 = 765` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -17900,6 +18799,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [256, 292]
+- leading error coefficient: `A_2 = 255` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -17929,6 +18829,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198+199+200+201+202+203+204+205+206+207+208+209+210+211+212+213+214+215+216+217+218+219+220+221+222+223`
 - `N = 237` (224 outputs + 13 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 5, 452]
+- leading error coefficient: `A_3 = 9035` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 212 more (224 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -17960,6 +18861,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198`
 - `N = 237` (199 outputs + 38 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 224` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 187 more (199 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -18200,6 +19102,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161`
 - `N = 176` (162 outputs + 14 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 818]
+- leading error coefficient: `A_3 = 6649` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 150 more (162 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -18217,6 +19120,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160`
 - `N = 176` (161 outputs + 15 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 19, 294]
+- leading error coefficient: `A_3 = 3231` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 149 more (161 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -18234,6 +19138,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153`
 - `N = 176` (154 outputs + 22 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 6, 69, 355]
+- leading error coefficient: `A_4 = 5955` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 142 more (154 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -18250,6 +19155,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152`
 - `N = 176` (153 outputs + 23 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 7, 62, 354]
+- leading error coefficient: `A_4 = 2892` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 141 more (153 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -18266,6 +19172,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151`
 - `N = 176` (152 outputs + 24 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 28, 452, 702]
+- leading error coefficient: `A_4 = 1514` accepted harmful faults of weight 4
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 140 more (152 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -18282,6 +19189,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144`
 - `N = 176` (145 outputs + 31 checks)
 - distance: exactly 5, witnessed by the fault on columns [348, 363, 563, 624, 752]
+- leading error coefficient: `A_5 = 3401` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 133 more (145 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -18298,6 +19206,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143`
 - `N = 176` (144 outputs + 32 checks)
 - distance: exactly 5, witnessed by the fault on columns [47, 255, 278, 516, 591]
+- leading error coefficient: `A_5 = 2277` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 132 more (144 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -18315,6 +19224,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175`
 - `N = 209` (176 outputs + 33 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 38]
+- leading error coefficient: `A_3 = 6896` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `Z on 4`, `Z on 5`, `Z on 9`, `S on 11`, `S on 12`, `S† on 13`, `S on 14`, `Z on 15` and 4304 more (101 single-wire, 4215 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 4, 5, 10, 11, 13, 14, 21, 23, 28, 35, 36 and 318 more; `T⁵` on columns 7, 9, 12, 16, 25, 57, 62, 67, 80, 119, 126, 172 and 48 more; `T†` on columns 0, 3, 6, 41, 55, 56, 59, 61, 65, 66, 96, 110 and 50 more, `T` on the rest
 - discovery: AI search
@@ -18331,6 +19241,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136`
 - `N = 176` (137 outputs + 39 checks)
 - distance: exactly 5, witnessed by the fault on columns [120, 189, 802, 814, 878]
+- leading error coefficient: `A_5 = 709` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 125 more (137 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -18492,6 +19403,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170`
 - `N = 225` (171 outputs + 54 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 3, 48]
+- leading error coefficient: `A_3 = 2005` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `Z on 3`, `Z on 4`, `S on 5`, `Z on 6`, `S on 8`, `S on 9`, `Z on 10`, `Z on 12`, `S on 13`, `S† on 14`, `S on 16`, `S† on 17` and 8036 more (180 single-wire, 7868 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 9, 12, 13, 26, 30, 39, 44, 45, 48, 49, 52 and 338 more; `T⁵` on columns 4, 7, 16, 17, 28, 29, 31, 32, 33, 106, 111, 112 and 40 more; `T†` on columns 1, 6, 8, 27, 35, 101, 102, 108, 109, 110, 113, 131 and 39 more, `T` on the rest
 - discovery: AI search
@@ -18620,6 +19532,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183`
 - `N = 212` (184 outputs + 28 checks)
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 2]
+- leading error coefficient: `A_3 = 18032` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11`, `S on 12` and 637 more (200 single-wire, 449 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -18698,6 +19611,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 10` (3 outputs + 7 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 127]
+- leading error coefficient: `A_2 = 3556` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`
 - or no correction at all, with rotations run as `T³` on columns 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998 and 3 more; `T⁵` on columns 1, 2, 3, 4, 5, 6; `T†` on columns 127, 134, 141, `T` on the rest
 - discovery: pre-existing
@@ -18712,6 +19626,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+023+123`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 316]
+- leading error coefficient: `A_2 = 3556` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -18726,6 +19641,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 10` (2 outputs + 8 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 255]
+- leading error coefficient: `A_2 = 1530` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T³` on columns 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015 and 2 more; `T†` on columns 0, 255, 263, `T` on the rest
 - discovery: pre-existing
@@ -18740,6 +19656,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 255]
+- leading error coefficient: `A_2 = 1530` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -18754,6 +19671,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 10` (1 output + 9 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 511]
+- leading error coefficient: `A_2 = 511` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -18768,6 +19686,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 766]
+- leading error coefficient: `A_2 = 511` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -18782,6 +19701,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 11` (1 output + 10 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 3, witnessed by the fault on columns [0, 1, 512]
+- leading error coefficient: `A_3 = 174251` accepted harmful faults of weight 3
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -18796,6 +19716,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 21` (1 output + 20 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [135, 351, 387, 942, 962]
+- leading error coefficient: `A_5 = 2654398` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,11)`, `CZ on (0,13)`, `CZ on (0,14)`, `CZ on (0,15)`, `CZ on (0,16)`, `CZ on (0,17)`
 - or no correction at all, with rotations run as `T³` on columns 880, 882, 883, 885, 888, 890, 891, 893, 902, 907, 912, 913 and 54 more; `T⁵` on columns 1, 2, 3, 4, 5, 15, 19, 31, 63, 127, 255, 511, `T` on the rest
 - discovery: AI search
@@ -18810,6 +19731,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 22` (2 outputs + 20 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [135, 351, 387, 942, 962]
+- leading error coefficient: `A_5 = 3979242` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `CZ on (0,1)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,12)`, `CZ on (0,14)`, `CZ on (0,15)`, `CZ on (0,16)`, `CZ on (0,17)` and 13 more (1 single-wire, 24 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 17, 35, 63, 255, 511, 742, 746, 749, 750, 754, 758 and 89 more; `T⁵` on columns 31, 254; `T†` on columns 0, 1, 3, 7, 9, 15, 19, 127, 497, `T` on the rest
 - discovery: AI search
@@ -18824,6 +19746,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2`
 - `N = 23` (3 outputs + 20 checks), exact minimal T-count 3, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [135, 351, 387, 942, 962]
+- leading error coefficient: `A_5 = 5052944` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `CZ on (0,1)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (0,13)`, `CZ on (0,15)`, `CZ on (0,16)`, `CZ on (0,17)` and 25 more (2 single-wire, 35 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 4, 7, 9, 15, 35, 127, 255, 511, 742, 746, 749 and 104 more; `T⁵` on columns 2, 8, 23, 31; `T†` on columns 0, 1, 17, 19, 63, 497, `T` on the rest
 - discovery: AI search
@@ -18838,6 +19761,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3`
 - `N = 24` (4 outputs + 20 checks), exact minimal T-count 4, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 5731781` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,10)`, `CZ on (0,11)`, `CZ on (0,14)`, `CZ on (0,16)` and 37 more (3 single-wire, 46 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 4, 5, 8, 9, 11, 15, 503, 742, 746, 749 and 113 more; `T⁵` on columns 23, 31, 35, 63, 254; `T†` on columns 1, 2, 17, 497, `T` on the rest
 - discovery: AI search
@@ -18852,6 +19776,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4`
 - `N = 25` (5 outputs + 20 checks), exact minimal T-count 5, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 6100497` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,11)`, `CZ on (0,12)` and 53 more (4 single-wire, 61 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 9, 63, 127, 255, 470, 497, 503, 511, 734, 742, 749 and 116 more; `T⁵` on columns 1, 3, 5, 15, 23, 254; `T†` on columns 0, 2, 19, 31, 35, `T` on the rest
 - discovery: AI search
@@ -18866,6 +19791,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5`
 - `N = 26` (6 outputs + 20 checks), exact minimal T-count 6, reduced degree 1
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 6578205` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (0,12)` and 70 more (4 single-wire, 78 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 9, 19, 31, 127, 470, 726, 733, 734, 742, 746, 752 and 139 more; `T⁵` on columns 15, 476; `T†` on columns 0, 2, 35, 63, 255, 497, 503, 511, `T` on the rest
 - discovery: AI search
@@ -18880,6 +19806,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6`
 - `N = 27` (7 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 6962598` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,9)`, `CZ on (0,10)`, `CZ on (0,11)` and 80 more (4 single-wire, 88 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 4, 5, 17, 19, 470, 497, 503, 723, 726, 728, 730 and 148 more; `T⁵` on columns 2, 9, 63, 127, 254, 476; `T†` on columns 3, 7, 15, 23, 477, `T` on the rest
 - discovery: AI search
@@ -18896,6 +19823,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7`
 - `N = 28` (8 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 7289682` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,10)`, `CZ on (0,11)` and 92 more (4 single-wire, 100 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 3, 4, 5, 19, 23, 497, 503, 696, 697, 699, 702 and 152 more; `T⁵` on columns 0, 8, 31, 35, 254, 255, 476; `T†` on columns 7, 15, 17, 470, 477, `T` on the rest
 - discovery: AI search
@@ -18912,6 +19840,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8`
 - `N = 29` (9 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 7551848` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,11)` and 110 more (5 single-wire, 117 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 7, 497, 666, 667, 673, 677, 680, 681, 682, 684, 685 and 161 more; `T⁵` on columns 0, 9, 31, 35, 127, 254, 493, 496, 499, 511; `T†` on columns 3, 4, 5, 15, 17, 19, 23, 470, 477, 503, `T` on the rest
 - discovery: AI search
@@ -18928,6 +19857,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9`
 - `N = 30` (10 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 7803687` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,12)` and 122 more (5 single-wire, 129 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 3, 5, 23, 470, 477, 637, 639, 642, 643, 644, 645 and 195 more; `T⁵` on columns 0, 9, 11, 35, 63, 254, 255, 476, 493, 499; `T†` on columns 4, 7, 15, 17, 19, 497, 503, 511, `T` on the rest
 - discovery: AI search
@@ -18944,6 +19874,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10`
 - `N = 31` (11 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 7980026` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,10)` and 136 more (5 single-wire, 143 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 3, 4, 5, 7, 19, 23, 470, 497, 511, 608, 618 and 201 more; `T⁵` on columns 8, 63, 127, 255, 469, 476, 493, 496; `T†` on columns 15, 17, 477, 503, `T` on the rest
 - discovery: AI search
@@ -18960,6 +19891,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11`
 - `N = 32` (12 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8124045` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)` and 150 more (6 single-wire, 156 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 17, 255, 470, 477, 487, 579, 585, 587, 590, 591, 592, 595 and 206 more; `T⁵` on columns 2, 3, 4, 11, 15, 254, 493, 496; `T†` on columns 1, 7, 8, 9, 19, 35, 63, 127, 497, 503, 511, `T` on the rest
 - discovery: AI search
@@ -18976,6 +19908,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12`
 - `N = 33` (13 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8260988` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)` and 165 more (7 single-wire, 170 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 2, 11, 17, 35, 468, 487, 497, 511, 545, 546, 547 and 244 more; `T⁵` on columns 15, 63, 127, 254, 255, 469, 476, 488; `T†` on columns 3, 4, 5, 7, 8, 470, 477, 503, `T` on the rest
 - discovery: AI search
@@ -18992,6 +19925,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13`
 - `N = 34` (14 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8368120` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)` and 188 more (8 single-wire, 192 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 7, 8, 17, 19, 35, 63, 255, 469, 499, 507 and 248 more; `T⁵` on columns 0, 9, 23, 31, 254, 468, 470, 487, 488, 493, 496; `T†` on columns 15, 127, 477, 497, `T` on the rest
 - discovery: AI search
@@ -19008,6 +19942,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14`
 - `N = 35` (15 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8450936` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)` and 212 more (9 single-wire, 215 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 7, 23, 35, 63, 254, 461, 462, 464, 468, 472, 473 and 287 more; `T⁵` on columns 5, 8, 11, 15, 17, 458; `T†` on columns 0, 2, 4, 9, 19, 127, 469, 477, 487, 488, 499, `T` on the rest
 - discovery: AI search
@@ -19024,6 +19959,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15`
 - `N = 36` (16 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8552103` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `CZ on (0,1)`, `CZ on (0,3)`, `CZ on (0,4)` and 228 more (9 single-wire, 231 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 9, 11, 31, 35, 63, 127, 421, 427, 429, 430 and 279 more; `T⁵` on columns 7, 8, 17, 23, 254, 496; `T†` on columns 1, 4, 19, 255, 458, 470, 476, 487, 497, 511, `T` on the rest
 - discovery: AI search
@@ -19040,6 +19976,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16`
 - `N = 37` (17 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8646129` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `S† on 16`, `CZ on (0,1)`, `CZ on (0,3)` and 249 more (10 single-wire, 251 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 7, 9, 11, 23, 127, 254, 374, 375, 376, 377, 378 and 303 more; `T⁵` on columns 0, 2, 8, 31, 421, 458, 477, 489, 493, 511; `T†` on columns 1, 35, 63, 387, 469, 487, 488, 496, 503, `T` on the rest
 - discovery: AI search
@@ -19056,6 +19993,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17`
 - `N = 38` (18 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8718320` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `S† on 16`, `S† on 17`, `CZ on (0,1)` and 268 more (11 single-wire, 269 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 2, 31, 255, 358, 362, 363, 370, 372, 373, 374 and 303 more; `T⁵` on columns 3, 4, 5, 8, 9, 11, 17, 19, 35, 127, 352, 387 and 2 more; `T†` on columns 15, 477, 488, 496, 503, 511, `T` on the rest
 - discovery: AI search
@@ -19072,6 +20010,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18`
 - `N = 39` (19 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8764516` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `S† on 16`, `S† on 17`, `S† on 18` and 286 more (12 single-wire, 286 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 2, 127, 330, 331, 332, 337, 338, 343, 344, 346, 347 and 333 more; `T⁵` on columns 3, 8, 15, 35, 255, 469, 470; `T†` on columns 1, 5, 17, 23, 31, 63, 458, 487, 489, 499, 503, 511, `T` on the rest
 - discovery: AI search
@@ -19088,6 +20027,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19`
 - `N = 40` (20 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8797071` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `S† on 16`, `S† on 17`, `S† on 18` and 304 more (13 single-wire, 303 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 7, 11, 23, 31, 254, 302, 303, 305, 306, 308, 310 and 354 more; `T⁵` on columns 3, 4, 9, 469, 487, 499, 503; `T†` on columns 1, 15, 35, 127, 253, 255, 352, 421, 458, 470, 511, `T` on the rest
 - discovery: AI search
@@ -19104,6 +20044,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20`
 - `N = 41` (21 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8863695` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `S† on 4`, `S on 6`, `S on 7`, `S† on 8`, `S on 9`, `Z on 10`, `S† on 13`, `S† on 14`, `S on 15`, `Z on 16` and 309 more (16 single-wire, 305 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -19121,6 +20062,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21`
 - `N = 42` (22 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8833102` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `S† on 16`, `S† on 17`, `S† on 18` and 343 more (15 single-wire, 340 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 17, 19, 237, 239, 245, 246, 248, 249, 250, 252, 254 and 379 more; `T⁵` on columns 1, 4, 8, 11, 35, 63, 127, 253, 469, 470, 503; `T†` on columns 5, 15, 31, 234, 255, 458, 468, 487, 499, `T` on the rest
 - discovery: AI search
@@ -19137,6 +20079,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22`
 - `N = 43` (23 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8843672` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `S† on 16`, `S† on 17`, `S† on 18` and 364 more (16 single-wire, 360 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -19153,6 +20096,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23`
 - `N = 44` (24 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8854131` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `S† on 16`, `S† on 17`, `S† on 18` and 384 more (17 single-wire, 379 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -19169,6 +20113,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24`
 - `N = 45` (25 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8860380` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `S† on 16`, `S† on 17`, `S† on 18` and 408 more (18 single-wire, 402 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -19185,6 +20130,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25`
 - `N = 46` (26 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8863902` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `S† on 16`, `S† on 17`, `S† on 18` and 434 more (19 single-wire, 427 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -19201,6 +20147,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26`
 - `N = 47` (27 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8866408` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `S† on 16`, `S† on 17`, `S† on 18` and 456 more (20 single-wire, 448 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -19217,6 +20164,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27`
 - `N = 48` (28 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8867866` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `S† on 16`, `S† on 17`, `S† on 18` and 482 more (20 single-wire, 474 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -19233,6 +20181,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28`
 - `N = 49` (29 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8868610` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `S† on 16`, `S† on 17`, `S† on 18` and 506 more (21 single-wire, 497 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -19249,6 +20198,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29`
 - `N = 50` (30 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8869013` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `S† on 16`, `S† on 17`, `S† on 18` and 524 more (22 single-wire, 514 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -19265,6 +20215,7 @@ readable copy of exactly these rows.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30`
 - `N = 51` (31 outputs + 20 checks)
 - distance: exactly 5, witnessed by the fault on columns [95, 197, 281, 549, 921]
+- leading error coefficient: `A_5 = 8869410` accepted harmful faults of weight 5
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 2`, `S† on 3`, `S on 4`, `Z on 8`, `Z on 11`, `S† on 12`, `Z on 13`, `Z on 14`, `S† on 16`, `S† on 17`, `S† on 18` and 545 more (23 single-wire, 534 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -19281,6 +20232,7 @@ readable copy of exactly these rows.
 - output gate: `012+013+023+123`
 - `N = 11` (4 outputs + 7 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 127]
+- leading error coefficient: `A_2 = 4572` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: pre-existing
@@ -19295,6 +20247,7 @@ readable copy of exactly these rows.
 - output gate: `01+02+12+012`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 4, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 255]
+- leading error coefficient: `A_2 = 2550` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
 - or no correction at all, with rotations run as `T³` on columns 1259, 1260, 1261, 1262, 1263, 1264, 1265, 1266, 1267, 1268, 1269, 1270 and 2 more; `T†` on columns 255, 263, 271, `T` on the rest
 - discovery: pre-existing
@@ -19339,6 +20292,7 @@ readable copy of exactly these rows.
 - output gate: `0+1`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 2, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 511]
+- leading error coefficient: `A_2 = 1533` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -19466,6 +20420,7 @@ readable copy of exactly these rows.
 - output gate: `012`
 - `N = 11` (3 outputs + 8 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 2, witnessed by the fault on columns [0, 255]
+- leading error coefficient: `A_2 = 7140` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`
 - or no correction at all, with rotations run as `T³` on columns 255, 263, 271, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011 and 20 more; `T⁵` on columns 1, 2, 3, 4, 5, 6, 7, `T` on the rest
 - discovery: pre-existing
@@ -19480,6 +20435,7 @@ readable copy of exactly these rows.
 - output gate: `01`
 - `N = 11` (2 outputs + 9 checks), exact minimal T-count 3, reduced degree 2
 - distance: exactly 2, witnessed by the fault on columns [0, 511]
+- leading error coefficient: `A_2 = 3066` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
 - or no correction at all, with rotations run as `T³` on columns 0, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035, 2036 and 7 more; `T†` on columns 511, 520, `T` on the rest
 - discovery: pre-existing
@@ -19494,6 +20450,7 @@ readable copy of exactly these rows.
 - output gate: `0`
 - `N = 11` (1 output + 10 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 1023` accepted harmful faults of weight 2
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing

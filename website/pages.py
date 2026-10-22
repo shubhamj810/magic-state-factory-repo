@@ -374,6 +374,8 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
     p, gate, m, dist = record["parameters"], record["gate"], record["metrics"], record["distance"]
     n, k, d, N, r = p["n"], p["k"], p["d"], p["N"], p["r"]
     label = record["id"]
+    a_d = dist.get("A_d")
+    a_d_tex = None if a_d is None else f"{a_d:,}".replace(",", "{,}")
     cert = dist.get("certified") if dist.get("certified") and dist["certified"]["d"] > d else None
     monos = gate.get("monomials") or []
     kinds = {1: 0, 2: 0, 3: 0}
@@ -396,6 +398,7 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
     <p class="lede gate-lede">{gate_tex(short)}</p>
     <dl class="summary">
       <div><dt>distance, proved here</dt><dd>{tex(distance_bounds(d, dist["is_exact"], dist.get("upper")))}{(" " + cert_tag(cert["d"], cert["is_exact"], cert.get("met"))) if cert else ""}</dd></div>
+      <div><dt>error coefficient</dt><dd>{tex(f"A_{{{d}}}={a_d_tex}") if a_d is not None else "—"}</dd></div>
       <div><dt>{tex(r"\gamma_\rho")}</dt><dd>{num(m.get("gamma_rho_claim"), 4)}{claim_mark(summary)}</dd></div>
       <div><dt>{tex(r"V_{\mathrm{ex}}")}</dt><dd>{m["v_ex"] if m["v_ex"] is not None else "—"}</dd></div>
       <div><dt>wires</dt><dd>{tex(f"N={N}")}</dd></div>
@@ -416,6 +419,13 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
                + (f" Its source certifies {tex(('d=' if cert['is_exact'] else 'd\\ge ') + str(cert['d']))}"
                   + (f", and a fault of weight {cert['d']} is shown below, so {tex('d=' + str(cert['d']))}."
                      if cert.get("met") and not cert["is_exact"] else ".") if cert else "")),
+        metric(f"error coefficient {tex(f'A_{{{d}}}')}", None if a_d is None else f"{a_d:,}",
+               f"Faults of weight {d} in the circuit shown that pass every check and damage the output. "
+               f"The output error is {tex(f'A_{{{d}}}\\,p^{{{d}}}')} to leading order."
+               if a_d is not None else
+               "Undefined while the distance is only a lower bound." if not dist["is_exact"] else
+               "Too many faults to count at this size.",
+               "not defined" if not dist["is_exact"] else "not computed"),
         metric(f"wires {tex('N')}", N),
         metric(f"checks {tex('r')}", r),
         metric(tex(r"V_{\mathrm{ex}}"), m["v_ex"],
@@ -453,6 +463,12 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
                  + (f", and one of weight {dist['upper']} is, so the distance lies between the two."
                     if dist.get("upper") is not None and dist["upper"] > d else ", so the true distance may be larger."))
         + "</p>"
+        + (f"<p>Exactly {a_d:,} faults of weight {d} are undetectable and damaging, so "
+           f"{tex(f'A_{{{d}}}={a_d_tex}')}. If each rotation fails independently "
+           f"with probability {tex('p')}, an accepted run has a damaged output with probability "
+           f"{tex(f'A_{{{d}}}\\,p^{{{d}}}+O(p^{{{d + 1}}})')}.</p>" if a_d is not None else
+           f"<p class=\"small muted\">The number of such faults of weight {d}, {tex(f'A_{{{d}}}')}, is not "
+           f"computed: there are too many to count at this size.</p>" if dist["is_exact"] else "")
         + (f'<p class="small">A damaging fault of weight {dist["upper"]}'
            + (f' sits on columns <code>{esc(json.dumps(dist["witness"], separators=(",", ":")))}</code>' if dist.get("witness") else " exists")
            + ".</p>" if dist.get("upper") is not None else "")
