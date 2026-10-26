@@ -50,7 +50,8 @@ SMALL_N, SMALL_K = 40, 4
 
 
 def payload():
-    return CF.load()
+    """Both files, as every tool reads them."""
+    return CF.load_all()
 
 
 def small_rows(rows, limit=6, d=None):
@@ -107,7 +108,7 @@ class TestCatalogFile(unittest.TestCase):
         changed would be invisible in it.
         """
         shipped = CF.CATALOG_JSON.read_text(encoding="utf-8")
-        self.assertEqual(CF.serialise(self.payload), shipped)
+        self.assertEqual(CF.serialise(CF.load()), shipped)
 
     def test_serialiser_leaves_bracketed_numbers_in_strings_alone(self):
         """The collapse pattern is anchored to a newline after ``[``, which a
@@ -132,7 +133,7 @@ class TestCatalogFile(unittest.TestCase):
 
     def test_markdown_is_deterministic(self):
         self.assertEqual(CF.render_markdown(self.payload),
-                         CF.render_markdown(CF.load()))
+                         CF.render_markdown(CF.load_all()))
 
     def test_every_label_is_well_formed_and_unique(self):
         for index, row in enumerate(self.payload["factories"], 1):
@@ -148,7 +149,8 @@ class TestCatalogFile(unittest.TestCase):
         self.assertTrue(VC.label_problems(row))
 
     def test_every_row_carries_exactly_the_documented_fields(self):
-        allowed = set(CF.REQUIRED_FIELDS + CF.OPTIONAL_FIELDS)
+        allowed = set(CF.REQUIRED_FIELDS + CF.OPTIONAL_FIELDS
+                      + CF.STORAGE_FIELDS)
         for index, row in enumerate(self.payload["factories"], 1):
             with self.subTest(row=index):
                 self.assertFalse(set(CF.REQUIRED_FIELDS) - set(row))
@@ -667,7 +669,7 @@ class TestWritingTheFilesSafely(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             same = Path(d) / "catalogue.json"
             with self.assertRaises(ValueError):
-                CF.write(payload(), same, same)
+                CF.write(CF.load(), same, same)
 
     def test_a_failed_render_leaves_both_files_as_they_were(self):
         """They are written to say the same thing; a half-written pair does not.
@@ -678,13 +680,14 @@ class TestWritingTheFilesSafely(unittest.TestCase):
         """
         with tempfile.TemporaryDirectory() as d:
             js, md = Path(d) / "c.json", Path(d) / "c.md"
-            CF.write(payload(), js, md)
+            # the main file alone: `write` refuses the large file's rows
+            CF.write(CF.load(), js, md)
             before_json, before_md = js.read_text(), md.read_text()
             real = CF.render_markdown
             try:
                 CF.render_markdown = lambda _p: 1 / 0
                 with self.assertRaises(ZeroDivisionError):
-                    CF.write(payload(), js, md)
+                    CF.write(CF.load(), js, md)
             finally:
                 CF.render_markdown = real
             self.assertEqual(js.read_text(), before_json)
@@ -1133,7 +1136,8 @@ class TestChangedRows(unittest.TestCase):
     """`--changed`: re-verify what a merge changed, and nothing it did not."""
 
     def setUp(self):
-        self.payload = CF.load()
+        # both files: the command line compares the large file's rows too
+        self.payload = CF.load_all()
         self.baseline = copy.deepcopy(self.payload)
 
     def test_an_unchanged_catalogue_has_no_changed_rows(self):
@@ -1167,7 +1171,9 @@ class TestChangedRows(unittest.TestCase):
         del self.baseline["factories"][0]
         self.baseline["n_classes"] -= 1
         base = directory / "base.json"
-        base.write_text(CF.serialise(self.baseline), encoding="utf-8")
+        # both files, as the baseline's own pair: its large file sits beside it
+        CF.write_all(self.baseline, base,
+                     directory / CF.CATALOG_LARGE_JSON.name, directory / "base.md")
         out = io.StringIO()
         with contextlib.redirect_stdout(out):
             code = VC.main(["--baseline", str(base), "--quiet"])

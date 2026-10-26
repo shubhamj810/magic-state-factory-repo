@@ -72,6 +72,32 @@ re-derivation, so this list is also the list of things that get checked.
                  ``references`` map.  Provenance like ``sources``: the keys must
                  resolve, and nothing about the circuit follows from them
 
+THE LARGE FILE
+--------------
+A circuit too long to store as columns -- the two-group circuits of the
+Borrowed Identities large sweep reach 65,534 rotations -- lives in
+`master_catalog_large.json` instead, as a row with every field above except
+``columns``, plus
+
+  ``construction``    the rule that builds the columns, a small object read by
+                      `constructions.py` (``{"family": "two-group", "k": ...}``)
+  ``columns_sha256``  the SHA-256 of those columns as compact JSON, in the
+                      order `constructions.columns` fixes, which pins the
+                      circuit independently of the code that builds it
+
+and with ``rotation_powers`` written as one digit per column -- the power of
+``T`` it runs at, ``1``, ``3``, ``5`` or ``7`` -- instead of a list of pairs.
+`load_all` reads both files and returns the large rows MATERIALISED: the
+columns rebuilt and the powers decoded, so that a row of either file has the
+same fields and every tool reads it the same way; ``construction`` and
+``columns_sha256`` stay on the row and say where it lives.  `write_all` splits
+the rows back by that and writes each file.  The header (scope, regimes,
+references, ...) is the main file's alone; the large file carries only a
+description of its encoding and its own ``n_classes``, both rebuilt on every
+write.  `load` and `write` still read and write the main file alone, and
+`write` refuses a payload holding a large row rather than write its rebuilt
+columns into the main file.
+
 THE CLASS
 ---------
 One row per ``(n, k, d, GL(k,2) class of the gate)``: two circuits with the same
@@ -89,8 +115,11 @@ import re
 from collections import Counter
 from pathlib import Path
 
+import constructions as K
+
 HERE = Path(__file__).resolve().parent
 CATALOG_JSON = HERE / "master_catalog.json"
+CATALOG_LARGE_JSON = HERE / "master_catalog_large.json"
 CATALOG_MD = HERE / "MASTER_CATALOG.md"
 
 #: MASTER_CATALOG.md inlines a circuit's columns only when a person could read
@@ -141,6 +170,11 @@ OPTIONAL_FIELDS = ("sk_key_note", "t_count_note", "poly_degree_note",
                    "columns_note", "dedup_note",
                    "d_certified", "d_certified_is_exact", "d_certified_source")
 
+#: Where a row's circuit is stored, not what it is: carried by exactly the rows
+#: of the large file (see the module docstring), both or neither.  Kept apart
+#: from `OPTIONAL_FIELDS`, which are statements about the circuit.
+STORAGE_FIELDS = ("construction", "columns_sha256")
+
 #: The JSON TYPE every documented field must have, as a small grammar:
 #: ``"int"``, ``"str"``, ``"bool"``, ``"dict"``, ``"int?"`` for "that or null",
 #: and ``[inner]`` for a list of ``inner``.
@@ -178,6 +212,7 @@ FIELD_TYPES = {
     "d_witness": ["int"], "regimes": ["str"], "sources": ["dict"],
     "citations": ["str"], "catalog_label": "str",
     "clifford_correction": "dict", "rotation_powers": [["int"]],
+    "construction": "dict", "columns_sha256": "str",
 }
 
 
@@ -394,6 +429,179 @@ def rows(path: Path | str = CATALOG_JSON) -> list[dict]:
     return load(path)["factories"]
 
 
+# ------------------------------------------------------------- the large file
+#: What a large-file row keeps on disk in place of its power list.
+POWER_DIGITS = "1357"
+LARGE_ABOUT = (
+    "Rows of the master catalogue whose circuits are too long to store as "
+    "columns. Each row has every field of a row of master_catalog.json except "
+    "columns, plus construction, the rule that builds the columns "
+    "(master_catalog/constructions.py), and columns_sha256, the SHA-256 of "
+    "those columns as compact JSON in the order the rule fixes. "
+    "rotation_powers is one digit per column, the power of T it runs at "
+    "(1, 3, 5 or 7), or null. The header of master_catalog.json applies to "
+    "these rows too: regimes, discovery, references and the rest.")
+
+
+def is_large(row) -> bool:
+    """Whether a row belongs to the large file: it carries a construction."""
+    return isinstance(row, dict) and "construction" in row
+
+
+def encode_powers(powers, n: int):
+    """``[[column, power], ...]`` -> one digit per column, or ``None``."""
+    if powers is None:
+        return None
+    digits = ["1"] * n
+    last = -1
+    for column, power in powers:
+        # `type(...) is int`: 3.0 == 3 and True == 1 in Python, and either
+        # would be written as something else (``"3.0"``) or read back as
+        # something else (column 1)
+        if type(column) is not int or type(power) is not int \
+                or not last < column < n or power not in (3, 5, 7):
+            raise ValueError(f"rotation_powers entry {[column, power]} cannot "
+                             f"be written one digit per column: the columns "
+                             f"must rise within 0..{n - 1} and the powers be "
+                             f"3, 5 or 7")
+        digits[column] = str(power)
+        last = column
+    return "".join(digits)
+
+
+def decode_powers(text, n: int):
+    """The inverse of `encode_powers`."""
+    if text is None:
+        return None
+    if not isinstance(text, str) or len(text) != n \
+            or set(text) - set(POWER_DIGITS):
+        raise ValueError(f"rotation_powers must be null or {n} digits from "
+                         f"{POWER_DIGITS!r}, one per column")
+    return [[column, int(digit)] for column, digit in enumerate(text)
+            if digit != "1"]
+
+
+def materialise(stored: dict, where: str) -> dict:
+    """A large-file row as every tool reads it: columns rebuilt, powers decoded.
+
+    ``columns`` goes in just before ``construction``.  Raises ``ValueError``
+    on a row that cannot be decoded at all -- no construction, a construction
+    of the wrong shape, an unreadable power string -- naming ``where``.  It
+    does NOT compare the columns with ``columns_sha256``: that is a statement
+    about the row, and `verify_catalog` checks it.
+    """
+    if not isinstance(stored, dict) or "construction" not in stored:
+        raise ValueError(f"{where}: a large-file row needs a construction")
+    if "columns" in stored:
+        raise ValueError(f"{where}: a large-file row stores no columns; its "
+                         f"construction builds them")
+    wrong = _rule_problems(stored)
+    if wrong:
+        raise ValueError(f"{where}: " + "; ".join(wrong))
+    cols = K.columns(stored["construction"])
+    row = {}
+    for key, value in stored.items():
+        if key == "construction":
+            row["columns"] = cols
+        if key == "rotation_powers":
+            try:
+                value = decode_powers(value, len(cols))
+            except ValueError as error:
+                raise ValueError(f"{where}: {error}") from None
+        row[key] = value
+    return row
+
+
+def _rule_problems(row) -> list[str]:
+    """The construction's shape, and its agreement with the row's k and N."""
+    wrong = K.problems(row.get("construction"))
+    if wrong:
+        return wrong
+    return [f"the construction has {name}={row['construction'][name]}, the "
+            f"row {name}={row.get(name)}" for name in ("k", "N")
+            if row["construction"][name] != row.get(name)]
+
+
+def dematerialise(row: dict, where: str) -> dict:
+    """The inverse of `materialise`, refusing a row whose columns are not the
+    ones its construction builds, or whose digest does not match them -- the
+    file would otherwise stop saying what the row in memory says.  The two
+    storage fields must follow ``columns`` directly, where `materialise` puts
+    them back, so that the two are exact inverses, key order included."""
+    missing = [name for name in STORAGE_FIELDS + ("columns",)
+               if name not in row]
+    if missing:
+        raise ValueError(f"{where}: a large row needs {', '.join(missing)}")
+    wrong = _rule_problems(row)
+    if wrong:
+        raise ValueError(f"{where}: " + "; ".join(wrong))
+    keys = list(row)
+    if "columns" not in keys or keys[keys.index("columns") + 1:
+                                     keys.index("columns") + 3] \
+            != list(STORAGE_FIELDS):
+        raise ValueError(f"{where}: construction and columns_sha256 must "
+                         f"follow columns directly")
+    cols = K.columns(row["construction"])
+    if row.get("columns") != cols:
+        raise ValueError(f"{where}: the columns are not the ones the "
+                         f"construction builds, so the large file cannot "
+                         f"hold this row")
+    if row.get("columns_sha256") != K.digest(cols):
+        raise ValueError(f"{where}: columns_sha256 does not match the "
+                         f"columns")
+    stored = {}
+    for key, value in row.items():
+        if key == "columns":
+            continue
+        if key == "rotation_powers":
+            value = encode_powers(value, len(cols))
+        stored[key] = value
+    return stored
+
+
+def large_header(count: int) -> dict:
+    return {"about": LARGE_ABOUT,
+            "families": {name: K.FAMILY_DESCRIPTIONS[name]
+                         for name in K.FAMILIES},
+            "n_classes": count}
+
+
+def load_large(path: Path | str = CATALOG_LARGE_JSON) -> list[dict]:
+    """The large file's rows, materialised; none if the file does not exist."""
+    path = Path(path)
+    if not path.exists():
+        return []
+    try:
+        blob = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as error:
+        raise ValueError(f"{path}: not JSON ({error})") from None
+    if not isinstance(blob, dict) or not isinstance(blob.get("factories"), list):
+        raise ValueError(f"{path}: not a large catalogue (no 'factories' list)")
+    return [materialise(stored, f"{path.name} factories[{i}]")
+            for i, stored in enumerate(blob["factories"])]
+
+
+def load_all(path: Path | str = CATALOG_JSON,
+             large_path: Path | str | None = CATALOG_LARGE_JSON) -> dict:
+    """The main payload with the large file's rows after its own, materialised.
+
+    The header is the main file's; ``n_classes`` in it counts the main file's
+    rows only (see `main_rows`).  ``large_path=None`` reads no large file.
+    """
+    payload = load(path)
+    large = load_large(large_path) if large_path is not None else []
+    if any(is_large(row) for row in payload["factories"]):
+        raise ValueError(f"{path}: a row of the main file carries a "
+                         f"construction; such rows belong in the large file")
+    payload["factories"] = payload["factories"] + large
+    return payload
+
+
+def main_rows(rows_: list[dict]) -> list[dict]:
+    """The rows the main file holds; the rest are the large file's."""
+    return [row for row in rows_ if not is_large(row)]
+
+
 # --------------------------------------------------------------------- writing
 def serialise(payload: dict) -> str:
     """``indent=1``, except that a list of bare integers stays on one line,
@@ -437,13 +645,73 @@ def write(payload: dict, json_path: Path | str = CATALOG_JSON,
     either the old file or the new one.
     """
     json_path, md_path = Path(json_path), Path(md_path)
+    held = [row.get("catalog_label") for row in payload["factories"]
+            if is_large(row)]
+    if held:
+        # Writing a materialised large row here would put its rebuilt columns
+        # -- tens of thousands of them -- into the main file.  `write_all`
+        # splits the rows; this writer only ever writes the main file.
+        raise ValueError(f"{len(held)} row(s) carry a construction "
+                         f"({', '.join(map(str, held[:3]))}"
+                         f"{', ...' if len(held) > 3 else ''}) and belong in "
+                         f"the large file: write with write_all")
     if json_path.resolve() == md_path.resolve():
         # Otherwise the Markdown silently overwrites the catalogue it was
         # rendered from, exit status 0, recoverable only from version control.
         raise ValueError(f"the catalogue and its rendered page cannot be the "
                          f"same file ({json_path})")
-    body, page = serialise(payload), render_markdown(payload)
+    # The page shows the whole catalogue: the large file beside this one, if
+    # there is one, is left as it is and its rows are rendered after these,
+    # as `write_all` renders them -- a tool that writes only the main file
+    # must not drop them from the page.
+    large = load_large(json_path.with_name(CATALOG_LARGE_JSON.name))
+    body = serialise(payload)
+    page = render_markdown({**payload, "factories": payload["factories"] + large}
+                           if large else payload)
     for path, text in ((json_path, body), (md_path, page)):
+        tmp = path.with_name(path.name + ".tmp")
+        tmp.write_text(text, encoding="utf-8")
+        os.replace(tmp, path)
+
+
+def write_all(payload: dict, json_path: Path | str = CATALOG_JSON,
+              large_path: Path | str = CATALOG_LARGE_JSON,
+              md_path: Path | str = CATALOG_MD) -> None:
+    """Write the main file, the large file and the Markdown from one payload.
+
+    The rows are split by `is_large`, each keeping its order.  The main
+    header's ``n_classes`` is set to the main file's count and the large file's
+    header is rebuilt, so neither can go stale.  The Markdown is rendered from
+    the rows in FILE order, main then large, which is the order `load_all`
+    returns -- so the page is the same whether it is written here or rendered
+    again from the files.  Everything is rendered before anything is written,
+    and each file is replaced atomically.  The large file is written only when
+    there are large rows or it already exists, so a catalogue without any
+    keeps its one file.
+    """
+    json_path, large_path, md_path = (Path(json_path), Path(large_path),
+                                      Path(md_path))
+    if len({json_path.resolve(), large_path.resolve(), md_path.resolve()}) != 3:
+        raise ValueError("the main file, the large file and the page must be "
+                         "three different files")
+    main = main_rows(payload["factories"])
+    large = [row for row in payload["factories"] if is_large(row)]
+    def with_rows(rows_):
+        # in place, so the header keys keep the order the file has them in
+        out = {key: (rows_ if key == "factories" else value)
+               for key, value in payload.items()}
+        if "n_classes" in out:
+            out["n_classes"] = len(main)
+        return out
+    main_payload, ordered = with_rows(main), with_rows(main + large)
+    texts = [(json_path, serialise(main_payload))]
+    if large or large_path.exists():
+        stored = [dematerialise(row, f"large row {row.get('catalog_label')}")
+                  for row in large]
+        texts.append((large_path, serialise(
+            {**large_header(len(stored)), "factories": stored})))
+    texts.append((md_path, render_markdown(ordered)))
+    for path, text in texts:
         tmp = path.with_name(path.name + ".tmp")
         tmp.write_text(text, encoding="utf-8")
         os.replace(tmp, path)
@@ -514,16 +782,22 @@ def render_markdown(payload: dict) -> str:
     tmax = max((r["t_count"] for r in rows_ if r["t_count"] is not None),
                default=0)
 
+    large_rows = sum(1 for row in rows_ if is_large(row))
     A("# Master catalogue — every level-3, distance ≥ 2 factory")
     A("")
-    A("Generated from [`master_catalog.json`](master_catalog.json) by")
+    A("Generated from [`master_catalog.json`](master_catalog.json)"
+      + (" and [`master_catalog_large.json`](master_catalog_large.json)"
+         if large_rows else "") + " by")
     A("[`catalogfile.py`](catalogfile.py) — **do not edit by hand**; edit")
     A("nothing here, run [`merge_results.py`](merge_results.py) instead.")
     A("Every row is re-checked against its own columns by")
     A("[`verify_catalog.py`](verify_catalog.py).")
     A("")
     A(f"**{len(rows_)} distinct `(n, k, d, GL(k,2) gate)` classes**, every one with an")
-    A("explicit circuit whose gate, check parities, distance, output width,")
+    A("explicit circuit"
+      + (f" ({large_rows} of them stored as the rule that builds it)"
+         if large_rows else "")
+      + " whose gate, check parities, distance, output width,")
     A("freedom from spectator and pseudo-outputs, freedom from check wires")
     A("that carry no syndrome bit of their own, and — where those are")
     A("computable — exact T-count and reduced degree are re-derived from its")
@@ -655,10 +929,22 @@ def render_markdown(payload: dict) -> str:
     A(f"Circuits with more than {INLINE_COLUMNS} columns are **not** printed")
     A("here: a thousand-column list is not something a reader reads, and")
     A("inlining them would triple this file to no purpose. They are complete in")
-    A("[`master_catalog.json`](master_catalog.json), which is the machine-")
-    A("readable copy of exactly these rows.")
+    if large_rows:
+        A("[`master_catalog.json`](master_catalog.json), the machine-readable")
+        A(f"copy of these rows, except the last {large_rows}: their circuits are")
+        A("too long for that file, and")
+        A("[`master_catalog_large.json`](master_catalog_large.json) keeps them")
+        A("as the rule that builds their columns (`constructions.py`), with the")
+        A("SHA-256 of those columns.")
+    else:
+        A("[`master_catalog.json`](master_catalog.json), which is the machine-")
+        A("readable copy of exactly these rows.")
     A("")
+    in_file = {"main": 0, "large": 0}
     for index, row in enumerate(rows_, 1):
+        where = "large" if is_large(row) else "main"
+        position = in_file[where]
+        in_file[where] += 1
         d = row["d"] if row["d_is_exact"] else f"≥{row['d']}"
         A(f"### {index}. `[[{row['n']},{row['k']},{d}]]` — {row['gate_human']}")
         A("")
@@ -713,7 +999,13 @@ def render_markdown(payload: dict) -> str:
             if name in row:
                 A(f"- note ({label}): {row[name]}")
         A("")
-        if row["n"] <= INLINE_COLUMNS:
+        if where == "large":
+            rule = ", ".join(f"{key}={value}" for key, value
+                             in row["construction"].items() if key != "family")
+            A(f"- {row['n']} columns, built by the "
+              f"{row['construction']['family']} construction ({rule}); see "
+              f"`master_catalog_large.json`, `factories[{position}]`")
+        elif row["n"] <= INLINE_COLUMNS:
             A("```text")
             A("[" + ", ".join("{" + ",".join(map(str, c)) + "}"
                               for c in row["columns"]) + "]")
@@ -724,7 +1016,7 @@ def render_markdown(payload: dict) -> str:
             # says which of the two "237" means -- "factory 237" under a
             # heading that reads "### 238." sends the reader to the wrong row.
             A(f"- {row['n']} columns — see `master_catalog.json`, "
-              f"`factories[{index - 1}]`")
+              f"`factories[{position}]`")
         A("")
     A("## References")
     A("")

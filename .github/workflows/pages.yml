@@ -5,7 +5,8 @@
 # "GitHub Actions".  After that, every push to main that touches the catalogue
 # or the website redeploys it.
 #
-#   master_catalog/master_catalog.json --build_site.py--> website/_site --> Pages
+#   master_catalog/master_catalog.json (+ master_catalog_large.json)
+#     --build_site.py--> website/_site --> Pages
 #
 # Only website/_site is published -- the built pages and their JSON -- never the
 # rest of the repository.
@@ -16,11 +17,17 @@ on:
     branches: [main]
     paths:
       - master_catalog/master_catalog.json
+      - master_catalog/master_catalog_large.json
+      - master_catalog/catalogfile.py
+      - master_catalog/constructions.py
       - website/**
       - .github/workflows/pages.yml
   pull_request:
     paths:
       - master_catalog/master_catalog.json
+      - master_catalog/master_catalog_large.json
+      - master_catalog/catalogfile.py
+      - master_catalog/constructions.py
       - website/**
       - .github/workflows/pages.yml
   workflow_dispatch:

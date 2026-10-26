@@ -107,6 +107,8 @@ import numpy as np
 _RNG_SEED = 20261010
 #: Exhaustive evaluation up to this many wires (``2^16`` inputs).
 EXHAUSTIVE_N = 16
+#: The most entries of the input-by-column parity matrix held at once.
+PARITY_CELLS = 1 << 22
 #: Weight-3 inputs are tried while ``C(N,3) * n`` stays below this.
 WEIGHT3_BUDGET = 400_000_000
 #: Random inputs of any weight, on top of the structured ones.
@@ -397,12 +399,19 @@ def logical_action(columns, k: int, N: int, gate, corr=None, powers=None,
         return parity.astype(np.int64) @ p
 
     if N <= EXHAUSTIVE_N:
-        # every input, as a matrix: the general form of every term
+        # every input, as a matrix: the general form of every term.  The
+        # parities are a 2^N x n matrix, which at N = 16 and n = 65,534 -- the
+        # longest circuits of the large file -- would be 34 GB at once, so the
+        # inputs go through in blocks of at most `PARITY_CELLS` entries; the
+        # result is the same array, in the same order.
         V = np.array(list(itertools.product((0, 1), repeat=N)), dtype=np.int64)
         extra = V @ single + np.einsum("ij,ij->i", V @ pair, V) // 2
         for (a, b, c), phase in triple.items():
             extra += phase * (V[:, a] & V[:, b] & V[:, c])
-        judge(rotations_of(parities_of(V)), extra, lambda i: np.nonzero(V[i])[0])
+        step = max(1, PARITY_CELLS // max(n, 1))
+        rotations = np.concatenate([rotations_of(parities_of(V[start:start + step]))
+                                    for start in range(0, len(V), step)])
+        judge(rotations, extra, lambda i: np.nonzero(V[i])[0])
         return failures, "every input"
 
     weight3 = math.comb(N, 3) * n <= WEIGHT3_BUDGET

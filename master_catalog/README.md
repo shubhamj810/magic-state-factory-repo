@@ -13,10 +13,12 @@ AI-assisted and SAT searches, the literature and
 | file | contents |
 |---|---|
 | [`master_catalog.json`](master_catalog.json) | **the catalogue.** One self-contained row per class |
+| [`master_catalog_large.json`](master_catalog_large.json) | the rows whose circuits are too long to store as columns, each with the rule that rebuilds them (see [The large file](#the-large-file)) |
+| [`constructions.py`](constructions.py) | those rules: from a construction to its columns, in a fixed order, and the digest that pins them |
 | [`MASTER_CATALOG.md`](MASTER_CATALOG.md) | a human-readable **view** of it — generated, never hand-edited |
 | [`verify_catalog.py`](verify_catalog.py) | re-derives every row of the JSON from its columns |
 | [`merge_results.py`](merge_results.py) | verifies new results to the same bar and merges them in |
-| [`catalogfile.py`](catalogfile.py) | reading, writing and rendering the two files; no verification logic |
+| [`catalogfile.py`](catalogfile.py) | reading, writing and rendering the catalogue files; no verification logic |
 | [`attribute_classification.py`](attribute_classification.py) | credit a classification catalogue on the rows it certifies -- provenance only, no circuit field is touched; needed because a class first merged from a search and later covered by a classification is a `duplicate` to `merge_results.py`, which changes nothing |
 | [`faultcore.py`](faultcore.py), [`glcanon.py`](glcanon.py), [`skcanon.py`](skcanon.py), [`gatelabels.py`](gatelabels.py) | the primitives: fault search, the `GL(k,2)` class decision, the `S_k` frame, reading a claimed gate string |
 | [`errorcoeff.py`](errorcoeff.py) | the leading error coefficient `A_d`, counted exactly by the MacWilliams identity and by enumeration |
@@ -26,7 +28,7 @@ AI-assisted and SAT searches, the literature and
 | [`tests/`](tests/) | an independent re-derivation of the shipped file, plus the verifier's and merger's own suites |
 
 ```bash
-.venv/bin/python master_catalog/verify_catalog.py            # all rows, plus the file-level checks (~35 min)
+.venv/bin/python master_catalog/verify_catalog.py            # all rows of both files, plus the file-level checks (~60 min)
 .venv/bin/python master_catalog/verify_catalog.py --changed  # only the rows that differ from HEAD, plus the file-level checks (seconds)
 .venv/bin/python master_catalog/verify_catalog.py --rows 1-20
 .venv/bin/python master_catalog/merge_results.py new.json    # see "Merging" below
@@ -48,11 +50,46 @@ merge_results                        imports verify_catalog, so "verified to
                                      graph, not a promise in prose
 ```
 
+## The large file
+
+A few circuits are too long to store as columns. The Borrowed Identities large
+sweep has two-group circuits of up to 65,534 rotations, and storing the 127
+longest would take `master_catalog.json` to about 99 MB, at GitHub's 100 MB hard
+limit on a file and twice its recommended 50 MB. Such a
+row lives in [`master_catalog_large.json`](master_catalog_large.json). It has
+every field of a row of the main file except `columns`, plus
+
+- `construction`, the rule that builds the columns. The two-group rule is
+  `{"family": "two-group", "k": k, "N": N, "s_total": a, "s_O": b}`, and
+  [`constructions.py`](constructions.py) defines it from scratch: one `T` on
+  `A ∪ B` for every set `A` of outputs and non-empty set `B` of checks with
+  `|A| = 0` or `|A| ≡ 1 (mod b)`, and `|A| + |B| ≡ 1 (mod a)`. The columns
+  come out in one fixed order, which `d_witness` and `rotation_powers` count
+  in.
+- `columns_sha256`, the SHA-256 of those columns as compact JSON. It pins the
+  circuit independently of the code that builds it.
+
+`rotation_powers` is written as one digit per column there, the power of `T`
+the column runs at (`1`, `3`, `5` or `7`). The main file's header (scope,
+regimes, references, …) applies to these rows too; the large file carries only
+a description of its encoding and its own `n_classes`.
+
+[`catalogfile.load_all`](catalogfile.py) reads both files and rebuilds each
+large row's columns, so the verifier, the merger and the website see the same
+fields on every row and treat them alike. `write_all` writes them back apart,
+and `write` refuses a large row rather than put its columns into the main
+file. A result can be merged as a `construction` in place of `columns`.
+
+The phase check of item 9 below evaluates every one of the `2^16` inputs on
+the longest of these circuits, which makes a full verification about 25
+minutes longer.
+
 ## What is in it
 
-**1277 distinct `(n, k, d, GL(k,2) gate)` classes**. 427 of them are at
-distance 2, and 217 are at `d ≥ 3` with `n ≤ 54`. Widths run `k = 1..373`,
-injection counts `n = 8..4095`, and distances proved here `d = 2..7`. Sources
+**1404 distinct `(n, k, d, GL(k,2) gate)` classes**, 127 of them in the large
+file. 549 are at distance 2, and 217 are at `d ≥ 3` with `n ≤ 54`. Widths run
+`k = 1..373`, injection counts `n = 8..65534`, and distances proved here
+`d = 2..7`. Sources
 certify up to `d ≥ 31` on the transversal-T codes.
 
 **Transversal-T codes.**
@@ -74,7 +111,7 @@ pin the distance, though the label, as always, uses the proved one.
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running
 some rotations as `T³`, `T⁵` or `T†` makes that unnecessary
-(`rotation_powers`). 14 classes need nothing, 778 need only powers, and 485
+(`rotation_powers`). 16 classes need nothing, 887 need only powers, and 501
 need `S` or `CZ` gates whatever the powers.
 [`migrations/clifford_corrections_2026_10_10.py`](migrations/clifford_corrections_2026_10_10.py)
 added the fields, and [`clifford.py`](clifford.py) explains the method.
@@ -98,7 +135,11 @@ merged the 792 level-3 circuits
 rebuilt from them: 250 new classes, 187 already held, and 355 pseudo-outputs
 refused, 351 of them the Clifford-padding circuits. New classes are credited to
 the paper, and held classes keep their credit. The large sweep is taken up to
-`n = 4095`; above that it would take this file past GitHub's 100 MB limit.
+`n = 4095` there; above that it would take this file to about 99 MB, at
+GitHub's 100 MB hard limit, so its 127 longer circuits, up to `n = 65534`, went to the large file
+as two-group constructions:
+[`migrations/borrowed_identities_large_2026_10_26.py`](migrations/borrowed_identities_large_2026_10_26.py)
+merged them, all 127 new classes credited to the paper.
 To stay under GitHub's 50 MB advisory size, the integer lists in this file
 have been written without a space after the comma (`[0,1,3]`) since then.
 
@@ -216,6 +257,7 @@ is also the list of what gets checked.
 | `regimes`, `discovery`, `strongest_claim`, `sources` | provenance |
 | `relabelled_into_canonical_frame` | provenance too: whether the ingest permuted the columns on the way in. A self-contained row cannot prove or refute it — the source frame is not stored — so the verifier checks its type and nothing else |
 | `citations` | provenance too: keys of the header's `references` map crediting the class. The verifier checks that every key resolves, that a row cites at least one work and none twice; which works are credited is a curation decision |
+| `construction`, `columns_sha256` | only on a row of the large file: the rule that builds `columns`, and the SHA-256 of those columns as compact JSON |
 | `catalog_label` | the row's permanent public name, `n.k.d.x` (e.g. `15.1.3.a`): `d` is the distance proved here, and the letters (`a`…`z`, then `ba`, `bb`, … as LMFDB numbers its classes) count the classes at that `(n, k, d)` in the order they entered the catalogue. `merge_results.py` gives a new class the next unused letter, and an improvement keeps the label, so a label is never changed or reused. The verifier checks the format and that no two rows share one. It is also the address of the class's page on the website |
 
 **Provenance is inert.** `sources` and
@@ -294,6 +336,11 @@ For every row, from `columns`, `k` and `N` alone:
     cheap. Where the direct enumeration of the harmful faults also finishes,
     it must give the same number. A floor carries `null`, and so does an exact
     row only where the recount cannot reach either.
+11. **The construction**, on a row of the large file: the rule is well formed,
+    agrees with the row's `k` and `N`, rebuilds exactly the columns every
+    check above read, and their SHA-256 is the row's `columns_sha256`. The
+    large file itself must be byte for byte what `catalogfile.write_all`
+    writes for its rows.
 
 Then, across the file, three checks a single row cannot make about itself:
 
@@ -343,7 +390,8 @@ and merging it changes nothing.
 |---|---|
 | `k` | **required.** Output wires, as above — a declaration |
 | `N` | **required.** Ambient wires; must equal the largest qubit index used, plus one |
-| `columns` | **required.** One list of qubit indices per π/4 rotation |
+| `columns` | **required**, unless `construction` is given. One list of qubit indices per π/4 rotation |
+| `construction` | in place of `columns`, for a circuit too long to store: a rule [`constructions.py`](constructions.py) rebuilds the columns from. An accepted row keeps it and goes to the large file |
 | `n` | optional; checked against `columns` |
 | `d` | optional **claim**. Never believed — see below |
 | `gate` | optional **claim**, as monomials or a `T`/`CS`/`CCZ` string |

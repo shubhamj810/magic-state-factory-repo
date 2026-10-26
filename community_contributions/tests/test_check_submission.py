@@ -39,7 +39,8 @@ sys.path.insert(0, str(CONTRIB))
 import check_submission as CS                                  # noqa: E402
 
 CF, MR, VC = CS.CF, CS.MR, CS.VC
-MASTER_FILES = (CF.CATALOG_JSON, CF.CATALOG_MD, VC.METRIC_CACHE)
+MASTER_FILES = (CF.CATALOG_JSON, CF.CATALOG_LARGE_JSON, CF.CATALOG_MD,
+                VC.METRIC_CACHE)
 
 #: The Bravyi-Kitaev generator matrix: one logical row, four stabiliser rows.
 BK_ROWS = ["111111100000000", "101010101010101", "011001100110011",

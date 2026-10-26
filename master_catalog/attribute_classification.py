@@ -38,8 +38,8 @@ So this tool does the provenance half only, and touches nothing else:
 
 Idempotent: a row already naming the regime -- or its stronger form, a Pareto
 point of the length-54 classification for ``exhaustive classification n<=54``
--- is skipped, so running this twice is a no-op the second time.  Both catalogue files are rewritten through
-`catalogfile.write`, deterministically, and the run exits non-zero if
+-- is skipped, so running this twice is a no-op the second time.  The catalogue files and the page are
+rewritten through `catalogfile.write_all`, deterministically, and the run exits non-zero if
 `verify_catalog.provenance_problems` reports anything afterwards.
 """
 from __future__ import annotations
@@ -112,7 +112,7 @@ def main(argv=None):
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args(argv)
 
-    payload = CF.load()
+    payload = CF.load_all()
     header = payload["regimes"]
     if a.regime not in header:
         raise SystemExit(f"regime {a.regime!r} is not one the catalogue header defines; "
@@ -169,8 +169,8 @@ def main(argv=None):
         for kind, detail in problems:
             print(f"  {kind}: {detail}")
         raise SystemExit("provenance would be inconsistent; nothing written")
-    CF.write(payload)
-    print(f"wrote master_catalog.json and MASTER_CATALOG.md: {len(touched)} row(s) now credit "
+    CF.write_all(payload)
+    print(f"wrote the catalogue files and MASTER_CATALOG.md: {len(touched)} row(s) now credit "
           f"{a.regime!r}")
     return 0
 

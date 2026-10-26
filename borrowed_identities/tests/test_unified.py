@@ -13,6 +13,9 @@ catalogue does with them.
 * ``A_d`` is the literal count of harmful weight-``d`` faults on every
   circuit small enough to enumerate, and equals the upstream's own error
   coefficient on all seven level-3 targets it publishes;
+* every large-sweep row above ``n = 4095`` is in ``unified_l3_large.json``
+  as its construction, and each is a row of the master catalogue's large
+  file with the same rule, digest, parameters and ``A_d``;
 * in the master catalogue, every class the merge added carries its circuit
   and is credited to the paper, or to the earlier work the upstream row
   names; no Clifford-padding circuit is held, and
@@ -264,6 +267,62 @@ class TestCircuits(unittest.TestCase):
             with self.subTest(target=e["target"]):
                 self.assertTrue(hits)
                 self.assertEqual({c["A_d"] for c in hits}, {e["c"]})
+
+
+class TestTheLargeFile(unittest.TestCase):
+    """The circuits too long to store, against the large catalogue file."""
+
+    def test_every_long_row_is_a_large_catalogue_row_with_its_rule(self):
+        entries = json.loads((CIRCUITS / "unified_l3_large.json").read_text())["circuits"]
+        lines = {line for line, r in table("large_sweep.csv")
+                 if r["l"] == "3" and int(r["n"]) > LARGE_SWEEP_MAX_N}
+        self.assertEqual({e["line"] for e in entries}, lines)
+        self.assertEqual(len(entries), 127)
+        stored = json.loads((REPO / "master_catalog" / "master_catalog_large.json")
+                            .read_text())["factories"]
+        by_label = {}
+        for row in stored:
+            for source in row["sources"]:
+                if source["file"] == "borrowed_identities/circuits/unified_l3_large.json":
+                    by_label[source["label"]] = row
+        for e in entries:
+            row = by_label.get(e["id"])
+            with self.subTest(id=e["id"]):
+                self.assertIsNotNone(row)
+                self.assertEqual(row["construction"], e["construction"])
+                self.assertEqual(row["columns_sha256"], e["columns_sha256"])
+                self.assertEqual((row["n"], row["k"], row["N"], row["d"], row["A_d"]),
+                                 (e["n"], e["k"], e["wires"], e["d"], e["A_d"]))
+                self.assertEqual(row["citations"], [BORROWED])
+                self.assertNotIn("columns", row)
+
+
+class TestTheTwoGroupRule(unittest.TestCase):
+    """`master_catalog/constructions.py` rebuilds a two-group circuit from its
+    parameters, written from the definition; here it meets the upstream code,
+    `Two_group.build_gate_set` expanded by `unified_search.two_group_gates`
+    with every sign +1, on every level-3 row of the large sweep."""
+
+    def test_the_rule_is_the_upstream_circuit(self):
+        sys.path.insert(0, str(UPSTREAM / "searches"))
+        sys.path.insert(0, str(UPSTREAM / "classification"))
+        sys.path.insert(0, str(REPO / "master_catalog"))
+        import constructions
+        import unified_search
+        from Two_group import build_gate_set
+        rows = [r for _line, r in table("large_sweep.csv") if r["l"] == "3"]
+        self.assertEqual(len(rows), 495)
+        for row in rows:
+            k, N = int(row["k"]), int(row["N"])
+            a, b = int(row["s_total"]), int(row["s_O"])
+            pairs, _, _ = build_gate_set(k, N - k, a, b)
+            upstream = sorted(sorted(S) for S, c in unified_search.two_group_gates(
+                k, N - k, {p: 1 for p in pairs}) if c % 2)
+            with self.subTest(k=k, N=N, s_total=a, s_O=b):
+                ours = constructions.columns({"family": "two-group", "k": k,
+                                              "N": N, "s_total": a, "s_O": b})
+                self.assertEqual(ours, upstream)
+                self.assertEqual(len(ours), int(row["n"]))
 
 
 class TestMasterCatalogue(unittest.TestCase):

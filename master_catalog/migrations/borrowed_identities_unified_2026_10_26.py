@@ -76,11 +76,27 @@ def earliest(keys, references):
     return list(dict.fromkeys(key for key in keys if year[key] == first))
 
 
+def _changes(payload):
+    """Whether writing ``payload`` would change any of the three files."""
+    import tempfile
+    real = (CF.CATALOG_JSON, CF.CATALOG_LARGE_JSON, CF.CATALOG_MD)
+    with tempfile.TemporaryDirectory() as scratch:
+        trial = [Path(scratch) / path.name for path in real]
+        if real[1].exists():
+            # `write_all` rewrites an existing large file even with no rows to
+            # put in it, so the trial must start with one too
+            trial[1].write_text("", encoding="utf-8")
+        CF.write_all(payload, *trial)
+        return any((path.read_text(encoding="utf-8") if path.exists() else None)
+                   != (out.read_text(encoding="utf-8") if out.exists() else None)
+                   for path, out in zip(real, trial))
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
-    payload = CF.load()
+    payload = CF.load_all()
     before = len(payload["factories"])
     for key, entry in REFERENCES.items():
         payload["references"].setdefault(key, dict(entry))
@@ -132,14 +148,14 @@ def main(argv=None):
         raise SystemExit("the merged catalogue fails a file-level check; "
                          "nothing written")
     # a re-run re-adds the paper to held rows and takes it off again, so what
-    # decides whether anything changed is the text, not the counters
-    if args.dry_run or CF.serialise(payload) == CF.CATALOG_JSON.read_text(
-            encoding="utf-8"):
+    # decides whether anything changed is the text of the files, not the
+    # counters: everything is written to a scratch directory and compared
+    if args.dry_run or not _changes(payload):
         print("nothing written" + (": dry run" if args.dry_run else ""))
         return 0
-    CF.write(payload)
+    CF.write_all(payload)
     VC.persist_metric_cache()
-    print("wrote master_catalog.json and MASTER_CATALOG.md")
+    print("wrote the catalogue files and MASTER_CATALOG.md")
     return 0
 
 

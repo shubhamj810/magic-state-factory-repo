@@ -1,13 +1,13 @@
 # Master catalogue — every level-3, distance ≥ 2 factory
 
-Generated from [`master_catalog.json`](master_catalog.json) by
+Generated from [`master_catalog.json`](master_catalog.json) and [`master_catalog_large.json`](master_catalog_large.json) by
 [`catalogfile.py`](catalogfile.py) — **do not edit by hand**; edit
 nothing here, run [`merge_results.py`](merge_results.py) instead.
 Every row is re-checked against its own columns by
 [`verify_catalog.py`](verify_catalog.py).
 
-**1277 distinct `(n, k, d, GL(k,2) gate)` classes**, every one with an
-explicit circuit whose gate, check parities, distance, output width,
+**1404 distinct `(n, k, d, GL(k,2) gate)` classes**, every one with an
+explicit circuit (127 of them stored as the rule that builds it) whose gate, check parities, distance, output width,
 freedom from spectator and pseudo-outputs, freedom from check wires
 that carry no syndrome bit of their own, and — where those are
 computable — exact T-count and reduced degree are re-derived from its
@@ -38,7 +38,7 @@ witness are different kinds of statement.
 | `AI search: pure-T puncture caps` (2 rows) | cap witnesses, NOT records. Each ATTAINS a proved maximum puncture count for its ambient size at d=6, making that bound exact rather than an upper bound: m=8 gives [[248,8,6]] and m=9 gives [[496,16,6]], both with n/t = 31 exactly, hence gamma = log(31)/log(6) = 1.9165 independent of m. Filed as evidence that these cells are closed, not as frontier points -- the d=6 pure-T bar is gamma 1.063146. |
 | `AI search: full-simplex pure-T frames` (2 rows) | widest pure-T frames held at n=511. DOMINATED on rate by the derived direct-sum baseline [[508,92,3]] = 4 x [[127,23,3]], rho = 508/92 = 5.5217. These are WIDTH points, explicitly NOT rate records: beating the baseline at n=511 needs k >= 93. |
 | `AI search: graph gluing` (9 rows) | found by an AI search that glues catalogued small factories along a graph of paired-column contractions; exact distance verified from columns; a verified witness, not a maximum |
-| `borrowed-identity search: two-group` (391 rows) | found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum |
+| `borrowed-identity search: two-group` (518 rows) | found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum |
 | `borrowed-identity search: symmetry-free` (36 rows) | found by the symmetry-free, targeted-output borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/), which solves for the check couplings of a chosen output; a verified witness, not a maximum |
 | `Jain-Albert doubling: weak triply even family` (13 rows) | a code of the weak triply even family of Jain and Albert (arXiv:2408.12752, Table II; transversal_t_codes/): quadratic-residue CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction, where T on some qubits and T-dagger on the rest is a logical T; a verified witness, not a maximum |
 | `Jain-Albert doubling: triorthogonal family` (12 rows) | a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum |
@@ -58,7 +58,7 @@ the retained circuit is the one with the fewest ambient qubits. `regimes`
 therefore tells you the strongest claim available for that class.
 
 `discovery` says whether a class is **found only by AI search**: **633** rows are
-`AI search` — found only by AI search campaigns — and **644** are
+`AI search` — found only by AI search campaigns — and **771** are
 `pre-existing` — a classification stage run in this repository, the
 symmetry-SAT search, the borrowed-identity searches or a community
 contribution has them, or the length-54 classification alone does. A
@@ -78,10 +78,10 @@ nothing about them.
 
 ## Summary
 
-- output widths: `k=1`: 90, `k=2`: 103, `k=3`: 134, `k=4`: 144, `k=5`: 181, `k=6`: 170, `k=7`: 91, `k=8`: 64, `k=9`: 15, `k=10`: 13, `k=11`: 16, `k=12`: 21, `k=13`: 11, `k=14`: 10, `k=15`: 12, `k=16`: 11, `k=17`: 8, `k=18`: 2, `k=19`: 6, `k=20`: 2, `k=21`: 3, `k=22`: 1, `k=23`: 2, `k=24`: 1, `k=25`: 1, `k=26`: 4, `k=27`: 3, `k=28`: 6, `k=29`: 5, `k=30`: 2, `k=31`: 2, `k=32`: 2, `k=35`: 2, `k=36`: 4, `k=37`: 2, `k=39`: 1, `k=40`: 7, `k=41`: 6, `k=42`: 4, `k=43`: 4, `k=44`: 2, `k=46`: 2, `k=47`: 1, `k=59`: 1, `k=64`: 1, `k=65`: 1, `k=68`: 1, `k=70`: 3, `k=71`: 2, `k=72`: 1, `k=73`: 2, `k=76`: 1, `k=77`: 1, `k=80`: 5, `k=81`: 4, `k=82`: 2, `k=83`: 1, `k=84`: 2, `k=85`: 2, `k=86`: 2, `k=87`: 2, `k=88`: 2, `k=89`: 2, `k=92`: 1, `k=94`: 1, `k=99`: 1, `k=100`: 4, `k=101`: 3, `k=102`: 2, `k=104`: 1, `k=112`: 1, `k=113`: 1, `k=114`: 1, `k=115`: 1, `k=116`: 2, `k=117`: 1, `k=118`: 1, `k=119`: 1, `k=120`: 1, `k=122`: 3, `k=123`: 1, `k=124`: 2, `k=126`: 4, `k=128`: 7, `k=132`: 2, `k=137`: 1, `k=144`: 1, `k=145`: 1, `k=146`: 1, `k=152`: 1, `k=153`: 1, `k=154`: 1, `k=161`: 1, `k=162`: 2, `k=171`: 1, `k=176`: 1, `k=177`: 1, `k=184`: 1, `k=185`: 1, `k=189`: 1, `k=194`: 1, `k=197`: 1, `k=199`: 1, `k=201`: 1, `k=210`: 1, `k=224`: 1, `k=287`: 1, `k=365`: 1, `k=372`: 1, `k=373`: 1
-- distances: `d=2`: 427, `d=3`: 633, `d=4`: 86, `d=5`: 70, `d=6`: 51, `d=7`: 10 (1227 pinned exactly, the rest proved floors)
-- exact minimal T-count reaches **17** (455 rows are too wide for it to be computed)
-- injection counts from `n=8` to `n=4095`
+- output widths: `k=1`: 99, `k=2`: 121, `k=3`: 155, `k=4`: 171, `k=5`: 198, `k=6`: 186, `k=7`: 100, `k=8`: 74, `k=9`: 15, `k=10`: 13, `k=11`: 16, `k=12`: 21, `k=13`: 11, `k=14`: 10, `k=15`: 12, `k=16`: 11, `k=17`: 8, `k=18`: 2, `k=19`: 6, `k=20`: 2, `k=21`: 3, `k=22`: 1, `k=23`: 2, `k=24`: 1, `k=25`: 1, `k=26`: 4, `k=27`: 3, `k=28`: 6, `k=29`: 5, `k=30`: 2, `k=31`: 2, `k=32`: 2, `k=35`: 2, `k=36`: 4, `k=37`: 2, `k=39`: 1, `k=40`: 7, `k=41`: 6, `k=42`: 4, `k=43`: 4, `k=44`: 2, `k=46`: 2, `k=47`: 1, `k=59`: 1, `k=64`: 1, `k=65`: 1, `k=68`: 1, `k=70`: 3, `k=71`: 2, `k=72`: 1, `k=73`: 2, `k=76`: 1, `k=77`: 1, `k=80`: 5, `k=81`: 4, `k=82`: 2, `k=83`: 1, `k=84`: 2, `k=85`: 2, `k=86`: 2, `k=87`: 2, `k=88`: 2, `k=89`: 2, `k=92`: 1, `k=94`: 1, `k=99`: 1, `k=100`: 4, `k=101`: 3, `k=102`: 2, `k=104`: 1, `k=112`: 1, `k=113`: 1, `k=114`: 1, `k=115`: 1, `k=116`: 2, `k=117`: 1, `k=118`: 1, `k=119`: 1, `k=120`: 1, `k=122`: 3, `k=123`: 1, `k=124`: 2, `k=126`: 4, `k=128`: 7, `k=132`: 2, `k=137`: 1, `k=144`: 1, `k=145`: 1, `k=146`: 1, `k=152`: 1, `k=153`: 1, `k=154`: 1, `k=161`: 1, `k=162`: 2, `k=171`: 1, `k=176`: 1, `k=177`: 1, `k=184`: 1, `k=185`: 1, `k=189`: 1, `k=194`: 1, `k=197`: 1, `k=199`: 1, `k=201`: 1, `k=210`: 1, `k=224`: 1, `k=287`: 1, `k=365`: 1, `k=372`: 1, `k=373`: 1
+- distances: `d=2`: 549, `d=3`: 638, `d=4`: 86, `d=5`: 70, `d=6`: 51, `d=7`: 10 (1354 pinned exactly, the rest proved floors)
+- exact minimal T-count reaches **17** (474 rows are too wide for it to be computed)
+- injection counts from `n=8` to `n=65534`
 
 `T` is the exact minimal level-3 T-count (Amy–Mosca / Reed–Muller
 minimum-weight `Z_8` coset); `deg` is the CNOT-frame-reduced
@@ -1386,6 +1386,133 @@ entries are under [References](#references).
 | 1275 | `4094.1.2.a` | `[[4094,1,2]]` | — | 12 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1276 | `4094.2.2.a` | `[[4094,2,2]]` | — | 13 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1277 | `4095.1.3.a` | `[[4095,1,3]]` | — | 13 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1278 | `4156.6.2.a` | `[[4156,6,2]]` | — | 15 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1279 | `4335.8.2.a` | `[[4335,8,2]]` | — | 16 | `012+013+014+015+016+017+023+024+025+0…` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1280 | `4362.5.2.a` | `[[4362,5,2]]` | — | 15 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1281 | `4599.4.2.a` | `[[4599,4,2]]` | — | 13 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1282 | `4599.7.2.a` | `[[4599,7,2]]` | — | 16 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1283 | `4600.4.2.a` | `[[4600,4,2]]` | — | 14 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1284 | `4620.4.2.a` | `[[4620,4,2]]` | — | 15 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1285 | `4699.8.2.a` | `[[4699,8,2]]` | — | 15 | `01+02+03+04+05+06+07+12+13+14+15+16+1…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1286 | `4728.8.2.a` | `[[4728,8,2]]` | — | 16 | `0+1+2+3+4+5+6+7` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1287 | `4988.4.2.a` | `[[4988,4,2]]` | — | 16 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1288 | `5053.3.2.a` | `[[5053,3,2]]` | — | 15 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1289 | `5115.3.2.a` | `[[5115,3,2]]` | — | 13 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1290 | `5115.4.2.a` | `[[5115,4,2]]` | — | 14 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1291 | `5116.3.2.a` | `[[5116,3,2]]` | — | 14 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1292 | `5116.4.2.a` | `[[5116,4,2]]` | — | 15 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1293 | `5481.8.2.a` | `[[5481,8,2]]` | — | 14 | `0+1+2+3+4+5+6+7+01+02+03+04+05+06+07+…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1294 | `5552.8.2.a` | `[[5552,8,2]]` | — | 15 | `012+013+014+015+016+017+023+024+025+0…` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1295 | `5588.7.2.a` | `[[5588,7,2]]` | — | 14 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1296 | `5610.6.2.a` | `[[5610,6,2]]` | — | 14 | `0+1+2+3+4+5+012+013+014+015+023+024+0…` | 6 | 2 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1297 | `5621.5.2.a` | `[[5621,5,2]]` | — | 14 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34` | 10 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1298 | `5624.7.2.a` | `[[5624,7,2]]` | — | 15 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1299 | `5626.6.2.a` | `[[5626,6,2]]` | — | 15 | `0+1+2+3+4+5` | 6 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1300 | `5627.5.2.a` | `[[5627,5,2]]` | — | 15 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1301 | `5643.5.2.a` | `[[5643,5,2]]` | — | 16 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1302 | `5882.6.2.a` | `[[5882,6,2]]` | — | 16 | `0+1+2+3+4+5` | 6 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1303 | `5961.7.2.a` | `[[5961,7,2]]` | — | 16 | `0+1+2+3+4+5+6` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1304 | `6012.4.2.a` | `[[6012,4,2]]` | — | 16 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1305 | `6046.2.2.a` | `[[6046,2,2]]` | — | 15 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1306 | `6138.4.2.a` | `[[6138,4,2]]` | — | 14 | `01+02+03+12+13+23+012+013+023+123` | 5 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1307 | `6138.5.2.a` | `[[6138,5,2]]` | — | 15 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1308 | `6139.5.2.a` | `[[6139,5,2]]` | — | 16 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1309 | `6140.4.2.a` | `[[6140,4,2]]` | — | 15 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1310 | `6141.2.2.a` | `[[6141,2,2]]` | — | 13 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1311 | `6142.2.2.a` | `[[6142,2,2]]` | — | 14 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1312 | `6643.6.2.a` | `[[6643,6,2]]` | — | 15 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1313 | `6644.6.2.a` | `[[6644,6,2]]` | — | 16 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1314 | `7161.5.2.a` | `[[7161,5,2]]` | — | 15 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1315 | `7161.6.2.a` | `[[7161,6,2]]` | — | 16 | `0+1+2+3+4+5` | 6 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1316 | `7162.5.2.a` | `[[7162,5,2]]` | — | 16 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1317 | `7665.7.2.a` | `[[7665,7,2]]` | — | 16 | `0+1+2+3+4+5+6+01+02+03+04+05+06+12+13…` | — | — | none | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1318 | `8061.3.2.a` | `[[8061,3,2]]` | — | 16 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1319 | `8116.6.2.a` | `[[8116,6,2]]` | — | 15 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1320 | `8122.5.2.a` | `[[8122,5,2]]` | — | 15 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1321 | `8124.4.2.a` | `[[8124,4,2]]` | — | 15 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1322 | `8125.3.2.a` | `[[8125,3,2]]` | — | 15 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1323 | `8126.2.2.a` | `[[8126,2,2]]` | — | 15 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1324 | `8127.1.3.a` | `[[8127,1,3]]` | — | 15 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1325 | `8184.3.2.a` | `[[8184,3,2]]` | — | 13 | `012` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1326 | `8184.4.2.a` | `[[8184,4,2]]` | — | 14 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1327 | `8184.6.2.a` | `[[8184,6,2]]` | — | 16 | `01+02+03+04+05+12+13+14+15+23+24+25+3…` | 7 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1328 | `8188.2.2.a` | `[[8188,2,2]]` | — | 13 | `01` | 3 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1329 | `8188.3.2.a` | `[[8188,3,2]]` | — | 14 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1330 | `8189.3.2.a` | `[[8189,3,2]]` | — | 15 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1331 | `8190.1.2.a` | `[[8190,1,2]]` | — | 13 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1332 | `8190.2.2.a` | `[[8190,2,2]]` | — | 14 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1333 | `8191.1.3.a` | `[[8191,1,3]]` | — | 14 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1334 | `8452.6.2.a` | `[[8452,6,2]]` | — | 16 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1335 | `8778.5.2.a` | `[[8778,5,2]]` | — | 16 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1336 | `9207.4.2.a` | `[[9207,4,2]]` | — | 14 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1337 | `9208.4.2.a` | `[[9208,4,2]]` | — | 15 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1338 | `9212.4.2.a` | `[[9212,4,2]]` | — | 16 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1339 | `9435.8.2.a` | `[[9435,8,2]]` | — | 16 | `01+02+03+04+05+06+07+12+13+14+15+16+1…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1340 | `10141.3.2.a` | `[[10141,3,2]]` | — | 16 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1341 | `10235.3.2.a` | `[[10235,3,2]]` | — | 14 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1342 | `10235.4.2.a` | `[[10235,4,2]]` | — | 15 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1343 | `10236.3.2.a` | `[[10236,3,2]]` | — | 15 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1344 | `10236.4.2.a` | `[[10236,4,2]]` | — | 16 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1345 | `11049.8.2.a` | `[[11049,8,2]]` | — | 15 | `0+1+2+3+4+5+6+7+01+02+03+04+05+06+07+…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1346 | `11120.8.2.a` | `[[11120,8,2]]` | — | 16 | `012+013+014+015+016+017+023+024+025+0…` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1347 | `11220.7.2.a` | `[[11220,7,2]]` | — | 15 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1348 | `11242.6.2.a` | `[[11242,6,2]]` | — | 15 | `0+1+2+3+4+5+012+013+014+015+023+024+0…` | 6 | 2 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1349 | `11253.5.2.a` | `[[11253,5,2]]` | — | 15 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34` | 10 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1350 | `11256.7.2.a` | `[[11256,7,2]]` | — | 16 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1351 | `11258.6.2.a` | `[[11258,6,2]]` | — | 16 | `0+1+2+3+4+5` | 6 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1352 | `11259.5.2.a` | `[[11259,5,2]]` | — | 16 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1353 | `12222.2.2.a` | `[[12222,2,2]]` | — | 16 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1354 | `12282.4.2.a` | `[[12282,4,2]]` | — | 15 | `01+02+03+12+13+23+012+013+023+123` | 5 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1355 | `12282.5.2.a` | `[[12282,5,2]]` | — | 16 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1356 | `12284.4.2.a` | `[[12284,4,2]]` | — | 16 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1357 | `12285.2.2.a` | `[[12285,2,2]]` | — | 14 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1358 | `12286.2.2.a` | `[[12286,2,2]]` | — | 15 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1359 | `12357.8.2.a` | `[[12357,8,2]]` | — | 16 | `01+02+03+04+05+06+07+12+13+14+15+16+1…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1360 | `12379.7.2.a` | `[[12379,7,2]]` | — | 16 | `0+1+2+3+4+5+6+01+02+03+04+05+06+12+13…` | — | — | none | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1361 | `12386.6.2.a` | `[[12386,6,2]]` | — | 16 | `01+02+03+04+05+12+13+14+15+23+24+25+3…` | 7 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1362 | `12388.5.2.a` | `[[12388,5,2]]` | — | 16 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1363 | `12389.4.2.a` | `[[12389,4,2]]` | — | 16 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1364 | `12390.3.2.a` | `[[12390,3,2]]` | — | 16 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1365 | `12391.2.2.a` | `[[12391,2,2]]` | — | 16 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1366 | `12392.1.3.a` | `[[12392,1,3]]` | — | 16 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1367 | `13299.6.2.a` | `[[13299,6,2]]` | — | 16 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1368 | `14329.5.2.a` | `[[14329,5,2]]` | — | 16 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1369 | `16372.6.2.a` | `[[16372,6,2]]` | — | 16 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1370 | `16376.3.2.a` | `[[16376,3,2]]` | — | 14 | `012` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1371 | `16376.4.2.a` | `[[16376,4,2]]` | — | 15 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1372 | `16378.5.2.a` | `[[16378,5,2]]` | — | 16 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1373 | `16380.2.2.a` | `[[16380,2,2]]` | — | 14 | `01` | 3 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1374 | `16380.3.2.a` | `[[16380,3,2]]` | — | 15 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1375 | `16380.4.2.a` | `[[16380,4,2]]` | — | 16 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1376 | `16381.3.2.a` | `[[16381,3,2]]` | — | 16 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1377 | `16382.1.2.a` | `[[16382,1,2]]` | — | 14 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1378 | `16382.2.2.a` | `[[16382,2,2]]` | — | 15 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1379 | `16383.1.3.a` | `[[16383,1,3]]` | — | 15 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1380 | `18423.4.2.a` | `[[18423,4,2]]` | — | 15 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1381 | `18424.4.2.a` | `[[18424,4,2]]` | — | 16 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1382 | `20475.3.2.a` | `[[20475,3,2]]` | — | 15 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1383 | `20475.4.2.a` | `[[20475,4,2]]` | — | 16 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1384 | `20476.3.2.a` | `[[20476,3,2]]` | — | 16 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1385 | `22185.8.2.a` | `[[22185,8,2]]` | — | 16 | `0+1+2+3+4+5+6+7+01+02+03+04+05+06+07+…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1386 | `22484.7.2.a` | `[[22484,7,2]]` | — | 16 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1387 | `22506.6.2.a` | `[[22506,6,2]]` | — | 16 | `0+1+2+3+4+5+012+013+014+015+023+024+0…` | 6 | 2 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1388 | `22517.5.2.a` | `[[22517,5,2]]` | — | 16 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34` | 10 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1389 | `24570.4.2.a` | `[[24570,4,2]]` | — | 16 | `01+02+03+12+13+23+012+013+023+123` | 5 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1390 | `24573.2.2.a` | `[[24573,2,2]]` | — | 15 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1391 | `24574.2.2.a` | `[[24574,2,2]]` | — | 16 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1392 | `32760.3.2.a` | `[[32760,3,2]]` | — | 15 | `012` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1393 | `32760.4.2.a` | `[[32760,4,2]]` | — | 16 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1394 | `32764.2.2.a` | `[[32764,2,2]]` | — | 15 | `01` | 3 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1395 | `32764.3.2.a` | `[[32764,3,2]]` | — | 16 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1396 | `32766.1.2.a` | `[[32766,1,2]]` | — | 15 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1397 | `32766.2.2.a` | `[[32766,2,2]]` | — | 16 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1398 | `32767.1.3.a` | `[[32767,1,3]]` | — | 16 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1399 | `36855.4.2.a` | `[[36855,4,2]]` | — | 16 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1400 | `40955.3.2.a` | `[[40955,3,2]]` | — | 16 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1401 | `49149.2.2.a` | `[[49149,2,2]]` | — | 16 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1402 | `65528.3.2.a` | `[[65528,3,2]]` | — | 16 | `012` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1403 | `65532.2.2.a` | `[[65532,2,2]]` | — | 16 | `01` | 3 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 1404 | `65534.1.2.a` | `[[65534,1,2]]` | — | 16 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 
 ## Circuits
 
@@ -1397,8 +1524,12 @@ exactly the `gate` shown — the rows too wide to canonicalise say so.
 Circuits with more than 200 columns are **not** printed
 here: a thousand-column list is not something a reader reads, and
 inlining them would triple this file to no purpose. They are complete in
-[`master_catalog.json`](master_catalog.json), which is the machine-
-readable copy of exactly these rows.
+[`master_catalog.json`](master_catalog.json), the machine-readable
+copy of these rows, except the last 127: their circuits are
+too long for that file, and
+[`master_catalog_large.json`](master_catalog_large.json) keeps them
+as the rule that builds their columns (`constructions.py`), with the
+SHA-256 of those columns.
 
 ### 1. `[[8,3,2]]` — CCZ012
 
@@ -24868,6 +24999,1969 @@ readable copy of exactly these rows.
 
 - 4095 columns — see `master_catalog.json`, `factories[1276]`
 
+### 1278. `[[4156,6,2]]` — CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
+
+- output gate: `012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
+- `N = 15` (6 outputs + 9 checks), exact minimal T-count 11, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 135]
+- leading error coefficient: `A_2 = 31710` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`
+- or no correction at all, with rotations run as `T³` on columns 64, 3948, 3984, 4004, 4014, 4020, 4090, 4123, 4124, 4125, 4127, 4139 and 13 more; `T⁵` on columns 1, 2, 3; `T†` on columns 0, 6, 12, 28, 135, 270, 525, 1020, 2010, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0895 (`unified search l=3, two-group s_total=4,s_O=2`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 4156 columns, built by the two-group construction (k=6, N=15, s_total=4, s_O=2); see `master_catalog_large.json`, `factories[0]`
+
+### 1279. `[[4335,8,2]]` — CCZ012·CCZ013·CCZ014·CCZ015·CCZ016·CCZ017·CCZ023·CCZ024·CCZ025·CCZ026·CCZ027·CCZ034·CCZ035·CCZ036·CCZ037·CCZ045·CCZ046·CCZ047·CCZ056·CCZ057·CCZ067·CCZ123·CCZ124·CCZ125·CCZ126·CCZ127·CCZ134·CCZ135·CCZ136·CCZ137·CCZ145·CCZ146·CCZ147·CCZ156·CCZ157·CCZ167·CCZ234·CCZ235·CCZ236·CCZ237·CCZ245·CCZ246·CCZ247·CCZ256·CCZ257·CCZ267·CCZ345·CCZ346·CCZ347·CCZ356·CCZ357·CCZ367·CCZ456·CCZ457·CCZ467·CCZ567
+
+- output gate: `012+013+014+015+016+017+023+024+025+026+027+034+035+036+037+045+046+047+056+057+067+123+124+125+126+127+134+135+136+137+145+146+147+156+157+167+234+235+236+237+245+246+247+256+257+267+345+346+347+356+357+367+456+457+467+567`
+- `N = 16` (8 outputs + 8 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 255]
+- leading error coefficient: `A_2 = 34680` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)` and 16 more (0 single-wire, 28 CZ in all)
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0998 (`unified search l=3, two-group s_total=1,s_O=6`)
+- note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+- note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+
+- 4335 columns, built by the two-group construction (k=8, N=16, s_total=1, s_O=6); see `master_catalog_large.json`, `factories[1]`
+
+### 1280. `[[4362,5,2]]` — CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34·CCZ012·CCZ013·CCZ014·CCZ023·CCZ024·CCZ034·CCZ123·CCZ124·CCZ134·CCZ234
+
+- output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
+- `N = 15` (5 outputs + 10 checks), exact minimal T-count 6, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 1791]
+- leading error coefficient: `A_2 = 15345` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
+- or no correction at all, with rotations run as `T³` on columns 255, 511, 1023, 2046, 3954, 4018, 4085, 4086, 4087, 4088, 4089, 4090 and 11 more; `T†` on columns 56, 120, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0815 (`unified search l=3, two-group s_total=4,s_O=2`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 4362 columns, built by the two-group construction (k=5, N=15, s_total=4, s_O=2); see `master_catalog_large.json`, `factories[2]`
+
+### 1281. `[[4599,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+
+- output gate: `012+013+023+123`
+- `N = 13` (4 outputs + 9 checks), exact minimal T-count 7, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 511]
+- leading error coefficient: `A_2 = 18396` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0736 (`unified search l=3, two-group s_total=1,s_O=2`)
+
+- 4599 columns, built by the two-group construction (k=4, N=13, s_total=1, s_O=2); see `master_catalog_large.json`, `factories[3]`
+
+### 1282. `[[4599,7,2]]` — CS01·CS02·CS03·CS04·CS05·CS06·CS12·CS13·CS14·CS15·CS16·CS23·CS24·CS25·CS26·CS34·CS35·CS36·CS45·CS46·CS56·CCZ012·CCZ013·CCZ014·CCZ015·CCZ016·CCZ023·CCZ024·CCZ025·CCZ026·CCZ034·CCZ035·CCZ036·CCZ045·CCZ046·CCZ056·CCZ123·CCZ124·CCZ125·CCZ126·CCZ134·CCZ135·CCZ136·CCZ145·CCZ146·CCZ156·CCZ234·CCZ235·CCZ236·CCZ245·CCZ246·CCZ256·CCZ345·CCZ346·CCZ356·CCZ456
+
+- output gate: `01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156+234+235+236+245+246+256+345+346+356+456`
+- `N = 16` (7 outputs + 9 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 511]
+- leading error coefficient: `A_2 = 18396` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`
+- or no correction at all, with rotations run as `T³` on columns 1, 256, 3832, 4085, 4086, 4216, 4341, 4342, 4343, 4471; `T⁵` on columns 7, 8; `T†` on columns 511, 1022, 1533, 2044, 2555, 3066, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0960 (`unified search l=3, two-group s_total=1,s_O=6`)
+- note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+- note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+
+- 4599 columns, built by the two-group construction (k=7, N=16, s_total=1, s_O=6); see `master_catalog_large.json`, `factories[4]`
+
+### 1283. `[[4600,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+
+- output gate: `012+013+023+123`
+- `N = 14` (4 outputs + 10 checks), exact minimal T-count 7, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 511]
+- leading error coefficient: `A_2 = 14308` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0737 (`unified search l=3, two-group s_total=2,s_O=2`)
+
+- 4600 columns, built by the two-group construction (k=4, N=14, s_total=2, s_O=2); see `master_catalog_large.json`, `factories[5]`
+
+### 1284. `[[4620,4,2]]` — T0·T1·T2·T3
+
+- output gate: `0+1+2+3`
+- `N = 15` (4 outputs + 11 checks), exact minimal T-count 4, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 528]
+- leading error coefficient: `A_2 = 6138` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0738 (`unified search l=3, two-group s_total=4,s_O=2`)
+
+- 4620 columns, built by the two-group construction (k=4, N=15, s_total=4, s_O=2); see `master_catalog_large.json`, `factories[6]`
+
+### 1285. `[[4699,8,2]]` — CS01·CS02·CS03·CS04·CS05·CS06·CS07·CS12·CS13·CS14·CS15·CS16·CS17·CS23·CS24·CS25·CS26·CS27·CS34·CS35·CS36·CS37·CS45·CS46·CS47·CS56·CS57·CS67
+
+- output gate: `01+02+03+04+05+06+07+12+13+14+15+16+17+23+24+25+26+27+34+35+36+37+45+46+47+56+57+67`
+- `N = 15` (8 outputs + 7 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 127]
+- leading error coefficient: `A_2 = 84582` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `S† on 6`, `S† on 7`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)` and 24 more (8 single-wire, 28 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 0, 1, 64, 127, 254, 381, 634, 761, 762, 1015, 1142, 1269 and 41 more, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0999 (`unified search l=3, two-group s_total=1,s_O=5`)
+- note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+- note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+
+- 4699 columns, built by the two-group construction (k=8, N=15, s_total=1, s_O=5); see `master_catalog_large.json`, `factories[7]`
+
+### 1286. `[[4728,8,2]]` — T0·T1·T2·T3·T4·T5·T6·T7
+
+- output gate: `0+1+2+3+4+5+6+7`
+- `N = 16` (8 outputs + 8 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 128]
+- leading error coefficient: `A_2 = 55524` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-1000 (`unified search l=3, two-group s_total=2,s_O=5`)
+- note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+- note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+
+- 4728 columns, built by the two-group construction (k=8, N=16, s_total=2, s_O=5); see `master_catalog_large.json`, `factories[8]`
+
+### 1287. `[[4988,4,2]]` — T0·T1·T2·T3
+
+- output gate: `0+1+2+3`
+- `N = 16` (4 outputs + 12 checks), exact minimal T-count 4, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 991]
+- leading error coefficient: `A_2 = 5946` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0739 (`unified search l=3, two-group s_total=4,s_O=4`)
+
+- 4988 columns, built by the two-group construction (k=4, N=16, s_total=4, s_O=4); see `master_catalog_large.json`, `factories[9]`
+
+### 1288. `[[5053,3,2]]` — T0·T1·T2
+
+- output gate: `0+1+2`
+- `N = 15` (3 outputs + 12 checks), exact minimal T-count 3, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [1056, 2047]
+- leading error coefficient: `A_2 = 2973` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0654 (`unified search l=3, two-group s_total=4,s_O=2`)
+
+- 5053 columns, built by the two-group construction (k=3, N=15, s_total=4, s_O=2); see `master_catalog_large.json`, `factories[10]`
+
+### 1289. `[[5115,3,2]]` — CS01·CS02·CS12·CCZ012
+
+- output gate: `01+02+12+012`
+- `N = 13` (3 outputs + 10 checks), exact minimal T-count 4, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 10230` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T³` on columns 1, 512, 3580, 4089, 4090, 4348, 4601, 4602, 4603, 4859; `T⁵` on columns 8, 9; `T†` on columns 1023, 2046, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0655 (`unified search l=3, two-group s_total=1,s_O=2`)
+
+- 5115 columns, built by the two-group construction (k=3, N=13, s_total=1, s_O=2); see `master_catalog_large.json`, `factories[11]`
+
+### 1290. `[[5115,4,2]]` — T0·T1·T2·T3
+
+- output gate: `0+1+2+3`
+- `N = 14` (4 outputs + 10 checks), exact minimal T-count 4, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 10230` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0740 (`unified search l=3, two-group s_total=1,s_O=4`)
+
+- 5115 columns, built by the two-group construction (k=4, N=14, s_total=1, s_O=4); see `master_catalog_large.json`, `factories[12]`
+
+### 1291. `[[5116,3,2]]` — CS01·CS02·CS12·CCZ012
+
+- output gate: `01+02+12+012`
+- `N = 14` (3 outputs + 11 checks), exact minimal T-count 4, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 6138` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T³` on columns 1023, 2046, 3580, 3836, 4089, 4090, 4091, 4476, 4732, 4857, 4858, 4859; `T⁵` on column 0; `T†` on columns 256, 512, 4092, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0656 (`unified search l=3, two-group s_total=2,s_O=2`)
+
+- 5116 columns, built by the two-group construction (k=3, N=14, s_total=2, s_O=2); see `master_catalog_large.json`, `factories[13]`
+
+### 1292. `[[5116,4,2]]` — T0·T1·T2·T3
+
+- output gate: `0+1+2+3`
+- `N = 15` (4 outputs + 11 checks), exact minimal T-count 4, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 6138` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0741 (`unified search l=3, two-group s_total=2,s_O=4`)
+
+- 5116 columns, built by the two-group construction (k=4, N=15, s_total=2, s_O=4); see `master_catalog_large.json`, `factories[14]`
+
+### 1293. `[[5481,8,2]]` — T0·T1·T2·T3·T4·T5·T6·T7·CS01·CS02·CS03·CS04·CS05·CS06·CS07·CS12·CS13·CS14·CS15·CS16·CS17·CS23·CS24·CS25·CS26·CS27·CS34·CS35·CS36·CS37·CS45·CS46·CS47·CS56·CS57·CS67
+
+- output gate: `0+1+2+3+4+5+6+7+01+02+03+04+05+06+07+12+13+14+15+16+17+23+24+25+26+27+34+35+36+37+45+46+47+56+57+67`
+- `N = 14` (8 outputs + 6 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 63]
+- leading error coefficient: `A_2 = 235683` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`
+- or no correction at all, with rotations run as `T⁵` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-1001 (`unified search l=3, two-group s_total=1,s_O=3`)
+- note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+- note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+
+- 5481 columns, built by the two-group construction (k=8, N=14, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[15]`
+
+### 1294. `[[5552,8,2]]` — CCZ012·CCZ013·CCZ014·CCZ015·CCZ016·CCZ017·CCZ023·CCZ024·CCZ025·CCZ026·CCZ027·CCZ034·CCZ035·CCZ036·CCZ037·CCZ045·CCZ046·CCZ047·CCZ056·CCZ057·CCZ067·CCZ123·CCZ124·CCZ125·CCZ126·CCZ127·CCZ134·CCZ135·CCZ136·CCZ137·CCZ145·CCZ146·CCZ147·CCZ156·CCZ157·CCZ167·CCZ234·CCZ235·CCZ236·CCZ237·CCZ245·CCZ246·CCZ247·CCZ256·CCZ257·CCZ267·CCZ345·CCZ346·CCZ347·CCZ356·CCZ357·CCZ367·CCZ456·CCZ457·CCZ467·CCZ567
+
+- output gate: `012+013+014+015+016+017+023+024+025+026+027+034+035+036+037+045+046+047+056+057+067+123+124+125+126+127+134+135+136+137+145+146+147+156+157+167+234+235+236+237+245+246+247+256+257+267+345+346+347+356+357+367+456+457+467+567`
+- `N = 15` (8 outputs + 7 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 63]
+- leading error coefficient: `A_2 = 166600` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)` and 16 more (0 single-wire, 28 CZ in all)
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-1002 (`unified search l=3, two-group s_total=2,s_O=3`)
+- note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+- note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+
+- 5552 columns, built by the two-group construction (k=8, N=15, s_total=2, s_O=3); see `master_catalog_large.json`, `factories[16]`
+
+### 1295. `[[5588,7,2]]` — CS01·CS02·CS03·CS04·CS05·CS06·CS12·CS13·CS14·CS15·CS16·CS23·CS24·CS25·CS26·CS34·CS35·CS36·CS45·CS46·CS56·CCZ012·CCZ013·CCZ014·CCZ015·CCZ016·CCZ023·CCZ024·CCZ025·CCZ026·CCZ034·CCZ035·CCZ036·CCZ045·CCZ046·CCZ056·CCZ123·CCZ124·CCZ125·CCZ126·CCZ134·CCZ135·CCZ136·CCZ145·CCZ146·CCZ156·CCZ234·CCZ235·CCZ236·CCZ245·CCZ246·CCZ256·CCZ345·CCZ346·CCZ356·CCZ456
+
+- output gate: `01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156+234+235+236+245+246+256+345+346+356+456`
+- `N = 14` (7 outputs + 7 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 127]
+- leading error coefficient: `A_2 = 120142` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `S† on 6`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)` and 16 more (7 single-wire, 21 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 0, 1, 64, 5493, 5524, 5556, 5587, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0961 (`unified search l=3, two-group s_total=1,s_O=3`)
+- note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+- note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+
+- 5588 columns, built by the two-group construction (k=7, N=14, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[17]`
+
+### 1296. `[[5610,6,2]]` — T0·T1·T2·T3·T4·T5·CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
+
+- output gate: `0+1+2+3+4+5+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
+- `N = 14` (6 outputs + 8 checks), exact minimal T-count 6, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 255]
+- leading error coefficient: `A_2 = 58905` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (1,2)` and 9 more (6 single-wire, 15 CZ in all)
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0896 (`unified search l=3, two-group s_total=1,s_O=3`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 5610 columns, built by the two-group construction (k=6, N=14, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[18]`
+
+### 1297. `[[5621,5,2]]` — T0·T1·T2·T3·T4·CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34
+
+- output gate: `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34`
+- `N = 14` (5 outputs + 9 checks), exact minimal T-count 10, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 511]
+- leading error coefficient: `A_2 = 28105` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)` and 3 more (5 single-wire, 10 CZ in all)
+- or no correction at all, with rotations run as `T³` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0816 (`unified search l=3, two-group s_total=1,s_O=3`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 5621 columns, built by the two-group construction (k=5, N=14, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[19]`
+
+### 1298. `[[5624,7,2]]` — CS01·CS02·CS03·CS04·CS05·CS06·CS12·CS13·CS14·CS15·CS16·CS23·CS24·CS25·CS26·CS34·CS35·CS36·CS45·CS46·CS56·CCZ012·CCZ013·CCZ014·CCZ015·CCZ016·CCZ023·CCZ024·CCZ025·CCZ026·CCZ034·CCZ035·CCZ036·CCZ045·CCZ046·CCZ056·CCZ123·CCZ124·CCZ125·CCZ126·CCZ134·CCZ135·CCZ136·CCZ145·CCZ146·CCZ156·CCZ234·CCZ235·CCZ236·CCZ245·CCZ246·CCZ256·CCZ345·CCZ346·CCZ356·CCZ456
+
+- output gate: `01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156+234+235+236+245+246+256+345+346+356+456`
+- `N = 15` (7 outputs + 8 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 2687]
+- leading error coefficient: `A_2 = 84196` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`
+- or no correction at all, with rotations run as `T³` on columns 2813, 4220, 4859, 5114, 5241, 5368, 5495, 5557, 5558, 5589, 5590, 5605 and 7 more; `T⁵` on columns 0, 32, 64; `T†` on columns 2, 3, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0962 (`unified search l=3, two-group s_total=2,s_O=3`)
+- note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+- note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+
+- 5624 columns, built by the two-group construction (k=7, N=15, s_total=2, s_O=3); see `master_catalog_large.json`, `factories[20]`
+
+### 1299. `[[5626,6,2]]` — T0·T1·T2·T3·T4·T5
+
+- output gate: `0+1+2+3+4+5`
+- `N = 15` (6 outputs + 9 checks), exact minimal T-count 6, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 256]
+- leading error coefficient: `A_2 = 34545` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0897 (`unified search l=3, two-group s_total=2,s_O=3`)
+
+- 5626 columns, built by the two-group construction (k=6, N=15, s_total=2, s_O=3); see `master_catalog_large.json`, `factories[21]`
+
+### 1300. `[[5627,5,2]]` — T0·T1·T2·T3·T4
+
+- output gate: `0+1+2+3+4`
+- `N = 15` (5 outputs + 10 checks), exact minimal T-count 5, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 512]
+- leading error coefficient: `A_2 = 12790` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0817 (`unified search l=3, two-group s_total=2,s_O=3`)
+
+- 5627 columns, built by the two-group construction (k=5, N=15, s_total=2, s_O=3); see `master_catalog_large.json`, `factories[22]`
+
+### 1301. `[[5643,5,2]]` — T0·T1·T2·T3·T4
+
+- output gate: `0+1+2+3+4`
+- `N = 16` (5 outputs + 11 checks), exact minimal T-count 5, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 528]
+- leading error coefficient: `A_2 = 12870` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0818 (`unified search l=3, two-group s_total=4,s_O=3`)
+
+- 5643 columns, built by the two-group construction (k=5, N=16, s_total=4, s_O=3); see `master_catalog_large.json`, `factories[23]`
+
+### 1302. `[[5882,6,2]]` — T0·T1·T2·T3·T4·T5
+
+- output gate: `0+1+2+3+4+5`
+- `N = 16` (6 outputs + 10 checks), exact minimal T-count 6, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 272]
+- leading error coefficient: `A_2 = 36465` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0898 (`unified search l=3, two-group s_total=4,s_O=3`)
+
+- 5882 columns, built by the two-group construction (k=6, N=16, s_total=4, s_O=3); see `master_catalog_large.json`, `factories[24]`
+
+### 1303. `[[5961,7,2]]` — T0·T1·T2·T3·T4·T5·T6
+
+- output gate: `0+1+2+3+4+5+6`
+- `N = 16` (7 outputs + 9 checks)
+- distance: exactly 2, witnessed by the fault on columns [120, 256]
+- leading error coefficient: `A_2 = 88515` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0963 (`unified search l=3, two-group s_total=4,s_O=3`)
+- note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+- note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+
+- 5961 columns, built by the two-group construction (k=7, N=16, s_total=4, s_O=3); see `master_catalog_large.json`, `factories[25]`
+
+### 1304. `[[6012,4,2]]` — T0·T1·T2·T3
+
+- output gate: `0+1+2+3`
+- `N = 16` (4 outputs + 12 checks), exact minimal T-count 4, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 4988]
+- leading error coefficient: `A_2 = 6970` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0742 (`unified search l=3, two-group s_total=4,s_O=3`)
+
+- 6012 columns, built by the two-group construction (k=4, N=16, s_total=4, s_O=3); see `master_catalog_large.json`, `factories[26]`
+
+### 1305. `[[6046,2,2]]` — T0·T1
+
+- output gate: `0+1`
+- `N = 15` (2 outputs + 13 checks), exact minimal T-count 2, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 2015]
+- leading error coefficient: `A_2 = 2015` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0586 (`unified search l=3, two-group s_total=4,s_O=2`)
+
+- 6046 columns, built by the two-group construction (k=2, N=15, s_total=4, s_O=2); see `master_catalog_large.json`, `factories[27]`
+
+### 1306. `[[6138,4,2]]` — CS01·CS02·CS03·CS12·CS13·CS23·CCZ012·CCZ013·CCZ023·CCZ123
+
+- output gate: `01+02+03+12+13+23+012+013+023+123`
+- `N = 14` (4 outputs + 10 checks), exact minimal T-count 5, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 15345` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T³` on columns 1, 512, 4603, 5112, 5113, 5371, 5882, 6135, 6136, 6137; `T⁵` on columns 8, 9; `T†` on columns 1023, 2046, 3069, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0743 (`unified search l=3, two-group s_total=1,s_O=3`)
+
+- 6138 columns, built by the two-group construction (k=4, N=14, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[28]`
+
+### 1307. `[[6138,5,2]]` — T0·T1·T2·T3·T4
+
+- output gate: `0+1+2+3+4`
+- `N = 15` (5 outputs + 10 checks), exact minimal T-count 5, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 15345` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0819 (`unified search l=3, two-group s_total=1,s_O=5`)
+
+- 6138 columns, built by the two-group construction (k=5, N=15, s_total=1, s_O=5); see `master_catalog_large.json`, `factories[29]`
+
+### 1308. `[[6139,5,2]]` — T0·T1·T2·T3·T4
+
+- output gate: `0+1+2+3+4`
+- `N = 16` (5 outputs + 11 checks), exact minimal T-count 5, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 10230` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0820 (`unified search l=3, two-group s_total=2,s_O=5`)
+
+- 6139 columns, built by the two-group construction (k=5, N=16, s_total=2, s_O=5); see `master_catalog_large.json`, `factories[30]`
+
+### 1309. `[[6140,4,2]]` — T0·T1·T2·T3
+
+- output gate: `0+1+2+3`
+- `N = 15` (4 outputs + 11 checks), exact minimal T-count 4, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 5116]
+- leading error coefficient: `A_2 = 7162` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0744 (`unified search l=3, two-group s_total=2,s_O=3`)
+
+- 6140 columns, built by the two-group construction (k=4, N=15, s_total=2, s_O=3); see `master_catalog_large.json`, `factories[31]`
+
+### 1310. `[[6141,2,2]]` — T0·T1
+
+- output gate: `0+1`
+- `N = 13` (2 outputs + 11 checks), exact minimal T-count 2, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 6141` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0587 (`unified search l=3, two-group s_total=1,s_O=2`)
+
+- 6141 columns, built by the two-group construction (k=2, N=13, s_total=1, s_O=2); see `master_catalog_large.json`, `factories[32]`
+
+### 1311. `[[6142,2,2]]` — T0·T1
+
+- output gate: `0+1`
+- `N = 14` (2 outputs + 12 checks), exact minimal T-count 2, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 2047` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0588 (`unified search l=3, two-group s_total=2,s_O=2`)
+
+- 6142 columns, built by the two-group construction (k=2, N=14, s_total=2, s_O=2); see `master_catalog_large.json`, `factories[33]`
+
+### 1312. `[[6643,6,2]]` — CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
+
+- output gate: `012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
+- `N = 15` (6 outputs + 9 checks), exact minimal T-count 11, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 511]
+- leading error coefficient: `A_2 = 39858` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`
+- or no correction at all, with rotations run as `T³` on columns 0, 1, 256, 511, 1022, 1533, 2044, 3066, 5876, 6131, 6260, 6385 and 6 more, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0899 (`unified search l=3, two-group s_total=1,s_O=4`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 6643 columns, built by the two-group construction (k=6, N=15, s_total=1, s_O=4); see `master_catalog_large.json`, `factories[34]`
+
+### 1313. `[[6644,6,2]]` — CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
+
+- output gate: `012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
+- `N = 16` (6 outputs + 10 checks), exact minimal T-count 11, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 511]
+- leading error coefficient: `A_2 = 33726` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`
+- or no correction at all, with rotations run as `T³` on columns 0, 128, 256, 511, 1022, 1533, 2044, 3066, 5876, 6004, 6324, 6452 and 7 more; `T†` on column 6132, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0900 (`unified search l=3, two-group s_total=2,s_O=4`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 6644 columns, built by the two-group construction (k=6, N=16, s_total=2, s_O=4); see `master_catalog_large.json`, `factories[35]`
+
+### 1314. `[[7161,5,2]]` — CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34·CCZ012·CCZ013·CCZ014·CCZ023·CCZ024·CCZ034·CCZ123·CCZ124·CCZ134·CCZ234
+
+- output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
+- `N = 15` (5 outputs + 10 checks), exact minimal T-count 6, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 21483` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
+- or no correction at all, with rotations run as `T³` on columns 5626, 6135, 6136, 6394, 6647, 6648, 6649, 6905; `T⁵` on columns 8, 9; `T†` on columns 1, 512, 1023, 2046, 3069, 4092, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0821 (`unified search l=3, two-group s_total=1,s_O=4`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 7161 columns, built by the two-group construction (k=5, N=15, s_total=1, s_O=4); see `master_catalog_large.json`, `factories[36]`
+
+### 1315. `[[7161,6,2]]` — T0·T1·T2·T3·T4·T5
+
+- output gate: `0+1+2+3+4+5`
+- `N = 16` (6 outputs + 10 checks), exact minimal T-count 6, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 21483` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0901 (`unified search l=3, two-group s_total=1,s_O=6`)
+
+- 7161 columns, built by the two-group construction (k=6, N=16, s_total=1, s_O=6); see `master_catalog_large.json`, `factories[37]`
+
+### 1316. `[[7162,5,2]]` — CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34·CCZ012·CCZ013·CCZ014·CCZ023·CCZ024·CCZ034·CCZ123·CCZ124·CCZ134·CCZ234
+
+- output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
+- `N = 16` (5 outputs + 11 checks), exact minimal T-count 6, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 15345` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
+- or no correction at all, with rotations run as `T³` on columns 256, 512, 1023, 2046, 3069, 4092, 5626, 5882, 6135, 6136, 6137, 6522 and 4 more; `T⁵` on column 0; `T†` on column 6138, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0822 (`unified search l=3, two-group s_total=2,s_O=4`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 7162 columns, built by the two-group construction (k=5, N=16, s_total=2, s_O=4); see `master_catalog_large.json`, `factories[38]`
+
+### 1317. `[[7665,7,2]]` — T0·T1·T2·T3·T4·T5·T6·CS01·CS02·CS03·CS04·CS05·CS06·CS12·CS13·CS14·CS15·CS16·CS23·CS24·CS25·CS26·CS34·CS35·CS36·CS45·CS46·CS56
+
+- output gate: `0+1+2+3+4+5+6+01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56`
+- `N = 16` (7 outputs + 9 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 511]
+- leading error coefficient: `A_2 = 53655` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: none
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0964 (`unified search l=3, two-group s_total=1,s_O=5`)
+- note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+- note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+
+- 7665 columns, built by the two-group construction (k=7, N=16, s_total=1, s_O=5); see `master_catalog_large.json`, `factories[39]`
+
+### 1318. `[[8061,3,2]]` — T0·T1·T2
+
+- output gate: `0+1+2`
+- `N = 16` (3 outputs + 13 checks), exact minimal T-count 3, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 2015]
+- leading error coefficient: `A_2 = 6045` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0657 (`unified search l=3, two-group s_total=4,s_O=3`)
+
+- 8061 columns, built by the two-group construction (k=3, N=16, s_total=4, s_O=3); see `master_catalog_large.json`, `factories[40]`
+
+### 1319. `[[8116,6,2]]` — CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
+
+- output gate: `012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
+- `N = 15` (6 outputs + 9 checks), exact minimal T-count 11, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 1956]
+- leading error coefficient: `A_2 = 62430` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`
+- or no correction at all, with rotations run as `T³` on columns 8047, 8048, 8049, 8050, 8051, 8083, 8084, 8085, 8086, 8087, 8099, 8100 and 8 more; `T†` on columns 0, 16, 28, 56, 120, 255, 526, 1053, 2076, 4090, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0902 (`unified search l=3, two-group s_total=4,s_O=1`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 8116 columns, built by the two-group construction (k=6, N=15, s_total=4, s_O=1); see `master_catalog_large.json`, `factories[41]`
+
+### 1320. `[[8122,5,2]]` — CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34·CCZ012·CCZ013·CCZ014·CCZ023·CCZ024·CCZ034·CCZ123·CCZ124·CCZ134·CCZ234
+
+- output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
+- `N = 15` (5 outputs + 10 checks), exact minimal T-count 6, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 3839]
+- leading error coefficient: `A_2 = 30225` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
+- or no correction at all, with rotations run as `T³` on columns 0, 16, 28, 56, 120, 7914, 7950, 7970, 7980, 7981, 7982, 7983 and 14 more; `T⁵` on columns 4, 7; `T†` on columns 255, 527, 1055, 2079, 4094, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0823 (`unified search l=3, two-group s_total=4,s_O=1`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 8122 columns, built by the two-group construction (k=5, N=15, s_total=4, s_O=1); see `master_catalog_large.json`, `factories[42]`
+
+### 1321. `[[8124,4,2]]` — T0·T1·T2·T3
+
+- output gate: `0+1+2+3`
+- `N = 15` (4 outputs + 11 checks), exact minimal T-count 4, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 7596]
+- leading error coefficient: `A_2 = 14106` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0745 (`unified search l=3, two-group s_total=4,s_O=1`)
+
+- 8124 columns, built by the two-group construction (k=4, N=15, s_total=4, s_O=1); see `master_catalog_large.json`, `factories[43]`
+
+### 1322. `[[8125,3,2]]` — T0·T1·T2
+
+- output gate: `0+1+2`
+- `N = 15` (3 outputs + 12 checks), exact minimal T-count 3, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [1056, 2080]
+- leading error coefficient: `A_2 = 6045` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0658 (`unified search l=3, two-group s_total=4,s_O=1`)
+
+- 8125 columns, built by the two-group construction (k=3, N=15, s_total=4, s_O=1); see `master_catalog_large.json`, `factories[44]`
+
+### 1323. `[[8126,2,2]]` — T0·T1
+
+- output gate: `0+1`
+- `N = 15` (2 outputs + 13 checks), exact minimal T-count 2, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [2080, 4095]
+- leading error coefficient: `A_2 = 2015` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0589 (`unified search l=3, two-group s_total=4,s_O=1`)
+
+- 8126 columns, built by the two-group construction (k=2, N=15, s_total=4, s_O=1); see `master_catalog_large.json`, `factories[45]`
+
+### 1324. `[[8127,1,3]]` — T0
+
+- output gate: `0`
+- `N = 15` (1 output + 14 checks), exact minimal T-count 1, reduced degree 1
+- distance: exactly 3, witnessed by the fault on columns [0, 1, 3840]
+- leading error coefficient: `A_3 = 5458635` accepted harmful faults of weight 3
+- Clifford correction, every rotation a `T`: `S on 0`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0536 (`unified search l=3, two-group s_total=4,s_O=1`)
+
+- 8127 columns, built by the two-group construction (k=1, N=15, s_total=4, s_O=1); see `master_catalog_large.json`, `factories[46]`
+
+### 1325. `[[8184,3,2]]` — CCZ012
+
+- output gate: `012`
+- `N = 13` (3 outputs + 10 checks), exact minimal T-count 7, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 28644` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`
+- or no correction at all, with rotations run as `T³` on columns 1023, 2046, 5114, 5626, 6135, 6136, 6137, 6649, 7158, 7159, 7160, 8183, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0659 (`unified search l=3, two-group s_total=1,s_O=1`)
+
+- 8184 columns, built by the two-group construction (k=3, N=13, s_total=1, s_O=1); see `master_catalog_large.json`, `factories[47]`
+
+### 1326. `[[8184,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+
+- output gate: `012+013+023+123`
+- `N = 14` (4 outputs + 10 checks), exact minimal T-count 7, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 1534]
+- leading error coefficient: `A_2 = 28644` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0746 (`unified search l=3, two-group s_total=2,s_O=1`)
+
+- 8184 columns, built by the two-group construction (k=4, N=14, s_total=2, s_O=1); see `master_catalog_large.json`, `factories[48]`
+
+### 1327. `[[8184,6,2]]` — CS01·CS02·CS03·CS04·CS05·CS12·CS13·CS14·CS15·CS23·CS24·CS25·CS34·CS35·CS45·CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
+
+- output gate: `01+02+03+04+05+12+13+14+15+23+24+25+34+35+45+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
+- `N = 16` (6 outputs + 10 checks), exact minimal T-count 7, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 28644` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
+- or no correction at all, with rotations run as `T³` on columns 6649, 7158, 7159, 7417, 7928, 8181, 8182, 8183; `T⁵` on columns 8, 9; `T†` on columns 1, 512, 1023, 2046, 3069, 4092, 5115, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0903 (`unified search l=3, two-group s_total=1,s_O=5`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 8184 columns, built by the two-group construction (k=6, N=16, s_total=1, s_O=5); see `master_catalog_large.json`, `factories[49]`
+
+### 1328. `[[8188,2,2]]` — CS01
+
+- output gate: `01`
+- `N = 13` (2 outputs + 11 checks), exact minimal T-count 3, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 12282` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T³` on columns 5117, 6138, 6139, 6653, 7676, 8185, 8186, 8187; `T⁵` on columns 9, 10; `T†` on columns 1, 1024, 2047, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0590 (`unified search l=3, two-group s_total=1,s_O=1`)
+
+- 8188 columns, built by the two-group construction (k=2, N=13, s_total=1, s_O=1); see `master_catalog_large.json`, `factories[50]`
+
+### 1329. `[[8188,3,2]]` — T0·T1·T2
+
+- output gate: `0+1+2`
+- `N = 14` (3 outputs + 11 checks), exact minimal T-count 3, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 12282` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0660 (`unified search l=3, two-group s_total=1,s_O=3`)
+
+- 8188 columns, built by the two-group construction (k=3, N=14, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[51]`
+
+### 1330. `[[8189,3,2]]` — T0·T1·T2
+
+- output gate: `0+1+2`
+- `N = 15` (3 outputs + 12 checks), exact minimal T-count 3, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 6141` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0661 (`unified search l=3, two-group s_total=2,s_O=3`)
+
+- 8189 columns, built by the two-group construction (k=3, N=15, s_total=2, s_O=3); see `master_catalog_large.json`, `factories[52]`
+
+### 1331. `[[8190,1,2]]` — T0
+
+- output gate: `0`
+- `N = 13` (1 output + 12 checks), exact minimal T-count 1, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 4095]
+- leading error coefficient: `A_2 = 4095` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0537 (`unified search l=3, two-group s_total=1,s_O=1`)
+
+- 8190 columns, built by the two-group construction (k=1, N=13, s_total=1, s_O=1); see `master_catalog_large.json`, `factories[53]`
+
+### 1332. `[[8190,2,2]]` — T0·T1
+
+- output gate: `0+1`
+- `N = 14` (2 outputs + 12 checks), exact minimal T-count 2, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 6142]
+- leading error coefficient: `A_2 = 4095` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0591 (`unified search l=3, two-group s_total=2,s_O=1`)
+
+- 8190 columns, built by the two-group construction (k=2, N=14, s_total=2, s_O=1); see `master_catalog_large.json`, `factories[54]`
+
+### 1333. `[[8191,1,3]]` — T0
+
+- output gate: `0`
+- `N = 14` (1 output + 13 checks), exact minimal T-count 1, reduced degree 1
+- distance: exactly 3, witnessed by the fault on columns [0, 1, 3072]
+- leading error coefficient: `A_3 = 11180715` accepted harmful faults of weight 3
+- Clifford correction, every rotation a `T`: `S on 0`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0538 (`unified search l=3, two-group s_total=2,s_O=1`)
+
+- 8191 columns, built by the two-group construction (k=1, N=14, s_total=2, s_O=1); see `master_catalog_large.json`, `factories[55]`
+
+### 1334. `[[8452,6,2]]` — CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
+
+- output gate: `012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
+- `N = 16` (6 outputs + 10 checks), exact minimal T-count 11, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 255]
+- leading error coefficient: `A_2 = 65470` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`
+- or no correction at all, with rotations run as `T³` on columns 16, 28, 56, 8044, 8108, 8144, 8164, 8310, 8382, 8383, 8384, 8385 and 20 more; `T⁵` on columns 1, 2, 3; `T†` on columns 0, 120, 255, 510, 1021, 2044, 4090, 8180, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0904 (`unified search l=3, two-group s_total=4,s_O=2`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 8452 columns, built by the two-group construction (k=6, N=16, s_total=4, s_O=2); see `master_catalog_large.json`, `factories[56]`
+
+### 1335. `[[8778,5,2]]` — CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34·CCZ012·CCZ013·CCZ014·CCZ023·CCZ024·CCZ034·CCZ123·CCZ124·CCZ134·CCZ234
+
+- output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
+- `N = 16` (5 outputs + 11 checks), exact minimal T-count 6, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 3663]
+- leading error coefficient: `A_2 = 31185` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
+- or no correction at all, with rotations run as `T³` on columns 495, 1023, 2079, 4158, 7994, 8114, 8245, 8246, 8247, 8248, 8249, 8250 and 11 more; `T†` on columns 120, 240, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0824 (`unified search l=3, two-group s_total=4,s_O=2`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 8778 columns, built by the two-group construction (k=5, N=16, s_total=4, s_O=2); see `master_catalog_large.json`, `factories[57]`
+
+### 1336. `[[9207,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+
+- output gate: `012+013+023+123`
+- `N = 14` (4 outputs + 10 checks), exact minimal T-count 7, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 36828` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0747 (`unified search l=3, two-group s_total=1,s_O=2`)
+
+- 9207 columns, built by the two-group construction (k=4, N=14, s_total=1, s_O=2); see `master_catalog_large.json`, `factories[58]`
+
+### 1337. `[[9208,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+
+- output gate: `012+013+023+123`
+- `N = 15` (4 outputs + 11 checks), exact minimal T-count 7, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 28644` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0748 (`unified search l=3, two-group s_total=2,s_O=2`)
+
+- 9208 columns, built by the two-group construction (k=4, N=15, s_total=2, s_O=2); see `master_catalog_large.json`, `factories[59]`
+
+### 1338. `[[9212,4,2]]` — T0·T1·T2·T3
+
+- output gate: `0+1+2+3`
+- `N = 16` (4 outputs + 12 checks), exact minimal T-count 4, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 1056]
+- leading error coefficient: `A_2 = 12282` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0749 (`unified search l=3, two-group s_total=4,s_O=2`)
+
+- 9212 columns, built by the two-group construction (k=4, N=16, s_total=4, s_O=2); see `master_catalog_large.json`, `factories[60]`
+
+### 1339. `[[9435,8,2]]` — CS01·CS02·CS03·CS04·CS05·CS06·CS07·CS12·CS13·CS14·CS15·CS16·CS17·CS23·CS24·CS25·CS26·CS27·CS34·CS35·CS36·CS37·CS45·CS46·CS47·CS56·CS57·CS67
+
+- output gate: `01+02+03+04+05+06+07+12+13+14+15+16+17+23+24+25+26+27+34+35+36+37+45+46+47+56+57+67`
+- `N = 16` (8 outputs + 8 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 255]
+- leading error coefficient: `A_2 = 169830` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `S† on 6`, `S† on 7`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)` and 24 more (8 single-wire, 28 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 0, 1, 128, 255, 510, 765, 1274, 1529, 1530, 2039, 2294, 2549 and 41 more, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-1003 (`unified search l=3, two-group s_total=1,s_O=5`)
+- note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+- note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+
+- 9435 columns, built by the two-group construction (k=8, N=16, s_total=1, s_O=5); see `master_catalog_large.json`, `factories[61]`
+
+### 1340. `[[10141,3,2]]` — T0·T1·T2
+
+- output gate: `0+1+2`
+- `N = 16` (3 outputs + 13 checks), exact minimal T-count 3, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [2080, 4095]
+- leading error coefficient: `A_2 = 6045` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0662 (`unified search l=3, two-group s_total=4,s_O=2`)
+
+- 10141 columns, built by the two-group construction (k=3, N=16, s_total=4, s_O=2); see `master_catalog_large.json`, `factories[62]`
+
+### 1341. `[[10235,3,2]]` — CS01·CS02·CS12·CCZ012
+
+- output gate: `01+02+12+012`
+- `N = 14` (3 outputs + 11 checks), exact minimal T-count 4, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 20470` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T³` on columns 1, 1024, 7164, 8185, 8186, 8700, 9209, 9210, 9211, 9723; `T⁵` on columns 9, 10; `T†` on columns 2047, 4094, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0663 (`unified search l=3, two-group s_total=1,s_O=2`)
+
+- 10235 columns, built by the two-group construction (k=3, N=14, s_total=1, s_O=2); see `master_catalog_large.json`, `factories[63]`
+
+### 1342. `[[10235,4,2]]` — T0·T1·T2·T3
+
+- output gate: `0+1+2+3`
+- `N = 15` (4 outputs + 11 checks), exact minimal T-count 4, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 20470` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0750 (`unified search l=3, two-group s_total=1,s_O=4`)
+
+- 10235 columns, built by the two-group construction (k=4, N=15, s_total=1, s_O=4); see `master_catalog_large.json`, `factories[64]`
+
+### 1343. `[[10236,3,2]]` — CS01·CS02·CS12·CCZ012
+
+- output gate: `01+02+12+012`
+- `N = 15` (3 outputs + 12 checks), exact minimal T-count 4, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 12282` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T³` on columns 2047, 4094, 7164, 7676, 8185, 8186, 8187, 8956, 9468, 9721, 9722, 9723; `T⁵` on column 0; `T†` on columns 512, 1024, 8188, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0664 (`unified search l=3, two-group s_total=2,s_O=2`)
+
+- 10236 columns, built by the two-group construction (k=3, N=15, s_total=2, s_O=2); see `master_catalog_large.json`, `factories[65]`
+
+### 1344. `[[10236,4,2]]` — T0·T1·T2·T3
+
+- output gate: `0+1+2+3`
+- `N = 16` (4 outputs + 12 checks), exact minimal T-count 4, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 12282` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0751 (`unified search l=3, two-group s_total=2,s_O=4`)
+
+- 10236 columns, built by the two-group construction (k=4, N=16, s_total=2, s_O=4); see `master_catalog_large.json`, `factories[66]`
+
+### 1345. `[[11049,8,2]]` — T0·T1·T2·T3·T4·T5·T6·T7·CS01·CS02·CS03·CS04·CS05·CS06·CS07·CS12·CS13·CS14·CS15·CS16·CS17·CS23·CS24·CS25·CS26·CS27·CS34·CS35·CS36·CS37·CS45·CS46·CS47·CS56·CS57·CS67
+
+- output gate: `0+1+2+3+4+5+6+7+01+02+03+04+05+06+07+12+13+14+15+16+17+23+24+25+26+27+34+35+36+37+45+46+47+56+57+67`
+- `N = 15` (8 outputs + 7 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 127]
+- leading error coefficient: `A_2 = 475107` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`
+- or no correction at all, with rotations run as `T⁵` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-1004 (`unified search l=3, two-group s_total=1,s_O=3`)
+- note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+- note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+
+- 11049 columns, built by the two-group construction (k=8, N=15, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[67]`
+
+### 1346. `[[11120,8,2]]` — CCZ012·CCZ013·CCZ014·CCZ015·CCZ016·CCZ017·CCZ023·CCZ024·CCZ025·CCZ026·CCZ027·CCZ034·CCZ035·CCZ036·CCZ037·CCZ045·CCZ046·CCZ047·CCZ056·CCZ057·CCZ067·CCZ123·CCZ124·CCZ125·CCZ126·CCZ127·CCZ134·CCZ135·CCZ136·CCZ137·CCZ145·CCZ146·CCZ147·CCZ156·CCZ157·CCZ167·CCZ234·CCZ235·CCZ236·CCZ237·CCZ245·CCZ246·CCZ247·CCZ256·CCZ257·CCZ267·CCZ345·CCZ346·CCZ347·CCZ356·CCZ357·CCZ367·CCZ456·CCZ457·CCZ467·CCZ567
+
+- output gate: `012+013+014+015+016+017+023+024+025+026+027+034+035+036+037+045+046+047+056+057+067+123+124+125+126+127+134+135+136+137+145+146+147+156+157+167+234+235+236+237+245+246+247+256+257+267+345+346+347+356+357+367+456+457+467+567`
+- `N = 16` (8 outputs + 8 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 127]
+- leading error coefficient: `A_2 = 333320` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)`, `CZ on (1,5)`, `CZ on (1,6)` and 16 more (0 single-wire, 28 CZ in all)
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-1005 (`unified search l=3, two-group s_total=2,s_O=3`)
+- note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+- note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+
+- 11120 columns, built by the two-group construction (k=8, N=16, s_total=2, s_O=3); see `master_catalog_large.json`, `factories[68]`
+
+### 1347. `[[11220,7,2]]` — CS01·CS02·CS03·CS04·CS05·CS06·CS12·CS13·CS14·CS15·CS16·CS23·CS24·CS25·CS26·CS34·CS35·CS36·CS45·CS46·CS56·CCZ012·CCZ013·CCZ014·CCZ015·CCZ016·CCZ023·CCZ024·CCZ025·CCZ026·CCZ034·CCZ035·CCZ036·CCZ045·CCZ046·CCZ056·CCZ123·CCZ124·CCZ125·CCZ126·CCZ134·CCZ135·CCZ136·CCZ145·CCZ146·CCZ156·CCZ234·CCZ235·CCZ236·CCZ245·CCZ246·CCZ256·CCZ345·CCZ346·CCZ356·CCZ456
+
+- output gate: `01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156+234+235+236+245+246+256+345+346+356+456`
+- `N = 15` (7 outputs + 8 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 255]
+- leading error coefficient: `A_2 = 241230` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `S† on 6`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)` and 16 more (7 single-wire, 21 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 0, 1, 128, 11029, 11092, 11156, 11219, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0965 (`unified search l=3, two-group s_total=1,s_O=3`)
+- note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+- note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+
+- 11220 columns, built by the two-group construction (k=7, N=15, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[69]`
+
+### 1348. `[[11242,6,2]]` — T0·T1·T2·T3·T4·T5·CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
+
+- output gate: `0+1+2+3+4+5+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
+- `N = 15` (6 outputs + 9 checks), exact minimal T-count 6, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 511]
+- leading error coefficient: `A_2 = 118041` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (1,2)` and 9 more (6 single-wire, 15 CZ in all)
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0905 (`unified search l=3, two-group s_total=1,s_O=3`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 11242 columns, built by the two-group construction (k=6, N=15, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[70]`
+
+### 1349. `[[11253,5,2]]` — T0·T1·T2·T3·T4·CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34
+
+- output gate: `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34`
+- `N = 15` (5 outputs + 10 checks), exact minimal T-count 10, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 56265` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)` and 3 more (5 single-wire, 10 CZ in all)
+- or no correction at all, with rotations run as `T³` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0825 (`unified search l=3, two-group s_total=1,s_O=3`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 11253 columns, built by the two-group construction (k=5, N=15, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[71]`
+
+### 1350. `[[11256,7,2]]` — CS01·CS02·CS03·CS04·CS05·CS06·CS12·CS13·CS14·CS15·CS16·CS23·CS24·CS25·CS26·CS34·CS35·CS36·CS45·CS46·CS56·CCZ012·CCZ013·CCZ014·CCZ015·CCZ016·CCZ023·CCZ024·CCZ025·CCZ026·CCZ034·CCZ035·CCZ036·CCZ045·CCZ046·CCZ056·CCZ123·CCZ124·CCZ125·CCZ126·CCZ134·CCZ135·CCZ136·CCZ145·CCZ146·CCZ156·CCZ234·CCZ235·CCZ236·CCZ245·CCZ246·CCZ256·CCZ345·CCZ346·CCZ356·CCZ456
+
+- output gate: `01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156+234+235+236+245+246+256+345+346+356+456`
+- `N = 16` (7 outputs + 9 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 5375]
+- leading error coefficient: `A_2 = 168420` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`
+- or no correction at all, with rotations run as `T³` on columns 3, 4, 5629, 8444, 9723, 10234, 10489, 10744, 10999, 11125, 11126, 11189 and 13 more; `T⁵` on columns 0, 64, 128, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0966 (`unified search l=3, two-group s_total=2,s_O=3`)
+- note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+- note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+
+- 11256 columns, built by the two-group construction (k=7, N=16, s_total=2, s_O=3); see `master_catalog_large.json`, `factories[72]`
+
+### 1351. `[[11258,6,2]]` — T0·T1·T2·T3·T4·T5
+
+- output gate: `0+1+2+3+4+5`
+- `N = 16` (6 outputs + 10 checks), exact minimal T-count 6, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 512]
+- leading error coefficient: `A_2 = 69105` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0906 (`unified search l=3, two-group s_total=2,s_O=3`)
+
+- 11258 columns, built by the two-group construction (k=6, N=16, s_total=2, s_O=3); see `master_catalog_large.json`, `factories[73]`
+
+### 1352. `[[11259,5,2]]` — T0·T1·T2·T3·T4
+
+- output gate: `0+1+2+3+4`
+- `N = 16` (5 outputs + 11 checks), exact minimal T-count 5, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 1024]
+- leading error coefficient: `A_2 = 25590` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0826 (`unified search l=3, two-group s_total=2,s_O=3`)
+
+- 11259 columns, built by the two-group construction (k=5, N=16, s_total=2, s_O=3); see `master_catalog_large.json`, `factories[74]`
+
+### 1353. `[[12222,2,2]]` — T0·T1
+
+- output gate: `0+1`
+- `N = 16` (2 outputs + 14 checks), exact minimal T-count 2, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 4095]
+- leading error coefficient: `A_2 = 4095` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0592 (`unified search l=3, two-group s_total=4,s_O=2`)
+
+- 12222 columns, built by the two-group construction (k=2, N=16, s_total=4, s_O=2); see `master_catalog_large.json`, `factories[75]`
+
+### 1354. `[[12282,4,2]]` — CS01·CS02·CS03·CS12·CS13·CS23·CCZ012·CCZ013·CCZ023·CCZ123
+
+- output gate: `01+02+03+12+13+23+012+013+023+123`
+- `N = 15` (4 outputs + 11 checks), exact minimal T-count 5, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 30705` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T³` on columns 1, 1024, 9211, 10232, 10233, 10747, 11770, 12279, 12280, 12281; `T⁵` on columns 9, 10; `T†` on columns 2047, 4094, 6141, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0752 (`unified search l=3, two-group s_total=1,s_O=3`)
+
+- 12282 columns, built by the two-group construction (k=4, N=15, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[76]`
+
+### 1355. `[[12282,5,2]]` — T0·T1·T2·T3·T4
+
+- output gate: `0+1+2+3+4`
+- `N = 16` (5 outputs + 11 checks), exact minimal T-count 5, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 30705` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0827 (`unified search l=3, two-group s_total=1,s_O=5`)
+
+- 12282 columns, built by the two-group construction (k=5, N=16, s_total=1, s_O=5); see `master_catalog_large.json`, `factories[77]`
+
+### 1356. `[[12284,4,2]]` — T0·T1·T2·T3
+
+- output gate: `0+1+2+3`
+- `N = 16` (4 outputs + 12 checks), exact minimal T-count 4, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 10236]
+- leading error coefficient: `A_2 = 14330` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0753 (`unified search l=3, two-group s_total=2,s_O=3`)
+
+- 12284 columns, built by the two-group construction (k=4, N=16, s_total=2, s_O=3); see `master_catalog_large.json`, `factories[78]`
+
+### 1357. `[[12285,2,2]]` — T0·T1
+
+- output gate: `0+1`
+- `N = 14` (2 outputs + 12 checks), exact minimal T-count 2, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 4095]
+- leading error coefficient: `A_2 = 12285` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0593 (`unified search l=3, two-group s_total=1,s_O=2`)
+
+- 12285 columns, built by the two-group construction (k=2, N=14, s_total=1, s_O=2); see `master_catalog_large.json`, `factories[79]`
+
+### 1358. `[[12286,2,2]]` — T0·T1
+
+- output gate: `0+1`
+- `N = 15` (2 outputs + 13 checks), exact minimal T-count 2, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 4095]
+- leading error coefficient: `A_2 = 4095` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0594 (`unified search l=3, two-group s_total=2,s_O=2`)
+
+- 12286 columns, built by the two-group construction (k=2, N=15, s_total=2, s_O=2); see `master_catalog_large.json`, `factories[80]`
+
+### 1359. `[[12357,8,2]]` — CS01·CS02·CS03·CS04·CS05·CS06·CS07·CS12·CS13·CS14·CS15·CS16·CS17·CS23·CS24·CS25·CS26·CS27·CS34·CS35·CS36·CS37·CS45·CS46·CS47·CS56·CS57·CS67
+
+- output gate: `01+02+03+04+05+06+07+12+13+14+15+16+17+23+24+25+26+27+34+35+36+37+45+46+47+56+57+67`
+- `N = 16` (8 outputs + 8 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 1507]
+- leading error coefficient: `A_2 = 314748` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `S† on 6`, `S† on 7`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)` and 24 more (8 single-wire, 28 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 0, 2, 3, 4, 5, 6, 7, 22, 12321, 12322, 12323, 12324 and 24 more; `T†` on column 1, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-1006 (`unified search l=3, two-group s_total=5,s_O=1`)
+- note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+- note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+
+- 12357 columns, built by the two-group construction (k=8, N=16, s_total=5, s_O=1); see `master_catalog_large.json`, `factories[81]`
+
+### 1360. `[[12379,7,2]]` — T0·T1·T2·T3·T4·T5·T6·CS01·CS02·CS03·CS04·CS05·CS06·CS12·CS13·CS14·CS15·CS16·CS23·CS24·CS25·CS26·CS34·CS35·CS36·CS45·CS46·CS56
+
+- output gate: `0+1+2+3+4+5+6+01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56`
+- `N = 16` (7 outputs + 9 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 2872]
+- leading error coefficient: `A_2 = 160461` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: none
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0967 (`unified search l=3, two-group s_total=5,s_O=1`)
+- note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+- note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+
+- 12379 columns, built by the two-group construction (k=7, N=16, s_total=5, s_O=1); see `master_catalog_large.json`, `factories[82]`
+
+### 1361. `[[12386,6,2]]` — CS01·CS02·CS03·CS04·CS05·CS12·CS13·CS14·CS15·CS23·CS24·CS25·CS34·CS35·CS45·CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
+
+- output gate: `01+02+03+04+05+12+13+14+15+23+24+25+34+35+45+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
+- `N = 16` (6 outputs + 10 checks), exact minimal T-count 7, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 5753]
+- leading error coefficient: `A_2 = 81708` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`
+- or no correction at all, with rotations run as `T³` on columns 3, 4, 5, 6, 253, 473, 858, 1573, 3003, 7435, 8150, 8535 and 64 more; `T⁵` on column 57; `T†` on columns 1, 127, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0907 (`unified search l=3, two-group s_total=5,s_O=1`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 12386 columns, built by the two-group construction (k=6, N=16, s_total=5, s_O=1); see `master_catalog_large.json`, `factories[83]`
+
+### 1362. `[[12388,5,2]]` — T0·T1·T2·T3·T4
+
+- output gate: `0+1+2+3+4`
+- `N = 16` (5 outputs + 11 checks), exact minimal T-count 5, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 11914]
+- leading error coefficient: `A_2 = 41229` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0828 (`unified search l=3, two-group s_total=5,s_O=1`)
+
+- 12388 columns, built by the two-group construction (k=5, N=16, s_total=5, s_O=1); see `master_catalog_large.json`, `factories[84]`
+
+### 1363. `[[12389,4,2]]` — T0·T1·T2·T3
+
+- output gate: `0+1+2+3`
+- `N = 16` (4 outputs + 12 checks), exact minimal T-count 4, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [859, 1574]
+- leading error coefficient: `A_2 = 20163` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0754 (`unified search l=3, two-group s_total=5,s_O=1`)
+
+- 12389 columns, built by the two-group construction (k=4, N=16, s_total=5, s_O=1); see `master_catalog_large.json`, `factories[85]`
+
+### 1364. `[[12390,3,2]]` — T0·T1·T2
+
+- output gate: `0+1+2`
+- `N = 16` (3 outputs + 13 checks), exact minimal T-count 3, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [1574, 3004]
+- leading error coefficient: `A_2 = 9009` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0665 (`unified search l=3, two-group s_total=5,s_O=1`)
+
+- 12390 columns, built by the two-group construction (k=3, N=16, s_total=5, s_O=1); see `master_catalog_large.json`, `factories[86]`
+
+### 1365. `[[12391,2,2]]` — T0·T1
+
+- output gate: `0+1`
+- `N = 16` (2 outputs + 14 checks), exact minimal T-count 2, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [3004, 6007]
+- leading error coefficient: `A_2 = 3003` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0595 (`unified search l=3, two-group s_total=5,s_O=1`)
+
+- 12391 columns, built by the two-group construction (k=2, N=16, s_total=5, s_O=1); see `master_catalog_large.json`, `factories[87]`
+
+### 1366. `[[12392,1,3]]` — T0
+
+- output gate: `0`
+- `N = 16` (1 output + 15 checks), exact minimal T-count 1, reduced degree 1
+- distance: exactly 3, witnessed by the fault on columns [0, 1, 5754]
+- leading error coefficient: `A_3 = 3075072` accepted harmful faults of weight 3
+- Clifford correction, every rotation a `T`: `S on 0`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0539 (`unified search l=3, two-group s_total=5,s_O=1`)
+
+- 12392 columns, built by the two-group construction (k=1, N=16, s_total=5, s_O=1); see `master_catalog_large.json`, `factories[88]`
+
+### 1367. `[[13299,6,2]]` — CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
+
+- output gate: `012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
+- `N = 16` (6 outputs + 10 checks), exact minimal T-count 11, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 79794` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`
+- or no correction at all, with rotations run as `T³` on columns 0, 1, 512, 1023, 2046, 3069, 4092, 6138, 11764, 12275, 12532, 12785 and 6 more, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0908 (`unified search l=3, two-group s_total=1,s_O=4`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 13299 columns, built by the two-group construction (k=6, N=16, s_total=1, s_O=4); see `master_catalog_large.json`, `factories[89]`
+
+### 1368. `[[14329,5,2]]` — CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34·CCZ012·CCZ013·CCZ014·CCZ023·CCZ024·CCZ034·CCZ123·CCZ124·CCZ134·CCZ234
+
+- output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
+- `N = 16` (5 outputs + 11 checks), exact minimal T-count 6, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 42987` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
+- or no correction at all, with rotations run as `T³` on columns 11258, 12279, 12280, 12794, 13303, 13304, 13305, 13817; `T⁵` on columns 9, 10; `T†` on columns 1, 1024, 2047, 4094, 6141, 8188, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0829 (`unified search l=3, two-group s_total=1,s_O=4`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 14329 columns, built by the two-group construction (k=5, N=16, s_total=1, s_O=4); see `master_catalog_large.json`, `factories[90]`
+
+### 1369. `[[16372,6,2]]` — CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
+
+- output gate: `012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
+- `N = 16` (6 outputs + 10 checks), exact minimal T-count 11, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 3916]
+- leading error coefficient: `A_2 = 126910` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`
+- or no correction at all, with rotations run as `T³` on columns 16231, 16232, 16233, 16234, 16235, 16303, 16304, 16305, 16306, 16307, 16339, 16340 and 8 more; `T†` on columns 0, 36, 64, 120, 240, 495, 1022, 2077, 4156, 8250, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0909 (`unified search l=3, two-group s_total=4,s_O=1`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 16372 columns, built by the two-group construction (k=6, N=16, s_total=4, s_O=1); see `master_catalog_large.json`, `factories[91]`
+
+### 1370. `[[16376,3,2]]` — CCZ012
+
+- output gate: `012`
+- `N = 14` (3 outputs + 11 checks), exact minimal T-count 7, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 57316` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`
+- or no correction at all, with rotations run as `T³` on columns 2047, 4094, 10234, 11258, 12279, 12280, 12281, 13305, 14326, 14327, 14328, 16375, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0666 (`unified search l=3, two-group s_total=1,s_O=1`)
+
+- 16376 columns, built by the two-group construction (k=3, N=14, s_total=1, s_O=1); see `master_catalog_large.json`, `factories[92]`
+
+### 1371. `[[16376,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+
+- output gate: `012+013+023+123`
+- `N = 15` (4 outputs + 11 checks), exact minimal T-count 7, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 3070]
+- leading error coefficient: `A_2 = 57316` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0755 (`unified search l=3, two-group s_total=2,s_O=1`)
+
+- 16376 columns, built by the two-group construction (k=4, N=15, s_total=2, s_O=1); see `master_catalog_large.json`, `factories[93]`
+
+### 1372. `[[16378,5,2]]` — CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34·CCZ012·CCZ013·CCZ014·CCZ023·CCZ024·CCZ034·CCZ123·CCZ124·CCZ134·CCZ234
+
+- output gate: `01+02+03+04+12+13+14+23+24+34+012+013+014+023+024+034+123+124+134+234`
+- `N = 16` (5 outputs + 11 checks), exact minimal T-count 6, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 7759]
+- leading error coefficient: `A_2 = 61425` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`
+- or no correction at all, with rotations run as `T³` on columns 0, 36, 64, 120, 240, 15970, 16034, 16070, 16090, 16101, 16102, 16103 and 14 more; `T⁵` on columns 2, 5; `T†` on columns 495, 1023, 2079, 4159, 8254, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0830 (`unified search l=3, two-group s_total=4,s_O=1`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 16378 columns, built by the two-group construction (k=5, N=16, s_total=4, s_O=1); see `master_catalog_large.json`, `factories[94]`
+
+### 1373. `[[16380,2,2]]` — CS01
+
+- output gate: `01`
+- `N = 14` (2 outputs + 12 checks), exact minimal T-count 3, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 4095]
+- leading error coefficient: `A_2 = 24570` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T³` on columns 10237, 12282, 12283, 13309, 15356, 16377, 16378, 16379; `T⁵` on columns 10, 11; `T†` on columns 1, 2048, 4095, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0596 (`unified search l=3, two-group s_total=1,s_O=1`)
+
+- 16380 columns, built by the two-group construction (k=2, N=14, s_total=1, s_O=1); see `master_catalog_large.json`, `factories[95]`
+
+### 1374. `[[16380,3,2]]` — T0·T1·T2
+
+- output gate: `0+1+2`
+- `N = 15` (3 outputs + 12 checks), exact minimal T-count 3, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 4095]
+- leading error coefficient: `A_2 = 24570` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0667 (`unified search l=3, two-group s_total=1,s_O=3`)
+
+- 16380 columns, built by the two-group construction (k=3, N=15, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[96]`
+
+### 1375. `[[16380,4,2]]` — T0·T1·T2·T3
+
+- output gate: `0+1+2+3`
+- `N = 16` (4 outputs + 12 checks), exact minimal T-count 4, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 15356]
+- leading error coefficient: `A_2 = 28666` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0756 (`unified search l=3, two-group s_total=4,s_O=1`)
+
+- 16380 columns, built by the two-group construction (k=4, N=16, s_total=4, s_O=1); see `master_catalog_large.json`, `factories[97]`
+
+### 1376. `[[16381,3,2]]` — T0·T1·T2
+
+- output gate: `0+1+2`
+- `N = 16` (3 outputs + 13 checks), exact minimal T-count 3, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 4095]
+- leading error coefficient: `A_2 = 12285` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0668 (`unified search l=3, two-group s_total=2,s_O=3`)
+
+- 16381 columns, built by the two-group construction (k=3, N=16, s_total=2, s_O=3); see `master_catalog_large.json`, `factories[98]`
+
+### 1377. `[[16382,1,2]]` — T0
+
+- output gate: `0`
+- `N = 14` (1 output + 13 checks), exact minimal T-count 1, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 8191]
+- leading error coefficient: `A_2 = 8191` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0540 (`unified search l=3, two-group s_total=1,s_O=1`)
+
+- 16382 columns, built by the two-group construction (k=1, N=14, s_total=1, s_O=1); see `master_catalog_large.json`, `factories[99]`
+
+### 1378. `[[16382,2,2]]` — T0·T1
+
+- output gate: `0+1`
+- `N = 15` (2 outputs + 13 checks), exact minimal T-count 2, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 12286]
+- leading error coefficient: `A_2 = 8191` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0597 (`unified search l=3, two-group s_total=2,s_O=1`)
+
+- 16382 columns, built by the two-group construction (k=2, N=15, s_total=2, s_O=1); see `master_catalog_large.json`, `factories[100]`
+
+### 1379. `[[16383,1,3]]` — T0
+
+- output gate: `0`
+- `N = 15` (1 output + 14 checks), exact minimal T-count 1, reduced degree 1
+- distance: exactly 3, witnessed by the fault on columns [0, 1, 6144]
+- leading error coefficient: `A_3 = 44731051` accepted harmful faults of weight 3
+- Clifford correction, every rotation a `T`: `S on 0`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0541 (`unified search l=3, two-group s_total=2,s_O=1`)
+
+- 16383 columns, built by the two-group construction (k=1, N=15, s_total=2, s_O=1); see `master_catalog_large.json`, `factories[101]`
+
+### 1380. `[[18423,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+
+- output gate: `012+013+023+123`
+- `N = 15` (4 outputs + 11 checks), exact minimal T-count 7, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 73692` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0757 (`unified search l=3, two-group s_total=1,s_O=2`)
+
+- 18423 columns, built by the two-group construction (k=4, N=15, s_total=1, s_O=2); see `master_catalog_large.json`, `factories[102]`
+
+### 1381. `[[18424,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+
+- output gate: `012+013+023+123`
+- `N = 16` (4 outputs + 12 checks), exact minimal T-count 7, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 57316` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0758 (`unified search l=3, two-group s_total=2,s_O=2`)
+
+- 18424 columns, built by the two-group construction (k=4, N=16, s_total=2, s_O=2); see `master_catalog_large.json`, `factories[103]`
+
+### 1382. `[[20475,3,2]]` — CS01·CS02·CS12·CCZ012
+
+- output gate: `01+02+12+012`
+- `N = 15` (3 outputs + 12 checks), exact minimal T-count 4, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 4095]
+- leading error coefficient: `A_2 = 40950` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T³` on columns 1, 2048, 14332, 16377, 16378, 17404, 18425, 18426, 18427, 19451; `T⁵` on columns 10, 11; `T†` on columns 4095, 8190, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0669 (`unified search l=3, two-group s_total=1,s_O=2`)
+
+- 20475 columns, built by the two-group construction (k=3, N=15, s_total=1, s_O=2); see `master_catalog_large.json`, `factories[104]`
+
+### 1383. `[[20475,4,2]]` — T0·T1·T2·T3
+
+- output gate: `0+1+2+3`
+- `N = 16` (4 outputs + 12 checks), exact minimal T-count 4, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 4095]
+- leading error coefficient: `A_2 = 40950` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0759 (`unified search l=3, two-group s_total=1,s_O=4`)
+
+- 20475 columns, built by the two-group construction (k=4, N=16, s_total=1, s_O=4); see `master_catalog_large.json`, `factories[105]`
+
+### 1384. `[[20476,3,2]]` — CS01·CS02·CS12·CCZ012
+
+- output gate: `01+02+12+012`
+- `N = 16` (3 outputs + 13 checks), exact minimal T-count 4, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 4095]
+- leading error coefficient: `A_2 = 24570` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T³` on columns 4095, 8190, 14332, 15356, 16377, 16378, 16379, 17916, 18940, 19449, 19450, 19451; `T⁵` on column 0; `T†` on columns 1024, 2048, 16380, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0670 (`unified search l=3, two-group s_total=2,s_O=2`)
+
+- 20476 columns, built by the two-group construction (k=3, N=16, s_total=2, s_O=2); see `master_catalog_large.json`, `factories[106]`
+
+### 1385. `[[22185,8,2]]` — T0·T1·T2·T3·T4·T5·T6·T7·CS01·CS02·CS03·CS04·CS05·CS06·CS07·CS12·CS13·CS14·CS15·CS16·CS17·CS23·CS24·CS25·CS26·CS27·CS34·CS35·CS36·CS37·CS45·CS46·CS47·CS56·CS57·CS67
+
+- output gate: `0+1+2+3+4+5+6+7+01+02+03+04+05+06+07+12+13+14+15+16+17+23+24+25+26+27+34+35+36+37+45+46+47+56+57+67`
+- `N = 16` (8 outputs + 8 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 255]
+- leading error coefficient: `A_2 = 953955` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`
+- or no correction at all, with rotations run as `T⁵` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-1007 (`unified search l=3, two-group s_total=1,s_O=3`)
+- note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+- note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
+
+- 22185 columns, built by the two-group construction (k=8, N=16, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[107]`
+
+### 1386. `[[22484,7,2]]` — CS01·CS02·CS03·CS04·CS05·CS06·CS12·CS13·CS14·CS15·CS16·CS23·CS24·CS25·CS26·CS34·CS35·CS36·CS45·CS46·CS56·CCZ012·CCZ013·CCZ014·CCZ015·CCZ016·CCZ023·CCZ024·CCZ025·CCZ026·CCZ034·CCZ035·CCZ036·CCZ045·CCZ046·CCZ056·CCZ123·CCZ124·CCZ125·CCZ126·CCZ134·CCZ135·CCZ136·CCZ145·CCZ146·CCZ156·CCZ234·CCZ235·CCZ236·CCZ245·CCZ246·CCZ256·CCZ345·CCZ346·CCZ356·CCZ456
+
+- output gate: `01+02+03+04+05+06+12+13+14+15+16+23+24+25+26+34+35+36+45+46+56+012+013+014+015+016+023+024+025+026+034+035+036+045+046+056+123+124+125+126+134+135+136+145+146+156+234+235+236+245+246+256+345+346+356+456`
+- `N = 16` (7 outputs + 9 checks)
+- distance: exactly 2, witnessed by the fault on columns [0, 511]
+- leading error coefficient: `A_2 = 483406` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S† on 5`, `S† on 6`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)` and 16 more (7 single-wire, 21 CZ in all)
+- or no correction at all, with rotations run as `T³` on columns 0, 1, 256, 22101, 22228, 22356, 22483, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0968 (`unified search l=3, two-group s_total=1,s_O=3`)
+- note (T-count): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+- note (reduced degree): not computed: exact minimisation is over GL(7,2) and a punctured RM(7-4,7) coset, neither feasible at k=7
+
+- 22484 columns, built by the two-group construction (k=7, N=16, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[108]`
+
+### 1387. `[[22506,6,2]]` — T0·T1·T2·T3·T4·T5·CCZ012·CCZ013·CCZ014·CCZ015·CCZ023·CCZ024·CCZ025·CCZ034·CCZ035·CCZ045·CCZ123·CCZ124·CCZ125·CCZ134·CCZ135·CCZ145·CCZ234·CCZ235·CCZ245·CCZ345
+
+- output gate: `0+1+2+3+4+5+012+013+014+015+023+024+025+034+035+045+123+124+125+134+135+145+234+235+245+345`
+- `N = 16` (6 outputs + 10 checks), exact minimal T-count 6, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 1023]
+- leading error coefficient: `A_2 = 236313` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (1,2)` and 9 more (6 single-wire, 15 CZ in all)
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0910 (`unified search l=3, two-group s_total=1,s_O=3`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 22506 columns, built by the two-group construction (k=6, N=16, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[109]`
+
+### 1388. `[[22517,5,2]]` — T0·T1·T2·T3·T4·CS01·CS02·CS03·CS04·CS12·CS13·CS14·CS23·CS24·CS34
+
+- output gate: `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34`
+- `N = 16` (5 outputs + 11 checks), exact minimal T-count 10, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 2047]
+- leading error coefficient: `A_2 = 112585` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (1,4)` and 3 more (5 single-wire, 10 CZ in all)
+- or no correction at all, with rotations run as `T³` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0831 (`unified search l=3, two-group s_total=1,s_O=3`)
+- note (reduced degree): reduced degree is an UPPER BOUND: |GL(5,2)|=1e+07 too large for exact enumeration; min over identity + 100,000 random frames
+
+- 22517 columns, built by the two-group construction (k=5, N=16, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[110]`
+
+### 1389. `[[24570,4,2]]` — CS01·CS02·CS03·CS12·CS13·CS23·CCZ012·CCZ013·CCZ023·CCZ123
+
+- output gate: `01+02+03+12+13+23+012+013+023+123`
+- `N = 16` (4 outputs + 12 checks), exact minimal T-count 5, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 4095]
+- leading error coefficient: `A_2 = 61425` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`
+- or no correction at all, with rotations run as `T³` on columns 1, 2048, 18427, 20472, 20473, 21499, 23546, 24567, 24568, 24569; `T⁵` on columns 10, 11; `T†` on columns 4095, 8190, 12285, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0760 (`unified search l=3, two-group s_total=1,s_O=3`)
+
+- 24570 columns, built by the two-group construction (k=4, N=16, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[111]`
+
+### 1390. `[[24573,2,2]]` — T0·T1
+
+- output gate: `0+1`
+- `N = 15` (2 outputs + 13 checks), exact minimal T-count 2, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 8191]
+- leading error coefficient: `A_2 = 24573` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0598 (`unified search l=3, two-group s_total=1,s_O=2`)
+
+- 24573 columns, built by the two-group construction (k=2, N=15, s_total=1, s_O=2); see `master_catalog_large.json`, `factories[112]`
+
+### 1391. `[[24574,2,2]]` — T0·T1
+
+- output gate: `0+1`
+- `N = 16` (2 outputs + 14 checks), exact minimal T-count 2, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 8191]
+- leading error coefficient: `A_2 = 8191` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0599 (`unified search l=3, two-group s_total=2,s_O=2`)
+
+- 24574 columns, built by the two-group construction (k=2, N=16, s_total=2, s_O=2); see `master_catalog_large.json`, `factories[113]`
+
+### 1392. `[[32760,3,2]]` — CCZ012
+
+- output gate: `012`
+- `N = 15` (3 outputs + 12 checks), exact minimal T-count 7, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 4095]
+- leading error coefficient: `A_2 = 114660` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`
+- or no correction at all, with rotations run as `T³` on columns 4095, 8190, 20474, 22522, 24567, 24568, 24569, 26617, 28662, 28663, 28664, 32759, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0671 (`unified search l=3, two-group s_total=1,s_O=1`)
+
+- 32760 columns, built by the two-group construction (k=3, N=15, s_total=1, s_O=1); see `master_catalog_large.json`, `factories[114]`
+
+### 1393. `[[32760,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+
+- output gate: `012+013+023+123`
+- `N = 16` (4 outputs + 12 checks), exact minimal T-count 7, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 6142]
+- leading error coefficient: `A_2 = 114660` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0761 (`unified search l=3, two-group s_total=2,s_O=1`)
+
+- 32760 columns, built by the two-group construction (k=4, N=16, s_total=2, s_O=1); see `master_catalog_large.json`, `factories[115]`
+
+### 1394. `[[32764,2,2]]` — CS01
+
+- output gate: `01`
+- `N = 15` (2 outputs + 13 checks), exact minimal T-count 3, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 8191]
+- leading error coefficient: `A_2 = 49146` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T³` on columns 20477, 24570, 24571, 26621, 30716, 32761, 32762, 32763; `T⁵` on columns 11, 12; `T†` on columns 1, 4096, 8191, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0600 (`unified search l=3, two-group s_total=1,s_O=1`)
+
+- 32764 columns, built by the two-group construction (k=2, N=15, s_total=1, s_O=1); see `master_catalog_large.json`, `factories[116]`
+
+### 1395. `[[32764,3,2]]` — T0·T1·T2
+
+- output gate: `0+1+2`
+- `N = 16` (3 outputs + 13 checks), exact minimal T-count 3, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 8191]
+- leading error coefficient: `A_2 = 49146` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0672 (`unified search l=3, two-group s_total=1,s_O=3`)
+
+- 32764 columns, built by the two-group construction (k=3, N=16, s_total=1, s_O=3); see `master_catalog_large.json`, `factories[117]`
+
+### 1396. `[[32766,1,2]]` — T0
+
+- output gate: `0`
+- `N = 15` (1 output + 14 checks), exact minimal T-count 1, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 16383]
+- leading error coefficient: `A_2 = 16383` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0542 (`unified search l=3, two-group s_total=1,s_O=1`)
+
+- 32766 columns, built by the two-group construction (k=1, N=15, s_total=1, s_O=1); see `master_catalog_large.json`, `factories[118]`
+
+### 1397. `[[32766,2,2]]` — T0·T1
+
+- output gate: `0+1`
+- `N = 16` (2 outputs + 14 checks), exact minimal T-count 2, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 24574]
+- leading error coefficient: `A_2 = 16383` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0601 (`unified search l=3, two-group s_total=2,s_O=1`)
+
+- 32766 columns, built by the two-group construction (k=2, N=16, s_total=2, s_O=1); see `master_catalog_large.json`, `factories[119]`
+
+### 1398. `[[32767,1,3]]` — T0
+
+- output gate: `0`
+- `N = 16` (1 output + 15 checks), exact minimal T-count 1, reduced degree 1
+- distance: exactly 3, witnessed by the fault on columns [0, 1, 12288]
+- leading error coefficient: `A_3 = 178940587` accepted harmful faults of weight 3
+- Clifford correction, every rotation a `T`: `S on 0`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0543 (`unified search l=3, two-group s_total=2,s_O=1`)
+
+- 32767 columns, built by the two-group construction (k=1, N=16, s_total=2, s_O=1); see `master_catalog_large.json`, `factories[120]`
+
+### 1399. `[[36855,4,2]]` — CCZ012·CCZ013·CCZ023·CCZ123
+
+- output gate: `012+013+023+123`
+- `N = 16` (4 outputs + 12 checks), exact minimal T-count 7, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 4095]
+- leading error coefficient: `A_2 = 147420` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (1,2)`, `CZ on (1,3)`, `CZ on (2,3)`
+- no choice of rotation powers avoids it: `S`/`CZ` gates are needed
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0762 (`unified search l=3, two-group s_total=1,s_O=2`)
+
+- 36855 columns, built by the two-group construction (k=4, N=16, s_total=1, s_O=2); see `master_catalog_large.json`, `factories[121]`
+
+### 1400. `[[40955,3,2]]` — CS01·CS02·CS12·CCZ012
+
+- output gate: `01+02+12+012`
+- `N = 16` (3 outputs + 13 checks), exact minimal T-count 4, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 8191]
+- leading error coefficient: `A_2 = 81910` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`
+- or no correction at all, with rotations run as `T³` on columns 1, 4096, 28668, 32761, 32762, 34812, 36857, 36858, 36859, 38907; `T⁵` on columns 11, 12; `T†` on columns 8191, 16382, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0673 (`unified search l=3, two-group s_total=1,s_O=2`)
+
+- 40955 columns, built by the two-group construction (k=3, N=16, s_total=1, s_O=2); see `master_catalog_large.json`, `factories[122]`
+
+### 1401. `[[49149,2,2]]` — T0·T1
+
+- output gate: `0+1`
+- `N = 16` (2 outputs + 14 checks), exact minimal T-count 2, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 16383]
+- leading error coefficient: `A_2 = 49149` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0602 (`unified search l=3, two-group s_total=1,s_O=2`)
+
+- 49149 columns, built by the two-group construction (k=2, N=16, s_total=1, s_O=2); see `master_catalog_large.json`, `factories[123]`
+
+### 1402. `[[65528,3,2]]` — CCZ012
+
+- output gate: `012`
+- `N = 16` (3 outputs + 13 checks), exact minimal T-count 7, reduced degree 3
+- distance: exactly 2, witnessed by the fault on columns [0, 8191]
+- leading error coefficient: `A_2 = 229348` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`
+- or no correction at all, with rotations run as `T³` on columns 8191, 16382, 40954, 45050, 49143, 49144, 49145, 53241, 57334, 57335, 57336, 65527, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0674 (`unified search l=3, two-group s_total=1,s_O=1`)
+
+- 65528 columns, built by the two-group construction (k=3, N=16, s_total=1, s_O=1); see `master_catalog_large.json`, `factories[124]`
+
+### 1403. `[[65532,2,2]]` — CS01
+
+- output gate: `01`
+- `N = 16` (2 outputs + 14 checks), exact minimal T-count 3, reduced degree 2
+- distance: exactly 2, witnessed by the fault on columns [0, 16383]
+- leading error coefficient: `A_2 = 98298` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`, `S on 1`
+- or no correction at all, with rotations run as `T³` on columns 40957, 49146, 49147, 53245, 61436, 65529, 65530, 65531; `T⁵` on columns 12, 13; `T†` on columns 1, 8192, 16383, `T` on the rest
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0603 (`unified search l=3, two-group s_total=1,s_O=1`)
+
+- 65532 columns, built by the two-group construction (k=2, N=16, s_total=1, s_O=1); see `master_catalog_large.json`, `factories[125]`
+
+### 1404. `[[65534,1,2]]` — T0
+
+- output gate: `0`
+- `N = 16` (1 output + 15 checks), exact minimal T-count 1, reduced degree 1
+- distance: exactly 2, witnessed by the fault on columns [0, 32767]
+- leading error coefficient: `A_2 = 32767` accepted harmful faults of weight 2
+- Clifford correction, every rotation a `T`: `S on 0`
+- or no correction at all, with rotations run as `T†` on every rotation
+- discovery: pre-existing
+- regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
+- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- source: `borrowed-identity search: two-group` · lsc-0544 (`unified search l=3, two-group s_total=1,s_O=1`)
+
+- 65534 columns, built by the two-group construction (k=1, N=16, s_total=1, s_O=1); see `master_catalog_large.json`, `factories[126]`
+
 ## References
 
 Newest first.
@@ -24875,7 +26969,7 @@ Newest first.
 - <a id="ref-jain2026symmetry"></a>**Jain et al. (2026)** (`jain2026symmetry`, 735 rows) — S. P. Jain, A. Wills, and S. Singh, "Symmetry and AI-assisted discovery of magic-state factories," arXiv:2610.06535 (2026). <https://arxiv.org/abs/2610.06535>
 - <a id="ref-wills2026classification"></a>**Wills et al. (2026)** (`wills2026classification`, 207 rows) — A. Wills, S. P. Jain, and S. Singh, "Classification of Generalised Triorthogonal Codes through Length 54," arXiv:2609.30860 (2026). <https://arxiv.org/abs/2609.30860>
 - <a id="ref-gong2026magic"></a>**Gong et al. (2026)** (`gong2026magic`, 4 rows) — A. Gong, C. A. Pattison, P. Rall, and A. Wills, "Magic State Distillation via Codes over Binary Extension Fields," arXiv:2608.09727 (2026). <https://arxiv.org/abs/2608.09727>
-- <a id="ref-singh2026borrowed"></a>**Singh et al. (2026)** (`singh2026borrowed`, 418 rows) — S. Singh, C. Gidney, and C. Jones, "Borrowed Identities: Malleable Distillation Factories and a Unified Numerical Search," arXiv:2606.28518 (2026). <https://arxiv.org/abs/2606.28518>
+- <a id="ref-singh2026borrowed"></a>**Singh et al. (2026)** (`singh2026borrowed`, 545 rows) — S. Singh, C. Gidney, and C. Jones, "Borrowed Identities: Malleable Distillation Factories and a Unified Numerical Search," arXiv:2606.28518 (2026). <https://arxiv.org/abs/2606.28518>
 - <a id="ref-jacinto2026exploring"></a>**Jacinto et al. (2026)** (`jacinto2026exploring`, 5 rows) — H. Jacinto, X. Valcarce, V. Barizien, É. Gouzien, and N. Sangouard, "Exploring the landscape of compact magic-state distillation factories," arXiv:2606.07734 (2026). <https://arxiv.org/abs/2606.07734>
 - <a id="ref-jain2025transversal"></a>**Jain & Albert (2025)** (`jain2025transversal`, 24 rows) — S. P. Jain and V. V. Albert, "Transversal Clifford and T-gate codes of short length and high distance," IEEE J. Sel. Areas Inf. Theory 6, 127-137 (2025); arXiv:2408.12752. <https://doi.org/10.1109/JSAIT.2025.3570832>
 - <a id="ref-gong2024computation"></a>**Gong & Renes (2024)** (`gong2024computation`, 1 rows) — A. Gong and J. M. Renes, "Computation with quantum Reed-Muller codes and their mapping onto 2D atom arrays," arXiv:2410.23263 (2024). <https://arxiv.org/abs/2410.23263>

@@ -33,8 +33,19 @@ Fields of a result object:
                  input and almost nothing else is.
   ``N``          REQUIRED.  Ambient wires; must equal the largest qubit index
                  the columns use, plus one.
-  ``columns``    REQUIRED.  The circuit: one list of qubit indices per pi/4
-                 parity rotation.
+  ``columns``    REQUIRED, unless ``construction`` is given instead.  The
+                 circuit: one list of qubit indices per pi/4 parity rotation.
+  ``construction``  in place of ``columns``, for a circuit too long to store:
+                 a rule `constructions.py` rebuilds the columns from
+                 (``{"family": "two-group", "k": ..., "N": ..., "s_total":
+                 ..., "s_O": ...}``), agreeing with ``k`` and ``N``.  The
+                 circuit is checked exactly as stored columns are; an accepted
+                 row keeps the rule, with the digest of its columns, and goes
+                 to ``master_catalog_large.json`` instead of the main file.
+                 The rule fixes the order of the columns, so relabelling the
+                 outputs into the canonical frame may reorder them but not
+                 change them; a rule whose circuit it would change is
+                 refused.
   ``n``          optional.  Number of columns; checked against ``columns``.
   ``d``          optional CLAIM.  Never believed: the distance is measured from
                  the columns and the measurement is what gets stored.  A claim
@@ -131,6 +142,7 @@ sys.path.insert(0, str(HERE))
 
 import catalogfile as CF                                          # noqa: E402
 import clifford as CL                                             # noqa: E402
+import constructions as K                                         # noqa: E402
 import errorcoeff as EC                                           # noqa: E402
 import faultcore as FC                                            # noqa: E402
 import gatelabels as GL                                           # noqa: E402
@@ -140,7 +152,9 @@ import verify_catalog as VC                                       # noqa: E402
 
 #: Fields a result object must carry, and may carry.  Anything else is a typo
 #: -- ``colums`` silently ignored is a circuit merged from a field nobody read.
-RECORD_REQUIRED = ("k", "N", "columns")
+RECORD_REQUIRED = ("k", "N")
+#: ...and exactly one of these, the circuit itself or the rule that builds it
+RECORD_CIRCUIT = ("columns", "construction")
 RECORD_OPTIONAL = ("n", "d", "gate", "t_count", "poly_degree",
                    "regime", "strength", "discovery", "citations",
                    "label", "provenance", "origin", "file", "notes")
@@ -244,11 +258,29 @@ def record_problems(record) -> list[tuple[str, str]]:
         problems.append(("schema", f"missing required field(s) "
                                    f"{', '.join(missing)}"))
     unknown = [name for name in record
-               if name not in RECORD_REQUIRED + RECORD_OPTIONAL]
+               if name not in RECORD_REQUIRED + RECORD_CIRCUIT + RECORD_OPTIONAL]
     if unknown:
         problems.append(("schema", f"undocumented field(s) "
                                    f"{', '.join(sorted(unknown))}; see the "
                                    f"schema in the README"))
+    given = [name for name in RECORD_CIRCUIT if name in record]
+    if len(given) != 1:
+        problems.append(("schema", "a result carries its circuit as columns or "
+                                   "as a construction: exactly one of the two, "
+                                   f"not {' and '.join(given) or 'neither'}"))
+    elif given == ["construction"]:
+        # Checked here, before anything expands it, so a malformed rule is a
+        # named rejection and never a crash or a 2^N loop.
+        rule = record["construction"]
+        wrong = K.problems(rule)
+        problems += [("schema", f"construction: {detail}") for detail in wrong]
+        if not wrong:
+            for name in ("k", "N"):
+                if name in record and rule[name] != record[name]:
+                    problems.append(("schema",
+                                     f"the construction has {name}="
+                                     f"{rule[name]}, the record {name}="
+                                     f"{record[name]}"))
     for name in ("d", "n", "t_count", "poly_degree"):
         if record.get(name) is not None and not VC._integer(record[name]):
             problems.append(("schema", f"{name}={record[name]!r} is not a "
@@ -279,7 +311,10 @@ def candidate_row(record, payload, source_file: str, index: int):
     problems = record_problems(record)
     if any(kind == "schema" for kind, _d in problems):
         return None, problems
-    k, N, columns = record["k"], record["N"], record["columns"]
+    k, N = record["k"], record["N"]
+    construction = record.get("construction")
+    columns = (K.columns(construction) if construction is not None
+               else record["columns"])
 
     # `derive` opens with the indexing-safety checks -- `N` and `k` bound every
     # loop after them and they came out of a file, so `N: 2**63` is rejected in
@@ -332,6 +367,21 @@ def candidate_row(record, payload, source_file: str, index: int):
         moved = [sorted(perm[q] if q < k else q for q in column)
                  for column in facts["columns"]]
         relabelled = moved != facts["columns"]
+        if relabelled and construction is not None:
+            # The rule fixes the order of the columns, and `d_witness` and
+            # `rotation_powers` count in that order.  A relabelling that only
+            # permutes the same columns -- as it does for a circuit symmetric
+            # in its outputs -- leaves the circuit, and so its gate, where it
+            # was, and the rule's order is kept.  One that changes the circuit
+            # would store a circuit the rule does not build.
+            if sorted(moved) != facts["columns"]:
+                problems.append(("construction",
+                                 "relabelling the outputs into the canonical "
+                                 "frame changes the circuit the construction "
+                                 "builds, so the row could not be stored as "
+                                 "that construction"))
+                return None, problems
+            relabelled = False
         if relabelled:
             facts, again = VC.derive(moved, k, N)
             problems += again
@@ -439,6 +489,9 @@ def candidate_row(record, payload, source_file: str, index: int):
         "relabelled_into_canonical_frame": relabelled,
         "strongest_claim": strength,
         "columns": facts["columns"],
+        **({"construction": construction,
+            "columns_sha256": K.digest(facts["columns"])}
+           if construction is not None else {}),
         "citations": citations,
         # provisional: kept only if `merge` accepts this row as a NEW class --
         # an improvement keeps the incumbent's label, a duplicate changes nothing
@@ -602,6 +655,19 @@ def improve(incumbent, candidate, regimes):
     """
     for name in CIRCUIT_FIELDS:
         incumbent[name] = candidate[name]
+    # Where the circuit is stored goes with the circuit: a candidate built by
+    # a rule moves the class to the large file, and one with columns brings it
+    # back.  The two storage fields sit directly after ``columns``, where
+    # `catalogfile.materialise` puts them, so the row round-trips exactly.
+    stored = {name: candidate[name] for name in CF.STORAGE_FIELDS
+              if name in candidate}
+    items = [(key, value) for key, value in incumbent.items()
+             if key not in CF.STORAGE_FIELDS]
+    incumbent.clear()
+    for key, value in items:
+        incumbent[key] = value
+        if key == "columns":
+            incumbent.update(stored)
     for name in NOTE_FIELDS:
         if name in candidate:
             incumbent[name] = candidate[name]
@@ -708,7 +774,9 @@ def merge(payload, records, source_file: str):
                              f"was {was}, now N={candidate['N']}, "
                              f"d={candidate['d']}"))
     rows.sort(key=sort_key)
-    payload["n_classes"] = len(rows)
+    # the main header counts the main file's rows; the large file's header
+    # counts its own (`catalogfile.write_all`)
+    payload["n_classes"] = len(CF.main_rows(rows))
     return verdicts
 
 
@@ -751,6 +819,10 @@ def main(argv=None):
                         help="the file of new results (see the README)")
     parser.add_argument("--catalog", type=Path, default=CF.CATALOG_JSON,
                         help="the catalogue JSON to merge into")
+    parser.add_argument("--large", type=Path, default=None,
+                        help="its large file, for rows stored as a "
+                             "construction (default: master_catalog_large.json "
+                             "beside the catalogue)")
     parser.add_argument("--markdown", type=Path, default=None,
                         help="where to write the rendered catalogue "
                              "(default: MASTER_CATALOG.md beside the JSON)")
@@ -758,7 +830,12 @@ def main(argv=None):
                         help="verify and report, but write nothing")
     args = parser.parse_args(argv)
 
-    payload = CF.load(args.catalog)
+    large = args.large or args.catalog.with_name(CF.CATALOG_LARGE_JSON.name)
+    try:
+        payload = CF.load_all(args.catalog, large)
+    except (OSError, ValueError) as error:
+        print(f"NOT MERGED: the catalogue cannot be read: {error}")
+        return 1
     before = len(payload["factories"])
     records = read_records(args.results)
     print(f"merging {len(records)} result(s) from {args.results} into "
@@ -787,8 +864,8 @@ def main(argv=None):
         return 1
 
     if not args.dry_run:
-        CF.write(payload, args.catalog,
-                 args.markdown or args.catalog.parent / CF.CATALOG_MD.name)
+        CF.write_all(payload, args.catalog, large,
+                     args.markdown or args.catalog.parent / CF.CATALOG_MD.name)
         VC.persist_metric_cache()
     return report(verdicts, before, after, not args.dry_run)
 

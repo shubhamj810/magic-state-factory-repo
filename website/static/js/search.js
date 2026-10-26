@@ -15,7 +15,7 @@
                        "poly_degree", "effective_width", "gamma", "gamma_t",
                        "gamma_rho", "v_ex", "rate", "d_is_exact", "d_cert", "d_cert_exact",
                        "d_claim", "gamma_claim", "gamma_rho_claim", "clifford", "discovery",
-                       "regimes", "citations", "row"];
+                       "regimes", "citations", "file", "row"];
 
   function $(id) { return document.getElementById(id); }
 

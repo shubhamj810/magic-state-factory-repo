@@ -66,7 +66,14 @@ class TheBuiltSite(unittest.TestCase):
         cls.tmp = tempfile.TemporaryDirectory()
         cls.out = Path(cls.tmp.name) / "site"
         cls.index = build_site.build(cls.out)
-        cls.catalog = json.loads(build_site.CATALOG.read_text(encoding="utf-8"))
+        # both files, as the build reads them: main rows, then the large file's
+        cls.catalog = build_site.CF.load_all()
+        cls.main_count = len(build_site.CF.main_rows(cls.catalog["factories"]))
+
+    def row_of(self, summary):
+        """The catalogue row a summary came from: its file, and its index there."""
+        offset = 0 if summary["file"] == "master_catalog.json" else self.main_count
+        return self.catalog["factories"][offset + summary["row"]]
 
     @classmethod
     def tearDownClass(cls):
@@ -75,7 +82,10 @@ class TheBuiltSite(unittest.TestCase):
     def test_one_factory_per_catalogue_row(self):
         rows = self.catalog["factories"]
         self.assertEqual(self.index["counts"]["factories"], len(rows))
-        self.assertEqual(sorted(f["row"] for f in self.index["factories"]), list(range(len(rows))))
+        self.assertEqual(sorted((f["file"], f["row"]) for f in self.index["factories"]),
+                         sorted([("master_catalog.json", i) for i in range(self.main_count)]
+                                + [("master_catalog_large.json", i)
+                                   for i in range(len(rows) - self.main_count)]))
         ids = [f["id"] for f in self.index["factories"]]
         self.assertEqual(len(ids), len(set(ids)))
 
@@ -83,7 +93,7 @@ class TheBuiltSite(unittest.TestCase):
         for summary in self.index["factories"]:
             path = self.out / "data" / "factories" / f"{summary['id']}.json"
             record = json.loads(path.read_text(encoding="utf-8"))
-            row = self.catalog["factories"][summary["row"]]
+            row = self.row_of(summary)
             self.assertEqual(record["circuit"]["columns"], row["columns"])
             self.assertEqual(record["parameters"]["n"], len(row["columns"]))
 
@@ -92,7 +102,7 @@ class TheBuiltSite(unittest.TestCase):
 
     def test_numbers_are_copied_not_recomputed(self):
         for summary in self.index["factories"]:
-            row = self.catalog["factories"][summary["row"]]
+            row = self.row_of(summary)
             for key in ("n", "k", "d", "N", "t_count", "poly_degree", "d_is_exact"):
                 self.assertEqual(summary[key], row[key], (summary["id"], key))
 
@@ -100,8 +110,7 @@ class TheBuiltSite(unittest.TestCase):
         certified = [r for r in self.catalog["factories"] if r.get("d_certified")]
         self.assertTrue(certified)
         for row in certified:
-            summary = next(f for f in self.index["factories"] if f["row"] ==
-                           self.catalog["factories"].index(row))
+            summary = next(f for f in self.index["factories"] if self.row_of(f) is row)
             self.assertEqual(summary["d"], row["d"])                 # the verified one
             self.assertEqual(summary["d_cert"], row["d_certified"])
             self.assertEqual(summary["d_claim"], max(row["d"], row["d_certified"]))
@@ -114,7 +123,7 @@ class TheBuiltSite(unittest.TestCase):
         """``none`` / ``powers`` / ``required``, read off the two catalogue
         fields, and the factory files carry both fields verbatim."""
         for summary in self.index["factories"]:
-            row = self.catalog["factories"][summary["row"]]
+            row = self.row_of(summary)
             corr, powers = row["clifford_correction"], row["rotation_powers"]
             want = ("none" if not corr["S"] and not corr["CZ"]
                     else "powers" if powers is not None else "required")
@@ -139,6 +148,35 @@ class TheBuiltSite(unittest.TestCase):
         long = panel("185.1.7.a")
         self.assertIn("more (listed below)", long)
         self.assertNotIn("<p><details", long.replace(" ", ""))
+
+    def test_a_circuit_stored_as_a_construction(self):
+        """A row of master_catalog_large.json: its record carries the rule and
+        the rebuilt columns, its page names the rule and the file instead of
+        drawing the matrix, and the index says which file holds it."""
+        import hashlib
+        large = [f for f in self.index["factories"] if f["file"] == "master_catalog_large.json"]
+        self.assertTrue(large)
+        main = [f for f in self.index["factories"] if f["file"] == "master_catalog.json"]
+        self.assertEqual(sorted(f["row"] for f in large), list(range(len(large))))
+        self.assertEqual(sorted(f["row"] for f in main), list(range(len(main))))
+        widest = max(large, key=lambda f: f["n"])
+        record = json.loads((self.out / "data" / "factories" / f"{widest['id']}.json")
+                            .read_text(encoding="utf-8"))
+        stored = record["stored"]
+        self.assertEqual(stored["file"], "master_catalog_large.json")
+        self.assertEqual(stored["construction"]["family"], "two-group")
+        columns = record["circuit"]["columns"]
+        self.assertEqual(len(columns), widest["n"])
+        self.assertEqual(hashlib.sha256(json.dumps(columns, separators=(",", ":")).encode())
+                         .hexdigest(), stored["columns_sha256"])
+        text = (self.out / "f" / widest["id"] / "index.html").read_text(encoding="utf-8")
+        self.assertIn("The catalogue stores it as the two-group construction", text)
+        self.assertNotIn('<table class="matrix"', text)
+        self.assertIn(f"master_catalog_large.json</a>, <code>factories[{widest['row']}]", text)
+        # a row of the main file still says where it is
+        small = main[0]
+        text = (self.out / "f" / small["id"] / "index.html").read_text(encoding="utf-8")
+        self.assertIn(f"master_catalog.json</a>, <code>factories[{small['row']}]", text)
 
     def test_a_factory_page_states_its_error_coefficient(self):
         """A_d in the summary, the figures of merit and the distance panel:

@@ -66,7 +66,9 @@
     $("raw-details").addEventListener("toggle", function () {
       if (!$("raw").textContent) {
         var shallow = JSON.parse(JSON.stringify(record));
-        shallow.circuit = { columns: "[" + p.n + " columns, shown as the matrix above]" };
+        shallow.circuit = { columns: "[" + p.n + " columns, " +
+          (record.stored && record.stored.construction ? "rebuilt from the construction above"
+                                                       : "shown as the matrix above") + "]" };
         $("raw").textContent = JSON.stringify(shallow, null, 2);
       }
     });

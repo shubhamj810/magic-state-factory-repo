@@ -14,10 +14,14 @@ output of one unified distance-2 search, copied byte for byte into
   Clifford padding (a CNOT relabelling that spreads the output over more
   wires) and SAT recovery;
 * ``outputs/large_sweep.csv`` -- the two-group stage alone, up to 16 circuit
-  qubits, one factory per ``(l, k, n)``.  Only rows with ``n <= 4095`` inputs
-  are taken (`LARGE_SWEEP_MAX_N`); above that the table reaches ``n = 65534``,
-  and the whole of it would take ``master_catalog.json`` past GitHub's 100 MB
-  limit on a single file;
+  qubits, one factory per ``(l, k, n)``.  Rows with ``n <= 4095`` inputs
+  (`LARGE_SWEEP_MAX_N`) are written out as circuits like the rest.  Above
+  that the table reaches ``n = 65534``, and storing those columns would take
+  ``master_catalog.json`` to about 99 MB, at GitHub's 100 MB hard limit on a
+  file and twice its recommended 50 MB, so they
+  are written as the RULE that builds them, a two-group construction
+  (``master_catalog/constructions.py``), and go to
+  ``master_catalog_large.json``;
 * ``outputs/l3_k78_targets.csv`` -- shared-check gluing for every target on
   ``k = 7`` and ``8`` outputs, beyond the main table's ``k``.
 
@@ -52,6 +56,10 @@ row's ``raw`` column, and the distance, measured by the master catalogue's
 fault search.  Any mismatch stops the script.  The error coefficient ``A_d``
 is counted too (`errorcoeff`), for comparison with the upstream's own.
 
+A large-sweep row above ``n = 4095`` gets the same checks, on the circuit
+the upstream code builds, and then one more: the construction written for it
+must build exactly those columns.
+
 OUTPUT
 ------
 ``circuits/unified_l3.json``: one entry per distinct circuit -- the gates, the
@@ -62,6 +70,10 @@ not repeated.
 ``circuits/factories_unified_l3.json``: the same circuits in the input format
 of ``master_catalog/merge_results.py``, credited to the paper (see
 ``README.md`` for how the merge treats classes already held).
+
+``circuits/unified_l3_large.json`` and ``circuits/factories_unified_l3_large.json``:
+the same for the large-sweep rows above ``n = 4095``, each with its
+construction and the SHA-256 of its columns in place of the gates.
 
 The output is deterministic: ``--check`` rebuilds everything (about two
 minutes, most of it the upstream search) and fails if a committed file
@@ -91,6 +103,7 @@ sys.path.insert(0, str(REPO / "master_catalog"))
 import unified_search as US                                       # noqa: E402
 from Two_group import build_gate_set                              # noqa: E402
 from symfree_search import solve_binding                          # noqa: E402
+import constructions as K                                         # noqa: E402
 import errorcoeff as EC                                           # noqa: E402
 import faultcore as FC                                            # noqa: E402
 from bicheck import borrowed_identity_violation, magic            # noqa: E402
@@ -396,6 +409,50 @@ def entry(row, gates, table, line, seen):
     }
 
 
+def large_entries():
+    """The large-sweep rows above `LARGE_SWEEP_MAX_N`, each checked on the
+    circuit the upstream code builds, and written as its construction."""
+    out = []
+    for line, row in enumerate(read_table("large_sweep.csv"), 2):
+        if row["l"] != str(LEVEL) or int(row["n"]) <= LARGE_SWEEP_MAX_N:
+            continue
+        row = {**row, "search_stage": "two-group",
+               "params": f"s_total={row['s_total']},s_O={row['s_O']}"}
+        where = f"large_sweep.csv line {line}"
+        gates = sorted((tuple(sorted(S)), int(c) % (1 << LEVEL))
+                       for S, c in large_sweep_circuit(row))
+        columns, witness, a_d = checked(row, gates, where)
+        rule = {"family": "two-group", "k": int(row["k"]), "N": int(row["N"]),
+                "s_total": int(row["s_total"]), "s_O": int(row["s_O"])}
+        if K.columns(rule) != columns:
+            raise SystemExit(f"{where}: the two-group construction does not "
+                             f"build the circuit the upstream code builds")
+        out.append({
+            "id": f"lsc-{line:04d}", "table": "large_sweep.csv", "line": line,
+            "stage": "two-group", "params": row["params"],
+            "k": rule["k"], "wires": rule["N"], "n": int(row["n"]),
+            "d": int(row["d"]), "d_witness": witness, "A_d": a_d,
+            "raw": row["raw"], "construction": rule,
+            "columns_sha256": K.digest(columns),
+        })
+    return out
+
+
+def large_merge_record(e):
+    return {
+        "k": e["k"], "N": e["wires"], "n": e["n"], "d": e["d"],
+        "construction": e["construction"],
+        "regime": REGIMES[e["stage"]],
+        "discovery": "pre-existing",
+        "citations": [BORROWED],
+        "file": "borrowed_identities/circuits/unified_l3_large.json",
+        "label": e["id"],
+        "provenance": f"unified search l=3, two-group {e['params']}",
+        "origin": f"{REPOSITORY} at {COMMIT[:7]}, outputs/{e['table']} "
+                  f"line {e['line']}",
+    }
+
+
 def merge_record(e):
     regime = REGIMES[e["stage"]]
     record = {
@@ -456,7 +513,35 @@ def files():
             "identical to an all_factories.csv one is listed once, under the "
             "latter."),
     }
+    large = large_entries()
+    large_head = {
+        "about": ("The level-3 rows of the unified borrowed-identity search's "
+                  f"large sweep with more than {LARGE_SWEEP_MAX_N} inputs, "
+                  "each checked by borrowed_identities/export_unified.py on "
+                  "the circuit the upstream code builds and written as the "
+                  "two-group construction that rebuilds it "
+                  f"(master_catalog/constructions.py). Cite {CITATION}."),
+        "source": {"repository": REPOSITORY, "commit": COMMIT,
+                   "files": {"large_sweep.csv":
+                             sha256(UPSTREAM / "outputs" / "large_sweep.csv")}},
+        "level": LEVEL,
+        "rows": {f"large_sweep.csv, n > {LARGE_SWEEP_MAX_N}": len(large)},
+        "conventions": (
+            "n counts the input T states and N the circuit wires; wires "
+            "0..k-1 are the outputs. construction rebuilds the columns, in "
+            "the order its family fixes, and columns_sha256 is the SHA-256 "
+            "of them as compact JSON. d is measured over those columns, with "
+            "d_witness column indices of an undetectable damaging fault of "
+            "that weight, and A_d is the number of such faults."),
+    }
     return {
+        OUT / "unified_l3_large.json": one_per_line(large_head, "circuits",
+                                                    large),
+        OUT / "factories_unified_l3_large.json": one_per_line({
+            "about": ("The circuits of unified_l3_large.json in the input "
+                      "format of master_catalog/merge_results.py, each as its "
+                      "construction."),
+        }, "results", [large_merge_record(e) for e in large]),
         OUT / "unified_l3.json": one_per_line(head, "circuits", entries),
         OUT / "factories_unified_l3.json": one_per_line({
             "about": ("The circuits of unified_l3.json in the input format of "

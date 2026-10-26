@@ -275,9 +275,18 @@ pass. The error coefficient `A_d` of each is counted as well. On the seven
 level-3 targets of the upstream `outputs/error_coefficients.json` it equals
 their coefficient `c` exactly: 22, 84, 49, 61, 55, 86 and 139.
 
-**Not imported.** Large-sweep rows above `n = 4095`, 127 of them up to
-`n = 65534`, would take `master_catalog.json` past GitHub's 100 MB limit on a
-single file. Levels 2 and 4 are outside the catalogue, as before.
+**The longest circuits.** The large-sweep rows above `n = 4095`, 127 of them
+up to `n = 65534`, would take `master_catalog.json` to about 99 MB, at
+GitHub's 100 MB hard limit on a file and twice its recommended 50 MB. `export_unified.py` checks each of them in the same way, on
+the circuit the upstream code builds, and writes it as the two-group
+construction that rebuilds it (`circuits/unified_l3_large.json` and
+`circuits/factories_unified_l3_large.json`). They are in the master
+catalogue's large file,
+[`../master_catalog/master_catalog_large.json`](../master_catalog/master_catalog_large.json),
+merged by
+[`../master_catalog/migrations/borrowed_identities_large_2026_10_26.py`](../master_catalog/migrations/borrowed_identities_large_2026_10_26.py):
+127 new classes, credited to the paper. Levels 2 and 4 are outside the
+catalogue, as before.
 
 **In the master catalogue.**
 [`../master_catalog/migrations/borrowed_identities_unified_2026_10_26.py`](../master_catalog/migrations/borrowed_identities_unified_2026_10_26.py)

@@ -634,8 +634,10 @@ def main(argv=None):
                 f"under {SUBMISSIONS.relative_to(REPO)}/, so every merged "
                 f"row's source names a file the repository holds; move it "
                 f"there first"])
+        large = args.catalog.with_name(CF.CATALOG_LARGE_JSON.name)
         try:
-            payload = CF.load(args.catalog)
+            # both files: a class or a label held in the large file is held
+            payload = CF.load_all(args.catalog, large)
         except (OSError, ValueError) as error:
             print(f"CANNOT READ THE CATALOGUE {args.catalog}: {error}")
             return 2
@@ -667,7 +669,8 @@ def main(argv=None):
               + f"; {args.catalog} is unchanged")
         return 1
     markdown = args.markdown or args.catalog.parent / CF.CATALOG_MD.name
-    CF.write(merged, args.catalog, markdown)
+    CF.write_all(merged, args.catalog,
+                 args.catalog.with_name(CF.CATALOG_LARGE_JSON.name), markdown)
     # reduced-degree bounds computed on the way in, kept beside the catalogue
     # they were computed for (for the master catalogue, the cache
     # verify_catalog.py preloads)

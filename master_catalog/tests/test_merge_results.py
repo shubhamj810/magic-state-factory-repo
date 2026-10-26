@@ -187,6 +187,10 @@ class TestMergingIntoTheShippedCatalogue(unittest.TestCase):
         self.addCleanup(shutil.rmtree, self.dir)
         self.json_path = self.dir / "master_catalog.json"
         shutil.copy(CF.CATALOG_JSON, self.json_path)
+        # the large file too, when there is one: a merge reads both
+        if CF.CATALOG_LARGE_JSON.exists():
+            shutil.copy(CF.CATALOG_LARGE_JSON,
+                        self.dir / CF.CATALOG_LARGE_JSON.name)
         self.shipped = CF.CATALOG_JSON.read_text(encoding="utf-8")
 
     def run_merge(self, records, *extra):
@@ -202,7 +206,7 @@ class TestMergingIntoTheShippedCatalogue(unittest.TestCase):
     def test_merging_nothing_regenerates_the_markdown_from_the_json(self):
         self.run_merge([])
         self.assertEqual((self.dir / "MASTER_CATALOG.md").read_text("utf-8"),
-                         CF.render_markdown(CF.load()))
+                         CF.render_markdown(CF.load_all()))
 
     def test_a_copy_of_an_existing_row_is_a_duplicate_and_changes_nothing(self):
         row = next(r for r in CF.rows() if r["n"] == 15 and r["k"] == 1)

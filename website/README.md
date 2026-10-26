@@ -1,6 +1,7 @@
 # The catalogue website
 
-A static, searchable view of [`master_catalog/master_catalog.json`](../master_catalog/master_catalog.json),
+A static, searchable view of [`master_catalog/master_catalog.json`](../master_catalog/master_catalog.json)
+and [`master_catalog_large.json`](../master_catalog/master_catalog_large.json),
 published at **<https://shubhamj810.github.io/magic-state-factory-repo/>**.
 
 The master catalogue is the only data source. Nothing the site shows is stored
@@ -9,8 +10,9 @@ catalogue, so a merged result appears on the site with no further step.
 
 ```
 master_catalog/master_catalog.json          1277 rows, columns included
+master_catalog/master_catalog_large.json    127 rows built by a construction
             |
-            |  website/build_site.py         standard library only, ~1 s
+            |  website/build_site.py         standard library only, ~10 s
             v
 website/_site/                               (git-ignored; built in CI)
   index.html          landing: search, what the catalogue offers, best factories, frontier, parameter table
@@ -156,7 +158,7 @@ does not hold:
 - there are `n` columns;
 - every citation is in the reference table;
 - no two rows share an id;
-- the number of rows matches `n_classes`.
+- the main file's number of rows matches its `n_classes`.
 
 A few rows carry a distance certified by their source that the catalogue could
 not re-check (`d_certified`). Tables show both distances side by side. Claims,
@@ -174,6 +176,15 @@ proved by the catalogue, that none do. The index carries the summary as
 as a column. A factory page whose matrix has more than 1.5 million cells, the
 widest transversal-T codes, offers the CSV and the columns instead of drawing
 it.
+
+The rows of the large file are read through `catalogfile.load_all`, which
+rebuilds their columns from their constructions, so their records carry the
+columns like every other. Each summary in the index and the CSV says which
+file holds its row (`file`) and where (`row`, counted within that file), and
+each record has a `stored` object with the file, the row, and, for a large
+row, the `construction` and `columns_sha256`. A large row's page names the
+construction instead of drawing the matrix, and links to its row in the
+large file.
 
 Every factory page with an exact distance gives the **error coefficient**
 `A_d`, the catalogue's count of accepted damaging faults of weight `d`, in the

@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
-"""Build the catalogue website from `master_catalog/master_catalog.json`.
+"""Build the catalogue website from `master_catalog/master_catalog.json`
+and `master_catalog/master_catalog_large.json`.
 
     python website/build_site.py                 # -> website/_site/
     python website/build_site.py --out /tmp/site
     python -m http.server -d website/_site 8000  # then open http://localhost:8000/
 
-The master catalogue is the ONLY data source.  Nothing the site shows is stored
-anywhere else in the repository, so the site cannot drift from the database:
-merge a result into `master_catalog.json`, push, and the deploy rebuilds every
-page's data from it.
+The master catalogue is the ONLY data source.  It is read through
+`catalogfile.load_all`, which rebuilds the columns of the large file's rows
+from their constructions, so every row arrives here with its columns.
+Nothing the site shows is stored anywhere else in the repository, so the
+site cannot drift from the database: merge a result into the catalogue, push,
+and the deploy rebuilds every page's data from it.
 
     master_catalog/master_catalog.json      1277 rows, 43 MB, with columns
+    master_catalog/master_catalog_large.json  rows built by a construction
                  |
                  |  build_site.py  (standard library only)
                  v
@@ -44,6 +48,9 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 CATALOG = ROOT / "master_catalog" / "master_catalog.json"
+LARGE_NAME = "master_catalog_large.json"
+sys.path.insert(0, str(ROOT / "master_catalog"))
+import catalogfile as CF  # noqa: E402  (standard library only, like this file)
 CONTRIBUTORS = ROOT / "community_contributions" / "contributors.json"
 STATIC = HERE / "static"
 TEMPLATES = HERE / "templates"
@@ -141,7 +148,15 @@ def clifford_kind(row: dict) -> str:
 def build_rows(catalog: dict):
     """Yield ``(summary, record)`` per row; raise on anything inconsistent."""
     references = catalog.get("references") or {}
+    in_file = {False: 0, True: 0}
     for position, row in enumerate(catalog["factories"]):
+        # where the row is stored: its file, and its index there
+        large = CF.is_large(row)
+        stored_at = {"file": LARGE_NAME if large else CATALOG.name,
+                     "row": in_file[large],
+                     "construction": row.get("construction"),
+                     "columns_sha256": row.get("columns_sha256")}
+        in_file[large] += 1
         n, k, d, N = row["n"], row["k"], row["d"], row["N"]
         terms = monomials(row["gate"], k)
         if human(terms, k) != row["gate_human"]:
@@ -198,11 +213,13 @@ def build_rows(catalog: dict):
             "regimes": list(row.get("regimes") or []),
             "discovery": row.get("discovery"),
             "citations": list(row.get("citations") or []),
-            "row": position,
+            "row": stored_at["row"],
+            "file": stored_at["file"],
         }
         record = {
             "id": fid,
-            "row": position,
+            "row": stored_at["row"],
+            "stored": stored_at,
             "parameters": {"n": n, "k": k, "d": d, "N": N, "r": N - k,
                            "level": row.get("level")},
             "gate": {
@@ -281,14 +298,16 @@ def parameter_groups(factories: list[dict]) -> list[dict]:
 CSV_FIELDS = ("id", "n", "k", "d", "d_is_exact", "A_d", "d_cert", "d_cert_exact", "N", "r", "gate_human", "terms", "t_terms",
               "cs_terms", "ccz_terms", "pure_t", "t_count", "poly_degree", "clifford",
               "gamma", "gamma_t", "gamma_rho", "v_ex", "rate",
-              "discovery", "regimes", "citations", "row")
+              "discovery", "regimes", "citations", "file", "row")
 
 
-def source_stamp(catalog_path: Path) -> dict:
-    """The commit and date of the catalogue the site was built from, if git knows."""
+def source_stamp(catalog_path: Path, large_path: Path | None = None) -> dict:
+    """The commit and date of the catalogue the site was built from, if git knows:
+    the last commit to touch either file, since a merge may change only one."""
+    paths = [str(catalog_path)] + ([str(large_path)] if large_path else [])
     try:
         line = subprocess.run(
-            ["git", "log", "-1", "--format=%h %cs", "--", str(catalog_path)],
+            ["git", "log", "-1", "--format=%h %cs", "--", *paths],
             cwd=catalog_path.parent, capture_output=True, text=True, check=True,
             timeout=20).stdout.strip()
     except (OSError, subprocess.SubprocessError):
@@ -420,8 +439,9 @@ def render_entries(out: Path, index: dict, records: list) -> None:
     (out / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
 
 
-def build(out: Path, catalog_path: Path = CATALOG) -> dict:
-    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+def build(out: Path, catalog_path: Path = CATALOG, large_path: Path | None = None) -> dict:
+    large_path = large_path or catalog_path.with_name(LARGE_NAME)
+    catalog = CF.load_all(catalog_path, large_path)
     summaries, records = [], []
     for summary, record in build_rows(catalog):
         summaries.append(summary)
@@ -433,9 +453,10 @@ def build(out: Path, catalog_path: Path = CATALOG) -> dict:
     references_map = catalog.get("references") or {}
     for s_ in summaries:
         s_["cite_text"] = "; ".join(references_map.get(c, {}).get("short", c) for c in s_["citations"])
-    if catalog.get("n_classes") not in (None, len(summaries)):
+    main_count = len(CF.main_rows(catalog["factories"]))
+    if catalog.get("n_classes") not in (None, main_count):
         raise ValueError(f"n_classes says {catalog['n_classes']}, "
-                         f"the file has {len(summaries)} rows")
+                         f"the main file has {main_count} rows")
 
     summaries.sort(key=lambda s: (s["n"], s["k"], s["d"], s["gate"]))
     used = sorted({c for s in summaries for c in s["citations"]})
@@ -447,7 +468,7 @@ def build(out: Path, catalog_path: Path = CATALOG) -> dict:
         "ranges": {key: [min(s[key] for s in summaries), max(s[key] for s in summaries)]
                    for key in ("n", "k", "N")} |
                   {"d": sorted({s["d"] for s in summaries} | {s["d_claim"] for s in summaries})},
-        "source": source_stamp(catalog_path),
+        "source": source_stamp(catalog_path, large_path),
         "dedup_key": catalog.get("dedup_key"),
         "regimes": catalog.get("regimes") or {},
         "discovery": catalog.get("discovery") or {},
@@ -486,8 +507,10 @@ def main(argv=None) -> int:
                         help=f"output directory (default {DEFAULT_OUT.relative_to(ROOT)})")
     parser.add_argument("--catalog", type=Path, default=CATALOG,
                         help="the master catalogue to build from")
+    parser.add_argument("--large", type=Path, default=None,
+                        help=f"its large file (default: {LARGE_NAME} beside it)")
     arguments = parser.parse_args(argv)
-    index = build(arguments.out, arguments.catalog)
+    index = build(arguments.out, arguments.catalog, arguments.large)
     counts = index["counts"]
     print(f"built {counts['factories']} factories in {counts['parameter_sets']} "
           f"parameter sets -> {arguments.out}")

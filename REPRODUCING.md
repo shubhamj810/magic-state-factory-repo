@@ -252,7 +252,7 @@ through `merge_results.py`. So what there is to reproduce is the VERIFICATION,
 which reads nothing but the file itself:
 
 ```bash
-.venv/bin/python master_catalog/verify_catalog.py            # every row, ~35 min on one core
+.venv/bin/python master_catalog/verify_catalog.py            # every row of both files, ~60 min on one core
 .venv/bin/python master_catalog/verify_catalog.py --changed  # rows that differ from HEAD, seconds
 ```
 
@@ -333,6 +333,21 @@ The export prints `up to date`. Run against the catalogue before it
 reports `250 accepted, 187 duplicate, 355 rejected; refused as
 {'pseudo-output': 355}` and `1027 -> 1277 classes`. Against the shipped
 catalogue it reports `437 duplicate, 355 rejected` and changes nothing.
+
+The 127 longer large-sweep circuits went to the large file as constructions,
+through a third migration:
+
+```bash
+.venv/bin/python master_catalog/migrations/borrowed_identities_large_2026_10_26.py --dry-run   # ~18 min
+```
+
+The export above also writes them (`circuits/factories_unified_l3_large.json`).
+Run against the catalogue before it (`git show e49216e:master_catalog/master_catalog.json`,
+which had no large file), the migration reports `127 accepted` and
+`1277 -> 1404 classes, 127 of them in the large file`, and `master_catalog.json`
+comes out byte for byte unchanged. Against the shipped catalogue it reports
+`127 duplicate` and changes nothing. Most of the time is the logical-action
+check, which evaluates every one of the `2^16` inputs on the longest circuits.
 
 ### The transversal-T codes of Jain and Albert
 

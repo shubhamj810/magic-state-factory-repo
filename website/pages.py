@@ -107,9 +107,28 @@ def claim_mark(row) -> str:
 MATRIX_CELL_LIMIT = 1_500_000
 
 
+#: How a construction's parameters are printed.
+CONSTRUCTION_SYMBOLS = {"k": "k", "N": "N", "s_total": r"s_{\mathrm{total}}", "s_O": r"s_{O}"}
+
+
+def construction_text(rule) -> str:
+    """``the two-group construction with k=1, N=16, ...`` for a page."""
+    params = ", ".join(tex(f"{CONSTRUCTION_SYMBOLS.get(name, name)}={value}")
+                       for name, value in rule.items() if name != "family")
+    return f"the {esc(rule['family'])} construction with {params}"
+
+
 def matrix_html(record) -> str:
     p = record["parameters"]
     n, N, k = p["n"], p["N"], p["k"]
+    rule = (record.get("stored") or {}).get("construction")
+    if rule:
+        # A circuit stored as its rule is the size no one reads cell by cell,
+        # and drawing it would add megabytes to the page.
+        return (f'<p class="matrix-skip small">This circuit has {N:,} rows and {n:,} columns, '
+                f"{N * n:,} cells. The catalogue stores it as {construction_text(rule)}, which "
+                "rebuilds every column; download the matrix as a CSV or copy the columns "
+                "(see Download).</p>")
     by_wire = [[] for _ in range(N)]
     for j, column in enumerate(record["circuit"]["columns"]):
         for wire in column:
@@ -408,9 +427,14 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
   </div>
 </section>"""
 
-    caption = (f"The {tex(f'{N}\\times{n}')} matrix. Rows are wires and columns are rotations. "
+    rule = (record.get("stored") or {}).get("construction")
+    caption = ((f"The {tex(f'{N}\\times{n}')} matrix of this circuit is not drawn: the catalogue "
+                "stores it as the rule that builds it, below, and every number on this page is "
+                "derived from the columns that rule rebuilds.") if rule else
+               f"The {tex(f'{N}\\times{n}')} matrix. Rows are wires and columns are rotations. "
                "A 1 means the wire takes part in the rotation, and the number beside each wire is its row weight."
-               + (" Scroll sideways to see every column." if 120 < n and N * n <= MATRIX_CELL_LIMIT else ""))
+               + (" Scroll sideways to see every column."
+                  if 120 < n and N * n <= MATRIX_CELL_LIMIT and not rule else ""))
     metrics = "".join([
         metric(f"inputs {tex('n')}", n, "Noisy T states per run."),
         metric(f"outputs {tex('k')}", k),
@@ -540,7 +564,7 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
   <div class="entry-main">
   <h2 id="matrix" style="margin-top:8px">The circuit</h2>
   <p class="section-intro" id="matrix-caption">{caption}</p>
-  <div class="matrix-bar">
+  <div class="matrix-bar"{" hidden" if rule else ""}>
     <ul class="legend">
       <li><span class="swatch out" aria-hidden="true"></span>output wires</li>
       <li><span class="swatch chk" aria-hidden="true"></span>check wires, measured and postselected</li>
@@ -602,7 +626,7 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
   <h2>Raw record</h2>
   <div class="panel">
     <details id="raw-details"><summary>Show the JSON this page is built from</summary><pre class="raw" id="raw"></pre></details>
-    <p class="small muted" style="margin:10px 0 0">Source: <a href="{REPO}/blob/main/master_catalog/master_catalog.json">master_catalog.json</a>, <code>factories[{record["row"]}]</code>.</p>
+    <p class="small muted" style="margin:10px 0 0">Source: <a href="{REPO}/blob/main/master_catalog/{record["stored"]["file"]}">{record["stored"]["file"]}</a>, <code>factories[{record["stored"]["row"]}]</code>{" (stored as its construction; the columns here are rebuilt from it)" if record["stored"]["construction"] else ""}.</p>
   </div>
   </div>
   {side}

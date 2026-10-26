@@ -85,10 +85,17 @@ WHAT IS RE-DERIVED, PER ROW
     with the row; where the direct enumeration of harmful faults also
     finishes, it must agree.  A floor has no ``A_d``, and a ``null`` on an
     exact row must be one this count cannot reach either.
+11. **The construction**, on a row of ``master_catalog_large.json``.  Such a
+    row stores a rule instead of its columns (`constructions.py`), and the
+    columns every check above read were rebuilt from it on loading.  So the
+    rule must be well formed and agree with the row's ``k`` and ``N``, must
+    rebuild exactly the columns being verified, and their SHA-256 must be
+    the row's ``columns_sha256``, which pins the circuit independently of
+    the code that builds it.  A row carries both fields or neither.
 
 AND, ONCE, OVER THE WHOLE FILE
 ------------------------------
-11. **No duplicate classes.**  A class is ``(n, k, d, GL(k,2) gate)``: the
+12. **No duplicate classes.**  A class is ``(n, k, d, GL(k,2) gate)``: the
     distance, and the gate up to an invertible change of the output basis and
     diagonal Cliffords.  Two rows with equal ``d`` and equal PROVED ``S_k`` keys
     are one class outright (a permutation is a frame change), and then every
@@ -98,18 +105,20 @@ AND, ONCE, OVER THE WHOLE FILE
     ``dedup_note``: the file may hold a class whose distinctness is unproved,
     at the widths where proving it is out of reach, but it may not do so
     silently -- and a note on a row whose every pair WAS decided is refused.
-12. **The provenance labels resolve.**  Every name in a row's ``regimes`` is
+13. **The provenance labels resolve.**  Every name in a row's ``regimes`` is
     one the file's own header defines, the names are listed strongest-first in
     the header's order, and ``strongest_claim`` is the header's sentence for
     the first of them.  This is the one published field a row cannot check
     alone -- it is a statement about the row AND the header -- which is why it
     lives here rather than in `verify_row`.
-13. **The header is there and counts its rows.**  Every key
+14. **The header is there and counts its rows.**  Every key
     `catalogfile.HEADER_KEYS` names is present and typed, the two definition
     maps really map names to sentences, and ``n_classes`` equals the number of
-    rows -- the one header value that is DERIVABLE, and so the one that can go
-    stale without anything else noticing.
-14. **The citations resolve.**  Every row cites at least one work, no key twice,
+    rows of the main file -- the one header value that is DERIVABLE, and so
+    the one that can go stale without anything else noticing.  (The large
+    file's rows are counted in its own header, which `catalogfile.write_all`
+    rebuilds on every write.)
+15. **The citations resolve.**  Every row cites at least one work, no key twice,
     and every key is an entry of the header's ``references`` map.  Which works
     a class is credited to is a curation decision and nothing here re-derives
     it; what is checked is that a reader following a citation finds one.
@@ -145,6 +154,7 @@ sys.path.insert(0, str(HERE))          # run from anywhere: siblings by bare nam
 sys.path.insert(0, str(REPO))          # shared factorylib package
 
 import catalogfile as CF                                          # noqa: E402
+import constructions as K                                         # noqa: E402
 import clifford as CL                                             # noqa: E402
 import errorcoeff as EC                                           # noqa: E402
 import faultcore as FC                                            # noqa: E402
@@ -817,7 +827,8 @@ def verify_row(row, budget=None, reference=True):
     if missing:
         problems.append(("schema", f"row is missing {', '.join(missing)}"))
     unknown = [name for name in row
-               if name not in CF.REQUIRED_FIELDS + CF.OPTIONAL_FIELDS]
+               if name not in CF.REQUIRED_FIELDS + CF.OPTIONAL_FIELDS
+               + CF.STORAGE_FIELDS]
     if unknown:
         problems.append(("schema", f"row carries undocumented field(s) "
                                    f"{', '.join(sorted(unknown))}"))
@@ -834,6 +845,7 @@ def verify_row(row, budget=None, reference=True):
     if typed:
         return {}, problems
     problems += certificate_problems(row)
+    problems += construction_problems(row)
     problems += label_problems(row)
 
     facts, derived_problems = derive(row["columns"], row["k"], row["N"])
@@ -1295,6 +1307,41 @@ def duplicate_label_problems(rows):
 CERTIFICATE_FIELDS = ("d_certified", "d_certified_is_exact", "d_certified_source")
 
 
+def construction_problems(row):
+    """A large-file row's rule against the columns being verified.
+
+    The columns of such a row were rebuilt from its ``construction`` when the
+    file was loaded, so every other check here is a check of the rule's
+    circuit -- provided the rule really is the row's.  This is where that is
+    established: the shape, the agreement with ``k`` and ``N``, the rebuild,
+    and the digest that pins the circuit independently of `constructions`.
+    """
+    has_rule, has_digest = "construction" in row, "columns_sha256" in row
+    if not has_rule and not has_digest:
+        return []
+    if has_rule != has_digest:
+        return [("construction", "a row carries construction and "
+                                  "columns_sha256 together or neither")]
+    rule = row["construction"]
+    wrong = K.problems(rule)
+    if wrong:
+        return [("construction", detail) for detail in wrong]
+    problems = []
+    for name in ("k", "N"):
+        if rule[name] != row[name]:
+            problems.append(("construction",
+                             f"the construction has {name}={rule[name]}, "
+                             f"the row {name}={row[name]}"))
+    if K.columns(rule) != row["columns"]:
+        problems.append(("construction",
+                         "the construction does not build the row's columns"))
+    if K.digest(row["columns"]) != row["columns_sha256"]:
+        problems.append(("construction",
+                         "columns_sha256 is not the digest of the row's "
+                         "columns"))
+    return problems
+
+
 def certificate_problems(row):
     """A source's distance certificate that is incomplete or says nothing true.
 
@@ -1426,10 +1473,13 @@ def header_problems(payload):
         # value is held to the same bar as every row value.
         problems.append(("header", f"the header says n_classes={stated!r}, "
                                    f"which is not a whole number"))
-    elif stated is not None and stated != len(payload["factories"]):
+    elif stated != len(CF.main_rows(payload["factories"])):
+        # the main file's rows: a payload from `catalogfile.load_all` also
+        # holds the large file's, which that file's own header counts
         problems.append(("header", f"the header says n_classes={stated!r} but "
                                    f"the file carries "
-                                   f"{len(payload['factories'])} rows"))
+                                   f"{len(CF.main_rows(payload['factories']))} "
+                                   f"rows"))
     return problems
 
 
@@ -1517,8 +1567,58 @@ def verify_catalog(payload, budget=None, verbose=True, indices=None,
     return failures, checked
 
 
-def _committed_catalogue(path, ref):
-    """The catalogue at ``ref`` in the repository holding ``path``."""
+def large_file_problems(path):
+    """The large file's own header: exactly the one `catalogfile.write_all`
+    writes for the rows it holds -- its description, the families, and a
+    count that matches.  ``[]`` if the file does not exist.
+
+    The rows themselves are checked by `verify_row` once loaded; this is the
+    one part of the file loading does not read, so it is checked here, on the
+    raw JSON.
+    """
+    path = Path(path)
+    if not path.exists():
+        return []
+    try:
+        blob = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as error:
+        return [("large-file", f"{path.name} cannot be read: {error}")]
+    if not isinstance(blob, dict) or not isinstance(blob.get("factories"), list):
+        return [("large-file", f"{path.name} has no 'factories' list")]
+    want = {**CF.large_header(len(blob["factories"])),
+            "factories": blob["factories"]}
+    problems = []
+    if list(blob) != list(want):
+        problems.append(("large-file", f"{path.name} has the keys "
+                                       f"{list(blob)}, not {list(want)}"))
+    for key in ("about", "families", "n_classes"):
+        if blob.get(key) != want[key]:
+            problems.append(("large-file", f"{path.name}'s {key} is not the "
+                                           f"one catalogfile.write_all writes "
+                                           f"for its {len(blob['factories'])} "
+                                           f"row(s)"))
+    if problems:
+        return problems
+    # And the rows exactly as the writer writes them: each one decoded and
+    # encoded again, key order included.  A file that only decodes would pass
+    # here and then be refused by the next tool that writes it.
+    try:
+        again = [CF.dematerialise(CF.materialise(stored, where), where)
+                 for i, stored in enumerate(blob["factories"])
+                 for where in [f"{path.name} factories[{i}]"]]
+    except ValueError as error:
+        return [("large-file", str(error))]
+    if CF.serialise({**want, "factories": again}) != path.read_text(
+            encoding="utf-8"):
+        problems.append(("large-file", f"{path.name} is not byte for byte "
+                                       f"what catalogfile.write_all writes "
+                                       f"for its rows"))
+    return problems
+
+
+def _committed_file(path, ref, required=True):
+    """The JSON of ``path`` at ``ref``, or ``None`` if it is not there and
+    not ``required``."""
     import subprocess
     path = Path(path).resolve()
     try:
@@ -1526,18 +1626,40 @@ def _committed_catalogue(path, ref):
                               "--show-toplevel"], capture_output=True,
                              text=True, check=True).stdout.strip()
         relative = path.relative_to(Path(top).resolve()).as_posix()
-        blob = subprocess.run(["git", "-C", top, "show", f"{ref}:{relative}"],
-                              capture_output=True, text=True, check=True).stdout
+        shown = subprocess.run(["git", "-C", top, "show", f"{ref}:{relative}"],
+                               capture_output=True, text=True)
+        shown.check_returncode()
     except (subprocess.CalledProcessError, ValueError, OSError) as error:
+        if not required:
+            # an optional file that git does not hold at ``ref`` -- or that
+            # lies outside any repository -- was not there then
+            return None
         detail = getattr(error, "stderr", "") or str(error)
         raise SystemExit(f"cannot read {path.name} at {ref}: {detail.strip()}")
-    return json.loads(blob)
+    return json.loads(shown.stdout)
+
+
+def _committed_catalogue(path, large, ref):
+    """The catalogue at ``ref``: the main file, with the large file's rows
+    materialised after its own if the large file existed then."""
+    payload = _committed_file(path, ref)
+    blob = _committed_file(large, ref, required=False)
+    if blob is not None:
+        payload["factories"] = payload["factories"] + [
+            CF.materialise(stored, f"{Path(large).name} at {ref}, "
+                                   f"factories[{i}]")
+            for i, stored in enumerate(blob["factories"])]
+    return payload
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--catalog", type=Path, default=CF.CATALOG_JSON,
                         help="the catalogue JSON to verify")
+    parser.add_argument("--large", type=Path, default=None,
+                        help="its large file, the rows stored as a "
+                             "construction (default: master_catalog_large.json "
+                             "beside the catalogue; none if it is absent)")
     parser.add_argument("--rows", default=None,
                         help="a 1-based slice, e.g. 1-20 or 7; the file-level "
                              "checks are skipped when this is given")
@@ -1550,11 +1672,21 @@ def main(argv=None):
     parser.add_argument("--baseline", type=Path, default=None,
                         help="like --changed, against this catalogue file "
                              "instead of a commit")
+    parser.add_argument("--baseline-large", type=Path, default=None,
+                        help="with --baseline, the large file to compare "
+                             "against (default: master_catalog_large.json "
+                             "beside the baseline, unless that is the large "
+                             "file being verified; none otherwise)")
     parser.add_argument("--quiet", action="store_true",
                         help="print only failures and the summary")
     args = parser.parse_args(argv)
 
-    payload = CF.load(args.catalog)
+    large = args.large or args.catalog.with_name(CF.CATALOG_LARGE_JSON.name)
+    try:
+        payload = CF.load_all(args.catalog, large)
+    except (OSError, ValueError) as error:
+        print(f"FAILED: the catalogue cannot be read: {error}")
+        return 1
     total = len(payload["factories"])
     indices = None
     scoped = sum(1 for flag in (args.rows, args.changed, args.baseline) if flag)
@@ -1563,8 +1695,20 @@ def main(argv=None):
     file_level = True
     against = None
     if args.changed or args.baseline:
-        baseline = (CF.load(args.baseline) if args.baseline
-                    else _committed_catalogue(args.catalog, args.changed))
+        if args.baseline:
+            # The baseline's own large file, never the one under test: read
+            # against itself every large row would count as unchanged and go
+            # unverified.
+            beside = args.baseline_large or args.baseline.with_name(
+                CF.CATALOG_LARGE_JSON.name)
+            if beside.resolve() == large.resolve():
+                if args.baseline_large:
+                    raise SystemExit("--baseline-large is the large file being "
+                                     "verified; give the baseline's own")
+                beside = None
+            baseline = CF.load_all(args.baseline, beside)
+        else:
+            baseline = _committed_catalogue(args.catalog, large, args.changed)
         against = str(args.baseline) if args.baseline else args.changed
         indices = changed_rows(payload, baseline)
         print(f"{len(indices)} of {total} rows differ as circuits from the "
@@ -1592,9 +1736,14 @@ def main(argv=None):
     started = time.time()
     print(f"verifying {total if indices is None else len(indices)} of {total} "
           f"rows of {args.catalog.name}"
+          + (f" and {large.name}" if large.exists() else "")
           + ("" if file_level else " (row-level checks only)"), flush=True)
     failures, checked = verify_catalog(payload, verbose=not args.quiet,
                                        indices=indices, file_level=file_level)
+    if file_level:
+        for kind, detail in large_file_problems(large):
+            failures.append((None, None, [(kind, detail)]))
+            print(f"FAIL  file-level - {kind}: {detail}")
     elapsed = time.time() - started
     if failures:
         print(f"\nFAILED: {len(failures)} problem(s) over {checked} rows "

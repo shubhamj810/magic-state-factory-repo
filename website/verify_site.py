@@ -33,6 +33,7 @@ import argparse
 import collections
 import contextlib
 import functools
+import hashlib
 import http.server
 import json
 import random
@@ -330,9 +331,13 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
             # always include the widest circuit, the widest one still drawn, and
             # one with every reference kind
             targets += [max(factories, key=lambda f: f["n"] * f["N"])["id"]]
-            targets += [max((f for f in factories if f["n"] * f["N"] <= MATRIX_CELL_LIMIT),
+            targets += [max((f for f in factories if f["n"] * f["N"] <= MATRIX_CELL_LIMIT
+                             and f.get("file") != "master_catalog_large.json"),
                             key=lambda f: f["n"] * f["N"])["id"]]
             targets += [f["id"] for f in factories if "haah2018codes" in f["citations"]][:1]
+            # and the widest circuit stored as a construction, if there is one
+            built = [f for f in factories if f.get("file") == "master_catalog_large.json"]
+            targets += [max(built, key=lambda f: f["n"])["id"]] if built else []
             targets = sorted(set(targets))
         for fid in targets:
             if fid not in by_id:
@@ -341,7 +346,15 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
             record = json.loads((site / "data" / "factories" / f"{fid}.json").read_text())
             where = f"factory.html {fid}"
             k, N, n = (record["parameters"][key] for key in ("k", "N", "n"))
-            drawn = N * n <= MATRIX_CELL_LIMIT
+            rule = record["stored"]["construction"]
+            drawn = N * n <= MATRIX_CELL_LIMIT and not rule
+            if rule:
+                # the record's columns are the ones the construction builds
+                columns = record["circuit"]["columns"]
+                digest = hashlib.sha256(json.dumps(columns, separators=(",", ":"))
+                                        .encode("ascii")).hexdigest()
+                failures.check(len(columns) == n and digest == record["stored"]["columns_sha256"],
+                               f"{where}: the columns are not the ones the stored construction pins")
             visit(f"f/{fid}/", where, "table.matrix tbody tr" if drawn else ".matrix-skip",
                   timeout=40000)
             stats["factories"] += 1
