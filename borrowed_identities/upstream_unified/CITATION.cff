@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this code or catalogue, please cite it as below."
+title: "Borrowed Identities: code and factory catalogue"
+type: software
+authors:
+  - family-names: Singh
+    given-names: Shraddha
+    affiliation: Google Quantum AI
+  - family-names: Gidney
+    given-names: Craig
+    affiliation: Google Quantum AI
+  - family-names: Jones
+    given-names: Cody
+    affiliation: Google Quantum AI
+license: Apache-2.0
+repository-code: "https://github.com/shraggy/Magic_state_factory_search"
+version: "2.0"
+date-released: "2026-10-23"
+preferred-citation:
+  type: article
+  title: "Borrowed Identities: Malleability and Unified Search of Distillation Circuits Across the Clifford Hierarchy"
+  authors:
+    - family-names: Singh
+      given-names: Shraddha
+    - family-names: Gidney
+      given-names: Craig
+    - family-names: Jones
+      given-names: Cody
+  year: 2026
+  identifiers:
+    - type: other
+      value: "arXiv:2606.28518"
+  url: "https://arxiv.org/abs/2606.28518"

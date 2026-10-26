@@ -50,9 +50,9 @@ merge_results                        imports verify_catalog, so "verified to
 
 ## What is in it
 
-**1027 distinct `(n, k, d, GL(k,2) gate)` classes**. 181 of them are at
+**1277 distinct `(n, k, d, GL(k,2) gate)` classes**. 427 of them are at
 distance 2, and 217 are at `d ≥ 3` with `n ≤ 54`. Widths run `k = 1..373`,
-injection counts `n = 8..3239`, and distances proved here `d = 2..7`. Sources
+injection counts `n = 8..4095`, and distances proved here `d = 2..7`. Sources
 certify up to `d ≥ 31` on the transversal-T codes.
 
 **Transversal-T codes.**
@@ -74,7 +74,7 @@ pin the distance, though the label, as always, uses the proved one.
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running
 some rotations as `T³`, `T⁵` or `T†` makes that unnecessary
-(`rotation_powers`). 10 classes need nothing, 561 need only powers, and 456
+(`rotation_powers`). 14 classes need nothing, 778 need only powers, and 485
 need `S` or `CZ` gates whatever the powers.
 [`migrations/clifford_corrections_2026_10_10.py`](migrations/clifford_corrections_2026_10_10.py)
 added the fields, and [`clifford.py`](clifford.py) explains the method.
@@ -89,6 +89,18 @@ lowered it to 2 and merged two sets of circuits, both through `merge_results`:
   distance 2 and 8 single-output classes at distance 3;
 - the 19 distance-2 rows of the symmetry-SAT catalogue, which the old floor
   kept out. They give 10 new classes.
+
+**The unified borrowed-identity search.** In October 2026 the upstream
+repository published the tables of one unified search.
+[`migrations/borrowed_identities_unified_2026_10_26.py`](migrations/borrowed_identities_unified_2026_10_26.py)
+merged the 792 level-3 circuits
+[`../borrowed_identities/export_unified.py`](../borrowed_identities/export_unified.py)
+rebuilt from them: 250 new classes, 187 already held, and 355 pseudo-outputs
+refused, 351 of them the Clifford-padding circuits. New classes are credited to
+the paper, and held classes keep their credit. The large sweep is taken up to
+`n = 4095`; above that it would take this file past GitHub's 100 MB limit.
+To stay under GitHub's 50 MB advisory size, the integer lists in this file
+have been written without a space after the comma (`[0,1,3]`) since then.
 
 The length-54 classification is a `d ≥ 3` statement, so the two
 `exhaustive classification` regimes, and the frontier tests, apply to `d ≥ 3`

@@ -44,12 +44,13 @@ are the outputs and the rest are postselected checks. `d` is the circuit's
 fault distance. Each row also gives the circuit's **Clifford correction**: the
 `S` and `CZ` gates that make its action exactly the gate shown (see below).
 
-The catalogue holds **1027 classes**:
+The catalogue holds **1277 classes**:
 
-- `n = 8..3239`, `k = 1..373`, `d = 2..7` proved here, and up to 31 certified
+- `n = 8..4095`, `k = 1..373`, `d = 2..7` proved here, and up to 31 certified
   by a source;
-- 181 classes at distance 2, from the borrowed-identity searches and this
-  repository's symmetry-SAT search;
+- 427 classes at distance 2, from the borrowed-identity searches (including
+  their October 2026 unified search) and this repository's symmetry-SAT
+  search;
 - 217 classes with `n <= 54` and `d >= 3`, including all 74 Pareto points of
   the length-54 classification.
 
@@ -81,9 +82,9 @@ also stores whether the correction can be avoided by running some rotations as
 `T³`, `T⁵` or `T†` instead of `T` (`rotation_powers`). For a code this is a
 transversal `T` gate in the sense of Jain and Albert.
 
-- 10 classes need no correction at all;
-- 561 need none once some rotations run at another power of `T`;
-- 456 need `S` or `CZ` gates whatever the powers, which the verifier proves.
+- 14 classes need no correction at all;
+- 778 need none once some rotations run at another power of `T`;
+- 485 need `S` or `CZ` gates whatever the powers, which the verifier proves.
 
 [`master_catalog/clifford.py`](master_catalog/clifford.py) computes all three.
 The verifier then checks the logical action two more ways. It evaluates the
@@ -100,8 +101,8 @@ rate of one input `T` state. The 15-to-1 has `A_3 = 35`, the 8-`T` `CCZ`
 factory `A_2 = 28`.
 [`master_catalog/errorcoeff.py`](master_catalog/errorcoeff.py) counts it
 exactly, as the accepted faults less the harmless ones, each counted by the
-MacWilliams identity or by enumeration. Of the 977 exact rows, 957 have a
-count, and 902 of those are confirmed by enumerating the damaging faults
+MacWilliams identity or by enumeration. Of the 1227 exact rows, 1207 have a
+count, and 1148 of those are confirmed by enumerating the damaging faults
 directly. The other 20 are distance 6 at `n` near 850 and distance 7 at
 `n = 255`, out of reach of both methods. The count belongs to the stored
 circuit: another circuit of the same class can have a different `A_d`.

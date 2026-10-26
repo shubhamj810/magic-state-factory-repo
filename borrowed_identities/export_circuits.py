@@ -72,6 +72,7 @@ sys.path.insert(0, str(REPO / "master_catalog"))
 import Two_group as TG                                            # noqa: E402
 import symfree_search as SF                                       # noqa: E402
 import faultcore as FC                                            # noqa: E402
+from bicheck import borrowed_identity_violation, magic            # noqa: E402
 
 LEVELS = (2, 3, 4)
 REPOSITORY = "https://github.com/shraggy/Magic_state_factory_search"
@@ -218,35 +219,6 @@ def symmetry_free_as_searched(level, parts):
 
 
 # ---------------------------------------------------- independent re-checks
-def magic(gates):
-    """Indices of the gates that consume a level-l magic state: odd coefficient."""
-    return [index for index, (_support, coeff) in enumerate(gates) if coeff % 2]
-
-
-def borrowed_identity_violation(gates, k, level):
-    """The first check-touching monomial with genuine level-l phase, or None.
-
-    The condition, written out from the paper's definition rather than imported:
-    a parity gate on support ``g`` with coefficient ``c`` adds
-    ``(-1)^(t+1) 2^(t-1) c`` to the monomial on every ``t``-subset of ``g``, and
-    a monomial touching a check wire must be Clifford, i.e. its coefficient
-    must vanish modulo ``2^t`` (it is reduced modulo ``2^l`` throughout).
-    """
-    mod = 1 << level
-    for size in range(1, level + 1):
-        totals = {}
-        for support, coeff in gates:
-            for T in combinations(support, size):
-                totals[T] = totals.get(T, 0) + coeff
-        for T, total in totals.items():
-            if max(T) < k:
-                continue
-            value = ((-1) ** (size + 1)) * (1 << (size - 1)) * total % mod
-            if value % (1 << size):
-                return list(T)
-    return None
-
-
 def check_circuit(row, gates, n, where, from_row):
     """Stop unless the circuit is the row's: N, wires, and a borrowed identity.
 

@@ -235,13 +235,74 @@ only implicitly, as distances of descendants in their Table II. The ones they
 name are the first three Bravyi–Haah codes, so, under the catalogue's rule of
 crediting explicitly printed protocols, they add no credit here.
 
+## The unified search (October 2026)
+
+On 24 to 26 October 2026 the upstream repository replaced the three
+catalogues above with the output of one unified distance-2 search, at commit
+`46270145`. That commit is copied, byte for byte, into
+[`upstream_unified/`](upstream_unified/), and
+[`export_unified.py`](export_unified.py) rebuilds an explicit circuit for every
+level-3 row of three of its tables:
+
+| table | level-3 rows | circuits here |
+|---|---:|---:|
+| `outputs/all_factories.csv`: every distinct factory of the two-group, gluing, Clifford-padding and SAT stages | 562 | 562 |
+| `outputs/large_sweep.csv`: the two-group stage up to 16 circuit qubits, rows with `n <= 4095` | 368 | 212 new, the rest repeat a circuit above |
+| `outputs/l3_k78_targets.csv`: gluing for every target on `k = 7, 8` outputs | 18 | 18 |
+
+The two-group, gluing and padding rows come out of `unified_search.run`,
+unmodified, with the parameters the upstream README gives. The run writes a
+Quirk link per row from the row's gates, and its `quirk_url` hook is pointed at
+a recorder for the run, which is how the gates are kept. Every row the run
+writes is the published row, field for field. The three SAT rows need z3, so
+their circuits are read back from the published Quirk links. A link draws the
+factory's rotations and then the Clifford corrections, with the same kind of
+gate, so the exporter regenerates the link with the upstream `quirk_url` for
+every possible split and keeps those that reproduce it character for
+character. They differ only in even-coefficient rotations, which are Clifford.
+The large-sweep and `k = 7, 8` rows are rebuilt with the functions
+`large_sweep.py` and `large_k_sweep.py` call.
+
+Each circuit is checked as before: wire count, number of odd-coefficient
+rotations, the borrowed-identity condition, the gate against the row's `raw`
+column, and the distance measured by the catalogue's fault search. All 792
+pass. The error coefficient `A_d` of each is counted as well. On the seven
+level-3 targets of the upstream `outputs/error_coefficients.json` it equals
+their coefficient `c` exactly: 22, 84, 49, 61, 55, 86 and 139.
+
+**Not imported.** Large-sweep rows above `n = 4095`, 127 of them up to
+`n = 65534`, would take `master_catalog.json` past GitHub's 100 MB limit on a
+single file. Levels 2 and 4 are outside the catalogue, as before.
+
+**In the master catalogue.**
+[`../master_catalog/migrations/borrowed_identities_unified_2026_10_26.py`](../master_catalog/migrations/borrowed_identities_unified_2026_10_26.py)
+merged the 792 circuits:
+
+| verdict | circuits | |
+|---|---:|---|
+| new class | 250 | 30 from `all_factories.csv`, 202 from the large sweep, 18 at `k = 7, 8` |
+| already held | 187 | |
+| refused | 355 | pseudo-outputs: the 351 Clifford-padding circuits, whose added outputs are XORs of the others, and four more, among them the `[[8,4,2]]` refused before |
+
+Each new class is credited to the paper. A class already held keeps exactly
+the credit it had. The unified tables appeared in October 2026, after every
+work those classes credit, so they cannot be the earliest publication of any
+of them. Three upstream attributions are not adopted without reading the
+works: Litinski (2019) for `[[14,1,2]]`, Bombín and Martin-Delgado (2007) for
+`[[8,3,2]]`, and Nezami and Haah (2022) for `[[20,3,2]]`, which the upstream
+keys by parameters alone, without saying which of the two gates it means.
+
 ## Licence
 
-The upstream repository states no licence. The files in `upstream/` are included
-unchanged, with attribution, so that the catalogue's provenance resolves inside
-this repository and the circuits can be rebuilt. They remain the work of their
-authors and are not covered by any licence later chosen for this repository's own
-code. See [`../THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md).
+At commit `cae4982` the upstream repository stated no licence. The files in
+`upstream/` are included unchanged, with attribution, so that the catalogue's
+provenance resolves inside this repository and the circuits can be rebuilt.
+They remain the work of their authors and are not covered by any licence later
+chosen for this repository's own code. By commit `4627014` the upstream
+repository is licensed under the Apache License 2.0, and the files in
+`upstream_unified/` keep those terms; the licence text is
+[`upstream_unified/LICENSE`](upstream_unified/LICENSE). See
+[`../THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md).
 
 ## Reproduce
 
@@ -249,6 +310,7 @@ From the repository root, with the environment in [`../requirements.txt`](../req
 
 ```bash
 .venv/bin/python borrowed_identities/export_circuits.py --check      # rebuild from upstream, compare (~35 s)
+.venv/bin/python borrowed_identities/export_unified.py --check       # the unified tables (~9 min)
 .venv/bin/python -m unittest discover -s borrowed_identities/tests   # the checks above (~2 s)
 .venv/bin/python master_catalog/migrations/distance_two_2026_10_07.py --dry-run   # the merge, written nowhere (seconds)
 ```

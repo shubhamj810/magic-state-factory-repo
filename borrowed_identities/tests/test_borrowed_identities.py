@@ -239,8 +239,13 @@ class TestMasterCatalogue(unittest.TestCase):
         found = {row["catalog_label"] for circuit in load(3)["circuits"]
                  for row in self.holders(circuit)}
         self.assertLessEqual(set(EARLIER), found)
+        # the unified search's classes are credited to the paper as well;
+        # `test_unified.py` checks those
+        unified = {row["catalog_label"] for row in self.rows
+                   if row["sources"][0]["file"]
+                   == "borrowed_identities/circuits/unified_l3.json"}
         cites = {row["catalog_label"] for row in self.rows
-                 if BORROWED in row["citations"]}
+                 if BORROWED in row["citations"]} - unified
         self.assertEqual(cites, found - set(EARLIER))
 
     def test_an_earlier_publication_is_credited_alone(self):

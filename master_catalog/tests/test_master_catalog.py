@@ -62,8 +62,14 @@ LOCAL_SOURCE_DIRS = ("classification/", "symmetry_sat_search/",
 #: The Borrowed Identities circuits (Singh, Gidney and Jones), rebuilt from the
 #: upstream catalogue by `borrowed_identities/export_circuits.py`.
 BORROWED_CIRCUITS = REPO / "borrowed_identities" / "circuits" / "circuits_l3.json"
+#: the circuit files of both Borrowed Identities imports, cae4982 and the
+#: October 2026 unified search
+BORROWED_FILES = (BORROWED_CIRCUITS,
+                  REPO / "borrowed_identities" / "circuits" / "unified_l3.json")
 BORROWED = ("borrowed-identity search: two-group",
-            "borrowed-identity search: symmetry-free")
+            "borrowed-identity search: symmetry-free",
+            "borrowed-identity search: SAT recovery",
+            "borrowed-identity search: Clifford padding")
 #: The codes of Jain and Albert (arXiv:2408.12752), rebuilt by
 #: `transversal_t_codes/build_codes.py`: literature, not an AI search.
 DOUBLED = ("Jain-Albert doubling: weak triply even family",
@@ -629,7 +635,7 @@ class TestMasterCatalogue(unittest.TestCase):
                 if not source["file"].startswith(LOCAL_SOURCE_DIRS):
                     self.assertIsNotNone(source["provenance"])
                     continue
-                if REPO / source["file"] == BORROWED_CIRCUITS:
+                if REPO / source["file"] in BORROWED_FILES:
                     with self.subTest(label=source["label"]):
                         self.assert_borrowed_source(row, source)
                     continue
@@ -661,13 +667,15 @@ class TestMasterCatalogue(unittest.TestCase):
         that IS this class: the same n, wires N, distance and gate up to a
         frame, read off the circuit's odd-coefficient gates here."""
         if not hasattr(self, "_borrowed"):
-            blob = json.loads(BORROWED_CIRCUITS.read_text())
-            type(self)._borrowed = {c["id"]: c for c in blob["circuits"]}
-        circuit = self._borrowed[source["label"]]
+            type(self)._borrowed = {
+                path: {c["id"]: c for c in json.loads(path.read_text())["circuits"]}
+                for path in BORROWED_FILES}
+        circuit = self._borrowed[REPO / source["file"]][source["label"]]
         columns = [sorted(g) for g, c in circuit["gates"] if c % 2]
         self.assertEqual((len(columns), circuit["wires"], circuit["d"]),
                          (row["n"], source["N"], source["d"]))
-        self.assertEqual(len(circuit["outputs"]), row["k"])
+        self.assertEqual(len(circuit["outputs"]) if "outputs" in circuit
+                         else circuit["k"], row["k"])
         self.assertEqual(source["d"], row["d"])
         self.assertTrue(GC.gl_isomorphic(
             row["k"], read_gate(columns, row["k"]),

@@ -318,6 +318,22 @@ rejected`, and `1002 -> 1002 classes`.
 [`borrowed_identities/README.md`](borrowed_identities/README.md) explains each
 verdict and the credit.
 
+### Distance 2: the unified borrowed-identity search
+
+The October 2026 tables of the same repository came in through a second
+migration:
+
+```bash
+.venv/bin/python borrowed_identities/export_unified.py --check       # rebuild 792 circuits from the upstream code, ~9 min
+.venv/bin/python master_catalog/migrations/borrowed_identities_unified_2026_10_26.py --dry-run   # ~6 min
+```
+
+The export prints `up to date`. Run against the catalogue before it
+(`git show 6094d63:master_catalog/master_catalog.json`), the migration
+reports `250 accepted, 187 duplicate, 355 rejected; refused as
+{'pseudo-output': 355}` and `1027 -> 1277 classes`. Against the shipped
+catalogue it reports `437 duplicate, 355 rejected` and changes nothing.
+
 ### The transversal-T codes of Jain and Albert
 
 The codes of S. P. Jain and V. V. Albert (IEEE JSAIT 6, 127 (2025),
@@ -350,8 +366,8 @@ migration, which checks every row before it writes:
 .venv/bin/python master_catalog/migrations/clifford_corrections_2026_10_10.py --dry-run   # ~1 min
 ```
 
-Against the shipped catalogue it reports, for 1027 rows, `S, CZ: 456,
-T-powers: 561, none: 10` and `nothing written`. `verify_catalog.py`
+Against the shipped catalogue it reports, for 1277 rows, `S, CZ: 485,
+T-powers: 778, none: 14` and `nothing written`. `verify_catalog.py`
 re-derives both fields on every row, evaluates each corrected circuit's
 logical action, re-proves every `null` power list, and simulates the small
 circuits gate by gate.
@@ -364,8 +380,8 @@ Every row's `A_d` was added by one migration:
 .venv/bin/python master_catalog/migrations/error_coefficients_2026_10_22.py --dry-run   # ~5 min on 12 cores
 ```
 
-Against the shipped catalogue it reports, for 1027 rows, `counted: 55, counted
-twice: 902, floor: 50, not reached: 20` and `nothing written`. "Counted twice"
+Against the shipped catalogue it reports, for 1277 rows, `counted: 59, counted
+twice: 1148, floor: 50, not reached: 20` and `nothing written`. "Counted twice"
 means the MacWilliams-or-enumeration difference and a direct enumeration of
 the damaging faults agree. `verify_catalog.py` recounts every `A_d`, which
 adds about fifteen minutes to a full run, most of it on the widest rows.

@@ -52,6 +52,17 @@ code. `borrowed_identities/tests/` pins every file's SHA-256, so an accidental
 edit is caught by the test suite. See
 [`borrowed_identities/README.md`](borrowed_identities/README.md).
 
+`borrowed_identities/upstream_unified/` holds 25 files copied unmodified from
+the same repository at commit `46270145dc77643672ee4afbc9ff9f4b48bab083`: the
+unified search, its large two-group sweep and `k = 7, 8` gluing scripts, the
+classifier, the tables `all_factories.csv`, `large_sweep.csv`,
+`l3_k78_targets.csv` and `smallest_per_class.csv`, the upstream error
+coefficients, and the READMEs, `LICENSE` and `CITATION.cff`. By that commit
+the upstream repository is licensed under the
+[Apache License 2.0](borrowed_identities/upstream_unified/LICENSE), whose
+terms these files keep; the licence text is included beside them, and they
+are unmodified. The same citation applies.
+
 ## Transversal-T codes of Jain and Albert
 
 `transversal_t_codes/` contains no third-party files. It builds the codes of

@@ -396,12 +396,16 @@ def rows(path: Path | str = CATALOG_JSON) -> list[dict]:
 
 # --------------------------------------------------------------------- writing
 def serialise(payload: dict) -> str:
-    """``indent=1``, except that a list of bare integers stays on one line.
+    """``indent=1``, except that a list of bare integers stays on one line,
+    with no space after its commas: ``[0,1,3]``.
 
     A circuit's columns are lists of qubit indices, and at ``n = 1023`` writing
     each index on its own line takes the file from 9 MB to 19 MB of mostly
     whitespace.  Collapsing only the innermost integer lists keeps every other
-    field as readable as it was, and `json.loads` on the result is equal to the
+    field as readable as it was.  The space after each comma went on
+    2026-10-26: the unified borrowed-identity search took the file to 52 MB,
+    past GitHub's 50 MB advisory limit, and those spaces were 9 MB of it.
+    `json.loads` on the result is equal to the
     payload -- which `tests/` asserts, since a formatter that quietly corrupted
     the columns would be the worst possible bug in this folder.
     """
@@ -415,7 +419,7 @@ def serialise(payload: dict) -> str:
     # is the worst possible bug in this folder, which is why the round-trip
     # equality below it is asserted in `tests/`.
     return re.sub(r"\[\s*\n\s*((?:\d+,\s+)*\d+)\s+\]",
-                  lambda m: "[" + re.sub(r"\s+", " ", m.group(1)) + "]",
+                  lambda m: "[" + re.sub(r",\s+", ",", m.group(1)) + "]",
                   text) + "\n"
 
 

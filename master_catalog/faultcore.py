@@ -682,6 +682,36 @@ def _triple_table(circuit: Circuit):
     return table
 
 
+def _triple_witness(circuit: Circuit):
+    """A harmful fault of weight 3 without the pair table, or ``None``.
+
+    For a circuit too long for the table (``C(n, 2)`` above ``max_pairs``,
+    ``n`` about 1100) whose syndromes are all distinct -- which a distance of
+    at least 3 forces -- the third column of a zero-syndrome triple is the one
+    whose syndrome is the XOR of the other two, a dictionary lookup.  Pairs are
+    tried in order, up to ``max_candidates`` of them; like the sampler this
+    can only find, never prove absence.
+    """
+    syn = circuit.syn
+    where = {}
+    for index, s in enumerate(syn):
+        if s in where:
+            return None                    # repeated syndrome: not this case
+        where[s] = index
+    tried = 0
+    for i in range(circuit.n):
+        si = syn[i]
+        for j in range(i + 1, circuit.n):
+            tried += 1
+            if tried > circuit.budget.max_candidates:
+                return None
+            third = where.get(si ^ syn[j])
+            if third is not None and third > j \
+                    and circuit.harmful((i, j, third)):
+                return (i, j, third)
+    return None
+
+
 def sample_witness(circuit: Circuit, weight: int):
     """Look for a harmful fault of exactly ``weight`` by sampling, not by proof.
 
@@ -696,6 +726,8 @@ def sample_witness(circuit: Circuit, weight: int):
     if weight > n:
         return None
     pairs = circuit.pairs
+    if pairs is None and weight == 3:
+        return _triple_witness(circuit)
     if pairs is None or weight < 3:
         return None
     syn64 = circuit.syn64

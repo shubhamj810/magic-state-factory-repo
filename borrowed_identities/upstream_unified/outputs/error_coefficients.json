@@ -1,0 +1,145 @@
+[
+ {
+  "target": "CS12 T3",
+  "l": 3,
+  "k": 3,
+  "n": 20,
+  "c": 22,
+  "prior_n": 26,
+  "prior_c": 25,
+  "prior": "factory(CS) + factory(T)",
+  "fig1_prior_n": 26
+ },
+ {
+  "target": "CS12 CS34 CS56",
+  "l": 3,
+  "k": 6,
+  "n": 24,
+  "c": 84,
+  "prior_n": 26,
+  "prior_c": 101,
+  "prior": "synth(CSCSCS)",
+  "fig1_prior_n": 26
+ },
+ {
+  "target": "CS12 CS34 T5",
+  "l": 3,
+  "k": 5,
+  "n": 26,
+  "c": 49,
+  "prior_n": 28,
+  "prior_c": 62,
+  "prior": "synth(CSCST)",
+  "fig1_prior_n": 28
+ },
+ {
+  "target": "CCZ123 CS45 T6",
+  "l": 3,
+  "k": 6,
+  "n": 26,
+  "c": 61,
+  "prior_n": 32,
+  "prior_c": 52,
+  "prior": "factory(CS) + synth(CCZT)",
+  "fig1_prior_n": 34
+ },
+ {
+  "target": "CS12 T3 T4 T5",
+  "l": 3,
+  "k": 5,
+  "n": 30,
+  "c": 55,
+  "prior_n": 32,
+  "prior_c": 40,
+  "prior": "factory(CS) + factory(TTT)",
+  "fig1_prior_n": 32
+ },
+ {
+  "target": "CS12 T3...T7",
+  "l": 3,
+  "k": 7,
+  "n": 36,
+  "c": 86,
+  "prior_n": 38,
+  "prior_c": 59,
+  "prior": "factory(CS) + factory(TTTTT)",
+  "fig1_prior_n": 38
+ },
+ {
+  "target": "CS12 CS34 CS56 T7",
+  "l": 3,
+  "k": 7,
+  "n": 38,
+  "c": 139,
+  "prior_n": 38,
+  "prior_c": 91,
+  "prior": "factory(CSCSCS) + factory(T)",
+  "fig1_prior_n": 50
+ },
+ {
+  "target": "CT12 sT3",
+  "l": 4,
+  "k": 3,
+  "n": 44,
+  "c": 50,
+  "prior_n": 58,
+  "prior_c": 57,
+  "prior": "factory(CT) + factory(sT)",
+  "fig1_prior_n": 58
+ },
+ {
+  "target": "CCS123 sT4",
+  "l": 4,
+  "k": 4,
+  "n": 48,
+  "c": 96,
+  "prior_n": 54,
+  "prior_c": 99,
+  "prior": "factory(CCS) + factory(sT)",
+  "fig1_prior_n": 54
+ },
+ {
+  "target": "CT12 sT3 sT4",
+  "l": 4,
+  "k": 4,
+  "n": 50,
+  "c": 77,
+  "prior_n": 58,
+  "prior_c": 57,
+  "prior": "factory(CT) + factory(sTsT)",
+  "fig1_prior_n": 58
+ },
+ {
+  "target": "CT12 CT34 sT5",
+  "l": 4,
+  "k": 5,
+  "n": 68,
+  "c": 174,
+  "prior_n": 78,
+  "prior_c": 156,
+  "prior": "factory(CTCT) + factory(sT)",
+  "fig1_prior_n": 78
+ },
+ {
+  "target": "CCS123 CT45 sT6",
+  "l": 4,
+  "k": 6,
+  "n": 68,
+  "c": 228,
+  "prior_n": 82,
+  "prior_c": 141,
+  "prior": "factory(CCS) + factory(CT) + factory(sT)",
+  "fig1_prior_n": 82
+ },
+ {
+  "target": "CT12 CT34 sT5 sT6",
+  "l": 4,
+  "k": 6,
+  "n": 70,
+  "c": 194,
+  "prior_n": 78,
+  "prior_c": 156,
+  "prior": "factory(CTCT) + factory(sTsT)",
+  "fig1_prior_n": 78
+ }
+]

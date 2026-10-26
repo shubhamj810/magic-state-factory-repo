@@ -333,6 +333,24 @@ class TestTheTripwiresThemselves(unittest.TestCase):
                     self.assertTrue(circuit.harmful(found),
                                     "and genuinely harmful")
 
+    def test_a_weight_three_witness_without_the_pair_table(self):
+        """Above ``max_pairs`` the pair table is refused, and a distance-3
+        circuit is still pinned: the triple's third column is found by its
+        syndrome.  Starved here to ``max_pairs = 10`` so a 15-to-1 needs it."""
+        columns = [[q for q in range(5) if (j >> (q - 1) & 1 if q else 1)]
+                   for j in range(1, 16)]
+        budget = FC.Budget(max_pairs=10)
+        circuit = FC.Circuit(columns, 1, 5, budget)
+        self.assertIsNone(circuit.pairs)
+        found = FC.sample_witness(circuit, 3)
+        self.assertEqual(len(set(found)), 3)
+        self.assertTrue(circuit.harmful(found))
+        report = FC.distance_report(columns, 1, 5, budget=budget)
+        self.assertEqual((report["d_exact"], report["d_upper"]), (3, 3))
+        # a repeated syndrome is a weight-2 fault, not this case
+        twin = FC.Circuit(columns + [[0, 1, 2, 3]], 1, 5, budget)
+        self.assertIsNone(FC._triple_witness(twin))
+
     def test_a_small_circuit_is_never_skipped_below_weight_seven(self):
         """The feasibility guards must not refuse work they can do.
 
