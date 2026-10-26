@@ -86,7 +86,7 @@ minutes longer.
 
 ## What is in it
 
-**1404 distinct `(n, k, d, GL(k,2) gate)` classes**, 127 of them in the large
+**1405 distinct `(n, k, d, GL(k,2) gate)` classes**, 127 of them in the large
 file. 549 are at distance 2, and 217 are at `d ≥ 3` with `n ≤ 54`. Widths run
 `k = 1..373`, injection counts `n = 8..65534`, and distances proved here
 `d = 2..7`. Sources
@@ -111,7 +111,7 @@ pin the distance, though the label, as always, uses the proved one.
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running
 some rotations as `T³`, `T⁵` or `T†` makes that unnecessary
-(`rotation_powers`). 16 classes need nothing, 887 need only powers, and 501
+(`rotation_powers`). 16 classes need nothing, 888 need only powers, and 501
 need `S` or `CZ` gates whatever the powers.
 [`migrations/clifford_corrections_2026_10_10.py`](migrations/clifford_corrections_2026_10_10.py)
 added the fields, and [`clifford.py`](clifford.py) explains the method.

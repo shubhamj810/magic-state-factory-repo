@@ -58,7 +58,8 @@ SAT = "symmetry-SAT search"
 #: ``file`` a source carries is inert provenance -- history, not a path -- and
 #: nothing here opens one.
 LOCAL_SOURCE_DIRS = ("classification/", "symmetry_sat_search/",
-                     "borrowed_identities/", "transversal_t_codes/")
+                     "borrowed_identities/", "transversal_t_codes/",
+                     "literature_imports/")
 #: The Borrowed Identities circuits (Singh, Gidney and Jones), rebuilt from the
 #: upstream catalogue by `borrowed_identities/export_circuits.py`.
 BORROWED_CIRCUITS = REPO / "borrowed_identities" / "circuits" / "circuits_l3.json"
@@ -74,6 +75,9 @@ BORROWED = ("borrowed-identity search: two-group",
 #: `transversal_t_codes/build_codes.py`: literature, not an AI search.
 DOUBLED = ("Jain-Albert doubling: weak triply even family",
            "Jain-Albert doubling: triorthogonal family")
+#: Published protocols rebuilt from their paper's construction in
+#: `literature_imports/`: literature, not an AI search.
+LITERATURE = ("Gong et al.: F8 codes concatenated with 8T->CCZ",)
 #: The classification stages this repository ran itself -- every catalogue under
 #: ``classification/`` but the copied length-54 frontier: a source from one of
 #: them makes a class ``pre-existing``.
@@ -85,7 +89,7 @@ COMMUNITY = "community contribution"
 #: borrowed-identity searches, the Jain-Albert codes and a community
 #: contribution.
 NOT_AI = (PARETO, "exhaustive classification n<=54", SAT, COMMUNITY) \
-    + BORROWED + DOUBLED
+    + BORROWED + DOUBLED + LITERATURE
 #: The two reports the classification window is credited to: the length-54
 #: classification (arXiv:2609.30860) and the symmetry-and-AI report
 #: (arXiv:2610.06535).
@@ -600,7 +604,7 @@ class TestMasterCatalogue(unittest.TestCase):
         for row in self.rows:
             # a finder other than an AI search: the SAT search, a community
             # contribution, or a classification stage this repository ran
-            early = any(s["regime"] in (SAT, COMMUNITY) + BORROWED + DOUBLED
+            early = any(s["regime"] in (SAT, COMMUNITY) + BORROWED + DOUBLED + LITERATURE
                         or (s["file"].startswith(EARLY_STAGES)
                             and not s["file"].startswith(FRONTIER_DIR))
                         for s in row["sources"])

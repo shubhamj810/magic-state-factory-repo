@@ -13,7 +13,7 @@ Nothing the site shows is stored anywhere else in the repository, so the
 site cannot drift from the database: merge a result into the catalogue, push,
 and the deploy rebuilds every page's data from it.
 
-    master_catalog/master_catalog.json      1277 rows, 43 MB, with columns
+    master_catalog/master_catalog.json      1278 rows, 43 MB, with columns
     master_catalog/master_catalog_large.json  rows built by a construction
                  |
                  |  build_site.py  (standard library only)
