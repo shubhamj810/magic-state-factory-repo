@@ -112,6 +112,35 @@ COMPARED = ("clifford_class", "l", "k", "n", "N", "d", "search_stage",
             "padded_from", "params", "reduced", "raw", "zcount",
             "essential_dim", "clifford_padded", "masks", "reference")
 
+#: The works the upstream ``reference`` column names, as reference keys and
+#: years.  A record whose row names some is credited to the earliest of them
+#: alone -- those of its earliest year, so Jones (2013) and Eastin (2013),
+#: written the same week, stay together -- and the paper otherwise.  The
+#: identifications follow the paper's bibliography (arXiv:2606.28518):
+#: Litinski [28] is Quantum 3, 205; Bombin and Martin-Delgado [2] is Phys.
+#: Rev. B 75, 075103, cited there for the [[8,3,2]] code.
+UPSTREAM_REFERENCES = {
+    "Litinski (2019)": ("litinski2019magic", 2019),
+    "Bombín & Martin-Delgado (2007)": ("bombin2007exact", 2007),
+    "Jones (2013)": ("jones2013low", 2013),
+    "Eastin (2013)": ("eastin2013distilling", 2013),
+    "Webster et al. (2023)": ("webster2023transversal", 2023),
+    "Gong et al. (2026)": ("gong2026magic", 2026),
+    "Nezami & Haah (2022)": ("nezami2022classification", 2022),
+    "Campbell & Howard (2017)": ("campbell2017unified", 2017),
+    "Bravyi & Haah (2012)": ("bravyi2012magic", 2012),
+}
+
+
+def upstream_credit(reference):
+    """The keys a row's ``reference`` column credits, earliest year only."""
+    if not reference:
+        return []
+    works = [UPSTREAM_REFERENCES[name.strip()] for name in reference.split(";")]
+    first = min(year for _key, year in works)
+    return [key for key, year in works if year == first]
+
+
 REGIMES = {
     "two-group": "borrowed-identity search: two-group",
     "gluing": "borrowed-identity search: symmetry-free",
@@ -374,7 +403,7 @@ def merge_record(e):
         "columns": e["columns"],
         "regime": regime,
         "discovery": "pre-existing",
-        "citations": [BORROWED],
+        "citations": upstream_credit(e["reference"]) or [BORROWED],
         "file": "borrowed_identities/circuits/unified_l3.json",
         "label": e["id"],
         "provenance": (f"unified search l=3, {e['stage']} "

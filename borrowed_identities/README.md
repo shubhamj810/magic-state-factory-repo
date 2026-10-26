@@ -193,13 +193,17 @@ show the same.
 A class these searches found is credited to the paper, unless an earlier work
 published the same class (same inputs, outputs, distance and output gate up to a
 CNOT frame). Then that work alone is credited, since the paper recovered the
-class rather than introducing it. The paper is cited on 173 classes. These are
-credited elsewhere:
+class rather than introducing it. The paper is cited on 169 of the classes
+this import holds. These are credited elsewhere:
 
 | class | credited to | where |
 |---|---|---|
 | `14.2.2.a`, `20.4.2.a`, `26.6.2.a` (`T^⊗k`) | Bravyi & Haah (2012) | the `k = 2, 4, 6` members of the `[[3k+8, k, 2]]` family (paper, App. F.3a) |
-| `8.3.2.a` (`CCZ`) | Eastin (2013) and Jones (2013) | the 8 `T` → `CCZ` factory, found independently in the same week (arXiv:1212.4872, 1212.5069) |
+| `8.3.2.a` (`CCZ`) | Bombín & Martin-Delgado (2007) | the `[[8,3,2]]` code, the paper's ref. [2]; the earliest of the three works the upstream repository cites for it, before the 8 `T` → `CCZ` factories of Jones (2013) and Eastin (2013) |
+| `14.1.2.a` (`T`) | Litinski (2019) | cited by the upstream repository (`outputs/literature_refs.json` at `4627014`); the paper's ref. [28] |
+| `20.3.2.a` (`T⊗CS`) | Nezami & Haah (2022) | cited by the upstream repository for `[[20,3,2]]` on 6 wires |
+| `18.4.2.a` (`CS01·CS02·CS13`) | Campbell & Howard (2017) | cited by the upstream repository for `[[18,4,2]]` on 6 wires |
+| `20.4.2.b` (`CCZ⊗T`) | Bravyi & Haah (2012) | cited by the upstream repository for `[[20,4,2]]` on 7 wires |
 | `12.2.2.a` (`CS`) | Webster, Quintavalle & Bartlett (2023) | the paper's ref. [33] |
 | `14.6.2.a` (`CCZ⊗CCZ`) | Campbell & Howard (2017) | their Example IV.2, the `N = 2` member of their `6N + 2` Toffoli family |
 | `18.4.2.b` (`CS⊗CS`) | Campbell & Howard (2017) | their Example IV.3: 18 `T` states for two `CS` gates, output error `45ε²` |
@@ -232,8 +236,9 @@ which is credited to them.
 
 Nezami and Haah (2022) list distance-2 triorthogonal codes with `n + k ≤ 38`
 only implicitly, as distances of descendants in their Table II. The ones they
-name are the first three Bravyi–Haah codes, so, under the catalogue's rule of
-crediting explicitly printed protocols, they add no credit here.
+name are the first three Bravyi–Haah codes. Their credit on the two
+`[[20,3,2]]` classes follows the upstream repository's attribution (see the
+next section), not a code printed in their paper.
 
 ## The unified search (October 2026)
 
@@ -284,13 +289,19 @@ merged the 792 circuits:
 | already held | 187 | |
 | refused | 355 | pseudo-outputs: the 351 Clifford-padding circuits, whose added outputs are XORs of the others, and four more, among them the `[[8,4,2]]` refused before |
 
-Each new class is credited to the paper. A class already held keeps exactly
-the credit it had. The unified tables appeared in October 2026, after every
-work those classes credit, so they cannot be the earliest publication of any
-of them. Three upstream attributions are not adopted without reading the
-works: Litinski (2019) for `[[14,1,2]]`, Bombín and Martin-Delgado (2007) for
-`[[8,3,2]]`, and Nezami and Haah (2022) for `[[20,3,2]]`, which the upstream
-keys by parameters alone, without saying which of the two gates it means.
+Each new class is credited to the paper, unless the upstream table's
+`reference` column names earlier work for its row; then the earliest work it
+names is credited alone. The column follows `outputs/literature_refs.json`,
+which keys a reference by `(l, k, n, N)`, so it marks every gate of those
+parameters. The works it names are identified from the paper's bibliography:
+Litinski (2019) is *Magic state distillation: not as costly as you think*,
+Quantum 3, 205, and Bombín and Martin-Delgado (2007) is Phys. Rev. B 75,
+075103, the paper's ref. [2] for the `[[8,3,2]]` code. One new class takes
+such credit, `20.3.2.c` (`T⊗T⊗T`, Nezami & Haah (2022)); held classes the
+column names take the earliest of their old credit and the column's, which
+changes the five rows in the table above. Every other held class keeps
+exactly the credit it had: the unified tables appeared in October 2026, after
+every work those classes credit.
 
 ## Licence
 

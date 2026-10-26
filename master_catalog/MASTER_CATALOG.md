@@ -109,11 +109,11 @@ entries are under [References](#references).
 
 | # | label | `[[n,k,d]]` | cert d | N | gate | T | deg | Clifford | discovery | regime(s) | citation |
 |---:|---|---|---:|---:|---|---:|---:|---|---|---|---|
-| 1 | `8.3.2.a` | `[[8,3,2]]` | — | 4 | `012` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Eastin (2013)](https://doi.org/10.1103/PhysRevA.87.032321); [Jones (2013)](https://doi.org/10.1103/PhysRevA.87.022328) |
+| 1 | `8.3.2.a` | `[[8,3,2]]` | — | 4 | `012` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Bombín & Martin-Delgado (2007)](https://doi.org/10.1103/PhysRevB.75.075103) |
 | 2 | `12.2.2.a` | `[[12,2,2]]` | — | 4 | `01` | 3 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Webster et al. (2023)](https://doi.org/10.1088/1367-2630/acfc5f) |
 | 3 | `12.3.2.a` | `[[12,3,2]]` | — | 5 | `01+02+12+012` | 4 | 2 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 4 | `12.5.2.a` | `[[12,5,2]]` | — | 6 | `012+013+024+134` | 11 | 3 | T-powers | pre-existing | symmetry-SAT search | [Campbell & Howard (2017)](https://doi.org/10.1103/PhysRevA.95.022316) |
-| 5 | `14.1.2.a` | `[[14,1,2]]` | — | 4 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 5 | `14.1.2.a` | `[[14,1,2]]` | — | 4 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Litinski (2019)](https://doi.org/10.22331/q-2019-12-02-205) |
 | 6 | `14.2.2.a` | `[[14,2,2]]` | — | 5 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Bravyi & Haah (2012)](https://doi.org/10.1103/PhysRevA.86.052329) |
 | 7 | `14.6.2.a` | `[[14,6,2]]` | — | 7 | `012+345` | 13 | 3 | T-powers | pre-existing | borrowed-identity search: symmetry-free | [Campbell & Howard (2017)](https://doi.org/10.1103/PhysRevA.95.022316) |
 | 8 | `15.1.3.a` | `[[15,1,3]]` | — | 5 | `0` | 1 | 1 | T-powers | pre-existing | exhaustive classification n<=54 (Pareto point); symmetry-SAT search; AI search | [Bravyi & Kitaev (2005)](https://doi.org/10.1103/PhysRevA.71.022316) |
@@ -121,15 +121,15 @@ entries are under [References](#references).
 | 10 | `16.5.2.b` | `[[16,5,2]]` | — | 7 | `01+02+03+04` | 8 | 2 | T-powers | pre-existing | borrowed-identity search: SAT recovery | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 11 | `16.5.2.a` | `[[16,5,2]]` | — | 6 | `012+013+014` | 7 | 3 | T-powers | pre-existing | symmetry-SAT search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 12 | `18.3.2.a` | `[[18,3,2]]` | — | 6 | `0+012` | 6 | 2 | T-powers | pre-existing | symmetry-SAT search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 13 | `18.4.2.a` | `[[18,4,2]]` | — | 6 | `01+02+03+12+13+23+012+013+023+123` | 5 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 13 | `18.4.2.a` | `[[18,4,2]]` | — | 6 | `01+02+03+12+13+23+012+013+023+123` | 5 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Campbell & Howard (2017)](https://doi.org/10.1103/PhysRevA.95.022316) |
 | 14 | `18.4.2.b` | `[[18,4,2]]` | — | 6 | `01+23` | 6 | 2 | S, CZ | pre-existing | borrowed-identity search: symmetry-free | [Campbell & Howard (2017)](https://doi.org/10.1103/PhysRevA.95.022316) |
 | 15 | `18.5.2.a` | `[[18,5,2]]` | — | 7 | `01+234` | 9 | 3 | T-powers | pre-existing | borrowed-identity search: symmetry-free | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 16 | `20.2.2.a` | `[[20,2,2]]` | — | 6 | `01` | 3 | 2 | T-powers | pre-existing | symmetry-SAT search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 17 | `20.3.2.b` | `[[20,3,2]]` | — | 6 | `01+02+012` | 3 | 2 | T-powers | pre-existing | symmetry-SAT search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 18 | `20.3.2.a` | `[[20,3,2]]` | — | 6 | `0+12` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: symmetry-free | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 19 | `20.3.2.c` | `[[20,3,2]]` | — | 6 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: symmetry-free | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 18 | `20.3.2.a` | `[[20,3,2]]` | — | 6 | `0+12` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: symmetry-free | [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437) |
+| 19 | `20.3.2.c` | `[[20,3,2]]` | — | 6 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: symmetry-free | [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437) |
 | 20 | `20.4.2.c` | `[[20,4,2]]` | — | 6 | `01+02+03+012` | 4 | 2 | S, CZ | pre-existing | symmetry-SAT search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 21 | `20.4.2.b` | `[[20,4,2]]` | — | 7 | `0+123` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: symmetry-free | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
+| 21 | `20.4.2.b` | `[[20,4,2]]` | — | 7 | `0+123` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: symmetry-free | [Bravyi & Haah (2012)](https://doi.org/10.1103/PhysRevA.86.052329) |
 | 22 | `20.4.2.a` | `[[20,4,2]]` | — | 7 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Bravyi & Haah (2012)](https://doi.org/10.1103/PhysRevA.86.052329) |
 | 23 | `20.5.2.b` | `[[20,5,2]]` | — | 6 | `012+013+023+124` | 11 | 3 | S, CZ | pre-existing | symmetry-SAT search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 24 | `20.5.2.a` | `[[20,5,2]]` | — | 8 | `0+1+234` | 8 | 3 | T-powers | pre-existing | borrowed-identity search: symmetry-free | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1410,7 +1410,7 @@ readable copy of exactly these rows.
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 3, 7, `T` on the rest
 - discovery: pre-existing
 - regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
-- citation: [Eastin (2013)](https://doi.org/10.1103/PhysRevA.87.032321); [Jones (2013)](https://doi.org/10.1103/PhysRevA.87.022328)
+- citation: [Bombín & Martin-Delgado (2007)](https://doi.org/10.1103/PhysRevB.75.075103)
 - source: `borrowed-identity search: two-group` · l3-row049-two-group (`two-group l=3 n=4 k=3 s_total=1 s_O=1 s_S=1`)
 
 ```text
@@ -1479,7 +1479,7 @@ readable copy of exactly these rows.
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
 - regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
-- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- citation: [Litinski (2019)](https://doi.org/10.22331/q-2019-12-02-205)
 - source: `borrowed-identity search: two-group` · l3-row001-two-group (`two-group l=3 n=4 k=1 s_total=1 s_O=1 s_S=1`)
 
 ```text
@@ -1624,7 +1624,7 @@ readable copy of exactly these rows.
 - or no correction at all, with rotations run as `T³` on columns 0, 16, 17; `T†` on columns 3, 5, 7, 9, `T` on the rest
 - discovery: pre-existing
 - regime: borrowed-identity search: two-group — found by the two-group borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/): an identity circuit symmetric within its output and check blocks, with its output-only gates removed; a verified witness, not a maximum
-- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- citation: [Campbell & Howard (2017)](https://doi.org/10.1103/PhysRevA.95.022316)
 - source: `borrowed-identity search: two-group` · l3-row084-two-group (`two-group l=3 n=6 k=4 s_total=1 s_O=3 s_S=1`)
 
 ```text
@@ -1709,7 +1709,7 @@ readable copy of exactly these rows.
 - or no correction at all, with rotations run as `T³` on columns 8, 11, 12, 15, 16, 17, 19; `T⁵` on columns 6, 9; `T†` on columns 2, 3, `T` on the rest
 - discovery: pre-existing
 - regime: borrowed-identity search: symmetry-free — found by the symmetry-free, targeted-output borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/), which solves for the check couplings of a chosen output; a verified witness, not a maximum
-- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- citation: [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437)
 - source: `borrowed-identity search: symmetry-free` · l3-row051-symmetry-free (`symmetry-free l=3 parts=2+1 checks=3`)
 
 ```text
@@ -1726,7 +1726,7 @@ readable copy of exactly these rows.
 - or no correction at all, with rotations run as `T³` on columns 13, 16, 17; `T†` on columns 0, 2, 4, 7, 10, `T` on the rest
 - discovery: pre-existing
 - regime: borrowed-identity search: symmetry-free — found by the symmetry-free, targeted-output borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/), which solves for the check couplings of a chosen output; a verified witness, not a maximum
-- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- citation: [Nezami & Haah (2022)](https://doi.org/10.1103/PhysRevA.106.012437)
 - source: `borrowed-identity search: symmetry-free` · af-0779 (`unified search l=3, gluing blocks=1+1+1`)
 
 ```text
@@ -1760,7 +1760,7 @@ readable copy of exactly these rows.
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 2, 3, 4, 14, 15, 16, 17, 18; `T⁵` on column 6, `T` on the rest
 - discovery: pre-existing
 - regime: borrowed-identity search: symmetry-free — found by the symmetry-free, targeted-output borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/), which solves for the check couplings of a chosen output; a verified witness, not a maximum
-- citation: [Singh et al. (2026)](https://arxiv.org/abs/2606.28518)
+- citation: [Bravyi & Haah (2012)](https://doi.org/10.1103/PhysRevA.86.052329)
 - source: `borrowed-identity search: symmetry-free` · l3-row087-symmetry-free (`symmetry-free l=3 parts=3+1 checks=3`)
 
 ```text
@@ -24875,7 +24875,7 @@ Newest first.
 - <a id="ref-jain2026symmetry"></a>**Jain et al. (2026)** (`jain2026symmetry`, 735 rows) — S. P. Jain, A. Wills, and S. Singh, "Symmetry and AI-assisted discovery of magic-state factories," arXiv:2610.06535 (2026). <https://arxiv.org/abs/2610.06535>
 - <a id="ref-wills2026classification"></a>**Wills et al. (2026)** (`wills2026classification`, 207 rows) — A. Wills, S. P. Jain, and S. Singh, "Classification of Generalised Triorthogonal Codes through Length 54," arXiv:2609.30860 (2026). <https://arxiv.org/abs/2609.30860>
 - <a id="ref-gong2026magic"></a>**Gong et al. (2026)** (`gong2026magic`, 4 rows) — A. Gong, C. A. Pattison, P. Rall, and A. Wills, "Magic State Distillation via Codes over Binary Extension Fields," arXiv:2608.09727 (2026). <https://arxiv.org/abs/2608.09727>
-- <a id="ref-singh2026borrowed"></a>**Singh et al. (2026)** (`singh2026borrowed`, 423 rows) — S. Singh, C. Gidney, and C. Jones, "Borrowed Identities: Malleable Distillation Factories and a Unified Numerical Search," arXiv:2606.28518 (2026). <https://arxiv.org/abs/2606.28518>
+- <a id="ref-singh2026borrowed"></a>**Singh et al. (2026)** (`singh2026borrowed`, 418 rows) — S. Singh, C. Gidney, and C. Jones, "Borrowed Identities: Malleable Distillation Factories and a Unified Numerical Search," arXiv:2606.28518 (2026). <https://arxiv.org/abs/2606.28518>
 - <a id="ref-jacinto2026exploring"></a>**Jacinto et al. (2026)** (`jacinto2026exploring`, 5 rows) — H. Jacinto, X. Valcarce, V. Barizien, É. Gouzien, and N. Sangouard, "Exploring the landscape of compact magic-state distillation factories," arXiv:2606.07734 (2026). <https://arxiv.org/abs/2606.07734>
 - <a id="ref-jain2025transversal"></a>**Jain & Albert (2025)** (`jain2025transversal`, 24 rows) — S. P. Jain and V. V. Albert, "Transversal Clifford and T-gate codes of short length and high distance," IEEE J. Sel. Areas Inf. Theory 6, 127-137 (2025); arXiv:2408.12752. <https://doi.org/10.1109/JSAIT.2025.3570832>
 - <a id="ref-gong2024computation"></a>**Gong & Renes (2024)** (`gong2024computation`, 1 rows) — A. Gong and J. M. Renes, "Computation with quantum Reed-Muller codes and their mapping onto 2D atom arrays," arXiv:2410.23263 (2024). <https://arxiv.org/abs/2410.23263>
@@ -24883,11 +24883,11 @@ Newest first.
 - <a id="ref-sullivan2024code"></a>**Sullivan (2024)** (`sullivan2024code`, 1 rows) — M. Sullivan, "Code conversion with the quantum Golay code for a universal transversal gate set," Phys. Rev. A 109, 042416 (2024). <https://doi.org/10.1103/PhysRevA.109.042416>
 - <a id="ref-webster2023transversal"></a>**Webster et al. (2023)** (`webster2023transversal`, 1 rows) — M. A. Webster, A. O. Quintavalle, and S. D. Bartlett, "Transversal diagonal logical operators for stabiliser codes," New J. Phys. 25, 103018 (2023). <https://doi.org/10.1088/1367-2630/acfc5f>
 - <a id="ref-vuillot2022quantum"></a>**Vuillot & Breuckmann (2022)** (`vuillot2022quantum`, 3 rows) — C. Vuillot and N. P. Breuckmann, "Quantum Pin Codes," IEEE Trans. Inf. Theory 68, 5955 (2022). <https://doi.org/10.1109/TIT.2022.3170846>
-- <a id="ref-nezami2022classification"></a>**Nezami & Haah (2022)** (`nezami2022classification`, 4 rows) — S. Nezami and J. Haah, "Classification of small triorthogonal codes," Phys. Rev. A 106, 012437 (2022). <https://doi.org/10.1103/PhysRevA.106.012437>
+- <a id="ref-nezami2022classification"></a>**Nezami & Haah (2022)** (`nezami2022classification`, 6 rows) — S. Nezami and J. Haah, "Classification of small triorthogonal codes," Phys. Rev. A 106, 012437 (2022). <https://doi.org/10.1103/PhysRevA.106.012437>
 - <a id="ref-rengaswamy2020optimality"></a>**Rengaswamy et al. (2020)** (`rengaswamy2020optimality`, 2 rows) — N. Rengaswamy, R. Calderbank, M. Newman, and H. D. Pfister, "On Optimality of CSS Codes for Transversal T," IEEE J. Sel. Areas Inf. Theory 1, 499 (2020). <https://doi.org/10.1109/JSAIT.2020.3012914>
+- <a id="ref-litinski2019magic"></a>**Litinski (2019)** (`litinski2019magic`, 1 rows) — D. Litinski, "Magic state distillation: not as costly as you think," Quantum 3, 205 (2019). <https://doi.org/10.22331/q-2019-12-02-205>
 - <a id="ref-haah2018codes"></a>**Haah & Hastings (2018)** (`haah2018codes`, 12 rows) — J. Haah and M. B. Hastings, "Codes and Protocols for Distilling T, controlled-S, and Toffoli Gates," Quantum 2, 71 (2018). <https://doi.org/10.22331/q-2018-06-07-71>
-- <a id="ref-campbell2017unified"></a>**Campbell & Howard (2017)** (`campbell2017unified`, 3 rows) — E. T. Campbell and M. Howard, "Unified framework for magic state distillation and multiqubit gate synthesis with reduced resource cost," Phys. Rev. A 95, 022316 (2017). <https://doi.org/10.1103/PhysRevA.95.022316>
-- <a id="ref-eastin2013distilling"></a>**Eastin (2013)** (`eastin2013distilling`, 1 rows) — B. Eastin, "Distilling one-qubit magic states into Toffoli states," Phys. Rev. A 87, 032321 (2013). <https://doi.org/10.1103/PhysRevA.87.032321>
-- <a id="ref-jones2013low"></a>**Jones (2013)** (`jones2013low`, 1 rows) — C. Jones, "Low-overhead constructions for the fault-tolerant Toffoli gate," Phys. Rev. A 87, 022328 (2013). <https://doi.org/10.1103/PhysRevA.87.022328>
-- <a id="ref-bravyi2012magic"></a>**Bravyi & Haah (2012)** (`bravyi2012magic`, 4 rows) — S. Bravyi and J. Haah, "Magic-state distillation with low overhead," Phys. Rev. A 86, 052329 (2012). <https://doi.org/10.1103/PhysRevA.86.052329>
+- <a id="ref-campbell2017unified"></a>**Campbell & Howard (2017)** (`campbell2017unified`, 4 rows) — E. T. Campbell and M. Howard, "Unified framework for magic state distillation and multiqubit gate synthesis with reduced resource cost," Phys. Rev. A 95, 022316 (2017). <https://doi.org/10.1103/PhysRevA.95.022316>
+- <a id="ref-bravyi2012magic"></a>**Bravyi & Haah (2012)** (`bravyi2012magic`, 5 rows) — S. Bravyi and J. Haah, "Magic-state distillation with low overhead," Phys. Rev. A 86, 052329 (2012). <https://doi.org/10.1103/PhysRevA.86.052329>
+- <a id="ref-bombin2007exact"></a>**Bombín & Martin-Delgado (2007)** (`bombin2007exact`, 1 rows) — H. Bombín and M. A. Martin-Delgado, "Exact topological quantum order in D=3 and beyond: Branyons and brane-net condensates," Phys. Rev. B 75, 075103 (2007). <https://doi.org/10.1103/PhysRevB.75.075103>
 - <a id="ref-bravyi2005universal"></a>**Bravyi & Kitaev (2005)** (`bravyi2005universal`, 1 rows) — S. Bravyi and A. Kitaev, "Universal quantum computation with ideal Clifford gates and noisy ancillas," Phys. Rev. A 71, 022316 (2005). <https://doi.org/10.1103/PhysRevA.71.022316>

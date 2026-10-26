@@ -123,6 +123,21 @@ REFERENCES = {
         "url": "https://doi.org/10.1088/1367-2630/acfc5f",
         "date": "2023-10-01",
     },
+    "litinski2019magic": {
+        "short": "Litinski (2019)",
+        "full": "D. Litinski, \"Magic state distillation: not as costly as "
+                "you think,\" Quantum 3, 205 (2019).",
+        "url": "https://doi.org/10.22331/q-2019-12-02-205",
+        "date": "2019-12-02",
+    },
+    "bombin2007exact": {
+        "short": "Bombín & Martin-Delgado (2007)",
+        "full": "H. Bombín and M. A. Martin-Delgado, \"Exact topological "
+                "quantum order in D=3 and beyond: Branyons and brane-net "
+                "condensates,\" Phys. Rev. B 75, 075103 (2007).",
+        "url": "https://doi.org/10.1103/PhysRevB.75.075103",
+        "date": "2007-02",
+    },
     "campbell2017unified": {
         "short": "Campbell & Howard (2017)",
         "full": "E. T. Campbell and M. Howard, \"Unified framework for magic "

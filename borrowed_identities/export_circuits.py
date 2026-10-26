@@ -120,9 +120,27 @@ LITERATURE = {
         where="the k = 6 member of the Bravyi-Haah [[3k+8,k,2]] family "
               "(arXiv:2606.28518, App. F.3a)"),
     (8, 3, 2, "CCZ012"): dict(
-        keys=["eastin2013distilling", "jones2013low"],
-        where="the 8 T -> CCZ factory of Eastin (2013) and Jones (2013) "
-              "(arXiv:2606.28518, malleable circuits)"),
+        keys=["bombin2007exact"],
+        where="the [[8,3,2]] code of Bombin and Martin-Delgado (2007), the "
+              "earliest of the three works the upstream repository cites for "
+              "this factory (outputs/literature_refs.json at 4627014), before "
+              "the 8 T -> CCZ factories of Jones (2013) and Eastin (2013)"),
+    (14, 1, 2, "T0"): dict(
+        keys=["litinski2019magic"],
+        where="Litinski (2019), as the upstream repository cites it "
+              "(outputs/literature_refs.json at 4627014)"),
+    (20, 3, 2, "CS01+T2"): dict(
+        keys=["nezami2022classification"],
+        where="Nezami and Haah (2022), as the upstream repository cites it "
+              "(outputs/literature_refs.json at 4627014)"),
+    (18, 4, 2, "CS01+CS02+CS13"): dict(
+        keys=["campbell2017unified"],
+        where="Campbell and Howard (2017), as the upstream repository cites "
+              "it (outputs/literature_refs.json at 4627014)"),
+    (20, 4, 2, "CCZ012+T3"): dict(
+        keys=["bravyi2012magic"],
+        where="Bravyi and Haah (2012), as the upstream repository cites it "
+              "(outputs/literature_refs.json at 4627014)"),
     (12, 2, 2, "CS01"): dict(
         keys=["webster2023transversal"],
         where="the T-to-CS factory [[12,2,2]] of Webster, Quintavalle and "

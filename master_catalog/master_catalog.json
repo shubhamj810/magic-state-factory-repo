@@ -87,8 +87,7 @@
     [0,1,2,3]
    ],
    "citations": [
-    "eastin2013distilling",
-    "jones2013low"
+    "bombin2007exact"
    ],
    "catalog_label": "8.3.2.a",
    "sources": [
@@ -400,7 +399,7 @@
     [0,1,2,3]
    ],
    "citations": [
-    "singh2026borrowed"
+    "litinski2019magic"
    ],
    "catalog_label": "14.1.2.a",
    "sources": [
@@ -1184,7 +1183,7 @@
     [0,1,2,3,4,5]
    ],
    "citations": [
-    "singh2026borrowed"
+    "campbell2017unified"
    ],
    "catalog_label": "18.4.2.a",
    "sources": [
@@ -1632,7 +1631,7 @@
     [0,3,4,5]
    ],
    "citations": [
-    "singh2026borrowed"
+    "nezami2022classification"
    ],
    "catalog_label": "20.3.2.a",
    "sources": [
@@ -1723,7 +1722,7 @@
     [4,5]
    ],
    "citations": [
-    "singh2026borrowed"
+    "nezami2022classification"
    ],
    "catalog_label": "20.3.2.c",
    "sources": [
@@ -1903,7 +1902,7 @@
     [0,4,5,6]
    ],
    "citations": [
-    "singh2026borrowed"
+    "bravyi2012magic"
    ],
    "catalog_label": "20.4.2.b",
    "sources": [
@@ -1195834,18 +1195833,6 @@
    "url": "https://doi.org/10.1103/PhysRevA.86.052329",
    "date": "2012-11-27"
   },
-  "eastin2013distilling": {
-   "short": "Eastin (2013)",
-   "full": "B. Eastin, \"Distilling one-qubit magic states into Toffoli states,\" Phys. Rev. A 87, 032321 (2013).",
-   "url": "https://doi.org/10.1103/PhysRevA.87.032321",
-   "date": "2013-03-18"
-  },
-  "jones2013low": {
-   "short": "Jones (2013)",
-   "full": "C. Jones, \"Low-overhead constructions for the fault-tolerant Toffoli gate,\" Phys. Rev. A 87, 022328 (2013).",
-   "url": "https://doi.org/10.1103/PhysRevA.87.022328",
-   "date": "2013-02-20"
-  },
   "webster2023transversal": {
    "short": "Webster et al. (2023)",
    "full": "M. A. Webster, A. O. Quintavalle, and S. D. Bartlett, \"Transversal diagonal logical operators for stabiliser codes,\" New J. Phys. 25, 103018 (2023).",
@@ -1195869,6 +1195856,18 @@
    "full": "M. Sullivan, \"Code conversion with the quantum Golay code for a universal transversal gate set,\" Phys. Rev. A 109, 042416 (2024).",
    "url": "https://doi.org/10.1103/PhysRevA.109.042416",
    "date": "2024-04-18"
+  },
+  "litinski2019magic": {
+   "short": "Litinski (2019)",
+   "full": "D. Litinski, \"Magic state distillation: not as costly as you think,\" Quantum 3, 205 (2019).",
+   "url": "https://doi.org/10.22331/q-2019-12-02-205",
+   "date": "2019-12-02"
+  },
+  "bombin2007exact": {
+   "short": "Bomb\u00edn & Martin-Delgado (2007)",
+   "full": "H. Bomb\u00edn and M. A. Martin-Delgado, \"Exact topological quantum order in D=3 and beyond: Branyons and brane-net condensates,\" Phys. Rev. B 75, 075103 (2007).",
+   "url": "https://doi.org/10.1103/PhysRevB.75.075103",
+   "date": "2007-02"
   }
  }
 }

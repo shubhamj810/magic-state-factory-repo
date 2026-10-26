@@ -14,7 +14,8 @@ catalogue does with them.
   circuit small enough to enumerate, and equals the upstream's own error
   coefficient on all seven level-3 targets it publishes;
 * in the master catalogue, every class the merge added carries its circuit
-  and is credited to the paper; no Clifford-padding circuit is held, and
+  and is credited to the paper, or to the earlier work the upstream row
+  names; no Clifford-padding circuit is held, and
   each of those has an output that is a combination of the others modulo the
   checks.
 
@@ -68,6 +69,8 @@ UPSTREAM_SHA256 = {
 }
 LARGE_SWEEP_MAX_N = 4095
 BORROWED = "singh2026borrowed"
+#: new classes whose upstream row names earlier work, and that work
+UPSTREAM_CREDIT = {"af-0779": ["nezami2022classification"]}
 #: the non-padding circuits the catalogue refuses as pseudo-outputs: the
 #: paper's [[8,4,2]], two k = 6 two-group circuits and one SAT circuit, each
 #: of whose outputs includes one equal to others modulo the checks
@@ -281,7 +284,8 @@ class TestMasterCatalogue(unittest.TestCase):
         for row in added:
             circuit = self.circuits[row["sources"][0]["label"]]
             with self.subTest(label=row["catalog_label"]):
-                self.assertEqual(row["citations"], [BORROWED])
+                self.assertEqual(row["citations"], UPSTREAM_CREDIT.get(
+                    circuit["id"], [BORROWED]))
                 self.assertEqual(row["discovery"], "pre-existing")
                 self.assertEqual((row["n"], row["k"], row["d"], row["N"]),
                                  (circuit["n"], circuit["k"], circuit["d"],

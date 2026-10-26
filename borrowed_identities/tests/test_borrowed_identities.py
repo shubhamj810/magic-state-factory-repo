@@ -68,9 +68,14 @@ UPSTREAM_DISTANCE_ERRATA = {
 REFUSED = {"l3-row083-two-group"}
 BORROWED = "singh2026borrowed"
 #: Classes the searches found that an earlier work had published: credited to
-#: that work alone.
+#: that work alone.  The last five follow the upstream repository's own
+#: references (outputs/literature_refs.json at 4627014).
 EARLIER = {
-    "8.3.2.a": ["eastin2013distilling", "jones2013low"],
+    "8.3.2.a": ["bombin2007exact"],
+    "14.1.2.a": ["litinski2019magic"],
+    "20.3.2.a": ["nezami2022classification"],
+    "18.4.2.a": ["campbell2017unified"],
+    "20.4.2.b": ["bravyi2012magic"],
     "12.2.2.a": ["webster2023transversal"],
     "14.2.2.a": ["bravyi2012magic"],
     "20.4.2.a": ["bravyi2012magic"],
