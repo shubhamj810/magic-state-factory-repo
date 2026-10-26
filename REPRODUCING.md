@@ -254,7 +254,13 @@ which reads nothing but the file itself:
 ```bash
 .venv/bin/python master_catalog/verify_catalog.py            # every row of both files, ~60 min on one core
 .venv/bin/python master_catalog/verify_catalog.py --changed  # rows that differ from HEAD, seconds
+.venv/bin/python master_catalog/verify_catalog.py --file main   # every row of one file, main (~35 min) or large (~25 min)
 ```
+
+After a merge, `--changed` is the check: it re-derives exactly the rows the
+merge changed, in whichever file, and runs the checks across both files,
+which take seconds. `--file` re-verifies the whole of the file a merge went
+into, without the other.
 
 Expected summary of the full run (`--rows 1-20` for a quick slice):
 

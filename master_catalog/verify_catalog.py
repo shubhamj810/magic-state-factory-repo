@@ -8,6 +8,9 @@ compared with what the row stores.  A disagreement is a failure, printed with
 the reason, and the exit status is non-zero.
 
     python verify_catalog.py                 # the whole shipped catalogue
+    python verify_catalog.py --changed       # only the rows a merge changed
+    python verify_catalog.py --file main     # every row of one file, main or
+                                             # large: the one a merge went into
     python verify_catalog.py --rows 1-20     # a slice, by 1-based row number
     python verify_catalog.py --quiet         # only failures and the summary
 
@@ -1677,6 +1680,11 @@ def main(argv=None):
                              "against (default: master_catalog_large.json "
                              "beside the baseline, unless that is the large "
                              "file being verified; none otherwise)")
+    parser.add_argument("--file", choices=("main", "large"), default=None,
+                        help="every row of one file only -- the one a merge "
+                             "went into -- plus the checks across both "
+                             "files; the large file's rows are most of the "
+                             "hour a full run takes")
     parser.add_argument("--quiet", action="store_true",
                         help="print only failures and the summary")
     args = parser.parse_args(argv)
@@ -1689,9 +1697,23 @@ def main(argv=None):
         return 1
     total = len(payload["factories"])
     indices = None
-    scoped = sum(1 for flag in (args.rows, args.changed, args.baseline) if flag)
+    scoped = sum(1 for flag in (args.rows, args.changed, args.baseline, args.file)
+                 if flag)
     if scoped > 1:
-        raise SystemExit("--rows, --changed and --baseline exclude one another")
+        raise SystemExit("--rows, --changed, --baseline and --file exclude one "
+                         "another")
+    if args.file:
+        # every row of the one file, by its position among both files' rows;
+        # the checks across both files still run, and take seconds
+        want_large = args.file == "large"
+        indices = [index for index, row in enumerate(payload["factories"], 1)
+                   if CF.is_large(row) == want_large]
+        if not indices:
+            # an empty scope would verify nothing and still print PASS
+            raise SystemExit(f"the {args.file} file holds no rows; nothing "
+                             f"would be verified")
+        print(f"{len(indices)} of {total} rows are in the "
+              f"{'large' if want_large else 'main'} file", flush=True)
     file_level = True
     against = None
     if args.changed or args.baseline:

@@ -273,6 +273,39 @@ class TestVerifier(unittest.TestCase):
         self.assertEqual(code, 1, out.getvalue())
         self.assertIn("1 of 4 rows differ", out.getvalue())
 
+    def test_one_file_at_a_time(self):
+        """``--file main`` and ``--file large`` verify every row of one file,
+        and the checks across both files; an empty scope is refused."""
+        import contextlib
+        import io
+        directory = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, directory)
+        payload = CF.load()
+        payload["factories"] = payload["factories"][:3]
+        payload["n_classes"] = 3
+        payload["factories"].append(copy.deepcopy(self.large))
+        main = directory / "master_catalog.json"
+        CF.write_all(payload, main, directory / "master_catalog_large.json",
+                     directory / "MASTER_CATALOG.md")
+        for scope, count in (("main", 3), ("large", 1)):
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                code = VC.main(["--catalog", str(main), "--file", scope, "--quiet"])
+            with self.subTest(scope=scope):
+                self.assertEqual(code, 0, out.getvalue())
+                self.assertIn(f"{count} of 4 rows are in the {scope} file", out.getvalue())
+                self.assertIn(f"PASS: {count} rows", out.getvalue())
+                self.assertIn("no two rows are the same GL(k,2) class", out.getvalue())
+        with self.assertRaises(SystemExit):
+            with contextlib.redirect_stdout(io.StringIO()):
+                VC.main(["--catalog", str(main), "--file", "main", "--rows", "1"])
+        CF.write_all({**payload, "factories": payload["factories"][:3]}, main,
+                     directory / "master_catalog_large.json",
+                     directory / "MASTER_CATALOG.md")
+        with self.assertRaises(SystemExit):
+            with contextlib.redirect_stdout(io.StringIO()):
+                VC.main(["--catalog", str(main), "--file", "large"])
+
     def test_the_header_counts_the_main_file(self):
         payload = CF.load()
         payload["factories"] = payload["factories"] + [self.large]

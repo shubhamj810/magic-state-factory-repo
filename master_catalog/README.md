@@ -30,6 +30,7 @@ AI-assisted and SAT searches, the literature and
 ```bash
 .venv/bin/python master_catalog/verify_catalog.py            # all rows of both files, plus the file-level checks (~60 min)
 .venv/bin/python master_catalog/verify_catalog.py --changed  # only the rows that differ from HEAD, plus the file-level checks (seconds)
+.venv/bin/python master_catalog/verify_catalog.py --file main   # every row of the main file only (~35 min); --file large for the other (~25 min)
 .venv/bin/python master_catalog/verify_catalog.py --rows 1-20
 .venv/bin/python master_catalog/merge_results.py new.json    # see "Merging" below
 .venv/bin/python -m unittest discover -s master_catalog/tests
