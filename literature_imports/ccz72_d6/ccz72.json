@@ -1,0 +1,64 @@
+{
+ "paper": "A. Gong, C. A. Pattison, P. Rall, and A. Wills, \"Magic State Distillation via Codes over Binary Extension Fields,\" arXiv:2608.09727 (2026)",
+ "arXiv": "2608.09727v1",
+ "where": "Table 7 (App. D.3), row '(8T -> CCZ) * (9CCZ -> CCZ)': leading-order output error 10^{4.58} p^6, spatial footprint 13; outer code: Construction 4.5, Eq. (49), binarised by Eqs. (46)-(47); transversality: Eq. (41), Lemma 4.2, Sec. 3.2.5 (U_7 over F_8 is a CCZ up to Clifford); error model: App. D.2, Example D.2 and Table 5",
+ "outer_F8_matrix_eq49": [
+  "0 0 a^2 a^4 a^6 a^8 a^3 a^5 1",
+  "1 0 a^1 a^2 a^3 a^4 a^5 a^6 1",
+  "0 1 1 1 1 1 1 1 1"
+ ],
+ "self_dual_normal_basis_eq46": "a^2+a+1, a+1, a^2+1",
+ "outer_binary_matrix": [
+  "000 000 111 110 011 001 101 010 100",
+  "000 000 100 111 110 011 001 101 010",
+  "000 000 101 010 100 111 110 011 001",
+  "100 000 001 111 101 110 010 011 100",
+  "010 000 011 100 001 111 101 110 010",
+  "001 000 111 101 110 010 011 100 001",
+  "000 100 100 100 100 100 100 100 100",
+  "000 010 010 010 010 010 010 010 010",
+  "000 001 001 001 001 001 001 001 001"
+ ],
+ "inner_protocol": "8T -> CCZ: rotations x.(a,b,c) + s, x in F_2^3",
+ "wires": {
+  "outputs": [0, 1, 2],
+  "outer_checks": [3, 4, 5, 6, 7, 8],
+  "inner_checks": [9, 10, 11, 12, 13, 14, 15, 16, 17]
+ },
+ "k": 3,
+ "N": 18,
+ "n": 72,
+ "measured": {
+  "d_exact": 6,
+  "scanned": {
+   "1": "clean",
+   "2": "clean",
+   "3": "clean",
+   "4": "clean",
+   "5": "clean",
+   "6": "found"
+  },
+  "witness": [3, 6, 8, 11, 40, 43],
+  "A_d": 37632,
+  "A_d_methods": [
+   "macwilliams",
+   "macwilliams"
+  ]
+ },
+ "paper_error": {
+  "table7_leading_order": "10^{4.58} p^6",
+  "table5_K": {
+   "111": "1/63",
+   "112": "17/567",
+   "113": "1/189",
+   "122": "1/189",
+   "123": "1/27",
+   "133": "1/63",
+   "222": "23/567",
+   "223": "1/189",
+   "233": "1/63",
+   "333": "1/21"
+  },
+  "table5_coefficient_exact": 37632
+ }
+}
