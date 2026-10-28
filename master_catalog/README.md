@@ -53,11 +53,13 @@ merge_results                        imports verify_catalog, so "verified to
 
 ## The large file
 
-A few circuits are too long to store as columns. The Borrowed Identities large
-sweep has two-group circuits of up to 65,534 rotations, and storing the 127
-longest would take `master_catalog.json` to about 99 MB, at GitHub's 100 MB hard
-limit on a file and twice its recommended 50 MB. Such a
-row lives in [`master_catalog_large.json`](master_catalog_large.json). It has
+Some circuits are stored as the rule that builds them, to keep
+`master_catalog.json` under GitHub's recommended 50 MB. The Borrowed Identities
+large sweep has two-group circuits of up to 65,534 rotations, and storing the
+127 longest would take the file to about 99 MB, at GitHub's 100 MB hard limit.
+The larger unified search added 470 more, from 1,026 to 262,142 rotations;
+their columns are short enough one by one, but together they would take the
+file past 50 MB. Such a row lives in [`master_catalog_large.json`](master_catalog_large.json). It has
 every field of a row of the main file except `columns`, plus
 
 - `construction`, the rule that builds the columns. The two-group rule is
@@ -81,15 +83,15 @@ fields on every row and treat them alike. `write_all` writes them back apart,
 and `write` refuses a large row rather than put its columns into the main
 file. A result can be merged as a `construction` in place of `columns`.
 
-The phase check of item 9 below evaluates every one of the `2^16` inputs on
-the longest of these circuits, which makes a full verification about 25
-minutes longer.
+The phase check of item 9 below evaluates every one of the `2^N` inputs on
+the circuits of this file with `N ≤ 16`, and every input of weight at most 3
+on the 17- and 18-wire ones.
 
 ## What is in it
 
-**1405 distinct `(n, k, d, GL(k,2) gate)` classes**, 127 of them in the large
-file. 549 are at distance 2, and 217 are at `d ≥ 3` with `n ≤ 54`. Widths run
-`k = 1..373`, injection counts `n = 8..65534`, and distances proved here
+**2089 distinct `(n, k, d, GL(k,2) gate)` classes**, 597 of them in the large
+file. 1233 are at distance 2, and 217 are at `d ≥ 3` with `n ≤ 54`. Widths run
+`k = 1..373`, injection counts `n = 8..262142`, and distances proved here
 `d = 2..7`. Sources
 certify up to `d ≥ 31` on the transversal-T codes.
 
@@ -112,7 +114,7 @@ pin the distance, though the label, as always, uses the proved one.
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running
 some rotations as `T³`, `T⁵` or `T†` makes that unnecessary
-(`rotation_powers`). 16 classes need nothing, 888 need only powers, and 501
+(`rotation_powers`). 29 classes need nothing, 1489 need only powers, and 571
 need `S` or `CZ` gates whatever the powers.
 [`migrations/clifford_corrections_2026_10_10.py`](migrations/clifford_corrections_2026_10_10.py)
 added the fields, and [`clifford.py`](clifford.py) explains the method.
@@ -143,6 +145,21 @@ as two-group constructions:
 merged them, all 127 new classes credited to the paper.
 To stay under GitHub's 50 MB advisory size, the integer lists in this file
 have been written without a space after the comma (`[0,1,3]`) since then.
+
+**The larger unified search.** On 27 and 28 October 2026 the upstream
+repository ran the two-group and gluing stages of the unified search up to
+`k = 12` outputs and `N = 18` wires.
+[`../borrowed_identities/export_large_unified.py`](../borrowed_identities/export_large_unified.py)
+rebuilt and checked the 1,254 distance-2 rows of its level-3 table, and
+[`migrations/borrowed_identities_large_unified_2026_10_28.py`](migrations/borrowed_identities_large_unified_2026_10_28.py)
+merged them: 684 new classes credited to the paper, 559 already held (they keep
+their credit), and 11 two-group circuits refused as pseudo-outputs, the
+`[[8,4,2]]` among them. Of the new classes, the 214 gluing circuits and
+two-group circuits of at most 1,023 rotations are stored as columns here. The
+other 470 are two-group constructions in the large file. Columns up to 4,095
+rotations, the bound the October 26 import used, would have taken this file
+past 50 MB. The table's 37 single-output rows at distance 3 or more are not
+merged.
 
 The length-54 classification is a `d ≥ 3` statement, so the two
 `exhaustive classification` regimes, and the frontier tests, apply to `d ≥ 3`

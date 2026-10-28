@@ -63,6 +63,16 @@ the upstream repository is licensed under the
 terms these files keep; the licence text is included beside them, and they
 are unmodified. The same citation applies.
 
+`borrowed_identities/upstream_large_unified/` holds 15 files copied
+unmodified from the same repository at commit
+`ae9fbf895e2993568f731b22e785e1e1fcb93655`: the unified search scripts with
+the larger run's `large_unified.py` and `merge_large_unified.py`, the
+classifier, the level-3 table `large_unified_factories_l3.csv` and its gate
+lists `large_unified_l3_circuits.txt.zip`, and the READMEs, `LICENSE` and
+`CITATION.cff`. They are under the same
+[Apache License 2.0](borrowed_identities/upstream_large_unified/LICENSE), and
+the same citation applies.
+
 ## Transversal-T codes of Jain and Albert
 
 `transversal_t_codes/` contains no third-party files. It builds the codes of

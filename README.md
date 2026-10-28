@@ -44,18 +44,18 @@ are the outputs and the rest are postselected checks. `d` is the circuit's
 fault distance. Each row also gives the circuit's **Clifford correction**: the
 `S` and `CZ` gates that make its action exactly the gate shown (see below).
 
-The catalogue holds **1405 classes**:
+The catalogue holds **2089 classes**:
 
-- `n = 8..65534`, `k = 1..373`, `d = 2..7` proved here, and up to 31 certified
+- `n = 8..262142`, `k = 1..373`, `d = 2..7` proved here, and up to 31 certified
   by a source;
-- 549 classes at distance 2, from the borrowed-identity searches (including
-  their October 2026 unified search) and this repository's symmetry-SAT
+- 1233 classes at distance 2, from the borrowed-identity searches (including
+  their two October 2026 unified searches) and this repository's symmetry-SAT
   search;
-- 127 classes, two-group circuits of 4156 to 65534 rotations, stored as the
+- 597 classes, two-group circuits of 1026 to 262142 rotations, stored as the
   rule that builds them, in
   [`master_catalog_large.json`](master_catalog/master_catalog_large.json):
-  their columns would take the main file to about 99 MB, at GitHub's 100 MB
-  hard limit on a file;
+  their columns would take the main file past GitHub's 100 MB hard limit on a
+  file;
 - 217 classes with `n <= 54` and `d >= 3`, including all 74 Pareto points of
   the length-54 classification.
 
@@ -87,9 +87,9 @@ also stores whether the correction can be avoided by running some rotations as
 `T³`, `T⁵` or `T†` instead of `T` (`rotation_powers`). For a code this is a
 transversal `T` gate in the sense of Jain and Albert.
 
-- 16 classes need no correction at all;
-- 888 need none once some rotations run at another power of `T`;
-- 501 need `S` or `CZ` gates whatever the powers, which the verifier proves.
+- 29 classes need no correction at all;
+- 1489 need none once some rotations run at another power of `T`;
+- 571 need `S` or `CZ` gates whatever the powers, which the verifier proves.
 
 [`master_catalog/clifford.py`](master_catalog/clifford.py) computes all three.
 The verifier then checks the logical action two more ways. It evaluates the
@@ -120,7 +120,7 @@ names the papers that credit it, linked where they are published.
 | source | what it contributes | regime(s) |
 |---|---|---|
 | **Exhaustive classification**, `n <= 54` (Wills, Jain and Singh; [paper](https://arxiv.org/abs/2609.30860), [code and theory](https://github.com/AWillsQuantum/generalised_triorthogonal_classification), [data](https://figshare.com/articles/dataset/Generalised_Triorthogonal_Code_Classification_Through_Length_54_Data/33717319)) | every generalised triorthogonal protocol with `n <= 54` and exact `d_Z >= 3`, up to CNOT+S. Its 74 Pareto points (undominated in inputs `n` and wires `N`) are copied in [`classification/length54/`](classification/length54/); a test checks that every other class the catalogue holds in that window is dominated by one | `exhaustive classification n<=54 (Pareto point)`, `exhaustive classification n<=54` |
-| **Borrowed-identity searches** (Singh, Gidney and Jones; [paper](https://arxiv.org/abs/2606.28518), [code and data](https://github.com/shraggy/Magic_state_factory_search)) | the paper's catalogue of distance-2 factories: two-group and symmetry-free searches over borrowed-identity circuits. Copied, with an explicit circuit rebuilt for every row, in [`borrowed_identities/`](borrowed_identities/): the first catalogue's 185 level-3 circuits give 179 classes here, and the October 2026 unified search 377 more, 127 of them stored as their construction in the large file. Not counted as an AI discovery | `borrowed-identity search: two-group`, `borrowed-identity search: symmetry-free`, `borrowed-identity search: SAT recovery` |
+| **Borrowed-identity searches** (Singh, Gidney and Jones; [paper](https://arxiv.org/abs/2606.28518), [code and data](https://github.com/shraggy/Magic_state_factory_search)) | the paper's catalogue of distance-2 factories: two-group and symmetry-free searches over borrowed-identity circuits. Copied, with an explicit circuit rebuilt for every row, in [`borrowed_identities/`](borrowed_identities/): the first catalogue's 185 level-3 circuits give 179 classes here, and the October 2026 unified search 377 more, 127 of them stored as their construction in the large file. Its larger run of 27 and 28 October gives 684 more, 470 of them in the large file. Not counted as an AI discovery | `borrowed-identity search: two-group`, `borrowed-identity search: symmetry-free`, `borrowed-identity search: SAT recovery` |
 | **AI-assisted search** (Jain, Wills and Singh; [paper](https://arxiv.org/abs/2610.06535)) | AI search campaigns run in the companion repository `magic-states-AI`, from punctured simplex and Reed–Muller parents and Wills's parent codes, including the pure-T distillation-exponent (`γ`) frontier, and the public search for generalised triorthogonal protocols at lengths 55–64 | `AI search`, `AI search: …`, `AI search (gamma frontier): …` |
 | **Symmetry-constrained SAT search** (same paper) | CP-SAT searches over symmetric column orbits and ansatz-free SAT, in [`symmetry_sat_search/`](symmetry_sat_search/). Not counted as an AI discovery | `symmetry-SAT search` |
 | **Transversal-T codes** (Jain and Albert; [paper](https://doi.org/10.1109/JSAIT.2025.3570832), [arXiv](https://arxiv.org/abs/2408.12752)) | one-qubit codes with a transversal `T`, built by doubling self-dual and quadratic-residue CSS codes: all fifteen codes of each of the paper's two tables, `[[15,1,3]]` to `[[3239,1,31]]`, rebuilt from the paper's construction in [`transversal_t_codes/`](transversal_t_codes/). 25 new classes, with the paper's distances as certificates. Not counted as an AI discovery | `Jain-Albert doubling: weak triply even family`, `Jain-Albert doubling: triorthogonal family` |

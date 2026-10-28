@@ -39,6 +39,7 @@ from dedup import sk_canonical                                # noqa: E402
 import skcanon as SK                                          # noqa: E402
 import faultcore as FC                                        # noqa: E402
 import glcanon as GC                                          # noqa: E402
+import constructions as K                                     # noqa: E402
 import verify_catalog as VC                                   # noqa: E402
 
 MASTER = CATALOGUE / "master_catalog.json"
@@ -63,10 +64,11 @@ LOCAL_SOURCE_DIRS = ("classification/", "symmetry_sat_search/",
 #: The Borrowed Identities circuits (Singh, Gidney and Jones), rebuilt from the
 #: upstream catalogue by `borrowed_identities/export_circuits.py`.
 BORROWED_CIRCUITS = REPO / "borrowed_identities" / "circuits" / "circuits_l3.json"
-#: the circuit files of both Borrowed Identities imports, cae4982 and the
-#: October 2026 unified search
+#: the circuit files of the Borrowed Identities imports: cae4982, the
+#: October 2026 unified search and its larger run
 BORROWED_FILES = (BORROWED_CIRCUITS,
-                  REPO / "borrowed_identities" / "circuits" / "unified_l3.json")
+                  REPO / "borrowed_identities" / "circuits" / "unified_l3.json",
+                  REPO / "borrowed_identities" / "circuits" / "large_unified_l3.json")
 BORROWED = ("borrowed-identity search: two-group",
             "borrowed-identity search: symmetry-free",
             "borrowed-identity search: SAT recovery",
@@ -675,7 +677,9 @@ class TestMasterCatalogue(unittest.TestCase):
                 path: {c["id"]: c for c in json.loads(path.read_text())["circuits"]}
                 for path in BORROWED_FILES}
         circuit = self._borrowed[REPO / source["file"]][source["label"]]
-        columns = [sorted(g) for g, c in circuit["gates"] if c % 2]
+        # the larger unified search gives a two-group circuit as its rule
+        columns = ([sorted(g) for g, c in circuit["gates"] if c % 2]
+                   if "gates" in circuit else K.columns(circuit["construction"]))
         self.assertEqual((len(columns), circuit["wires"], circuit["d"]),
                          (row["n"], source["N"], source["d"]))
         self.assertEqual(len(circuit["outputs"]) if "outputs" in circuit

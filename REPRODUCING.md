@@ -355,6 +355,24 @@ comes out byte for byte unchanged. Against the shipped catalogue it reports
 `127 duplicate` and changes nothing. Most of the time is the logical-action
 check, which evaluates every one of the `2^16` inputs on the longest circuits.
 
+The larger unified search of 27 and 28 October came in through its own
+exporter and migration:
+
+```bash
+.venv/bin/python borrowed_identities/export_large_unified.py --check   # rebuild 1,254 circuits from the upstream code, ~9 min on 6 cores
+.venv/bin/python master_catalog/migrations/borrowed_identities_large_unified_2026_10_28.py --dry-run   # ~1 h 45 min
+```
+
+The export prints `up to date`. Run against the catalogue before it
+(`git show ccb058b:master_catalog/master_catalog.json` and
+`master_catalog_large.json`), the migration reports `684 accepted, 559
+duplicate, 11 rejected; refused as {'pseudo-output': 11}` and `1405 -> 2089
+classes, 597 of them in the large file`. Against the
+shipped catalogue it reports `1243 duplicate, 11 rejected` and changes
+nothing. Most of the time goes to the
+734 two-group circuits longer than 1,023 rotations. The longest, `n = 262142`
+on 18 wires, takes about a minute alone.
+
 ### The transversal-T codes of Jain and Albert
 
 The codes of S. P. Jain and V. V. Albert (IEEE JSAIT 6, 127 (2025),

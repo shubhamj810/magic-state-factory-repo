@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Circuits given by a rule instead of a list of columns.
 
-Most rows of the catalogue store their circuit as ``columns``.  A few circuits
-are too long for that: the two-group circuits of the Borrowed Identities large
-sweep reach 65,534 rotations, and storing the 127 longest would take
-``master_catalog.json`` to about 99 MB, at GitHub's 100 MB hard limit on a
-file and twice its recommended 50 MB.  Such a row is
+Most rows of the catalogue store their circuit as ``columns``.  Some are kept
+as a rule instead, to hold ``master_catalog.json`` under GitHub's recommended
+50 MB: the two-group circuits of the Borrowed Identities large sweep reach
+65,534 rotations, and storing the 127 longest would take the file to about
+99 MB, at GitHub's 100 MB hard limit; the 470 of the larger unified search, up
+to 262,142 rotations, would take it past 50 MB.  Such a row is
 kept in ``master_catalog_large.json`` with a ``construction`` -- a small object
 naming a family and its parameters -- and this module turns it back into the
 columns, which every other tool then reads exactly as it reads a stored circuit.
@@ -67,9 +68,9 @@ FAMILY_DESCRIPTIONS = {
 
 #: Bounds that keep a malformed construction from being expanded at all: a
 #: two-group circuit on N wires has up to 2^N - 1 columns, so N is what decides
-#: the cost.  Every circuit this file holds has N <= 16, which is 65,535 columns
-#: at most and a fraction of a second; N = 20 would already be a million.
-MAX_WIRES = 16
+#: the cost.  Every circuit this file holds has N <= 18, which is 262,143
+#: columns at most and well under a second; N = 20 would already be a million.
+MAX_WIRES = 18
 
 
 def problems(construction) -> list[str]:

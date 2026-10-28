@@ -312,6 +312,50 @@ changes the five rows in the table above. Every other held class keeps
 exactly the credit it had: the unified tables appeared in October 2026, after
 every work those classes credit.
 
+## The larger unified search (October 2026)
+
+On 27 and 28 October 2026 the upstream repository ran the two-group and
+gluing stages of the unified search over a larger range, `k <= 12` outputs
+and `N <= 18` circuit wires, without Clifford padding or SAT. Commit
+`ae9fbf8` is copied, byte for byte, into
+[`upstream_large_unified/`](upstream_large_unified/) (15 files). Its level-3
+table, `outputs/large_unified_factories_l3.csv`, has 1,291 rows: 1,242
+two-group and 49 gluing. The 1,254 at distance 2 are rebuilt by
+[`export_large_unified.py`](export_large_unified.py) with
+`merge_large_unified.regenerate_circuit`, the function the upstream README
+gives for regenerating a row, run unmodified. The other 37 rows are
+single-output two-group circuits at distance 3 or more and are not imported.
+
+`outputs/large_unified_l3_circuits.txt.zip` stores the gates of every gluing
+row and of every two-group row on at most 14 wires, 544 of the distance-2
+rows; each rebuilt circuit must equal its stored one. Every circuit is then
+checked by [`rowcheck.py`](rowcheck.py), the checks `export_unified.py` makes,
+moved there so both exporters share them: wire count, number of
+odd-coefficient rotations, the borrowed-identity condition, the gate against
+the row's `raw` column, and the distance measured by the catalogue's fault
+search. On 689 rows `raw` gives only the number of terms (`10\ \text{terms}`),
+and there the number of monomials is compared. All 1,254 pass, and `A_2` is counted for each. A two-group circuit is
+written as its construction with the SHA-256 of its columns, after checking
+that the construction builds exactly the circuit the upstream code builds. A
+gluing circuit is written as its gates. The file is
+[`circuits/large_unified_l3.json`](circuits/large_unified_l3.json).
+
+**In the master catalogue.**
+[`../master_catalog/migrations/borrowed_identities_large_unified_2026_10_28.py`](../master_catalog/migrations/borrowed_identities_large_unified_2026_10_28.py)
+merged the 1,254 circuits:
+
+| verdict | circuits | |
+|---|---:|---|
+| new class | 684 | 12 gluing and 202 two-group circuits of at most 1,023 rotations, stored as columns in `master_catalog.json`; 470 longer two-group circuits, up to `n = 262142`, stored as their construction in `master_catalog_large.json` |
+| already held | 559 | |
+| refused | 11 | pseudo-outputs, all two-group with `k = 4, 6, 10` or `12` outputs, among them the `[[8,4,2]]` refused before |
+
+The columns of the two-group circuits up to 4,095 rotations, the bound used
+for the October 26 import, would have taken `master_catalog.json` past 50 MB,
+so this import stores columns only up to 1,023. New classes are credited to
+the paper. This table has no `reference` column, and every held class keeps
+exactly the credit it had.
+
 ## Licence
 
 At commit `cae4982` the upstream repository stated no licence. The files in
@@ -320,8 +364,8 @@ provenance resolves inside this repository and the circuits can be rebuilt.
 They remain the work of their authors and are not covered by any licence later
 chosen for this repository's own code. By commit `4627014` the upstream
 repository is licensed under the Apache License 2.0, and the files in
-`upstream_unified/` keep those terms; the licence text is
-[`upstream_unified/LICENSE`](upstream_unified/LICENSE). See
+`upstream_unified/` and `upstream_large_unified/` keep those terms; the
+licence text is [`upstream_unified/LICENSE`](upstream_unified/LICENSE). See
 [`../THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md).
 
 ## Reproduce
@@ -331,6 +375,7 @@ From the repository root, with the environment in [`../requirements.txt`](../req
 ```bash
 .venv/bin/python borrowed_identities/export_circuits.py --check      # rebuild from upstream, compare (~35 s)
 .venv/bin/python borrowed_identities/export_unified.py --check       # the unified tables (~9 min)
-.venv/bin/python -m unittest discover -s borrowed_identities/tests   # the checks above (~2 s)
+.venv/bin/python borrowed_identities/export_large_unified.py --check # the larger unified table (~9 min)
+.venv/bin/python -m unittest discover -s borrowed_identities/tests   # the checks above (~1 min)
 .venv/bin/python master_catalog/migrations/distance_two_2026_10_07.py --dry-run   # the merge, written nowhere (seconds)
 ```
