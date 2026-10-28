@@ -57,7 +57,7 @@ Some circuits are stored as the rule that builds them, to keep
 `master_catalog.json` under GitHub's recommended 50 MB. The Borrowed Identities
 large sweep has two-group circuits of up to 65,534 rotations, and storing the
 127 longest would take the file to about 99 MB, at GitHub's 100 MB hard limit.
-The larger unified search added 470 more, from 1,026 to 262,142 rotations;
+The larger unified search added 478 more, from 1,026 to 262,142 rotations;
 their columns are short enough one by one, but together they would take the
 file past 50 MB. Such a row lives in [`master_catalog_large.json`](master_catalog_large.json). It has
 every field of a row of the main file except `columns`, plus
@@ -89,7 +89,7 @@ on the 17- and 18-wire ones.
 
 ## What is in it
 
-**2089 distinct `(n, k, d, GL(k,2) gate)` classes**, 597 of them in the large
+**2102 distinct `(n, k, d, GL(k,2) gate)` classes**, 605 of them in the large
 file. 1233 are at distance 2, and 217 are at `d ≥ 3` with `n ≤ 54`. Widths run
 `k = 1..373`, injection counts `n = 8..262142`, and distances proved here
 `d = 2..7`. Sources
@@ -114,7 +114,7 @@ pin the distance, though the label, as always, uses the proved one.
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running
 some rotations as `T³`, `T⁵` or `T†` makes that unnecessary
-(`rotation_powers`). 29 classes need nothing, 1489 need only powers, and 571
+(`rotation_powers`). 29 classes need nothing, 1501 need only powers, and 572
 need `S` or `CZ` gates whatever the powers.
 [`migrations/clifford_corrections_2026_10_10.py`](migrations/clifford_corrections_2026_10_10.py)
 added the fields, and [`clifford.py`](clifford.py) explains the method.
@@ -158,8 +158,12 @@ their credit), and 11 two-group circuits refused as pseudo-outputs, the
 two-group circuits of at most 1,023 rotations are stored as columns here. The
 other 470 are two-group constructions in the large file. Columns up to 4,095
 rotations, the bound the October 26 import used, would have taken this file
-past 50 MB. The table's 37 single-output rows at distance 3 or more are not
-merged.
+past 50 MB. The table's other 37 rows are single-output circuits at distance 3
+or more. The exporter measured all 37 at exactly `d = 3`, 25 of them where the
+table gives only `d ≥ 3`, and
+[`migrations/borrowed_identities_large_unified_d3_2026_10_28.py`](migrations/borrowed_identities_large_unified_d3_2026_10_28.py)
+merged them the same way: 13 new classes, from `n = 65` to `n = 131071`, 8 of
+them in the large file, and 24 already held.
 
 The length-54 classification is a `d ≥ 3` statement, so the two
 `exhaustive classification` regimes, and the frontier tests, apply to `d ≥ 3`

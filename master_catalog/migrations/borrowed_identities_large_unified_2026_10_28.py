@@ -60,9 +60,9 @@ REGIMES = {"two-group": "borrowed-identity search: two-group",
 REPOSITORY = "https://github.com/shraggy/Magic_state_factory_search"
 
 
-def records(path=REPO / CIRCUITS):
+def records(circuits=CIRCUITS):
     """The merge record of every entry of the circuit file, in its order."""
-    blob = json.loads(Path(path).read_text(encoding="utf-8"))
+    blob = json.loads((REPO / circuits).read_text(encoding="utf-8"))
     commit = blob["source"]["commit"][:7]
     out = []
     for e in blob["circuits"]:
@@ -81,7 +81,7 @@ def records(path=REPO / CIRCUITS):
             "regime": REGIMES[e["stage"]],
             "discovery": "pre-existing",
             "citations": [BORROWED],
-            "file": CIRCUITS,
+            "file": circuits,
             "label": e["id"],
             "provenance": f"larger unified search l=3, {e['stage']} "
                           f"{e['params']}",
@@ -107,16 +107,16 @@ def _changes(payload):
                    for path, out in zip(real, trial))
 
 
-def main(argv=None):
-    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+def main(argv=None, circuits=CIRCUITS, description=__doc__):
+    parser = argparse.ArgumentParser(description=description.splitlines()[0])
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
     payload = CF.load_all()
     before = len(payload["factories"])
     credit = {row["catalog_label"]: list(row["citations"])
               for row in payload["factories"]}
-    batch = records()
-    verdicts = MR.merge(payload, batch, CIRCUITS)
+    batch = records(circuits)
+    verdicts = MR.merge(payload, batch, circuits)
     restored = 0
     for row in payload["factories"]:
         old = credit.get(row["catalog_label"])

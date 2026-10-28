@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild every distance-2, level-3 row of the larger unified search.
+"""Rebuild every level-3 row of the larger unified search.
 
     .venv/bin/python borrowed_identities/export_large_unified.py          # write circuits/
     .venv/bin/python borrowed_identities/export_large_unified.py --check  # rebuild, compare, write nothing
@@ -9,9 +9,10 @@ Gidney and C. Jones, arXiv:2606.28518) ran its unified search over a larger
 range: the two-group and shared-check gluing stages, without Clifford padding
 or SAT, at ``k <= 12`` outputs and ``N <= 18`` circuit wires.  The files this
 reads are copied byte for byte into ``upstream_large_unified/``.  Its level-3
-table, ``outputs/large_unified_factories_l3.csv``, has 1,291 rows; the 1,254
-at distance 2 are rebuilt here.  The 37 rows at distance 3 or more, all single
-output, are left out.
+table, ``outputs/large_unified_factories_l3.csv``, has 1,291 rows, all rebuilt
+here: 1,254 at distance 2, and 37 single-output rows at distance 3 or more.
+The table gives 12 of those 37 a distance of 3 and the other 25 only the
+floor ``>=3``; the distance measured here must be at least the floor.
 
 Like the earlier tables, this one lists each factory by the parameters that
 make it, and the circuits are rebuilt by running the upstream code unmodified:
@@ -43,9 +44,11 @@ OUTPUT
 order: the table line, stage and parameters, the measured ``d``, witness and
 ``A_d``, and the construction and digest (two-group) or the gates (gluing).
 ``master_catalog/migrations/borrowed_identities_large_unified_2026_10_28.py``
-merges it.
+merges it.  ``circuits/large_unified_l3_d3.json``: the same for the rows at
+distance 3 or more, with ``d_table`` the table's ``>=3`` where it gives only a
+floor; ``borrowed_identities_large_unified_d3_2026_10_28.py`` merges it.
 
-The output is deterministic: ``--check`` rebuilds everything and fails if the
+The output is deterministic: ``--check`` rebuilds everything and fails if a
 committed file differs.  It takes about 9 minutes with 6 workers, most of
 it ``A_2`` of the 18-wire circuits.
 """
@@ -66,6 +69,7 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
 UPSTREAM = HERE / "upstream_large_unified"
 OUT = HERE / "circuits" / "large_unified_l3.json"
+OUT_D3 = HERE / "circuits" / "large_unified_l3_d3.json"
 sys.path.insert(0, str(UPSTREAM / "searches"))
 sys.path.insert(0, str(UPSTREAM / "classification"))
 sys.path.insert(0, str(REPO / "master_catalog"))
@@ -143,14 +147,16 @@ def entry(job):
         if sorted(listed) != gates:
             raise SystemExit(f"{where}: the rebuilt gates are not the ones "
                              f"{GATE_LISTS} stores")
-    columns, witness, a_d = checked(row, gates, where)
+    columns, d, witness, a_d = checked(row, gates, where)
     out = {
         "id": f"lu-{line:04d}", "table": TABLE, "line": line,
         "stage": row["search_stage"], "params": row["params"],
         "k": int(row["k"]), "wires": int(row["N"]), "n": int(row["n"]),
-        "d": int(row["d"]), "d_witness": witness, "A_d": a_d,
+        "d": d, "d_witness": witness, "A_d": a_d,
         "raw": row["raw"],
     }
+    if row["d"] != str(d):
+        out["d_table"] = row["d"]
     if row["search_stage"] == "two-group":
         s_total, s_O = (int(part.split("=")[1])
                         for part in row["params"].split(","))
@@ -176,17 +182,17 @@ def build(workers=None):
         raise SystemExit(f"{TABLE}: stages {sorted(stages)}, levels "
                          f"{sorted(levels)}")
     lists = read_gate_lists()
-    jobs = [(line, row, lists.pop(line - 2, None))
-            for line, row in table if row["d"] == DISTANCE]
-    skipped = len(table) - len(jobs)
-    # every block left over must belong to a row at another distance
-    others = {line - 2 for line, row in table if row["d"] != DISTANCE}
-    if set(lists) - others:
-        raise SystemExit(f"{GATE_LISTS}: blocks "
-                         f"{sorted(set(lists) - others)[:5]} name no row")
+    jobs = [(line, row, lists.pop(line - 2, None)) for line, row in table]
+    if lists:
+        raise SystemExit(f"{GATE_LISTS}: blocks {sorted(lists)[:5]} name "
+                         f"no row")
     with ProcessPoolExecutor(workers or os.cpu_count()) as pool:
         entries = list(pool.map(entry, jobs, chunksize=1))
-    return entries, len(table), skipped
+    two = [e for (_l, row, _s), e in zip(jobs, entries)
+           if row["d"] == DISTANCE]
+    more = [e for (_l, row, _s), e in zip(jobs, entries)
+            if row["d"] != DISTANCE]
+    return two, more, len(table)
 
 
 # ------------------------------------------------------------- the file
@@ -202,10 +208,21 @@ def sha256(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def text(workers=None):
-    entries, rows, skipped = build(workers)
+def texts(workers=None):
+    """``{path: text}`` of both circuit files."""
+    two, more, rows = build(workers)
+    return {OUT: text(two, "distance-2 row", rows,
+                      {"distance 2, listed here": len(two),
+                       f"distance 3 or more, in {OUT_D3.name}": len(more)}),
+            OUT_D3: text(more, "row at distance 3 or more", rows,
+                         {f"distance 2, in {OUT.name}": len(two),
+                          "distance 3 or more, listed here": len(more)},
+                         floor=True)}
+
+
+def text(entries, which, rows, counts, floor=False):
     head = {
-        "about": ("Every distance-2 row of the level-3 table of the larger "
+        "about": (f"Every {which} of the level-3 table of the larger "
                   "unified borrowed-identity search, rebuilt and checked by "
                   "borrowed_identities/export_large_unified.py. Cite "
                   f"{CITATION}."),
@@ -213,8 +230,7 @@ def text(workers=None):
                    "files": {name: sha256(UPSTREAM / "outputs" / name)
                              for name in (TABLE, GATE_LISTS)}},
         "level": LEVEL,
-        "rows": {TABLE: rows, "distance 2, listed here": len(entries),
-                 "distance 3 or more, left out": skipped},
+        "rows": {TABLE: rows, **counts},
         "conventions": (
             "n counts the input T states and N (wires) the circuit wires, as "
             "in the upstream table; wires 0..k-1 are the outputs. A two-group "
@@ -226,7 +242,9 @@ def text(workers=None):
             "states and are the columns, and even-c gates are Clifford. d is "
             "measured here over the columns, with d_witness the column "
             "indices of an undetectable damaging fault of that weight, and "
-            "A_d is the number of such faults."),
+            "A_d is the number of such faults."
+            + (" d_table is the table's d where it gives only a floor."
+               if floor else "")),
     }
     return one_per_line(head, "circuits", entries)
 
@@ -237,13 +255,17 @@ def main(argv=None):
                         help="rebuild and compare with the file on disk")
     parser.add_argument("--workers", type=int, default=None)
     args = parser.parse_args(argv)
-    built = text(args.workers)
+    built = texts(args.workers)
     if args.check:
-        same = OUT.exists() and OUT.read_text(encoding="utf-8") == built
-        print("up to date" if same else f"differs: {OUT.relative_to(REPO)}")
-        return 0 if same else 1
-    OUT.write_text(built, encoding="utf-8")
-    print(f"wrote {OUT.relative_to(REPO)}")
+        differ = [path.relative_to(REPO) for path, body in built.items()
+                  if not path.exists()
+                  or path.read_text(encoding="utf-8") != body]
+        print(f"differs: {', '.join(map(str, differ))}" if differ
+              else "up to date")
+        return 1 if differ else 0
+    for path, body in built.items():
+        path.write_text(body, encoding="utf-8")
+        print(f"wrote {path.relative_to(REPO)}")
     return 0
 
 

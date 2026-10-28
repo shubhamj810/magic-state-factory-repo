@@ -359,7 +359,7 @@ The larger unified search of 27 and 28 October came in through its own
 exporter and migration:
 
 ```bash
-.venv/bin/python borrowed_identities/export_large_unified.py --check   # rebuild 1,254 circuits from the upstream code, ~9 min on 6 cores
+.venv/bin/python borrowed_identities/export_large_unified.py --check   # rebuild 1,291 circuits from the upstream code, ~9 min on 6 cores
 .venv/bin/python master_catalog/migrations/borrowed_identities_large_unified_2026_10_28.py --dry-run   # ~1 h 45 min
 ```
 
@@ -372,6 +372,18 @@ shipped catalogue it reports `1243 duplicate, 11 rejected` and changes
 nothing. Most of the time goes to the
 734 two-group circuits longer than 1,023 rotations. The longest, `n = 262142`
 on 18 wires, takes about a minute alone.
+
+The table's 37 rows at distance 3 or more, which the same export writes to
+`circuits/large_unified_l3_d3.json`, came in through a second migration:
+
+```bash
+.venv/bin/python master_catalog/migrations/borrowed_identities_large_unified_d3_2026_10_28.py --dry-run   # ~3 min
+```
+
+Run against the catalogue before it (commit `4b4c0a3`), it reports `13
+accepted, 24 duplicate` and `2089 -> 2102 classes, 605 of them in the large
+file`. Against the shipped catalogue it reports `37 duplicate` and changes
+nothing.
 
 ### The transversal-T codes of Jain and Albert
 

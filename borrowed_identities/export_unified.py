@@ -340,7 +340,7 @@ def entry(row, gates, table, line, seen):
                          f"{seen[ident]}")
     where = f"{table} line {line}"
     seen[ident] = where
-    columns, witness, a_d = checked(row, gates, where)
+    columns, _d, witness, a_d = checked(row, gates, where)
     return {
         "id": f"{TABLE_TAGS[table]}-{line:04d}",
         "table": table, "line": line,
@@ -366,7 +366,7 @@ def large_entries():
         where = f"large_sweep.csv line {line}"
         gates = sorted((tuple(sorted(S)), int(c) % (1 << LEVEL))
                        for S, c in large_sweep_circuit(row))
-        columns, witness, a_d = checked(row, gates, where)
+        columns, _d, witness, a_d = checked(row, gates, where)
         rule = {"family": "two-group", "k": int(row["k"]), "N": int(row["N"]),
                 "s_total": int(row["s_total"]), "s_O": int(row["s_O"])}
         if K.columns(rule) != columns:

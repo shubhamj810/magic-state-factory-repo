@@ -320,11 +320,12 @@ and `N <= 18` circuit wires, without Clifford padding or SAT. Commit
 `ae9fbf8` is copied, byte for byte, into
 [`upstream_large_unified/`](upstream_large_unified/) (15 files). Its level-3
 table, `outputs/large_unified_factories_l3.csv`, has 1,291 rows: 1,242
-two-group and 49 gluing. The 1,254 at distance 2 are rebuilt by
+two-group and 49 gluing. All of them are rebuilt by
 [`export_large_unified.py`](export_large_unified.py) with
 `merge_large_unified.regenerate_circuit`, the function the upstream README
-gives for regenerating a row, run unmodified. The other 37 rows are
-single-output two-group circuits at distance 3 or more and are not imported.
+gives for regenerating a row, run unmodified: the 1,254 at distance 2, and 37
+single-output two-group rows at distance 3 or more. The table gives 12 of
+those 37 a distance of 3 and the other 25 only the floor `>=3`.
 
 `outputs/large_unified_l3_circuits.txt.zip` stores the gates of every gluing
 row and of every two-group row on at most 14 wires, 544 of the distance-2
@@ -334,11 +335,15 @@ moved there so both exporters share them: wire count, number of
 odd-coefficient rotations, the borrowed-identity condition, the gate against
 the row's `raw` column, and the distance measured by the catalogue's fault
 search. On 689 rows `raw` gives only the number of terms (`10\ \text{terms}`),
-and there the number of monomials is compared. All 1,254 pass, and `A_2` is counted for each. A two-group circuit is
-written as its construction with the SHA-256 of its columns, after checking
-that the construction builds exactly the circuit the upstream code builds. A
-gluing circuit is written as its gates. The file is
-[`circuits/large_unified_l3.json`](circuits/large_unified_l3.json).
+and there the number of monomials is compared. Where the table gives a
+floor, the measured distance must be exact and at least the floor. All 1,291
+pass, and `A_d` is counted for each. Every one of the 37 has exactly `d = 3`.
+A two-group circuit is written as its construction with the SHA-256 of its
+columns, after checking that the construction builds exactly the circuit the
+upstream code builds. A gluing circuit is written as its gates. The distance-2
+rows are in [`circuits/large_unified_l3.json`](circuits/large_unified_l3.json)
+and the others in
+[`circuits/large_unified_l3_d3.json`](circuits/large_unified_l3_d3.json).
 
 **In the master catalogue.**
 [`../master_catalog/migrations/borrowed_identities_large_unified_2026_10_28.py`](../master_catalog/migrations/borrowed_identities_large_unified_2026_10_28.py)
@@ -355,6 +360,15 @@ for the October 26 import, would have taken `master_catalog.json` past 50 MB,
 so this import stores columns only up to 1,023. New classes are credited to
 the paper. This table has no `reference` column, and every held class keeps
 exactly the credit it had.
+
+[`../master_catalog/migrations/borrowed_identities_large_unified_d3_2026_10_28.py`](../master_catalog/migrations/borrowed_identities_large_unified_d3_2026_10_28.py)
+merged the 37 rows at distance 3 in the same way. For one output a class is
+fixed by `n` and `d`, so a row is new exactly when the catalogue has no
+single-output class of its `n` at distance 3. 13 are new, at `n` = 65, 119,
+231, 575, 727, 5019, 11455, 24327, 32895, 48655, 65535, 65791 and 131071; the
+last eight are in the large file. The other 24 rows land on held classes: 21
+first came from the earlier imports of the upstream tables, and 3 from the
+exhaustive `n <= 38` classification.
 
 ## Licence
 

@@ -68,7 +68,8 @@ BORROWED_CIRCUITS = REPO / "borrowed_identities" / "circuits" / "circuits_l3.jso
 #: October 2026 unified search and its larger run
 BORROWED_FILES = (BORROWED_CIRCUITS,
                   REPO / "borrowed_identities" / "circuits" / "unified_l3.json",
-                  REPO / "borrowed_identities" / "circuits" / "large_unified_l3.json")
+                  REPO / "borrowed_identities" / "circuits" / "large_unified_l3.json",
+                  REPO / "borrowed_identities" / "circuits" / "large_unified_l3_d3.json")
 BORROWED = ("borrowed-identity search: two-group",
             "borrowed-identity search: symmetry-free",
             "borrowed-identity search: SAT recovery",

@@ -45,8 +45,16 @@ def raw_gate(raw):
 
 
 def checked(row, gates, where):
-    """Stop unless ``gates`` is the row's factory; return its measurements."""
-    k, wires, n, d = (int(row[name]) for name in ("k", "N", "n", "d"))
+    """Stop unless ``gates`` is the row's factory; return its measurements,
+    ``(columns, d, witness, A_d)``.
+
+    The row's ``d`` is a distance, or a floor such as ``>=3`` where the search
+    did not settle it; the distance measured here must then be exact and at
+    least the floor.
+    """
+    k, wires, n = (int(row[name]) for name in ("k", "N", "n"))
+    floor = row["d"].startswith(">=")
+    d = int(row["d"].removeprefix(">="))
     problems = []
     if len({S for S, _c in gates}) != len(gates):
         problems.append("repeated support")
@@ -72,10 +80,12 @@ def checked(row, gates, where):
         problems.append(f"the rotations deposit {sorted(gate)}, the row says "
                         f"{row['raw']}")
     report = FC.distance_report(columns, k, wires, budget=FC.Budget())
-    if report["d_exact"] != d:
-        problems.append(f"measured distance {report['d_exact']} "
-                        f"(at least {report['d_at_least']}), the row says {d}")
+    measured = report["d_exact"]
+    if measured is None or (measured < d if floor else measured != d):
+        problems.append(f"measured distance {measured} "
+                        f"(at least {report['d_at_least']}), the row says "
+                        f"{row['d']}")
     if problems:
         raise SystemExit(f"{where}: " + "; ".join(problems))
-    a_d = EC.error_coefficient(columns, k, wires, d)["count"]
-    return columns, report["witness"], a_d
+    a_d = EC.error_coefficient(columns, k, wires, measured)["count"]
+    return columns, measured, report["witness"], a_d

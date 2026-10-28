@@ -1,18 +1,20 @@
 """The larger unified search: the copy, the circuits, and the catalogue.
 
 * the upstream files are the ones pinned here, byte for byte;
-* every distance-2 row of ``large_unified_factories_l3.csv`` has an entry
-  with the row's ``k``, ``n``, ``N``, ``d``, stage and parameters, and the
-  other rows are the 37 at distance 3 or more;
+* every row of ``large_unified_factories_l3.csv`` has an entry with the row's
+  ``k``, ``n``, ``N``, stage and parameters: the 1,254 at distance 2 in
+  ``large_unified_l3.json``, the 37 at distance 3 or more in
+  ``large_unified_l3_d3.json``, each at the row's distance or, where the table
+  gives only a floor, at least it;
 * a two-group entry's construction builds columns with the pinned digest, and
   on every row the upstream gate-list file stores, exactly the upstream's
   gates; a gluing entry's gates are a borrowed identity with ``n`` odd ones;
 * wherever the circuit is short enough to check here, with loops that share
-  nothing with the exporter: every distance is 2, by a harmful pair and no
-  harmful single fault; the gate is the row's where the table spells it out,
+  nothing with the exporter: every distance is witnessed by a harmful fault of
+  its weight, no single fault is harmful, and at distance 3 no pair is; the gate is the row's where the table spells it out,
   and has the row's number of terms where it does not; and ``A_2`` is the
   literal count of harmful pairs;
-* in the master catalogue, every class the merge added carries the entry's
+* in the master catalogue, every class the merges added carries the entry's
   circuit (as columns up to 1,023 inputs, as its construction in the large
   file above that) and is credited to the paper.
 
@@ -35,7 +37,9 @@ FOLDER = HERE.parent
 REPO = FOLDER.parent
 UPSTREAM = FOLDER / "upstream_large_unified"
 CIRCUITS = FOLDER / "circuits" / "large_unified_l3.json"
+CIRCUITS_D3 = FOLDER / "circuits" / "large_unified_l3_d3.json"
 FILE = "borrowed_identities/circuits/large_unified_l3.json"
+FILE_D3 = "borrowed_identities/circuits/large_unified_l3_d3.json"
 sys.path.insert(0, str(REPO / "master_catalog"))
 
 import constructions as K                                         # noqa: E402
@@ -67,13 +71,23 @@ STORE_MAX_N = 1023
 #: 470 as constructions; 559 already held; 11 refused as pseudo-outputs.
 ADDED_MAIN = 214
 ADDED_LARGE = 470
+#: The merge of the 37 entries at distance 3: 13 new classes, 5 stored as
+#: columns and 8 as constructions; 24 already held.
+ADDED_D3_MAIN = 5
+ADDED_D3_LARGE = 8
 #: circuits up to this many columns are checked here column by column
 CHECK_N = 4095
+#: and up to this many, pair by pair
+PAIR_N = 300
 LITERAL_CAP = 200_000
 
 
-def load():
-    return json.loads(CIRCUITS.read_text())
+def load(path=CIRCUITS):
+    return json.loads(path.read_text())
+
+
+def every_circuit():
+    return load()["circuits"] + load(CIRCUITS_D3)["circuits"]
 
 
 def table():
@@ -150,37 +164,48 @@ class TestUpstreamCopy(unittest.TestCase):
                 self.assertEqual(hashlib.sha256(
                     (UPSTREAM / name).read_bytes()).hexdigest(), digest)
 
-    def test_the_circuit_file_names_the_files_it_was_built_from(self):
-        source = load()["source"]
-        self.assertEqual(source["commit"], COMMIT)
-        self.assertEqual(set(source["files"]),
-                         {TABLE, "large_unified_l3_circuits.txt.zip"})
-        for name, digest in source["files"].items():
-            self.assertEqual(digest, UPSTREAM_SHA256[f"outputs/{name}"])
+    def test_the_circuit_files_name_the_files_they_were_built_from(self):
+        for path in (CIRCUITS, CIRCUITS_D3):
+            source = load(path)["source"]
+            with self.subTest(file=path.name):
+                self.assertEqual(source["commit"], COMMIT)
+                self.assertEqual(set(source["files"]),
+                                 {TABLE, "large_unified_l3_circuits.txt.zip"})
+                for name, digest in source["files"].items():
+                    self.assertEqual(digest,
+                                     UPSTREAM_SHA256[f"outputs/{name}"])
 
 
 class TestCircuits(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.circuits = load()["circuits"]
+        cls.circuits = every_circuit()
         cls.rows = dict(table())
 
-    def test_every_distance_two_row_has_an_entry(self):
+    def test_every_row_has_an_entry_in_the_file_for_its_distance(self):
         self.assertEqual(len(self.rows), 1291)
         two = {line for line, row in self.rows.items() if row["d"] == "2"}
         self.assertEqual(len(two), 1254)
-        self.assertEqual([c["line"] for c in self.circuits], sorted(two))
-        self.assertTrue(all(row["k"] == "1" and row["d"] in ("3", ">=3")
-                            for line, row in self.rows.items()
-                            if line not in two))
+        self.assertEqual([c["line"] for c in load()["circuits"]], sorted(two))
+        more = load(CIRCUITS_D3)["circuits"]
+        self.assertEqual([c["line"] for c in more],
+                         sorted(set(self.rows) - two))
+        self.assertTrue(all(c["k"] == 1 and c["d"] == 3 for c in more))
+        self.assertEqual(sum("d_table" in c for c in more), 25)
 
     def test_each_entry_has_its_rows_parameters(self):
         for c in self.circuits:
             row = self.rows[c["line"]]
             with self.subTest(id=c["id"]):
                 self.assertEqual(c["id"], f"lu-{c['line']:04d}")
-                self.assertEqual((c["k"], c["n"], c["wires"], c["d"]),
-                                 tuple(int(row[f]) for f in ("k", "n", "N", "d")))
+                self.assertEqual((c["k"], c["n"], c["wires"]),
+                                 tuple(int(row[f]) for f in ("k", "n", "N")))
+                if row["d"].startswith(">="):
+                    self.assertEqual(c["d_table"], row["d"])
+                    self.assertGreaterEqual(c["d"], int(row["d"][2:]))
+                else:
+                    self.assertNotIn("d_table", c)
+                    self.assertEqual(c["d"], int(row["d"]))
                 self.assertEqual((c["stage"], c["params"], c["raw"]),
                                  (row["search_stage"], row["params"], row["raw"]))
                 if c["stage"] == "two-group":
@@ -264,7 +289,8 @@ class TestCircuits(unittest.TestCase):
             counted += 1
         self.assertGreater(counted, 300)
 
-    def test_every_distance_is_two_and_witnessed(self):
+    def test_every_distance_is_witnessed_and_no_lighter_fault_is_harmful(self):
+        paired = 0
         for c in self.circuits:
             if c["n"] > CHECK_N:
                 continue
@@ -275,6 +301,12 @@ class TestCircuits(unittest.TestCase):
                 # no single fault is harmful, so the distance is at least 2
                 self.assertFalse(any(harmful(columns, c["k"], [i])
                                      for i in range(len(columns))))
+                if c["d"] == 3 and c["n"] <= PAIR_N:
+                    self.assertFalse(any(
+                        harmful(columns, c["k"], pair)
+                        for pair in itertools.combinations(range(c["n"]), 2)))
+                    paired += 1
+        self.assertEqual(paired, 12)
 
     def test_the_error_coefficient_is_the_literal_count(self):
         checked = 0
@@ -298,14 +330,14 @@ class TestMasterCatalogue(unittest.TestCase):
                               .read_text())["factories"]
         cls.large = json.loads((folder / "master_catalog_large.json")
                                .read_text())["factories"]
-        cls.circuits = {c["id"]: c for c in load()["circuits"]}
+        cls.circuits = {c["id"]: c for c in every_circuit()}
 
-    def added(self, rows):
-        return [row for row in rows if row["sources"][0]["file"] == FILE]
+    def added(self, rows, file=FILE):
+        return [row for row in rows if row["sources"][0]["file"] == file]
 
     def test_each_added_class_carries_its_circuit_and_the_paper(self):
         for rows, stored in ((self.main, "columns"), (self.large, "construction")):
-            for row in self.added(rows):
+            for row in self.added(rows) + self.added(rows, FILE_D3):
                 circuit = self.circuits[row["sources"][0]["label"]]
                 with self.subTest(label=row["catalog_label"]):
                     self.assertEqual(row["citations"], [BORROWED])
@@ -330,6 +362,8 @@ class TestMasterCatalogue(unittest.TestCase):
     def test_the_merge_added_new_classes_to_both_files(self):
         self.assertEqual(len(self.added(self.main)), ADDED_MAIN)
         self.assertEqual(len(self.added(self.large)), ADDED_LARGE)
+        self.assertEqual(len(self.added(self.main, FILE_D3)), ADDED_D3_MAIN)
+        self.assertEqual(len(self.added(self.large, FILE_D3)), ADDED_D3_LARGE)
 
 
 if __name__ == "__main__":

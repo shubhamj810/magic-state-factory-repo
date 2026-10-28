@@ -250,7 +250,8 @@ class TestMasterCatalogue(unittest.TestCase):
         unified = {row["catalog_label"] for row in self.rows
                    if row["sources"][0]["file"]
                    in ("borrowed_identities/circuits/unified_l3.json",
-                       "borrowed_identities/circuits/large_unified_l3.json")}
+                       "borrowed_identities/circuits/large_unified_l3.json",
+                       "borrowed_identities/circuits/large_unified_l3_d3.json")}
         cites = {row["catalog_label"] for row in self.rows
                  if BORROWED in row["citations"]} - unified
         self.assertEqual(cites, found - set(EARLIER))

@@ -12,7 +12,7 @@
  "rows": {
   "large_unified_factories_l3.csv": 1291,
   "distance 2, listed here": 1254,
-  "distance 3 or more, left out": 37
+  "distance 3 or more, in large_unified_l3_d3.json": 37
  },
  "conventions": "n counts the input T states and N (wires) the circuit wires, as in the upstream table; wires 0..k-1 are the outputs. A two-group row gives its circuit as construction, which builds its columns (master_catalog/constructions.py), with columns_sha256 the SHA-256 of them as compact JSON; every rotation of it is one T. A gluing row gives gates, each [support, c] the parity rotation by c*pi/8 on its support, c modulo 8; the odd-c gates consume T states and are the columns, and even-c gates are Clifford. d is measured here over the columns, with d_witness the column indices of an undetectable damaging fault of that weight, and A_d is the number of such faults.",
  "circuits": [
