@@ -30,7 +30,6 @@ SUITES = (
     ("master catalogue", ROOT / "master_catalog"),
     ("borrowed identities", ROOT / "borrowed_identities"),
     ("transversal-T codes", ROOT / "transversal_t_codes"),
-    ("literature: 72 T -> CCZ at d = 6", ROOT / "literature_imports" / "ccz72_d6"),
     ("community contributions", ROOT / "community_contributions"),
     ("website build", ROOT / "website"),
     ("acceptance boundaries", ROOT),

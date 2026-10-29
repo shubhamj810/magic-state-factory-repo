@@ -43,7 +43,7 @@ witness are different kinds of statement.
 | `Jain-Albert doubling: weak triply even family` (13 rows) | a code of the weak triply even family of Jain and Albert (arXiv:2408.12752, Table II; transversal_t_codes/): quadratic-residue CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction, where T on some qubits and T-dagger on the rest is a logical T; a verified witness, not a maximum |
 | `Jain-Albert doubling: triorthogonal family` (12 rows) | a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum |
 | `borrowed-identity search: SAT recovery` (2 rows) | found by the SAT stage of the unified borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/), asked for a factory below the circuit size the other stages reach; a verified witness, not a maximum |
-| `Gong et al.: F8 codes concatenated with 8T->CCZ` (1 rows) | a concatenated protocol of Gong, Pattison, Rall and Wills (arXiv:2608.09727; literature_imports/ccz72_d6/): an F8 code fed by copies of the 8T->CCZ protocol, rebuilt here from the paper's construction and written as one circuit; a verified witness, not a maximum |
+| `Gong et al.: F8 codes concatenated with 8T->CCZ` (1 rows) | a concatenated protocol of Gong, Pattison, Rall and Wills (arXiv:2608.09727): an F8 code fed by copies of the 8T->CCZ protocol, rebuilt from the paper's construction and written as one circuit on 18 wires; a verified witness, not a maximum |
 
 A **class** is `(n, k, d, gate)` with the gate taken up to an invertible
 change of the output basis (a CNOT frame, `GL(k,2)`) and diagonal Clifford
@@ -12903,7 +12903,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (1,2)`
 - or no correction at all, with rotations run as `T³` on columns 16, 17, 22, 23, 24, 27, 28, 31, 32, 34, 36, 38 and 16 more, `T` on the rest
 - discovery: pre-existing
-- regime: Gong et al.: F8 codes concatenated with 8T->CCZ — a concatenated protocol of Gong, Pattison, Rall and Wills (arXiv:2608.09727; literature_imports/ccz72_d6/): an F8 code fed by copies of the 8T->CCZ protocol, rebuilt here from the paper's construction and written as one circuit; a verified witness, not a maximum
+- regime: Gong et al.: F8 codes concatenated with 8T->CCZ — a concatenated protocol of Gong, Pattison, Rall and Wills (arXiv:2608.09727): an F8 code fed by copies of the 8T->CCZ protocol, rebuilt from the paper's construction and written as one circuit on 18 wires; a verified witness, not a maximum
 - citation: [Gong et al. (2026)](https://arxiv.org/abs/2608.09727)
 - source: `Gong et al.: F8 codes concatenated with 8T->CCZ` · GPRW-72T-CCZ (`(8T -> CCZ) * (9CCZ -> CCZ) of Table 7: the F8 code of Construction 4.5, Eq. (49), binarised in the self-dual normal basis of Eq. (46), each of its nine input CCZ states made by its own 8T -> CCZ, written as one circuit with the nine inner checks as wires 9..17`)
 

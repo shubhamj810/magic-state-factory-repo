@@ -23,7 +23,7 @@
   "Jain-Albert doubling: weak triply even family": "a code of the weak triply even family of Jain and Albert (arXiv:2408.12752, Table II; transversal_t_codes/): quadratic-residue CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction, where T on some qubits and T-dagger on the rest is a logical T; a verified witness, not a maximum",
   "Jain-Albert doubling: triorthogonal family": "a code of the triorthogonal family of Jain and Albert (arXiv:2408.12752, Table I; transversal_t_codes/), self-dual CSS codes doubled onto [[95,1,7]], rebuilt here from the paper's construction; a verified witness, not a maximum",
   "borrowed-identity search: SAT recovery": "found by the SAT stage of the unified borrowed-identity search of Singh, Gidney and Jones (arXiv:2606.28518; borrowed_identities/), asked for a factory below the circuit size the other stages reach; a verified witness, not a maximum",
-  "Gong et al.: F8 codes concatenated with 8T->CCZ": "a concatenated protocol of Gong, Pattison, Rall and Wills (arXiv:2608.09727; literature_imports/ccz72_d6/): an F8 code fed by copies of the 8T->CCZ protocol, rebuilt here from the paper's construction and written as one circuit; a verified witness, not a maximum"
+  "Gong et al.: F8 codes concatenated with 8T->CCZ": "a concatenated protocol of Gong, Pattison, Rall and Wills (arXiv:2608.09727): an F8 code fed by copies of the 8T->CCZ protocol, rebuilt from the paper's construction and written as one circuit on 18 wires; a verified witness, not a maximum"
  },
  "discovery": {
   "pre-existing": "not an AI discovery of this project: a classification stage this repository ran, the symmetry-SAT search catalogue, the borrowed-identity searches, the codes of Jain and Albert rebuilt in transversal_t_codes/, the exhaustive length-54 classification alone, or a community contribution has this class",
@@ -87312,7 +87312,7 @@
    ],
    "discovery": "pre-existing",
    "relabelled_into_canonical_frame": false,
-   "strongest_claim": "a concatenated protocol of Gong, Pattison, Rall and Wills (arXiv:2608.09727; literature_imports/ccz72_d6/): an F8 code fed by copies of the 8T->CCZ protocol, rebuilt here from the paper's construction and written as one circuit; a verified witness, not a maximum",
+   "strongest_claim": "a concatenated protocol of Gong, Pattison, Rall and Wills (arXiv:2608.09727): an F8 code fed by copies of the 8T->CCZ protocol, rebuilt from the paper's construction and written as one circuit on 18 wires; a verified witness, not a maximum",
    "columns": [
     [9],
     [5,9],

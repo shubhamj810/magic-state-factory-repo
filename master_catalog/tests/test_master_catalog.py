@@ -59,8 +59,7 @@ SAT = "symmetry-SAT search"
 #: ``file`` a source carries is inert provenance -- history, not a path -- and
 #: nothing here opens one.
 LOCAL_SOURCE_DIRS = ("classification/", "symmetry_sat_search/",
-                     "borrowed_identities/", "transversal_t_codes/",
-                     "literature_imports/")
+                     "borrowed_identities/", "transversal_t_codes/")
 #: The Borrowed Identities circuits (Singh, Gidney and Jones), rebuilt from the
 #: upstream catalogue by `borrowed_identities/export_circuits.py`.
 BORROWED_CIRCUITS = REPO / "borrowed_identities" / "circuits" / "circuits_l3.json"
@@ -78,8 +77,8 @@ BORROWED = ("borrowed-identity search: two-group",
 #: `transversal_t_codes/build_codes.py`: literature, not an AI search.
 DOUBLED = ("Jain-Albert doubling: weak triply even family",
            "Jain-Albert doubling: triorthogonal family")
-#: Published protocols rebuilt from their paper's construction in
-#: `literature_imports/`: literature, not an AI search.
+#: Published protocols rebuilt from their paper's construction:
+#: literature, not an AI search.
 LITERATURE = ("Gong et al.: F8 codes concatenated with 8T->CCZ",)
 #: The classification stages this repository ran itself -- every catalogue under
 #: ``classification/`` but the copied length-54 frontier: a source from one of
