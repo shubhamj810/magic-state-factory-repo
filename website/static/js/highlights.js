@@ -1,5 +1,5 @@
-/* Landmarks for the landing page: the gamma_rho frontier, per-distance record
- * holders, and a gamma-against-n plot.
+/* Landmarks for the landing page: the headline figures and a gamma-against-n
+ * plot of the frontier at each distance.
  *
  * Everything here is computed in the browser from `data/index.json` -- the same
  * file the tables read.  Nothing is precomputed into the index and nothing is
@@ -93,28 +93,6 @@
       .map(function (d) { return { d: d, rows: groups[d] }; });
     }
 
-  /* ------------------------------------------------------- the record cards */
-
-  /* One card per distance: the least-gamma circuit at that d, which is the
-   * question the catalogue exists to answer. */
-  function recordCards(parameters, factories) {
-    return byDistance(parameters).map(function (group) {
-      var usable = group.rows.filter(function (r) { return r.comparable; });
-      var best = bestBy(usable, "gamma_rho");
-      if (!best) return "";
-      /* the factory in that parameter set that holds the record */
-      var holder = factories.filter(function (f) {
-        return f.n === best.n && f.k === best.k && f.d === best.d_verified &&
-               (M === METRICS.gamma ? f.pure_t && Math.abs(f.gamma_claim - best.gamma_rho) < 1e-12
-                                    : f.gamma_rho_claim !== null && Math.abs(f.gamma_rho_claim - best.gamma_rho) < 1e-12);
-      })[0];
-      var link = holder ? C.factoryHref(holder.id) : href(best);
-      return '<tr class="clickable" data-href="' + link + '">' +
-        '<td><a href="' + link + '">' + C.paramsTex(best.n, best.k, best.d) + "</a></td>" +
-        '<td class="num">' + C.num(best.gamma_rho, 4) + "</td>" + countCell(best) + "</tr>";
-    }).join("");
-  }
-
   /* k is already in the parameters; V_ex is not, so only the gamma_rho view
    * gives it a column. */
   function countCell(row) {
@@ -159,11 +137,16 @@
    *
    * A distance with only a handful of parameter sets has no frontier worth
    * drawing -- one or two points -- so it gets no panel, and the axes are
-   * fitted to the panels that are drawn.  The record table above still gives
-   * the best at every distance. */
+   * fitted to the panels that are drawn. */
   var panels = [];                       /* [{d, pts, svg}] for the hover layer */
-  var W = 380, H = 236, L = 44, R = 12, T = 30, B = 34;
+  var W = 380, H = 248, L = 54, R = 12, T = 30, B = 46;
   var MIN_PANEL = 10;                    /* fewest parameter sets a panel needs */
+
+  /* 1000 and below in full, larger powers of ten as 10^4, 10^5, ... */
+  function tickLabel(n) {
+    var e = Math.round(Math.log10(n));
+    return n <= 1000 ? String(n) : "10" + String(e).split("").map(function (c) { return "⁰¹²³⁴⁵⁶⁷⁸⁹"[+c]; }).join("");
+  }
 
   function plot(parameters) {
     var pts = parameters.filter(function (r) {
@@ -213,14 +196,21 @@
         parts.push('<text class="ax" x="' + (L - 6) + '" y="' + (Y(gy) + 3.5).toFixed(1) +
                    '" text-anchor="end">' + gy.toFixed(1) + "</text>");
       }
-      [20, 50, 100, 200, 500, 1000].forEach(function (n) {
+      /* over more than three decades 500 and 1000 collide, so tick the powers of ten */
+      (x1 - x0 > 3 ? [10, 100, 1e3, 1e4, 1e5, 1e6] : [20, 50, 100, 200, 500, 1000]).forEach(function (n) {
         if (Math.log10(n) < x0 || Math.log10(n) > x1) return;
         parts.push('<line class="tick" x1="' + X(n).toFixed(1) + '" y1="' + (T + ih) + '" x2="' +
                    X(n).toFixed(1) + '" y2="' + (T + ih + 4) + '"/>');
         parts.push('<text class="ax" x="' + X(n).toFixed(1) + '" y="' + (T + ih + 15) +
-                   '" text-anchor="middle">' + n + "</text>");
+                   '" text-anchor="middle">' + tickLabel(n) + "</text>");
       });
       parts.push('<line class="axis" x1="' + L + '" y1="' + (T + ih) + '" x2="' + (W - R) + '" y2="' + (T + ih) + '"/>');
+      /* axis titles: inputs n along the bottom, the ranked exponent up the side */
+      parts.push('<text class="atitle" x="' + (L + iw / 2).toFixed(1) + '" y="' + (T + ih + 33) +
+                 '" text-anchor="middle">inputs <tspan class="mi">n</tspan> (log scale)</text>');
+      parts.push('<text class="atitle" text-anchor="middle" transform="translate(16,' + (T + ih / 2).toFixed(1) +
+                 ') rotate(-90)"><tspan class="mi">\u03b3</tspan>' +
+                 (M === METRICS.gamma ? "" : '<tspan class="mi asub" dy="3">\u03c1</tspan>') + "</text>");
       if (y0 <= 1 && 1 <= y1) {
         parts.push('<line class="unity" x1="' + L + '" y1="' + Y(1).toFixed(1) + '" x2="' + (W - R) +
                    '" y2="' + Y(1).toFixed(1) + '"/>');
@@ -417,17 +407,12 @@
     var p = claims(index.parameters || [], metric);
     var node = document.getElementById("headline-stats");
     if (node) node.innerHTML = headline(p);
-    var records = document.querySelector("#record-cards tbody");
-    if (records) records.innerHTML = recordCards(p, index.factories || []);
-    var recordsHead = document.querySelector("#record-cards thead");
-    if (recordsHead) recordsHead.innerHTML = tableHead();
     var intro = document.getElementById("best-intro");
     if (intro) {
       intro.innerHTML = metric === "gamma"
-        ? "Lowest " + C.tex("\\gamma=\\log(n/k)/\\log d") + " among pure " + C.tex("T^{\\otimes k}") + " factories, " +
-          "with one row per distance in the table. " + '<a href="about.html#numbers">What this measures</a>'
+        ? "Lowest " + C.tex("\\gamma=\\log(n/k)/\\log d") + " among pure " + C.tex("T^{\\otimes k}") + " factories. " + '<a href="about.html#numbers">What this measures</a>'
         : "Lowest " + C.tex("\\gamma_\\rho=\\log(n/V_{\\mathrm{ex}})/\\log d") + " across every gate, " +
-          "counting the T states a run yields, with one row per distance in the table. " + '<a href="about.html#numbers">What this measures</a>';
+          "counting the T states a run yields. " + '<a href="about.html#numbers">What this measures</a>';
     }
     var plotNode = document.getElementById("frontier-plot");
     if (plotNode) plotNode.innerHTML = plot(p);
@@ -438,8 +423,6 @@
   }
 
   function mount(index) {
-    var records = document.querySelector("#record-cards tbody");
-    if (records) C.clickableRows(records);
     var current = "gamma";
     draw(index, current);
     document.querySelectorAll("#metric-switch button[data-metric]").forEach(function (b) {

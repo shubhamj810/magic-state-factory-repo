@@ -402,6 +402,9 @@ figure.plot figcaption { padding: 10px 0 0; font-size: 13px; color: var(--text-d
 .panels .ptitle { fill: var(--text); font: 15px KaTeX_Main, var(--serif); }
 .panels .mi { font-family: KaTeX_Math, var(--serif); font-style: italic; }
 .panels .psub { fill: var(--text-dim); font: 11px var(--sans); }
+.panels .atitle { fill: var(--text-dim); font: 12px var(--sans); }
+.panels .atitle .mi { font-size: 14px; }
+.panels .atitle .asub { font-size: 10px; }
 .panels .unity { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 4 3; }
 .panels .stair { fill: none; stroke: var(--brand); stroke-width: 1.75; }
 .panels .pt { fill: var(--muted); opacity: 0.55; }
@@ -662,9 +665,6 @@ td.lab { font-family: var(--mono); font-size: 13px; white-space: nowrap; }
 td.lab a { color: var(--brand); }
 
 /* ------------------------------------------------------------ landing */
-.records-wrap { margin-top: 14px; }
-.records-table td { vertical-align: middle; }
-.records-table td .muted .katex { font-size: 0.95em; }
 
 /* -------------------------------------------------------------- guide */
 main.guide { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 48px; align-items: start; }
@@ -737,8 +737,6 @@ tr.preview .swatch { display: inline-block; width: 10px; height: 10px; border-ra
 [hidden] { display: none !important; }
 .best-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
 .best-head h2 { margin-bottom: 6px; }
-.records-wrap { width: fit-content; max-width: 100%; }
-.records-table { width: auto; min-width: min(100%, 420px); }
 .plot-table { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 32px; align-items: start; }
 .plot-table table { width: 100%; }
 @media (max-width: 900px) { .plot-table { grid-template-columns: 1fr; } }

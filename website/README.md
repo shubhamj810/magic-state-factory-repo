@@ -64,7 +64,7 @@ results each filter value would give. A column chooser hides or shows columns
 (T-count is off by default), and every row can preview its matrix inline. `/`
 focuses the search box on any page. The landing page ranks by γ among pure
 T⊗k factories by default, and by γ_ρ across every gate at the flip of a
-switch; the best-factories figures, the records table and the frontier all
+switch; the best-factories figures and the frontier both
 follow it. The frontier plot switches to a table of its frontier points and
 exports to SVG and PNG.
 [`CITATION.cff`](../CITATION.cff) at the repository root gives GitHub's

@@ -221,9 +221,6 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
             if button:
                 page.click(button)
             ranked = [p for p in parameters if _ranked_value(p, metric) is not None]
-            claimed = {p["d_claim"] for p in ranked}
-            failures.check(len(page.query_selector_all("#record-cards tbody tr")) == len(claimed),
-                           f"index.html [{metric}]: expected one record row per claimed distance {sorted(claimed)}")
             best_claim = min(_ranked_value(p, metric) for p in ranked)
             failures.check(f"{best_claim:.4f}" in page.inner_text("#headline-stats"),
                            f"index.html [{metric}]: headline does not show the best claim {best_claim:.4f}")
