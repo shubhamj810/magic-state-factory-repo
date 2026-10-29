@@ -575,6 +575,10 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
                        "references.html: not every paper is listed")
         failures.check(page.query_selector("#contributor-list") is not None,
                        "references.html: no contributors list")
+        failures.check(len(page.query_selector_all("#team-list li.person")) == 3 and all(
+                           img.evaluate("i => i.complete && i.naturalWidth > 0")
+                           for img in page.query_selector_all("#team-list img")),
+                       "references.html: the team list or a photo did not load")
 
         # ------------------------------------------- the contribute tutorial
         visit("contribute.html", "contribute.html", "ol.steps > li")

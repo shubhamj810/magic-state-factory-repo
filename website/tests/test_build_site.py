@@ -314,6 +314,9 @@ class TheBuiltSite(unittest.TestCase):
         for key in self.index["references"]:
             self.assertIn(f'href="search.html?cite={key}"', text)
         self.assertIn('id="contributor-list"', text)
+        self.assertEqual(text.count('<li class="person">'), 3)
+        for photo in re.findall(r'<img src="(img/people/[^"]+)"', text):
+            self.assertTrue((self.out / photo).exists(), photo)
         self.assertIn('aria-current="page">References<', text)
         self.assertNotIn("<!--#", text)
 

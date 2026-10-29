@@ -258,6 +258,39 @@ def _published(ref: dict) -> str:
     return ref.get("date") or (year.group(1) if year else "9999")
 
 
+#: The people behind the catalogue, shown on the references page.  ``photo`` is
+#: a file in ``static/img/people/``; without one the page shows initials.
+PEOPLE = (
+    dict(name="Shubham Jain", role="Owner",
+         affiliation="QuICS, University of Maryland, College Park",
+         photo="shubham-jain.jpg",
+         links=(("Website", "https://shubhamj810.github.io/"),
+                ("Google Scholar", "https://scholar.google.com/citations?user=wahii2QAAAAJ&hl=en"),
+                ("GitHub", "https://github.com/shubhamj810"))),
+    dict(name="Shraddha Singh", role="Contributor", affiliation="IBM",
+         photo="shraddha-singh.jpg",
+         links=(("Google Scholar", "https://scholar.google.com/citations?user=UZJJLA4AAAAJ&hl=en"),
+                ("GitHub", "https://github.com/shraggy"))),
+    dict(name="Adam Wills", role="Contributor",
+         affiliation="Center for Theoretical Physics, MIT",
+         links=(("Google Scholar", "https://scholar.google.com/citations?user=hyatxQ4AAAAJ&hl=en"),
+                ("GitHub", "https://github.com/AWillsQuantum"))),
+)
+
+
+def person_html(p: dict) -> str:
+    """One entry of the team list: photo or initials, name, role and links."""
+    initials = "".join(word[0] for word in p["name"].split())
+    face = (f'<img src="img/people/{esc(p["photo"])}" alt="" width="72" height="72">'
+            if p.get("photo") else f'<span class="initials" aria-hidden="true">{esc(initials)}</span>')
+    links = " <span class=\"muted\">·</span> ".join(
+        f'<a href="{esc(url)}">{esc(label)}</a>' for label, url in p["links"])
+    return (f'<li class="person">{face}<div><strong>{esc(p["name"])}</strong>'
+            f'<span class="role">{esc(p["role"])}</span>'
+            f'<span class="muted small">{esc(p["affiliation"])}</span>'
+            f'<span class="small">{links}</span></div></li>')
+
+
 def references_page(index: dict, contributors: list[dict]):
     """Every paper the catalogue draws on, and everyone who has contributed."""
     counts: dict[str, int] = {}
@@ -298,8 +331,10 @@ def references_page(index: dict, contributors: list[dict]):
     <ol class="refs ref-list" id="paper-list">{papers}</ol>
 
     <h2 id="contributors">Contributors</h2>
+    <ul class="people" id="team-list">{"".join(person_html(p) for p in PEOPLE)}</ul>
+    <h3 id="community">Community submissions</h3>
     {f'<ul class="plain contributor-list" id="contributor-list">{people}</ul>' if people else
-     '<p class="muted" id="contributor-list">No community contributions yet.</p>'}
+     '<p class="muted" id="contributor-list">No community submissions yet.</p>'}
     <p>Anyone who adds a factory is listed here. <a href="contribute.html">Contribute a factory</a>.</p>
   </div>
 </main>"""
