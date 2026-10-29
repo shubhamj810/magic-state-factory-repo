@@ -279,16 +279,19 @@ PEOPLE = (
 
 
 def person_html(p: dict) -> str:
-    """One entry of the team list: photo or initials, name, role and links."""
-    initials = "".join(word[0] for word in p["name"].split())
+    """One entry of the contributor list: photo or initials, name, role,
+    affiliation, a note on what they added and links, each when given."""
+    initials = "".join(word[0] for word in p["name"].split())[:3]
     face = (f'<img src="img/people/{esc(p["photo"])}" alt="" width="72" height="72">'
             if p.get("photo") else f'<span class="initials" aria-hidden="true">{esc(initials)}</span>')
     links = " <span class=\"muted\">·</span> ".join(
-        f'<a href="{esc(url)}">{esc(label)}</a>' for label, url in p["links"])
+        f'<a href="{esc(url)}">{esc(label)}</a>' for label, url in p.get("links", ()))
     return (f'<li class="person">{face}<div><strong>{esc(p["name"])}</strong>'
-            f'<span class="role">{esc(p["role"])}</span>'
-            f'<span class="muted small">{esc(p["affiliation"])}</span>'
-            f'<span class="small">{links}</span></div></li>')
+            f'<span class="role">{esc(p.get("role", "Contributor"))}</span>'
+            + (f'<span class="muted small">{esc(p["affiliation"])}</span>' if p.get("affiliation") else "")
+            + (f'<span class="muted small">{esc(p["note"])}</span>' if p.get("note") else "")
+            + (f'<span class="small">{links}</span>' if links else "")
+            + "</div></li>")
 
 
 def references_page(index: dict, contributors: list[dict]):
@@ -305,12 +308,12 @@ def references_page(index: dict, contributors: list[dict]):
         f'<span class="muted">·</span> <a class="small" href="search.html?cite={quote(key)}">{counts.get(key, 0)} '
         f'{"factory" if counts.get(key, 0) == 1 else "factories"}</a></li>'
         for key, ref in refs)
-    people = "".join(
-        "<li><strong>" + esc(c["name"]) + "</strong>"
-        + (f", {esc(c['affiliation'])}" if c.get("affiliation") else "")
-        + (f'. <span class="muted">{esc(c["contribution"])}</span>' if c.get("contribution") else "")
-        + (f' <span class="small muted">({esc(c["date"])})</span>' if c.get("date") else "")
-        + "</li>" for c in contributors)
+    # the core team, then everyone in community_contributions/contributors.json
+    people = "".join(person_html(p) for p in PEOPLE) + "".join(
+        person_html(dict(name=c["name"], affiliation=c.get("affiliation"),
+                         note=" ".join(filter(None, (c.get("contribution"),
+                                                     f'({c["date"]})' if c.get("date") else None)))))
+        for c in contributors)
     main = f"""
 <section class="page-head narrow">
   <div class="inner">
@@ -331,10 +334,7 @@ def references_page(index: dict, contributors: list[dict]):
     <ol class="refs ref-list" id="paper-list">{papers}</ol>
 
     <h2 id="contributors">Contributors</h2>
-    <ul class="people" id="team-list">{"".join(person_html(p) for p in PEOPLE)}</ul>
-    <h3 id="community">Community submissions</h3>
-    {f'<ul class="plain contributor-list" id="contributor-list">{people}</ul>' if people else
-     '<p class="muted" id="contributor-list">No community submissions yet.</p>'}
+    <ul class="people" id="contributor-list">{people}</ul>
     <p>Anyone who adds a factory is listed here. <a href="contribute.html">Contribute a factory</a>.</p>
   </div>
 </main>"""

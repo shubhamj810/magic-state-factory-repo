@@ -603,7 +603,6 @@ figure.video figcaption { margin-top: 8px; font-size: 14px; color: var(--text-di
 .tf-all p { margin: 0 0 10px; }
 .source-list li { margin-bottom: 8px; }
 .ref-list li { margin-bottom: 12px; overflow-wrap: anywhere; }
-.contributor-list li { margin-bottom: 6px; }
 .people { list-style: none; padding: 0; margin: 8px 0 28px; display: grid;
           grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 22px 28px; }
 .person { display: flex; gap: 14px; align-items: flex-start; margin: 0; }
