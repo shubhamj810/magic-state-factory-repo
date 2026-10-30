@@ -93,12 +93,13 @@ def update_header(payload):
     return said
 
 
-def certify(payload, codes):
-    """Certificates, witnesses and the transversal gate on Gong's rows."""
+def certify(payload, codes, regime=REGIME, triply_even=True):
+    """Certificates and witnesses on the rows of ``regime``, and, for a triply
+    even family, the transversal gate: ``T`` on every qubit."""
     changed = []
     by_label = {entry["id"]: entry for entry in codes}
     for row in payload["factories"]:
-        mine = [s for s in row["sources"] if s["regime"] == REGIME]
+        mine = [s for s in row["sources"] if s["regime"] == regime]
         if not mine or row["d_is_exact"]:
             continue
         entry = by_label[mine[0]["label"]]
@@ -106,8 +107,9 @@ def certify(payload, codes):
         before = json.dumps(row, sort_keys=True)
         if row["d_upper"] is None or row["d_upper"] > claim:
             row["d_upper"], row["d_witness"] = claim, list(entry["witness"])
-        m = entry["weak_triply_even"]["m"]
-        row["rotation_powers"] = [] if m == 1 else [[c, 7] for c in range(row["n"])]
+        if triply_even:
+            m = entry["weak_triply_even"]["m"]
+            row["rotation_powers"] = [] if m == 1 else [[c, 7] for c in range(row["n"])]
         row["d_certified"] = claim
         row["d_certified_is_exact"] = False
         row["d_certified_source"] = entry["distance_certificate"]
@@ -129,17 +131,18 @@ def _changes(payload):
                    for path, out in zip(real, trial))
 
 
-def main(argv=None):
-    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+def main(argv=None, prefix="G-", regime=REGIME, triply_even=True,
+         header=update_header, description=__doc__):
+    parser = argparse.ArgumentParser(description=description.splitlines()[0])
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
     payload = CF.load_all()
     before = len(payload["factories"])
-    for line in update_header(payload):
+    for line in header(payload):
         print(line)
 
     records = [r for r in MR.read_records(REPO / FACTORIES)
-               if r["label"].startswith("G-")]
+               if r["label"].startswith(prefix)]
     started = time.time()
     verdicts = MR.merge(payload, records, FACTORIES)
     print(f"merged {len(records)} records in {time.time() - started:.0f}s:")
@@ -155,7 +158,7 @@ def main(argv=None):
             touched.append(row)
 
     codes = json.loads(CODES.read_text(encoding="utf-8"))["codes"]
-    certified = certify(payload, codes)
+    certified = certify(payload, codes, regime, triply_even)
     for row in certified:
         print(f"  {row['catalog_label']}: certified d >= {row['d_certified']}, "
               f"witness of weight {row['d_upper']}")

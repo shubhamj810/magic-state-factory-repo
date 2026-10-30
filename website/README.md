@@ -9,7 +9,7 @@ anywhere else in the repository. Every deploy rebuilds the site's data from the
 catalogue, so a merged result appears on the site with no further step.
 
 ```
-master_catalog/master_catalog.json          1501 rows, columns included
+master_catalog/master_catalog.json          1509 rows, columns included
 master_catalog/master_catalog_large.json    605 rows built by a construction
             |
             |  website/build_site.py         standard library only, ~20 s

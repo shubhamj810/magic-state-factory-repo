@@ -394,7 +394,7 @@ migrations:
 
 ```bash
 .venv/bin/python transversal_t_codes/search_sd70.py                  # the [70,35,12] code behind [[69,1,13]], ~2 min on 16 cores
-.venv/bin/python transversal_t_codes/build_codes.py --check          # build and check all 31 codes, ~20 s
+.venv/bin/python transversal_t_codes/build_codes.py --check          # build and check all 39 codes, ~20 s
 .venv/bin/python -m unittest discover -s transversal_t_codes/tests   # re-checks, small distances by enumeration, the 2^34-word proof, catalogue rows, ~1.5 min
 .venv/bin/python master_catalog/migrations/transversal_t_codes_table1_2026_10_10.py --dry-run   # ~5 min
 ```
@@ -421,6 +421,17 @@ It added `gong2025triply` to the references, merged `4 accepted` and reported
 and writes nothing. The tests prove the self-dual inputs' distances, 9 and 13,
 by enumerating every word of their stabiliser spaces (the `[[65,1,13]]` code's
 2^32 words take about a minute).
+
+The eight codes doubled on from her `[[559,1,15]]` with the paper's Table I
+inputs came in through a fourth migration:
+
+```bash
+.venv/bin/python master_catalog/migrations/gong_doubled_2026_10_30.py --dry-run   # ~2 min
+```
+
+It merged `8 accepted`, `[[761,1,17]]` to `[[3195,1,31]]`, each certified at
+its distance with a witness, and reported `2106 -> 2114 classes`. Against the
+shipped catalogue it reports `8 duplicate` and writes nothing.
 
 ### Clifford corrections
 

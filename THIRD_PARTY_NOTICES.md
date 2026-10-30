@@ -92,7 +92,7 @@ doubly even self-dual codes, `[[41,1,9]]` and `[[65,1,13]]`, copied from
 <https://github.com/gongaa/RM127> at commit
 `b425fd5f07e86152518115c939a03b21b87960ae`, rewritten as lists of qubit
 indices. Please cite her note, "On some K=1 codes admitting strongly transversal
-T" (in that repository, `triply-even/`), for these codes and the four codes
+T" (in that repository, `triply-even/`), for these codes and the codes
 doubled from them. They are used under the repository's MIT licence:
 
 ```text

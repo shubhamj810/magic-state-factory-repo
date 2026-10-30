@@ -39,6 +39,9 @@ TABLE_I = [(15, 3), (49, 5), (95, 7), (185, 9), (279, 11), (417, 13),
            (2415, 27), (2813, 29), (3211, 31)]
 #: Gong's family: her [[41,1,9]] and [[65,1,13]] with QR 47 and 79 on [[95,1,7]].
 GONG = [(177, 9), (271, 11), (401, 13), (559, 15)]
+#: Her [[559,1,15]] doubled on with Table I's self-dual inputs from d = 17.
+GONG_DOUBLED = [(761, 17), (967, 19), (1301, 21), (1635, 23), (2017, 25),
+                (2399, 27), (2797, 29), (3195, 31)]
 #: Held before the import, with a smaller circuit: the merge left them alone.
 HELD = {15: "15.1.3.a", 49: "49.1.5.a"}
 
@@ -102,6 +105,11 @@ class Codes(unittest.TestCase):
         self.assertEqual(table1, TABLE_I)
         gong = sorted((c.n, c.d) for c in self.codes.values() if c.tables == ("G",))
         self.assertEqual(gong, GONG)
+        both = sorted((c.n, c.d) for c in self.codes.values() if c.tables == ("GJ",))
+        self.assertEqual(both, GONG_DOUBLED)
+        # each 16 qubits shorter than Table I at the same distance
+        table1 = dict((d, n) for n, d in TABLE_I)
+        self.assertTrue(all(table1[d] - n == 16 for n, d in GONG_DOUBLED))
 
     def test_every_code_is_a_factory_by_the_catalogue_s_own_test(self):
         """`faultcore`: no odd parity touching a check, gate T on the output,
@@ -370,6 +378,8 @@ class Catalogue(unittest.TestCase):
                 continue
             with self.subTest(code=record["label"]):
                 expected = (["gong2025triply"] if record["label"].startswith("G-")
+                            else ["jain2025transversal", "gong2025triply"]
+                            if record["label"].startswith("GJ-")
                             else ["sullivan2024code"] if record["n"] == 95
                             else ["jain2025transversal"])
                 self.assertEqual(row["citations"], expected)

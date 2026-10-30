@@ -74,11 +74,13 @@ BORROWED = ("borrowed-identity search: two-group",
             "borrowed-identity search: SAT recovery",
             "borrowed-identity search: Clifford padding")
 #: The codes of Jain and Albert (arXiv:2408.12752) and of A. Gong (her note in
-#: github.com/gongaa/RM127), rebuilt by `transversal_t_codes/build_codes.py`:
-#: literature, not an AI search.
+#: github.com/gongaa/RM127), rebuilt by `transversal_t_codes/build_codes.py`,
+#: and the codes it builds by doubling hers with theirs: literature and its
+#: direct combination, not an AI search.
 DOUBLED = ("Jain-Albert doubling: weak triply even family",
            "Jain-Albert doubling: triorthogonal family",
-           "Gong doubling: triply even family")
+           "Gong doubling: triply even family",
+           "Jain-Albert doubling of Gong's codes")
 #: Published protocols rebuilt from their paper's construction:
 #: literature, not an AI search.
 LITERATURE = ("Gong et al.: F8 codes concatenated with 8T->CCZ",)

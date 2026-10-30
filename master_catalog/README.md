@@ -116,11 +116,15 @@ merged four shorter codes of the same kind from a note by A. Gong
 `[[177,1,9]]`, `[[271,1,11]]`, `[[401,1,13]]` and `[[559,1,15]]`, her doubly
 even self-dual `[[41,1,9]]` and `[[65,1,13]]` codes doubled onto `[[95,1,7]]`.
 They carry their distances the same way.
+[`migrations/gong_doubled_2026_10_30.py`](migrations/gong_doubled_2026_10_30.py)
+merged eight more, built here: her `[[559,1,15]]` doubled on with the paper's
+Table I inputs, `[[761,1,17]]` to `[[3195,1,31]]`, each 16 qubits shorter than
+the Table I code of the same distance.
 
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running
 some rotations as `T³`, `T⁵` or `T†` makes that unnecessary
-(`rotation_powers`). 31 classes need nothing, 1503 need only powers, and 572
+(`rotation_powers`). 31 classes need nothing, 1511 need only powers, and 572
 need `S` or `CZ` gates whatever the powers.
 [`migrations/clifford_corrections_2026_10_10.py`](migrations/clifford_corrections_2026_10_10.py)
 added the fields, and [`clifford.py`](clifford.py) explains the method.
@@ -231,7 +235,9 @@ links each published one to its DOI or arXiv page.
   except `[[95,1,7]]`, which Sullivan (PRA 109, 042416 (2024)) published
   first. The `[[15,1,3]]` and `[[49,1,5]]` codes were already held and keep
   their credit. The four codes doubled from A. Gong's self-dual codes are
-  credited to her note (`gong2025triply`).
+  credited to her note (`gong2025triply`). The eight codes built here by
+  doubling her `[[559,1,15]]` with the paper's inputs cite both the paper and
+  her note.
 * **Distance 2.** The length-54 classification does not cover distance 2, so a
   distance-2 class never cites it. A class the borrowed-identity searches found
   is credited to their paper (Singh, Gidney and Jones), unless an earlier work

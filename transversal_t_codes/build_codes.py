@@ -62,6 +62,13 @@ stabiliser weighs 0 mod 8 and ``T`` on every qubit is the logical ``T^m``,
 ``m = n mod 8`` (1 or 7): no S or CZ correction.  Her two self-dual codes are
 in `gong_self_dual_codes.json`; the doubling is this script's.
 
+Gong's chain continued ("GJ"): doubling her ``[[559,1,15]]`` with the
+self-dual inputs Table I uses from distance 17 on -- ``[[101,1,17]]``,
+``[[103,1,19]]`` and the quantum QR codes of length 167, 191 and 199, twice
+each -- gives ``[[761,1,17]]`` up to ``[[3195,1,31]]``, each 16 qubits shorter
+than the Table I code of the same distance.  These codes are built here, the
+paper's method applied to her codes, and are credited to both.
+
 The ``[[69,1,13]]`` code.  The paper takes it from a ``[70,35,14]`` code, but
 the code it cites (Gulliver and Harada 1998) is only FORMALLY self-dual, and no
 self-dual ``[70,35,14]`` code is known.  A ``[[69,1,13]]`` needs less: a
@@ -116,6 +123,7 @@ GONG = ("A. Gong, \"On some K=1 codes admitting strongly transversal T\", "
 GONG_CITE = "gong2025triply"
 GONG_JSON = HERE / "gong_self_dual_codes.json"
 REGIME_G = "Gong doubling: triply even family"
+REGIME_GJ = "Jain-Albert doubling of Gong's codes"
 REGIME_II = "Jain-Albert doubling: weak triply even family"
 REGIME_I = "Jain-Albert doubling: triorthogonal family"
 STRENGTH = {
@@ -135,6 +143,12 @@ STRENGTH = {
                "quantum QR codes doubled onto [[95,1,7]], rebuilt here from her "
                "self-dual codes, where T on every qubit is a logical T or "
                "T-dagger; a verified witness, not a maximum"),
+    REGIME_GJ: ("a code built here by the doubling method of Jain and Albert "
+                "(arXiv:2408.12752) from the codes in A. Gong's repository "
+                "(github.com/gongaa/RM127, triply-even/): her [[559,1,15]] "
+                "doubled with the self-dual CSS codes of the paper's Table I "
+                "from distance 17 on (transversal_t_codes/); a verified "
+                "witness, not a maximum"),
 }
 
 #: The self-dual [70,35,12] code behind Table I's [[69,1,13]] (`search_sd70.py`):
@@ -473,6 +487,10 @@ def build():
             (quantum_qr(79), 79, 15, "[[79,1,15]] quantum QR code (extended QR [80,40,16])")]:
         tri = double(stabs, n_sd, d_sd, tri, name, ("G",), triply_even=True)
         codes[tri.key] = tri
+    # ... continued with Table I's self-dual inputs from [[101,1,17]] on
+    for stabs, n_sd, d_sd, name in steps[2:]:
+        tri = double(stabs, n_sd, d_sd, tri, name, ("GJ",))
+        codes[tri.key] = tri
     return codes
 
 
@@ -565,6 +583,14 @@ def check(codes) -> None:
 
 # ------------------------------------------------------------- the output
 def certificate(code: Code) -> str:
+    if code.tables == ("GJ",):
+        return (f"built here by the doubling of Jain and Albert (arXiv:2408.12752) "
+                f"from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, "
+                f"triply-even/): {code.recipe}; their doubling theorem (Sec. III) "
+                f"gives d >= min(d_sd, d_tri + 2) = {code.d}, with d_sd at least "
+                f"the classical distance less one (their Lemma 2.4) and the "
+                f"distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes "
+                f"proved here by enumerating every word of their stabiliser spaces")
     if code.tables == ("G",):
         return (f"A. Gong (github.com/gongaa/RM127, triply-even/): {code.recipe}; "
                 f"the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. "
@@ -587,16 +613,20 @@ def records(codes):
     for code in sorted(codes.values(), key=lambda c: (c.n, c.tables)):
         cols = columns_of(code)
         tables = list(code.tables)
-        gong = tables == ["G"]
-        regime = REGIME_G if gong else REGIME_II if "II" in tables else REGIME_I
-        earlier = None if gong else EARLIER.get(code.n)
+        gong, both = tables == ["G"], tables == ["GJ"]
+        regime = (REGIME_G if gong else REGIME_GJ if both
+                  else REGIME_II if "II" in tables else REGIME_I)
+        earlier = None if gong or both else EARLIER.get(code.n)
+        prefix = "G" if gong else "GJ" if both else "JA"
         entry = {
-            "id": f"G-{code.n}" if gong else f"JA-{code.n}",
+            "id": f"{prefix}-{code.n}",
             "parameters": [code.n, 1, code.d],
             "tables": tables,
             "construction": code.recipe,
             "self_dual_input": code.sd,
-            "triorthogonal_input": (f"G-{code.tri}" if gong and code.tri != "95"
+            "triorthogonal_input": (f"G-{code.tri}" if (gong and code.tri != "95")
+                                    or (both and code.tri == "559")
+                                    else f"GJ-{code.tri}" if both
                                     else f"JA-{code.tri}" if code.tri not in (None, "1")
                                     else ("[[1,1,1]], one qubit" if code.tri else None)),
             "N": len(code.rows),
@@ -615,11 +645,15 @@ def records(codes):
             "regime": regime, "strength": STRENGTH[regime],
             "discovery": "pre-existing",
             **({} if code.n in HELD else
-               {"citations": [GONG_CITE] if gong else [earlier[0]] if earlier else [CITE]}),
+               {"citations": [GONG_CITE] if gong else [CITE, GONG_CITE] if both
+                             else [earlier[0]] if earlier else [CITE]}),
             "label": entry["id"],
             "file": "transversal_t_codes/factories.json",
-            "origin": GONG if gong else PAPER,
+            "origin": GONG if gong else f"{PAPER}; {GONG}" if both else PAPER,
             "provenance": (f"{code.recipe} (Gong's note)" if gong else
+                           f"{code.recipe}: the doubling method of Jain and Albert "
+                           f"(arXiv:2408.12752) applied to the codes in A. Gong's "
+                           f"repository (github.com/gongaa/RM127)" if both else
                            f"{code.recipe} ({' and '.join('Table ' + t for t in tables)})"),
             **({"notes": f"earlier publication: {earlier[1]}"} if earlier else
                {"notes": code.note} if code.note else {}),

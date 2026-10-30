@@ -283,6 +283,30 @@ parameters are the same. The four codes are credited to her note (`gong2025tripl
 regime `Gong doubling: triply even family`, and came in through
 [`gong_triply_even_2026_10_30.py`](../master_catalog/migrations/gong_triply_even_2026_10_30.py).
 
+Her chain stops at distance 15. `build_codes.py` continues it with the
+self-dual inputs Table I uses from distance 17 on, the paper's method applied
+to her codes:
+
+| code | doubled from | Table I code |
+|---|---|---|
+| `[[761,1,17]]` | the `[[101,1,17]]` code of sub(XQ103) onto `[[559,1,15]]` | `[[777,1,17]]` |
+| `[[967,1,19]]` | the `[[103,1,19]]` quantum QR code onto `[[761,1,17]]` | `[[983,1,19]]` |
+| `[[1301,1,21]]` | the `[[167,1,23]]` quantum QR code onto `[[967,1,19]]` | `[[1317,1,21]]` |
+| `[[1635,1,23]]` | the same onto `[[1301,1,21]]` | `[[1651,1,23]]` |
+| `[[2017,1,25]]` | the `[[191,1,27]]` quantum QR code onto `[[1635,1,23]]` | `[[2033,1,25]]` |
+| `[[2399,1,27]]` | the same onto `[[2017,1,25]]` | `[[2415,1,27]]` |
+| `[[2797,1,29]]` | the `[[199,1,31]]` quantum QR code onto `[[2399,1,27]]` | `[[2813,1,29]]` |
+| `[[3195,1,31]]` | the same onto `[[2797,1,29]]` | `[[3211,1,31]]` |
+
+Each is 16 qubits shorter than the Table I code. The `[[101,1,17]]` input is
+not doubly even, so these codes are not triply even. Like Table I, each needs
+no `S` or `CZ` once some qubits run `T³`, `T⁵` or `T†`, which the catalogue's
+solver found. Their labels are `GJ-761` to `GJ-3195` and their regime is
+`Jain-Albert doubling of Gong's codes`. Each row cites both the paper and her
+note, and its regime description and source say how it was built. They came in
+through
+[`gong_doubled_2026_10_30.py`](../master_catalog/migrations/gong_doubled_2026_10_30.py).
+
 ## Reproduce
 
 ```bash
@@ -300,4 +324,6 @@ merged seventeen codes. The second,
 [`transversal_t_codes_table1_2026_10_10.py`](../master_catalog/migrations/transversal_t_codes_table1_2026_10_10.py),
 merged the ten Table I codes that depend on `[[69,1,13]]`. The third,
 [`gong_triply_even_2026_10_30.py`](../master_catalog/migrations/gong_triply_even_2026_10_30.py),
-merged Gong's four codes.
+merged Gong's four codes, and the fourth,
+[`gong_doubled_2026_10_30.py`](../master_catalog/migrations/gong_doubled_2026_10_30.py),
+the eight doubled on from them.
