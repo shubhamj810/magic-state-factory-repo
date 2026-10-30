@@ -1,5 +1,6 @@
 {
  "paper": "S. P. Jain and V. V. Albert, \"Transversal Clifford and T-gate codes of short length and high distance\", IEEE J. Sel. Areas Inf. Theory 6, 127 (2025), arXiv:2408.12752",
+ "gong": "A. Gong, \"On some K=1 codes admitting strongly transversal T\", note in github.com/gongaa/RM127, triply-even/ (2025)",
  "codes": [
   {
    "id": "JA-15",
@@ -65,6 +66,26 @@
    "note": null
   },
   {
+   "id": "G-177",
+   "parameters": [177, 1, 9],
+   "tables": [
+    "G"
+   ],
+   "construction": "Gong's doubly even self-dual [[41,1,9]] code doubled onto [[95,1,7]]",
+   "self_dual_input": "Gong's doubly even self-dual [[41,1,9]] code",
+   "triorthogonal_input": "JA-95",
+   "N": 47,
+   "check_rows": 46,
+   "witness": [0, 41, 82, 105, 128, 145, 162, 169, 176],
+   "weak_triply_even": {
+    "m": 1,
+    "minus": []
+   },
+   "distance_certificate": "A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[41,1,9]] code doubled onto [[95,1,7]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 9; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces",
+   "earlier_publication": null,
+   "note": null
+  },
+  {
    "id": "JA-185",
    "parameters": [185, 1, 9],
    "tables": [
@@ -98,6 +119,26 @@
     "minus": [94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188]
    },
    "distance_certificate": "Jain and Albert (arXiv:2408.12752), Table II: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[95,1,7]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 9, with d_sd at least the classical distance less one (their Lemma 2.4)",
+   "earlier_publication": null,
+   "note": null
+  },
+  {
+   "id": "G-271",
+   "parameters": [271, 1, 11],
+   "tables": [
+    "G"
+   ],
+   "construction": "[[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[177,1,9]]",
+   "self_dual_input": "[[47,1,11]] quantum QR code (extended QR [48,24,12])",
+   "triorthogonal_input": "G-177",
+   "N": 71,
+   "check_rows": 70,
+   "witness": [0, 47, 94, 135, 176, 199, 222, 239, 256, 263, 270],
+   "weak_triply_even": {
+    "m": 7,
+    "minus": []
+   },
+   "distance_certificate": "A. Gong (github.com/gongaa/RM127, triply-even/): [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[177,1,9]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 11; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces",
    "earlier_publication": null,
    "note": null
   },
@@ -139,6 +180,26 @@
    "note": null
   },
   {
+   "id": "G-401",
+   "parameters": [401, 1, 13],
+   "tables": [
+    "G"
+   ],
+   "construction": "Gong's doubly even self-dual [[65,1,13]] code doubled onto [[271,1,11]]",
+   "self_dual_input": "Gong's doubly even self-dual [[65,1,13]] code",
+   "triorthogonal_input": "G-271",
+   "N": 104,
+   "check_rows": 103,
+   "witness": [0, 65, 130, 177, 224, 265, 306, 329, 352, 369, 386, 393, 400],
+   "weak_triply_even": {
+    "m": 1,
+    "minus": []
+   },
+   "distance_certificate": "A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[65,1,13]] code doubled onto [[271,1,11]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 13; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces",
+   "earlier_publication": null,
+   "note": null
+  },
+  {
    "id": "JA-417",
    "parameters": [417, 1, 13],
    "tables": [
@@ -172,6 +233,26 @@
     "minus": [158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440]
    },
    "distance_certificate": "Jain and Albert (arXiv:2408.12752), Table II: [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[283,1,11]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 13, with d_sd at least the classical distance less one (their Lemma 2.4)",
+   "earlier_publication": null,
+   "note": null
+  },
+  {
+   "id": "G-559",
+   "parameters": [559, 1, 15],
+   "tables": [
+    "G"
+   ],
+   "construction": "[[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[401,1,13]]",
+   "self_dual_input": "[[79,1,15]] quantum QR code (extended QR [80,40,16])",
+   "triorthogonal_input": "G-401",
+   "N": 144,
+   "check_rows": 143,
+   "witness": [0, 79, 158, 223, 288, 335, 382, 423, 464, 487, 510, 527, 544, 551, 558],
+   "weak_triply_even": {
+    "m": 7,
+    "minus": []
+   },
+   "distance_certificate": "A. Gong (github.com/gongaa/RM127, triply-even/): [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[401,1,13]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 15; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces",
    "earlier_publication": null,
    "note": null
   },

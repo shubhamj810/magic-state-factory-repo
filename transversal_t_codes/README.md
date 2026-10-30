@@ -1,4 +1,4 @@
-# Transversal-T codes of Jain and Albert
+# Transversal-T codes of Jain and Albert, and of A. Gong
 
 This folder rebuilds the one-qubit codes with a transversal logical `T` gate
 from
@@ -34,6 +34,7 @@ the paper for these codes.
 |---|---|
 | [`build_codes.py`](build_codes.py) | builds every code, checks it, and writes the two files below. `--check` rebuilds them and fails if a committed file differs |
 | [`search_sd70.py`](search_sd70.py) | the exhaustive search that found the self-dual `[70,35,12]` code behind Table I's `[[69,1,13]]` (see below), ~2 minutes |
+| [`gong_self_dual_codes.json`](gong_self_dual_codes.json) | the stabilisers of A. Gong's doubly even self-dual `[[41,1,9]]` and `[[65,1,13]]` codes, copied from her repository (see [Gong's codes](#gongs-codes)) |
 | [`codes.json`](codes.json) | one entry per code: parameters, the paper's tables, how it was built, its two inputs, a harmful fault of the paper's weight, the weak-triply-even partition where there is one, and the distance certificate |
 | [`factories.json`](factories.json) | the same codes in the input format of [`merge_results.py`](../master_catalog/merge_results.py): wire 0 is the logical row (the output), wires `1..` are the X stabilisers (the checks), and column `j` is the set of rows containing qubit `j` |
 | [`tests/`](tests/) | the codes re-checked with the catalogue's own primitives, the small inputs' distances computed by enumeration, and the catalogue rows they became |
@@ -242,6 +243,46 @@ code at the stored powers on every input of weight at most 3, which is
 complete for a phase polynomial of degree 3, and finds the logical `T` with
 every stabiliser left alone.
 
+## Gong's codes
+
+A. Gong, in a note in her repository
+[`gongaa/RM127`](https://github.com/gongaa/RM127/tree/main/triply-even)
+(“On some K=1 codes admitting strongly transversal T”, 2025), found two doubly
+even self-dual CSS codes, `[[41,1,9]]` and `[[65,1,13]]`, and used them in the
+same doubling:
+
+| code | doubled from |
+|---|---|
+| `[[177,1,9]]` | her `[[41,1,9]]` onto `[[95,1,7]]` |
+| `[[271,1,11]]` | the `[[47,1,11]]` quantum QR code onto `[[177,1,9]]` |
+| `[[401,1,13]]` | her `[[65,1,13]]` onto `[[271,1,11]]` |
+| `[[559,1,15]]` | the `[[79,1,15]]` quantum QR code onto `[[401,1,13]]` |
+
+Each is shorter than the paper's code of the same distance: 185, 279, 417 and
+575 qubits in Table I, 189, 283, 441 and 599 in Table II. Every input is doubly
+even, so every X stabiliser weighs 0 mod 8 and `T` on every qubit is the
+logical `T^m` with `m = n mod 8`: `T` for 177 and 401 qubits, `T†` for 271
+and 559, and never an `S` or `CZ`. The rows store no powers for the first two and
+`T†` on every qubit for the other two.
+
+Her two self-dual codes are copied, as lists of qubit indices, into
+[`gong_self_dual_codes.json`](gong_self_dual_codes.json) from her
+`triply-even/41_XZ.mtx` and `65_XZ.mtx` (commit `b425fd5`, MIT licence; see
+[`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md)). `build_codes.py` doubles
+them onto its own `[[95,1,7]]`, with the quantum QR codes it already builds.
+The doubling theorem gives `d >= min(d_sd, d_tri + 2)`, so it needs her codes'
+distances. The tests prove them by enumerating every word of each stabiliser
+space `S`, 2^20 and 2^32 words. A doubly even self-dual `[[n,1]]` code has
+distance `n` minus the largest weight in `S`, and the largest weights are 32
+and 52, so the distances are exactly 9 and 13.
+
+Built from her own `[[95,1,7]]` matrix, this doubling gives exactly her
+`[[177,1,9]]` stabilisers. Her larger matrices are built with her own QR-code
+matrices, so they are not identical to these, though the construction and
+parameters are the same. The four codes are credited to her note (`gong2025triply`), with
+regime `Gong doubling: triply even family`, and came in through
+[`gong_triply_even_2026_10_30.py`](../master_catalog/migrations/gong_triply_even_2026_10_30.py).
+
 ## Reproduce
 
 ```bash
@@ -257,4 +298,6 @@ held. The first import,
 [`transversal_t_codes_2026_10_10.py`](../master_catalog/migrations/transversal_t_codes_2026_10_10.py),
 merged seventeen codes. The second,
 [`transversal_t_codes_table1_2026_10_10.py`](../master_catalog/migrations/transversal_t_codes_table1_2026_10_10.py),
-merged the ten Table I codes that depend on `[[69,1,13]]`.
+merged the ten Table I codes that depend on `[[69,1,13]]`. The third,
+[`gong_triply_even_2026_10_30.py`](../master_catalog/migrations/gong_triply_even_2026_10_30.py),
+merged Gong's four codes.

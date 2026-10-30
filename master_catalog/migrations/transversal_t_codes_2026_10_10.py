@@ -157,7 +157,9 @@ def main(argv=None):
     for line in said:
         print(line)
 
-    records = MR.read_records(REPO / FACTORIES)
+    # the paper's codes only: Gong's (``G-``) came in by gong_triply_even_2026_10_30.py
+    records = [r for r in MR.read_records(REPO / FACTORIES)
+               if not r["label"].startswith("G-")]
     started = time.time()
     verdicts = MR.merge(payload, records, FACTORIES)
     print(f"merged {len(records)} records in {time.time() - started:.0f}s:")

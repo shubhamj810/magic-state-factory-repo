@@ -110,11 +110,17 @@ the sweep here proves only a floor, from 7 down to 3. Each of those rows
 carries the paper's distance as a certified lower bound (`d_certified`) and an
 explicit fault of exactly that weight (`d_upper`, `d_witness`). Together they
 pin the distance, though the label, as always, uses the proved one.
+[`migrations/gong_triply_even_2026_10_30.py`](migrations/gong_triply_even_2026_10_30.py)
+merged four shorter codes of the same kind from a note by A. Gong
+([`gongaa/RM127`](https://github.com/gongaa/RM127/tree/main/triply-even)):
+`[[177,1,9]]`, `[[271,1,11]]`, `[[401,1,13]]` and `[[559,1,15]]`, her doubly
+even self-dual `[[41,1,9]]` and `[[65,1,13]]` codes doubled onto `[[95,1,7]]`.
+They carry their distances the same way.
 
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running
 some rotations as `T³`, `T⁵` or `T†` makes that unnecessary
-(`rotation_powers`). 29 classes need nothing, 1501 need only powers, and 572
+(`rotation_powers`). 31 classes need nothing, 1503 need only powers, and 572
 need `S` or `CZ` gates whatever the powers.
 [`migrations/clifford_corrections_2026_10_10.py`](migrations/clifford_corrections_2026_10_10.py)
 added the fields, and [`clifford.py`](clifford.py) explains the method.
@@ -224,7 +230,8 @@ links each published one to its DOI or arXiv page.
 * **The transversal-T codes** of Jain and Albert are credited to their paper,
   except `[[95,1,7]]`, which Sullivan (PRA 109, 042416 (2024)) published
   first. The `[[15,1,3]]` and `[[49,1,5]]` codes were already held and keep
-  their credit.
+  their credit. The four codes doubled from A. Gong's self-dual codes are
+  credited to her note (`gong2025triply`).
 * **Distance 2.** The length-54 classification does not cover distance 2, so a
   distance-2 class never cites it. A class the borrowed-identity searches found
   is credited to their paper (Singh, Gidney and Jones), unless an earlier work

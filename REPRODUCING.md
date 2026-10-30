@@ -394,7 +394,7 @@ migrations:
 
 ```bash
 .venv/bin/python transversal_t_codes/search_sd70.py                  # the [70,35,12] code behind [[69,1,13]], ~2 min on 16 cores
-.venv/bin/python transversal_t_codes/build_codes.py --check          # build and check all 27 codes, ~20 s
+.venv/bin/python transversal_t_codes/build_codes.py --check          # build and check all 31 codes, ~20 s
 .venv/bin/python -m unittest discover -s transversal_t_codes/tests   # re-checks, small distances by enumeration, the 2^34-word proof, catalogue rows, ~1.5 min
 .venv/bin/python master_catalog/migrations/transversal_t_codes_table1_2026_10_10.py --dry-run   # ~5 min
 ```
@@ -407,6 +407,20 @@ merged the ten more Table I codes the build now makes (`10 accepted, 17
 duplicate`). Against the shipped catalogue either reports `27 duplicate` and
 writes nothing. Most of the time is the distance sweep of the codes from
 `n = 777` to `n = 1011`.
+
+A. Gong's four triply even codes are built by the same script from her two
+self-dual codes in `transversal_t_codes/gong_self_dual_codes.json`, and came in
+through a third migration:
+
+```bash
+.venv/bin/python master_catalog/migrations/gong_triply_even_2026_10_30.py --dry-run   # ~30 s
+```
+
+It added `gong2025triply` to the references, merged `4 accepted` and reported
+`2102 -> 2106 classes`. Against the shipped catalogue it reports `4 duplicate`
+and writes nothing. The tests prove the self-dual inputs' distances, 9 and 13,
+by enumerating every word of their stabiliser spaces (the `[[65,1,13]]` code's
+2^32 words take about a minute).
 
 ### Clifford corrections
 

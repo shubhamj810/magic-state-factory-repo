@@ -37,6 +37,8 @@ TABLE_II = [(15, 3), (49, 5), (95, 7), (189, 9), (283, 11), (441, 13),
 TABLE_I = [(15, 3), (49, 5), (95, 7), (185, 9), (279, 11), (417, 13),
            (575, 15), (777, 17), (983, 19), (1317, 21), (1651, 23), (2033, 25),
            (2415, 27), (2813, 29), (3211, 31)]
+#: Gong's family: her [[41,1,9]] and [[65,1,13]] with QR 47 and 79 on [[95,1,7]].
+GONG = [(177, 9), (271, 11), (401, 13), (559, 15)]
 #: Held before the import, with a smaller circuit: the merge left them alone.
 HELD = {15: "15.1.3.a", 49: "49.1.5.a"}
 
@@ -98,6 +100,8 @@ class Codes(unittest.TestCase):
         table1 = sorted((c.n, c.d) for c in self.codes.values() if "I" in c.tables)
         self.assertEqual(table2, TABLE_II)
         self.assertEqual(table1, TABLE_I)
+        gong = sorted((c.n, c.d) for c in self.codes.values() if c.tables == ("G",))
+        self.assertEqual(gong, GONG)
 
     def test_every_code_is_a_factory_by_the_catalogue_s_own_test(self):
         """`faultcore`: no odd parity touching a check, gate T on the output,
@@ -140,6 +144,57 @@ class Codes(unittest.TestCase):
                     record["columns"], 1, record["N"], {frozenset({0})},
                     powers=powers)
                 self.assertEqual(failures, [])
+
+    def test_gong_s_family_is_triply_even(self):
+        """Every X stabiliser weighs 0 mod 8, and T on every qubit is the
+        logical T^m, m = n mod 8: `clifford.logical_action` with no powers when
+        m = 1, and T-dagger everywhere (scaled by m^-1 = 7) when m = 7."""
+        for record, entry in zip(self.records, self.meta["codes"]):
+            if entry["tables"] != ["G"]:
+                continue
+            with self.subTest(code=record["label"]):
+                code = self.by_n[record["n"]]
+                self.assertTrue(all(B.weight(r) % 8 == 0 for r in code.rows[1:]))
+                wte = entry["weak_triply_even"]
+                self.assertEqual((wte["m"], wte["minus"]), (record["n"] % 8, []))
+                powers = ([] if wte["m"] == 1 else
+                          [[c, 7] for c in range(record["n"])])
+                failures, _scope = CL.logical_action(
+                    record["columns"], 1, record["N"], {frozenset({0})},
+                    powers=powers)
+                self.assertEqual(failures, [])
+
+    def test_gong_s_self_dual_codes_have_the_distances_used(self):
+        """A doubly even self-dual [[n,1]] code with stabiliser space S has
+        distance n - (the largest weight in S): its logical operators are the
+        words of 1 + S.  Every word of S is enumerated, 2^20 for n = 41 and 2^32
+        for n = 65, meet in the middle on 22-bit pieces of each word.  The
+        largest weights are 32 and 52, so the distances are exactly 9 and 13."""
+        limb = 22
+        pop = np.zeros(1 << limb, dtype=np.uint8)
+        for b in range(limb):
+            pop[1 << b:1 << (b + 1)] = pop[:1 << b] + 1
+
+        def sums(rows):
+            out = np.zeros((1, 3), dtype=np.int64)
+            for r in rows:
+                piece = np.array([(r >> (limb * i)) & ((1 << limb) - 1)
+                                  for i in range(3)], dtype=np.int64)
+                out = np.concatenate([out, out ^ piece])
+            return out
+
+        for n, d in ((41, 9), (65, 13)):
+            with self.subTest(n=n):
+                rows = B.gong_self_dual(n)
+                half = len(rows) // 2
+                left, right = sums(rows[:half]), sums(rows[half:])
+                heaviest = 0
+                for i in range(0, len(right), 64):
+                    x = left[None, :, :] ^ right[i:i + 64, None, :]
+                    w = (pop[x[..., 0]].astype(np.int16) + pop[x[..., 1]]
+                         + pop[x[..., 2]])
+                    heaviest = max(heaviest, int(w.max()))
+                self.assertEqual(n - heaviest, d)
 
     def test_the_small_self_dual_inputs_have_the_distances_used(self):
         """d_sd = the least odd weight of the punctured code C, the dual of the
@@ -314,15 +369,18 @@ class Catalogue(unittest.TestCase):
             if row is None:
                 continue
             with self.subTest(code=record["label"]):
-                expected = (["sullivan2024code"] if record["n"] == 95
+                expected = (["gong2025triply"] if record["label"].startswith("G-")
+                            else ["sullivan2024code"] if record["n"] == 95
                             else ["jain2025transversal"])
                 self.assertEqual(row["citations"], expected)
         self.assertIn("arXiv:2408.12752",
                       self.references["jain2025transversal"]["full"])
+        self.assertIn("gongaa/RM127", self.references["gong2025triply"]["url"])
 
     def test_table_ii_rows_store_the_paper_s_partition(self):
         """T-dagger on M+ and T on M-: the paper's T on M+ and T-dagger on M-,
-        scaled from the logical T^7 to the logical T."""
+        scaled from the logical T^7 to the logical T.  Gong's codes have M-
+        empty and m = n mod 8: T everywhere when m = 1, T-dagger when m = 7."""
         for record in self.records:
             row = self.row_of(record["label"])
             entry = self.meta[record["label"]]
@@ -330,7 +388,12 @@ class Catalogue(unittest.TestCase):
                 continue
             with self.subTest(code=record["label"]):
                 minus = set(entry["weak_triply_even"]["minus"])
-                self.assertEqual(entry["weak_triply_even"]["m"], 7)
+                m = entry["weak_triply_even"]["m"]
+                if entry["tables"] == ["G"]:
+                    self.assertEqual(row["rotation_powers"],
+                                     [] if m == 1 else [[c, 7] for c in range(row["n"])])
+                    continue
+                self.assertEqual(m, 7)
                 self.assertEqual(row["rotation_powers"],
                                  [[c, 7] for c in range(row["n"]) if c not in minus])
 

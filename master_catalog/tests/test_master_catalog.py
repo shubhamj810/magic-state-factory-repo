@@ -73,10 +73,12 @@ BORROWED = ("borrowed-identity search: two-group",
             "borrowed-identity search: symmetry-free",
             "borrowed-identity search: SAT recovery",
             "borrowed-identity search: Clifford padding")
-#: The codes of Jain and Albert (arXiv:2408.12752), rebuilt by
-#: `transversal_t_codes/build_codes.py`: literature, not an AI search.
+#: The codes of Jain and Albert (arXiv:2408.12752) and of A. Gong (her note in
+#: github.com/gongaa/RM127), rebuilt by `transversal_t_codes/build_codes.py`:
+#: literature, not an AI search.
 DOUBLED = ("Jain-Albert doubling: weak triply even family",
-           "Jain-Albert doubling: triorthogonal family")
+           "Jain-Albert doubling: triorthogonal family",
+           "Gong doubling: triply even family")
 #: Published protocols rebuilt from their paper's construction:
 #: literature, not an AI search.
 LITERATURE = ("Gong et al.: F8 codes concatenated with 8T->CCZ",)
@@ -88,7 +90,7 @@ FRONTIER_DIR = "classification/length54/"
 #: The regime `community_contributions/check_submission.py` merges under.
 COMMUNITY = "community contribution"
 #: Regimes that are not an AI search: the classification, the SAT search, the
-#: borrowed-identity searches, the Jain-Albert codes and a community
+#: borrowed-identity searches, the Jain-Albert and Gong codes and a community
 #: contribution.
 NOT_AI = (PARETO, "exhaustive classification n<=54", SAT, COMMUNITY) \
     + BORROWED + DOUBLED + LITERATURE
@@ -592,7 +594,7 @@ class TestMasterCatalogue(unittest.TestCase):
 
         Any other recorded finder -- a classification stage this repository
         ran, the symmetry-SAT search, a borrowed-identity search, a code of
-        Jain and Albert, or a community contribution -- makes the class
+        Jain and Albert or of Gong, or a community contribution -- makes the class
         `pre-existing`.  The sources carry no dates, so this is a
         statement about who is on record, not who was first, and the sources
         answer it in both directions.  It is

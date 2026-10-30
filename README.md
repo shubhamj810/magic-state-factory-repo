@@ -10,7 +10,7 @@ marked as such. The protocols come from:
 - the **borrowed-identity searches** of Singh, Gidney and Jones, for
   distance 2;
 - the **transversal-T codes** of Jain and Albert, built by doubling, up to
-  distance 31;
+  distance 31, and four shorter ones of A. Gong;
 - **AI-assisted and symmetry-constrained searches** for larger and better ones;
 - the **published literature**;
 - **community contributions** from outside authors, verified to the same bar.
@@ -44,7 +44,7 @@ are the outputs and the rest are postselected checks. `d` is the circuit's
 fault distance. Each row also gives the circuit's **Clifford correction**: the
 `S` and `CZ` gates that make its action exactly the gate shown (see below).
 
-The catalogue holds **2102 classes**:
+The catalogue holds **2106 classes**:
 
 - `n = 8..262142`, `k = 1..373`, `d = 2..7` proved here, and up to 31 certified
   by a source;
@@ -87,8 +87,8 @@ also stores whether the correction can be avoided by running some rotations as
 `T³`, `T⁵` or `T†` instead of `T` (`rotation_powers`). For a code this is a
 transversal `T` gate in the sense of Jain and Albert.
 
-- 29 classes need no correction at all;
-- 1501 need none once some rotations run at another power of `T`;
+- 31 classes need no correction at all;
+- 1503 need none once some rotations run at another power of `T`;
 - 572 need `S` or `CZ` gates whatever the powers, which the verifier proves.
 
 [`master_catalog/clifford.py`](master_catalog/clifford.py) computes all three.
@@ -124,6 +124,7 @@ names the papers that credit it, linked where they are published.
 | **AI-assisted search** (Jain, Wills and Singh; [paper](https://arxiv.org/abs/2610.06535)) | AI search campaigns run in the companion repository `magic-states-AI`, from punctured simplex and Reed–Muller parents and Wills's parent codes, including the pure-T distillation-exponent (`γ`) frontier, and the public search for generalised triorthogonal protocols at lengths 55–64 | `AI search`, `AI search: …`, `AI search (gamma frontier): …` |
 | **Symmetry-constrained SAT search** (same paper) | CP-SAT searches over symmetric column orbits and ansatz-free SAT, in [`symmetry_sat_search/`](symmetry_sat_search/). Not counted as an AI discovery | `symmetry-SAT search` |
 | **Transversal-T codes** (Jain and Albert; [paper](https://doi.org/10.1109/JSAIT.2025.3570832), [arXiv](https://arxiv.org/abs/2408.12752)) | one-qubit codes with a transversal `T`, built by doubling self-dual and quadratic-residue CSS codes: all fifteen codes of each of the paper's two tables, `[[15,1,3]]` to `[[3239,1,31]]`, rebuilt from the paper's construction in [`transversal_t_codes/`](transversal_t_codes/). 25 new classes, with the paper's distances as certificates. Not counted as an AI discovery | `Jain-Albert doubling: weak triply even family`, `Jain-Albert doubling: triorthogonal family` |
+| **Triply even transversal-T codes** (A. Gong; [note and code](https://github.com/gongaa/RM127/tree/main/triply-even)) | her doubly even self-dual `[[41,1,9]]` and `[[65,1,13]]` codes, doubled with quantum QR codes onto `[[95,1,7]]`: `[[177,1,9]]`, `[[271,1,11]]`, `[[401,1,13]]` and `[[559,1,15]]`, each shorter than the Jain–Albert code of the same distance and needing no `S` or `CZ` correction. Rebuilt in [`transversal_t_codes/`](transversal_t_codes/) from her two self-dual codes. 4 new classes. Not counted as an AI discovery | `Gong doubling: triply even family` |
 | **Literature** | published protocols: Bravyi & Kitaev, Bombín & Martin-Delgado, Bravyi & Haah, Campbell & Howard, Litinski, Nezami & Haah, Haah & Hastings, Jacinto et al., Gong et al., and others. Some are rebuilt from the paper's construction, such as the 72-`T` → `CCZ` protocol at distance 6 of Gong et al., stored as one circuit on 18 wires. | cited in the row's `citations`, linked to the DOI or arXiv page |
 | **Community contributions** | protocols from outside authors, verified here; a class new to the catalogue is cited to its contributor | `community contribution` |
 
@@ -167,7 +168,17 @@ the distance. Ten of the triorthogonal codes need a `[[69,1,13]]` code. The
 paper takes it from a `[70,35,14]` code that is only formally self-dual.
 [`transversal_t_codes/search_sd70.py`](transversal_t_codes/search_sd70.py)
 found a self-dual `[70,35,12]` code whose words through one coordinate all
-weigh at least 14, which is enough. See
+weigh at least 14, which is enough.
+
+A. Gong found two doubly even self-dual codes, `[[41,1,9]]` and `[[65,1,13]]`,
+and doubled them onto `[[95,1,7]]` in a note in her repository
+[`gongaa/RM127`](https://github.com/gongaa/RM127/tree/main/triply-even). The
+result is four triply even codes, `[[177,1,9]]`, `[[271,1,11]]`,
+`[[401,1,13]]` and `[[559,1,15]]`, shorter than the paper's 185, 279, 417 and
+575 qubits. `T` on every qubit is their logical `T` or `T†`, with no `S` or
+`CZ`. The same script builds them from her two self-dual codes, and its tests
+prove both of those codes' distances by enumerating all 2^20 and 2^32 words of
+their stabiliser spaces. See
 [`transversal_t_codes/README.md`](transversal_t_codes/README.md).
 
 ## Context for AI agents: `agent_context/`
@@ -272,7 +283,9 @@ expected outputs and runtimes.
   [`borrowed_identities/README.md`](borrowed_identities/README.md) and pinned
   by its tests.
 - **The transversal-T codes** of Jain and Albert are built here from the
-  paper's construction, with no files copied. See
+  paper's construction, with no files copied. Gong's four codes are built from
+  her two self-dual codes, whose stabilisers are copied from her repository
+  under its MIT licence. See
   [`transversal_t_codes/README.md`](transversal_t_codes/README.md).
 - **Third-party data** the repository uses is listed, with its terms, in
   [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).

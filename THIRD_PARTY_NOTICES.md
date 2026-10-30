@@ -73,9 +73,10 @@ lists `large_unified_l3_circuits.txt.zip`, and the READMEs, `LICENSE` and
 [Apache License 2.0](borrowed_identities/upstream_large_unified/LICENSE), and
 the same citation applies.
 
-## Transversal-T codes of Jain and Albert
+## Transversal-T codes of Jain and Albert, and of A. Gong
 
-`transversal_t_codes/` contains no third-party files. It builds the codes of
+Apart from `gong_self_dual_codes.json` (below), `transversal_t_codes/`
+contains no third-party files. It builds the codes of
 S. P. Jain and V. V. Albert, “Transversal Clifford and T-gate codes of short
 length and high distance,” *IEEE J. Sel. Areas Inf. Theory* 6, 127–137 (2025)
 (<https://doi.org/10.1109/JSAIT.2025.3570832>, arXiv:2408.12752), from the
@@ -85,3 +86,35 @@ self-dual code is from P. Gaborit's tables of self-dual codes
 (<https://www.unilim.fr/pages_perso/philippe.gaborit/SD/>); no data was copied
 from them.
 
+`transversal_t_codes/gong_self_dual_codes.json` holds the stabilisers of two
+doubly even self-dual codes, `[[41,1,9]]` and `[[65,1,13]]`, copied from
+`triply-even/41_XZ.mtx` and `triply-even/65_XZ.mtx` of A. Gong's repository
+<https://github.com/gongaa/RM127> at commit
+`b425fd5f07e86152518115c939a03b21b87960ae`, rewritten as lists of qubit
+indices. Please cite her note, "On some K=1 codes admitting strongly transversal
+T" (in that repository, `triply-even/`), for these codes and the four codes
+doubled from them. They are used under the repository's MIT licence:
+
+```text
+MIT License
+
+Copyright (c) 2024 Anqi Gong
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
