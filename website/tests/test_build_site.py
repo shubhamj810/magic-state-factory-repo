@@ -321,13 +321,15 @@ class TheBuiltSite(unittest.TestCase):
         self.assertNotIn("<!--#", text)
 
     def test_the_submission_box_matches_the_issue_form(self):
-        text = (self.out / "contribute.html").read_text(encoding="utf-8")
         form = (Path(__file__).resolve().parents[2] / ".github" / "ISSUE_TEMPLATE" /
                 "submit-factory.yml").read_text(encoding="utf-8")
-        self.assertIn('name="template" value="submit-factory.yml"', text)
-        for field in ("name", "description"):
-            self.assertIn(f'name="{field}"', text)
-            self.assertIn(f"id: {field}\n", form)
+        for page in ("contribute.html", "index.html"):   # the full form, and the landing page's short one
+            text = (self.out / page).read_text(encoding="utf-8")
+            self.assertIn('action="https://github.com/shubhamj810/magic-state-factory-repo/issues/new"', text)
+            self.assertIn('name="template" value="submit-factory.yml"', text)
+            for field in ("name", "description"):
+                self.assertIn(f'name="{field}"', text)
+                self.assertIn(f"id: {field}\n", form)
         self.assertIn('labels: ["factory submission"]', form)
 
     def test_the_video_is_on_the_about_page_and_linked_from_home(self):

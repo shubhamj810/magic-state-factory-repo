@@ -36,10 +36,23 @@
         <a href="search.html?lit=1">from the literature</a>
       </p>
 
-      <div class="community">
-        <p>A community effort. Have a factory? Send it in any format.</p>
-        <a class="btn ghost" href="contribute.html">Contribute a factory</a>
-      </div>
+      <form class="quick-submit" id="quick-submit" method="get" target="_blank" rel="noopener"
+            action="https://github.com/shubhamj810/magic-state-factory-repo/issues/new"
+            aria-labelledby="qs-head">
+        <p id="qs-head"><strong>Have a factory?</strong> Send it in any format: parameters, a gate, a matrix, a construction or a link.</p>
+        <input type="hidden" name="template" value="submit-factory.yml">
+        <input type="hidden" name="title" value="Factory submission">
+        <div class="qs-row">
+          <label class="sr-only" for="qs-name">Your name</label>
+          <input id="qs-name" name="name" type="text" autocomplete="name" required placeholder="Your name">
+          <label class="sr-only" for="qs-text">The factories</label>
+          <input id="qs-text" name="description" type="text" maxlength="6000" required
+                 placeholder="e.g. a [[49, 1, 5]] factory for T, built from ...">
+          <button type="submit" class="btn primary">Send</button>
+        </div>
+        <p class="qs-note">Opens a prefilled form on GitHub, where you can attach files.
+        <a href="contribute.html">How to contribute</a> &middot; <a href="contribute.html#email">email instead</a></p>
+      </form>
       <p class="hero-video"><a href="about.html#video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>New to magic states? A 12-minute video on why fault-tolerant computers need them, how factories like 15-to-1 distill them, and what that costs.</a></p>
     </div>
 

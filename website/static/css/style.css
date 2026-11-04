@@ -634,12 +634,20 @@ figure.video figcaption { margin-top: 8px; font-size: 14px; color: var(--text-di
                    border-radius: var(--radius-sm); white-space: nowrap; }
 .tf-check { margin-top: 6px; }
 
-/* the community call in the hero */
-.community { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 26px;
-             padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.12); }
-.community p { margin: 0; flex: 1 1 300px; font: 16px/1.5 var(--serif); color: var(--hero-text); }
-.btn.ghost { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.45); }
-.btn.ghost:hover { border-color: #fff; background: rgba(255, 255, 255, 0.06); }
+/* the hero's submission form: the contribute page's form in one line */
+.quick-submit { margin-top: 26px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.12); max-width: 760px; }
+.quick-submit p { margin: 0 0 10px; font: 16px/1.5 var(--serif); color: var(--hero-text); }
+.quick-submit p strong { color: #fff; font-weight: 600; }
+.qs-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr) auto; gap: 8px; }
+.qs-row input { min-width: 0; font: 15px var(--sans); color: var(--text); background: var(--surface);
+                border: 1px solid transparent; border-radius: var(--radius); padding: 9px 12px; }
+.qs-row input:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 1px var(--brand); }
+.qs-row .btn { padding: 0 20px; }
+.quick-submit .qs-note { margin: 8px 0 0; font: 13.5px/1.5 var(--sans); color: var(--hero-dim); }
+.qs-note a { white-space: nowrap; color: #dfe4ec; text-decoration: underline; text-decoration-color: rgba(255, 255, 255, 0.3);
+             text-underline-offset: 3px; }
+.qs-note a:hover { color: #fff; text-decoration-color: #fff; }
+@media (max-width: 760px) { .qs-row { grid-template-columns: 1fr; } .qs-row .btn { padding: 10px 20px; } }
 
 /* ------------------------------------------------------- factory pages */
 .label-h { font-family: var(--mono); font-weight: 500; letter-spacing: -0.01em; }
