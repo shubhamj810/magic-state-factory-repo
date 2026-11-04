@@ -285,7 +285,7 @@ class TheBuiltSite(unittest.TestCase):
     def test_a_factory_page_reads_without_javascript(self):
         f = next(x for x in self.index["factories"] if x["id"] == "15.1.3.a")
         text = (self.out / "f" / "15.1.3.a" / "index.html").read_text(encoding="utf-8")
-        self.assertIn("<title>[[15, 1, 3]] factory, T0", text)
+        self.assertIn("<title>[[15, 1, 3]] magic-state factory, T0", text)
         self.assertIn('<table class="matrix">', text)
         self.assertEqual(text.count('<tr class="out'), f["k"])
         self.assertEqual(text.count('<tr class="chk'), f["N"] - f["k"])
@@ -346,6 +346,20 @@ class TheBuiltSite(unittest.TestCase):
         gates = namespace["equivalent_gates"](2, [[0], [1]])
         self.assertEqual(sorted(namespace["name"](g, 2) for g in gates),
                          ["T0·CS01", "T0·T1", "T1·CS01"])
+
+    def test_every_listed_page_names_its_own_address_and_the_home_page_describes_the_dataset(self):
+        sitemap = (self.out / "sitemap.xml").read_text(encoding="utf-8")
+        site = "https://shubhamj810.github.io/magic-state-factory-repo/"
+        for url in re.findall(r"<loc>(.*?)</loc>", sitemap)[:8]:
+            path = url[len(site):]
+            text = (self.out / (path + "index.html" if path.endswith("/") or not path else path)).read_text(encoding="utf-8")
+            self.assertIn(f'<link rel="canonical" href="{url}">', text)
+        home = (self.out / "index.html").read_text(encoding="utf-8")
+        block = re.search(r'<script type="application/ld\+json">\n(.*?)\n</script>', home, re.S)
+        dataset = next(g for g in json.loads(block.group(1))["@graph"] if g["@type"] == "Dataset")
+        self.assertIn(f"{self.index['counts']['factories']} verified", dataset["description"])
+        for download in dataset["distribution"]:
+            self.assertTrue((self.out / download["contentUrl"][len(site):]).exists())
 
     def test_the_sitemap_lists_every_page(self):
         sitemap = (self.out / "sitemap.xml").read_text(encoding="utf-8")

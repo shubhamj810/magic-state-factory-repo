@@ -316,7 +316,11 @@ def source_stamp(catalog_path: Path, large_path: Path | None = None) -> dict:
     return {"commit": commit or None, "date": date or None}
 
 
-def render_pages(out: Path) -> None:
+def render_pages(out: Path, index: dict) -> None:
+    import pages as P
+    home = out / "index.html"
+    home.write_text(home.read_text(encoding="utf-8").replace(
+        "<!--#dataset-->", P.structured_data(index)), encoding="utf-8")
     stitch(out, list(out.glob("*.html")), depth=0)
 
 
@@ -390,6 +394,7 @@ def shell(title: str, description: str, main: str, current: str, scripts, depth:
 <title>{P.esc(title)}</title>
 <meta name="description" content="{P.esc(description)}">
 <link rel="canonical" href="{P.SITE}{canonical}">
+<meta property="og:url" content="{P.SITE}{canonical}">
 <meta property="og:title" content="{P.esc(title)}">
 <meta property="og:description" content="{P.esc(description)}">
 </head>
@@ -433,8 +438,11 @@ def render_entries(out: Path, index: dict, records: list) -> None:
     stitch(out, [out / path / "index.html" for path, _ in pages], depth=2)
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    # the date of the catalogue the pages were built from, so a crawler revisits after a merge
+    date = index["source"].get("date")
+    lastmod = f"<lastmod>{date}</lastmod>" if date else ""
     for path in ["", "search.html", "about.html", "references.html", "contribute.html"] + [path for path, _ in pages]:
-        sitemap.append(f"  <url><loc>{P.SITE}{path}</loc></url>")
+        sitemap.append(f"  <url><loc>{P.SITE}{path}</loc>{lastmod}</url>")
     sitemap.append("</urlset>")
     (out / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
 
@@ -493,7 +501,7 @@ def build(out: Path, catalog_path: Path = CATALOG, large_path: Path | None = Non
         for s in summaries:
             writer.writerow(["; ".join(s[f]) if isinstance(s[f], list) else s[f]
                              for f in CSV_FIELDS])
-    render_pages(out)
+    render_pages(out, index)
     render_entries(out, index, records)
     # GitHub Pages runs Jekyll unless told not to, and Jekyll drops _-prefixed paths.
     (out / ".nojekyll").write_text("", encoding="utf-8")

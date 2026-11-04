@@ -15,14 +15,14 @@ master_catalog/master_catalog_large.json    605 rows built by a construction
             |  website/build_site.py         standard library only, ~20 s
             v
 website/_site/                               (git-ignored; built in CI)
-  index.html          landing: search, what the catalogue offers, best factories, frontier, parameter table
+  index.html          landing: search, what the catalogue offers, headline figures, frontier, parameter table
   about.html          what the numbers mean, how each is obtained, citing, data
   contribute.html     a step-by-step guide to contributing, ending with an email address
   search.html         every factory: filters, typed queries, sort, CSV/JSON export
   f/<label>/          one static page per factory, e.g. f/15.1.3.a/
   p/<n>.<k>.<d>/      one static page per parameter set, e.g. p/15.1.3/
   factory.html, params.html   old addresses, redirected to the two above
-  sitemap.xml         every page, for search engines
+  sitemap.xml         every page, dated by the catalogue's last commit, for search engines
   data/index.json             every row WITHOUT columns (what the list pages read)
   data/factories/<label>.json one row WITH columns
   data/factories.csv          the index as a spreadsheet
@@ -42,6 +42,14 @@ Every factory and parameter page is rendered to HTML at build time
 without JavaScript, and can be indexed by search engines (including Google
 Scholar) and archived. The scripts only add interaction on top: sorting, the
 matrix view toggle, exports, the CNOT + S tool and KaTeX typesetting.
+
+Every page names its own address in a canonical link. The landing page also
+carries a schema.org `Dataset` block, which Google Dataset Search reads: the
+catalogue's name, its factory count, its authors, the paper to cite and the
+CSV and JSON downloads. To have a search engine crawl the site, submit
+`sitemap.xml` in Google Search Console or Bing Webmaster Tools. A project
+site's own `robots.txt` is never read, since crawlers look for it only at
+the domain root, `shubhamj810.github.io/robots.txt`.
 
 A factory's address is its catalogue label, `catalog_label` in
 `master_catalog.json`, for example `f/15.1.3.a/`. Labels are assigned once by
@@ -64,7 +72,7 @@ results each filter value would give. A column chooser hides or shows columns
 (T-count is off by default), and every row can preview its matrix inline. `/`
 focuses the search box on any page. The landing page ranks by γ among pure
 T⊗k factories by default, and by γ_ρ across every gate at the flip of a
-switch; the best-factories figures and the frontier both
+switch; the headline figures and the frontier both
 follow it. The frontier plot switches to a table of its frontier points and
 exports to SVG and PNG.
 [`CITATION.cff`](../CITATION.cff) at the repository root gives GitHub's

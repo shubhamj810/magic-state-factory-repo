@@ -670,12 +670,52 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
     return head + body
 
 
+def structured_data(index: dict) -> str:
+    """The landing page's schema.org description, read by search engines and by
+    Google Dataset Search: the site, and the catalogue as a dataset."""
+    names = ["Magic State Factory Database", "Magic States Database"]
+    count = index["counts"]["factories"]
+    dataset = {
+        "@type": "Dataset",
+        "name": "Magic State Factory Catalog",
+        "alternateName": names,
+        "description": (f"An open database of {count} verified magic-state distillation factories. "
+                        "Each factory is stored as an explicit binary matrix whose columns are "
+                        "pi/4 parity rotations, and its distance, output gate, T-count and overhead "
+                        "exponents are recomputed from that matrix. Each factory has a permanent "
+                        "label n.k.d.x."),
+        "url": SITE,
+        "sameAs": REPO,
+        "keywords": ["magic states", "magic state factories", "magic state distillation",
+                     "magic state database", "factory database", "triorthogonal codes",
+                     "T gate", "CCZ", "fault-tolerant quantum computing",
+                     "quantum error correction"],
+        "creator": [{"@type": "Person", "name": "Shubham P. Jain", "url": "https://shubhamj810.github.io/"},
+                    {"@type": "Person", "name": "Shraddha Singh"}],
+        "citation": "https://arxiv.org/abs/2610.06535",
+        "isAccessibleForFree": True,
+        "distribution": [
+            {"@type": "DataDownload", "encodingFormat": "text/csv",
+             "contentUrl": SITE + "data/factories.csv"},
+            {"@type": "DataDownload", "encodingFormat": "application/json",
+             "contentUrl": SITE + "data/index.json"},
+        ],
+    }
+    if index["source"].get("date"):
+        dataset["dateModified"] = index["source"]["date"]
+    graph = {"@context": "https://schema.org", "@graph": [
+        {"@type": "WebSite", "name": "Magic State Factory Catalog", "alternateName": names, "url": SITE},
+        dataset]}
+    text = json.dumps(graph, ensure_ascii=False, indent=1).replace("</", "<\\/")
+    return f'<script type="application/ld+json">\n{text}\n</script>'
+
+
 def factory_page(record, summary, groups, by_id, stamp):
     p = record["parameters"]
     label = record["id"]
     gate = record["gate"]["human"]
     gate = gate if len(gate) <= 40 else gate[:37] + "..."
-    title = f"{params_text(p['n'], p['k'], p['d'])} factory, {gate} · Magic State Factory Catalog"
+    title = f"{params_text(p['n'], p['k'], p['d'])} magic-state factory, {gate} · Magic State Factory Catalog"
     desc = (f"Magic-state factory {params_text(p['n'], p['k'], p['d'])} with output gate "
             f"{record['gate']['human'][:120]}. Binary matrix, distance, overhead exponents and original source.")
     return title, desc, factory_main(record, summary, groups, by_id, stamp)
@@ -732,7 +772,8 @@ def params_main(group, members, groups) -> str:
 
 def params_page(group, members, groups):
     n, k, d = group["n"], group["k"], group["d"]
-    title = f"{params_text(n, k, d)} · Magic State Factory Catalog"
+    title = (f"{params_text(n, k, d)} magic-state factor{'y' if len(members) == 1 else 'ies'}"
+             " · Magic State Factory Catalog")
     desc = (f"{len(members)} inequivalent magic-state factor{'y' if len(members) == 1 else 'ies'} with "
             f"{n} inputs, {k} output{'s' if k != 1 else ''} and distance {d}.")
     return title, desc, params_main(group, members, groups)
