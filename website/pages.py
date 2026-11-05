@@ -694,6 +694,7 @@ def structured_data(index: dict) -> str:
                     {"@type": "Person", "name": "Shraddha Singh"}],
         "citation": "https://arxiv.org/abs/2610.06535",
         "isAccessibleForFree": True,
+        "license": "https://www.apache.org/licenses/LICENSE-2.0",
         "distribution": [
             {"@type": "DataDownload", "encodingFormat": "text/csv",
              "contentUrl": SITE + "data/factories.csv"},

@@ -296,3 +296,10 @@ expected outputs and runtimes.
 - **Per-row provenance** is in each row's `sources`: the file, record and
   construction every circuit came from. Where each claim is certified is mapped
   in [`theory/PROVENANCE.md`](theory/PROVENANCE.md).
+
+## Licence
+
+The repository's own code and data, the master catalogue included, are licensed
+under the [Apache License 2.0](LICENSE), the licence of the Borrowed Identities
+repository. Files copied from other projects keep their own terms, which
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) lists.

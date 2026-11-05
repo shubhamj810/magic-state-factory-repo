@@ -17,6 +17,7 @@ authors:
     given-names: Shraddha
 repository-code: "https://github.com/shubhamj810/magic-state-factory-repo"
 url: "https://shubhamj810.github.io/magic-state-factory-repo/"
+license: Apache-2.0
 keywords:
   - magic-state distillation
   - fault-tolerant quantum computing

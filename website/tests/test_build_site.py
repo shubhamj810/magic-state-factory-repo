@@ -360,6 +360,9 @@ class TheBuiltSite(unittest.TestCase):
         block = re.search(r'<script type="application/ld\+json">\n(.*?)\n</script>', home, re.S)
         dataset = next(g for g in json.loads(block.group(1))["@graph"] if g["@type"] == "Dataset")
         self.assertIn(f"{self.index['counts']['factories']} verified", dataset["description"])
+        self.assertEqual(dataset["license"], "https://www.apache.org/licenses/LICENSE-2.0")
+        self.assertTrue((Path(__file__).resolve().parents[2] / "LICENSE").read_text(encoding="utf-8")
+                        .lstrip().startswith("Apache License"))
         for download in dataset["distribution"]:
             self.assertTrue((self.out / download["contentUrl"][len(site):]).exists())
 

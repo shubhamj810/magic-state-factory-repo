@@ -1,5 +1,9 @@
 # Third-party notices
 
+The repository's own code and data are licensed under the
+[Apache License 2.0](LICENSE). The files listed below come from other projects
+and keep their own terms.
+
 ## Gillot–Langevin Reed–Muller classification data
 
 The repository includes `classification/legacy/rank7_census/data/B-0-3-7.dat`,
@@ -44,7 +48,8 @@ their READMEs. Cite:
 > Distillation Factories and a Unified Numerical Search,” arXiv:2606.28518
 > (2026). <https://arxiv.org/abs/2606.28518>
 
-The upstream repository states no licence. The files are included unchanged,
+At that commit the upstream repository stated no licence. It has since
+adopted the Apache License 2.0 (see below). The files are included unchanged,
 with attribution, so that the master catalogue's provenance resolves inside this
 repository and the circuits in `borrowed_identities/circuits/` can be rebuilt.
 They are not covered by any licence later chosen for this repository's own
