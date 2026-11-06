@@ -319,7 +319,7 @@
           '<div class="row"><span>' + C.tex(M.count) + "</span><span>" + p.v_ex_best + "</span></div>" +
           '<div class="row"><span>gates</span><span>' + p.count + "</span></div>" +
           (p._front ? '<div class="hint">on the frontier</div>' : "") +
-          (p.certified ? '<div class="hint">distance certified by its source</div>' : "");
+          (p.certified ? '<div class="hint">certified distance</div>' : "");
         tip.classList.add("on");
         svg.style.cursor = "pointer";
       });

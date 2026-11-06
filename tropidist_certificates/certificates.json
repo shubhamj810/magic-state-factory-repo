@@ -1,0 +1,1581 @@
+{
+ "about": "Distance bounds computed by tropidist (B. Cheng, N. Guo and F. Pan, \"Certifying quantum code and circuit distances at scale\", arXiv:2611.08247; github.com/Fanerst/tropidist) for every catalogue row whose distance was not proved exact. Problem: H = the check rows, L = the output rows, one column per rotation in the row's stored order; Delta(H, L) = min{|e| : He = 0, Le != 0}, which is the factory distance. lower_bound is tropidist's certified lower bound (the best over the passes); witness, when present, is a fault set of weight upper_bound that tropidist returned. Witnesses are re-checked by verify_catalog.py; lower bounds are tropidist's and are not re-derived here.",
+ "tropidist": {
+  "repository": "https://github.com/Fanerst/tropidist",
+  "commit": "b03ec2d4077f287f89f97b5c2c16ce5ce17c2c58",
+  "tracked_files_modified": false,
+  "entry_point": "bench/adapters/ours_pipeline.py",
+  "config": "dp=2",
+  "threads": 1,
+  "memory_guard_mb": 6000
+ },
+ "passes": {
+  "o1": {
+   "rows": 62,
+   "time_limit_seconds": [
+    600.0
+   ],
+   "configs": [
+    "dp=2"
+   ]
+  },
+  "o2": {
+   "rows": 2,
+   "time_limit_seconds": [
+    3600.0
+   ],
+   "configs": [
+    "dp=2",
+    "dp=2,table_gb=6"
+   ]
+  },
+  "o3": {
+   "rows": 19,
+   "time_limit_seconds": [
+    3600.0
+   ],
+   "configs": [
+    "dp=2,kmin=6",
+    "dp=2,kmin=7"
+   ]
+  },
+  "o3b": {
+   "rows": 3,
+   "time_limit_seconds": [
+    3600.0
+   ],
+   "configs": [
+    "dp=2,kmin=6",
+    "dp=2,kmin=7"
+   ]
+  }
+ },
+ "catalogue_commit": "4b240d64c187874d22a8ae4a04ff6d761d3b1dcb",
+ "research_commit": "a751ff0",
+ "validation": {
+  "about": "The same runs on every row whose distance the catalogue proves exact: tropidist must return that distance with a lower bound equal to it and a witness of that weight.",
+  "rows": 1752,
+  "outcomes": {
+   "reproduced": 1752
+  },
+  "by_d": {
+   "2": {
+    "reproduced": 943
+   },
+   "3": {
+    "reproduced": 625
+   },
+   "4": {
+    "reproduced": 86
+   },
+   "5": {
+    "reproduced": 70
+   },
+   "6": {
+    "reproduced": 22
+   },
+   "7": {
+    "reproduced": 6
+   }
+  }
+ },
+ "records": [
+  {
+   "label": "177.1.7.a",
+   "n": 177,
+   "k": 1,
+   "N": 47,
+   "columns_sha256": "90682c1308391f5540331c3fcbefa9d1c990e877fa8978f56ff1712d996a0d7d",
+   "catalogue_at_run": {
+    "d": 7,
+    "d_is_exact": false,
+    "d_upper": 9,
+    "d_certified": 9,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 9,
+   "lower_bound_pass": "o1",
+   "upper_bound": 9,
+   "witness": [
+    13,
+    54,
+    99,
+    105,
+    112,
+    113,
+    114,
+    117,
+    127
+   ],
+   "witness_pass": "o1",
+   "result": "certified exact d = 9",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "185.1.7.a",
+   "n": 185,
+   "k": 1,
+   "N": 49,
+   "columns_sha256": "70a26037d54fd19a8fab6ba0162f89f871e531481e7e17b172bfec71e48f471f",
+   "catalogue_at_run": {
+    "d": 7,
+    "d_is_exact": false,
+    "d_upper": 9,
+    "d_certified": 9,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 9,
+   "lower_bound_pass": "o1",
+   "upper_bound": 9,
+   "witness": [
+    35,
+    80,
+    112,
+    115,
+    117,
+    118,
+    128,
+    131,
+    133
+   ],
+   "witness_pass": "o1",
+   "result": "certified exact d = 9",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "189.1.7.a",
+   "n": 189,
+   "k": 1,
+   "N": 50,
+   "columns_sha256": "2f0cf972522d3d1af72bd7410100b7e3e7c1afe7856f29d006d812b2cdf45d66",
+   "catalogue_at_run": {
+    "d": 7,
+    "d_is_exact": false,
+    "d_upper": 9,
+    "d_certified": 9,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 9,
+   "lower_bound_pass": "o1",
+   "upper_bound": 9,
+   "witness": [
+    36,
+    83,
+    116,
+    139,
+    154,
+    158,
+    160,
+    164,
+    169
+   ],
+   "witness_pass": "o1",
+   "result": "certified exact d = 9",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "271.1.7.a",
+   "n": 271,
+   "k": 1,
+   "N": 71,
+   "columns_sha256": "1ce8db8f5b6efc68aaa2a0e71964ca91f77537f6bb7fa397f1f741b0d5753fe2",
+   "catalogue_at_run": {
+    "d": 7,
+    "d_is_exact": false,
+    "d_upper": 11,
+    "d_certified": 11,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 11,
+   "lower_bound_pass": "o1",
+   "upper_bound": 11,
+   "witness": [
+    35,
+    82,
+    103,
+    144,
+    194,
+    201,
+    205,
+    207,
+    212,
+    216,
+    221
+   ],
+   "witness_pass": "o1",
+   "result": "certified exact d = 11",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "279.1.7.a",
+   "n": 279,
+   "k": 1,
+   "N": 73,
+   "columns_sha256": "2fe6901899585a1494e10d1a724ea6e6b7fa7bfbd2a81b9bd831e5bd50899e9c",
+   "catalogue_at_run": {
+    "d": 7,
+    "d_is_exact": false,
+    "d_upper": 11,
+    "d_certified": 11,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 11,
+   "lower_bound_pass": "o1",
+   "upper_bound": 11,
+   "witness": [
+    35,
+    82,
+    116,
+    161,
+    196,
+    219,
+    244,
+    248,
+    250,
+    254,
+    259
+   ],
+   "witness_pass": "o1",
+   "result": "certified exact d = 11",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "283.1.7.a",
+   "n": 283,
+   "k": 1,
+   "N": 74,
+   "columns_sha256": "d410afc41a35707fabfa80020206591924b4ed012f3c16915453c45530682d95",
+   "catalogue_at_run": {
+    "d": 7,
+    "d_is_exact": false,
+    "d_upper": 11,
+    "d_certified": 11,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 11,
+   "lower_bound_pass": "o1",
+   "upper_bound": 11,
+   "witness": [
+    35,
+    82,
+    120,
+    167,
+    208,
+    231,
+    248,
+    252,
+    254,
+    258,
+    263
+   ],
+   "witness_pass": "o1",
+   "result": "certified exact d = 11",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "401.1.6.a",
+   "n": 401,
+   "k": 1,
+   "N": 104,
+   "columns_sha256": "bf241fe68362c5a0870e5d66581063a17e9b98632f0859613f85846333f2364d",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 13,
+    "d_certified": 13,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 13,
+   "lower_bound_pass": "o1",
+   "upper_bound": 13,
+   "witness": [
+    0,
+    2,
+    4,
+    5,
+    10,
+    21,
+    23,
+    31,
+    32,
+    33,
+    42,
+    53,
+    60
+   ],
+   "witness_pass": "o1",
+   "result": "certified exact d = 13",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "417.1.6.a",
+   "n": 417,
+   "k": 1,
+   "N": 108,
+   "columns_sha256": "da8cf16fabf4b860acab3e932a18d48307e1e80d03805cc60bd9c7c9e4e5b74b",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 13,
+    "d_certified": 13,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 13,
+   "lower_bound_pass": "o2",
+   "upper_bound": 13,
+   "witness": [
+    0,
+    1,
+    3,
+    5,
+    9,
+    15,
+    18,
+    23,
+    24,
+    27,
+    34,
+    45,
+    51
+   ],
+   "witness_pass": "o2",
+   "result": "certified exact d = 13",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "441.1.6.a",
+   "n": 441,
+   "k": 1,
+   "N": 114,
+   "columns_sha256": "56f2a1625d063d9f3c64ec339fb1e7bed414eaa4df3760f078b59fbff2fbb001",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 13,
+    "d_certified": 13,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 10,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [10, none]",
+   "worker_died_after_last_checkpoint": true
+  },
+  {
+   "label": "511.9.6.a",
+   "n": 511,
+   "k": 9,
+   "N": 36,
+   "columns_sha256": "541703d1e7582ccade63925c5bfd569673f0c2a28a82866c1aabd69960f8146b",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 7,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 7,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [7, 7]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "512.39.6.a",
+   "n": 512,
+   "k": 39,
+   "N": 85,
+   "columns_sha256": "18b286cb2cb00a88cadbffbd0957771f657ab73cd6fee494ec1e468c48665b80",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 8,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 8,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [8, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "512.84.6.a",
+   "n": 512,
+   "k": 84,
+   "N": 130,
+   "columns_sha256": "add2ab66114569269379d8ebc9781df356afdb3051c603c9699aced885b4d941",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 8,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 8,
+   "lower_bound_pass": "o1",
+   "upper_bound": 8,
+   "witness": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "witness_pass": "o1",
+   "result": "certified exact d = 8",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "559.1.6.a",
+   "n": 559,
+   "k": 1,
+   "N": 144,
+   "columns_sha256": "3848c56b30e584adf853745f58a0590af935727eed0b84c502354d1996eb4ac5",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 15,
+    "d_certified": 15,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 9,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [9, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "575.1.6.a",
+   "n": 575,
+   "k": 1,
+   "N": 148,
+   "columns_sha256": "fabe4923e456f4b412cc510705d897ed2f1b122d4e3c669bb396392b25895bc9",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 15,
+    "d_certified": 15,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 9,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [9, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "599.1.6.a",
+   "n": 599,
+   "k": 1,
+   "N": 154,
+   "columns_sha256": "d4500cc49d29e16ed7d8cd39ae9dab53dafac2f758aef2ab269fdf6c15f2fd64",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 15,
+    "d_certified": 15,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 9,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [9, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": 8,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 7,
+   "lower_bound_pass": "o3",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [7, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "756.32.6.a",
+   "n": 756,
+   "k": 32,
+   "N": 80,
+   "columns_sha256": "1579d68f282d560082494a9379ca7cd23bcd73f14f7a582b0aa7c1019e723280",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": 9,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 7,
+   "lower_bound_pass": "o3",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [7, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "761.1.6.a",
+   "n": 761,
+   "k": 1,
+   "N": 195,
+   "columns_sha256": "2076299711b052b61e47064f20329d96e8c39f803f00ab0047dfa5f119d63844",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 17,
+    "d_certified": 17,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 9,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [9, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "777.1.6.a",
+   "n": 777,
+   "k": 1,
+   "N": 199,
+   "columns_sha256": "34d2ac88904d74e260da820f9424425cffa8a7a864fe124f3f682a8b86b8c081",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 17,
+    "d_certified": 17,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 9,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [9, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "805.1.6.a",
+   "n": 805,
+   "k": 1,
+   "N": 206,
+   "columns_sha256": "64ef84d1d6c96e5d51d8060c8b1fdb1b32c0585d568e9f2ff15be39d65e5871f",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 17,
+    "d_certified": 17,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 9,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [9, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "901.123.6.a",
+   "n": 901,
+   "k": 123,
+   "N": 176,
+   "columns_sha256": "1411836c964e1be82ac0b1f9e8ef5e161a4bb8417c9bc0a0df0bda6dc82533b1",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": 6,
+   "witness": [
+    0,
+    10,
+    48,
+    501,
+    692,
+    699
+   ],
+   "witness_pass": "o3",
+   "result": "certified exact d = 6",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "902.122.6.a",
+   "n": 902,
+   "k": 122,
+   "N": 176,
+   "columns_sha256": "2db714d7aa58bc58e216ce950d2f22dc67e3efb660b94197a108c91a184d6dee",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": 6,
+   "witness": [
+    0,
+    3,
+    53,
+    296,
+    573,
+    862
+   ],
+   "witness_pass": "o3",
+   "result": "certified exact d = 6",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "904.120.6.a",
+   "n": 904,
+   "k": 120,
+   "N": 176,
+   "columns_sha256": "41af877ed05fdd6d4fda5c5c66c12e0298c6473126ac8121b07dd0a6cec9a0cd",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": 6,
+   "witness": [
+    0,
+    7,
+    155,
+    419,
+    455,
+    775
+   ],
+   "witness_pass": "o3",
+   "result": "certified exact d = 6",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "905.119.6.a",
+   "n": 905,
+   "k": 119,
+   "N": 176,
+   "columns_sha256": "62624bc1f2198c930aaac71d454f265a9959908a5e8116432f7cc6cfe80cb7c7",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": 6,
+   "witness": [
+    0,
+    49,
+    86,
+    294,
+    587,
+    838
+   ],
+   "witness_pass": "o3",
+   "result": "certified exact d = 6",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "906.118.6.a",
+   "n": 906,
+   "k": 118,
+   "N": 176,
+   "columns_sha256": "c855fe96fb3c1283201af37804a66d4b4779110f38c6f1d1b129874b007b317f",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": 6,
+   "witness": [
+    0,
+    4,
+    254,
+    420,
+    668,
+    708
+   ],
+   "witness_pass": "o3",
+   "result": "certified exact d = 6",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "907.117.6.a",
+   "n": 907,
+   "k": 117,
+   "N": 176,
+   "columns_sha256": "c717a2f72f3a39a512462e7a56675c5d4b70241313e12c02778d47b29f17ae1e",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": 6,
+   "witness": [
+    0,
+    1,
+    63,
+    117,
+    310,
+    367
+   ],
+   "witness_pass": "o3",
+   "result": "certified exact d = 6",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "908.116.6.a",
+   "n": 908,
+   "k": 116,
+   "N": 176,
+   "columns_sha256": "ebbb13b7993c686d1a7c821ed844c9ef7a7f973ef550330b73f344d5fb4d284d",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": 6,
+   "witness": [
+    0,
+    27,
+    152,
+    245,
+    399,
+    783
+   ],
+   "witness_pass": "o3",
+   "result": "certified exact d = 6",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "909.115.6.a",
+   "n": 909,
+   "k": 115,
+   "N": 176,
+   "columns_sha256": "b9bec4ad91a036f48310297e9bda2b0f875eb1b1d473c48814138b56643c0df0",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": 6,
+   "witness": [
+    0,
+    27,
+    152,
+    245,
+    399,
+    783
+   ],
+   "witness_pass": "o3",
+   "result": "certified exact d = 6",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "910.114.6.a",
+   "n": 910,
+   "k": 114,
+   "N": 176,
+   "columns_sha256": "c5dac4d2abb66781a7917aafbcf06262317ed33bfa814a526e057256d94d563e",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": 6,
+   "witness": [
+    0,
+    53,
+    374,
+    417,
+    455,
+    909
+   ],
+   "witness_pass": "o3",
+   "result": "certified exact d = 6",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "911.113.6.a",
+   "n": 911,
+   "k": 113,
+   "N": 176,
+   "columns_sha256": "4c28c262384c32a6eddddbbfcadf11b1ac0dc29861b01f630cf8cbd6eb563a6f",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": 6,
+   "witness": [
+    0,
+    31,
+    206,
+    322,
+    353,
+    578
+   ],
+   "witness_pass": "o3",
+   "result": "certified exact d = 6",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "912.112.6.a",
+   "n": 912,
+   "k": 112,
+   "N": 176,
+   "columns_sha256": "7d03fa91242d9c264982b780258888fa28f1285686f0d0e251019ec8c1900f74",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": 6,
+   "witness": [
+    0,
+    31,
+    206,
+    323,
+    354,
+    579
+   ],
+   "witness_pass": "o3",
+   "result": "certified exact d = 6",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "935.89.6.a",
+   "n": 935,
+   "k": 89,
+   "N": 176,
+   "columns_sha256": "33fe52c0d85eb9f90397f1e9e9a2cf32726c94aa9e967d4dd5b287112de60338",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 7,
+   "lower_bound_pass": "o3",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [7, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "936.88.6.a",
+   "n": 936,
+   "k": 88,
+   "N": 176,
+   "columns_sha256": "3ac08541181f1472b393bf879556625a90f514f20e942637f8462c9c9358bc1d",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 7,
+   "lower_bound_pass": "o3",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [7, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "937.87.6.a",
+   "n": 937,
+   "k": 87,
+   "N": 176,
+   "columns_sha256": "8df1288ab62f5bd55356e89e8f50a0773471a6a75cdece4f698cad1b630bf73e",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [6, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [6, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "967.1.6.a",
+   "n": 967,
+   "k": 1,
+   "N": 247,
+   "columns_sha256": "28908711caf3b69df6773c077b3d3ddab18d3dd723706fd33a2e2ad7a3242b4b",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 19,
+    "d_certified": 19,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 8,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [8, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "983.1.6.a",
+   "n": 983,
+   "k": 1,
+   "N": 251,
+   "columns_sha256": "b9d5f8399d3963170e1b5dd0a9b0e1c28f81e3b8ccd37b3908dd29ee57d47367",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 19,
+    "d_certified": 19,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 8,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [8, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "988.36.6.a",
+   "n": 988,
+   "k": 36,
+   "N": 176,
+   "columns_sha256": "63e6c574b26b1f346eca4798dcac780283a4ff827918ebd226fec888dff350b7",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 7,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [7, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "998.26.6.a",
+   "n": 998,
+   "k": 26,
+   "N": 176,
+   "columns_sha256": "c7193dbd9a8efba2a54376d18edd7759bdf2febec411020af934417189893e3d",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": null,
+    "d_certified_is_exact": null
+   },
+   "lower_bound": 7,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [7, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "1011.1.6.a",
+   "n": 1011,
+   "k": 1,
+   "N": 258,
+   "columns_sha256": "4880760d8765ecdbdb12bb3e2adaf9b79b162828588dbc56dd93cf8a1b2071de",
+   "catalogue_at_run": {
+    "d": 6,
+    "d_is_exact": false,
+    "d_upper": 19,
+    "d_certified": 19,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 8,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [8, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "1301.1.3.a",
+   "n": 1301,
+   "k": 1,
+   "N": 331,
+   "columns_sha256": "bbb91a1c3cb3864438ea6cb5c4bebc5b84a01e13f1b886e05d1721b4af7ded49",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 21,
+    "d_certified": 21,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 8,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [8, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "1317.1.3.a",
+   "n": 1317,
+   "k": 1,
+   "N": 335,
+   "columns_sha256": "0193ab9be9ba23af2691e292006d07a9825e7177c283bfbb8a06039164888aa1",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 21,
+    "d_certified": 21,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 8,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [8, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "1345.1.3.a",
+   "n": 1345,
+   "k": 1,
+   "N": 342,
+   "columns_sha256": "55e0929be2af471620dc6270407e405aba3df12e68bfb6362c039ef32e46de8d",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 21,
+    "d_certified": 21,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 8,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [8, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "1635.1.3.a",
+   "n": 1635,
+   "k": 1,
+   "N": 415,
+   "columns_sha256": "11acc13d66e3b4422452ec2ed0520ffdc34217e1e9ad70e1255afc1274b97bbb",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 23,
+    "d_certified": 23,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 7,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [7, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "1651.1.3.a",
+   "n": 1651,
+   "k": 1,
+   "N": 419,
+   "columns_sha256": "7ed15d50f92d83ccb1d296fbc6736690a43a51d219a18792fcb687ba1b0f2144",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 23,
+    "d_certified": 23,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 7,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [7, none]",
+   "worker_died_after_last_checkpoint": true
+  },
+  {
+   "label": "1675.373.3.a",
+   "n": 1675,
+   "k": 373,
+   "N": 397,
+   "columns_sha256": "7d4b1f52e551fc2abd510f7f846cec762e67b5bb3f20aa20337fe6b70229d5d4",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": 4,
+    "d_certified_is_exact": true
+   },
+   "lower_bound": 4,
+   "lower_bound_pass": "o1",
+   "upper_bound": 4,
+   "witness": [
+    0,
+    3,
+    31,
+    890
+   ],
+   "witness_pass": "o1",
+   "result": "certified exact d = 4",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "1676.372.3.a",
+   "n": 1676,
+   "k": 372,
+   "N": 397,
+   "columns_sha256": "a859d397da1ad62d99187ec7617ca6eb70a53ff8d63cb07e35c667c50510cd5a",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": 4,
+    "d_certified_is_exact": true
+   },
+   "lower_bound": 4,
+   "lower_bound_pass": "o1",
+   "upper_bound": 4,
+   "witness": [
+    0,
+    52,
+    808,
+    1097
+   ],
+   "witness_pass": "o1",
+   "result": "certified exact d = 4",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "1679.1.3.a",
+   "n": 1679,
+   "k": 1,
+   "N": 426,
+   "columns_sha256": "d18e7aad2d9a5673812f0af388b96ab1df47d2468d59e2cd81355436bac33e0d",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 23,
+    "d_certified": 23,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 7,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [7, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "1683.365.3.a",
+   "n": 1683,
+   "k": 365,
+   "N": 397,
+   "columns_sha256": "d14ce9216b434dc38e129cf586c028dc7ad8acec71137828fc37c142429d54ac",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": 4,
+    "d_certified_is_exact": true
+   },
+   "lower_bound": 4,
+   "lower_bound_pass": "o1",
+   "upper_bound": 4,
+   "witness": [
+    1,
+    7,
+    8,
+    863
+   ],
+   "witness_pass": "o1",
+   "result": "certified exact d = 4",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "1715.287.3.a",
+   "n": 1715,
+   "k": 287,
+   "N": 329,
+   "columns_sha256": "c44ed2f4d348d4a25010180ef77c04c8dfb1a6f56970f7ee0b74edd791e19974",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": null,
+    "d_certified": 6,
+    "d_certified_is_exact": true
+   },
+   "lower_bound": 4,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [4, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "2017.1.3.a",
+   "n": 2017,
+   "k": 1,
+   "N": 511,
+   "columns_sha256": "432e69b814b9d95bb37799c4d7bebda5e4464059b416a21c9dab6917dcc1c3f2",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 25,
+    "d_certified": 25,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 7,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [7, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "2033.1.3.a",
+   "n": 2033,
+   "k": 1,
+   "N": 515,
+   "columns_sha256": "28c416e804aeb8c30631192dbfdfd704d11139e441e211ed28f5e2b76f179971",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 25,
+    "d_certified": 25,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [6, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "2061.1.3.a",
+   "n": 2061,
+   "k": 1,
+   "N": 522,
+   "columns_sha256": "94b78d2b29b56ae7436595b7010b6953fa2f7ba37f2ef7484d79f61d3aea40bd",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 25,
+    "d_certified": 25,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [6, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "2399.1.3.a",
+   "n": 2399,
+   "k": 1,
+   "N": 607,
+   "columns_sha256": "0a47bb118fac6ae7b3eadbce33f127ee8450acab0969bcf2a637b07cdca2e9ce",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 27,
+    "d_certified": 27,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [6, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "2415.1.3.a",
+   "n": 2415,
+   "k": 1,
+   "N": 611,
+   "columns_sha256": "787283024d9c5a8bc450a0be26ca386daff578151ae0d714d938f82da9ae4b0f",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 27,
+    "d_certified": 27,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [6, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "2443.1.3.a",
+   "n": 2443,
+   "k": 1,
+   "N": 618,
+   "columns_sha256": "c1102f298e52b8c9f77a964ab86d3c115d8fda830205eca6237a2807bee24dcb",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 27,
+    "d_certified": 27,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [6, none]",
+   "worker_died_after_last_checkpoint": true
+  },
+  {
+   "label": "2797.1.3.a",
+   "n": 2797,
+   "k": 1,
+   "N": 707,
+   "columns_sha256": "ce478b3a3da74adaba9e15d1bd91bdacbe098bbb5b860fc83b2361d3d2079067",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 29,
+    "d_certified": 29,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [6, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "2813.1.3.a",
+   "n": 2813,
+   "k": 1,
+   "N": 711,
+   "columns_sha256": "6c271423b90de3eb2bb31aabaa6cd4bb17b61631b7da7e9f0a6c4bce46ab77f8",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 29,
+    "d_certified": 29,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [6, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "2841.1.3.a",
+   "n": 2841,
+   "k": 1,
+   "N": 718,
+   "columns_sha256": "c91c3d12cef145f79c7bb8934692c4811f6f37afd06bbe9ba8cd6c4c4d5ae30a",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 29,
+    "d_certified": 29,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [6, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "3195.1.3.a",
+   "n": 3195,
+   "k": 1,
+   "N": 807,
+   "columns_sha256": "988774579f91f35d9b692e9a992ce89ea3ea2396fd29b1ffc2e2ebe7948fc2c2",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 31,
+    "d_certified": 31,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [6, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "3211.1.3.a",
+   "n": 3211,
+   "k": 1,
+   "N": 811,
+   "columns_sha256": "6c7b41532ef58265f88d12147750c00f90a2388331573347b1af547e0f6287d0",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 31,
+    "d_certified": 31,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [6, none]",
+   "worker_died_after_last_checkpoint": false
+  },
+  {
+   "label": "3239.1.3.a",
+   "n": 3239,
+   "k": 1,
+   "N": 818,
+   "columns_sha256": "ce49e4e57ed1969598ca7cb182e3397b6f58aeb23d5cb23dbe63c4e1d705cc11",
+   "catalogue_at_run": {
+    "d": 3,
+    "d_is_exact": false,
+    "d_upper": 31,
+    "d_certified": 31,
+    "d_certified_is_exact": false
+   },
+   "lower_bound": 6,
+   "lower_bound_pass": "o1",
+   "upper_bound": null,
+   "witness": null,
+   "witness_pass": null,
+   "result": "interval [6, none]",
+   "worker_died_after_last_checkpoint": false
+  }
+ ]
+}

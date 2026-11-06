@@ -135,10 +135,10 @@
     if (row.d_cert && row.d_cert > row.d) {
       /* a certified lower bound that a fault exhibited here meets is the distance */
       verified += row.d_cert_met && !row.d_cert_exact
-        ? ' <span class="tag cert" title="its source certifies d &ge; ' + row.d_cert +
+        ? ' <span class="tag cert" title="certified d &ge; ' + row.d_cert +
           ", and a damaging fault of weight " + row.d_cert + " is exhibited here, so d = " +
           row.d_cert + '">certified ' + row.d_cert + "</span>"
-        : ' <span class="tag cert" title="certified by its source, not re-checked here">certified ' +
+        : ' <span class="tag cert" title="certified, not re-checked here">certified ' +
           (row.d_cert_exact ? "" : "&ge; ") + row.d_cert + "</span>";
     }
     return verified;
@@ -147,7 +147,7 @@
   /* A value computed at a source-certified distance carries a dagger. */
   function claimMark(row) {
     var dc = row.d_claim, dv = row.d;
-    return dc && dc > dv ? '<sup class="cert-mark" title="at the distance certified by its source, d = ' +
+    return dc && dc > dv ? '<sup class="cert-mark" title="at the certified distance, d = ' +
       dc + '">&dagger;</sup>' : "";
   }
 

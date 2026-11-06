@@ -170,6 +170,16 @@ paper takes it from a `[70,35,14]` code that is only formally self-dual.
 found a self-dual `[70,35,12]` code whose words through one coordinate all
 weigh at least 14, which is enough.
 
+### Distances certified by tropidist
+
+The exact distance solver tropidist of B. Cheng, N. Guo and F. Pan
+([arXiv:2611.08247](https://arxiv.org/abs/2611.08247)) was run on every row
+whose distance the catalogue does not prove exactly. First it reproduced the
+exact distance of 1,752 rows that are already pinned. On the 62 open rows it
+made eleven exact at `d = 6` with the catalogue's own proof, and certified the
+distance of eighteen more. See
+[`tropidist_certificates/`](tropidist_certificates/README.md).
+
 A. Gong found two doubly even self-dual codes, `[[41,1,9]]` and `[[65,1,13]]`,
 and doubled them onto `[[95,1,7]]` in a note in her repository
 [`gongaa/RM127`](https://github.com/gongaa/RM127/tree/main/triply-even). The
@@ -235,6 +245,7 @@ describes what to send and how the maintainers process it.
 | [`classification/length54/`](classification/length54/) | the length-54 classification's Pareto frontier (byte-identical copy, CC BY 4.0) |
 | [`borrowed_identities/`](borrowed_identities/) | the Borrowed Identities catalogue and code (Singh, Gidney and Jones), byte-identical, with an explicit circuit for every row |
 | [`transversal_t_codes/`](transversal_t_codes/) | the transversal-T codes of Jain and Albert, rebuilt from the paper's doubling construction, as factories |
+| [`tropidist_certificates/`](tropidist_certificates/) | distances the exact solver tropidist (Cheng, Guo and Pan) certifies on the rows the catalogue does not pin |
 | [`symmetry_sat_search/`](symmetry_sat_search/) | symmetry-slot and ansatz-free SAT search engines and their verified examples |
 | [`parent_first/`](parent_first/) | analyse one check parent, target a gate, or enumerate the gates it carries |
 | [`agent_context/`](agent_context/) | the context pack for agents continuing the search |

@@ -68,9 +68,9 @@ def cert_tag(cert, cert_exact, met=False) -> str:
     """The tag for a source's distance certificate.  A lower bound that a fault
     exhibited here meets is the distance, and reads as one."""
     if met and not cert_exact:
-        return (f'<span class="tag cert" title="its source certifies d &ge; {cert}, and a damaging '
+        return (f'<span class="tag cert" title="certified d &ge; {cert}, and a damaging '
                 f'fault of weight {cert} is exhibited here, so d = {cert}">certified {cert}</span>')
-    return (f'<span class="tag cert" title="certified by its source, not re-checked here">certified '
+    return (f'<span class="tag cert" title="certified, not re-checked here">certified '
             f'{"" if cert_exact else "&ge; "}{cert}</span>')
 
 
@@ -97,7 +97,7 @@ def distance_bounds(d, exact, upper) -> str:
 
 def claim_mark(row) -> str:
     dc, dv = row.get("d_claim"), row.get("d")
-    return (f'<sup class="cert-mark" title="at the distance certified by its source, d = {dc}">&dagger;</sup>'
+    return (f'<sup class="cert-mark" title="at the certified distance, d = {dc}">&dagger;</sup>'
             if dc and dc > dv else "")
 
 
@@ -475,7 +475,7 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
         metric(f"outputs {tex('k')}", k),
         metric(f"distance {tex('d')}", ("" if dist["is_exact"] else "≥ ") + str(d),
                ("Exact, proved and witnessed here." if dist["is_exact"] else "A lower bound proved here.")
-               + (f" Its source certifies {tex(('d=' if cert['is_exact'] else 'd\\ge ') + str(cert['d']))}"
+               + (f" A certificate gives {tex(('d=' if cert['is_exact'] else 'd\\ge ') + str(cert['d']))}"
                   + (f", and a fault of weight {cert['d']} is shown below, so {tex('d=' + str(cert['d']))}."
                      if cert.get("met") and not cert["is_exact"] else ".") if cert else "")),
         metric(f"error coefficient {tex(f'A_{{{d}}}')}", None if a_d is None else f"{a_d:,}",
@@ -531,7 +531,7 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
         + (f'<p class="small">A damaging fault of weight {dist["upper"]}'
            + (f' sits on columns <code>{esc(json.dumps(dist["witness"], separators=(",", ":")))}</code>' if dist.get("witness") else " exists")
            + ".</p>" if dist.get("upper") is not None else "")
-        + (f"<p>Its source certifies {tex(('d=' if cert['is_exact'] else 'd\\ge ') + str(cert['d']))}"
+        + (f"<p>A certificate gives {tex(('d=' if cert['is_exact'] else 'd\\ge ') + str(cert['d']))}"
            f"{', exactly' if cert['is_exact'] else ', as a lower bound'}. That certificate is not re-checked here, "
            f"but rankings on this site may use it."
            + (f" With the damaging fault of weight {cert['d']} above, it makes the distance exactly "

@@ -93,8 +93,24 @@ paper's theorem, recorded as certificates, not re-proved.
 | the small inputs' distances (`[[7,1,3]]`, `[[17,1,5]]`, `[[23,1,7]]`, `[[45,1,9]]`, `[[47,1,11]]`) and the `[46,23,10]` code | the tests, by enumerating every codeword | exact |
 | the `[[69,1,13]]` input of Table I: a self-dual `[70,35,12]` code whose words through coordinate 69 all weigh at least 14 | [`transversal_t_codes/search_sd70.py`](../transversal_t_codes/search_sd70.py), exhaustive over the self-dual `[70,35]` codes with an automorphism of order 23 with one fixed point (386 up to equivalence; every word of weight <= 12 enumerated) | the tests enumerate all `2^34` words through coordinate 69 by the code's algebraic structure, a separate method: the lightest weighs exactly 14 |
 | an upper bound equal to the paper's distance | a fault built recursively, two qubits per doubling | re-checked against the true syndromes by `verify_catalog.py` as `d_witness` |
-| the paper's distance as a lower bound | the paper's doubling theorem, with the larger QR codes' distances as the paper states them | not re-proved here; stored as `d_certified` with `d_certified_is_exact: false` |
+| the paper's distance as a lower bound | the paper's doubling theorem, with the larger QR codes' distances as the paper states them | not re-proved here; stored as `d_certified` with `d_certified_is_exact: false`, or `true` on the rows where tropidist also computes the exact value (see below) |
 | the classes and their credit | [`master_catalog/migrations/transversal_t_codes_2026_10_10.py`](../master_catalog/migrations/transversal_t_codes_2026_10_10.py) through `merge_results` | every row re-derived by `verify_catalog.py`; held and credited as tested in `transversal_t_codes/tests/` |
+
+## Distances certified by tropidist (external)
+
+The exact distance solver of B. Cheng, N. Guo and F. Pan, "Certifying quantum
+code and circuit distances at scale"
+([arXiv:2611.08247](https://arxiv.org/abs/2611.08247)), run here at commit
+`b03ec2d4` of [github.com/Fanerst/tropidist](https://github.com/Fanerst/tropidist)
+on the rows whose distance the sweep here does not pin. See
+[`tropidist_certificates/`](../tropidist_certificates/README.md).
+
+| claim | producer | certificate/check |
+|---|---|---|
+| tropidist computes the factory distance | the export `H` = check rows, `L` = output rows, one column per rotation | tropidist reproduced the exact distance of 1,752 rows pinned here, with no disagreement |
+| `d = 6` exactly on `901.123.6.a`, `902.122.6.a` and `904.120.6.a` to `912.112.6.a` | the sweep here proves the floor 6; tropidist found a fault of weight 6 | both re-proved by `verify_catalog.py`; stored as `d_is_exact` with the fault as `d_witness` |
+| a fault at the certified distance on `1675.373.3.a`, `1676.372.3.a` and `1683.365.3.a` | tropidist | re-checked by `verify_catalog.py` as `d_witness` |
+| lower bounds above the proved floor on 18 rows | tropidist's dense rank DP or weight-bounded search, in [`tropidist_certificates/certificates.json`](../tropidist_certificates/certificates.json) | not re-proved here; stored as `d_certified`, exact where the bound meets `d_upper`, by [`master_catalog/migrations/tropidist_certificates_2026_11_06.py`](../master_catalog/migrations/tropidist_certificates_2026_11_06.py), which ties each record to its row by the SHA-256 of the columns |
 
 ## Clifford corrections
 

@@ -82,7 +82,7 @@ nothing about them.
 ## Summary
 
 - output widths: `k=1`: 126, `k=2`: 149, `k=3`: 200, `k=4`: 217, `k=5`: 250, `k=6`: 245, `k=7`: 151, `k=8`: 137, `k=9`: 133, `k=10`: 114, `k=11`: 81, `k=12`: 76, `k=13`: 11, `k=14`: 10, `k=15`: 12, `k=16`: 11, `k=17`: 8, `k=18`: 2, `k=19`: 6, `k=20`: 2, `k=21`: 3, `k=22`: 1, `k=23`: 2, `k=24`: 1, `k=25`: 1, `k=26`: 4, `k=27`: 3, `k=28`: 6, `k=29`: 5, `k=30`: 2, `k=31`: 2, `k=32`: 2, `k=35`: 2, `k=36`: 4, `k=37`: 2, `k=39`: 1, `k=40`: 7, `k=41`: 6, `k=42`: 4, `k=43`: 4, `k=44`: 2, `k=46`: 2, `k=47`: 1, `k=59`: 1, `k=64`: 1, `k=65`: 1, `k=68`: 1, `k=70`: 3, `k=71`: 2, `k=72`: 1, `k=73`: 2, `k=76`: 1, `k=77`: 1, `k=80`: 5, `k=81`: 4, `k=82`: 2, `k=83`: 1, `k=84`: 2, `k=85`: 2, `k=86`: 2, `k=87`: 2, `k=88`: 2, `k=89`: 2, `k=92`: 1, `k=94`: 1, `k=99`: 1, `k=100`: 4, `k=101`: 3, `k=102`: 2, `k=104`: 1, `k=112`: 1, `k=113`: 1, `k=114`: 1, `k=115`: 1, `k=116`: 2, `k=117`: 1, `k=118`: 1, `k=119`: 1, `k=120`: 1, `k=122`: 3, `k=123`: 1, `k=124`: 2, `k=126`: 4, `k=128`: 7, `k=132`: 2, `k=137`: 1, `k=144`: 1, `k=145`: 1, `k=146`: 1, `k=152`: 1, `k=153`: 1, `k=154`: 1, `k=161`: 1, `k=162`: 2, `k=171`: 1, `k=176`: 1, `k=177`: 1, `k=184`: 1, `k=185`: 1, `k=189`: 1, `k=194`: 1, `k=197`: 1, `k=199`: 1, `k=201`: 1, `k=210`: 1, `k=224`: 1, `k=287`: 1, `k=365`: 1, `k=372`: 1, `k=373`: 1
-- distances: `d=2`: 1233, `d=3`: 657, `d=4`: 86, `d=5`: 70, `d=6`: 56, `d=7`: 12 (2052 pinned exactly, the rest proved floors)
+- distances: `d=2`: 1233, `d=3`: 657, `d=4`: 86, `d=5`: 70, `d=6`: 56, `d=7`: 12 (2063 pinned exactly, the rest proved floors)
 - exact minimal T-count reaches **17** (927 rows are too wide for it to be computed)
 - injection counts from `n=8` to `n=262142`
 
@@ -921,20 +921,20 @@ entries are under [References](#references).
 | 807 | `176.5.5.a` | `[[176,5,5]]` | — | 29 | `01+02+03+04+12+13+24+34+012+013+023` | 8 | 2 | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 808 | `176.9.4.a` | `[[176,9,4]]` | — | 20 | `012+013+014+015+016+017+023+024+025+0…` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 809 | `176.32.3.a` | `[[176,32,3]]` | — | 42 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 810 | `177.1.7.a` | `[[177,1,≥7]]` | ≥9 | 47 | `0` | 1 | 1 | none | pre-existing | Gong doubling: triply even family | [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
+| 810 | `177.1.7.a` | `[[177,1,≥7]]` | 9 | 47 | `0` | 1 | 1 | none | pre-existing | Gong doubling: triply even family | [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
 | 811 | `177.11.2.a` | `[[177,11,2]]` | — | 17 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 812 | `180.10.2.a` | `[[180,10,2]]` | — | 14 | `01+02+03+04+05+06+07+08+09+12+13+14+1…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 813 | `180.11.2.a` | `[[180,11,2]]` | — | 15 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 814 | `181.11.2.a` | `[[181,11,2]]` | — | 16 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 815 | `182.10.2.a` | `[[182,10,2]]` | — | 15 | `0+1+2+3+4+5+6+7+8+9` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 816 | `185.1.7.a` | `[[185,1,≥7]]` | ≥9 | 49 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 816 | `185.1.7.a` | `[[185,1,≥7]]` | 9 | 49 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 817 | `186.4.2.a` | `[[186,4,2]]` | — | 9 | `01+02+03+12+13+23+012+013+023+123` | 5 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 818 | `186.5.2.a` | `[[186,5,2]]` | — | 10 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 819 | `187.5.2.a` | `[[187,5,2]]` | — | 11 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 820 | `188.3.4.a` | `[[188,3,4]]` | — | 13 | `01+02` | 4 | 2 | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 821 | `188.4.2.a` | `[[188,4,2]]` | — | 10 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 822 | `188.36.3.a` | `[[188,36,3]]` | — | 46 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 823 | `189.1.7.a` | `[[189,1,≥7]]` | ≥9 | 50 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 823 | `189.1.7.a` | `[[189,1,≥7]]` | 9 | 50 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 824 | `189.2.2.a` | `[[189,2,2]]` | — | 8 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 825 | `189.35.3.a` | `[[189,35,3]]` | — | 46 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 826 | `190.2.2.a` | `[[190,2,2]]` | — | 9 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1048,11 +1048,11 @@ entries are under [References](#references).
 | 934 | `269.3.2.a` | `[[269,3,2]]` | — | 10 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 935 | `270.2.2.a` | `[[270,2,2]]` | — | 10 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 936 | `271.1.3.a` | `[[271,1,3]]` | — | 10 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 937 | `271.1.7.a` | `[[271,1,≥7]]` | ≥11 | 71 | `0` | 1 | 1 | T-powers | pre-existing | Gong doubling: triply even family | [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
+| 937 | `271.1.7.a` | `[[271,1,≥7]]` | 11 | 71 | `0` | 1 | 1 | T-powers | pre-existing | Gong doubling: triply even family | [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
 | 938 | `273.7.2.a` | `[[273,7,2]]` | — | 14 | `0+1+2+3+4+5+6` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 939 | `274.6.2.a` | `[[274,6,2]]` | — | 13 | `0+1+2+3+4+5` | 6 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 940 | `277.3.2.a` | `[[277,3,2]]` | — | 11 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 941 | `279.1.7.a` | `[[279,1,≥7]]` | ≥11 | 73 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 941 | `279.1.7.a` | `[[279,1,≥7]]` | 11 | 73 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 942 | `279.4.2.a` | `[[279,4,2]]` | — | 9 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 943 | `279.7.2.a` | `[[279,7,2]]` | — | 12 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 944 | `279.8.2.a` | `[[279,8,2]]` | — | 13 | `0+1+2+3+4+5+6+7` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1061,7 +1061,7 @@ entries are under [References](#references).
 | 947 | `280.7.2.a` | `[[280,7,2]]` | — | 13 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 948 | `280.8.2.a` | `[[280,8,2]]` | — | 14 | `0+1+2+3+4+5+6+7` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 949 | `282.6.2.a` | `[[282,6,2]]` | — | 12 | `0+1+2+3+4+5` | 6 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 950 | `283.1.7.a` | `[[283,1,≥7]]` | ≥11 | 74 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 950 | `283.1.7.a` | `[[283,1,≥7]]` | 11 | 74 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 951 | `285.9.2.a` | `[[285,9,2]]` | — | 13 | `0+1+2+3+4+5+6+7+8+01+02+03+04+05+06+0…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 952 | `288.64.3.a` | `[[288,64,3]]` | — | 75 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 953 | `295.9.2.a` | `[[295,9,2]]` | — | 14 | `0+1+2+3+4+5+6+7+8` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1131,7 +1131,7 @@ entries are under [References](#references).
 | 1017 | `396.2.2.a` | `[[396,2,2]]` | — | 13 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1018 | `399.77.3.a` | `[[399,77,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1019 | `400.8.2.a` | `[[400,8,2]]` | — | 18 | `0+1+2+3+4+5+6+7` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1020 | `401.1.6.a` | `[[401,1,≥6]]` | ≥13 | 104 | `0` | 1 | 1 | none | pre-existing | Gong doubling: triply even family | [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
+| 1020 | `401.1.6.a` | `[[401,1,≥6]]` | 13 | 104 | `0` | 1 | 1 | none | pre-existing | Gong doubling: triply even family | [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
 | 1021 | `403.6.2.a` | `[[403,6,2]]` | — | 11 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1022 | `403.11.2.a` | `[[403,11,2]]` | — | 16 | `0,1+0,2+0,3+0,4+0,5+0,6+0,7+0,8+0,9+0…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1023 | `403.12.2.a` | `[[403,12,2]]` | — | 17 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1154,7 +1154,7 @@ entries are under [References](#references).
 | 1040 | `412.4.2.a` | `[[412,4,2]]` | — | 12 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1041 | `413.11.2.a` | `[[413,11,2]]` | — | 18 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1042 | `414.10.2.a` | `[[414,10,2]]` | — | 17 | `0+1+2+3+4+5+6+7+8+9` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1043 | `417.1.6.a` | `[[417,1,≥6]]` | ≥13 | 108 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1043 | `417.1.6.a` | `[[417,1,≥6]]` | 13 | 108 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 1044 | `419.5.2.a` | `[[419,5,2]]` | — | 13 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1045 | `426.80.4.a` | `[[426,80,4]]` | — | 99 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1046 | `427.81.4.a` | `[[427,81,4]]` | — | 100 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
@@ -1210,7 +1210,7 @@ entries are under [References](#references).
 | 1096 | `511.7.5.a` | `[[511,7,5]]` | — | 25 | `0+1+2+3+4+5+6` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1097 | `511.8.5.a` | `[[511,8,5]]` | — | 26 | `0+1+2+3+4+5+6+7` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1098 | `511.9.5.a` | `[[511,9,5]]` | — | 27 | `0+1+2+3+4+5+6+7+8` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1099 | `511.9.6.a` | `[[511,9,≥6]]` | — | 36 | `0+1+2+3+4+5+6+7+8` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1099 | `511.9.6.a` | `[[511,9,≥6]]` | 7 | 36 | `0+1+2+3+4+5+6+7+8` | — | — | S, CZ | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1100 | `511.10.5.a` | `[[511,10,5]]` | — | 28 | `0+1+2+3+4+5+6+7+8+9` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1101 | `511.11.5.a` | `[[511,11,5]]` | — | 29 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1102 | `511.12.5.a` | `[[511,12,5]]` | — | 30 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
@@ -1223,8 +1223,8 @@ entries are under [References](#references).
 | 1109 | `511.81.3.a` | `[[511,81,3]]` | — | 90 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: pure-T width campaign n=255, 511 | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1110 | `511.85.3.a` | `[[511,85,3]]` | — | 94 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: full-simplex pure-T frames | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1111 | `511.89.3.a` | `[[511,89,3]]` | — | 98 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: full-simplex pure-T frames | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1112 | `512.39.6.a` | `[[512,39,≥6]]` | — | 85 | `0,1,2+3,4,5+6,7,8+9,10,11+12,13,14+15…` | — | — | none | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1113 | `512.84.6.a` | `[[512,84,≥6]]` | — | 130 | `0,64,83+0,65,82+0,66,81+0,67,80+0,68,…` | — | — | none | AI search | AI search | [Rengaswamy et al. (2020)](https://doi.org/10.1109/JSAIT.2020.3012914); [Vuillot & Breuckmann (2022)](https://doi.org/10.1109/TIT.2022.3170846) |
+| 1112 | `512.39.6.a` | `[[512,39,≥6]]` | 8 | 85 | `0,1,2+3,4,5+6,7,8+9,10,11+12,13,14+15…` | — | — | none | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1113 | `512.84.6.a` | `[[512,84,≥6]]` | 8 | 130 | `0,64,83+0,65,82+0,66,81+0,67,80+0,68,…` | — | — | none | AI search | AI search | [Rengaswamy et al. (2020)](https://doi.org/10.1109/JSAIT.2020.3012914); [Vuillot & Breuckmann (2022)](https://doi.org/10.1109/TIT.2022.3170846) |
 | 1114 | `516.6.2.a` | `[[516,6,2]]` | — | 11 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1115 | `518.5.2.a` | `[[518,5,2]]` | — | 12 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1116 | `522.5.2.a` | `[[522,5,2]]` | — | 11 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1386,21 +1386,21 @@ entries are under [References](#references).
 | 1272 | `890.6.2.a` | `[[890,6,2]]` | — | 14 | `0+1+2+3+4+5` | 6 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1273 | `891.5.2.a` | `[[891,5,2]]` | — | 16 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1274 | `896.128.6.a` | `[[896,128,6]]` | — | 189 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1275 | `901.123.6.a` | `[[901,123,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): punctured Reed-Muller code | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1276 | `902.122.6.a` | `[[902,122,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1277 | `904.120.6.a` | `[[904,120,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1278 | `905.119.6.a` | `[[905,119,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1279 | `906.118.6.a` | `[[906,118,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1280 | `907.117.6.a` | `[[907,117,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1281 | `908.116.6.a` | `[[908,116,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1282 | `909.115.6.a` | `[[909,115,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1275 | `901.123.6.a` | `[[901,123,6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): punctured Reed-Muller code | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1276 | `902.122.6.a` | `[[902,122,6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1277 | `904.120.6.a` | `[[904,120,6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1278 | `905.119.6.a` | `[[905,119,6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1279 | `906.118.6.a` | `[[906,118,6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1280 | `907.117.6.a` | `[[907,117,6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1281 | `908.116.6.a` | `[[908,116,6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1282 | `909.115.6.a` | `[[909,115,6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1283 | `909.171.3.a` | `[[909,171,3]]` | — | 225 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1284 | `910.114.6.a` | `[[910,114,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1285 | `911.113.6.a` | `[[911,113,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1286 | `912.112.6.a` | `[[912,112,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 1284 | `910.114.6.a` | `[[910,114,6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1285 | `911.113.6.a` | `[[911,113,6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1286 | `912.112.6.a` | `[[912,112,6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
 | 1287 | `916.6.2.a` | `[[916,6,2]]` | — | 14 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1288 | `935.89.6.a` | `[[935,89,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1289 | `936.88.6.a` | `[[936,88,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1288 | `935.89.6.a` | `[[935,89,≥6]]` | ≥7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1289 | `936.88.6.a` | `[[936,88,≥6]]` | ≥7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1290 | `937.87.6.a` | `[[937,87,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
 | 1291 | `945.7.2.a` | `[[945,7,2]]` | — | 13 | `0+1+2+3+4+5+6+01+02+03+04+05+06+12+13…` | — | — | none | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1292 | `946.5.2.a` | `[[946,5,2]]` | — | 14 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1410,8 +1410,8 @@ entries are under [References](#references).
 | 1296 | `960.184.3.a` | `[[960,184,3]]` | — | 212 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1297 | `967.1.6.a` | `[[967,1,≥6]]` | ≥19 | 247 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
 | 1298 | `983.1.6.a` | `[[983,1,≥6]]` | ≥19 | 251 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 1299 | `988.36.6.a` | `[[988,36,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1300 | `998.26.6.a` | `[[998,26,≥6]]` | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1299 | `988.36.6.a` | `[[988,36,≥6]]` | ≥7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1300 | `998.26.6.a` | `[[998,26,≥6]]` | ≥7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1301 | `1008.6.2.a` | `[[1008,6,2]]` | — | 13 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1302 | `1009.7.2.a` | `[[1009,7,2]]` | — | 15 | `0+1+2+3+4+5+6` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1303 | `1011.1.6.a` | `[[1011,1,≥6]]` | ≥19 | 258 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
@@ -18353,7 +18353,7 @@ SHA-256 of those columns.
 - output gate: `0`
 - `N = 47` (1 output + 46 checks), exact minimal T-count 1, reduced degree 1
 - distance: proved `7 <= d <= 9`; the upper bound is the fault on columns [30, 71, 96, 97, 98, 109, 110, 113, 126]
-- certified distance: `d >= 9`, from A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[41,1,9]] code doubled onto [[95,1,7]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 9; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; not re-measured here
+- certified distance: `d = 9`, from A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[41,1,9]] code doubled onto [[95,1,7]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 9; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 177.1.7.a); not re-measured here
 - Clifford correction, every rotation a `T`: none
 - discovery: pre-existing
 - regime: Gong doubling: triply even family — a code of the triply even family of A. Gong (note in github.com/gongaa/RM127, triply-even/; transversal_t_codes/): her doubly even self-dual [[41,1,9]] and [[65,1,13]] codes and quantum QR codes doubled onto [[95,1,7]], rebuilt here from her self-dual codes, where T on every qubit is a logical T or T-dagger; a verified witness, not a maximum
@@ -18465,7 +18465,7 @@ SHA-256 of those columns.
 - output gate: `0`
 - `N = 49` (1 output + 48 checks), exact minimal T-count 1, reduced degree 1
 - distance: proved `7 <= d <= 9`; the upper bound is the fault on columns [26, 71, 93, 116, 136, 147, 149, 156, 163]
-- certified distance: `d >= 9`, from Jain and Albert (arXiv:2408.12752), Table I: [[45,1,9]] code of the self-dual [46,23,10] code sub(XQ47) doubled onto [[95,1,7]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 9, with d_sd at least the classical distance less one (their Lemma 2.4); not re-measured here
+- certified distance: `d = 9`, from Jain and Albert (arXiv:2408.12752), Table I: [[45,1,9]] code of the self-dual [46,23,10] code sub(XQ47) doubled onto [[95,1,7]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 9, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 185.1.7.a); not re-measured here
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 4`, `Z on 5`, `Z on 8`, `Z on 9`, `Z on 11`, `Z on 12`, `Z on 15`, `Z on 18`, `Z on 20`, `Z on 48`, `CZ on (1,48)` and 9 more (11 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 4, 6, 8, 9, 11, 13, 14, 16, 17, 18, 19 and 16 more, `T` on the rest
 - discovery: pre-existing
@@ -18587,7 +18587,7 @@ SHA-256 of those columns.
 - output gate: `0`
 - `N = 50` (1 output + 49 checks), exact minimal T-count 1, reduced degree 1
 - distance: proved `7 <= d <= 9`; the upper bound is the fault on columns [41, 88, 94, 95, 105, 107, 109, 120, 136]
-- certified distance: `d >= 9`, from Jain and Albert (arXiv:2408.12752), Table II: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[95,1,7]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 9, with d_sd at least the classical distance less one (their Lemma 2.4); not re-measured here
+- certified distance: `d = 9`, from Jain and Albert (arXiv:2408.12752), Table II: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[95,1,7]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 9, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 189.1.7.a); not re-measured here
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 49`, `CZ on (0,49)`
 - or no correction at all, with rotations run as `T†` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 82 more, `T` on the rest
 - discovery: pre-existing
@@ -20472,7 +20472,7 @@ SHA-256 of those columns.
 - output gate: `0`
 - `N = 71` (1 output + 70 checks), exact minimal T-count 1, reduced degree 1
 - distance: proved `7 <= d <= 11`; the upper bound is the fault on columns [0, 47, 94, 135, 176, 199, 222, 239, 256, 263, 270]
-- certified distance: `d >= 11`, from A. Gong (github.com/gongaa/RM127, triply-even/): [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[177,1,9]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 11; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; not re-measured here
+- certified distance: `d = 11`, from A. Gong (github.com/gongaa/RM127, triply-even/): [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[177,1,9]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 11; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 11, a lower bound of 11 met by a fault of weight 11 (tropidist_certificates/certificates.json, record 271.1.7.a); not re-measured here
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -20534,7 +20534,7 @@ SHA-256 of those columns.
 - output gate: `0`
 - `N = 73` (1 output + 72 checks), exact minimal T-count 1, reduced degree 1
 - distance: proved `7 <= d <= 11`; the upper bound is the fault on columns [0, 47, 94, 139, 184, 207, 230, 247, 264, 271, 278]
-- certified distance: `d >= 11`, from Jain and Albert (arXiv:2408.12752), Table I: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[185,1,9]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 11, with d_sd at least the classical distance less one (their Lemma 2.4); not re-measured here
+- certified distance: `d = 11`, from Jain and Albert (arXiv:2408.12752), Table I: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[185,1,9]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 11, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 11, a lower bound of 11 met by a fault of weight 11 (tropidist_certificates/certificates.json, record 279.1.7.a); not re-measured here
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 24`, `Z on 27`, `Z on 28`, `Z on 31`, `Z on 32`, `Z on 34`, `Z on 35`, `Z on 38`, `Z on 41`, `Z on 43`, `Z on 71` and 10 more (12 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 51, 55, 58, 62, 63, 64, 67, 68, 69, 71, 72, 73 and 96 more; `T†` on columns 0, 1, 2, 3, 5, 6, 7, 9, 10, 12, 13, 14 and 3 more, `T` on the rest
 - discovery: pre-existing
@@ -20677,7 +20677,7 @@ SHA-256 of those columns.
 - output gate: `0`
 - `N = 74` (1 output + 73 checks), exact minimal T-count 1, reduced degree 1
 - distance: proved `7 <= d <= 11`; the upper bound is the fault on columns [0, 47, 94, 141, 188, 211, 234, 251, 268, 275, 282]
-- certified distance: `d >= 11`, from Jain and Albert (arXiv:2408.12752), Table II: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[189,1,9]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 11, with d_sd at least the classical distance less one (their Lemma 2.4); not re-measured here
+- certified distance: `d = 11`, from Jain and Albert (arXiv:2408.12752), Table II: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[189,1,9]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 11, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 11, a lower bound of 11 met by a fault of weight 11 (tropidist_certificates/certificates.json, record 283.1.7.a); not re-measured here
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 72`, `Z on 73`, `CZ on (0,72)`, `CZ on (72,73)`
 - or no correction at all, with rotations run as `T†` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 177 more, `T` on the rest
 - discovery: pre-existing
@@ -21836,7 +21836,7 @@ SHA-256 of those columns.
 - output gate: `0`
 - `N = 104` (1 output + 103 checks), exact minimal T-count 1, reduced degree 1
 - distance: proved `6 <= d <= 13`; the upper bound is the fault on columns [0, 65, 130, 177, 224, 265, 306, 329, 352, 369, 386, 393, 400]
-- certified distance: `d >= 13`, from A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[65,1,13]] code doubled onto [[271,1,11]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 13; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; not re-measured here
+- certified distance: `d = 13`, from A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[65,1,13]] code doubled onto [[271,1,11]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 13; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 13, a lower bound of 13 met by a fault of weight 13 (tropidist_certificates/certificates.json, record 401.1.6.a); not re-measured here
 - Clifford correction, every rotation a `T`: none
 - discovery: pre-existing
 - regime: Gong doubling: triply even family — a code of the triply even family of A. Gong (note in github.com/gongaa/RM127, triply-even/; transversal_t_codes/): her doubly even self-dual [[41,1,9]] and [[65,1,13]] codes and quantum QR codes doubled onto [[95,1,7]], rebuilt here from her self-dual codes, where T on every qubit is a logical T or T-dagger; a verified witness, not a maximum
@@ -22218,7 +22218,7 @@ SHA-256 of those columns.
 - output gate: `0`
 - `N = 108` (1 output + 107 checks), exact minimal T-count 1, reduced degree 1
 - distance: proved `6 <= d <= 13`; the upper bound is the fault on columns [0, 69, 138, 185, 232, 277, 322, 345, 368, 385, 402, 409, 416]
-- certified distance: `d >= 13`, from Jain and Albert (arXiv:2408.12752), Table I: [[69,1,13]] code of the self-dual [70,35,12] code SD70 doubled onto [[279,1,11]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 13, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not re-measured here
+- certified distance: `d = 13`, from Jain and Albert (arXiv:2408.12752), Table I: [[69,1,13]] code of the self-dual [70,35,12] code SD70 doubled onto [[279,1,11]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 13, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 13, a lower bound of 13 met by a fault of weight 13 (tropidist_certificates/certificates.json, record 417.1.6.a); not re-measured here
 - Clifford correction, every rotation a `T`: `Z on 12`, `Z on 13`, `Z on 14`, `Z on 15`, `Z on 16`, `Z on 17`, `Z on 18`, `Z on 19`, `Z on 20`, `Z on 21`, `Z on 22`, `Z on 23` and 56 more (35 single-wire, 33 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 3, 4, 5, 6, 7, 11, 13, 14, 17, 18, 23 and 100 more, `T` on the rest
 - discovery: pre-existing
@@ -23120,6 +23120,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8`
 - `N = 36` (9 outputs + 27 checks)
 - distance: proved `6 <= d <= 7`; the upper bound is the fault on columns [34, 149, 303, 331, 365, 369, 381]
+- certified distance: `d = 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 7, a lower bound of 7 met by a fault of weight 7 (tropidist_certificates/certificates.json, record 511.9.6.a); not re-measured here
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S on 4`, `Z on 5`, `Z on 7`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,7)` and 137 more (7 single-wire, 142 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -23341,6 +23342,7 @@ SHA-256 of those columns.
 - output gate: `0,1,2+3,4,5+6,7,8+9,10,11+12,13,14+15,16,17+18,19,20+21,22,23+24,25,26+27,28,29+30,31,32+33,34,35+36,37,38`
 - `N = 85` (39 outputs + 46 checks)
 - distance: proved `6 <= d <= 8`; the upper bound is the fault on columns [5, 142, 188, 213, 243, 382, 416, 463]
+- certified distance: `d = 8`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 8, a lower bound of 8 met by a fault of weight 8 (tropidist_certificates/certificates.json, record 512.39.6.a); not re-measured here
 - Clifford correction, every rotation a `T`: none
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
@@ -23356,6 +23358,7 @@ SHA-256 of those columns.
 - output gate: `0,64,83+0,65,82+0,66,81+0,67,80+0,68,79+0,69,78+0,70,77+0,71,76+0,72,75+0,73,74+1,54,83+1,55,82+1,56,81+1,57,80+1,58,79+1,59,78+1,60,77+1,61,76+1,62,75+1,63,74+2,50,83+2,51,82+2,52,81+2,53,80+2,58,73+2,59,72+2,60,71+2,61,70+2,62,69+2,63,68+3,49,83+3,51,79+3,52,78+3,53,77+3,55,73+3,56,72+3,57,71+3,61,67+3,62,66+3,63,65+4,49,82+4,50,79+4,52,76+4,53,75+4,54,73+4,56,70+4,57,69+4,59,67+4,60,66+4,63,64+5,49,81+5,50,78+5,51,76+5,53,74+5,54,72+5,55,70+5,57,68+5,58,67+5,60,65+5,62,64+6,49,80+6,50,77+6,51,75+6,52,74+6,54,71+6,55,69+6,56,68+6,58,66+6,59,65+6,61,64+7,39,83+7,40,82+7,41,81+7,42,80+7,43,79+7,44,78+7,45,77+7,46,76+7,47,75+7,48,74+8,35,83+8,36,82+8,37,81+8,38,80+8,43,73+8,44,72+8,45,71+8,46,70+8,47,69+8,48,68+9,34,83+9,36,79+9,37,78+9,38,77+9,40,73+9,41,72+9,42,71+9,46,67+9,47,66+9,48,65+10,34,82+10,35,79+10,37,76+10,38,75+10,39,73+10,41,70+10,42,69+10,44,67+10,45,66+10,48,64+11,34,81+11,35,78+11,36,76+11,38,74+11,39,72+11,40,70+11,42,68+11,43,67+11,45,65+11,47,64+12,34,80+12,35,77+12,36,75+12,37,74+12,39,71+12,40,69+12,41,68+12,43,66+12,44,65+12,46,64+13,30,83+13,31,82+13,32,81+13,33,80+13,43,63+13,44,62+13,45,61+13,46,60+13,47,59+13,48,58+14,29,83+14,31,79+14,32,78+14,33,77+14,40,63+14,41,62+14,42,61+14,46,57+14,47,56+14,48,55+15,29,82+15,30,79+15,32,76+15,33,75+15,39,63+15,41,60+15,42,59+15,44,57+15,45,56+15,48,54+16,29,81+16,30,78+16,31,76+16,33,74+16,39,62+16,40,60+16,42,58+16,43,57+16,45,55+16,47,54+17,29,80+17,30,77+17,31,75+17,32,74+17,39,61+17,40,59+17,41,58+17,43,56+17,44,55+17,46,54+18,28,83+18,31,73+18,32,72+18,33,71+18,36,63+18,37,62+18,38,61+18,46,53+18,47,52+18,48,51+19,28,82+19,30,73+19,32,70+19,33,69+19,35,63+19,37,60+19,38,59+19,44,53+19,45,52+19,48,50+20,28,81+20,30,72+20,31,70+20,33,68+20,35,62+20,36,60+20,38,58+20,43,53+20,45,51+20,47,50+21,28,80+21,30,71+21,31,69+21,32,68+21,35,61+21,36,59+21,37,58+21,43,52+21,44,51+21,46,50+22,28,79+22,29,73+22,32,67+22,33,66+22,34,63+22,37,57+22,38,56+22,41,53+22,42,52+22,48,49+23,28,78+23,29,72+23,31,67+23,33,65+23,34,62+23,36,57+23,38,55+23,40,53+23,42,51+23,47,49+24,28,77+24,29,71+24,31,66+24,32,65+24,34,61+24,36,56+24,37,55+24,40,52+24,41,51+24,46,49+25,28,76+25,29,70+25,30,67+25,33,64+25,34,60+25,35,57+25,38,54+25,39,53+25,42,50+25,45,49+26,28,75+26,29,69+26,30,66+26,32,64+26,34,59+26,35,56+26,37,54+26,39,52+26,41,50+26,44,49+27,28,74+27,29,68+27,30,65+27,31,64+27,34,58+27,35,55+27,36,54+27,39,51+27,40,50+27,43,49`
 - `N = 130` (84 outputs + 46 checks)
 - distance: proved `6 <= d <= 8`; the upper bound is the fault on columns [127, 147, 200, 220, 411, 421, 498, 503]
+- certified distance: `d = 8`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 8, a lower bound of 8 met by a fault of weight 8 (tropidist_certificates/certificates.json, record 512.84.6.a); not re-measured here
 - Clifford correction, every rotation a `T`: none
 - discovery: AI search
 - regime: AI search — found by an AI search campaign; a verified witness, not a maximum
@@ -25995,11 +25998,11 @@ SHA-256 of those columns.
 
 - 896 columns — see `master_catalog.json`, `factories[1273]`
 
-### 1275. `[[901,123,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122
+### 1275. `[[901,123,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122`
 - `N = 176` (123 outputs + 53 checks)
-- distance: proved `d >= 6`
+- distance: exactly 6, witnessed by the fault on columns [0, 10, 48, 501, 692, 699]
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 111 more (123 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26011,11 +26014,11 @@ SHA-256 of those columns.
 
 - 901 columns — see `master_catalog.json`, `factories[1274]`
 
-### 1276. `[[902,122,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121
+### 1276. `[[902,122,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121`
 - `N = 176` (122 outputs + 54 checks)
-- distance: proved `d >= 6`
+- distance: exactly 6, witnessed by the fault on columns [0, 3, 53, 296, 573, 862]
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 110 more (122 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26027,11 +26030,11 @@ SHA-256 of those columns.
 
 - 902 columns — see `master_catalog.json`, `factories[1275]`
 
-### 1277. `[[904,120,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119
+### 1277. `[[904,120,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119`
 - `N = 176` (120 outputs + 56 checks)
-- distance: proved `d >= 6`
+- distance: exactly 6, witnessed by the fault on columns [0, 7, 155, 419, 455, 775]
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 108 more (120 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26043,11 +26046,11 @@ SHA-256 of those columns.
 
 - 904 columns — see `master_catalog.json`, `factories[1276]`
 
-### 1278. `[[905,119,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118
+### 1278. `[[905,119,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118`
 - `N = 176` (119 outputs + 57 checks)
-- distance: proved `d >= 6`
+- distance: exactly 6, witnessed by the fault on columns [0, 49, 86, 294, 587, 838]
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 107 more (119 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26059,11 +26062,11 @@ SHA-256 of those columns.
 
 - 905 columns — see `master_catalog.json`, `factories[1277]`
 
-### 1279. `[[906,118,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117
+### 1279. `[[906,118,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117`
 - `N = 176` (118 outputs + 58 checks)
-- distance: proved `d >= 6`
+- distance: exactly 6, witnessed by the fault on columns [0, 4, 254, 420, 668, 708]
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 106 more (118 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26075,11 +26078,11 @@ SHA-256 of those columns.
 
 - 906 columns — see `master_catalog.json`, `factories[1278]`
 
-### 1280. `[[907,117,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116
+### 1280. `[[907,117,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116`
 - `N = 176` (117 outputs + 59 checks)
-- distance: proved `d >= 6`
+- distance: exactly 6, witnessed by the fault on columns [0, 1, 63, 117, 310, 367]
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 105 more (117 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26091,11 +26094,11 @@ SHA-256 of those columns.
 
 - 907 columns — see `master_catalog.json`, `factories[1279]`
 
-### 1281. `[[908,116,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115
+### 1281. `[[908,116,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115`
 - `N = 176` (116 outputs + 60 checks)
-- distance: proved `d >= 6`
+- distance: exactly 6, witnessed by the fault on columns [0, 27, 152, 245, 399, 783]
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 104 more (116 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26108,11 +26111,11 @@ SHA-256 of those columns.
 
 - 908 columns — see `master_catalog.json`, `factories[1280]`
 
-### 1282. `[[909,115,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114
+### 1282. `[[909,115,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114`
 - `N = 176` (115 outputs + 61 checks)
-- distance: proved `d >= 6`
+- distance: exactly 6, witnessed by the fault on columns [0, 27, 152, 245, 399, 783]
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 103 more (115 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26141,11 +26144,11 @@ SHA-256 of those columns.
 
 - 909 columns — see `master_catalog.json`, `factories[1282]`
 
-### 1284. `[[910,114,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113
+### 1284. `[[910,114,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113`
 - `N = 176` (114 outputs + 62 checks)
-- distance: proved `d >= 6`
+- distance: exactly 6, witnessed by the fault on columns [0, 53, 374, 417, 455, 909]
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 102 more (114 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26157,11 +26160,11 @@ SHA-256 of those columns.
 
 - 910 columns — see `master_catalog.json`, `factories[1283]`
 
-### 1285. `[[911,113,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112
+### 1285. `[[911,113,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112`
 - `N = 176` (113 outputs + 63 checks)
-- distance: proved `d >= 6`
+- distance: exactly 6, witnessed by the fault on columns [0, 31, 206, 322, 353, 578]
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 101 more (113 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26173,11 +26176,11 @@ SHA-256 of those columns.
 
 - 911 columns — see `master_catalog.json`, `factories[1284]`
 
-### 1286. `[[912,112,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111
+### 1286. `[[912,112,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111`
 - `N = 176` (112 outputs + 64 checks)
-- distance: proved `d >= 6`
+- distance: exactly 6, witnessed by the fault on columns [0, 31, 206, 323, 354, 579]
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 100 more (112 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26210,6 +26213,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88`
 - `N = 176` (89 outputs + 87 checks)
 - distance: proved `d >= 6`
+- certified distance: `d >= 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 935.89.6.a); not re-measured here
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 77 more (89 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26226,6 +26230,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87`
 - `N = 176` (88 outputs + 88 checks)
 - distance: proved `d >= 6`
+- certified distance: `d >= 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 936.88.6.a); not re-measured here
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 76 more (88 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26385,6 +26390,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35`
 - `N = 176` (36 outputs + 140 checks)
 - distance: proved `d >= 6`
+- certified distance: `d >= 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 988.36.6.a); not re-measured here
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 24 more (36 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26401,6 +26407,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25`
 - `N = 176` (26 outputs + 150 checks)
 - distance: proved `d >= 6`
+- certified distance: `d >= 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 998.26.6.a); not re-measured here
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 14 more (26 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -27996,8 +28003,8 @@ SHA-256 of those columns.
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198+199+200+201+202+203+204+205+206+207+208+209+210+211+212+213+214+215+216+217+218+219+220+221+222+223+224+225+226+227+228+229+230+231+232+233+234+235+236+237+238+239+240+241+242+243+244+245+246+247+248+249+250+251+252+253+254+255+256+257+258+259+260+261+262+263+264+265+266+267+268+269+270+271+272+273+274+275+276+277+278+279+280+281+282+283+284+285+286+287+288+289+290+291+292+293+294+295+296+297+298+299+300+301+302+303+304+305+306+307+308+309+310+311+312+313+314+315+316+317+318+319+320+321+322+323+324+325+326+327+328+329+330+331+332+333+334+335+336+337+338+339+340+341+342+343+344+345+346+347+348+349+350+351+352+353+354+355+356+357+358+359+360+361+362+363+364+365+366+367+368+369+370+371+372`
 - `N = 397` (373 outputs + 24 checks)
-- distance: proved `d >= 3`
-- certified distance: `d = 4`, from gamma frontier release record one_heavy_large_1675_373_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance); not re-measured here
+- distance: proved `3 <= d <= 4`; the upper bound is the fault on columns [0, 3, 31, 890]
+- certified distance: `d = 4`, from gamma frontier release record one_heavy_large_1675_373_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 4, a lower bound of 4 met by a fault of weight 4 (tropidist_certificates/certificates.json, record 1675.373.3.a); not re-measured here
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 361 more (373 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -28013,8 +28020,8 @@ SHA-256 of those columns.
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198+199+200+201+202+203+204+205+206+207+208+209+210+211+212+213+214+215+216+217+218+219+220+221+222+223+224+225+226+227+228+229+230+231+232+233+234+235+236+237+238+239+240+241+242+243+244+245+246+247+248+249+250+251+252+253+254+255+256+257+258+259+260+261+262+263+264+265+266+267+268+269+270+271+272+273+274+275+276+277+278+279+280+281+282+283+284+285+286+287+288+289+290+291+292+293+294+295+296+297+298+299+300+301+302+303+304+305+306+307+308+309+310+311+312+313+314+315+316+317+318+319+320+321+322+323+324+325+326+327+328+329+330+331+332+333+334+335+336+337+338+339+340+341+342+343+344+345+346+347+348+349+350+351+352+353+354+355+356+357+358+359+360+361+362+363+364+365+366+367+368+369+370+371`
 - `N = 397` (372 outputs + 25 checks)
-- distance: proved `d >= 3`
-- certified distance: `d = 4`, from gamma frontier release record one_heavy_large_1676_372_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance); not re-measured here
+- distance: proved `3 <= d <= 4`; the upper bound is the fault on columns [0, 52, 808, 1097]
+- certified distance: `d = 4`, from gamma frontier release record one_heavy_large_1676_372_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 4, a lower bound of 4 met by a fault of weight 4 (tropidist_certificates/certificates.json, record 1676.372.3.a); not re-measured here
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 360 more (372 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -28045,8 +28052,8 @@ SHA-256 of those columns.
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198+199+200+201+202+203+204+205+206+207+208+209+210+211+212+213+214+215+216+217+218+219+220+221+222+223+224+225+226+227+228+229+230+231+232+233+234+235+236+237+238+239+240+241+242+243+244+245+246+247+248+249+250+251+252+253+254+255+256+257+258+259+260+261+262+263+264+265+266+267+268+269+270+271+272+273+274+275+276+277+278+279+280+281+282+283+284+285+286+287+288+289+290+291+292+293+294+295+296+297+298+299+300+301+302+303+304+305+306+307+308+309+310+311+312+313+314+315+316+317+318+319+320+321+322+323+324+325+326+327+328+329+330+331+332+333+334+335+336+337+338+339+340+341+342+343+344+345+346+347+348+349+350+351+352+353+354+355+356+357+358+359+360+361+362+363+364`
 - `N = 397` (365 outputs + 32 checks)
-- distance: proved `d >= 3`
-- certified distance: `d = 4`, from gamma frontier release record one_heavy_large_1683_365_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance); not re-measured here
+- distance: proved `3 <= d <= 4`; the upper bound is the fault on columns [1, 7, 8, 863]
+- certified distance: `d = 4`, from gamma frontier release record one_heavy_large_1683_365_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 4, a lower bound of 4 met by a fault of weight 4 (tropidist_certificates/certificates.json, record 1683.365.3.a); not re-measured here
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 353 more (365 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search

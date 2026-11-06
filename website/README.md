@@ -168,8 +168,11 @@ does not hold:
 - no two rows share an id;
 - the main file's number of rows matches its `n_classes`.
 
-A few rows carry a distance certified by their source that the catalogue could
-not re-check (`d_certified`). Tables show both distances side by side. Claims,
+Some rows carry a distance that the catalogue could not re-check
+(`d_certified`), certified by their source or by tropidist
+(`tropidist_certificates/`). The site says "certified" without naming who
+certified it, and the factory page gives the certificate's source text. Tables
+show both distances side by side. Claims,
 meaning the rankings, the frontier plot and the exponents marked †, use the
 certified distance. Filters on distance match either one. A certified lower
 bound that the row's own fault `d_upper` meets is shown as the distance itself

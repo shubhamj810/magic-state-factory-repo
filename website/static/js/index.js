@@ -113,7 +113,7 @@
             C.paramsTex(row.n, row.k, row.d) + "</a></td>" +
           '<td class="num">' + row.n + "</td>" +
           '<td class="num">' + row.k + "</td>" +
-          '<td class="num">' + row.d + (row.d_claim_certified ? ' <span class="cert-d" title="certified by its source">(' +
+          '<td class="num">' + row.d + (row.d_claim_certified ? ' <span class="cert-d" title="certified distance">(' +
             row.d_claim + ")</span>" : "") + "</td>" +
           '<td class="num">' + row.count + "</td>" +
           '<td class="num">' + C.num(row.gamma_rho_claim) + C.claimMark(row) + "</td>" +

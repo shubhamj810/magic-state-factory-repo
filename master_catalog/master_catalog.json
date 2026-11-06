@@ -160156,8 +160156,8 @@
     }
    ],
    "d_certified": 9,
-   "d_certified_is_exact": false,
-   "d_certified_source": "A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[41,1,9]] code doubled onto [[95,1,7]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 9; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces"
+   "d_certified_is_exact": true,
+   "d_certified_source": "A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[41,1,9]] code doubled onto [[95,1,7]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 9; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 177.1.7.a)"
   },
   {
    "n": 177,
@@ -162358,8 +162358,8 @@
     }
    ],
    "d_certified": 9,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[45,1,9]] code of the self-dual [46,23,10] code sub(XQ47) doubled onto [[95,1,7]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 9, with d_sd at least the classical distance less one (their Lemma 2.4)"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[45,1,9]] code of the self-dual [46,23,10] code sub(XQ47) doubled onto [[95,1,7]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 9, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 185.1.7.a)"
   },
   {
    "n": 186,
@@ -165062,8 +165062,8 @@
     }
    ],
    "d_certified": 9,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[95,1,7]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 9, with d_sd at least the classical distance less one (their Lemma 2.4)"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[95,1,7]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 9, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 189.1.7.a)"
   },
   {
    "n": 189,
@@ -220103,8 +220103,8 @@
     }
    ],
    "d_certified": 11,
-   "d_certified_is_exact": false,
-   "d_certified_source": "A. Gong (github.com/gongaa/RM127, triply-even/): [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[177,1,9]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 11; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces"
+   "d_certified_is_exact": true,
+   "d_certified_source": "A. Gong (github.com/gongaa/RM127, triply-even/): [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[177,1,9]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 11; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 11, a lower bound of 11 met by a fault of weight 11 (tropidist_certificates/certificates.json, record 271.1.7.a)"
   },
   {
    "n": 273,
@@ -222203,8 +222203,8 @@
     }
    ],
    "d_certified": 11,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[185,1,9]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 11, with d_sd at least the classical distance less one (their Lemma 2.4)"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[185,1,9]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 11, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 11, a lower bound of 11 met by a fault of weight 11 (tropidist_certificates/certificates.json, record 279.1.7.a)"
   },
   {
    "n": 279,
@@ -226291,8 +226291,8 @@
     }
    ],
    "d_certified": 11,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[189,1,9]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 11, with d_sd at least the classical distance less one (their Lemma 2.4)"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[189,1,9]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 11, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 11, a lower bound of 11 met by a fault of weight 11 (tropidist_certificates/certificates.json, record 283.1.7.a)"
   },
   {
    "n": 285,
@@ -279024,8 +279024,8 @@
     }
    ],
    "d_certified": 13,
-   "d_certified_is_exact": false,
-   "d_certified_source": "A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[65,1,13]] code doubled onto [[271,1,11]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 13; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces"
+   "d_certified_is_exact": true,
+   "d_certified_source": "A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[65,1,13]] code doubled onto [[271,1,11]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 13; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 13, a lower bound of 13 met by a fault of weight 13 (tropidist_certificates/certificates.json, record 401.1.6.a)"
   },
   {
    "n": 403,
@@ -311727,8 +311727,8 @@
     }
    ],
    "d_certified": 13,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[69,1,13]] code of the self-dual [70,35,12] code SD70 doubled onto [[279,1,11]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 13, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[69,1,13]] code of the self-dual [70,35,12] code SD70 doubled onto [[279,1,11]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 13, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 13, a lower bound of 13 met by a fault of weight 13 (tropidist_certificates/certificates.json, record 417.1.6.a)"
   },
   {
    "n": 419,
@@ -369206,7 +369206,10 @@
     }
    ],
    "t_count_note": "not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9",
-   "poly_degree_note": "not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9"
+   "poly_degree_note": "not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9",
+   "d_certified": 7,
+   "d_certified_is_exact": true,
+   "d_certified_source": "tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 7, a lower bound of 7 met by a fault of weight 7 (tropidist_certificates/certificates.json, record 511.9.6.a)"
   },
   {
    "catalog_label": "511.10.5.a",
@@ -380222,7 +380225,10 @@
    "poly_degree_note": "not computed: exact minimisation is over GL(39,2) and a punctured RM(39-4,39) coset, neither feasible at k=39",
    "citations": [
     "jain2026symmetry"
-   ]
+   ],
+   "d_certified": 8,
+   "d_certified_is_exact": true,
+   "d_certified_source": "tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 8, a lower bound of 8 met by a fault of weight 8 (tropidist_certificates/certificates.json, record 512.39.6.a)"
   },
   {
    "catalog_label": "512.84.6.a",
@@ -380787,7 +380793,10 @@
    "citations": [
     "rengaswamy2020optimality",
     "vuillot2022quantum"
-   ]
+   ],
+   "d_certified": 8,
+   "d_certified_is_exact": true,
+   "d_certified_source": "tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 8, a lower bound of 8 met by a fault of weight 8 (tropidist_certificates/certificates.json, record 512.84.6.a)"
   },
   {
    "n": 516,
@@ -600632,9 +600641,9 @@
    "t_count": null,
    "poly_degree": null,
    "effective_width": 123,
-   "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_is_exact": true,
+   "d_upper": 6,
+   "d_witness": [0,10,48,501,692,699],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -602733,9 +602742,9 @@
    "t_count": null,
    "poly_degree": null,
    "effective_width": 122,
-   "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_is_exact": true,
+   "d_upper": 6,
+   "d_witness": [0,3,53,296,573,862],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -604833,9 +604842,9 @@
    "t_count": null,
    "poly_degree": null,
    "effective_width": 120,
-   "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_is_exact": true,
+   "d_upper": 6,
+   "d_witness": [0,7,155,419,455,775],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -606934,9 +606943,9 @@
    "t_count": null,
    "poly_degree": null,
    "effective_width": 119,
-   "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_is_exact": true,
+   "d_upper": 6,
+   "d_witness": [0,49,86,294,587,838],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -609035,9 +609044,9 @@
    "t_count": null,
    "poly_degree": null,
    "effective_width": 118,
-   "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_is_exact": true,
+   "d_upper": 6,
+   "d_witness": [0,4,254,420,668,708],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -611136,9 +611145,9 @@
    "t_count": null,
    "poly_degree": null,
    "effective_width": 117,
-   "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_is_exact": true,
+   "d_upper": 6,
+   "d_witness": [0,1,63,117,310,367],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -613237,9 +613246,9 @@
    "t_count": null,
    "poly_degree": null,
    "effective_width": 116,
-   "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_is_exact": true,
+   "d_upper": 6,
+   "d_witness": [0,27,152,245,399,783],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -615347,9 +615356,9 @@
    "t_count": null,
    "poly_degree": null,
    "effective_width": 115,
-   "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_is_exact": true,
+   "d_upper": 6,
+   "d_witness": [0,27,152,245,399,783],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -627083,9 +627092,9 @@
    "t_count": null,
    "poly_degree": null,
    "effective_width": 114,
-   "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_is_exact": true,
+   "d_upper": 6,
+   "d_witness": [0,53,374,417,455,909],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -629183,9 +629192,9 @@
    "t_count": null,
    "poly_degree": null,
    "effective_width": 113,
-   "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_is_exact": true,
+   "d_upper": 6,
+   "d_witness": [0,31,206,322,353,578],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -631283,9 +631292,9 @@
    "t_count": null,
    "poly_degree": null,
    "effective_width": 112,
-   "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_is_exact": true,
+   "d_upper": 6,
+   "d_witness": [0,31,206,323,354,579],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -636385,7 +636394,10 @@
    "poly_degree_note": "not computed: exact minimisation is over GL(89,2) and a punctured RM(89-4,89) coset, neither feasible at k=89",
    "citations": [
     "jain2026symmetry"
-   ]
+   ],
+   "d_certified": 7,
+   "d_certified_is_exact": false,
+   "d_certified_source": "tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 935.89.6.a)"
   },
   {
    "catalog_label": "936.88.6.a",
@@ -638489,7 +638501,10 @@
    "poly_degree_note": "not computed: exact minimisation is over GL(88,2) and a punctured RM(88-4,88) coset, neither feasible at k=88",
    "citations": [
     "jain2026symmetry"
-   ]
+   ],
+   "d_certified": 7,
+   "d_certified_is_exact": false,
+   "d_certified_source": "tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 936.88.6.a)"
   },
   {
    "catalog_label": "937.87.6.a",
@@ -655298,7 +655313,10 @@
    "poly_degree_note": "not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36",
    "citations": [
     "jain2026symmetry"
-   ]
+   ],
+   "d_certified": 7,
+   "d_certified_is_exact": false,
+   "d_certified_source": "tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 988.36.6.a)"
   },
   {
    "catalog_label": "998.26.6.a",
@@ -657400,7 +657418,10 @@
    "poly_degree_note": "not computed: exact minimisation is over GL(26,2) and a punctured RM(26-4,26) coset, neither feasible at k=26",
    "citations": [
     "jain2026symmetry"
-   ]
+   ],
+   "d_certified": 7,
+   "d_certified_is_exact": false,
+   "d_certified_source": "tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 998.26.6.a)"
   },
   {
    "n": 1008,
@@ -842377,8 +842398,8 @@
    "poly_degree": null,
    "effective_width": 373,
    "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_upper": 4,
+   "d_witness": [0,3,31,890],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -846138,7 +846159,7 @@
    "poly_degree_note": "not computed: exact minimisation is over GL(373,2) and a punctured RM(373-4,373) coset, neither feasible at k=373",
    "d_certified": 4,
    "d_certified_is_exact": true,
-   "d_certified_source": "gamma frontier release record one_heavy_large_1675_373_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance)"
+   "d_certified_source": "gamma frontier release record one_heavy_large_1675_373_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 4, a lower bound of 4 met by a fault of weight 4 (tropidist_certificates/certificates.json, record 1675.373.3.a)"
   },
   {
    "catalog_label": "1676.372.3.a",
@@ -846529,8 +846550,8 @@
    "poly_degree": null,
    "effective_width": 372,
    "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_upper": 4,
+   "d_witness": [0,52,808,1097],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -850291,7 +850312,7 @@
    "poly_degree_note": "not computed: exact minimisation is over GL(372,2) and a punctured RM(372-4,372) coset, neither feasible at k=372",
    "d_certified": 4,
    "d_certified_is_exact": true,
-   "d_certified_source": "gamma frontier release record one_heavy_large_1676_372_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance)"
+   "d_certified_source": "gamma frontier release record one_heavy_large_1676_372_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 4, a lower bound of 4 met by a fault of weight 4 (tropidist_certificates/certificates.json, record 1676.372.3.a)"
   },
   {
    "n": 1679,
@@ -853324,8 +853345,8 @@
    "poly_degree": null,
    "effective_width": 365,
    "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_upper": 4,
+   "d_witness": [1,7,8,863],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -857093,7 +857114,7 @@
    "poly_degree_note": "not computed: exact minimisation is over GL(365,2) and a punctured RM(365-4,365) coset, neither feasible at k=365",
    "d_certified": 4,
    "d_certified_is_exact": true,
-   "d_certified_source": "gamma frontier release record one_heavy_large_1683_365_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance)"
+   "d_certified_source": "gamma frontier release record one_heavy_large_1683_365_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 4, a lower bound of 4 met by a fault of weight 4 (tropidist_certificates/certificates.json, record 1683.365.3.a)"
   },
   {
    "catalog_label": "1715.287.3.a",

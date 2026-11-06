@@ -121,6 +121,18 @@ merged eight more, built here: her `[[559,1,15]]` doubled on with the paper's
 Table I inputs, `[[761,1,17]]` to `[[3195,1,31]]`, each 16 qubits shorter than
 the Table I code of the same distance.
 
+**Distances from tropidist.**
+[`migrations/tropidist_certificates_2026_11_06.py`](migrations/tropidist_certificates_2026_11_06.py)
+records what the exact solver tropidist (Cheng, Guo and Pan,
+arXiv:2611.08247) certifies on the 62 rows this folder did not pin; the
+results and how they were obtained are in
+[`../tropidist_certificates/`](../tropidist_certificates/README.md). Eleven
+rows near `n = 900` (`901.123.6.a` to `912.112.6.a`) became exact at `d = 6`
+with this folder's own proof, since tropidist found a fault at their proved
+floor. Eighteen more carry its result as a certificate: an exact distance on
+eleven of them, from 4 to 13, a fault of weight 4 now stored on three of those,
+and `d ≥ 7` on four.
+
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running
 some rotations as `T³`, `T⁵` or `T†` makes that unnecessary

@@ -68,10 +68,13 @@
     <p>Every distance is re-checked from the circuit. An <em>exact</em> distance is proved
     (no undetectable damaging fault is lighter) and witnessed (one of that weight is
     shown). Otherwise the catalogue gives a proved lower bound.</p>
-    <p>A few sources certify a larger distance than could be re-checked here. Tables show
-    both. Rankings and exponents use the certified one and mark it &dagger;. Where a
-    source certifies a lower bound and a damaging fault of that weight is shown here, the
-    two together give the distance, and the tag shows it without the &ge;.</p>
+    <p>Some rows carry a larger distance than could be re-checked here, certified by the
+    row's source or by the exact distance solver tropidist of Cheng, Guo and Pan
+    (<a href="https://arxiv.org/abs/2611.08247">arXiv:2611.08247</a>), run on every row whose
+    distance is not proved exact. Tables show both. Rankings and exponents use the certified
+    one and mark it &dagger;. Where a certified lower bound meets a damaging fault of that
+    weight shown here, the two together give the distance, and the tag shows it without the
+    &ge;.</p>
     <p>Where the distance is exact, each factory page also gives the error coefficient
     <span class="tex">A_d</span>: the number of faults of weight <span class="tex">d</span>
     that pass every check and damage the output. If each T state is faulty with probability
@@ -108,7 +111,7 @@
         <tr><td>valid factory</td><td>Every parity that touches a check row is checked to be even.</td><td>exact</td></tr>
         <tr><td>distance</td><td>Every fault below <span class="tex">d</span> is enumerated. An explicit damaging fault of weight <span class="tex">d</span> makes it exact. Without one it is a lower bound, and an explicit fault of larger weight gives an upper bound.</td><td>proved</td></tr>
         <tr><td>error coefficient <span class="tex">A_d</span></td><td>Counted exactly, as the faults the checks accept less those that leave the output intact. Each part is counted with the MacWilliams identity or by enumerating faults. Where enumerating the damaging faults directly also finishes, the two counts must agree. Left blank where neither method reaches, and on a lower bound.</td><td>exact or blank</td></tr>
-        <tr><td>certified distance</td><td>Taken from the factory's source where the search above was out of reach. Not re-checked.</td><td>from source</td></tr>
+        <tr><td>certified distance</td><td>Taken from the factory's source, or computed with tropidist, where the search above was out of reach. Not re-checked.</td><td>certified</td></tr>
         <tr><td>Clifford correction</td><td>Derived from the circuit, then checked by evaluating the corrected circuit's phase on every input that matters, and by simulating small circuits gate by gate. That no choice of powers of T removes it is proved by solving a linear system over <span class="tex">\mathbb{Z}_4</span>.</td><td>exact</td></tr>
         <tr><td>T-count, degree</td><td>Exact minimisation where it is feasible, about <span class="tex">k\le 6</span>. Left blank above that, never estimated.</td><td>exact or blank</td></tr>
         <tr><td><span class="tex">V_{\mathrm{ex}}</span>, <span class="tex">\gamma</span>, <span class="tex">\gamma_T</span>, <span class="tex">\gamma_\rho</span></td><td>Formulas in the numbers above.</td><td>exact</td></tr>
