@@ -85,7 +85,9 @@ every field of a row of the main file except `columns`, plus
   `[[1301,1,21]]` to `[[3239,1,31]]` (3.8 MB), moved there on 2026-11-07 by
   [`explicit_storage_2026_11_07.py`](migrations/explicit_storage_2026_11_07.py)
   and [`explicit_long_rows_2026_11_07.py`](migrations/explicit_long_rows_2026_11_07.py)
-  when the imports of that day took the main file toward 50 MB.
+  when the imports of that day took the main file toward 50 MB, and then every
+  main-file row over 200 kB of compact JSON
+  ([`explicit_large_rows_2026_11_07.py`](migrations/explicit_large_rows_2026_11_07.py)).
 - `columns_sha256`, the SHA-256 of those columns as compact JSON. It pins the
   circuit independently of the code that builds it.
 
