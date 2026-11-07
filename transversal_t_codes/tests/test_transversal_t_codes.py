@@ -279,6 +279,108 @@ class Codes(unittest.TestCase):
                         int((1 + (23 - w1) + (23 - w2) + (23 - w3)).min()))
         self.assertEqual(least, 14)
 
+    def test_the_distance_bound_agrees_with_enumeration(self):
+        """`min_distance.distance_lower_bound` never exceeds the minimum
+        distance, and equals it when that is at most 2t + 1: on the extended
+        Golay and QR codes of length 24 and 48, the [46,23,10] subtraction
+        code, and 300 random codes small enough to enumerate."""
+        import random
+        import min_distance as M
+
+        def brute(rows):
+            words = [0]
+            for r in rows:
+                words += [w ^ r for w in words]
+            return min(B.weight(w) for w in words if w)
+
+        xq47 = B.extend(B.quadratic_residue_code(47), 47)
+        for rows, n, t, d in [
+                (B.basis(B.extend(B.quadratic_residue_code(23), 23)), 24, 3, 8),
+                (B.basis(xq47), 48, 5, 12),
+                (B.basis(B.subtract(xq47, 48, 46, 47)), 46, 4, 10)]:
+            with self.subTest(n=n):
+                self.assertEqual(M.distance_lower_bound(rows, n, t)["bound"], d)
+        rng = random.Random(5)
+        checked = 0
+        for trial in range(300):
+            k = rng.randint(3, 10)
+            rows = B.basis([rng.getrandbits(2 * k) for _ in range(k)])
+            if len(rows) != k:
+                continue
+            t = rng.randint(1, k)
+            try:
+                bound = M.distance_lower_bound(rows, 2 * k, t, seed=trial)["bound"]
+            except ValueError:          # no two disjoint information sets
+                continue
+            d = brute(rows)
+            self.assertLessEqual(bound, d)
+            if d <= 2 * t + 1:
+                self.assertEqual(bound, d)
+            checked += 1
+        self.assertGreater(checked, 200)
+
+    def test_the_larger_self_dual_inputs_have_the_distances_used(self):
+        """d_sd >= 15, 17 and 19 for the [[79,1]] and [[103,1]] quantum QR codes
+        and the [[101,1]] code of sub(XQ103), proved without the literature.
+
+        Each input's stabiliser kernel is the punctured classical code (checked
+        here), every word of the classical code is even, so its odd words are
+        the classical words through the punctured coordinate less that one
+        coordinate: d_sd >= d - 1.  `min_distance` proves d >= 14, 18 and 18
+        by listing every word with at most 6, 8 and 8 ones on either of two
+        disjoint information sets.  The two QR codes are doubly even, so their
+        weights are multiples of 4 and d >= 16 and 20."""
+        import certify_distances as CD
+        import min_distance as M
+        xq103 = B.extend(B.quadratic_residue_code(103), 103)
+        cases = [
+            (79, B.extend(B.quadratic_residue_code(79), 79), 6, 4, 15),
+            (101, B.subtract(xq103, 104, 102, 103), 8, 2, 17),
+            (103, xq103, 8, 4, 19),
+        ]
+        for n_sd, classical, t, step, d_sd in cases:
+            with self.subTest(n_sd=n_sd):
+                n = n_sd + 1
+                self.assertTrue(B.is_self_dual(classical, n))
+                if step == 4:
+                    self.assertTrue(B.doubly_even(classical))
+                stabilisers = B.css_from_self_dual(classical, n)
+                kernel = dual_basis(stabilisers, n_sd)
+                punctured = [r & ((1 << n_sd) - 1) for r in classical]
+                self.assertEqual(len(B.basis(kernel)), len(B.basis(punctured)))
+                self.assertEqual(len(B.basis(kernel + punctured)),
+                                 len(B.basis(kernel)))
+                bound = M.distance_lower_bound(B.basis(classical), n, t)["bound"]
+                weight_floor = -(-bound // step) * step     # round up to the step
+                self.assertGreaterEqual(weight_floor - 1, d_sd)
+                self.assertEqual(CD.PROVED[n_sd][0], d_sd)
+
+    def test_the_distance_certificates_are_what_the_script_writes(self):
+        """`distance_certificates.json` is rebuilt from the codes, and each
+        record's bound is the theorem's along a chain of proved inputs."""
+        import certify_distances as CD
+        text = B.render(CD.payload(self.codes))
+        self.assertEqual(CD.CERTIFICATES_JSON.read_text(encoding="utf-8"), text)
+        blob = json.loads(text)
+        by_label = {r["label"]: r for r in blob["records"]}
+        for record in blob["records"]:
+            with self.subTest(code=record["label"]):
+                code = self.by_n[record["n"]]
+                self.assertEqual(record["lower_bound"], code.d)
+                self.assertEqual(len(record["witness"]), code.d)
+                self.assertTrue(B.harmful(code, record["witness"]))
+                inner = record["inner_lower_bound"]
+                self.assertEqual(record["lower_bound"],
+                                 min(record["self_dual_distance"], inner + 2))
+                if record["inner_code"] in by_label:
+                    self.assertEqual(by_label[record["inner_code"]]["lower_bound"],
+                                     inner)
+                test_name = record["self_dual_distance_proved_by"].split("::")[1]
+                self.assertTrue(hasattr(self, test_name))
+        unchecked = {e["label"] for e in blob["unchecked"]}
+        self.assertFalse(unchecked & set(by_label))
+        self.assertEqual(len(unchecked) + len(by_label), len(self.codes))
+
     def test_the_102_bit_subtraction_code_is_self_dual(self):
         rows = B.subtract(B.extend(B.quadratic_residue_code(103), 103), 104, 102, 103)
         self.assertTrue(B.is_self_dual(rows, 102))

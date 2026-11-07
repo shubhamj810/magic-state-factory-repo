@@ -1,0 +1,486 @@
+{
+ "about": "Lower bounds on the distance of the codes of transversal_t_codes/ from the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III): d >= min(d_sd, d_tri + 2) at every doubling, from one qubit up. A record is written only when every self-dual input along its chain has a distance proved in this folder; self_dual_distance_proved_by names the test. columns_sha256 is the SHA-256 of the code's columns as compact JSON (master_catalog/constructions.digest), the circuit the catalogue stores. witness is a harmful fault of weight lower_bound. Written by transversal_t_codes/certify_distances.py.",
+ "method": "theorem",
+ "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III)",
+ "records": [
+  {
+   "label": "JA-15",
+   "n": 15,
+   "k": 1,
+   "N": 5,
+   "columns_sha256": "a86cd814baf2b659d12eb7077d895d5fd5a2641e0a63bcd54e0b4d278d09a6ea",
+   "lower_bound": 3,
+   "witness": [0, 7, 14],
+   "construction": "[[7,1,3]] Steane code (QR 7) doubled onto [[1,1,1]]",
+   "self_dual_input": "[[7,1,3]] Steane code (QR 7)",
+   "self_dual_distance": 3,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used",
+   "inner_code": "[[1,1,1]], one qubit",
+   "inner_lower_bound": 1
+  },
+  {
+   "label": "JA-49",
+   "n": 49,
+   "k": 1,
+   "N": 14,
+   "columns_sha256": "9367f58287a7ed6c22eea716fc0904f992bd1e1a3b5a994e117eb289fd8edf4e",
+   "lower_bound": 5,
+   "witness": [0, 17, 34, 41, 48],
+   "construction": "[[17,1,5]] 4.8.8 color code doubled onto [[15,1,3]]",
+   "self_dual_input": "[[17,1,5]] 4.8.8 color code",
+   "self_dual_distance": 5,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used",
+   "inner_code": "JA-15",
+   "inner_lower_bound": 3
+  },
+  {
+   "label": "JA-95",
+   "n": 95,
+   "k": 1,
+   "N": 26,
+   "columns_sha256": "4a3ca451c8bc5caec1d2f98f490bbcafd89521095f3177af351d2ba59d84dd01",
+   "lower_bound": 7,
+   "witness": [0, 23, 46, 63, 80, 87, 94],
+   "construction": "[[23,1,7]] Golay code (QR 23) doubled onto [[49,1,5]]",
+   "self_dual_input": "[[23,1,7]] Golay code (QR 23)",
+   "self_dual_distance": 7,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used",
+   "inner_code": "JA-49",
+   "inner_lower_bound": 5
+  },
+  {
+   "label": "G-177",
+   "n": 177,
+   "k": 1,
+   "N": 47,
+   "columns_sha256": "90682c1308391f5540331c3fcbefa9d1c990e877fa8978f56ff1712d996a0d7d",
+   "lower_bound": 9,
+   "witness": [0, 41, 82, 105, 128, 145, 162, 169, 176],
+   "construction": "Gong's doubly even self-dual [[41,1,9]] code doubled onto [[95,1,7]]",
+   "self_dual_input": "Gong's doubly even self-dual [[41,1,9]] code",
+   "self_dual_distance": 9,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_gong_s_self_dual_codes_have_the_distances_used",
+   "inner_code": "JA-95",
+   "inner_lower_bound": 7
+  },
+  {
+   "label": "JA-185",
+   "n": 185,
+   "k": 1,
+   "N": 49,
+   "columns_sha256": "70a26037d54fd19a8fab6ba0162f89f871e531481e7e17b172bfec71e48f471f",
+   "lower_bound": 9,
+   "witness": [0, 45, 90, 113, 136, 153, 170, 177, 184],
+   "construction": "[[45,1,9]] code of the self-dual [46,23,10] code sub(XQ47) doubled onto [[95,1,7]]",
+   "self_dual_input": "[[45,1,9]] code of the self-dual [46,23,10] code sub(XQ47)",
+   "self_dual_distance": 9,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used",
+   "inner_code": "JA-95",
+   "inner_lower_bound": 7
+  },
+  {
+   "label": "JA-189",
+   "n": 189,
+   "k": 1,
+   "N": 50,
+   "columns_sha256": "2f0cf972522d3d1af72bd7410100b7e3e7c1afe7856f29d006d812b2cdf45d66",
+   "lower_bound": 9,
+   "witness": [0, 47, 94, 117, 140, 157, 174, 181, 188],
+   "construction": "[[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[95,1,7]]",
+   "self_dual_input": "[[47,1,11]] quantum QR code (extended QR [48,24,12])",
+   "self_dual_distance": 11,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used",
+   "inner_code": "JA-95",
+   "inner_lower_bound": 7
+  },
+  {
+   "label": "G-271",
+   "n": 271,
+   "k": 1,
+   "N": 71,
+   "columns_sha256": "1ce8db8f5b6efc68aaa2a0e71964ca91f77537f6bb7fa397f1f741b0d5753fe2",
+   "lower_bound": 11,
+   "witness": [0, 47, 94, 135, 176, 199, 222, 239, 256, 263, 270],
+   "construction": "[[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[177,1,9]]",
+   "self_dual_input": "[[47,1,11]] quantum QR code (extended QR [48,24,12])",
+   "self_dual_distance": 11,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used",
+   "inner_code": "G-177",
+   "inner_lower_bound": 9
+  },
+  {
+   "label": "JA-279",
+   "n": 279,
+   "k": 1,
+   "N": 73,
+   "columns_sha256": "2fe6901899585a1494e10d1a724ea6e6b7fa7bfbd2a81b9bd831e5bd50899e9c",
+   "lower_bound": 11,
+   "witness": [0, 47, 94, 139, 184, 207, 230, 247, 264, 271, 278],
+   "construction": "[[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[185,1,9]]",
+   "self_dual_input": "[[47,1,11]] quantum QR code (extended QR [48,24,12])",
+   "self_dual_distance": 11,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used",
+   "inner_code": "JA-185",
+   "inner_lower_bound": 9
+  },
+  {
+   "label": "JA-283",
+   "n": 283,
+   "k": 1,
+   "N": 74,
+   "columns_sha256": "d410afc41a35707fabfa80020206591924b4ed012f3c16915453c45530682d95",
+   "lower_bound": 11,
+   "witness": [0, 47, 94, 141, 188, 211, 234, 251, 268, 275, 282],
+   "construction": "[[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[189,1,9]]",
+   "self_dual_input": "[[47,1,11]] quantum QR code (extended QR [48,24,12])",
+   "self_dual_distance": 11,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used",
+   "inner_code": "JA-189",
+   "inner_lower_bound": 9
+  },
+  {
+   "label": "G-401",
+   "n": 401,
+   "k": 1,
+   "N": 104,
+   "columns_sha256": "bf241fe68362c5a0870e5d66581063a17e9b98632f0859613f85846333f2364d",
+   "lower_bound": 13,
+   "witness": [0, 65, 130, 177, 224, 265, 306, 329, 352, 369, 386, 393, 400],
+   "construction": "Gong's doubly even self-dual [[65,1,13]] code doubled onto [[271,1,11]]",
+   "self_dual_input": "Gong's doubly even self-dual [[65,1,13]] code",
+   "self_dual_distance": 13,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_gong_s_self_dual_codes_have_the_distances_used",
+   "inner_code": "G-271",
+   "inner_lower_bound": 11
+  },
+  {
+   "label": "JA-417",
+   "n": 417,
+   "k": 1,
+   "N": 108,
+   "columns_sha256": "da8cf16fabf4b860acab3e932a18d48307e1e80d03805cc60bd9c7c9e4e5b74b",
+   "lower_bound": 13,
+   "witness": [0, 69, 138, 185, 232, 277, 322, 345, 368, 385, 402, 409, 416],
+   "construction": "[[69,1,13]] code of the self-dual [70,35,12] code SD70 doubled onto [[279,1,11]]",
+   "self_dual_input": "[[69,1,13]] code of the self-dual [70,35,12] code SD70",
+   "self_dual_distance": 13,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_70_bit_code_gives_a_69_1_13",
+   "inner_code": "JA-279",
+   "inner_lower_bound": 11
+  },
+  {
+   "label": "JA-441",
+   "n": 441,
+   "k": 1,
+   "N": 114,
+   "columns_sha256": "56f2a1625d063d9f3c64ec339fb1e7bed414eaa4df3760f078b59fbff2fbb001",
+   "lower_bound": 13,
+   "witness": [0, 79, 158, 205, 252, 299, 346, 369, 392, 409, 426, 433, 440],
+   "construction": "[[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[283,1,11]]",
+   "self_dual_input": "[[79,1,15]] quantum QR code (extended QR [80,40,16])",
+   "self_dual_distance": 15,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used",
+   "inner_code": "JA-283",
+   "inner_lower_bound": 11
+  },
+  {
+   "label": "G-559",
+   "n": 559,
+   "k": 1,
+   "N": 144,
+   "columns_sha256": "3848c56b30e584adf853745f58a0590af935727eed0b84c502354d1996eb4ac5",
+   "lower_bound": 15,
+   "witness": [0, 79, 158, 223, 288, 335, 382, 423, 464, 487, 510, 527, 544, 551, 558],
+   "construction": "[[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[401,1,13]]",
+   "self_dual_input": "[[79,1,15]] quantum QR code (extended QR [80,40,16])",
+   "self_dual_distance": 15,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used",
+   "inner_code": "G-401",
+   "inner_lower_bound": 13
+  },
+  {
+   "label": "JA-575",
+   "n": 575,
+   "k": 1,
+   "N": 148,
+   "columns_sha256": "fabe4923e456f4b412cc510705d897ed2f1b122d4e3c669bb396392b25895bc9",
+   "lower_bound": 15,
+   "witness": [0, 79, 158, 227, 296, 343, 390, 435, 480, 503, 526, 543, 560, 567, 574],
+   "construction": "[[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[417,1,13]]",
+   "self_dual_input": "[[79,1,15]] quantum QR code (extended QR [80,40,16])",
+   "self_dual_distance": 15,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used",
+   "inner_code": "JA-417",
+   "inner_lower_bound": 13
+  },
+  {
+   "label": "JA-599",
+   "n": 599,
+   "k": 1,
+   "N": 154,
+   "columns_sha256": "d4500cc49d29e16ed7d8cd39ae9dab53dafac2f758aef2ab269fdf6c15f2fd64",
+   "lower_bound": 15,
+   "witness": [0, 79, 158, 237, 316, 363, 410, 457, 504, 527, 550, 567, 584, 591, 598],
+   "construction": "[[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[441,1,13]]",
+   "self_dual_input": "[[79,1,15]] quantum QR code (extended QR [80,40,16])",
+   "self_dual_distance": 15,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used",
+   "inner_code": "JA-441",
+   "inner_lower_bound": 13
+  },
+  {
+   "label": "GJ-761",
+   "n": 761,
+   "k": 1,
+   "N": 195,
+   "columns_sha256": "2076299711b052b61e47064f20329d96e8c39f803f00ab0047dfa5f119d63844",
+   "lower_bound": 17,
+   "witness": [0, 101, 202, 281, 360, 425, 490, 537, 584, 625, 666, 689, 712, 729, 746, 753, 760],
+   "construction": "[[101,1,17]] code of the self-dual [102,51,18] code sub(XQ103) doubled onto [[559,1,15]]",
+   "self_dual_input": "[[101,1,17]] code of the self-dual [102,51,18] code sub(XQ103)",
+   "self_dual_distance": 17,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used",
+   "inner_code": "G-559",
+   "inner_lower_bound": 15
+  },
+  {
+   "label": "JA-777",
+   "n": 777,
+   "k": 1,
+   "N": 199,
+   "columns_sha256": "34d2ac88904d74e260da820f9424425cffa8a7a864fe124f3f682a8b86b8c081",
+   "lower_bound": 17,
+   "witness": [0, 101, 202, 281, 360, 429, 498, 545, 592, 637, 682, 705, 728, 745, 762, 769, 776],
+   "construction": "[[101,1,17]] code of the self-dual [102,51,18] code sub(XQ103) doubled onto [[575,1,15]]",
+   "self_dual_input": "[[101,1,17]] code of the self-dual [102,51,18] code sub(XQ103)",
+   "self_dual_distance": 17,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used",
+   "inner_code": "JA-575",
+   "inner_lower_bound": 15
+  },
+  {
+   "label": "JA-805",
+   "n": 805,
+   "k": 1,
+   "N": 206,
+   "columns_sha256": "64ef84d1d6c96e5d51d8060c8b1fdb1b32c0585d568e9f2ff15be39d65e5871f",
+   "lower_bound": 17,
+   "witness": [0, 103, 206, 285, 364, 443, 522, 569, 616, 663, 710, 733, 756, 773, 790, 797, 804],
+   "construction": "[[103,1,19]] quantum QR code (extended QR [104,52,20]) doubled onto [[599,1,15]]",
+   "self_dual_input": "[[103,1,19]] quantum QR code (extended QR [104,52,20])",
+   "self_dual_distance": 19,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used",
+   "inner_code": "JA-599",
+   "inner_lower_bound": 15
+  },
+  {
+   "label": "GJ-967",
+   "n": 967,
+   "k": 1,
+   "N": 247,
+   "columns_sha256": "28908711caf3b69df6773c077b3d3ddab18d3dd723706fd33a2e2ad7a3242b4b",
+   "lower_bound": 19,
+   "witness": [0, 103, 206, 307, 408, 487, 566, 631, 696, 743, 790, 831, 872, 895, 918, 935, 952, 959, 966],
+   "construction": "[[103,1,19]] quantum QR code (extended QR [104,52,20]) doubled onto [[761,1,17]]",
+   "self_dual_input": "[[103,1,19]] quantum QR code (extended QR [104,52,20])",
+   "self_dual_distance": 19,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used",
+   "inner_code": "GJ-761",
+   "inner_lower_bound": 17
+  },
+  {
+   "label": "JA-983",
+   "n": 983,
+   "k": 1,
+   "N": 251,
+   "columns_sha256": "b9d5f8399d3963170e1b5dd0a9b0e1c28f81e3b8ccd37b3908dd29ee57d47367",
+   "lower_bound": 19,
+   "witness": [0, 103, 206, 307, 408, 487, 566, 635, 704, 751, 798, 843, 888, 911, 934, 951, 968, 975, 982],
+   "construction": "[[103,1,19]] quantum QR code (extended QR [104,52,20]) doubled onto [[777,1,17]]",
+   "self_dual_input": "[[103,1,19]] quantum QR code (extended QR [104,52,20])",
+   "self_dual_distance": 19,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used",
+   "inner_code": "JA-777",
+   "inner_lower_bound": 17
+  },
+  {
+   "label": "JA-1011",
+   "n": 1011,
+   "k": 1,
+   "N": 258,
+   "columns_sha256": "4880760d8765ecdbdb12bb3e2adaf9b79b162828588dbc56dd93cf8a1b2071de",
+   "lower_bound": 19,
+   "witness": [0, 103, 206, 309, 412, 491, 570, 649, 728, 775, 822, 869, 916, 939, 962, 979, 996, 1003, 1010],
+   "construction": "[[103,1,19]] quantum QR code (extended QR [104,52,20]) doubled onto [[805,1,17]]",
+   "self_dual_input": "[[103,1,19]] quantum QR code (extended QR [104,52,20])",
+   "self_dual_distance": 19,
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used",
+   "inner_code": "JA-805",
+   "inner_lower_bound": 17
+  }
+ ],
+ "unchecked": [
+  {
+   "label": "GJ-1301",
+   "n": 1301,
+   "paper_distance": 21,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "JA-1317",
+   "n": 1317,
+   "paper_distance": 21,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "JA-1345",
+   "n": 1345,
+   "paper_distance": 21,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "GJ-1635",
+   "n": 1635,
+   "paper_distance": 23,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "JA-1651",
+   "n": 1651,
+   "paper_distance": 23,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "JA-1679",
+   "n": 1679,
+   "paper_distance": 23,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "GJ-2017",
+   "n": 2017,
+   "paper_distance": 25,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here",
+    "the minimum distance 28 of the extended QR code [192,96], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "JA-2033",
+   "n": 2033,
+   "paper_distance": 25,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here",
+    "the minimum distance 28 of the extended QR code [192,96], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "JA-2061",
+   "n": 2061,
+   "paper_distance": 25,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here",
+    "the minimum distance 28 of the extended QR code [192,96], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "GJ-2399",
+   "n": 2399,
+   "paper_distance": 27,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here",
+    "the minimum distance 28 of the extended QR code [192,96], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "JA-2415",
+   "n": 2415,
+   "paper_distance": 27,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here",
+    "the minimum distance 28 of the extended QR code [192,96], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "JA-2443",
+   "n": 2443,
+   "paper_distance": 27,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here",
+    "the minimum distance 28 of the extended QR code [192,96], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "GJ-2797",
+   "n": 2797,
+   "paper_distance": 29,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here",
+    "the minimum distance 28 of the extended QR code [192,96], stated in the paper's Table II and not checked here",
+    "the minimum distance 32 of the extended QR code [200,100], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "JA-2813",
+   "n": 2813,
+   "paper_distance": 29,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here",
+    "the minimum distance 28 of the extended QR code [192,96], stated in the paper's Table II and not checked here",
+    "the minimum distance 32 of the extended QR code [200,100], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "JA-2841",
+   "n": 2841,
+   "paper_distance": 29,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here",
+    "the minimum distance 28 of the extended QR code [192,96], stated in the paper's Table II and not checked here",
+    "the minimum distance 32 of the extended QR code [200,100], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "GJ-3195",
+   "n": 3195,
+   "paper_distance": 31,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here",
+    "the minimum distance 28 of the extended QR code [192,96], stated in the paper's Table II and not checked here",
+    "the minimum distance 32 of the extended QR code [200,100], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "JA-3211",
+   "n": 3211,
+   "paper_distance": 31,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here",
+    "the minimum distance 28 of the extended QR code [192,96], stated in the paper's Table II and not checked here",
+    "the minimum distance 32 of the extended QR code [200,100], stated in the paper's Table II and not checked here"
+   ]
+  },
+  {
+   "label": "JA-3239",
+   "n": 3239,
+   "paper_distance": 31,
+   "rests_on": [
+    "the minimum distance 24 of the extended QR code [168,84], stated in the paper's Table II and not checked here",
+    "the minimum distance 28 of the extended QR code [192,96], stated in the paper's Table II and not checked here",
+    "the minimum distance 32 of the extended QR code [200,100], stated in the paper's Table II and not checked here"
+   ]
+  }
+ ]
+}
