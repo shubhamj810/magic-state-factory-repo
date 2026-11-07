@@ -1,0 +1,1 @@
+{"n": 959, "w": 8, "a": 4, "b": 4, "parts_log2": 10, "slice": [22, 1024], "count_mode": 0, "complete": 0, "harmful_raw": 1, "accepted_raw": 1, "divisor": 70, "status": "found", "witness": [1, 578, 814, 829, 29, 119, 120, 577], "seconds": 87.207}

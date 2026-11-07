@@ -1,0 +1,6 @@
+== node compute-a7-40.zaratan.umd.edu Fri Nov  6 19:12:19 EST 2026
+== DP driver test: 417.1.6.a (laptop o2: exact 13 with a 4 GiB table in 20 s) and 177.1.7.a
+tropidist {'commit': 'b03ec2d4077f287f89f97b5c2c16ce5ce17c2c58', 'tracked_files_modified': False}, config dp=2,table_gb=16, threads 8
+{"label": "177.1.7.a", "status": "exact", "lower_bound": 9, "upper_bound": 9, "witness_check": {"distinct": true, "in_range": true, "faultcore_harmful": true, "literal_harmful": true, "ok": true, "weight_equals_upper": true}, "wall_seconds": 4.62, "peak_group_rss_mb": 51.8, "runner_note": null, "decision": null}
+{"label": "417.1.6.a", "status": "exact", "lower_bound": 13, "upper_bound": 13, "witness_check": {"distinct": true, "in_range": true, "faultcore_harmful": true, "literal_harmful": true, "ok": true, "weight_equals_upper": true}, "wall_seconds": 20.86, "peak_group_rss_mb": 4161.2, "runner_note": null, "decision": null}
+== done Fri Nov  6 19:13:05 EST 2026

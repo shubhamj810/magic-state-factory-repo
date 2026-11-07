@@ -1,0 +1,8 @@
+== node compute-b6-20.zaratan.umd.edu Fri Nov  6 19:43:21 EST 2026
+== 998.26.6.a K=7, all anchors (probe: 16 anchors in 2.9 s)
+{"label": "998.26.6.a", "tag": "zaratan-j4", "n": 998, "k": 26, "r": 150, "K": 7, "status": "exhausted", "best": null, "witness": null, "witness_checks": [], "search_seconds": 175.31, "setup_seconds": 0.413, "exclusion_seconds": 0.305, "exclusion_pairs": 0, "table_entries": 498502, "k_table": 2, "la
+== 959.65.6.a K=7, 16 anchors with a depth-3 table (probe at depth 2: 513 s)
+{"label": "959.65.6.a", "tag": "zaratan-j4-probe-kt3", "n": 959, "k": 65, "r": 111, "K": 7, "status": "exhausted", "best": null, "witness": null, "witness_checks": [], "search_seconds": 3.03, "setup_seconds": 10.193, "exclusion_seconds": 1.462, "exclusion_pairs": 0, "table_entries": 146996480, "k_ta
+== 742.36.6.a K=7, all anchors (probe: 16 anchors in 41 s)
+{"label": "742.36.6.a", "tag": "zaratan-j4", "n": 742, "k": 36, "r": 42, "K": 7, "status": "exhausted", "best": null, "witness": null, "witness_checks": [], "search_seconds": 1736.16, "setup_seconds": 0.351, "exclusion_seconds": 0.284, "exclusion_pairs": 954, "table_entries": 273216, "k_table": 2, "
+== done Fri Nov  6 20:15:48 EST 2026

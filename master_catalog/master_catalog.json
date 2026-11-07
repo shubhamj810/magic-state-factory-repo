@@ -160157,7 +160157,14 @@
    ],
    "d_certified": 9,
    "d_certified_is_exact": true,
-   "d_certified_source": "A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[41,1,9]] code doubled onto [[95,1,7]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 9; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 177.1.7.a)"
+   "d_certified_source": "A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[41,1,9]] code doubled onto [[95,1,7]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 9; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 177.1.7.a); independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the dense dynamic programme of tropidist's pipeline (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; at b03ec2d4), config dp=2,table_gb=16, 8 threads, 5 s, peak 0.1 GiB (evidence/zaratan/dp_records/zaratan_t2c.jsonl): d = 9, a lower bound of 9 met by a fault of weight 9 (zaratan_certificates/certificates.json, record 177.1.7.a)",
+   "d_certified_evidence": [
+    {
+     "file": "zaratan_certificates/certificates.json",
+     "method": "exhaustive search",
+     "tool": "tropidist pipeline"
+    }
+   ]
   },
   {
    "n": 177,
@@ -311728,7 +311735,14 @@
    ],
    "d_certified": 13,
    "d_certified_is_exact": true,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[69,1,13]] code of the self-dual [70,35,12] code SD70 doubled onto [[279,1,11]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 13, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 13, a lower bound of 13 met by a fault of weight 13 (tropidist_certificates/certificates.json, record 417.1.6.a)"
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[69,1,13]] code of the self-dual [70,35,12] code SD70 doubled onto [[279,1,11]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 13, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 13, a lower bound of 13 met by a fault of weight 13 (tropidist_certificates/certificates.json, record 417.1.6.a); independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the dense dynamic programme of tropidist's pipeline (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; at b03ec2d4), config dp=2,table_gb=16, 8 threads, 21 s, peak 4.1 GiB (evidence/zaratan/dp_records/zaratan_t2c.jsonl): d = 13, a lower bound of 13 met by a fault of weight 13 (zaratan_certificates/certificates.json, record 417.1.6.a)",
+   "d_certified_evidence": [
+    {
+     "file": "zaratan_certificates/certificates.json",
+     "method": "exhaustive search",
+     "tool": "tropidist pipeline"
+    }
+   ]
   },
   {
    "n": 419,
@@ -334503,8 +334517,15 @@
     }
    ],
    "d_certified": 13,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[283,1,11]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 13, with d_sd at least the classical distance less one (their Lemma 2.4)"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[283,1,11]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 13, with d_sd at least the classical distance less one (their Lemma 2.4); independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the dense dynamic programme of tropidist's pipeline (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; at b03ec2d4), config dp=2,table_gb=40, 16 threads, 225 s, peak 32.1 GiB (evidence/zaratan/dp_records/zaratan_d1.jsonl): d = 13, a lower bound of 13 met by a fault of weight 13 (zaratan_certificates/certificates.json, record 441.1.6.a)",
+   "d_certified_evidence": [
+    {
+     "file": "zaratan_certificates/certificates.json",
+     "method": "exhaustive search",
+     "tool": "tropidist pipeline"
+    }
+   ]
   },
   {
    "n": 441,
@@ -395954,8 +395975,15 @@
     }
    ],
    "d_certified": 15,
-   "d_certified_is_exact": false,
-   "d_certified_source": "A. Gong (github.com/gongaa/RM127, triply-even/): [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[401,1,13]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 15; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces"
+   "d_certified_is_exact": true,
+   "d_certified_source": "A. Gong (github.com/gongaa/RM127, triply-even/): [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[401,1,13]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 15; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the dense dynamic programme of tropidist's pipeline (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; at b03ec2d4), config dp=2,table_gb=140, 32 threads, 298 s, peak 128.1 GiB (evidence/zaratan/dp_records/zaratan_d3.jsonl): d = 15, a lower bound of 15 met by a fault of weight 15 (zaratan_certificates/certificates.json, record 559.1.6.a)",
+   "d_certified_evidence": [
+    {
+     "file": "zaratan_certificates/certificates.json",
+     "method": "exhaustive search",
+     "tool": "tropidist pipeline"
+    }
+   ]
   },
   {
    "n": 561,
@@ -416465,8 +416493,15 @@
     }
    ],
    "d_certified": 15,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[417,1,13]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 15, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[417,1,13]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 15, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the dense dynamic programme of tropidist's pipeline (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; at b03ec2d4), config dp=2,table_gb=72, 24 threads, 160 s, peak 64.1 GiB (evidence/zaratan/dp_records/zaratan_d2.jsonl): d = 15, a lower bound of 15 met by a fault of weight 15 (zaratan_certificates/certificates.json, record 575.1.6.a)",
+   "d_certified_evidence": [
+    {
+     "file": "zaratan_certificates/certificates.json",
+     "method": "exhaustive search",
+     "tool": "tropidist pipeline"
+    }
+   ]
   },
   {
    "n": 584,
@@ -486991,8 +487026,8 @@
    "poly_degree": null,
    "effective_width": 36,
    "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_upper": 8,
+   "d_witness": [0,14,168,249,434,534,569,660],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -489369,8 +489404,20 @@
    "t_count_note": "not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36",
    "poly_degree_note": "not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36",
    "d_certified": 8,
-   "d_certified_is_exact": false,
-   "d_certified_source": "gamma frontier release record weighted_sources_742_36_8 (gamma_frontier_release/frontier.json, distance_kind lower_bound, Z distance)"
+   "d_certified_is_exact": true,
+   "d_certified_source": "gamma frontier release record weighted_sources_742_36_8 (gamma_frontier_release/frontier.json, distance_kind lower_bound, Z distance); independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the meet-in-the-middle kernel research/plan/mitm/mitm.c, weights 1 to 7 swept clean; tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) at one threshold, threshold 7 exhausted over all anchors, Zaratan run zaratan-j4: d = 8, a lower bound of 8 met by a fault of weight 8 (zaratan_certificates/certificates.json, record 742.36.6.a)",
+   "d_certified_evidence": [
+    {
+     "file": "zaratan_certificates/certificates.json",
+     "method": "exhaustive search",
+     "tool": "mitm.c kernel"
+    },
+    {
+     "file": "zaratan_certificates/certificates.json",
+     "method": "exhaustive search",
+     "tool": "tropidist search"
+    }
+   ]
   },
   {
    "n": 743,
@@ -638610,8 +638657,8 @@
    "poly_degree": null,
    "effective_width": 87,
    "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_upper": 7,
+   "d_witness": [0,3,117,120,449,503,935],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -640608,6 +640655,21 @@
    "poly_degree_note": "not computed: exact minimisation is over GL(87,2) and a punctured RM(87-4,87) coset, neither feasible at k=87",
    "citations": [
     "haah2018codes"
+   ],
+   "d_certified": 7,
+   "d_certified_is_exact": true,
+   "d_certified_source": "runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the meet-in-the-middle kernel research/plan/mitm/mitm.c, weights 1 to 6 swept clean; tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) at one threshold, threshold 6 exhausted over all anchors, Zaratan run zaratan-t2b: d = 7, a lower bound of 7 met by a fault of weight 7 (zaratan_certificates/certificates.json, record 937.87.6.a)",
+   "d_certified_evidence": [
+    {
+     "file": "zaratan_certificates/certificates.json",
+     "method": "exhaustive search",
+     "tool": "mitm.c kernel"
+    },
+    {
+     "file": "zaratan_certificates/certificates.json",
+     "method": "exhaustive search",
+     "tool": "tropidist search"
+    }
    ]
   },
   {
@@ -646700,8 +646762,8 @@
    "poly_degree": null,
    "effective_width": 65,
    "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_upper": 8,
+   "d_witness": [0,7,70,313,520,626,697,830],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -648718,6 +648780,21 @@
    "poly_degree_note": "not computed: exact minimisation is over GL(65,2) and a punctured RM(65-4,65) coset, neither feasible at k=65",
    "citations": [
     "jain2026symmetry"
+   ],
+   "d_certified": 8,
+   "d_certified_is_exact": true,
+   "d_certified_source": "runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the meet-in-the-middle kernel research/plan/mitm/mitm.c, weights 1 to 7 swept clean; tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) at one threshold, threshold 7 exhausted over all anchors, Zaratan run zaratan-j5: d = 8, a lower bound of 8 met by a fault of weight 8 (zaratan_certificates/certificates.json, record 959.65.6.a)",
+   "d_certified_evidence": [
+    {
+     "file": "zaratan_certificates/certificates.json",
+     "method": "exhaustive search",
+     "tool": "mitm.c kernel"
+    },
+    {
+     "file": "zaratan_certificates/certificates.json",
+     "method": "exhaustive search",
+     "tool": "tropidist search"
+    }
    ]
   },
   {
@@ -653266,8 +653343,8 @@
    "poly_degree": null,
    "effective_width": 36,
    "d_is_exact": false,
-   "d_upper": null,
-   "d_witness": null,
+   "d_upper": 7,
+   "d_witness": [0,1,2,3,4,5,6],
    "A_d": null,
    "clifford_correction": {
     "S": [
@@ -655315,8 +655392,8 @@
     "jain2026symmetry"
    ],
    "d_certified": 7,
-   "d_certified_is_exact": false,
-   "d_certified_source": "tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 988.36.6.a)"
+   "d_certified_is_exact": true,
+   "d_certified_source": "tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 988.36.6.a); a fault of weight 7 found on Zaratan (zaratan_certificates/certificates.json) meets it"
   },
   {
    "catalog_label": "998.26.6.a",
@@ -657419,9 +657496,16 @@
    "citations": [
     "jain2026symmetry"
    ],
-   "d_certified": 7,
+   "d_certified": 8,
    "d_certified_is_exact": false,
-   "d_certified_source": "tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 998.26.6.a)"
+   "d_certified_source": "runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) at one threshold, threshold 7 exhausted over all anchors, Zaratan run zaratan-j4: d >= 8 (zaratan_certificates/certificates.json, record 998.26.6.a)",
+   "d_certified_evidence": [
+    {
+     "file": "zaratan_certificates/certificates.json",
+     "method": "exhaustive search",
+     "tool": "tropidist search"
+    }
+   ]
   },
   {
    "n": 1008,

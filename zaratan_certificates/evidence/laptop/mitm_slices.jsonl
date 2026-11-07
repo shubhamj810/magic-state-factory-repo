@@ -1,0 +1,2 @@
+{"label": "959.65.6.a", "w": 7, "slice": [1, 2], "result": {"n": 959, "w": 7, "a": 4, "b": 3, "parts_log2": 3, "slice": [1, 2], "count_mode": 0, "complete": 1, "harmful_raw": 0, "accepted_raw": 0, "divisor": 35, "status": "clean", "witness": [], "seconds": 1211.86}, "wall": 1211.9}
+{"label": "959.65.6.a", "w": 7, "slice": [0, 2], "result": {"n": 959, "w": 7, "a": 4, "b": 3, "parts_log2": 3, "slice": [0, 2], "count_mode": 0, "complete": 1, "harmful_raw": 0, "accepted_raw": 0, "divisor": 35, "status": "clean", "witness": [], "seconds": 1214.47}, "wall": 1214.5}

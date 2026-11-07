@@ -1,0 +1,1063 @@
+{
+ "about": "Distance bounds from the runs of 6 November 2026 on the UMD cluster Zaratan and on a laptop, assembled by zaratan_certificates/assemble.py from the run records copied into evidence/. Each record is one tool's lower bound for one circuit, bound to it by the SHA-256 of its columns as compact JSON (master_catalog/constructions.digest). witnesses are the harmful faults the runs returned, each re-checked here with faultcore.Circuit.harmful and by the XOR of the wire masks. The lower bounds are the tools' and are not re-derived by verify_catalog.py; every fault is.",
+ "method": "exhaustive search",
+ "tools": {
+  "mitm.c kernel": "the meet-in-the-middle kernel research/plan/mitm/mitm.c (copied as evidence/laptop/mitm.c), which sweeps every fault of one weight, optionally in slices",
+  "tropidist search": "tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4, built with OpenMP) called at one threshold by research/plan/tdirect.py (copied as evidence/laptop/tdirect.py)",
+  "tropidist pipeline": "tropidist's benchmark pipeline, config dp=2 with a larger table budget, through research/zaratan/zaratan/dp_run.py, at commit b03ec2d4"
+ },
+ "tropidist_commit": "b03ec2d4077f287f89f97b5c2c16ce5ce17c2c58",
+ "catalogue_commit": "d15e4ebbfa1c221c3363437c4e62749f9ef98caa",
+ "research_commits": {
+  "research/plan (kernel, tdirect.py, laptop kernel runs)": "9932b1538afee7e8a54bd02c8717cf6a931b225c",
+  "research/zaratan (cluster runs, RESULTS.md)": "1300c55c01af27ebbcf283746aedf883c5b0db3e"
+ },
+ "records": [
+  {
+   "label": "177.1.7.a",
+   "n": 177,
+   "k": 1,
+   "N": 47,
+   "columns_sha256": "90682c1308391f5540331c3fcbefa9d1c990e877fa8978f56ff1712d996a0d7d",
+   "tool": "tropidist pipeline",
+   "lower_bound": 9,
+   "how": "config dp=2,table_gb=16, 8 threads, 5 s, peak 0.1 GiB (evidence/zaratan/dp_records/zaratan_t2c.jsonl)"
+  },
+  {
+   "label": "417.1.6.a",
+   "n": 417,
+   "k": 1,
+   "N": 108,
+   "columns_sha256": "da8cf16fabf4b860acab3e932a18d48307e1e80d03805cc60bd9c7c9e4e5b74b",
+   "tool": "tropidist pipeline",
+   "lower_bound": 13,
+   "how": "config dp=2,table_gb=16, 8 threads, 21 s, peak 4.1 GiB (evidence/zaratan/dp_records/zaratan_t2c.jsonl)"
+  },
+  {
+   "label": "441.1.6.a",
+   "n": 441,
+   "k": 1,
+   "N": 114,
+   "columns_sha256": "56f2a1625d063d9f3c64ec339fb1e7bed414eaa4df3760f078b59fbff2fbb001",
+   "tool": "tropidist pipeline",
+   "lower_bound": 13,
+   "how": "config dp=2,table_gb=40, 16 threads, 225 s, peak 32.1 GiB (evidence/zaratan/dp_records/zaratan_d1.jsonl)"
+  },
+  {
+   "label": "559.1.6.a",
+   "n": 559,
+   "k": 1,
+   "N": 144,
+   "columns_sha256": "3848c56b30e584adf853745f58a0590af935727eed0b84c502354d1996eb4ac5",
+   "tool": "tropidist pipeline",
+   "lower_bound": 15,
+   "how": "config dp=2,table_gb=140, 32 threads, 298 s, peak 128.1 GiB (evidence/zaratan/dp_records/zaratan_d3.jsonl)"
+  },
+  {
+   "label": "575.1.6.a",
+   "n": 575,
+   "k": 1,
+   "N": 148,
+   "columns_sha256": "fabe4923e456f4b412cc510705d897ed2f1b122d4e3c669bb396392b25895bc9",
+   "tool": "tropidist pipeline",
+   "lower_bound": 15,
+   "how": "config dp=2,table_gb=72, 24 threads, 160 s, peak 64.1 GiB (evidence/zaratan/dp_records/zaratan_d2.jsonl)"
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "tool": "mitm.c kernel",
+   "lower_bound": 8,
+   "how": "weights 1 to 7 swept clean"
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "tool": "tropidist search",
+   "lower_bound": 8,
+   "how": "threshold 7 exhausted over all anchors, Zaratan run zaratan-j4"
+  },
+  {
+   "label": "937.87.6.a",
+   "n": 937,
+   "k": 87,
+   "N": 176,
+   "columns_sha256": "8df1288ab62f5bd55356e89e8f50a0773471a6a75cdece4f698cad1b630bf73e",
+   "tool": "mitm.c kernel",
+   "lower_bound": 7,
+   "how": "weights 1 to 6 swept clean"
+  },
+  {
+   "label": "937.87.6.a",
+   "n": 937,
+   "k": 87,
+   "N": 176,
+   "columns_sha256": "8df1288ab62f5bd55356e89e8f50a0773471a6a75cdece4f698cad1b630bf73e",
+   "tool": "tropidist search",
+   "lower_bound": 7,
+   "how": "threshold 6 exhausted over all anchors, Zaratan run zaratan-t2b"
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "tool": "mitm.c kernel",
+   "lower_bound": 8,
+   "how": "weights 1 to 7 swept clean"
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "tool": "tropidist search",
+   "lower_bound": 8,
+   "how": "threshold 7 exhausted over all anchors, Zaratan run zaratan-j5"
+  },
+  {
+   "label": "998.26.6.a",
+   "n": 998,
+   "k": 26,
+   "N": 176,
+   "columns_sha256": "c7193dbd9a8efba2a54376d18edd7759bdf2febec411020af934417189893e3d",
+   "tool": "tropidist search",
+   "lower_bound": 8,
+   "how": "threshold 7 exhausted over all anchors, Zaratan run zaratan-j4"
+  }
+ ],
+ "witnesses": [
+  {
+   "label": "177.1.7.a",
+   "n": 177,
+   "k": 1,
+   "N": 47,
+   "columns_sha256": "90682c1308391f5540331c3fcbefa9d1c990e877fa8978f56ff1712d996a0d7d",
+   "witness": [13, 54, 99, 105, 112, 113, 114, 117, 127],
+   "weight": 9,
+   "found_by": "tropidist pipeline, Zaratan (evidence/zaratan/dp_records/zaratan_t2c.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "417.1.6.a",
+   "n": 417,
+   "k": 1,
+   "N": 108,
+   "columns_sha256": "da8cf16fabf4b860acab3e932a18d48307e1e80d03805cc60bd9c7c9e4e5b74b",
+   "witness": [0, 1, 3, 9, 15, 18, 23, 24, 27, 34, 45, 74, 120],
+   "weight": 13,
+   "found_by": "tropidist pipeline, Zaratan (evidence/zaratan/dp_records/zaratan_t2c.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "559.1.6.a",
+   "n": 559,
+   "k": 1,
+   "N": 144,
+   "columns_sha256": "3848c56b30e584adf853745f58a0590af935727eed0b84c502354d1996eb4ac5",
+   "witness": [0, 2, 3, 5, 6, 8, 11, 42, 47, 51, 59, 66, 71, 98, 149],
+   "weight": 15,
+   "found_by": "tropidist pipeline, Zaratan (evidence/zaratan/dp_records/zaratan_d3.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "575.1.6.a",
+   "n": 575,
+   "k": 1,
+   "N": 148,
+   "columns_sha256": "fabe4923e456f4b412cc510705d897ed2f1b122d4e3c669bb396392b25895bc9",
+   "witness": [0, 2, 3, 5, 6, 8, 11, 19, 42, 47, 51, 59, 66, 70, 71],
+   "weight": 15,
+   "found_by": "tropidist pipeline, Zaratan (evidence/zaratan/dp_records/zaratan_d2.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 168, 434, 249, 534, 569, 660],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 0 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_0.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 15, 144, 731, 299, 345, 455, 618],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 1 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_1.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 160, 566, 170, 318, 457, 511],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 10 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_10.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 57, 261, 132, 563, 621, 718],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 11 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_11.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 28, 678, 128, 331, 603, 700],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 12 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_12.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 16, 265, 727, 137, 181, 587, 676],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 13 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_13.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 104, 138, 178, 319, 350, 523],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 14 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_14.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 80, 523, 219, 322, 504, 591],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 15 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_15.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 280, 664, 59, 147, 254, 417],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 16 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_16.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 147, 280, 59, 254, 417, 664],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 17 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_17.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 322, 591, 80, 219, 504, 523],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 18 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_18.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 360, 729, 105, 260, 627, 695],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 19 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_19.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 15, 75, 413, 180, 220, 657, 716],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 2 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_2.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 174, 531, 100, 532, 679, 699],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 20 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_20.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 195, 272, 80, 170, 328, 697],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 21 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_21.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 71, 541, 102, 286, 453, 732],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 22 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_22.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 28, 700, 128, 331, 603, 678],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 23 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_23.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 15, 56, 104, 179, 193, 398, 603],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 24 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_24.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 352, 606, 102, 238, 254, 639],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 25 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_25.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 15, 79, 244, 52, 289, 310, 539],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 26 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_26.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 57, 621, 132, 261, 563, 718],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 27 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_27.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 67, 117, 335, 574, 661, 673],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 28 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_28.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 15, 282, 660, 115, 134, 430, 706],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 29 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_29.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 531, 679, 100, 174, 532, 699],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 3 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_3.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 102, 639, 238, 254, 352, 606],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 4 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_4.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 15, 244, 539, 52, 79, 289, 310],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 5 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_5.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 15, 90, 359, 288, 503, 532, 684],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 6 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_6.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 67, 335, 117, 574, 661, 673],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 7 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_7.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 142, 220, 103, 265, 340, 415],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 8 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_8.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "witness": [0, 14, 86, 543, 224, 353, 599, 677],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 9 of 256, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_742_9.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "937.87.6.a",
+   "n": 937,
+   "k": 87,
+   "N": 176,
+   "columns_sha256": "8df1288ab62f5bd55356e89e8f50a0773471a6a75cdece4f698cad1b630bf73e",
+   "witness": [0, 3, 117, 120, 449, 503, 935],
+   "weight": 7,
+   "found_by": "mitm.c kernel, weight 7, laptop (evidence/laptop/mitm_runs.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [0, 70, 697, 830, 7, 313, 520, 626],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 0 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_0.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [2, 216, 686, 910, 664, 732, 907, 942],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 1 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_1.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [0, 396, 782, 910, 192, 327, 741, 885],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 10 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_10.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [2, 291, 327, 824, 424, 510, 791, 942],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 11 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_11.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [2, 28, 358, 899, 433, 495, 558, 942],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 12 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_12.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [0, 290, 298, 617, 442, 594, 611, 808],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 13 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_13.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [7, 154, 747, 758, 357, 358, 569, 652],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 14 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_14.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [2, 47, 59, 366, 533, 537, 555, 942],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 15 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_15.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [0, 909, 942, 948, 73, 74, 435, 554],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 16 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_16.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [1, 429, 431, 896, 141, 594, 701, 783],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 17 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_17.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [7, 12, 382, 541, 20, 40, 51, 915],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 18 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_18.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [4, 567, 630, 734, 97, 264, 400, 471],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 19 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_19.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [2, 446, 733, 739, 203, 445, 765, 925],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 2 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_2.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [7, 14, 53, 886, 75, 398, 520, 527],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 20 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_20.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [1, 455, 843, 848, 13, 354, 360, 458],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 21 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_21.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [1, 578, 814, 829, 29, 119, 120, 577],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 22 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_22.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [1, 2, 306, 466, 390, 535, 604, 818],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 23 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_23.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [1, 11, 230, 656, 73, 112, 360, 714],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 24 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_24.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [2, 505, 562, 724, 382, 778, 818, 834],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 25 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_25.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [0, 313, 626, 697, 7, 70, 520, 830],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 26 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_26.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [0, 435, 554, 948, 73, 74, 909, 942],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 27 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_27.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [2, 391, 778, 930, 76, 345, 631, 834],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 28 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_28.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [0, 442, 594, 617, 290, 298, 611, 808],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 29 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_29.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [0, 364, 781, 806, 119, 138, 691, 780],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 3 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_3.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [1, 301, 543, 607, 19, 275, 542, 574],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 4 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_4.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [2, 631, 778, 930, 76, 345, 391, 834],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 5 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_5.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [1, 455, 458, 848, 13, 354, 360, 843],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 6 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_6.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [4, 136, 357, 910, 264, 523, 585, 632],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 7 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_7.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [4, 59, 496, 897, 204, 278, 645, 838],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 8 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_8.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "witness": [1, 301, 542, 574, 19, 275, 543, 607],
+   "weight": 8,
+   "found_by": "mitm.c kernel, weight 8, slice 9 of 1024, Zaratan (evidence/zaratan/zaratan/out/23859621/w8_959_9.json)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "988.36.6.a",
+   "n": 988,
+   "k": 36,
+   "N": 176,
+   "columns_sha256": "63e6c574b26b1f346eca4798dcac780283a4ff827918ebd226fec888dff350b7",
+   "witness": [0, 1, 2, 3, 4, 5, 6],
+   "weight": 7,
+   "found_by": "tropidist search at K=7, Zaratan run zaratan-t3-probe (evidence/zaratan/zaratan_pilots.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  }
+ ]
+}

@@ -1176,7 +1176,7 @@ entries are under [References](#references).
 | 1056 | `434.12.2.a` | `[[434,12,2]]` | sweep | — | 17 | `0,1+0,2+0,3+0,4+0,5+0,6+0,7+0,8+0,9+0…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1057 | `436.12.2.a` | `[[436,12,2]]` | sweep | — | 18 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1058 | `438.10.2.a` | `[[438,10,2]]` | sweep | — | 14 | `0+1+2+3+4+5+6+7+8+9` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1059 | `441.1.6.a` | `[[441,1,≥6]]` | sweep | ≥13 | 114 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1059 | `441.1.6.a` | `[[441,1,≥6]]` | sweep | 13 | 114 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 1060 | `441.5.2.a` | `[[441,5,2]]` | sweep | — | 11 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1061 | `441.6.2.a` | `[[441,6,2]]` | sweep | — | 12 | `0+1+2+3+4+5` | 6 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1062 | `441.11.2.a` | `[[441,11,2]]` | sweep | — | 18 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1247,7 +1247,7 @@ entries are under [References](#references).
 | 1127 | `554.6.2.a` | `[[554,6,2]]` | sweep | — | 14 | `0+1+2+3+4+5` | 6 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1128 | `555.8.2.a` | `[[555,8,2]]` | sweep | — | 12 | `01+02+03+04+05+06+07+12+13+14+15+16+1…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1129 | `558.146.3.a` | `[[558,146,3]]` | sweep | — | 158 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1130 | `559.1.6.a` | `[[559,1,≥6]]` | sweep | ≥15 | 144 | `0` | 1 | 1 | T-powers | pre-existing | Gong doubling: triply even family | [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
+| 1130 | `559.1.6.a` | `[[559,1,≥6]]` | sweep | 15 | 144 | `0` | 1 | 1 | T-powers | pre-existing | Gong doubling: triply even family | [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
 | 1131 | `561.3.2.a` | `[[561,3,2]]` | sweep | — | 14 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1132 | `561.7.2.a` | `[[561,7,2]]` | sweep | — | 15 | `0+1+2+3+4+5+6` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1133 | `564.12.2.a` | `[[564,12,2]]` | sweep | — | 16 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1267,7 +1267,7 @@ entries are under [References](#references).
 | 1147 | `573.3.2.a` | `[[573,3,2]]` | sweep | — | 16 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1148 | `574.2.2.a` | `[[574,2,2]]` | sweep | — | 16 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1149 | `575.1.3.a` | `[[575,1,3]]` | sweep | — | 16 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1150 | `575.1.6.a` | `[[575,1,≥6]]` | sweep | ≥15 | 148 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1150 | `575.1.6.a` | `[[575,1,≥6]]` | sweep | 15 | 148 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 1151 | `584.8.2.a` | `[[584,8,2]]` | sweep | — | 13 | `0+1+2+3+4+5+6+7` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1152 | `589.9.2.a` | `[[589,9,2]]` | sweep | — | 14 | `0+1+2+3+4+5+6+7+8+01+02+03+04+05+06+0…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1153 | `595.9.2.a` | `[[595,9,2]]` | sweep | — | 16 | `0+1+2+3+4+5+6+7+8` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1327,7 +1327,7 @@ entries are under [References](#references).
 | 1207 | `727.201.3.a` | `[[727,201,3]]` | sweep | — | 213 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1208 | `728.10.2.a` | `[[728,10,2]]` | sweep | — | 17 | `012+013+014+015+016+017+018+019+023+0…` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1209 | `739.5.2.a` | `[[739,5,2]]` | sweep | — | 13 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1210 | `742.36.6.a` | `[[742,36,≥6]]` | sweep | ≥8 | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1210 | `742.36.6.a` | `[[742,36,≥6]]` | sweep | 8 | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1211 | `743.9.2.a` | `[[743,9,2]]` | sweep | — | 13 | `0+1+2+3+4+5+6+7+8` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1212 | `750.210.3.a` | `[[750,210,3]]` | sweep | — | 221 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1213 | `756.10.2.a` | `[[756,10,2]]` | sweep | — | 16 | `01+02+03+04+05+06+07+08+09+12+13+14+1…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1407,17 +1407,17 @@ entries are under [References](#references).
 | 1287 | `916.6.2.a` | `[[916,6,2]]` | sweep | — | 14 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1288 | `935.89.6.a` | `[[935,89,≥6]]` | sweep | ≥7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1289 | `936.88.6.a` | `[[936,88,≥6]]` | sweep | ≥7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1290 | `937.87.6.a` | `[[937,87,≥6]]` | sweep | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
+| 1290 | `937.87.6.a` | `[[937,87,≥6]]` | sweep | 7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
 | 1291 | `945.7.2.a` | `[[945,7,2]]` | sweep | — | 13 | `0+1+2+3+4+5+6+01+02+03+04+05+06+12+13…` | — | — | none | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1292 | `946.5.2.a` | `[[946,5,2]]` | sweep | — | 14 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1293 | `946.6.2.a` | `[[946,6,2]]` | sweep | — | 15 | `0+1+2+3+4+5` | 6 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1294 | `953.7.2.a` | `[[953,7,2]]` | sweep | — | 14 | `0+1+2+3+4+5+6` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1295 | `959.65.6.a` | `[[959,65,≥6]]` | sweep | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1295 | `959.65.6.a` | `[[959,65,≥6]]` | sweep | 8 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1296 | `960.184.3.a` | `[[960,184,3]]` | sweep | — | 212 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: graph gluing | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1297 | `967.1.6.a` | `[[967,1,≥6]]` | sweep | ≥19 | 247 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
 | 1298 | `983.1.6.a` | `[[983,1,≥6]]` | sweep | ≥19 | 251 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 1299 | `988.36.6.a` | `[[988,36,≥6]]` | sweep | ≥7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1300 | `998.26.6.a` | `[[998,26,≥6]]` | sweep | ≥7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1299 | `988.36.6.a` | `[[988,36,≥6]]` | sweep | 7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1300 | `998.26.6.a` | `[[998,26,≥6]]` | sweep | ≥8 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1301 | `1008.6.2.a` | `[[1008,6,2]]` | sweep | — | 13 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1302 | `1009.7.2.a` | `[[1009,7,2]]` | sweep | — | 15 | `0+1+2+3+4+5+6` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1303 | `1011.1.6.a` | `[[1011,1,≥6]]` | sweep | ≥19 | 258 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
@@ -18359,7 +18359,7 @@ SHA-256 of those columns.
 - output gate: `0`
 - `N = 47` (1 output + 46 checks), exact minimal T-count 1, reduced degree 1
 - distance: proved `7 <= d <= 9`; the upper bound is the fault on columns [30, 71, 96, 97, 98, 109, 110, 113, 126]
-- certified distance: `d = 9`, from A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[41,1,9]] code doubled onto [[95,1,7]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 9; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 177.1.7.a); not used for `d`, which is what the sweep here proves
+- certified distance: `d = 9`, from A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[41,1,9]] code doubled onto [[95,1,7]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 9; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 177.1.7.a); independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the dense dynamic programme of tropidist's pipeline (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; at b03ec2d4), config dp=2,table_gb=16, 8 threads, 5 s, peak 0.1 GiB (evidence/zaratan/dp_records/zaratan_t2c.jsonl): d = 9, a lower bound of 9 met by a fault of weight 9 (zaratan_certificates/certificates.json, record 177.1.7.a); not used for `d`, which is what the sweep here proves
 - Clifford correction, every rotation a `T`: none
 - discovery: pre-existing
 - regime: Gong doubling: triply even family — a code of the triply even family of A. Gong (note in github.com/gongaa/RM127, triply-even/; transversal_t_codes/): her doubly even self-dual [[41,1,9]] and [[65,1,13]] codes and quantum QR codes doubled onto [[95,1,7]], rebuilt here from her self-dual codes, where T on every qubit is a logical T or T-dagger; a verified witness, not a maximum
@@ -22224,7 +22224,7 @@ SHA-256 of those columns.
 - output gate: `0`
 - `N = 108` (1 output + 107 checks), exact minimal T-count 1, reduced degree 1
 - distance: proved `6 <= d <= 13`; the upper bound is the fault on columns [0, 69, 138, 185, 232, 277, 322, 345, 368, 385, 402, 409, 416]
-- certified distance: `d = 13`, from Jain and Albert (arXiv:2408.12752), Table I: [[69,1,13]] code of the self-dual [70,35,12] code SD70 doubled onto [[279,1,11]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 13, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 13, a lower bound of 13 met by a fault of weight 13 (tropidist_certificates/certificates.json, record 417.1.6.a); not used for `d`, which is what the sweep here proves
+- certified distance: `d = 13`, from Jain and Albert (arXiv:2408.12752), Table I: [[69,1,13]] code of the self-dual [70,35,12] code SD70 doubled onto [[279,1,11]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 13, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 13, a lower bound of 13 met by a fault of weight 13 (tropidist_certificates/certificates.json, record 417.1.6.a); independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the dense dynamic programme of tropidist's pipeline (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; at b03ec2d4), config dp=2,table_gb=16, 8 threads, 21 s, peak 4.1 GiB (evidence/zaratan/dp_records/zaratan_t2c.jsonl): d = 13, a lower bound of 13 met by a fault of weight 13 (zaratan_certificates/certificates.json, record 417.1.6.a); not used for `d`, which is what the sweep here proves
 - Clifford correction, every rotation a `T`: `Z on 12`, `Z on 13`, `Z on 14`, `Z on 15`, `Z on 16`, `Z on 17`, `Z on 18`, `Z on 19`, `Z on 20`, `Z on 21`, `Z on 22`, `Z on 23` and 56 more (35 single-wire, 33 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 3, 4, 5, 6, 7, 11, 13, 14, 17, 18, 23 and 100 more, `T` on the rest
 - discovery: pre-existing
@@ -22493,7 +22493,7 @@ SHA-256 of those columns.
 - output gate: `0`
 - `N = 114` (1 output + 113 checks), exact minimal T-count 1, reduced degree 1
 - distance: proved `6 <= d <= 13`; the upper bound is the fault on columns [0, 79, 158, 205, 252, 299, 346, 369, 392, 409, 426, 433, 440]
-- certified distance: `d >= 13`, from Jain and Albert (arXiv:2408.12752), Table II: [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[283,1,11]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 13, with d_sd at least the classical distance less one (their Lemma 2.4); not used for `d`, which is what the sweep here proves
+- certified distance: `d = 13`, from Jain and Albert (arXiv:2408.12752), Table II: [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[283,1,11]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 13, with d_sd at least the classical distance less one (their Lemma 2.4); independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the dense dynamic programme of tropidist's pipeline (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; at b03ec2d4), config dp=2,table_gb=40, 16 threads, 225 s, peak 32.1 GiB (evidence/zaratan/dp_records/zaratan_d1.jsonl): d = 13, a lower bound of 13 met by a fault of weight 13 (zaratan_certificates/certificates.json, record 441.1.6.a); not used for `d`, which is what the sweep here proves
 - Clifford correction, every rotation a `T`: `S on 111`, `Z on 112`, `S† on 113`, `CZ on (0,111)`, `CZ on (0,113)`, `CZ on (111,112)`, `CZ on (111,113)`
 - or no correction at all, with rotations run as `T†` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 240 more, `T` on the rest
 - discovery: pre-existing
@@ -23638,7 +23638,7 @@ SHA-256 of those columns.
 - output gate: `0`
 - `N = 144` (1 output + 143 checks), exact minimal T-count 1, reduced degree 1
 - distance: proved `6 <= d <= 15`; the upper bound is the fault on columns [0, 79, 158, 223, 288, 335, 382, 423, 464, 487, 510, 527, 544, 551, 558]
-- certified distance: `d >= 15`, from A. Gong (github.com/gongaa/RM127, triply-even/): [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[401,1,13]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 15; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; not used for `d`, which is what the sweep here proves
+- certified distance: `d = 15`, from A. Gong (github.com/gongaa/RM127, triply-even/): [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[401,1,13]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 15; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the dense dynamic programme of tropidist's pipeline (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; at b03ec2d4), config dp=2,table_gb=140, 32 threads, 298 s, peak 128.1 GiB (evidence/zaratan/dp_records/zaratan_d3.jsonl): d = 15, a lower bound of 15 met by a fault of weight 15 (zaratan_certificates/certificates.json, record 559.1.6.a); not used for `d`, which is what the sweep here proves
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -23958,7 +23958,7 @@ SHA-256 of those columns.
 - output gate: `0`
 - `N = 148` (1 output + 147 checks), exact minimal T-count 1, reduced degree 1
 - distance: proved `6 <= d <= 15`; the upper bound is the fault on columns [0, 79, 158, 227, 296, 343, 390, 435, 480, 503, 526, 543, 560, 567, 574]
-- certified distance: `d >= 15`, from Jain and Albert (arXiv:2408.12752), Table I: [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[417,1,13]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 15, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not used for `d`, which is what the sweep here proves
+- certified distance: `d = 15`, from Jain and Albert (arXiv:2408.12752), Table I: [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[417,1,13]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 15, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the dense dynamic programme of tropidist's pipeline (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; at b03ec2d4), config dp=2,table_gb=72, 24 threads, 160 s, peak 64.1 GiB (evidence/zaratan/dp_records/zaratan_d2.jsonl): d = 15, a lower bound of 15 met by a fault of weight 15 (zaratan_certificates/certificates.json, record 575.1.6.a); not used for `d`, which is what the sweep here proves
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 51`, `Z on 52`, `Z on 53`, `Z on 54`, `Z on 55`, `Z on 56`, `Z on 57`, `Z on 58`, `Z on 59`, `Z on 60`, `Z on 61` and 57 more (36 single-wire, 33 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 82, 85, 86, 87, 88, 89, 91, 94, 96, 101, 102, 107 and 156 more; `T†` on columns 0, 1, 2, 4, 5, 11, 13, 14, 16, 18, 19, 20 and 11 more, `T` on the rest
 - discovery: pre-existing
@@ -24942,8 +24942,8 @@ SHA-256 of those columns.
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35`
 - `N = 78` (36 outputs + 42 checks)
-- distance: proved `d >= 6`
-- certified distance: `d >= 8`, from gamma frontier release record weighted_sources_742_36_8 (gamma_frontier_release/frontier.json, distance_kind lower_bound, Z distance); not used for `d`, which is what the sweep here proves
+- distance: proved `6 <= d <= 8`; the upper bound is the fault on columns [0, 14, 168, 249, 434, 534, 569, 660]
+- certified distance: `d = 8`, from gamma frontier release record weighted_sources_742_36_8 (gamma_frontier_release/frontier.json, distance_kind lower_bound, Z distance); independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the meet-in-the-middle kernel research/plan/mitm/mitm.c, weights 1 to 7 swept clean; tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) at one threshold, threshold 7 exhausted over all anchors, Zaratan run zaratan-j4: d = 8, a lower bound of 8 met by a fault of weight 8 (zaratan_certificates/certificates.json, record 742.36.6.a); not used for `d`, which is what the sweep here proves
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `S on 13`, `S on 14`, `Z on 15` and 1587 more (42 single-wire, 1557 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -26252,7 +26252,8 @@ SHA-256 of those columns.
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86`
 - `N = 176` (87 outputs + 89 checks)
-- distance: proved `d >= 6`
+- distance: proved `6 <= d <= 7`; the upper bound is the fault on columns [0, 3, 117, 120, 449, 503, 935]
+- certified distance: `d = 7`, from runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the meet-in-the-middle kernel research/plan/mitm/mitm.c, weights 1 to 6 swept clean; tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) at one threshold, threshold 6 exhausted over all anchors, Zaratan run zaratan-t2b: d = 7, a lower bound of 7 met by a fault of weight 7 (zaratan_certificates/certificates.json, record 937.87.6.a); not used for `d`, which is what the sweep here proves
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 75 more (87 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26332,7 +26333,8 @@ SHA-256 of those columns.
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64`
 - `N = 176` (65 outputs + 111 checks)
-- distance: proved `d >= 6`
+- distance: proved `6 <= d <= 8`; the upper bound is the fault on columns [0, 7, 70, 313, 520, 626, 697, 830]
+- certified distance: `d = 8`, from runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the meet-in-the-middle kernel research/plan/mitm/mitm.c, weights 1 to 7 swept clean; tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) at one threshold, threshold 7 exhausted over all anchors, Zaratan run zaratan-j5: d = 8, a lower bound of 8 met by a fault of weight 8 (zaratan_certificates/certificates.json, record 959.65.6.a); not used for `d`, which is what the sweep here proves
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 53 more (65 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26395,8 +26397,8 @@ SHA-256 of those columns.
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35`
 - `N = 176` (36 outputs + 140 checks)
-- distance: proved `d >= 6`
-- certified distance: `d >= 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 988.36.6.a); not used for `d`, which is what the sweep here proves
+- distance: proved `6 <= d <= 7`; the upper bound is the fault on columns [0, 1, 2, 3, 4, 5, 6]
+- certified distance: `d = 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 988.36.6.a); a fault of weight 7 found on Zaratan (zaratan_certificates/certificates.json) meets it; not used for `d`, which is what the sweep here proves
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 24 more (36 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26413,7 +26415,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25`
 - `N = 176` (26 outputs + 150 checks)
 - distance: proved `d >= 6`
-- certified distance: `d >= 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 998.26.6.a); not used for `d`, which is what the sweep here proves
+- certified distance: `d >= 8`, from runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) at one threshold, threshold 7 exhausted over all anchors, Zaratan run zaratan-j4: d >= 8 (zaratan_certificates/certificates.json, record 998.26.6.a); not used for `d`, which is what the sweep here proves
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 14 more (26 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search

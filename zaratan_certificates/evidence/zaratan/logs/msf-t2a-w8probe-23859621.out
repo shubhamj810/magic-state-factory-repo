@@ -1,0 +1,9 @@
+== node compute-a7-43.zaratan.umd.edu Fri Nov  6 19:12:19 EST 2026
+255.3.7.a n 255 k 3 checks 35
+== slicing check: counts summed over slices equal the unsliced count
+937 w5 full 0 0 sliced raw (0, 0) full raw 0 0
+255.3 w8 full 3011805 2642688 raw 210826350 184988160 sliced raw (210826350, 184988160) seconds 100.005
+== timing probe, weight 8, status mode: 959 (--parts 10, slices 0-29 of 1024) and 742 (--parts 8, slices 0-29 of 256)  Fri Nov  6 19:14:12 EST 2026
+{"label": "959.65.6.a", "w": 8, "slices_expected": 1024, "slices_present": 30, "parts_log2": [10], "statuses": {"clean": 0, "found": 30, "stopped": 0}, "all_clean": false, "witnesses": [{"slice": 0, "witness": [0, 70, 697, 830, 7, 313, 520, 626], "checked": true}, {"slice": 1, "witness": [2, 216, 686, 910, 664, 732, 907, 942], "checked": true}, {"slice": 2, "witness": [2, 446, 733, 739, 203, 445, 765, 925], "checked": true}], "all_witnesses_checked": true, "slice_seconds_min_max_sum": [85.102, 90.698, 2626.4]}
+{"label": "742.36.6.a", "w": 8, "slices_expected": 256, "slices_present": 30, "parts_log2": [8], "statuses": {"clean": 0, "found": 30, "stopped": 0}, "all_clean": false, "witnesses": [{"slice": 0, "witness": [0, 14, 168, 434, 249, 534, 569, 660], "checked": true}, {"slice": 1, "witness": [0, 15, 144, 731, 299, 345, 455, 618], "checked": true}, {"slice": 2, "witness": [0, 15, 75, 413, 180, 220, 657, 716], "checked": true}], "all_witnesses_checked": true, "slice_seconds_min_max_sum": [41.713, 50.288, 1367.2]}
+== done Fri Nov  6 19:15:45 EST 2026

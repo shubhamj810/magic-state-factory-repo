@@ -1,0 +1,4 @@
+== node compute-a7-43.zaratan.umd.edu Fri Nov  6 20:03:22 EST 2026
+== 959.65.6.a K=7, all anchors, depth-3 table (probe: 16 anchors in 3 s)
+{"label": "959.65.6.a", "tag": "zaratan-j5", "n": 959, "k": 65, "r": 111, "K": 7, "status": "exhausted", "best": null, "witness": null, "witness_checks": [], "search_seconds": 178.11, "setup_seconds": 11.64, "exclusion_seconds": 1.467, "exclusion_pairs": 0, "table_entries": 146996480, "k_table": 3, 
+== done Fri Nov  6 20:06:36 EST 2026

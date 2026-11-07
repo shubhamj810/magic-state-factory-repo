@@ -1,0 +1,101 @@
+{
+ "method": "ours_pipeline",
+ "version": null,
+ "config": {
+  "symmetry": 1,
+  "cover": 1,
+  "collapse": 1,
+  "lift": 1,
+  "window": 1,
+  "k_coll": 3,
+  "k_table": 2,
+  "kmax": 40,
+  "kmin": 1,
+  "table_gb": 72,
+  "dp": 2,
+  "dp_fast": 10,
+  "dp_head": -1,
+  "deepen": 1
+ },
+ "instance": "575.1.6.a",
+ "variant": "full",
+ "rows": 147,
+ "cols": 575,
+ "obs": 1,
+ "threads": 24,
+ "time_limit": 9800.0,
+ "status": "exact",
+ "lower_bound": 15,
+ "upper_bound": 15,
+ "witness": [
+  0,
+  2,
+  3,
+  5,
+  6,
+  8,
+  11,
+  19,
+  42,
+  47,
+  51,
+  59,
+  66,
+  70,
+  71
+ ],
+ "witness_ok": true,
+ "seconds": 159.266,
+ "trace": [
+  {
+   "t": 1.111,
+   "lb": 1
+  },
+  {
+   "t": 3.078,
+   "lb": 2
+  },
+  {
+   "t": 3.091,
+   "lb": 3
+  },
+  {
+   "t": 3.115,
+   "lb": 4
+  },
+  {
+   "t": 3.14,
+   "lb": 5
+  },
+  {
+   "t": 3.191,
+   "lb": 6
+  },
+  {
+   "t": 4.027,
+   "lb": 7
+  },
+  {
+   "t": 12.637,
+   "lb": 8
+  },
+  {
+   "t": 30.05,
+   "lb": 9
+  },
+  {
+   "t": 149.151,
+   "lb": 15
+  },
+  {
+   "t": 158.527,
+   "ub": 15
+  }
+ ],
+ "peak_rss_mb": 68292.2,
+ "truth": null,
+ "truth_kind": "unknown",
+ "notes": "{\"dp\": {\"main\": {\"columns\": 575, \"cut_rank\": 35, \"decision\": \"dp (the search did not finish within the DP's predicted time)\", \"estimate_seconds\": 0.36, \"fits\": true, \"peak_bits\": 36, \"predicted_seconds\": 80.668, \"queries\": 1, \"seconds\": 65.514, \"value\": 15, \"work\": 1069661948380}}, \"kernel_threads\": 24, \"mode\": \"code instance: plain weight-bounded search (as ours.py)\", \"stages\": {\"main_witness\": {\"cols\": 575, \"rows\": 147, \"runs\": [{\"K\": 15, \"best\": 15, \"nsol_recorded\": 1, \"seconds\": 9.270956039428711, \"status\": \"found\"}]}, \"plain\": {\"cols\": 575, \"rows\": 147, \"runs\": [{\"K\": 1, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 0.03135347366333008, \"status\": \"exhausted\"}, {\"K\": 2, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 0.01185297966003418, \"status\": \"exhausted\"}, {\"K\": 3, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 0.02399158477783203, \"status\": \"exhausted\"}, {\"K\": 4, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 0.023943424224853516, \"status\": \"exhausted\"}, {\"K\": 5, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 0.05090594291687012, \"status\": \"exhausted\"}, {\"K\": 6, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 0.8359558582305908, \"status\": \"exhausted\"}, {\"K\": 7, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 8.60911774635315, \"status\": \"exhausted\"}, {\"K\": 8, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 17.412248611450195, \"status\": \"exhausted\"}, {\"K\": 9, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 53.58475065231323, \"status\": \"timeout\"}]}}, \"table_budget_gib\": 72.0}",
+ "value_only": false,
+ "agrees_with_truth": null
+}

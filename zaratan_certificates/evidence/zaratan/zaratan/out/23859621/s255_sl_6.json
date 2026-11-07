@@ -1,0 +1,1 @@
+{"n": 255, "w": 8, "a": 4, "b": 4, "parts_log2": 4, "slice": [6, 16], "count_mode": 1, "complete": 1, "harmful_raw": 11617598, "accepted_raw": 13243886, "divisor": 70, "error": "tally not divisible"}

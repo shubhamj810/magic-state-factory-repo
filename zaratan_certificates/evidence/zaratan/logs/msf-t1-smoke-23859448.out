@@ -1,0 +1,38 @@
+== node compute-b8-60.zaratan.umd.edu Fri Nov  6 19:04:18 EST 2026
+Model name:          AMD EPYC 7763 64-Core Processor
+== build kernel
+== build tropidist libs (OpenMP)
+/scratch/zt1/project/vva-prj/user/sjn/msf/tropidist-src/cdist/libgmitm.so
+/scratch/zt1/project/vva-prj/user/sjn/msf/tropidist-src/cdist/libviterbi.so
+	linux-vdso.so.1 (0x00007ffeb9b2f000)
+	libgomp.so.1 => /lib64/libgomp.so.1 (0x00001548f3188000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x00001548f2f68000)
+	libc.so.6 => /lib64/libc.so.6 (0x00001548f2b92000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x00001548f298e000)
+	/lib64/ld-linux-x86-64.so.2 (0x00001548f35ce000)
+
+== kernel brute-force test (200 trials, seed 7)
+ok: 1377 (problem, weight) pairs agree with brute force, counts and witnesses
+
+real	2m20.983s
+user	0m4.748s
+sys	0m3.570s
+== tropidist modes vs brute force (seed 21), 2 threads
+ok: {'threshold': 3075, 'anchored': 1086, 'anchored_found': 114, 'found': 2361, 'exhausted': 714}
+== tdirect 901 K=6, 32 threads (laptop: found, 0.08 s)
+{"label": "901.123.6.a", "tag": "zaratan-smoke", "n": 901, "k": 123, "r": 53, "K": 6, "status": "found", "best": 6, "witness": [13, 14, 45, 130, 461, 589], "witness_checks": [{"faultcore_harmful": true, "literal_harmful": true, "distinct": true}], "search_seconds": 0.05, "setup_seconds": 0.707, "exclusion_seconds": 0.666, "exclusion_pairs": 0, "table_entries": 406352, "k_table": 2, "labelfree": tr
+== kernel 937 weights 1-7 (laptop: clean to 6, witness at 7, 39 s)
+{"label": "937.87.6.a", "n": 937, "k": 87, "r": 89, "w": 1, "count": false, "slices": 1, "seconds": 0.0, "status": "clean"}
+{"label": "937.87.6.a", "n": 937, "k": 87, "r": 89, "w": 2, "count": false, "slices": 1, "seconds": 0.0, "status": "clean"}
+{"label": "937.87.6.a", "n": 937, "k": 87, "r": 89, "w": 3, "count": false, "slices": 1, "seconds": 0.01, "status": "clean"}
+{"label": "937.87.6.a", "n": 937, "k": 87, "r": 89, "w": 4, "count": false, "slices": 1, "seconds": 0.11, "status": "clean"}
+{"label": "937.87.6.a", "n": 937, "k": 87, "r": 89, "w": 5, "count": false, "slices": 1, "seconds": 2.58, "status": "clean"}
+{"label": "937.87.6.a", "n": 937, "k": 87, "r": 89, "w": 6, "count": false, "slices": 1, "seconds": 69.07, "status": "clean"}
+{"label": "937.87.6.a", "n": 937, "k": 87, "r": 89, "w": 7, "count": false, "slices": 1, "seconds": 5.22, "witness": [0, 3, 117, 120, 449, 503, 935], "witness_faultcore_harmful": true, "witness_literal_harmful": true, "status": "found"}
+
+real	1m19.471s
+user	1m18.247s
+sys	0m1.882s
+== tdirect 935 K=6, 32 threads (laptop single thread: exhausted, 1056 s)
+{"label": "935.89.6.a", "tag": "zaratan-smoke", "n": 935, "k": 89, "r": 87, "K": 6, "status": "exhausted", "best": null, "witness": null, "witness_checks": [], "search_seconds": 85.749, "setup_seconds": 1.097, "exclusion_seconds": 1.064, "exclusion_pairs": 0, "table_entries": 437581, "k_table": 2, "labelfree": true, "cover": 1, "task_depth": 1, "tasks": 927, "anchors": "all", "n_anchors": 935, "rank": "natural", "lookups": 2895638949, "hits": 0, "false_hits": 0, "cover_pruned": 22955, "time_limi
+== done Fri Nov  6 19:09:46 EST 2026

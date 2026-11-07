@@ -1,0 +1,9 @@
+== node compute-a7-49.zaratan.umd.edu Fri Nov  6 19:12:20 EST 2026
+== 937 K=6 all anchors (second opinion for d >= 7)
+{"label": "937.87.6.a", "tag": "zaratan-t2b", "n": 937, "k": 87, "r": 89, "K": 6, "status": "exhausted", "best": null, "witness": null, "witness_checks": [], "search_seconds": 104.519, "setup_seconds": 1.153, "exclusion_seconds": 1.118, "exclusion_pairs": 0, "table_entries": 439454, "k_table": 2, "labelfree": true, "cover": 1, "task_depth": 1, "tasks": 931, "anchors": "all", "n_anchors": 937, "rank": "natural", "look
+== 959 K=6 all anchors (second opinion for d >= 7)
+{"label": "959.65.6.a", "tag": "zaratan-t2b", "n": 959, "k": 65, "r": 111, "K": 6, "status": "exhausted", "best": null, "witness": null, "witness_checks": [], "search_seconds": 139.18, "setup_seconds": 1.458, "exclusion_seconds": 1.423, "exclusion_pairs": 0, "table_entries": 460321, "k_table": 2, "labelfree": true, "cover": 1, "task_depth": 1, "tasks": 953, "anchors": "all", "n_anchors": 959, "rank": "natural", "look
+== cost probes at K=7: 64 evenly spread anchors
+{"label": "742.36.6.a", "tag": "zaratan-t2b-probe", "n": 742, "k": 36, "r": 42, "K": 7, "status": "timeout", "best": null, "witness": null, "witness_checks": [], "search_seconds": 400.004, "setup_seconds": 0.358, "exclusion_seconds": 0.28, "exclusion_pairs": 954, "table_entries": 273216, "k_table": 2, "labelfree": false, "cover": 1, "task_depth": 1, "tasks": 64, "anchors": "sample:64", "n_anchors": 64, "rank": "natur
+{"label": "959.65.6.a", "tag": "zaratan-t2b-probe", "n": 959, "k": 65, "r": 111, "K": 7, "status": "timeout", "best": null, "witness": null, "witness_checks": [], "search_seconds": 400.006, "setup_seconds": 1.492, "exclusion_seconds": 1.438, "exclusion_pairs": 0, "table_entries": 460321, "k_table": 2, "labelfree": true, "cover": 1, "task_depth": 1, "tasks": 64, "anchors": "sample:64", "n_anchors": 64, "rank": "natura
+== done Fri Nov  6 19:30:13 EST 2026

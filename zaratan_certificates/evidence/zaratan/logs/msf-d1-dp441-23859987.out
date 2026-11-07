@@ -1,0 +1,5 @@
+== node compute-a7-25.zaratan.umd.edu Fri Nov  6 19:32:20 EST 2026
+== 441.1.6.a: tropidist predicted a 32 GiB dense-DP table, 515 s on one thread of its authors server
+tropidist {'commit': 'b03ec2d4077f287f89f97b5c2c16ce5ce17c2c58', 'tracked_files_modified': False}, config dp=2,table_gb=40, threads 16
+{"label": "441.1.6.a", "status": "exact", "lower_bound": 13, "upper_bound": 13, "witness_check": null, "wall_seconds": 224.91, "peak_group_rss_mb": 32838.5, "runner_note": null, "decision": null}
+== done Fri Nov  6 19:36:33 EST 2026

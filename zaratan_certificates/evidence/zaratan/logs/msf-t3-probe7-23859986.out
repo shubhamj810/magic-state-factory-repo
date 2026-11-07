@@ -1,0 +1,7 @@
+== node compute-a7-49.zaratan.umd.edu Fri Nov  6 19:32:20 EST 2026
+== K=7 cost probes: 16 evenly spread anchors, task depth 2 so that 64 threads share them
+{"label": "742.36.6.a", "tag": "zaratan-t3-probe", "n": 742, "k": 36, "r": 42, "K": 7, "status": "exhausted", "best": null, "witness": null, "witness_checks": [], "search_seconds": 40.886, "setup_seconds": 0.352, "exclusion_seconds": 0.282, "exclusion_pairs": 954, "table_entries": 273216, "k_table":
+{"label": "959.65.6.a", "tag": "zaratan-t3-probe", "n": 959, "k": 65, "r": 111, "K": 7, "status": "exhausted", "best": null, "witness": null, "witness_checks": [], "search_seconds": 513.475, "setup_seconds": 1.469, "exclusion_seconds": 1.417, "exclusion_pairs": 0, "table_entries": 460321, "k_table":
+{"label": "988.36.6.a", "tag": "zaratan-t3-probe", "n": 988, "k": 36, "r": 140, "K": 7, "status": "found", "best": 7, "witness": [0, 1, 2, 3, 4, 5, 6], "witness_checks": [{"faultcore_harmful": true, "literal_harmful": true, "distinct": true}], "search_seconds": 0.037, "setup_seconds": 0.372, "exclus
+{"label": "998.26.6.a", "tag": "zaratan-t3-probe", "n": 998, "k": 26, "r": 150, "K": 7, "status": "exhausted", "best": null, "witness": null, "witness_checks": [], "search_seconds": 2.911, "setup_seconds": 0.39, "exclusion_seconds": 0.312, "exclusion_pairs": 0, "table_entries": 498502, "k_table": 2,
+== done Fri Nov  6 19:42:16 EST 2026
