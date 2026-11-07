@@ -1,0 +1,34 @@
+Submitted through issue #1 by @Strilanc on 2026-11-05.
+https://github.com/shubhamj810/magic-state-factory-repo/issues/1
+
+Your name
+---------
+Craig Gidney
+
+Affiliation
+-----------
+Google
+
+The factories
+-------------
+This is the circuit for the 10T -> 2T factory with quadratic suppression: 
+
+<img width="1025" height="257" alt="Image" src="https://github.com/user-attachments/assets/739fbf19-d1cb-4b63-a671-356859b0b866" />
+
+https://algassert.com/quirk#circuit=%7B%22cols%22%3A%5B%5B%22H%22%2C%22H%22%2C%22H%22%2C%22H%22%5D%2C%5B%22zpar%22%2C%22zpar%22%2C%22zpar%22%2C%22zpar%22%2C%22%E2%88%9Ai%22%5D%2C%5B%22zpar%22%2C1%2C%22zpar%22%2C%22zpar%22%2C%22%E2%88%9Ai%22%5D%2C%5B1%2C%22zpar%22%2C%22zpar%22%2C%22zpar%22%2C%22%E2%88%9Ai%22%5D%2C%5B%22zpar%22%2C%22zpar%22%2C1%2C%22zpar%22%2C%22%E2%88%9Ai%22%5D%2C%5B%22zpar%22%2C1%2C1%2C%22zpar%22%2C%22%E2%88%9Ai%22%5D%2C%5B1%2C%22zpar%22%2C1%2C%22zpar%22%2C%22%E2%88%9Ai%22%5D%2C%5B1%2C1%2C%22zpar%22%2C%22zpar%22%2C%22%E2%88%9Ai%22%5D%2C%5B1%2C1%2C1%2C%22zpar%22%2C%22%E2%88%9Ai%22%5D%2C%5B1%2C1%2C1%2C%22H%22%5D%2C%5B1%2C1%2C1%2C%22%7C0%E2%9F%A9%E2%9F%A80%7C%22%5D%2C%5B1%2C1%2C%22X%5E-%C2%BD%22%5D%2C%5B%22X%22%2C%22X%22%2C%22%E2%80%A2%22%5D%2C%5B%22zpar%22%2C%22zpar%22%2C%22zpar%22%2C1%2C%22%E2%88%9Ai%22%5D%2C%5B1%2C1%2C%22zpar%22%2C1%2C%22%E2%88%9Ai%22%5D%2C%5B1%2C1%2C%22H%22%5D%2C%5B1%2C1%2C%22%7C0%E2%9F%A9%E2%9F%A80%7C%22%5D%5D%7D
+
+AFAIK it doesn't correspond to a code, because the operators being phased don't all commute with each other. It starts by preparing a fault tolerant CCZ state using Jones' 8T -> CCZ construction, and then applies Cliffords that turn the CCZ state into a state that differs from a stabilizer state by 4 T gates and undoes two of them in a way that leaves a symptom on one qubit with the other two qubits becoming the T outputs.
+
+This is also the basis for the 8T -> 2T factory with quadratic suppression catalyzed by a T state, by using the catalyst to reliably undo one of the 4 T gates after the Clifford transform which then gives an extra T output that becomes the new catalyst.
+
+Paper or preprint
+-----------------
+(left blank)
+
+Redistribution
+--------------
+- [x] The factories may be included in the catalogue and redistributed with it.
+
+Attachments
+-----------
+attachments/739fbf19-d1cb-4b63-a671-356859b0b866.png
