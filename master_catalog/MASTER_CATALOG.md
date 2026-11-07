@@ -32684,7 +32684,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: Berardini doubling of Gong's code — the [[89,1,17]] code of Berardini et al. (arXiv:2412.08586) doubled by their Theorem 12 onto A. Gong's [[559,1,15]], a doubling the catalogue's second-round search of 7 November 2026 made; d = 17 by that theorem, its inputs proved here
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: Berardini doubling of Gong's code` · berardini-737 (`Theorem 12 of Berardini et al. applied to the cyclic [89,44] code and 559.1.15.a`)
+- source: `AI search: Berardini doubling of Gong's code` · berardini-737 (`Theorem 12 of Berardini et al. applied to the cyclic [89,44] code and 559.1.15.a; built by transversal_t_codes/berardini.py`)
 
 - 737 columns — see `master_catalog.json`, `factories[1597]`
 
@@ -32751,7 +32751,7 @@ SHA-256 of those columns.
 - discovery: pre-existing
 - regime: Berardini et al. doubling — the [[89,1,17]] code of Berardini et al. (arXiv:2412.08586, Example 1) doubled by their Theorem 12 onto a triorthogonal code; d = 17 by that theorem, its inputs proved here
 - citation: [Berardini et al. (2024)](https://arxiv.org/abs/2412.08586)
-- source: `Berardini et al. doubling` · berardini-753 (`Theorem 12 of Berardini et al. applied to the cyclic [89,44] code and 575.1.15.a`)
+- source: `Berardini et al. doubling` · berardini-753 (`Theorem 12 of Berardini et al. applied to the cyclic [89,44] code and 575.1.15.a; built by transversal_t_codes/berardini.py`)
 
 - 753 columns — see `master_catalog.json`, `factories[1601]`
 

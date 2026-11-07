@@ -650171,13 +650171,13 @@
    "sources": [
     {
      "regime": "AI search: Berardini doubling of Gong's code",
-     "file": "transversal_t_codes/berardini_factories.json (built by transversal_t_codes/berardini.py)",
+     "file": "transversal_t_codes/berardini_factories.json",
      "label": "berardini-737",
      "N": 189,
      "d": 17,
      "d_is_exact": true,
      "origin": "research/search2/small-lit/REPORT.md section 5 (research branch, commit f1083d7)",
-     "provenance": "Theorem 12 of Berardini et al. applied to the cyclic [89,44] code and 559.1.15.a"
+     "provenance": "Theorem 12 of Berardini et al. applied to the cyclic [89,44] code and 559.1.15.a; built by transversal_t_codes/berardini.py"
     }
    ],
    "d_certified": 17,
@@ -656033,13 +656033,13 @@
    "sources": [
     {
      "regime": "Berardini et al. doubling",
-     "file": "transversal_t_codes/berardini_factories.json (built by transversal_t_codes/berardini.py)",
+     "file": "transversal_t_codes/berardini_factories.json",
      "label": "berardini-753",
      "N": 193,
      "d": 17,
      "d_is_exact": true,
      "origin": "research/search2/small-lit/REPORT.md section 5 (research branch, commit f1083d7)",
-     "provenance": "Theorem 12 of Berardini et al. applied to the cyclic [89,44] code and 575.1.15.a"
+     "provenance": "Theorem 12 of Berardini et al. applied to the cyclic [89,44] code and 575.1.15.a; built by transversal_t_codes/berardini.py"
     }
    ],
    "d_certified": 17,
