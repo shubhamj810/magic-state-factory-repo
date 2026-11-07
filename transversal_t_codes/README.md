@@ -34,6 +34,8 @@ the paper for these codes.
 |---|---|
 | [`build_codes.py`](build_codes.py) | builds every code, checks it, and writes the two files below. `--check` rebuilds them and fails if a committed file differs |
 | [`min_distance.py`](min_distance.py) | a proved lower bound on a code's minimum distance (Brouwer–Zimmermann, two disjoint information sets), used for the self-dual inputs of length 79 to 103 |
+| [`bz_bound.c`](bz_bound.c) | the same bound in C, for the extended QR code `[168,84]`: every sum of 1 to `t` rows of one information set, formed once by a depth-first walk on threads, resumable from a log; `min_distance.py --qr 167 --t 10 9` drives it and writes the run record |
+| [`xqr168_distance.json`](xqr168_distance.json) | that run: `[168,84]` has minimum distance 24 (3.6·10^12 sums, 3,559 s on two threads, 7 November 2026) |
 | [`certify_distances.py`](certify_distances.py) | writes `distance_certificates.json`: the doubling theorem's bound for each code whose inputs' distances are all proved here, `--check` compares |
 | [`search_sd70.py`](search_sd70.py) | the exhaustive search that found the self-dual `[70,35,12]` code behind Table I's `[[69,1,13]]` (see below), ~2 minutes |
 | [`gong_self_dual_codes.json`](gong_self_dual_codes.json) | the stabilisers of A. Gong's doubly even self-dual `[[41,1,9]]` and `[[65,1,13]]` codes, copied from her repository (see [Gong's codes](#gongs-codes)) |
@@ -179,11 +181,21 @@ one record per code, bound to its circuit by the SHA-256 of the columns.
 
 The quantum QR codes of length 167, 191 and 199 rest on the minimum distances
 24, 28 and 32 of the extended QR codes of length 168, 192 and 200, as the
-paper's Table II states them. This folder does not re-prove those three: the
-bound of `min_distance.py` would need about `3.6·10^12`, `8·10^14` and
-`6·10^16` sums of rows. The owner decided on 2026-11-07 to count the Table II
-distances as sure. So the 18 codes from `[[1301,1,21]]` on, whose chains
-double one of these QR codes, have records too, under their own tool ("...,
+paper's Table II states them. The first is proved here: [`bz_bound.c`](bz_bound.c),
+the Brouwer–Zimmermann bound in C, listed every word of `[168,84]` with at
+most 10 ones on one information set and 9 on the other, `3.6·10^12` sums of
+rows, and the lightest weighs 24. A word it did not list weighs at least
+11 + 10 = 21, and the code is doubly even, so its minimum distance is 24
+([`xqr168_distance.json`](xqr168_distance.json), checked by
+`test_the_168_bit_qr_code_has_distance_24`, which also confirms the record is
+of this code, by this program, on the information sets the seeded choice
+gives). The other two are not re-proved: the same bound would need about
+`8·10^14` and `6·10^16` sums of rows. The owner decided on 2026-11-07 to count
+the Table II distances as sure. So the 18 codes from `[[1301,1,21]]` on have
+records: the six that double only the length-167 code (`[[1301,1,21]]` to
+`[[1679,1,23]]`) under the file's tool, every input proved here, and the
+twelve from `[[2017,1,25]]` on, whose chains double a QR code of length 191
+or 199, under their own tool ("...,
 with the extended QR distances of their Table II (not re-proved here)"). Each
 such record lists the Table II distances it takes in `rests_on_paper` and
 what this folder proves for it in `proved_here`: the theorem, the code's
@@ -219,10 +231,10 @@ against the true syndromes.
 | `[[805,1,17]]` | II | `805.1.17.a` (was `805.1.6.a`) | `d = 17` | `d ≥ 6` | theorem | Jain & Albert |
 | `[[983,1,19]]` | I | `983.1.19.a` (was `983.1.6.a`) | `d = 19` | `d ≥ 6` | theorem | Jain & Albert |
 | `[[1011,1,19]]` | II | `1011.1.19.a` (was `1011.1.6.a`) | `d = 19` | `d ≥ 6` | theorem | Jain & Albert |
-| `[[1317,1,21]]` | I | `1317.1.21.a` (was `1317.1.3.a`) | `d = 21` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
-| `[[1345,1,21]]` | II | `1345.1.21.a` (was `1345.1.3.a`) | `d = 21` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
-| `[[1651,1,23]]` | I | `1651.1.23.a` (was `1651.1.3.a`) | `d = 23` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
-| `[[1679,1,23]]` | II | `1679.1.23.a` (was `1679.1.3.a`) | `d = 23` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
+| `[[1317,1,21]]` | I | `1317.1.21.a` (was `1317.1.3.a`) | `d = 21` | `d ≥ 3` | theorem | Jain & Albert |
+| `[[1345,1,21]]` | II | `1345.1.21.a` (was `1345.1.3.a`) | `d = 21` | `d ≥ 3` | theorem | Jain & Albert |
+| `[[1651,1,23]]` | I | `1651.1.23.a` (was `1651.1.3.a`) | `d = 23` | `d ≥ 3` | theorem | Jain & Albert |
+| `[[1679,1,23]]` | II | `1679.1.23.a` (was `1679.1.3.a`) | `d = 23` | `d ≥ 3` | theorem | Jain & Albert |
 | `[[2033,1,25]]` | I | `2033.1.25.a` (was `2033.1.3.a`) | `d = 25` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
 | `[[2061,1,25]]` | II | `2061.1.25.a` (was `2061.1.3.a`) | `d = 25` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
 | `[[2415,1,27]]` | I | `2415.1.27.a` (was `2415.1.3.a`) | `d = 27` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
@@ -343,8 +355,9 @@ through
 Her four codes are the rows `177.1.9.a`, `271.1.11.a`, `401.1.13.a` and
 `559.1.15.a`, at the certified distance. The eight doubled on are too:
 `761.1.17.a` and `967.1.19.a` with every input proved here, and the six from
-`[[1301,1,21]]` on (`1301.1.21.a` to `3195.1.31.a`, `2017.1.25.a` among them)
-with the Table II distances of the QR codes of length 168, 192 and 200.
+`[[1301,1,21]]` on (`1301.1.21.a` to `3195.1.31.a`): `1301.1.21.a` and
+`1635.1.23.a` with every input proved here, the four from `2017.1.25.a` on
+with the Table II distances of the QR codes of length 192 and 200.
 
 ## Reproduce
 

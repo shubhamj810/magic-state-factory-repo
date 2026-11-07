@@ -780421,12 +780421,12 @@
    ],
    "d_certified": 21,
    "d_certified_is_exact": true,
-   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[967,1,19]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[967,1,19]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
      "method": "theorem",
-     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III)"
     }
    ],
    "d_sweep_floor": 3,
@@ -785096,12 +785096,12 @@
    ],
    "d_certified": 21,
    "d_certified_is_exact": true,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[983,1,19]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[983,1,19]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
      "method": "theorem",
-     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III)"
     }
    ],
    "d_sweep_floor": 3,
@@ -787322,12 +787322,12 @@
    ],
    "d_certified": 21,
    "d_certified_is_exact": true,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1011,1,19]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1011,1,19]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4); the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
      "method": "theorem",
-     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III)"
     }
    ],
    "d_sweep_floor": 3,
@@ -836693,12 +836693,12 @@
    ],
    "d_certified": 23,
    "d_certified_is_exact": true,
-   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1301,1,21]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1301,1,21]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
      "method": "theorem",
-     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III)"
     }
    ],
    "d_sweep_floor": 3,
@@ -838947,12 +838947,12 @@
    ],
    "d_certified": 23,
    "d_certified_is_exact": true,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1317,1,21]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1317,1,21]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
      "method": "theorem",
-     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III)"
     }
    ],
    "d_sweep_floor": 3,
@@ -853432,12 +853432,12 @@
    ],
    "d_certified": 23,
    "d_certified_is_exact": true,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1345,1,21]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1345,1,21]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4); the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
      "method": "theorem",
-     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III)"
     }
    ],
    "d_sweep_floor": 3,
@@ -939141,7 +939141,7 @@
    ],
    "d_certified": 25,
    "d_certified_is_exact": true,
-   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1635,1,23]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1635,1,23]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
@@ -941941,7 +941941,7 @@
    ],
    "d_certified": 25,
    "d_certified_is_exact": true,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1651,1,23]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1651,1,23]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
@@ -986962,7 +986962,7 @@
    ],
    "d_certified": 25,
    "d_certified_is_exact": true,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1679,1,23]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1679,1,23]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
@@ -1018545,7 +1018545,7 @@
    ],
    "d_certified": 27,
    "d_certified_is_exact": true,
-   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2017,1,25]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2017,1,25]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
@@ -1021921,7 +1021921,7 @@
    ],
    "d_certified": 27,
    "d_certified_is_exact": true,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2033,1,25]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2033,1,25]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
@@ -1025739,7 +1025739,7 @@
    ],
    "d_certified": 27,
    "d_certified_is_exact": true,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2061,1,25]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2061,1,25]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
@@ -1072251,7 +1072251,7 @@
    ],
    "d_certified": 29,
    "d_certified_is_exact": true,
-   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2399,1,27]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2399,1,27]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
@@ -1096236,7 +1096236,7 @@
    ],
    "d_certified": 29,
    "d_certified_is_exact": true,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2415,1,27]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2415,1,27]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
@@ -1100761,7 +1100761,7 @@
    ],
    "d_certified": 29,
    "d_certified_is_exact": true,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2443,1,27]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2443,1,27]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
@@ -1174928,7 +1174928,7 @@
    ],
    "d_certified": 31,
    "d_certified_is_exact": true,
-   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2797,1,29]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2797,1,29]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
@@ -1179218,7 +1179218,7 @@
    ],
    "d_certified": 31,
    "d_certified_is_exact": true,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2813,1,29]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2813,1,29]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",
@@ -1184243,7 +1184243,7 @@
    ],
    "d_certified": 31,
    "d_certified_is_exact": true,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2841,1,29]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2841,1,29]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the minimum distance 24 of the extended QR code [168,84] that it rests on is proved in this repository by the Brouwer-Zimmermann bound of transversal_t_codes/bz_bound.c (transversal_t_codes/xqr168_distance.json)",
    "d_certified_evidence": [
     {
      "file": "transversal_t_codes/distance_certificates.json",

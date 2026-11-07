@@ -354,6 +354,76 @@ class Codes(unittest.TestCase):
                 self.assertGreaterEqual(weight_floor - 1, d_sd)
                 self.assertEqual(CD.PROVED[n_sd][0], d_sd)
 
+    def test_the_168_bit_qr_code_has_distance_24(self):
+        """d_sd = 23 for the [[167,1]] quantum QR code, from the run record of
+        the C bound on the extended QR code [168,84] (`xqr168_distance.json`).
+
+        The record must be of THIS code (the SHA-256 of the basis the build
+        gives), by THIS program (the SHA-256 of `bz_bound.c`), on two disjoint
+        information sets that the seeded choice of `min_distance` gives again
+        here.  On the first set every sum of 1 to 10 rows, on the second every
+        sum of 1 to 9, was formed (the counts equal the sums of binomials) and
+        the lightest weighs 24, so a word not listed weighs at least
+        11 + 10 = 21; the code is doubly even, so d >= 24, and a listed word of
+        weight 24 makes it exact.  The kernel of the stabilisers is the
+        punctured code, so d_sd >= 24 - 1."""
+        import hashlib
+        from math import comb
+        import certify_distances as CD
+        import min_distance as M
+        record = json.loads((FOLDER / "xqr168_distance.json").read_text(encoding="utf-8"))
+        classical = B.extend(B.quadratic_residue_code(167), 167)
+        self.assertTrue(B.is_self_dual(classical, 168))
+        self.assertTrue(B.doubly_even(classical))
+        rows = B.basis(classical)
+        self.assertEqual(record["basis_sha256"], hashlib.sha256(
+            json.dumps([format(r, "x") for r in rows]).encode()).hexdigest())
+        self.assertEqual(record["source_sha256"], hashlib.sha256(
+            M.C_SOURCE.read_bytes()).hexdigest())
+        s1, _g1, s2, _g2 = M.two_information_sets(rows, 168, 0)
+        self.assertEqual(record["information_sets"], [sorted(s1), sorted(s2)])
+        self.assertEqual(record["t"], [10, 9])
+        for side, t in zip(record["sides"], record["t"]):
+            expected = sum(comb(84, w) for w in range(1, t + 1))
+            self.assertEqual((side["k"], side["t"]), (84, t))
+            self.assertEqual(side["nodes"], expected)
+            self.assertEqual(side["expected_nodes"], expected)
+            self.assertGreaterEqual(side["lightest"], 24)
+            word = B.mask(side["witness"])
+            self.assertEqual(B.weight(word), side["lightest"])
+            self.assertEqual(len(B.basis(rows + [word])), len(rows))   # a codeword
+        self.assertEqual(record["lightest_listed"], 24)
+        self.assertEqual(record["bound"], min(24, 10 + 9 + 2))
+        self.assertEqual(record["minimum_distance_at_least"], 24)
+        self.assertEqual(record["minimum_distance"], 24)
+        stabilisers = B.css_from_self_dual(classical, 168)
+        kernel = dual_basis(stabilisers, 167)
+        punctured = [r & ((1 << 167) - 1) for r in classical]
+        self.assertEqual(len(B.basis(kernel)), len(B.basis(punctured)))
+        self.assertEqual(len(B.basis(kernel + punctured)), len(B.basis(kernel)))
+        self.assertEqual(CD.PROVED[167],
+                         (23, "test_the_168_bit_qr_code_has_distance_24"))
+
+    def test_the_c_bound_agrees_with_the_numpy_bound(self):
+        """`bz_bound.c` lists the same lightest words as `min_distance`'s numpy
+        walk, on the extended Golay and QR codes of length 24, 48 and 80 at
+        small t, and its count of sums is the sum of binomials."""
+        import shutil
+        import tempfile
+        import min_distance as M
+        if shutil.which("cc") is None:
+            self.skipTest("no C compiler")
+        with tempfile.TemporaryDirectory() as scratch:
+            for p, t in ((23, 3), (47, 4), (79, 4)):
+                with self.subTest(n=p + 1):
+                    rows = B.basis(B.extend(B.quadratic_residue_code(p), p))
+                    py = M.distance_lower_bound(rows, p + 1, t)
+                    folder = Path(scratch) / str(p)
+                    folder.mkdir()
+                    c = M.c_distance_lower_bound(rows, p + 1, t, t, folder)
+                    self.assertEqual(c["lightest_listed"], py["lightest_listed"])
+                    self.assertEqual(c["bound"], py["bound"])
+
     def test_the_distance_certificates_are_what_the_script_writes(self):
         """`distance_certificates.json` is rebuilt from the codes, and each
         record's bound is the theorem's along a chain of proved inputs."""

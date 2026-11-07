@@ -34,6 +34,7 @@ from __future__ import annotations
 
 import itertools
 import random
+from pathlib import Path
 
 import numpy as np
 
@@ -167,9 +168,179 @@ def distance_lower_bound(rows, n, t, seed=0):
             "t": t, "information_sets": [sorted(s1), sorted(s2)]}
 
 
-def main():
+# ------------------------------------------------- the C walk, for long codes
+#: The C half of the bound (`bz_bound.c`), for codes whose other half does not
+#: fit one 64-bit word or whose sums are too many for numpy: it lists the
+#: same words, every sum of 1 to t rows once, by a depth-first walk.
+C_SOURCE = Path(__file__).resolve().parent / "bz_bound.c"
+C_FLAGS = ("-O3",)
+
+
+def other_parts(systematic, other):
+    """Each row's part outside its information set as a Python int, bit ``j``
+    for coordinate ``other[j]``."""
+    out = []
+    for r in systematic:
+        v = 0
+        for j, c in enumerate(other):
+            if (r >> c) & 1:
+                v |= 1 << j
+        out.append(v)
+    return out
+
+
+def write_side(path, parts, width, t):
+    """The input file of `bz_bound.c`: ``K W T``, then one line of ``W``
+    hexadecimal 64-bit words per row (coordinate ``j`` at bit ``j % 64`` of
+    word ``j // 64``)."""
+    words = -(-width // 64)
+    lines = [f"{len(parts)} {words} {t}"]
+    for v in parts:
+        lines.append(" ".join(f"{(v >> (64 * w)) & ((1 << 64) - 1):x}"
+                              for w in range(words)))
+    Path(path).write_text("\n".join(lines) + "\n", encoding="ascii")
+
+
+def compile_c(workdir):
+    """Compile `bz_bound.c` into ``workdir``; the path of the binary."""
+    import subprocess
+    binary = Path(workdir) / "bz_bound"
+    subprocess.run(["cc", *C_FLAGS, "-o", str(binary), str(C_SOURCE), "-lpthread"],
+                   check=True)
+    return binary
+
+
+def c_lightest(binary, systematic, info, other, t, workdir, threads=1, tag="side"):
+    """`lightest_listed` by the C walk, with its run record.
+
+    Every sum of 1 to ``t`` rows is formed once; the program's count of sums
+    must equal the sum of C(k, w), and the lightest sum it reports is rebuilt
+    here from the rows it names and its weight recounted.  Returns the
+    program's JSON object with ``witness`` (the word's support) added.
+    """
+    import subprocess
+    parts = other_parts(systematic, other)
+    workdir = Path(workdir)
+    source = workdir / f"{tag}.txt"
+    write_side(source, parts, len(other), t)
+    # The log lets a stopped run resume, so it is named by the input it
+    # belongs to: a log left by another code or another t is never read.
+    import hashlib
+    log = workdir / f"{tag}.{hashlib.sha256(source.read_bytes()).hexdigest()[:16]}.log"
+    done = subprocess.run([str(binary), str(source), str(threads), str(log)],
+                          check=False, capture_output=True, text=True)
+    if done.returncode != 0:
+        raise RuntimeError(f"bz_bound failed ({done.returncode}): {done.stderr}"
+                           f"{done.stdout}")
+    import json
+    result = json.loads(done.stdout)
+    from math import comb
+    expected = sum(comb(len(systematic), w) for w in range(1, t + 1))
+    if result["nodes"] != expected or result["expected_nodes"] != expected:
+        raise AssertionError(f"bz_bound formed {result['nodes']} sums, not {expected}")
+    word = 0
+    for i in result["witness_rows"]:
+        word ^= systematic[i]
+    if bin(word).count("1") != result["lightest"] or not word:
+        raise AssertionError("bz_bound's lightest sum does not have its weight")
+    result["witness"] = [c for c in range(max(info + other) + 1) if (word >> c) & 1]
+    return result
+
+
+def c_distance_lower_bound(rows, n, t1, t2, workdir, threads=1, seed=0):
+    """`distance_lower_bound` by the C walk, with ``t1`` sums on the first
+    information set and ``t2`` on the second: a word not listed has at least
+    ``t1 + 1`` and ``t2 + 1`` ones on them, so the bound is
+    ``min(lightest listed, t1 + t2 + 2)``."""
+    s1, g1, s2, g2 = two_information_sets(rows, n, seed)
+    binary = compile_c(workdir)
+    sides = []
+    for tag, info, systematic, other, t in (("side1", s1, g1, s2, t1),
+                                            ("side2", s2, g2, s1, t2)):
+        sides.append(c_lightest(binary, systematic, info, other, t, workdir,
+                                threads, tag))
+    lightest = min(side["lightest"] for side in sides)
+    return {"bound": min(lightest, t1 + t2 + 2), "lightest_listed": lightest,
+            "t": [t1, t2], "information_sets": [sorted(s1), sorted(s2)],
+            "sides": sides}
+
+
+def qr_record(p, t1, t2, workdir, threads=1, seed=0):
+    """The run record of the C bound on the extended QR code of length
+    ``p + 1``, as `xqr168_distance.json` stores it."""
+    import hashlib
+    import json
+    import platform
+    import subprocess
     import sys
-    from pathlib import Path
+    import time
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import build_codes as B
+    n = p + 1
+    classical = B.extend(B.quadratic_residue_code(p), p)
+    if not (B.is_self_dual(classical, n) and B.doubly_even(classical)):
+        raise AssertionError(f"the extended QR code of length {n} is not doubly "
+                             f"even self-dual")
+    rows = B.basis(classical)
+    started = time.time()
+    result = c_distance_lower_bound(rows, n, t1, t2, workdir, threads, seed)
+    seconds = time.time() - started
+    floor = -(-result["bound"] // 4) * 4          # weights are multiples of 4
+    compiler = subprocess.run(["cc", "--version"], capture_output=True,
+                              text=True).stdout.splitlines()[0]
+    for side in result["sides"]:
+        side.pop("witness_rows")
+    return {
+        "about": (f"The Brouwer-Zimmermann bound on the minimum distance of the "
+                  f"extended QR code [{n},{n // 2}] (build_codes.extend of "
+                  f"build_codes.quadratic_residue_code({p})), by the C walk of "
+                  f"bz_bound.c: every codeword with at most t[0] ones on the first "
+                  f"information set and every one with at most t[1] ones on the "
+                  f"second is listed (nodes sums of rows each, checked against "
+                  f"the sum of C(k, w)); a word not listed weighs at least "
+                  f"t[0] + t[1] + 2. The code is doubly even, so its minimum "
+                  f"distance is at least the bound rounded up to a multiple of 4, "
+                  f"and a listed word of that weight makes it exact. Written by "
+                  f"transversal_t_codes/min_distance.py --qr {p} --t {t1} {t2}."),
+        "code": f"extended QR [{n},{n // 2}]",
+        "n": n, "k": n // 2,
+        "basis_sha256": hashlib.sha256(json.dumps([format(r, "x") for r in rows])
+                                       .encode()).hexdigest(),
+        "t": [t1, t2],
+        "information_sets": result["information_sets"],
+        "sides": result["sides"],
+        "lightest_listed": result["lightest_listed"],
+        "bound": result["bound"],
+        "minimum_distance_at_least": floor,
+        "minimum_distance": floor if result["lightest_listed"] == floor else None,
+        "source": "transversal_t_codes/bz_bound.c",
+        "source_sha256": hashlib.sha256(C_SOURCE.read_bytes()).hexdigest(),
+        "compiler": compiler, "flags": list(C_FLAGS),
+        "machine": f"{platform.system()} {platform.machine()}",
+        "threads": threads, "seconds": round(seconds),
+        "date": time.strftime("%Y-%m-%d"),
+    }
+
+
+def main(argv=None):
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("--qr", type=int, help="run the C bound on the extended "
+                        "QR code of length QR + 1 and write its record")
+    parser.add_argument("--t", type=int, nargs=2, metavar=("T1", "T2"))
+    parser.add_argument("--threads", type=int, default=1)
+    parser.add_argument("--workdir", help="where the C program and its logs go "
+                        "(a rerun with the same folder resumes)")
+    parser.add_argument("--out", help="the record file to write")
+    args = parser.parse_args(argv)
+    if args.qr is not None:
+        import json
+        record = qr_record(args.qr, args.t[0], args.t[1], args.workdir, args.threads)
+        Path(args.out).write_text(json.dumps(record, indent=1) + "\n", encoding="utf-8")
+        print(f"{record['code']}: minimum distance >= "
+              f"{record['minimum_distance_at_least']} ({record['seconds']} s)")
+        return
+    import sys
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import build_codes as B
     xq103 = B.extend(B.quadratic_residue_code(103), 103)

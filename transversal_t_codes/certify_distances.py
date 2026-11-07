@@ -15,12 +15,17 @@ word, or by the Brouwer-Zimmermann bound of `min_distance.py`, each in a named
 test of `tests/test_transversal_t_codes.py`.  A record whose chain uses only
 these has the tool `TOOL`.
 
-The quantum QR codes of length 191 and 199, and of length 167 until its
-input is proved here, are in `FROM_PAPER`: their distances rest on the minimum
-distances 28 and 32 (and 24) of the extended QR codes of length 192 and 200
-(and 168), as the paper's Table II states them.  This folder does not re-prove
-those (the bound of `min_distance.py` would need about 8e14 and 6e16 sums of
-rows for the two longer codes).  The owner's decision of 2026-11-07 counts the
+The quantum QR code of length 167 is proved here too: the C walk of
+`bz_bound.c` (driven by `min_distance.py --qr 167`) listed every word of the
+extended QR code [168,84] with at most 10 ones on one information set and 9
+on the other, 3.6e12 sums of rows in 3,559 s on two threads, and the lightest
+weighs 24, so its minimum distance is 24 (`xqr168_distance.json`).
+
+The quantum QR codes of length 191 and 199 are in `FROM_PAPER`: their
+distances rest on the minimum distances 28 and 32 of the extended QR codes of
+length 192 and 200, as the paper's Table II states them.  This folder does
+not re-prove those (the same bound would need about 8e14 and 6e16 sums of
+rows).  The owner's decision of 2026-11-07 counts the
 Table II distances as sure, so a code whose chain uses one gets a record too,
 with the tool `TOOL_WITH_PAPER` and the Table II distances it rests on listed
 in ``rests_on_paper`` and what this folder proves for it in ``proved_here``.
@@ -68,12 +73,11 @@ PROVED = {
     79: (15, "test_the_larger_self_dual_inputs_have_the_distances_used"),
     101: (17, "test_the_larger_self_dual_inputs_have_the_distances_used"),
     103: (19, "test_the_larger_self_dual_inputs_have_the_distances_used"),
+    167: (23, "test_the_168_bit_qr_code_has_distance_24"),
 }
 #: The self-dual inputs whose distance is taken from the paper's Table II, not
 #: proved here: the distance used, and the classical distance it rests on.
 FROM_PAPER = {
-    167: (23, "the minimum distance 24 of the extended QR code [168,84], from "
-              "the paper's Table II and not re-proved in this repository"),
     191: (27, "the minimum distance 28 of the extended QR code [192,96], from "
               "the paper's Table II and not re-proved in this repository"),
     199: (31, "the minimum distance 32 of the extended QR code [200,100], from "
@@ -162,8 +166,9 @@ def payload(codes):
                   "qubit up. Where every self-dual input along a code's chain has a "
                   "distance proved in this folder, self_dual_distance_proved_by "
                   "names the test that proves the last one, and the record has the "
-                  "file's tool. Where the chain uses a quantum QR code of length 167, "
-                  "191 or 199, the record has its own tool and rests_on_paper lists "
+                  "file's tool (the input of length 167 by the C bound recorded in "
+                  "xqr168_distance.json). Where the chain uses a quantum QR code of "
+                  "length 191 or 199, the record has its own tool and rests_on_paper lists "
                   "the minimum distances of the extended QR codes it takes from the "
                   "paper's Table II without re-proving them, and proved_here "
                   "lists what is proved here: the theorem, the code's structure "

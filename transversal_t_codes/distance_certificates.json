@@ -1,5 +1,5 @@
 {
- "about": "Lower bounds on the distance of the codes of transversal_t_codes/ from the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III): d >= min(d_sd, d_tri + 2) at every doubling, from one qubit up. Where every self-dual input along a code's chain has a distance proved in this folder, self_dual_distance_proved_by names the test that proves the last one, and the record has the file's tool. Where the chain uses a quantum QR code of length 167, 191 or 199, the record has its own tool and rests_on_paper lists the minimum distances of the extended QR codes it takes from the paper's Table II without re-proving them, and proved_here lists what is proved here: the theorem, the code's structure and every other input along the chain. columns_sha256 is the SHA-256 of the code's columns as compact JSON (master_catalog/constructions.digest), the circuit the catalogue stores. witness is a harmful fault of weight lower_bound. Written by transversal_t_codes/certify_distances.py.",
+ "about": "Lower bounds on the distance of the codes of transversal_t_codes/ from the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III): d >= min(d_sd, d_tri + 2) at every doubling, from one qubit up. Where every self-dual input along a code's chain has a distance proved in this folder, self_dual_distance_proved_by names the test that proves the last one, and the record has the file's tool (the input of length 167 by the C bound recorded in xqr168_distance.json). Where the chain uses a quantum QR code of length 191 or 199, the record has its own tool and rests_on_paper lists the minimum distances of the extended QR codes it takes from the paper's Table II without re-proving them, and proved_here lists what is proved here: the theorem, the code's structure and every other input along the chain. columns_sha256 is the SHA-256 of the code's columns as compact JSON (master_catalog/constructions.digest), the circuit the catalogue stores. witness is a harmful fault of weight lower_bound. Written by transversal_t_codes/certify_distances.py.",
  "method": "theorem",
  "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III)",
  "records": [
@@ -329,26 +329,9 @@
    "construction": "[[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[967,1,19]]",
    "self_dual_input": "[[167,1,23]] quantum QR code (extended QR [168,84,24])",
    "self_dual_distance": 23,
-   "self_dual_distance_from_paper": "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24",
    "inner_code": "GJ-967",
-   "inner_lower_bound": 19,
-   "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
-   "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository"
-   ],
-   "proved_here": [
-    "the doubling theorem's bound d >= min(d_sd, d_tri + 2), proved in the docstring of transversal_t_codes/certify_distances.py",
-    "the code's triorthogonality and its harmful fault of the paper's weight, checked by build_codes.py and by tests/test_transversal_t_codes.py with faultcore",
-    "d_sd = 3 for the self-dual input of length 7 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 5 for the self-dual input of length 17 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 7 for the self-dual input of length 23 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 9 for the self-dual input of length 41 (transversal_t_codes/tests/test_transversal_t_codes.py::test_gong_s_self_dual_codes_have_the_distances_used)",
-    "d_sd = 11 for the self-dual input of length 47 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 13 for the self-dual input of length 65 (transversal_t_codes/tests/test_transversal_t_codes.py::test_gong_s_self_dual_codes_have_the_distances_used)",
-    "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 17 for the self-dual input of length 101 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
-   ]
+   "inner_lower_bound": 19
   },
   {
    "label": "JA-1317",
@@ -361,26 +344,9 @@
    "construction": "[[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[983,1,19]]",
    "self_dual_input": "[[167,1,23]] quantum QR code (extended QR [168,84,24])",
    "self_dual_distance": 23,
-   "self_dual_distance_from_paper": "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24",
    "inner_code": "JA-983",
-   "inner_lower_bound": 19,
-   "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
-   "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository"
-   ],
-   "proved_here": [
-    "the doubling theorem's bound d >= min(d_sd, d_tri + 2), proved in the docstring of transversal_t_codes/certify_distances.py",
-    "the code's triorthogonality and its harmful fault of the paper's weight, checked by build_codes.py and by tests/test_transversal_t_codes.py with faultcore",
-    "d_sd = 3 for the self-dual input of length 7 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 5 for the self-dual input of length 17 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 7 for the self-dual input of length 23 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 9 for the self-dual input of length 45 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 11 for the self-dual input of length 47 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 13 for the self-dual input of length 69 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_70_bit_code_gives_a_69_1_13)",
-    "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 17 for the self-dual input of length 101 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
-   ]
+   "inner_lower_bound": 19
   },
   {
    "label": "JA-1345",
@@ -393,23 +359,9 @@
    "construction": "[[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1011,1,19]]",
    "self_dual_input": "[[167,1,23]] quantum QR code (extended QR [168,84,24])",
    "self_dual_distance": 23,
-   "self_dual_distance_from_paper": "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24",
    "inner_code": "JA-1011",
-   "inner_lower_bound": 19,
-   "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
-   "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository"
-   ],
-   "proved_here": [
-    "the doubling theorem's bound d >= min(d_sd, d_tri + 2), proved in the docstring of transversal_t_codes/certify_distances.py",
-    "the code's triorthogonality and its harmful fault of the paper's weight, checked by build_codes.py and by tests/test_transversal_t_codes.py with faultcore",
-    "d_sd = 3 for the self-dual input of length 7 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 5 for the self-dual input of length 17 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 7 for the self-dual input of length 23 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 11 for the self-dual input of length 47 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
-   ]
+   "inner_lower_bound": 19
   },
   {
    "label": "GJ-1635",
@@ -422,26 +374,9 @@
    "construction": "[[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1301,1,21]]",
    "self_dual_input": "[[167,1,23]] quantum QR code (extended QR [168,84,24])",
    "self_dual_distance": 23,
-   "self_dual_distance_from_paper": "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24",
    "inner_code": "GJ-1301",
-   "inner_lower_bound": 21,
-   "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
-   "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository"
-   ],
-   "proved_here": [
-    "the doubling theorem's bound d >= min(d_sd, d_tri + 2), proved in the docstring of transversal_t_codes/certify_distances.py",
-    "the code's triorthogonality and its harmful fault of the paper's weight, checked by build_codes.py and by tests/test_transversal_t_codes.py with faultcore",
-    "d_sd = 3 for the self-dual input of length 7 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 5 for the self-dual input of length 17 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 7 for the self-dual input of length 23 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 9 for the self-dual input of length 41 (transversal_t_codes/tests/test_transversal_t_codes.py::test_gong_s_self_dual_codes_have_the_distances_used)",
-    "d_sd = 11 for the self-dual input of length 47 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 13 for the self-dual input of length 65 (transversal_t_codes/tests/test_transversal_t_codes.py::test_gong_s_self_dual_codes_have_the_distances_used)",
-    "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 17 for the self-dual input of length 101 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
-   ]
+   "inner_lower_bound": 21
   },
   {
    "label": "JA-1651",
@@ -454,26 +389,9 @@
    "construction": "[[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1317,1,21]]",
    "self_dual_input": "[[167,1,23]] quantum QR code (extended QR [168,84,24])",
    "self_dual_distance": 23,
-   "self_dual_distance_from_paper": "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24",
    "inner_code": "JA-1317",
-   "inner_lower_bound": 21,
-   "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
-   "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository"
-   ],
-   "proved_here": [
-    "the doubling theorem's bound d >= min(d_sd, d_tri + 2), proved in the docstring of transversal_t_codes/certify_distances.py",
-    "the code's triorthogonality and its harmful fault of the paper's weight, checked by build_codes.py and by tests/test_transversal_t_codes.py with faultcore",
-    "d_sd = 3 for the self-dual input of length 7 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 5 for the self-dual input of length 17 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 7 for the self-dual input of length 23 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 9 for the self-dual input of length 45 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 11 for the self-dual input of length 47 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 13 for the self-dual input of length 69 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_70_bit_code_gives_a_69_1_13)",
-    "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 17 for the self-dual input of length 101 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
-   ]
+   "inner_lower_bound": 21
   },
   {
    "label": "JA-1679",
@@ -486,23 +404,9 @@
    "construction": "[[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1345,1,21]]",
    "self_dual_input": "[[167,1,23]] quantum QR code (extended QR [168,84,24])",
    "self_dual_distance": 23,
-   "self_dual_distance_from_paper": "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
+   "self_dual_distance_proved_by": "transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24",
    "inner_code": "JA-1345",
-   "inner_lower_bound": 21,
-   "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
-   "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository"
-   ],
-   "proved_here": [
-    "the doubling theorem's bound d >= min(d_sd, d_tri + 2), proved in the docstring of transversal_t_codes/certify_distances.py",
-    "the code's triorthogonality and its harmful fault of the paper's weight, checked by build_codes.py and by tests/test_transversal_t_codes.py with faultcore",
-    "d_sd = 3 for the self-dual input of length 7 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 5 for the self-dual input of length 17 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 7 for the self-dual input of length 23 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 11 for the self-dual input of length 47 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
-   ]
+   "inner_lower_bound": 21
   },
   {
    "label": "GJ-2017",
@@ -520,7 +424,6 @@
    "inner_lower_bound": 23,
    "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
    "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository"
    ],
    "proved_here": [
@@ -534,7 +437,8 @@
     "d_sd = 13 for the self-dual input of length 65 (transversal_t_codes/tests/test_transversal_t_codes.py::test_gong_s_self_dual_codes_have_the_distances_used)",
     "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
     "d_sd = 17 for the self-dual input of length 101 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
+    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
+    "d_sd = 23 for the self-dual input of length 167 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24)"
    ]
   },
   {
@@ -553,7 +457,6 @@
    "inner_lower_bound": 23,
    "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
    "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository"
    ],
    "proved_here": [
@@ -567,7 +470,8 @@
     "d_sd = 13 for the self-dual input of length 69 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_70_bit_code_gives_a_69_1_13)",
     "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
     "d_sd = 17 for the self-dual input of length 101 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
+    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
+    "d_sd = 23 for the self-dual input of length 167 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24)"
    ]
   },
   {
@@ -586,7 +490,6 @@
    "inner_lower_bound": 23,
    "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
    "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository"
    ],
    "proved_here": [
@@ -597,7 +500,8 @@
     "d_sd = 7 for the self-dual input of length 23 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
     "d_sd = 11 for the self-dual input of length 47 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
     "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
+    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
+    "d_sd = 23 for the self-dual input of length 167 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24)"
    ]
   },
   {
@@ -616,7 +520,6 @@
    "inner_lower_bound": 25,
    "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
    "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository"
    ],
    "proved_here": [
@@ -630,7 +533,8 @@
     "d_sd = 13 for the self-dual input of length 65 (transversal_t_codes/tests/test_transversal_t_codes.py::test_gong_s_self_dual_codes_have_the_distances_used)",
     "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
     "d_sd = 17 for the self-dual input of length 101 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
+    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
+    "d_sd = 23 for the self-dual input of length 167 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24)"
    ]
   },
   {
@@ -649,7 +553,6 @@
    "inner_lower_bound": 25,
    "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
    "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository"
    ],
    "proved_here": [
@@ -663,7 +566,8 @@
     "d_sd = 13 for the self-dual input of length 69 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_70_bit_code_gives_a_69_1_13)",
     "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
     "d_sd = 17 for the self-dual input of length 101 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
+    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
+    "d_sd = 23 for the self-dual input of length 167 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24)"
    ]
   },
   {
@@ -682,7 +586,6 @@
    "inner_lower_bound": 25,
    "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
    "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository"
    ],
    "proved_here": [
@@ -693,7 +596,8 @@
     "d_sd = 7 for the self-dual input of length 23 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
     "d_sd = 11 for the self-dual input of length 47 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
     "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
+    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
+    "d_sd = 23 for the self-dual input of length 167 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24)"
    ]
   },
   {
@@ -712,7 +616,6 @@
    "inner_lower_bound": 27,
    "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
    "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository"
    ],
@@ -727,7 +630,8 @@
     "d_sd = 13 for the self-dual input of length 65 (transversal_t_codes/tests/test_transversal_t_codes.py::test_gong_s_self_dual_codes_have_the_distances_used)",
     "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
     "d_sd = 17 for the self-dual input of length 101 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
+    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
+    "d_sd = 23 for the self-dual input of length 167 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24)"
    ]
   },
   {
@@ -746,7 +650,6 @@
    "inner_lower_bound": 27,
    "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
    "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository"
    ],
@@ -761,7 +664,8 @@
     "d_sd = 13 for the self-dual input of length 69 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_70_bit_code_gives_a_69_1_13)",
     "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
     "d_sd = 17 for the self-dual input of length 101 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
+    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
+    "d_sd = 23 for the self-dual input of length 167 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24)"
    ]
   },
   {
@@ -780,7 +684,6 @@
    "inner_lower_bound": 27,
    "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
    "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository"
    ],
@@ -792,7 +695,8 @@
     "d_sd = 7 for the self-dual input of length 23 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
     "d_sd = 11 for the self-dual input of length 47 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
     "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
+    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
+    "d_sd = 23 for the self-dual input of length 167 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24)"
    ]
   },
   {
@@ -811,7 +715,6 @@
    "inner_lower_bound": 29,
    "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
    "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository"
    ],
@@ -826,7 +729,8 @@
     "d_sd = 13 for the self-dual input of length 65 (transversal_t_codes/tests/test_transversal_t_codes.py::test_gong_s_self_dual_codes_have_the_distances_used)",
     "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
     "d_sd = 17 for the self-dual input of length 101 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
+    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
+    "d_sd = 23 for the self-dual input of length 167 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24)"
    ]
   },
   {
@@ -845,7 +749,6 @@
    "inner_lower_bound": 29,
    "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
    "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository"
    ],
@@ -860,7 +763,8 @@
     "d_sd = 13 for the self-dual input of length 69 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_70_bit_code_gives_a_69_1_13)",
     "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
     "d_sd = 17 for the self-dual input of length 101 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
+    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
+    "d_sd = 23 for the self-dual input of length 167 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24)"
    ]
   },
   {
@@ -879,7 +783,6 @@
    "inner_lower_bound": 29,
    "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)",
    "rests_on_paper": [
-    "the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository",
     "the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository"
    ],
@@ -891,7 +794,8 @@
     "d_sd = 7 for the self-dual input of length 23 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
     "d_sd = 11 for the self-dual input of length 47 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_small_self_dual_inputs_have_the_distances_used)",
     "d_sd = 15 for the self-dual input of length 79 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
-    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)"
+    "d_sd = 19 for the self-dual input of length 103 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_larger_self_dual_inputs_have_the_distances_used)",
+    "d_sd = 23 for the self-dual input of length 167 (transversal_t_codes/tests/test_transversal_t_codes.py::test_the_168_bit_qr_code_has_distance_24)"
    ]
   }
  ]

@@ -168,9 +168,10 @@ every input distance of the doubling theorem, through `[[1011,1,19]]`, that
 certified distance is the row's `d` and the row is exact. The codes from
 `[[1301,1,21]]` on rest on the minimum distances of the extended QR codes of
 length 168, 192 and 200 as the paper's Table II states them. The repository
-does not re-prove those, but counts them as sure (the owner's decision of
-2026-11-07), so these rows are exact at the paper's distance too, and their
-evidence says which inputs come from the paper. Ten of the triorthogonal codes need a `[[69,1,13]]` code. The
+proves the first (24, for `[168,84]`, by a Brouwer–Zimmermann bound in C) and
+counts the other two as sure (the owner's decision of 2026-11-07), so these
+rows are exact at the paper's distance too, and their evidence says which
+inputs come from the paper. Ten of the triorthogonal codes need a `[[69,1,13]]` code. The
 paper takes it from a `[70,35,14]` code that is only formally self-dual.
 [`transversal_t_codes/search_sd70.py`](transversal_t_codes/search_sd70.py)
 found a self-dual `[70,35,12]` code whose words through one coordinate all
