@@ -119,6 +119,29 @@ class TheBuiltSite(unittest.TestCase):
         plain = [f for f in self.index["factories"] if f["d_cert"] is None]
         self.assertTrue(all(f["d_claim"] == f["d"] for f in plain))
 
+    def test_a_certified_distance_says_how_it_was_proved(self):
+        """A row whose d rests on a certificate: the page gives the certified
+        distance, says how it was proved and what the sweep alone proves, and
+        its former label still leads to it."""
+        rows = [r for r in self.catalog["factories"] if "d_sweep_floor" in r]
+        self.assertTrue(rows)
+        for row in rows:
+            summary = next(f for f in self.index["factories"] if f["id"] == row["catalog_label"])
+            self.assertEqual(summary["d"], row["d"])
+            self.assertNotEqual(summary["d_by"], "sweep")
+            self.assertEqual(summary["former_ids"], row["former_labels"])
+            text = (self.out / "f" / row["catalog_label"] / "index.html").read_text(encoding="utf-8")
+            panel = text.split('id="distance-panel">', 1)[1].split("</div>", 1)[0]
+            self.assertIn("this lower bound is certified by", panel)
+            self.assertIn(f"d\\ge {row['d_sweep_floor']}", panel)
+            for old in row["former_labels"]:
+                stub = (self.out / "f" / old / "index.html").read_text(encoding="utf-8")
+                self.assertIn(f'url=../../f/{row["catalog_label"]}/', stub)
+        plain = next(f for f in self.index["factories"] if f["id"] == "15.1.3.a")
+        self.assertEqual((plain["d_by"], plain["former_ids"]), ("sweep", []))
+        sitemap = (self.out / "sitemap.xml").read_text(encoding="utf-8")
+        self.assertNotIn(f"f/{rows[0]['former_labels'][0]}/", sitemap)
+
     def test_the_clifford_summary_follows_the_catalogue(self):
         """``none`` / ``powers`` / ``required``, read off the two catalogue
         fields, and the factory files carry both fields verbatim."""
@@ -145,7 +168,7 @@ class TheBuiltSite(unittest.TestCase):
         none = next(f["id"] for f in self.index["factories"] if f["clifford"] == "none")
         self.assertIn("<strong>None.</strong>", panel(none))
         # a long list is cut, and the whole of it is in a fold-out after the paragraph
-        long = panel("185.1.7.a")
+        long = panel("185.1.9.a")
         self.assertIn("more (listed below)", long)
         self.assertNotIn("<p><details", long.replace(" ", ""))
 
@@ -203,8 +226,9 @@ class TheBuiltSite(unittest.TestCase):
         self.assertEqual((summary["d"], summary["d_cert"], summary["d_cert_met"]), (3, 31, True))
         text = (self.out / "f" / "3239.1.3.a" / "index.html").read_text(encoding="utf-8")
         self.assertIn(">certified 31</span>", text)
-        unmet = [f for f in self.index["factories"] if f["d_cert"] and not f["d_cert_met"]
-                 and not f["d_cert_exact"]]
+        unmet = [f for f in self.index["factories"] if f["d_cert"] and f["d_cert"] > f["d"]
+                 and not f["d_cert_met"] and not f["d_cert_exact"]]
+        self.assertTrue(unmet)
         for f in unmet:
             page = (self.out / "f" / f["id"] / "index.html").read_text(encoding="utf-8")
             self.assertIn(f">certified &ge; {f['d_cert']}</span>", page)

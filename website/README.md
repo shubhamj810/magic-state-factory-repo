@@ -168,10 +168,22 @@ does not hold:
 - no two rows share an id;
 - the main file's number of rows matches its `n_classes`.
 
-Some rows carry a distance that the catalogue could not re-check
-(`d_certified`), certified by their source or by tropidist
-(`tropidist_certificates/`). The site says "certified" without naming who
-certified it, and the factory page gives the certificate's source text. Tables
+On some rows `d` itself is a certified lower bound, a theorem or an
+exhaustive search by another program with its evidence in the repository,
+because the catalogue's sweep cannot reach it (`d_sweep_floor` in the
+catalogue). The index says how `d` is proved (`d_by`: `sweep`, `theorem`,
+`exhaustive search`, or both), the distance tag adds "certified", and the
+factory page says which method and tool proved the bound, names the evidence
+files and gives what the sweep alone proves. Such a row was relabelled when
+its `d` changed. Its former labels are in the index (`former_ids`), the old
+address `f/<former label>/` is a page that sends the reader on to the new
+one, and so is the old parameter page `p/<n>.<k>.<d>/` when no row is left
+there; `factory.html?id=<former label>` resolves too. None of these is in the
+sitemap.
+
+Other rows carry a distance the catalogue does not use for `d`
+(`d_certified` above `d`), because a hypothesis it rests on is not checked in
+the repository. Tables
 show both distances side by side. Claims,
 meaning the rankings, the frontier plot and the exponents marked †, use the
 certified distance. Filters on distance match either one. A certified lower

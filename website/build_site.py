@@ -206,6 +206,10 @@ def build_rows(catalog: dict):
             "d_cert_exact": row.get("d_certified_is_exact") if d_cert else None,
             "d_cert_met": d_cert_met,
             "d_claim": d_claim,
+            # how the lower bound in d is proved: "sweep", or the certificate's
+            # method when d rests on one; and the labels the row had before
+            "d_by": CF.distance_basis(row),
+            "former_ids": list(row.get("former_labels") or []),
             "clifford": clifford_kind(row),
             "gamma_claim": exponent(n, k, d_claim),
             "gamma_t_claim": exponent(n, row.get("t_count"), d_claim),
@@ -235,6 +239,9 @@ def build_rows(catalog: dict):
             "distance": {"d": d, "is_exact": bool(row.get("d_is_exact")),
                          "upper": row.get("d_upper"), "witness": row.get("d_witness"),
                          "A_d": row.get("A_d"),
+                         "basis": CF.distance_basis(row),
+                         "sweep_floor": row.get("d_sweep_floor"),
+                         "evidence": row.get("d_certified_evidence") or [],
                          "certified": ({"d": d_cert,
                                         "is_exact": row.get("d_certified_is_exact"),
                                         "met": d_cert_met,
@@ -255,6 +262,7 @@ def build_rows(catalog: dict):
                            "strongest_claim": row.get("strongest_claim"),
                            "sources": row.get("sources") or []},
             "references": [dict(key=c, **references[c]) for c in row.get("citations") or []],
+            "former_ids": list(row.get("former_labels") or []),
         }
         yield summary, record
 
@@ -427,6 +435,29 @@ def render_entries(out: Path, index: dict, records: list) -> None:
                                   ["catalog.js", "query.js", "params.js"], 2, path)))
     contributors = (json.loads(CONTRIBUTORS.read_text(encoding="utf-8")).get("contributors") or []
                     if CONTRIBUTORS.exists() else [])
+    # A row whose distance became a certificate's was relabelled; its old
+    # address, and the old parameter page when no row is left there, send the
+    # reader on to the new one.  They are not listed in the sitemap.
+    redirects = []
+    for record in records:
+        for old in record.get("former_ids") or []:
+            redirects.append((P.factory_path(old), P.factory_path(record["id"]), old))
+    for record in records:
+        for old in record.get("former_ids") or []:
+            on, ok, od, _letters = CF.LABEL_RE.match(old).groups()
+            key = (int(on), int(ok), int(od))
+            path = P.params_path(*key)
+            if key not in groups and path not in {r[0] for r in redirects}:
+                p = record["parameters"]
+                redirects.append((path, P.params_path(p["n"], p["k"], p["d"]),
+                                  f"{key[0]}.{key[1]}.{key[2]}"))
+    taken = {path for path, _ in pages}
+    for path, target, old in redirects:
+        if path in taken:
+            raise ValueError(f"the old address {path} is also a live page")
+        out_file = out / path / "index.html"
+        out_file.parent.mkdir(parents=True, exist_ok=True)
+        out_file.write_text(P.redirect_page(old, target), encoding="utf-8")
     title, desc, main = P.references_page(index, contributors)
     (out / "references.html").write_text(
         shell(title, desc, main, "references", ["catalog.js"], 0, "references.html"), encoding="utf-8")

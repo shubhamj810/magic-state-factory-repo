@@ -23,11 +23,11 @@ longer match.
 
 | row at `dadb221` | result | tools |
 |---|---|---|
-| `937.87.6.a`, `d ≥ 6` | `d = 7` | kernel: weights 1 to 6 clean; tropidist: threshold 6 exhausted; a fault of weight 7 |
-| `742.36.6.a`, `d ≥ 6` | `d = 8` | kernel: weights 1 to 7 clean; tropidist: threshold 7 exhausted; a fault of weight 8 |
-| `959.65.6.a`, `d ≥ 6` | `d = 8` | kernel: weights 1 to 7 clean; tropidist: thresholds 6 and 7 exhausted; a fault of weight 8 |
-| `988.36.6.a`, `d ≥ 6` | `d = 7` | tropidist: a fault of weight 7 (its threshold 6 was exhausted on the laptop, record `988.36.6.a` of [`../tropidist_certificates/`](../tropidist_certificates/README.md)) |
-| `998.26.6.a`, `d ≥ 6` | `d ≥ 8` | tropidist: threshold 7 exhausted; no fault found |
+| `937.87.6.a`, `d ≥ 6` | `d = 7` | the kernel swept weights 1 to 6 clean, tropidist exhausted threshold 6, and a fault of weight 7 was found |
+| `742.36.6.a`, `d ≥ 6` | `d = 8` | the kernel swept weights 1 to 7 clean, tropidist exhausted threshold 7, and a fault of weight 8 was found |
+| `959.65.6.a`, `d ≥ 6` | `d = 8` | the kernel swept weights 1 to 7 clean, tropidist exhausted thresholds 6 and 7, and a fault of weight 8 was found |
+| `988.36.6.a`, `d ≥ 6` | `d = 7` | tropidist found a fault of weight 7 (its threshold 6 was exhausted on the laptop, record `988.36.6.a` of [`../tropidist_certificates/`](../tropidist_certificates/README.md)) |
+| `998.26.6.a`, `d ≥ 6` | `d ≥ 8` | tropidist exhausted threshold 7, and found no fault |
 | `441.1.6.a`, `d ≥ 6` | `d = 13` | tropidist pipeline, dense dynamic programme (32 GiB); the row's stored fault has weight 13 |
 | `575.1.6.a`, `d ≥ 6` | `d = 15` | tropidist pipeline (64 GiB), with a fault of weight 15 |
 | `559.1.6.a`, `d ≥ 6` | `d = 15` | tropidist pipeline (128 GiB), with a fault of weight 15 |

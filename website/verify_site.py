@@ -554,6 +554,19 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
             except Exception:
                 failures.append(f"{url}: did not redirect to {want} (at {page.url})")
             stats["pages"] += 1
+        # a former label, from before the row's distance became its certificate's
+        moved = next((f for f in factories if f.get("former_ids")), None)
+        if moved:
+            for url in (f"f/{moved['former_ids'][0]}/", f"factory.html?id={moved['former_ids'][0]}"):
+                watcher.at(url)
+                page.goto(f"{base}/{url}")
+                try:
+                    page.wait_for_url(f"**/f/{moved['id']}/", timeout=15000)
+                except Exception:
+                    failures.append(f"{url}: did not redirect to /f/{moved['id']}/ (at {page.url})")
+                stats["pages"] += 1
+            failures.check("certified by" in page.inner_text("#distance-panel"),
+                           f"f/{moved['id']}/: the distance panel does not say how d is certified")
         # every page reads without JavaScript: a static factory page
         bare = browser.new_context(java_script_enabled=False).new_page()
         bare.goto(f"{base}/f/{old['id']}/")

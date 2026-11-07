@@ -14,11 +14,12 @@
 <!--#footer-->
 <script src="js/catalog.js"></script>
 <script>
-/* Old links: factory.html?id=<label or old hash id> -> f/<label>/ */
+/* Old links: factory.html?id=<label, former label or old hash id> -> f/<label>/ */
 (function () {
   var C = window.Catalog, id = C.query("id") || "";
   C.loadIndex().then(function (index) {
-    var hit = index.factories.filter(function (f) { return f.id === id || f.legacy_id === id; })[0];
+    var hit = index.factories.filter(function (f) { return f.id === id || f.legacy_id === id ||
+      (f.former_ids || []).indexOf(id) >= 0; })[0];
     if (hit) { window.location.replace(C.factoryHref(hit.id)); return; }
     document.getElementById("msg").innerHTML = "Could not load a factory with id <code>" + C.escapeHtml(id) +
       "</code>. <a href=\"search.html\">Search the catalogue</a> instead.";

@@ -64,6 +64,44 @@ def params_path(n, k, d) -> str:
     return f"p/{n}.{k}.{d}/"
 
 
+def redirect_page(old: str, target: str) -> str:
+    """The page left at a former address: it sends the reader to ``target``
+    (a path from the site root, like ``f/177.1.9.a/``)."""
+    url = "../../" + target
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moved · Magic State Factory Catalog</title>
+<meta http-equiv="refresh" content="0; url={esc(url)}">
+<link rel="canonical" href="{SITE}{esc(target)}">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<main class="inner" style="padding:48px 16px">
+<p>{esc(old)} is now <a href="{esc(url)}">{esc(target.strip("/").split("/")[-1])}</a>.
+Its distance is now the certified one, so its label changed.</p>
+</main>
+</body>
+</html>
+"""
+
+
+BASIS_WORDS = {"theorem": "a theorem", "exhaustive search": "an exhaustive search",
+               "theorem and exhaustive search": "a theorem and an exhaustive search"}
+
+
+def certified_phrase(dist) -> str:
+    """How a certified lower bound was proved, in a few words: "certified by a
+    theorem (...)", for a row whose ``d`` rests on a certificate."""
+    tools = "; ".join(dict.fromkeys(e["tool"] for e in dist.get("evidence") or []))
+    return (f"certified by {BASIS_WORDS.get(dist.get('basis'), 'a certificate')}"
+            + (f" ({esc(tools)})" if tools else ""))
+
+
 def cert_tag(cert, cert_exact, met=False) -> str:
     """The tag for a source's distance certificate.  A lower bound that a fault
     exhibited here meets is the distance, and reads as one."""
@@ -74,9 +112,14 @@ def cert_tag(cert, cert_exact, met=False) -> str:
             f'{"" if cert_exact else "&ge; "}{cert}</span>')
 
 
-def distance_tags(d, exact, cert, cert_exact, met=False) -> str:
-    out = (f'<span class="tag exact" title="verified here: exact">d = {d}</span>' if exact
-           else f'<span class="tag floor" title="verified here: a proved lower bound">d &ge; {d}</span>')
+def distance_tags(d, exact, cert, cert_exact, met=False, basis="sweep") -> str:
+    how = ("the lower bound is the exhaustive sweep here" if basis == "sweep"
+           else f"the lower bound is certified ({basis})")
+    out = (f'<span class="tag exact" title="exact: {how}, and a fault of weight {d} is shown">d = {d}</span>'
+           if exact else
+           f'<span class="tag floor" title="a proved lower bound: {how}">d &ge; {d}</span>')
+    if basis != "sweep":
+        out += f' <span class="tag cert" title="{how}">certified</span>'
     if cert and cert > d:
         out += " " + cert_tag(cert, cert_exact, met)
     return out
@@ -431,6 +474,9 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
     a_d = dist.get("A_d")
     a_d_tex = None if a_d is None else f"{a_d:,}".replace(",", "{,}")
     cert = dist.get("certified") if dist.get("certified") and dist["certified"]["d"] > d else None
+    # a row whose d is a certificate's bound: the sweep here proves only floor
+    floor = dist.get("sweep_floor")
+    certified = floor is not None
     monos = gate.get("monomials") or []
     kinds = {1: 0, 2: 0, 3: 0}
     for t in monos:
@@ -451,7 +497,7 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
     <h1 id="heading">{params_tex(n, k, d)} factory</h1>
     <p class="lede gate-lede">{gate_tex(short)}</p>
     <dl class="summary">
-      <div><dt>distance, proved here</dt><dd>{tex(distance_bounds(d, dist["is_exact"], dist.get("upper")))}{(" " + cert_tag(cert["d"], cert["is_exact"], cert.get("met"))) if cert else ""}</dd></div>
+      <div><dt>{"distance, certified" if certified else "distance, proved here"}</dt><dd>{tex(distance_bounds(d, dist["is_exact"], dist.get("upper")))}{(" " + cert_tag(cert["d"], cert["is_exact"], cert.get("met"))) if cert else ""}</dd></div>
       <div><dt>error coefficient</dt><dd>{tex(f"A_{{{d}}}={a_d_tex}") if a_d is not None else "—"}</dd></div>
       <div><dt>{tex(r"\gamma_\rho")}</dt><dd>{num(m.get("gamma_rho_claim"), 4)}{claim_mark(summary)}</dd></div>
       <div><dt>{tex(r"V_{\mathrm{ex}}")}</dt><dd>{m["v_ex"] if m["v_ex"] is not None else "—"}</dd></div>
@@ -474,7 +520,12 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
         metric(f"inputs {tex('n')}", n, "Noisy T states per run."),
         metric(f"outputs {tex('k')}", k),
         metric(f"distance {tex('d')}", ("" if dist["is_exact"] else "≥ ") + str(d),
-               ("Exact, proved and witnessed here." if dist["is_exact"] else "A lower bound proved here.")
+               ((f"Exact: the lower bound is {certified_phrase(dist)}, and the fault of weight {d} "
+                 f"shown below is checked here. The sweep here proves {tex(f'd\\ge {floor}')}."
+                 if dist["is_exact"] else
+                 f"A lower bound, {certified_phrase(dist)}. The sweep here proves {tex(f'd\\ge {floor}')}.")
+                if certified else
+                "Exact, proved and witnessed here." if dist["is_exact"] else "A lower bound proved here.")
                + (f" A certificate gives {tex(('d=' if cert['is_exact'] else 'd\\ge ') + str(cert['d']))}"
                   + (f", and a fault of weight {cert['d']} is shown below, so {tex('d=' + str(cert['d']))}."
                      if cert.get("met") and not cert["is_exact"] else ".") if cert else "")),
@@ -515,13 +566,32 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
         + (f"The wires are shown in the {tex('S_k')}-canonical frame." if gate.get("sk_canonical_frame")
            else "The wires are shown in the labelling of the stored circuit.") + "</p>")
     distance_panel = (
-        "<p>" + (f"<strong>{tex(f'd={d}')}, exact.</strong> No fault of weight below {d} is both undetectable "
-                 f"and damaging. One of weight {d} is." if dist["is_exact"] else
-                 f"<strong>{tex(distance_bounds(d, False, dist.get('upper')))}.</strong> No fault of weight below {d} is both "
-                 f"undetectable and damaging. None of weight {d} has been found"
-                 + (f", and one of weight {dist['upper']} is, so the distance lies between the two."
-                    if dist.get("upper") is not None and dist["upper"] > d else ", so the true distance may be larger."))
-        + "</p>"
+        ("<p>" + (f"<strong>{tex(f'd={d}')}, exact.</strong> " if dist["is_exact"] else
+                  f"<strong>{tex(distance_bounds(d, False, dist.get('upper')))}.</strong> ")
+         + f"No fault of weight below {d} is both undetectable and damaging: this lower bound is "
+           f"{certified_phrase(dist)}, and the evidence is in this repository ("
+         + ", ".join(f"<code>{esc(f)}</code>" for f in dict.fromkeys(
+             e["file"] for e in dist.get("evidence") or []))
+         + f"). The catalogue's own exhaustive sweep reaches only weight {floor - 1}, so it proves "
+           f"{tex(f'd\\ge {floor}')} by itself."
+         + (f" A damaging fault of weight {d} is shown below and checked here." if dist["is_exact"] else
+            f" None of weight {d} has been found"
+            + (f", and one of weight {dist['upper']} is." if dist.get("upper") is not None
+               and dist["upper"] > d else ", so the true distance may be larger."))
+         + (f' <span class="small muted">Source: {esc(dist["certified"]["source"])}.</span>'
+            if dist.get("certified") and dist["certified"].get("source") else "")
+         + "</p>"
+         + (f'<p class="small muted">Formerly {", ".join(esc(x) for x in record.get("former_ids") or [])}: '
+            "the label changed when the certified distance became the catalogue's.</p>"
+            if record.get("former_ids") else "")
+         if certified else
+         "<p>" + (f"<strong>{tex(f'd={d}')}, exact.</strong> No fault of weight below {d} is both undetectable "
+                  f"and damaging. One of weight {d} is." if dist["is_exact"] else
+                  f"<strong>{tex(distance_bounds(d, False, dist.get('upper')))}.</strong> No fault of weight below {d} is both "
+                  f"undetectable and damaging. None of weight {d} has been found"
+                  + (f", and one of weight {dist['upper']} is, so the distance lies between the two."
+                     if dist.get("upper") is not None and dist["upper"] > d else ", so the true distance may be larger."))
+         + "</p>")
         + (f"<p>Exactly {a_d:,} faults of weight {d} are undetectable and damaging, so "
            f"{tex(f'A_{{{d}}}={a_d_tex}')}. If each rotation fails independently "
            f"with probability {tex('p')}, an accepted run has a damaged output with probability "
@@ -732,7 +802,7 @@ def params_main(group, members, groups) -> str:
         + (' <span class="tag pure">pure T</span>' if f["pure_t"] else "") + "</td>"
         f'<td class="num">{num(f["gamma_rho_claim"])}{claim_mark(f)}</td>'
         f'<td class="num">{f["N"]}</td>'
-        f'<td>{distance_tags(f["d"], f["d_is_exact"], f["d_cert"], f["d_cert_exact"], f.get("d_cert_met"))}</td>'
+        f'<td>{distance_tags(f["d"], f["d_is_exact"], f["d_cert"], f["d_cert_exact"], f.get("d_cert_met"), f.get("d_by", "sweep"))}</td>'
         f'<td class="small cites">{esc(f.get("cite_text") or "—")}</td></tr>'
         for f in members)
     others = [g for key, g in groups.items() if key[:2] == (n, k) and key[2] != d]
