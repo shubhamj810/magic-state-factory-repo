@@ -29,7 +29,6 @@ import clifford as CL                                             # noqa: E402
 import faultcore as FC                                            # noqa: E402
 import glcanon as GC                                              # noqa: E402
 
-CATALOGUE = REPO / "master_catalog" / "master_catalog.json"
 #: The paper's Tables II and I, as [[n,1,d]].
 TABLE_II = [(15, 3), (49, 5), (95, 7), (189, 9), (283, 11), (441, 13),
             (599, 15), (805, 17), (1011, 19), (1345, 21), (1679, 23),
@@ -375,11 +374,32 @@ class Codes(unittest.TestCase):
                 if record["inner_code"] in by_label:
                     self.assertEqual(by_label[record["inner_code"]]["lower_bound"],
                                      inner)
-                test_name = record["self_dual_distance_proved_by"].split("::")[1]
-                self.assertTrue(hasattr(self, test_name))
-        unchecked = {e["label"] for e in blob["unchecked"]}
-        self.assertFalse(unchecked & set(by_label))
-        self.assertEqual(len(unchecked) + len(by_label), len(self.codes))
+                n_sd = (record["n"] - (1 if record["inner_code"].startswith("[[1,")
+                                       else by_label[record["inner_code"]]["n"])) // 2
+                if "self_dual_distance_proved_by" in record:
+                    self.assertNotIn("self_dual_distance_from_paper", record)
+                    test_name = record["self_dual_distance_proved_by"].split("::")[1]
+                    self.assertTrue(hasattr(self, test_name))
+                    self.assertIn(n_sd, CD.PROVED)
+                else:
+                    self.assertEqual(record["self_dual_distance_from_paper"],
+                                     CD.FROM_PAPER[n_sd][1])
+                    self.assertIn("Table II", record["self_dual_distance_from_paper"])
+                # A record rests on the paper exactly when its chain does, and
+                # then says so in its tool.
+                inner_paper = by_label.get(record["inner_code"], {}).get(
+                    "rests_on_paper", [])
+                own = record.get("self_dual_distance_from_paper")
+                want = sorted(set(inner_paper + ([own] if own else [])))
+                self.assertEqual(record.get("rests_on_paper", []), want)
+                if want:
+                    self.assertEqual(record["tool"], CD.TOOL_WITH_PAPER)
+                    self.assertTrue(record["proved_here"])
+                else:
+                    self.assertNotIn("tool", record)
+                    self.assertNotIn("proved_here", record)
+        self.assertEqual(len(by_label), len(self.codes))
+        self.assertEqual(blob["tool"], CD.TOOL)
 
     def test_the_102_bit_subtraction_code_is_self_dual(self):
         rows = B.subtract(B.extend(B.quadratic_residue_code(103), 103), 104, 102, 103)
@@ -416,11 +436,13 @@ class Codes(unittest.TestCase):
 
 
 class Catalogue(unittest.TestCase):
-    """Where each code went in `master_catalog.json`."""
+    """Where each code went in the catalogue: `master_catalog.json` up to
+    n = 1023 and `master_catalog_large.json` above, read together."""
 
     @classmethod
     def setUpClass(cls):
-        payload = json.loads(CATALOGUE.read_text(encoding="utf-8"))
+        import catalogfile as CF
+        payload = CF.load_all()
         cls.rows = payload["factories"]
         cls.references = payload["references"]
         cls.records = json.loads(B.FACTORIES_JSON.read_text(encoding="utf-8"))
@@ -457,13 +479,13 @@ class Catalogue(unittest.TestCase):
         Where the sweep reaches, it is the exact distance proved here.  Where
         every input of the code's chain is proved in this folder
         (`distance_certificates.json`), it is the row's ``d``: the theorem's
-        bound, with the sweep's own floor in ``d_sweep_floor``.  For the codes
-        that rest on the unchecked QR distances it is a certificate beside the
-        sweep's floor."""
+        bound, with the sweep's own floor in ``d_sweep_floor``.  Since the
+        owner's decision of 2026-11-07 that holds for the codes whose chain
+        takes an extended QR distance from the paper's Table II too, under
+        that record's own tool."""
         certified = json.loads((FOLDER / "distance_certificates.json")
                                .read_text(encoding="utf-8"))
-        checked = {r["label"] for r in certified["records"]}
-        unchecked = {r["label"] for r in certified["unchecked"]}
+        by_label = {r["label"]: r for r in certified["records"]}
         for record in self.records:
             row = self.row_of(record["label"])
             if row is None:
@@ -480,19 +502,16 @@ class Catalogue(unittest.TestCase):
                 self.assertEqual(row["d_upper"], claim)
                 self.assertTrue(circuit.harmful(row["d_witness"]))
                 self.assertEqual(len(row["d_witness"]), claim)
-                if record["label"] in checked:
-                    self.assertEqual(row["d"], claim)
-                    self.assertTrue(row["d_is_exact"])
-                    self.assertLess(row["d_sweep_floor"], claim)
-                    self.assertIn({"file": "transversal_t_codes/distance_certificates.json",
-                                   "method": "theorem",
-                                   "tool": certified["tool"]},
-                                  row["d_certified_evidence"])
-                else:
-                    self.assertIn(record["label"], unchecked)
-                    self.assertLess(row["d"], claim)
-                    self.assertFalse(row["d_is_exact"])
-                    self.assertNotIn("d_sweep_floor", row)
+                evidence = by_label[record["label"]]
+                self.assertEqual(row["d"], claim)
+                self.assertTrue(row["d_is_exact"])
+                self.assertLess(row["d_sweep_floor"], claim)
+                self.assertIn({"file": "transversal_t_codes/distance_certificates.json",
+                               "method": "theorem",
+                               "tool": evidence.get("tool", certified["tool"])},
+                              row["d_certified_evidence"])
+                if evidence.get("rests_on_paper"):
+                    self.assertIn("Table II", row["d_certified_source"])
 
     def test_credit_goes_to_the_earliest_publication(self):
         for record in self.records:

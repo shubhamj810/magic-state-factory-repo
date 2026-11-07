@@ -778665,7 +778665,7 @@
   {
    "n": 1301,
    "k": 1,
-   "d": 3,
+   "d": 21,
    "N": 331,
    "level": 3,
    "gate": "0",
@@ -778678,7 +778678,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 21,
    "d_witness": [0,167,334,437,540,641,742,821,900,965,1030,1077,1124,1165,1206,1229,1252,1269,1286,1293,1300],
    "A_d": null,
@@ -780406,7 +780406,7 @@
     "jain2025transversal",
     "gong2025triply"
    ],
-   "catalog_label": "1301.1.3.a",
+   "catalog_label": "1301.1.21.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling of Gong's codes",
@@ -780420,8 +780420,19 @@
     }
    ],
    "d_certified": 21,
-   "d_certified_is_exact": false,
-   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[967,1,19]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces"
+   "d_certified_is_exact": true,
+   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[967,1,19]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "1301.1.3.a"
+   ]
   },
   {
    "n": 1305,
@@ -783133,7 +783144,7 @@
   {
    "n": 1317,
    "k": 1,
-   "d": 3,
+   "d": 21,
    "N": 335,
    "level": 3,
    "gate": "0",
@@ -783146,7 +783157,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 21,
    "d_witness": [0,167,334,437,540,641,742,821,900,969,1038,1085,1132,1177,1222,1245,1268,1285,1302,1309,1316],
    "A_d": null,
@@ -785069,7 +785080,7 @@
    "citations": [
     "jain2025transversal"
    ],
-   "catalog_label": "1317.1.3.a",
+   "catalog_label": "1317.1.21.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling: triorthogonal family",
@@ -785084,13 +785095,24 @@
     }
    ],
    "d_certified": 21,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[983,1,19]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[983,1,19]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "1317.1.3.a"
+   ]
   },
   {
    "n": 1345,
    "k": 1,
-   "d": 3,
+   "d": 21,
    "N": 342,
    "level": 3,
    "gate": "0",
@@ -785103,7 +785125,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 21,
    "d_witness": [0,167,334,437,540,643,746,825,904,983,1062,1109,1156,1203,1250,1273,1296,1313,1330,1337,1344],
    "A_d": null,
@@ -787285,7 +787307,7 @@
    "citations": [
     "jain2025transversal"
    ],
-   "catalog_label": "1345.1.3.a",
+   "catalog_label": "1345.1.21.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling: weak triply even family",
@@ -787299,8 +787321,19 @@
     }
    ],
    "d_certified": 21,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1011,1,19]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4)"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1011,1,19]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "1345.1.3.a"
+   ]
   },
   {
    "n": 1364,
@@ -834618,7 +834651,7 @@
   {
    "n": 1635,
    "k": 1,
-   "d": 3,
+   "d": 23,
    "N": 415,
    "level": 3,
    "gate": "0",
@@ -834631,7 +834664,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 23,
    "d_witness": [0,167,334,501,668,771,874,975,1076,1155,1234,1299,1364,1411,1458,1499,1540,1563,1586,1603,1620,1627,1634],
    "A_d": null,
@@ -836645,7 +836678,7 @@
     "jain2025transversal",
     "gong2025triply"
    ],
-   "catalog_label": "1635.1.3.a",
+   "catalog_label": "1635.1.23.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling of Gong's codes",
@@ -836659,13 +836692,24 @@
     }
    ],
    "d_certified": 23,
-   "d_certified_is_exact": false,
-   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1301,1,21]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces"
+   "d_certified_is_exact": true,
+   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1301,1,21]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "1635.1.3.a"
+   ]
   },
   {
    "n": 1651,
    "k": 1,
-   "d": 3,
+   "d": 23,
    "N": 419,
    "level": 3,
    "gate": "0",
@@ -836678,7 +836722,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 23,
    "d_witness": [0,167,334,501,668,771,874,975,1076,1155,1234,1303,1372,1419,1466,1511,1556,1579,1602,1619,1636,1643,1650],
    "A_d": null,
@@ -838887,7 +838931,7 @@
    "citations": [
     "jain2025transversal"
    ],
-   "catalog_label": "1651.1.3.a",
+   "catalog_label": "1651.1.23.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling: triorthogonal family",
@@ -838902,8 +838946,19 @@
     }
    ],
    "d_certified": 23,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1317,1,21]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1317,1,21]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "1651.1.3.a"
+   ]
   },
   {
    "n": 1651,
@@ -850733,7 +850788,7 @@
   {
    "n": 1679,
    "k": 1,
-   "d": 3,
+   "d": 23,
    "N": 426,
    "level": 3,
    "gate": "0",
@@ -850746,7 +850801,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 23,
    "d_witness": [0,167,334,501,668,771,874,977,1080,1159,1238,1317,1396,1443,1490,1537,1584,1607,1630,1647,1664,1671,1678],
    "A_d": null,
@@ -853362,7 +853417,7 @@
    "citations": [
     "jain2025transversal"
    ],
-   "catalog_label": "1679.1.3.a",
+   "catalog_label": "1679.1.23.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling: weak triply even family",
@@ -853376,8 +853431,19 @@
     }
    ],
    "d_certified": 23,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1345,1,21]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4)"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1345,1,21]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "1679.1.3.a"
+   ]
   },
   {
    "catalog_label": "1683.365.4.a",
@@ -936487,7 +936553,7 @@
   {
    "n": 2017,
    "k": 1,
-   "d": 3,
+   "d": 25,
    "N": 511,
    "level": 3,
    "gate": "0",
@@ -936500,7 +936566,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 25,
    "d_witness": [0,191,382,549,716,883,1050,1153,1256,1357,1458,1537,1616,1681,1746,1793,1840,1881,1922,1945,1968,1985,2002,2009,2016],
    "A_d": null,
@@ -939060,7 +939126,7 @@
     "jain2025transversal",
     "gong2025triply"
    ],
-   "catalog_label": "2017.1.3.a",
+   "catalog_label": "2017.1.25.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling of Gong's codes",
@@ -939074,13 +939140,24 @@
     }
    ],
    "d_certified": 25,
-   "d_certified_is_exact": false,
-   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1635,1,23]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces"
+   "d_certified_is_exact": true,
+   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1635,1,23]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "2017.1.3.a"
+   ]
   },
   {
    "n": 2033,
    "k": 1,
-   "d": 3,
+   "d": 25,
    "N": 515,
    "level": 3,
    "gate": "0",
@@ -939093,7 +939170,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 25,
    "d_witness": [0,191,382,549,716,883,1050,1153,1256,1357,1458,1537,1616,1685,1754,1801,1848,1893,1938,1961,1984,2001,2018,2025,2032],
    "A_d": null,
@@ -941848,7 +941925,7 @@
    "citations": [
     "jain2025transversal"
    ],
-   "catalog_label": "2033.1.3.a",
+   "catalog_label": "2033.1.25.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling: triorthogonal family",
@@ -941863,8 +941940,19 @@
     }
    ],
    "d_certified": 25,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1651,1,23]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1651,1,23]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "2033.1.3.a"
+   ]
   },
   {
    "n": 2040,
@@ -983555,7 +983643,7 @@
   {
    "n": 2061,
    "k": 1,
-   "d": 3,
+   "d": 25,
    "N": 522,
    "level": 3,
    "gate": "0",
@@ -983568,7 +983656,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 25,
    "d_witness": [0,191,382,549,716,883,1050,1153,1256,1359,1462,1541,1620,1699,1778,1825,1872,1919,1966,1989,2012,2029,2046,2053,2060],
    "A_d": null,
@@ -986859,7 +986947,7 @@
    "citations": [
     "jain2025transversal"
    ],
-   "catalog_label": "2061.1.3.a",
+   "catalog_label": "2061.1.25.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling: weak triply even family",
@@ -986873,8 +986961,19 @@
     }
    ],
    "d_certified": 25,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1679,1,23]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4)"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1679,1,23]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "2061.1.3.a"
+   ]
   },
   {
    "n": 2146,
@@ -1015282,7 +1015381,7 @@
   {
    "n": 2399,
    "k": 1,
-   "d": 3,
+   "d": 27,
    "N": 607,
    "level": 3,
    "gate": "0",
@@ -1015295,7 +1015394,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 27,
    "d_witness": [0,191,382,573,764,931,1098,1265,1432,1535,1638,1739,1840,1919,1998,2063,2128,2175,2222,2263,2304,2327,2350,2367,2384,2391,2398],
    "A_d": null,
@@ -1018431,7 +1018530,7 @@
     "jain2025transversal",
     "gong2025triply"
    ],
-   "catalog_label": "2399.1.3.a",
+   "catalog_label": "2399.1.27.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling of Gong's codes",
@@ -1018445,13 +1018544,24 @@
     }
    ],
    "d_certified": 27,
-   "d_certified_is_exact": false,
-   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2017,1,25]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces"
+   "d_certified_is_exact": true,
+   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2017,1,25]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "2399.1.3.a"
+   ]
   },
   {
    "n": 2415,
    "k": 1,
-   "d": 3,
+   "d": 27,
    "N": 611,
    "level": 3,
    "gate": "0",
@@ -1018464,7 +1018574,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 27,
    "d_witness": [0,191,382,573,764,931,1098,1265,1432,1535,1638,1739,1840,1919,1998,2067,2136,2183,2230,2275,2320,2343,2366,2383,2400,2407,2414],
    "A_d": null,
@@ -1021795,7 +1021905,7 @@
    "citations": [
     "jain2025transversal"
    ],
-   "catalog_label": "2415.1.3.a",
+   "catalog_label": "2415.1.27.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling: triorthogonal family",
@@ -1021810,13 +1021920,24 @@
     }
    ],
    "d_certified": 27,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2033,1,25]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2033,1,25]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "2415.1.3.a"
+   ]
   },
   {
    "n": 2443,
    "k": 1,
-   "d": 3,
+   "d": 27,
    "N": 618,
    "level": 3,
    "gate": "0",
@@ -1021829,7 +1021950,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 27,
    "d_witness": [0,191,382,573,764,931,1098,1265,1432,1535,1638,1741,1844,1923,2002,2081,2160,2207,2254,2301,2348,2371,2394,2411,2428,2435,2442],
    "A_d": null,
@@ -1025603,7 +1025724,7 @@
    "citations": [
     "jain2025transversal"
    ],
-   "catalog_label": "2443.1.3.a",
+   "catalog_label": "2443.1.27.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling: weak triply even family",
@@ -1025617,8 +1025738,19 @@
     }
    ],
    "d_certified": 27,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2061,1,25]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4)"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2061,1,25]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "2443.1.3.a"
+   ]
   },
   {
    "n": 2508,
@@ -1068353,7 +1068485,7 @@
   {
    "n": 2797,
    "k": 1,
-   "d": 3,
+   "d": 29,
    "N": 707,
    "level": 3,
    "gate": "0",
@@ -1068366,7 +1068498,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 29,
    "d_witness": [0,199,398,589,780,971,1162,1329,1496,1663,1830,1933,2036,2137,2238,2317,2396,2461,2526,2573,2620,2661,2702,2725,2748,2765,2782,2789,2796],
    "A_d": null,
@@ -1072104,7 +1072236,7 @@
     "jain2025transversal",
     "gong2025triply"
    ],
-   "catalog_label": "2797.1.3.a",
+   "catalog_label": "2797.1.29.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling of Gong's codes",
@@ -1072118,8 +1072250,19 @@
     }
    ],
    "d_certified": 29,
-   "d_certified_is_exact": false,
-   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2399,1,27]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces"
+   "d_certified_is_exact": true,
+   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2399,1,27]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "2797.1.3.a"
+   ]
   },
   {
    "n": 2805,
@@ -1092131,7 +1092274,7 @@
   {
    "n": 2813,
    "k": 1,
-   "d": 3,
+   "d": 29,
    "N": 711,
    "level": 3,
    "gate": "0",
@@ -1092144,7 +1092287,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 29,
    "d_witness": [0,199,398,589,780,971,1162,1329,1496,1663,1830,1933,2036,2137,2238,2317,2396,2465,2534,2581,2628,2673,2718,2741,2764,2781,2798,2805,2812],
    "A_d": null,
@@ -1096077,7 +1096220,7 @@
    "citations": [
     "jain2025transversal"
    ],
-   "catalog_label": "2813.1.3.a",
+   "catalog_label": "2813.1.29.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling: triorthogonal family",
@@ -1096092,13 +1096235,24 @@
     }
    ],
    "d_certified": 29,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2415,1,27]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2415,1,27]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "2813.1.3.a"
+   ]
   },
   {
    "n": 2841,
    "k": 1,
-   "d": 3,
+   "d": 29,
    "N": 718,
    "level": 3,
    "gate": "0",
@@ -1096111,7 +1096265,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 29,
    "d_witness": [0,199,398,589,780,971,1162,1329,1496,1663,1830,1933,2036,2139,2242,2321,2400,2479,2558,2605,2652,2699,2746,2769,2792,2809,2826,2833,2840],
    "A_d": null,
@@ -1100592,7 +1100746,7 @@
    "citations": [
     "jain2025transversal"
    ],
-   "catalog_label": "2841.1.3.a",
+   "catalog_label": "2841.1.29.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling: weak triply even family",
@@ -1100606,8 +1100760,19 @@
     }
    ],
    "d_certified": 29,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2443,1,27]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4)"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2443,1,27]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "2841.1.3.a"
+   ]
   },
   {
    "n": 2857,
@@ -1170685,7 +1170850,7 @@
   {
    "n": 3195,
    "k": 1,
-   "d": 3,
+   "d": 31,
    "N": 807,
    "level": 3,
    "gate": "0",
@@ -1170698,7 +1170863,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 31,
    "d_witness": [0,199,398,597,796,987,1178,1369,1560,1727,1894,2061,2228,2331,2434,2535,2636,2715,2794,2859,2924,2971,3018,3059,3100,3123,3146,3163,3180,3187,3194],
    "A_d": null,
@@ -1174748,7 +1174913,7 @@
     "jain2025transversal",
     "gong2025triply"
    ],
-   "catalog_label": "3195.1.3.a",
+   "catalog_label": "3195.1.31.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling of Gong's codes",
@@ -1174762,13 +1174927,24 @@
     }
    ],
    "d_certified": 31,
-   "d_certified_is_exact": false,
-   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2797,1,29]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces"
+   "d_certified_is_exact": true,
+   "d_certified_source": "built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2797,1,29]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "3195.1.3.a"
+   ]
   },
   {
    "n": 3211,
    "k": 1,
-   "d": 3,
+   "d": 31,
    "N": 811,
    "level": 3,
    "gate": "0",
@@ -1174781,7 +1174957,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 31,
    "d_witness": [0,199,398,597,796,987,1178,1369,1560,1727,1894,2061,2228,2331,2434,2535,2636,2715,2794,2863,2932,2979,3026,3071,3116,3139,3162,3179,3196,3203,3210],
    "A_d": null,
@@ -1179026,7 +1179202,7 @@
    "citations": [
     "jain2025transversal"
    ],
-   "catalog_label": "3211.1.3.a",
+   "catalog_label": "3211.1.31.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling: triorthogonal family",
@@ -1179041,13 +1179217,24 @@
     }
    ],
    "d_certified": 31,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2813,1,29]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table I: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2813,1,29]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "3211.1.3.a"
+   ]
   },
   {
    "n": 3239,
    "k": 1,
-   "d": 3,
+   "d": 31,
    "N": 818,
    "level": 3,
    "gate": "0",
@@ -1179060,7 +1179247,7 @@
    "t_count": 1,
    "poly_degree": 1,
    "effective_width": 1,
-   "d_is_exact": false,
+   "d_is_exact": true,
    "d_upper": 31,
    "d_witness": [0,199,398,597,796,987,1178,1369,1560,1727,1894,2061,2228,2331,2434,2537,2640,2719,2798,2877,2956,3003,3050,3097,3144,3167,3190,3207,3224,3231,3238],
    "A_d": null,
@@ -1184041,7 +1184228,7 @@
    "citations": [
     "jain2025transversal"
    ],
-   "catalog_label": "3239.1.3.a",
+   "catalog_label": "3239.1.31.a",
    "sources": [
     {
      "regime": "Jain-Albert doubling: weak triply even family",
@@ -1184055,8 +1184242,19 @@
     }
    ],
    "d_certified": 31,
-   "d_certified_is_exact": false,
-   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2841,1,29]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4)"
+   "d_certified_is_exact": true,
+   "d_certified_source": "Jain and Albert (arXiv:2408.12752), Table II: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2841,1,29]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json)",
+   "d_certified_evidence": [
+    {
+     "file": "transversal_t_codes/distance_certificates.json",
+     "method": "theorem",
+     "tool": "the doubling theorem of Jain and Albert (arXiv:2408.12752, Sec. III), with the extended QR distances of their Table II (not re-proved here)"
+    }
+   ],
+   "d_sweep_floor": 3,
+   "former_labels": [
+    "3239.1.3.a"
+   ]
   },
   {
    "n": 3315,

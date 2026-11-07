@@ -222,19 +222,19 @@ class TheBuiltSite(unittest.TestCase):
     def test_a_met_certificate_reads_as_the_distance(self):
         """A source's lower bound that the row's own fault meets is shown as
         the distance, without the >=; one it does not meet keeps the >=."""
-        summary = next(f for f in self.index["factories"] if f["id"] == "3239.1.3.a")
-        self.assertEqual((summary["d"], summary["d_cert"], summary["d_cert_met"]), (3, 31, True))
-        text = (self.out / "f" / "3239.1.3.a" / "index.html").read_text(encoding="utf-8")
-        self.assertIn(">certified 31</span>", text)
-        unmet = [f for f in self.index["factories"] if f["d_cert"] and f["d_cert"] > f["d"]
-                 and not f["d_cert_met"] and not f["d_cert_exact"]]
-        self.assertTrue(unmet)
-        for f in unmet:
-            page = (self.out / "f" / f["id"] / "index.html").read_text(encoding="utf-8")
-            self.assertIn(f">certified &ge; {f['d_cert']}</span>", page)
+        beside = [f for f in self.index["factories"] if f["d_cert"] and f["d_cert"] > f["d"]]
+        for f in beside:
+            with self.subTest(id=f["id"]):
+                row = self.row_of(f)
+                self.assertEqual(f["d_cert_met"], row.get("d_upper") == f["d_cert"])
+                page = (self.out / "f" / f["id"] / "index.html").read_text(encoding="utf-8")
+                if f["d_cert_met"]:
+                    self.assertIn(f">certified {f['d_cert']}</span>", page)
+                elif not f["d_cert_exact"]:
+                    self.assertIn(f">certified &ge; {f['d_cert']}</span>", page)
 
     def test_a_huge_matrix_is_offered_not_drawn(self):
-        text = (self.out / "f" / "3239.1.3.a" / "index.html").read_text(encoding="utf-8")
+        text = (self.out / "f" / "3239.1.31.a" / "index.html").read_text(encoding="utf-8")
         self.assertIn('class="matrix-skip', text)
         self.assertLess(len(text), 200_000)
         small = (self.out / "f" / "15.1.3.a" / "index.html").read_text(encoding="utf-8")

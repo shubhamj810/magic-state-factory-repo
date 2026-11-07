@@ -725,8 +725,9 @@ def guard_problems(candidate, incumbent):
     match, or replace a circuit whose distance is only a floor by one whose
     distance is exactly that floor (the incumbent may well be better).  The
     toggles search of 2026-11-06 found a 12-wire ``[[2017,1,3]]`` that would
-    have replaced ``2017.1.3.a`` -- a floor of 3 with a certified ``d >= 25``
-    -- in exactly this way.
+    have replaced the row then labelled ``2017.1.3.a`` -- a floor of 3 with a
+    certified ``d >= 25`` beside it, now ``2017.1.25.a`` -- in exactly this
+    way.
     """
     label = incumbent.get("catalog_label")
     problems = []

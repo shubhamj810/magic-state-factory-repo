@@ -518,9 +518,11 @@ An improvement is refused, with the row's label in the reason, when it would
 lower the row's distance, drop a certificate the new circuit does not match,
 or replace a floor `d ≥ x` by a circuit whose distance is exactly `x`. The
 toggles search of 2026-11-06 found a 12-wire `[[2017,1,3]]`, exact at 3, that
-the fewest-wires rule alone would have put in place of `2017.1.3.a`, whose
-511-wire circuit carries the certificate `d ≥ 25`; `tests/test_merge_results.py`
-keeps it as a regression case. Two more guards protect rows whose `d` rests on
+the fewest-wires rule alone would have put in place of the row then labelled
+`2017.1.3.a`, whose 511-wire circuit carried the certificate `d ≥ 25` beside
+its floor of 3; `tests/test_merge_results.py` keeps it as a regression case.
+Since that row became `2017.1.25.a`, the 12-wire circuit is a class of its own
+at `d = 3`, and the test checks that the merge leaves the row alone. Two more guards protect rows whose `d` rests on
 a certificate. The very circuit a row stores, submitted at another distance, is
 refused, since changing a stored row's distance is a migration. A circuit whose
 distance is only a floor is refused when a row with the same `n`, `k` and gate

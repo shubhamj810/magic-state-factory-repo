@@ -174,24 +174,33 @@ Brouwer–Zimmermann bound of [`min_distance.py`](min_distance.py) for
 `[80,40]` and `[104,52]` and `sub(XQ103)` have distance at least 14, 18 and 18,
 so 16, 20 and 18 since their weights are multiples of 4, 4 and 2).
 [`certify_distances.py`](certify_distances.py) applies the theorem along each
-chain whose inputs are all proved and writes
-[`distance_certificates.json`](distance_certificates.json), one record per
-code, bound to its circuit by the SHA-256 of the columns. The quantum QR codes
-of length 167, 191 and 199 rest on the minimum distances 24, 28 and 32 of the
-extended QR codes of length 168, 192 and 200, as the paper's Table II states
-them. The bound of `min_distance.py` would need about `3·10^12`, `2·10^14` and
-`4·10^16` sums of rows to prove them, so they are not checked here, and the 18
-codes from `[[1301,1,21]]` on are listed in the file as unchecked.
+chain and writes [`distance_certificates.json`](distance_certificates.json),
+one record per code, bound to its circuit by the SHA-256 of the columns.
+
+The quantum QR codes of length 167, 191 and 199 rest on the minimum distances
+24, 28 and 32 of the extended QR codes of length 168, 192 and 200, as the
+paper's Table II states them. This folder does not re-prove those three: the
+bound of `min_distance.py` would need about `3.6·10^12`, `8·10^14` and
+`6·10^16` sums of rows. The owner decided on 2026-11-07 to count the Table II
+distances as sure. So the 18 codes from `[[1301,1,21]]` on, whose chains
+double one of these QR codes, have records too, under their own tool ("...,
+with the extended QR distances of their Table II (not re-proved here)"). Each
+such record lists the Table II distances it takes in `rests_on_paper` and
+what this folder proves for it in `proved_here`: the theorem, the code's
+structure and fault, and every other input distance along its chain. The
+same sentence ends the row's `d_certified_source`.
 
 The catalogue's own fault sweep proves only a floor above `n = 95`. Since
 2026-11-07 the theorem's bound is the row's distance wherever the file
 certifies it: the row is exact at the paper's distance, keeps the sweep's
 floor in `d_sweep_floor`, cites the file in `d_certified_evidence`, and was
-relabelled, keeping its old label in `former_labels`. On most of these rows
-tropidist computes the same value, a second proof. For the 18 unchecked codes
-the paper's distance stays a certificate beside the sweep's floor. Every row
-stores a fault of the paper's weight as `d_upper` and `d_witness`, and the
-verifier re-checks it against the true syndromes.
+relabelled, keeping its old label in `former_labels`. On most of the rows up
+to `n = 599` tropidist computes the same value, a second proof. The 18 codes
+from `[[1301,1,21]]` on were relabelled by
+[`doubled_qr_distances_2026_11_07.py`](../master_catalog/migrations/doubled_qr_distances_2026_11_07.py),
+`2017.1.3.a` to `2017.1.25.a` among them. Every row stores a fault of the
+paper's weight as `d_upper` and `d_witness`, and the verifier re-checks it
+against the true syndromes.
 
 | code | paper | catalogue row | `d` | sweep proves | how `d` is proved | credit |
 |---|---|---|---|---|---|---|
@@ -210,22 +219,22 @@ verifier re-checks it against the true syndromes.
 | `[[805,1,17]]` | II | `805.1.17.a` (was `805.1.6.a`) | `d = 17` | `d ≥ 6` | theorem | Jain & Albert |
 | `[[983,1,19]]` | I | `983.1.19.a` (was `983.1.6.a`) | `d = 19` | `d ≥ 6` | theorem | Jain & Albert |
 | `[[1011,1,19]]` | II | `1011.1.19.a` (was `1011.1.6.a`) | `d = 19` | `d ≥ 6` | theorem | Jain & Albert |
-| `[[1317,1,21]]` | I | `1317.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 21` beside it | Jain & Albert |
-| `[[1345,1,21]]` | II | `1345.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 21` beside it | Jain & Albert |
-| `[[1651,1,23]]` | I | `1651.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 23` beside it | Jain & Albert |
-| `[[1679,1,23]]` | II | `1679.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 23` beside it | Jain & Albert |
-| `[[2033,1,25]]` | I | `2033.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 25` beside it | Jain & Albert |
-| `[[2061,1,25]]` | II | `2061.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 25` beside it | Jain & Albert |
-| `[[2415,1,27]]` | I | `2415.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 27` beside it | Jain & Albert |
-| `[[2443,1,27]]` | II | `2443.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 27` beside it | Jain & Albert |
-| `[[2813,1,29]]` | I | `2813.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 29` beside it | Jain & Albert |
-| `[[2841,1,29]]` | II | `2841.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 29` beside it | Jain & Albert |
-| `[[3211,1,31]]` | I | `3211.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 31` beside it | Jain & Albert |
-| `[[3239,1,31]]` | II | `3239.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 31` beside it | Jain & Albert |
+| `[[1317,1,21]]` | I | `1317.1.21.a` (was `1317.1.3.a`) | `d = 21` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
+| `[[1345,1,21]]` | II | `1345.1.21.a` (was `1345.1.3.a`) | `d = 21` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
+| `[[1651,1,23]]` | I | `1651.1.23.a` (was `1651.1.3.a`) | `d = 23` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
+| `[[1679,1,23]]` | II | `1679.1.23.a` (was `1679.1.3.a`) | `d = 23` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
+| `[[2033,1,25]]` | I | `2033.1.25.a` (was `2033.1.3.a`) | `d = 25` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
+| `[[2061,1,25]]` | II | `2061.1.25.a` (was `2061.1.3.a`) | `d = 25` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
+| `[[2415,1,27]]` | I | `2415.1.27.a` (was `2415.1.3.a`) | `d = 27` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
+| `[[2443,1,27]]` | II | `2443.1.27.a` (was `2443.1.3.a`) | `d = 27` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
+| `[[2813,1,29]]` | I | `2813.1.29.a` (was `2813.1.3.a`) | `d = 29` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
+| `[[2841,1,29]]` | II | `2841.1.29.a` (was `2841.1.3.a`) | `d = 29` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
+| `[[3211,1,31]]` | I | `3211.1.31.a` (was `3211.1.3.a`) | `d = 31` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
+| `[[3239,1,31]]` | II | `3239.1.31.a` (was `3239.1.3.a`) | `d = 31` | `d ≥ 3` | theorem, with Table II's QR distances | Jain & Albert |
 
 A catalogue label carries the row's distance. That is why `[[1011,1,19]]` is
-`1011.1.19.a` and `[[3239,1,31]]`, whose distance rests on an unchecked input,
-is still `3239.1.3.a`.
+`1011.1.19.a` and `[[3239,1,31]]` is `3239.1.31.a`. A former label still
+resolves on the website.
 
 ## Credit
 
@@ -332,9 +341,10 @@ through
 [`gong_doubled_2026_10_30.py`](../master_catalog/migrations/gong_doubled_2026_10_30.py).
 
 Her four codes are the rows `177.1.9.a`, `271.1.11.a`, `401.1.13.a` and
-`559.1.15.a`, at the certified distance. Of the eight doubled on, `761.1.17.a`
-and `967.1.19.a` are too; the six from `[[1301,1,21]]` on need the unchecked
-QR distances and keep the sweep's floor, `2017.1.3.a` among them.
+`559.1.15.a`, at the certified distance. The eight doubled on are too:
+`761.1.17.a` and `967.1.19.a` with every input proved here, and the six from
+`[[1301,1,21]]` on (`1301.1.21.a` to `3195.1.31.a`, `2017.1.25.a` among them)
+with the Table II distances of the QR codes of length 168, 192 and 200.
 
 ## Reproduce
 

@@ -82,7 +82,7 @@ nothing about them.
 ## Summary
 
 - output widths: `k=1`: 126, `k=2`: 149, `k=3`: 200, `k=4`: 217, `k=5`: 250, `k=6`: 245, `k=7`: 151, `k=8`: 137, `k=9`: 133, `k=10`: 114, `k=11`: 81, `k=12`: 76, `k=13`: 11, `k=14`: 10, `k=15`: 12, `k=16`: 11, `k=17`: 8, `k=18`: 2, `k=19`: 6, `k=20`: 2, `k=21`: 3, `k=22`: 1, `k=23`: 2, `k=24`: 1, `k=25`: 1, `k=26`: 4, `k=27`: 3, `k=28`: 6, `k=29`: 5, `k=30`: 2, `k=31`: 2, `k=32`: 2, `k=35`: 2, `k=36`: 4, `k=37`: 2, `k=39`: 1, `k=40`: 7, `k=41`: 6, `k=42`: 4, `k=43`: 4, `k=44`: 2, `k=46`: 2, `k=47`: 1, `k=59`: 1, `k=64`: 1, `k=65`: 1, `k=68`: 1, `k=70`: 3, `k=71`: 2, `k=72`: 1, `k=73`: 2, `k=76`: 1, `k=77`: 1, `k=80`: 5, `k=81`: 4, `k=82`: 2, `k=83`: 1, `k=84`: 2, `k=85`: 2, `k=86`: 2, `k=87`: 2, `k=88`: 2, `k=89`: 2, `k=92`: 1, `k=94`: 1, `k=99`: 1, `k=100`: 4, `k=101`: 3, `k=102`: 2, `k=104`: 1, `k=112`: 1, `k=113`: 1, `k=114`: 1, `k=115`: 1, `k=116`: 2, `k=117`: 1, `k=118`: 1, `k=119`: 1, `k=120`: 1, `k=122`: 3, `k=123`: 1, `k=124`: 2, `k=126`: 4, `k=128`: 7, `k=132`: 2, `k=137`: 1, `k=144`: 1, `k=145`: 1, `k=146`: 1, `k=152`: 1, `k=153`: 1, `k=154`: 1, `k=161`: 1, `k=162`: 2, `k=171`: 1, `k=176`: 1, `k=177`: 1, `k=184`: 1, `k=185`: 1, `k=189`: 1, `k=194`: 1, `k=197`: 1, `k=199`: 1, `k=201`: 1, `k=210`: 1, `k=224`: 1, `k=287`: 1, `k=365`: 1, `k=372`: 1, `k=373`: 1
-- distances: `d=2`: 1233, `d=3`: 654, `d=4`: 89, `d=5`: 70, `d=6`: 34, `d=7`: 11, `d=8`: 5, `d=9`: 3, `d=11`: 3, `d=13`: 3, `d=15`: 3, `d=17`: 3, `d=19`: 3 (2091 pinned exactly, the rest proved floors)
+- distances: `d=2`: 1233, `d=3`: 636, `d=4`: 89, `d=5`: 70, `d=6`: 34, `d=7`: 11, `d=8`: 5, `d=9`: 3, `d=11`: 3, `d=13`: 3, `d=15`: 3, `d=17`: 3, `d=19`: 3, `d=21`: 3, `d=23`: 3, `d=25`: 3, `d=27`: 3, `d=29`: 3, `d=31`: 3 (2109 pinned exactly, the rest proved floors)
 - exact minimal T-count reaches **17** (927 rows are too wide for it to be computed)
 - injection counts from `n=8` to `n=262142`
 
@@ -1491,10 +1491,10 @@ entries are under [References](#references).
 | 1371 | `1281.7.2.a` | `[[1281,7,2]]` | sweep | — | 14 | `0+1+2+3+4+5+6` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1372 | `1292.4.2.a` | `[[1292,4,2]]` | sweep | — | 14 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1373 | `1293.3.2.a` | `[[1293,3,2]]` | sweep | — | 13 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1374 | `1301.1.3.a` | `[[1301,1,≥3]]` | sweep | ≥21 | 331 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
+| 1374 | `1301.1.21.a` | `[[1301,1,21]]` | theorem | 21 | 331 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
 | 1375 | `1305.8.2.a` | `[[1305,8,2]]` | sweep | — | 12 | `0+1+2+3+4+5+6+7+01+02+03+04+05+06+07+…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1376 | `1317.1.3.a` | `[[1317,1,≥3]]` | sweep | ≥21 | 335 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 1377 | `1345.1.3.a` | `[[1345,1,≥3]]` | sweep | ≥21 | 342 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1376 | `1317.1.21.a` | `[[1317,1,21]]` | theorem | 21 | 335 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1377 | `1345.1.21.a` | `[[1345,1,21]]` | theorem | 21 | 342 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 1378 | `1364.7.2.a` | `[[1364,7,2]]` | sweep | — | 12 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1379 | `1376.8.2.a` | `[[1376,8,2]]` | sweep | — | 13 | `012+013+014+015+016+017+023+024+025+0…` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1380 | `1386.6.2.a` | `[[1386,6,2]]` | sweep | — | 12 | `0+1+2+3+4+5+012+013+014+015+023+024+0…` | 6 | 2 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1513,13 +1513,13 @@ entries are under [References](#references).
 | 1393 | `1534.2.2.a` | `[[1534,2,2]]` | sweep | — | 12 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1394 | `1547.5.2.a` | `[[1547,5,2]]` | sweep | — | 15 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1395 | `1564.4.2.a` | `[[1564,4,2]]` | sweep | — | 14 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1396 | `1635.1.3.a` | `[[1635,1,≥3]]` | sweep | ≥23 | 415 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
-| 1397 | `1651.1.3.a` | `[[1651,1,≥3]]` | sweep | ≥23 | 419 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1396 | `1635.1.23.a` | `[[1635,1,23]]` | theorem | 23 | 415 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
+| 1397 | `1651.1.23.a` | `[[1651,1,23]]` | theorem | 23 | 419 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 1398 | `1651.6.2.a` | `[[1651,6,2]]` | sweep | — | 13 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1399 | `1652.6.2.a` | `[[1652,6,2]]` | sweep | — | 14 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1400 | `1675.373.4.a` | `[[1675,373,4]]` | exhaustive search | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1401 | `1676.372.4.a` | `[[1676,372,4]]` | exhaustive search | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1402 | `1679.1.3.a` | `[[1679,1,≥3]]` | sweep | ≥23 | 426 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1402 | `1679.1.23.a` | `[[1679,1,23]]` | theorem | 23 | 426 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 1403 | `1683.365.4.a` | `[[1683,365,4]]` | exhaustive search | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1404 | `1715.287.3.a` | `[[1715,287,≥3]]` | sweep | 6 | 329 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1405 | `1756.6.2.a` | `[[1756,6,2]]` | sweep | — | 15 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1538,8 +1538,8 @@ entries are under [References](#references).
 | 1418 | `2013.3.2.a` | `[[2013,3,2]]` | sweep | — | 13 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1419 | `2014.2.2.a` | `[[2014,2,2]]` | sweep | — | 13 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1420 | `2015.1.3.a` | `[[2015,1,3]]` | sweep | — | 13 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1421 | `2017.1.3.a` | `[[2017,1,≥3]]` | sweep | ≥25 | 511 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
-| 1422 | `2033.1.3.a` | `[[2033,1,≥3]]` | sweep | ≥25 | 515 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1421 | `2017.1.25.a` | `[[2017,1,25]]` | theorem | 25 | 511 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
+| 1422 | `2033.1.25.a` | `[[2033,1,25]]` | theorem | 25 | 515 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 1423 | `2040.3.2.a` | `[[2040,3,2]]` | sweep | — | 11 | `012` | 7 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1424 | `2040.4.2.a` | `[[2040,4,2]]` | sweep | — | 12 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1425 | `2040.6.2.a` | `[[2040,6,2]]` | sweep | — | 14 | `01+02+03+04+05+12+13+14+15+23+24+25+3…` | 7 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1552,7 +1552,7 @@ entries are under [References](#references).
 | 1432 | `2046.1.2.a` | `[[2046,1,2]]` | sweep | — | 11 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1433 | `2046.2.2.a` | `[[2046,2,2]]` | sweep | — | 12 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1434 | `2047.1.3.a` | `[[2047,1,3]]` | sweep | — | 12 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1435 | `2061.1.3.a` | `[[2061,1,≥3]]` | sweep | ≥25 | 522 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1435 | `2061.1.25.a` | `[[2061,1,25]]` | theorem | 25 | 522 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 1436 | `2146.5.2.a` | `[[2146,5,2]]` | sweep | — | 14 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1437 | `2159.8.2.a` | `[[2159,8,2]]` | sweep | — | 15 | `012+013+014+015+016+017+023+024+025+0…` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1438 | `2160.8.2.a` | `[[2160,8,2]]` | sweep | — | 16 | `012+013+014+015+016+017+023+024+025+0…` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1563,9 +1563,9 @@ entries are under [References](#references).
 | 1443 | `2316.4.2.a` | `[[2316,4,2]]` | sweep | — | 14 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1444 | `2331.8.2.a` | `[[2331,8,2]]` | sweep | — | 14 | `01+02+03+04+05+06+07+12+13+14+15+16+1…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1445 | `2360.8.2.a` | `[[2360,8,2]]` | sweep | — | 15 | `0+1+2+3+4+5+6+7` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1446 | `2399.1.3.a` | `[[2399,1,≥3]]` | sweep | ≥27 | 607 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
-| 1447 | `2415.1.3.a` | `[[2415,1,≥3]]` | sweep | ≥27 | 611 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 1448 | `2443.1.3.a` | `[[2443,1,≥3]]` | sweep | ≥27 | 618 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1446 | `2399.1.27.a` | `[[2399,1,27]]` | theorem | 27 | 607 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
+| 1447 | `2415.1.27.a` | `[[2415,1,27]]` | theorem | 27 | 611 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1448 | `2443.1.27.a` | `[[2443,1,27]]` | theorem | 27 | 618 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 1449 | `2508.4.2.a` | `[[2508,4,2]]` | sweep | — | 15 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1450 | `2541.3.2.a` | `[[2541,3,2]]` | sweep | — | 14 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1451 | `2550.8.2.a` | `[[2550,8,2]]` | sweep | — | 16 | `01+02+03+04+05+06+07+12+13+14+15+16+1…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1577,13 +1577,13 @@ entries are under [References](#references).
 | 1457 | `2768.8.2.a` | `[[2768,8,2]]` | sweep | — | 14 | `012+013+014+015+016+017+023+024+025+0…` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1458 | `2772.7.2.a` | `[[2772,7,2]]` | sweep | — | 13 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1459 | `2794.6.2.a` | `[[2794,6,2]]` | sweep | — | 13 | `0+1+2+3+4+5+012+013+014+015+023+024+0…` | 6 | 2 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1460 | `2797.1.3.a` | `[[2797,1,≥3]]` | sweep | ≥29 | 707 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
+| 1460 | `2797.1.29.a` | `[[2797,1,29]]` | theorem | 29 | 707 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
 | 1461 | `2805.5.2.a` | `[[2805,5,2]]` | sweep | — | 13 | `0+1+2+3+4+01+02+03+04+12+13+14+23+24+34` | 10 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1462 | `2808.7.2.a` | `[[2808,7,2]]` | sweep | — | 14 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1463 | `2810.6.2.a` | `[[2810,6,2]]` | sweep | — | 14 | `0+1+2+3+4+5` | 6 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1464 | `2811.5.2.a` | `[[2811,5,2]]` | sweep | — | 14 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1465 | `2813.1.3.a` | `[[2813,1,≥3]]` | sweep | ≥29 | 711 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 1466 | `2841.1.3.a` | `[[2841,1,≥3]]` | sweep | ≥29 | 718 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1465 | `2813.1.29.a` | `[[2813,1,29]]` | theorem | 29 | 711 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1466 | `2841.1.29.a` | `[[2841,1,29]]` | theorem | 29 | 718 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 1467 | `2857.7.2.a` | `[[2857,7,2]]` | sweep | — | 15 | `0+1+2+3+4+5+6` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1468 | `2907.5.2.a` | `[[2907,5,2]]` | sweep | — | 15 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1469 | `2986.6.2.a` | `[[2986,6,2]]` | sweep | — | 15 | `0+1+2+3+4+5` | 6 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1596,9 +1596,9 @@ entries are under [References](#references).
 | 1476 | `3068.4.2.a` | `[[3068,4,2]]` | sweep | — | 14 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1477 | `3069.2.2.a` | `[[3069,2,2]]` | sweep | — | 12 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1478 | `3070.2.2.a` | `[[3070,2,2]]` | sweep | — | 13 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1479 | `3195.1.3.a` | `[[3195,1,≥3]]` | sweep | ≥31 | 807 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
-| 1480 | `3211.1.3.a` | `[[3211,1,≥3]]` | sweep | ≥31 | 811 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 1481 | `3239.1.3.a` | `[[3239,1,≥3]]` | sweep | ≥31 | 818 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1479 | `3195.1.31.a` | `[[3195,1,31]]` | theorem | 31 | 807 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
+| 1480 | `3211.1.31.a` | `[[3211,1,31]]` | theorem | 31 | 811 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1481 | `3239.1.31.a` | `[[3239,1,31]]` | theorem | 31 | 818 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 1482 | `3315.6.2.a` | `[[3315,6,2]]` | sweep | — | 14 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1483 | `3316.6.2.a` | `[[3316,6,2]]` | sweep | — | 15 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1484 | `3332.6.2.a` | `[[3332,6,2]]` | sweep | — | 16 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -27633,12 +27633,13 @@ SHA-256 of those columns.
 
 - 1293 columns — see `master_catalog.json`, `factories[1372]`
 
-### 1374. `[[1301,1,≥3]]` — T0
+### 1374. `[[1301,1,21]]` — T0
 
 - output gate: `0`
 - `N = 331` (1 output + 330 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 21`; the upper bound is the fault on columns [0, 167, 334, 437, 540, 641, 742, 821, 900, 965, 1030, 1077, 1124, 1165, 1206, 1229, 1252, 1269, 1286, 1293, 1300]
-- certified distance: `d >= 21`, from built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[967,1,19]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; not used for `d`, which is what the sweep here proves
+- distance: exactly 21, witnessed by the fault on columns [0, 167, 334, 437, 540, 641, 742, 821, 900, 965, 1030, 1077, 1124, 1165, 1206, 1229, 1252, 1269, 1286, 1293, 1300]
+- the lower bound `d >= 21` is certified (theorem); the sweep here proves `d >= 3`; formerly `1301.1.3.a`
+- certified distance: `d = 21`, from built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[967,1,19]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 135`, `Z on 136`, `Z on 137`, `Z on 138`, `Z on 142`, `Z on 144`, `Z on 146`, `Z on 150`, `Z on 151`, `Z on 155`, `Z on 160` and 36 more (25 single-wire, 23 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 4, 6, 8, 10, 12, 13, 17, 19, 23, 24, 25 and 341 more; `T⁵` on column 167; `T†` on column 0, `T` on the rest
 - discovery: pre-existing
@@ -27665,12 +27666,13 @@ SHA-256 of those columns.
 
 - 1305 columns — see `master_catalog.json`, `factories[1374]`
 
-### 1376. `[[1317,1,≥3]]` — T0
+### 1376. `[[1317,1,21]]` — T0
 
 - output gate: `0`
 - `N = 335` (1 output + 334 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 21`; the upper bound is the fault on columns [0, 167, 334, 437, 540, 641, 742, 821, 900, 969, 1038, 1085, 1132, 1177, 1222, 1245, 1268, 1285, 1302, 1309, 1316]
-- certified distance: `d >= 21`, from Jain and Albert (arXiv:2408.12752), Table I: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[983,1,19]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not used for `d`, which is what the sweep here proves
+- distance: exactly 21, witnessed by the fault on columns [0, 167, 334, 437, 540, 641, 742, 821, 900, 969, 1038, 1085, 1132, 1177, 1222, 1245, 1268, 1285, 1302, 1309, 1316]
+- the lower bound `d >= 21` is certified (theorem); the sweep here proves `d >= 3`; formerly `1317.1.3.a`
+- certified distance: `d = 21`, from Jain and Albert (arXiv:2408.12752), Table I: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[983,1,19]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 135`, `Z on 136`, `Z on 137`, `Z on 138`, `Z on 142`, `Z on 144`, `Z on 146`, `Z on 150`, `Z on 151`, `Z on 155`, `Z on 160` and 104 more (60 single-wire, 56 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 4, 6, 8, 10, 12, 13, 17, 19, 23, 24, 25 and 453 more; `T⁵` on column 167; `T†` on column 0, `T` on the rest
 - discovery: pre-existing
@@ -27680,12 +27682,13 @@ SHA-256 of those columns.
 
 - 1317 columns — see `master_catalog.json`, `factories[1375]`
 
-### 1377. `[[1345,1,≥3]]` — T0
+### 1377. `[[1345,1,21]]` — T0
 
 - output gate: `0`
 - `N = 342` (1 output + 341 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 21`; the upper bound is the fault on columns [0, 167, 334, 437, 540, 643, 746, 825, 904, 983, 1062, 1109, 1156, 1203, 1250, 1273, 1296, 1313, 1330, 1337, 1344]
-- certified distance: `d >= 21`, from Jain and Albert (arXiv:2408.12752), Table II: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1011,1,19]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4); not used for `d`, which is what the sweep here proves
+- distance: exactly 21, witnessed by the fault on columns [0, 167, 334, 437, 540, 643, 746, 825, 904, 983, 1062, 1109, 1156, 1203, 1250, 1273, 1296, 1313, 1330, 1337, 1344]
+- the lower bound `d >= 21` is certified (theorem); the sweep here proves `d >= 3`; formerly `1345.1.3.a`
+- certified distance: `d = 21`, from Jain and Albert (arXiv:2408.12752), Table II: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1011,1,19]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 21, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `S on 335`, `Z on 336`, `S† on 337`, `S on 339`, `Z on 340`, `S† on 341`, `CZ on (0,335)`, `CZ on (0,337)`, `CZ on (0,339)`, `CZ on (0,341)`, `CZ on (335,336)`, `CZ on (335,337)` and 10 more (6 single-wire, 16 CZ in all)
 - or no correction at all, with rotations run as `T†` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 780 more, `T` on the rest
 - discovery: pre-existing
@@ -27973,12 +27976,13 @@ SHA-256 of those columns.
 
 - 1564 columns — see `master_catalog.json`, `factories[1394]`
 
-### 1396. `[[1635,1,≥3]]` — T0
+### 1396. `[[1635,1,23]]` — T0
 
 - output gate: `0`
 - `N = 415` (1 output + 414 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 23`; the upper bound is the fault on columns [0, 167, 334, 501, 668, 771, 874, 975, 1076, 1155, 1234, 1299, 1364, 1411, 1458, 1499, 1540, 1563, 1586, 1603, 1620, 1627, 1634]
-- certified distance: `d >= 23`, from built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1301,1,21]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; not used for `d`, which is what the sweep here proves
+- distance: exactly 23, witnessed by the fault on columns [0, 167, 334, 501, 668, 771, 874, 975, 1076, 1155, 1234, 1299, 1364, 1411, 1458, 1499, 1540, 1563, 1586, 1603, 1620, 1627, 1634]
+- the lower bound `d >= 23` is certified (theorem); the sweep here proves `d >= 3`; formerly `1635.1.3.a`
+- certified distance: `d = 23`, from built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1301,1,21]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 218`, `Z on 219`, `Z on 220`, `Z on 221`, `Z on 225`, `Z on 227`, `Z on 229`, `Z on 233`, `Z on 234`, `Z on 238`, `Z on 243` and 38 more (26 single-wire, 24 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 169, 170, 172, 174, 176, 178, 181, 182, 183, 185, 187, 188 and 248 more; `T†` on columns 0, 1, 4, 6, 8, 10, 12, 13, 17, 19, 23, 24 and 33 more, `T` on the rest
 - discovery: pre-existing
@@ -27988,12 +27992,13 @@ SHA-256 of those columns.
 
 - 1635 columns — see `master_catalog.json`, `factories[1395]`
 
-### 1397. `[[1651,1,≥3]]` — T0
+### 1397. `[[1651,1,23]]` — T0
 
 - output gate: `0`
 - `N = 419` (1 output + 418 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 23`; the upper bound is the fault on columns [0, 167, 334, 501, 668, 771, 874, 975, 1076, 1155, 1234, 1303, 1372, 1419, 1466, 1511, 1556, 1579, 1602, 1619, 1636, 1643, 1650]
-- certified distance: `d >= 23`, from Jain and Albert (arXiv:2408.12752), Table I: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1317,1,21]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not used for `d`, which is what the sweep here proves
+- distance: exactly 23, witnessed by the fault on columns [0, 167, 334, 501, 668, 771, 874, 975, 1076, 1155, 1234, 1303, 1372, 1419, 1466, 1511, 1556, 1579, 1602, 1619, 1636, 1643, 1650]
+- the lower bound `d >= 23` is certified (theorem); the sweep here proves `d >= 3`; formerly `1651.1.3.a`
+- certified distance: `d = 23`, from Jain and Albert (arXiv:2408.12752), Table I: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1317,1,21]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 218`, `Z on 219`, `Z on 220`, `Z on 221`, `Z on 225`, `Z on 227`, `Z on 229`, `Z on 233`, `Z on 234`, `Z on 238`, `Z on 243` and 106 more (61 single-wire, 57 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 169, 170, 172, 174, 176, 178, 181, 182, 183, 185, 187, 188 and 360 more; `T†` on columns 0, 1, 4, 6, 8, 10, 12, 13, 17, 19, 23, 24 and 33 more, `T` on the rest
 - discovery: pre-existing
@@ -28071,12 +28076,13 @@ SHA-256 of those columns.
 
 - 1676 columns — see `master_catalog.json`, `factories[1400]`
 
-### 1402. `[[1679,1,≥3]]` — T0
+### 1402. `[[1679,1,23]]` — T0
 
 - output gate: `0`
 - `N = 426` (1 output + 425 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 23`; the upper bound is the fault on columns [0, 167, 334, 501, 668, 771, 874, 977, 1080, 1159, 1238, 1317, 1396, 1443, 1490, 1537, 1584, 1607, 1630, 1647, 1664, 1671, 1678]
-- certified distance: `d >= 23`, from Jain and Albert (arXiv:2408.12752), Table II: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1345,1,21]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4); not used for `d`, which is what the sweep here proves
+- distance: exactly 23, witnessed by the fault on columns [0, 167, 334, 501, 668, 771, 874, 977, 1080, 1159, 1238, 1317, 1396, 1443, 1490, 1537, 1584, 1607, 1630, 1647, 1664, 1671, 1678]
+- the lower bound `d >= 23` is certified (theorem); the sweep here proves `d >= 3`; formerly `1679.1.3.a`
+- certified distance: `d = 23`, from Jain and Albert (arXiv:2408.12752), Table II: [[167,1,23]] quantum QR code (extended QR [168,84,24]) doubled onto [[1345,1,21]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 23, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 418`, `Z on 419`, `S† on 420`, `S on 422`, `Z on 423`, `S† on 424`, `CZ on (0,418)`, `CZ on (0,420)`, `CZ on (0,422)`, `CZ on (0,424)`, `CZ on (418,419)` and 15 more (7 single-wire, 20 CZ in all)
 - or no correction at all, with rotations run as `T†` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 875 more, `T` on the rest
 - discovery: pre-existing
@@ -28372,12 +28378,13 @@ SHA-256 of those columns.
 
 - 2015 columns — see `master_catalog.json`, `factories[1419]`
 
-### 1421. `[[2017,1,≥3]]` — T0
+### 1421. `[[2017,1,25]]` — T0
 
 - output gate: `0`
 - `N = 511` (1 output + 510 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 25`; the upper bound is the fault on columns [0, 191, 382, 549, 716, 883, 1050, 1153, 1256, 1357, 1458, 1537, 1616, 1681, 1746, 1793, 1840, 1881, 1922, 1945, 1968, 1985, 2002, 2009, 2016]
-- certified distance: `d >= 25`, from built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1635,1,23]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; not used for `d`, which is what the sweep here proves
+- distance: exactly 25, witnessed by the fault on columns [0, 191, 382, 549, 716, 883, 1050, 1153, 1256, 1357, 1458, 1537, 1616, 1681, 1746, 1793, 1840, 1881, 1922, 1945, 1968, 1985, 2002, 2009, 2016]
+- the lower bound `d >= 25` is certified (theorem); the sweep here proves `d >= 3`; formerly `2017.1.3.a`
+- certified distance: `d = 25`, from built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1635,1,23]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `Z on 313`, `Z on 314`, `Z on 315`, `Z on 316`, `Z on 320`, `Z on 322`, `Z on 324`, `Z on 328`, `Z on 329`, `Z on 333`, `Z on 338`, `Z on 339` and 40 more (26 single-wire, 26 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 3, 4, 5, 6, 11, 12, 13, 16, 17, 19 and 451 more; `T⁵` on columns 191, 716, 883; `T†` on column 0, `T` on the rest
 - discovery: pre-existing
@@ -28387,12 +28394,13 @@ SHA-256 of those columns.
 
 - 2017 columns — see `master_catalog.json`, `factories[1420]`
 
-### 1422. `[[2033,1,≥3]]` — T0
+### 1422. `[[2033,1,25]]` — T0
 
 - output gate: `0`
 - `N = 515` (1 output + 514 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 25`; the upper bound is the fault on columns [0, 191, 382, 549, 716, 883, 1050, 1153, 1256, 1357, 1458, 1537, 1616, 1685, 1754, 1801, 1848, 1893, 1938, 1961, 1984, 2001, 2018, 2025, 2032]
-- certified distance: `d >= 25`, from Jain and Albert (arXiv:2408.12752), Table I: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1651,1,23]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not used for `d`, which is what the sweep here proves
+- distance: exactly 25, witnessed by the fault on columns [0, 191, 382, 549, 716, 883, 1050, 1153, 1256, 1357, 1458, 1537, 1616, 1685, 1754, 1801, 1848, 1893, 1938, 1961, 1984, 2001, 2018, 2025, 2032]
+- the lower bound `d >= 25` is certified (theorem); the sweep here proves `d >= 3`; formerly `2033.1.3.a`
+- certified distance: `d = 25`, from Jain and Albert (arXiv:2408.12752), Table I: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1651,1,23]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `Z on 313`, `Z on 314`, `Z on 315`, `Z on 316`, `Z on 320`, `Z on 322`, `Z on 324`, `Z on 328`, `Z on 329`, `Z on 333`, `Z on 338`, `Z on 339` and 108 more (61 single-wire, 59 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 3, 4, 5, 6, 11, 12, 13, 16, 17, 19 and 563 more; `T⁵` on columns 191, 716, 883; `T†` on column 0, `T` on the rest
 - discovery: pre-existing
@@ -28587,12 +28595,13 @@ SHA-256 of those columns.
 
 - 2047 columns — see `master_catalog.json`, `factories[1433]`
 
-### 1435. `[[2061,1,≥3]]` — T0
+### 1435. `[[2061,1,25]]` — T0
 
 - output gate: `0`
 - `N = 522` (1 output + 521 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 25`; the upper bound is the fault on columns [0, 191, 382, 549, 716, 883, 1050, 1153, 1256, 1359, 1462, 1541, 1620, 1699, 1778, 1825, 1872, 1919, 1966, 1989, 2012, 2029, 2046, 2053, 2060]
-- certified distance: `d >= 25`, from Jain and Albert (arXiv:2408.12752), Table II: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1679,1,23]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4); not used for `d`, which is what the sweep here proves
+- distance: exactly 25, witnessed by the fault on columns [0, 191, 382, 549, 716, 883, 1050, 1153, 1256, 1359, 1462, 1541, 1620, 1699, 1778, 1825, 1872, 1919, 1966, 1989, 2012, 2029, 2046, 2053, 2060]
+- the lower bound `d >= 25` is certified (theorem); the sweep here proves `d >= 3`; formerly `2061.1.3.a`
+- certified distance: `d = 25`, from Jain and Albert (arXiv:2408.12752), Table II: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[1679,1,23]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 25, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 513`, `Z on 514`, `S† on 515`, `S on 517`, `Z on 518`, `S† on 519`, `S on 521`, `CZ on (0,513)`, `CZ on (0,515)`, `CZ on (0,517)`, `CZ on (0,519)` and 21 more (8 single-wire, 25 CZ in all)
 - or no correction at all, with rotations run as `T†` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 1162 more, `T` on the rest
 - discovery: pre-existing
@@ -28765,12 +28774,13 @@ SHA-256 of those columns.
 
 - 2360 columns — see `master_catalog.json`, `factories[1444]`
 
-### 1446. `[[2399,1,≥3]]` — T0
+### 1446. `[[2399,1,27]]` — T0
 
 - output gate: `0`
 - `N = 607` (1 output + 606 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 27`; the upper bound is the fault on columns [0, 191, 382, 573, 764, 931, 1098, 1265, 1432, 1535, 1638, 1739, 1840, 1919, 1998, 2063, 2128, 2175, 2222, 2263, 2304, 2327, 2350, 2367, 2384, 2391, 2398]
-- certified distance: `d >= 27`, from built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2017,1,25]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; not used for `d`, which is what the sweep here proves
+- distance: exactly 27, witnessed by the fault on columns [0, 191, 382, 573, 764, 931, 1098, 1265, 1432, 1535, 1638, 1739, 1840, 1919, 1998, 2063, 2128, 2175, 2222, 2263, 2304, 2327, 2350, 2367, 2384, 2391, 2398]
+- the lower bound `d >= 27` is certified (theorem); the sweep here proves `d >= 3`; formerly `2399.1.3.a`
+- certified distance: `d = 27`, from built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2017,1,25]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 408`, `Z on 409`, `Z on 410`, `Z on 411`, `Z on 415`, `Z on 417`, `Z on 419`, `Z on 423`, `Z on 424`, `Z on 428`, `Z on 433` and 43 more (27 single-wire, 28 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 198, 199, 200, 201, 205, 206, 209, 212, 214, 215, 217, 219 and 595 more; `T⁵` on columns 573, 1098, 1265; `T†` on columns 0, 1, 2, 3, 4, 5, 6, 11, 12, 13, 16, 17 and 36 more, `T` on the rest
 - discovery: pre-existing
@@ -28780,12 +28790,13 @@ SHA-256 of those columns.
 
 - 2399 columns — see `master_catalog.json`, `factories[1445]`
 
-### 1447. `[[2415,1,≥3]]` — T0
+### 1447. `[[2415,1,27]]` — T0
 
 - output gate: `0`
 - `N = 611` (1 output + 610 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 27`; the upper bound is the fault on columns [0, 191, 382, 573, 764, 931, 1098, 1265, 1432, 1535, 1638, 1739, 1840, 1919, 1998, 2067, 2136, 2183, 2230, 2275, 2320, 2343, 2366, 2383, 2400, 2407, 2414]
-- certified distance: `d >= 27`, from Jain and Albert (arXiv:2408.12752), Table I: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2033,1,25]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not used for `d`, which is what the sweep here proves
+- distance: exactly 27, witnessed by the fault on columns [0, 191, 382, 573, 764, 931, 1098, 1265, 1432, 1535, 1638, 1739, 1840, 1919, 1998, 2067, 2136, 2183, 2230, 2275, 2320, 2343, 2366, 2383, 2400, 2407, 2414]
+- the lower bound `d >= 27` is certified (theorem); the sweep here proves `d >= 3`; formerly `2415.1.3.a`
+- certified distance: `d = 27`, from Jain and Albert (arXiv:2408.12752), Table I: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2033,1,25]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 408`, `Z on 409`, `Z on 410`, `Z on 411`, `Z on 415`, `Z on 417`, `Z on 419`, `Z on 423`, `Z on 424`, `Z on 428`, `Z on 433` and 111 more (62 single-wire, 61 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 198, 199, 200, 201, 205, 206, 209, 212, 214, 215, 217, 219 and 707 more; `T⁵` on columns 573, 1098, 1265; `T†` on columns 0, 1, 2, 3, 4, 5, 6, 11, 12, 13, 16, 17 and 36 more, `T` on the rest
 - discovery: pre-existing
@@ -28795,12 +28806,13 @@ SHA-256 of those columns.
 
 - 2415 columns — see `master_catalog.json`, `factories[1446]`
 
-### 1448. `[[2443,1,≥3]]` — T0
+### 1448. `[[2443,1,27]]` — T0
 
 - output gate: `0`
 - `N = 618` (1 output + 617 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 27`; the upper bound is the fault on columns [0, 191, 382, 573, 764, 931, 1098, 1265, 1432, 1535, 1638, 1741, 1844, 1923, 2002, 2081, 2160, 2207, 2254, 2301, 2348, 2371, 2394, 2411, 2428, 2435, 2442]
-- certified distance: `d >= 27`, from Jain and Albert (arXiv:2408.12752), Table II: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2061,1,25]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4); not used for `d`, which is what the sweep here proves
+- distance: exactly 27, witnessed by the fault on columns [0, 191, 382, 573, 764, 931, 1098, 1265, 1432, 1535, 1638, 1741, 1844, 1923, 2002, 2081, 2160, 2207, 2254, 2301, 2348, 2371, 2394, 2411, 2428, 2435, 2442]
+- the lower bound `d >= 27` is certified (theorem); the sweep here proves `d >= 3`; formerly `2443.1.3.a`
+- certified distance: `d = 27`, from Jain and Albert (arXiv:2408.12752), Table II: [[191,1,27]] quantum QR code (extended QR [192,96,28]) doubled onto [[2061,1,25]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 27, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 608`, `Z on 609`, `S† on 610`, `S on 612`, `Z on 613`, `S† on 614`, `S on 616`, `Z on 617`, `CZ on (0,608)`, `CZ on (0,610)`, `CZ on (0,612)` and 27 more (9 single-wire, 30 CZ in all)
 - or no correction at all, with rotations run as `T†` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 1257 more, `T` on the rest
 - discovery: pre-existing
@@ -28984,12 +28996,13 @@ SHA-256 of those columns.
 
 - 2794 columns — see `master_catalog.json`, `factories[1458]`
 
-### 1460. `[[2797,1,≥3]]` — T0
+### 1460. `[[2797,1,29]]` — T0
 
 - output gate: `0`
 - `N = 707` (1 output + 706 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 29`; the upper bound is the fault on columns [0, 199, 398, 589, 780, 971, 1162, 1329, 1496, 1663, 1830, 1933, 2036, 2137, 2238, 2317, 2396, 2461, 2526, 2573, 2620, 2661, 2702, 2725, 2748, 2765, 2782, 2789, 2796]
-- certified distance: `d >= 29`, from built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2399,1,27]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; not used for `d`, which is what the sweep here proves
+- distance: exactly 29, witnessed by the fault on columns [0, 199, 398, 589, 780, 971, 1162, 1329, 1496, 1663, 1830, 1933, 2036, 2137, 2238, 2317, 2396, 2461, 2526, 2573, 2620, 2661, 2702, 2725, 2748, 2765, 2782, 2789, 2796]
+- the lower bound `d >= 29` is certified (theorem); the sweep here proves `d >= 3`; formerly `2797.1.3.a`
+- certified distance: `d = 29`, from built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2399,1,27]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 507`, `Z on 508`, `Z on 509`, `Z on 510`, `Z on 514`, `Z on 516`, `Z on 518`, `Z on 522`, `Z on 523`, `Z on 527`, `Z on 532` and 47 more (28 single-wire, 31 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 3, 5, 6, 8, 10, 12, 14, 17, 21, 22, 23 and 840 more; `T⁵` on columns 199, 971, 1496, 1663; `T†` on columns 0, 780, `T` on the rest
 - discovery: pre-existing
@@ -29062,12 +29075,13 @@ SHA-256 of those columns.
 
 - 2811 columns — see `master_catalog.json`, `factories[1463]`
 
-### 1465. `[[2813,1,≥3]]` — T0
+### 1465. `[[2813,1,29]]` — T0
 
 - output gate: `0`
 - `N = 711` (1 output + 710 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 29`; the upper bound is the fault on columns [0, 199, 398, 589, 780, 971, 1162, 1329, 1496, 1663, 1830, 1933, 2036, 2137, 2238, 2317, 2396, 2465, 2534, 2581, 2628, 2673, 2718, 2741, 2764, 2781, 2798, 2805, 2812]
-- certified distance: `d >= 29`, from Jain and Albert (arXiv:2408.12752), Table I: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2415,1,27]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not used for `d`, which is what the sweep here proves
+- distance: exactly 29, witnessed by the fault on columns [0, 199, 398, 589, 780, 971, 1162, 1329, 1496, 1663, 1830, 1933, 2036, 2137, 2238, 2317, 2396, 2465, 2534, 2581, 2628, 2673, 2718, 2741, 2764, 2781, 2798, 2805, 2812]
+- the lower bound `d >= 29` is certified (theorem); the sweep here proves `d >= 3`; formerly `2813.1.3.a`
+- certified distance: `d = 29`, from Jain and Albert (arXiv:2408.12752), Table I: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2415,1,27]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 507`, `Z on 508`, `Z on 509`, `Z on 510`, `Z on 514`, `Z on 516`, `Z on 518`, `Z on 522`, `Z on 523`, `Z on 527`, `Z on 532` and 115 more (63 single-wire, 64 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 3, 5, 6, 8, 10, 12, 14, 17, 21, 22, 23 and 952 more; `T⁵` on columns 199, 971, 1496, 1663; `T†` on columns 0, 780, `T` on the rest
 - discovery: pre-existing
@@ -29077,12 +29091,13 @@ SHA-256 of those columns.
 
 - 2813 columns — see `master_catalog.json`, `factories[1464]`
 
-### 1466. `[[2841,1,≥3]]` — T0
+### 1466. `[[2841,1,29]]` — T0
 
 - output gate: `0`
 - `N = 718` (1 output + 717 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 29`; the upper bound is the fault on columns [0, 199, 398, 589, 780, 971, 1162, 1329, 1496, 1663, 1830, 1933, 2036, 2139, 2242, 2321, 2400, 2479, 2558, 2605, 2652, 2699, 2746, 2769, 2792, 2809, 2826, 2833, 2840]
-- certified distance: `d >= 29`, from Jain and Albert (arXiv:2408.12752), Table II: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2443,1,27]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4); not used for `d`, which is what the sweep here proves
+- distance: exactly 29, witnessed by the fault on columns [0, 199, 398, 589, 780, 971, 1162, 1329, 1496, 1663, 1830, 1933, 2036, 2139, 2242, 2321, 2400, 2479, 2558, 2605, 2652, 2699, 2746, 2769, 2792, 2809, 2826, 2833, 2840]
+- the lower bound `d >= 29` is certified (theorem); the sweep here proves `d >= 3`; formerly `2841.1.3.a`
+- certified distance: `d = 29`, from Jain and Albert (arXiv:2408.12752), Table II: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2443,1,27]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 29, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `S on 707`, `Z on 708`, `S† on 709`, `S on 711`, `Z on 712`, `S† on 713`, `S on 715`, `Z on 716`, `S† on 717`, `CZ on (0,707)`, `CZ on (0,709)`, `CZ on (0,711)` and 33 more (9 single-wire, 36 CZ in all)
 - or no correction at all, with rotations run as `T†` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 1560 more, `T` on the rest
 - discovery: pre-existing
@@ -29274,12 +29289,13 @@ SHA-256 of those columns.
 
 - 3070 columns — see `master_catalog.json`, `factories[1477]`
 
-### 1479. `[[3195,1,≥3]]` — T0
+### 1479. `[[3195,1,31]]` — T0
 
 - output gate: `0`
 - `N = 807` (1 output + 806 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 31`; the upper bound is the fault on columns [0, 199, 398, 597, 796, 987, 1178, 1369, 1560, 1727, 1894, 2061, 2228, 2331, 2434, 2535, 2636, 2715, 2794, 2859, 2924, 2971, 3018, 3059, 3100, 3123, 3146, 3163, 3180, 3187, 3194]
-- certified distance: `d >= 31`, from built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2797,1,29]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; not used for `d`, which is what the sweep here proves
+- distance: exactly 31, witnessed by the fault on columns [0, 199, 398, 597, 796, 987, 1178, 1369, 1560, 1727, 1894, 2061, 2228, 2331, 2434, 2535, 2636, 2715, 2794, 2859, 2924, 2971, 3018, 3059, 3100, 3123, 3146, 3163, 3180, 3187, 3194]
+- the lower bound `d >= 31` is certified (theorem); the sweep here proves `d >= 3`; formerly `3195.1.3.a`
+- certified distance: `d = 31`, from built here by the doubling of Jain and Albert (arXiv:2408.12752) from A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/): [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2797,1,29]]; their doubling theorem (Sec. III) gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4) and the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes proved here by enumerating every word of their stabiliser spaces; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 606`, `Z on 607`, `Z on 608`, `Z on 609`, `Z on 613`, `Z on 615`, `Z on 617`, `Z on 621`, `Z on 622`, `Z on 626`, `Z on 631` and 51 more (29 single-wire, 34 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 201, 203, 206, 208, 210, 212, 214, 215, 217, 218, 219, 223 and 699 more; `T⁵` on columns 1369, 1894, 2061; `T†` on columns 0, 1, 3, 5, 6, 8, 10, 12, 14, 17, 21, 22 and 42 more, `T` on the rest
 - discovery: pre-existing
@@ -29289,12 +29305,13 @@ SHA-256 of those columns.
 
 - 3195 columns — see `master_catalog.json`, `factories[1478]`
 
-### 1480. `[[3211,1,≥3]]` — T0
+### 1480. `[[3211,1,31]]` — T0
 
 - output gate: `0`
 - `N = 811` (1 output + 810 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 31`; the upper bound is the fault on columns [0, 199, 398, 597, 796, 987, 1178, 1369, 1560, 1727, 1894, 2061, 2228, 2331, 2434, 2535, 2636, 2715, 2794, 2863, 2932, 2979, 3026, 3071, 3116, 3139, 3162, 3179, 3196, 3203, 3210]
-- certified distance: `d >= 31`, from Jain and Albert (arXiv:2408.12752), Table I: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2813,1,29]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; not used for `d`, which is what the sweep here proves
+- distance: exactly 31, witnessed by the fault on columns [0, 199, 398, 597, 796, 987, 1178, 1369, 1560, 1727, 1894, 2061, 2228, 2331, 2434, 2535, 2636, 2715, 2794, 2863, 2932, 2979, 3026, 3071, 3116, 3139, 3162, 3179, 3196, 3203, 3210]
+- the lower bound `d >= 31` is certified (theorem); the sweep here proves `d >= 3`; formerly `3211.1.3.a`
+- certified distance: `d = 31`, from Jain and Albert (arXiv:2408.12752), Table I: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2813,1,29]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4); the [[69,1,13]] input's distance is proved here by enumerating every word of SD70 through the punctured coordinate; it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 606`, `Z on 607`, `Z on 608`, `Z on 609`, `Z on 613`, `Z on 615`, `Z on 617`, `Z on 621`, `Z on 622`, `Z on 626`, `Z on 631` and 119 more (64 single-wire, 67 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 201, 203, 206, 208, 210, 212, 214, 215, 217, 218, 219, 223 and 811 more; `T⁵` on columns 1369, 1894, 2061; `T†` on columns 0, 1, 3, 5, 6, 8, 10, 12, 14, 17, 21, 22 and 42 more, `T` on the rest
 - discovery: pre-existing
@@ -29304,12 +29321,13 @@ SHA-256 of those columns.
 
 - 3211 columns — see `master_catalog.json`, `factories[1479]`
 
-### 1481. `[[3239,1,≥3]]` — T0
+### 1481. `[[3239,1,31]]` — T0
 
 - output gate: `0`
 - `N = 818` (1 output + 817 checks), exact minimal T-count 1, reduced degree 1
-- distance: proved `3 <= d <= 31`; the upper bound is the fault on columns [0, 199, 398, 597, 796, 987, 1178, 1369, 1560, 1727, 1894, 2061, 2228, 2331, 2434, 2537, 2640, 2719, 2798, 2877, 2956, 3003, 3050, 3097, 3144, 3167, 3190, 3207, 3224, 3231, 3238]
-- certified distance: `d >= 31`, from Jain and Albert (arXiv:2408.12752), Table II: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2841,1,29]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4); not used for `d`, which is what the sweep here proves
+- distance: exactly 31, witnessed by the fault on columns [0, 199, 398, 597, 796, 987, 1178, 1369, 1560, 1727, 1894, 2061, 2228, 2331, 2434, 2537, 2640, 2719, 2798, 2877, 2956, 3003, 3050, 3097, 3144, 3167, 3190, 3207, 3224, 3231, 3238]
+- the lower bound `d >= 31` is certified (theorem); the sweep here proves `d >= 3`; formerly `3239.1.3.a`
+- certified distance: `d = 31`, from Jain and Albert (arXiv:2408.12752), Table II: [[199,1,31]] quantum QR code (extended QR [200,100,32]) doubled onto [[2841,1,29]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 31, with d_sd at least the classical distance less one (their Lemma 2.4); it rests on the minimum distance 24 of the extended QR code [168,84], from the paper's Table II and not re-proved in this repository and on the minimum distance 28 of the extended QR code [192,96], from the paper's Table II and not re-proved in this repository and on the minimum distance 32 of the extended QR code [200,100], from the paper's Table II and not re-proved in this repository, as the owner decided on 2026-11-07; the doubling theorem and every other input distance along its chain are proved in transversal_t_codes/ (transversal_t_codes/distance_certificates.json); the evidence is in `transversal_t_codes/distance_certificates.json`
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 806`, `Z on 807`, `S† on 808`, `S on 810`, `Z on 811`, `S† on 812`, `S on 814`, `Z on 815`, `S† on 816`, `CZ on (0,806)`, `CZ on (0,808)` and 40 more (10 single-wire, 42 CZ in all)
 - or no correction at all, with rotations run as `T†` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 1655 more, `T` on the rest
 - discovery: pre-existing
