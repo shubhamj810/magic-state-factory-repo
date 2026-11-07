@@ -607,6 +607,7 @@ The header, in order:
 | `AI search: punctured pin codes`, `AI search: Berardini doubling of Gong's code` | the same constructions with a choice the search made: puncture sets of pin codes it found, and Berardini et al.'s doubling onto A. Gong's `[[559,1,15]]` |
 | `AI search: symmetric CP-SAT search n<=127`, `AI search: punctured triply even cyclic codes`, `AI search: descent from catalogue rows` | the catalogue's second-round small-factory searches of 7 November 2026: a symmetric CP-SAT search, punctured extended triply even cyclic codes, and shortening and output restriction of held rows (credited also to the parent row's works); each row's distance is the sweep's or a mitml sweep run here (`round1_certificates/`) |
 | `AI search: pin codes with searched relations` | quantum pin codes of Vuillot and Breuckmann (arXiv:1906.11394) whose box-sum relations, and punctures where there are any, the catalogue's small-pin search found (7 November 2026): CCZ rows at `d = 4` from `[[112,27,4]]` to `[[496,164,4]]`, `T` rows at `d = 4` and 6 |
+| `AI search: even CCZ construction` | the catalogue's small-d4 search (7 November 2026): `d = 4` factories of its even CCZ construction, whose punctured parents follow Haah and Hastings (arXiv:1709.02832, Sec. 2.2), 20 CCZ rows from `[[94,16,4]]` to `[[240,74,4]]`, `T` and `CS` rows |
 
 The full sentence for each is in the header and on the first page of
 `MASTER_CATALOG.md`. A regime a merge introduces is registered at the **end** of
