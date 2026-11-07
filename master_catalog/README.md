@@ -81,9 +81,11 @@ every field of a row of the main file except `columns`, plus
   [`theorem_certificates/`](../theorem_certificates/README.md) runs. A last family, `explicit`, is no rule at all:
   the columns themselves, compressed with zlib and written in base64, in the
   order they were stored. It holds the four gamma frontier rows from `n = 1675`
-  to `1715` (4.3 MB of columns), moved there on 2026-11-07 by
+  to `1715` (4.3 MB of columns) and the 18 transversal-T rows from
+  `[[1301,1,21]]` to `[[3239,1,31]]` (3.8 MB), moved there on 2026-11-07 by
   [`explicit_storage_2026_11_07.py`](migrations/explicit_storage_2026_11_07.py)
-  when the imports of that day took the main file past 50 MB.
+  and [`explicit_long_rows_2026_11_07.py`](migrations/explicit_long_rows_2026_11_07.py)
+  when the imports of that day took the main file toward 50 MB.
 - `columns_sha256`, the SHA-256 of those columns as compact JSON. It pins the
   circuit independently of the code that builds it.
 

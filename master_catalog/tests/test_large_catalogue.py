@@ -35,10 +35,13 @@ UNIFIED = "borrowed_identities/circuits/unified_l3.json"
 
 
 def two_group_rows(payload):
-    """``(row, construction)`` for the main file's large-sweep rows."""
+    """``(row, construction)`` for the main file's large-sweep rows: those
+    whose stored circuit came from the large sweep, which is the LAST source
+    (an improvement appends the source of the circuit it stores, as the
+    toggles search's fewer-wire circuits did on 2026-11-07)."""
     out = []
     for row in payload["factories"]:
-        source = row["sources"][0]
+        source = row["sources"][-1]
         if source["file"] != UNIFIED or not source["label"].startswith("ls-"):
             continue
         match = re.search(r"s_total=(\d+),s_O=(\d+)", source["provenance"])
@@ -120,7 +123,7 @@ class TestEncoding(unittest.TestCase):
 
     def test_every_two_group_row_of_the_main_file_round_trips(self):
         rows = two_group_rows(CF.load())
-        self.assertGreater(len(rows), 200)
+        self.assertGreater(len(rows), 150)     # 200 since the toggles improvements
         for row, construction in rows:
             with self.subTest(label=row["catalog_label"]):
                 self.assertEqual(row["columns"], K.columns(construction))
