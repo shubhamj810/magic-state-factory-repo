@@ -44,19 +44,23 @@ are the outputs and the rest are postselected checks. `d` is the circuit's
 fault distance. Each row also gives the circuit's **Clifford correction**: the
 `S` and `CZ` gates that make its action exactly the gate shown (see below).
 
-The catalogue holds **2114 classes**:
+The catalogue holds **2711 classes**:
 
-- `n = 8..262142`, `k = 1..373`, `d = 2..7` proved here, and up to 31 certified
-  by a source;
-- 1233 classes at distance 2, from the borrowed-identity searches (including
-  their two October 2026 unified searches) and this repository's symmetry-SAT
-  search;
-- 605 classes, two-group circuits of 1026 to 262142 rotations, stored as the
-  rule that builds them, in
-  [`master_catalog_large.json`](master_catalog/master_catalog_large.json):
-  their columns would take the main file past GitHub's 100 MB hard limit on a
-  file;
-- 217 classes with `n <= 54` and `d >= 3`, including all 74 Pareto points of
+- `n = 8..262142`, `k = 1..974` and `d = 2..40`. The sweep here proves
+  `d = 2..7`. On 185 rows `d`, from 4 to 40, is a bound certified by a theorem
+  or an exhaustive search whose evidence is in this repository, and on 33 of
+  them (`d >= 13`) it is a lower bound only;
+- 1323 classes at distance 2, most of them from the borrowed-identity searches
+  (including their two October 2026 unified searches) and this repository's
+  symmetry-SAT search;
+- 869 classes stored in
+  [`master_catalog_large.json`](master_catalog/master_catalog_large.json),
+  because their columns would take the main file past GitHub's recommended
+  50 MB: 787 as the rule that builds them (604 two-group circuits of 1026 to
+  262142 rotations, 138 San José GRS codes, 32 four-block circuits, 12
+  punctured Reed–Muller codes and one `CCZ`-frame circuit), and 82 as their
+  columns, compressed;
+- 229 classes with `n <= 54` and `d >= 3`, including all 74 Pareto points of
   the length-54 classification.
 
 ```bash
@@ -87,9 +91,9 @@ also stores whether the correction can be avoided by running some rotations as
 `T³`, `T⁵` or `T†` instead of `T` (`rotation_powers`). For a code this is a
 transversal `T` gate in the sense of Jain and Albert.
 
-- 31 classes need no correction at all;
-- 1511 need none once some rotations run at another power of `T`;
-- 572 need `S` or `CZ` gates whatever the powers, which the verifier proves.
+- 39 classes need no correction at all;
+- 1819 need none once some rotations run at another power of `T`;
+- 853 need `S` or `CZ` gates whatever the powers, which the verifier proves.
 
 [`master_catalog/clifford.py`](master_catalog/clifford.py) computes all three.
 The verifier then checks the logical action two more ways. It evaluates the
@@ -106,10 +110,13 @@ rate of one input `T` state. The 15-to-1 has `A_3 = 35`, the 8-`T` `CCZ`
 factory `A_2 = 28`.
 [`master_catalog/errorcoeff.py`](master_catalog/errorcoeff.py) counts it
 exactly, as the accepted faults less the harmless ones, each counted by the
-MacWilliams identity or by enumeration. Of the 1355 exact rows, 1335 have a
-count, and 1271 of those are confirmed by enumerating the damaging faults
-directly. The other 20 are distance 6 at `n` near 850 and distance 7 at
-`n = 255`, out of reach of both methods. The count belongs to the stored
+MacWilliams identity or by enumeration. Of the 2678 exact rows, 2522 have a
+count. 72 of those counts also cite an evidence file (`A_d_evidence`) from
+another program. The verifier checks that the file's record is bound to the
+row's columns, and wherever `errorcoeff.py` reaches, its count must agree. The
+other 156 rows have `A_d = null`: circuits of 217 to 4284 rotations at
+`d >= 6`, and 19 four-block circuits at `d = 3` with `n >= 1199`, out of reach
+of both methods. The count belongs to the stored
 circuit: another circuit of the same class can have a different `A_d`.
 
 ## Where the protocols come from

@@ -646,7 +646,7 @@ class TestCertificateGuard(unittest.TestCase):
         drop the certificate; the guard refuses, naming the row."""
         fixture = json.loads((HERE / "data" / "toggles_2017_1_3.json")
                              .read_text(encoding="utf-8"))
-        payload = CF.load()
+        payload = CF.load_all()     # the row is in the large file since 2026-11-07
         incumbent = next(row for row in payload["factories"]
                          if "2017.1.3.a" in [row["catalog_label"]]
                          + (row.get("former_labels") or []))

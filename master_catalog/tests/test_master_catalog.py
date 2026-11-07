@@ -82,8 +82,13 @@ DOUBLED = ("Jain-Albert doubling: weak triply even family",
            "Gong doubling: triply even family",
            "Jain-Albert doubling of Gong's codes")
 #: Published protocols rebuilt from their paper's construction:
-#: literature, not an AI search.
-LITERATURE = ("Gong et al.: F8 codes concatenated with 8T->CCZ",)
+#: literature, not an AI search.  The last four came in from the small-lit
+#: search of 7 November 2026, which rebuilt them from their papers.
+LITERATURE = ("Gong et al.: F8 codes concatenated with 8T->CCZ",
+              "Bravyi-Haah distance-2 family",
+              "Campbell-Howard distance-2 families",
+              "Vuillot-Breuckmann pin codes",
+              "Berardini et al. doubling")
 #: The classification stages this repository ran itself -- every catalogue under
 #: ``classification/`` but the copied length-54 frontier: a source from one of
 #: them makes a class ``pre-existing``.

@@ -322,6 +322,26 @@ class TestCircuits(unittest.TestCase):
         self.assertGreater(checked, 300)
 
 
+def improved(test, row, circuit):
+    """Whether a later merge replaced the paper's circuit in ``row`` by a better
+    one of the same class (`merge_results.improve`, e.g. the flat-toggle search
+    of 7 November 2026).  If so, check what the merge rule promises: the class
+    and the paper's credit stay, the first source is still the paper's circuit,
+    a later source is the stored one, and that circuit is no worse in wires
+    ``N`` and in ``A_d`` and better in one."""
+    if (row["N"], row["A_d"]) == (circuit["wires"], circuit["A_d"]):
+        return False
+    first = row["sources"][0]
+    test.assertEqual((row["n"], row["k"], row["d"]),
+                     (circuit["n"], circuit["k"], circuit["d"]))
+    test.assertEqual((first["N"], first["d"]), (circuit["wires"], circuit["d"]))
+    test.assertTrue(any(s["N"] == row["N"] for s in row["sources"][1:]))
+    test.assertLessEqual(row["N"], circuit["wires"])
+    if row["A_d"] is not None and circuit["A_d"] is not None:
+        test.assertLessEqual(row["A_d"], circuit["A_d"])
+    return True
+
+
 class TestMasterCatalogue(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -342,6 +362,8 @@ class TestMasterCatalogue(unittest.TestCase):
                 with self.subTest(label=row["catalog_label"]):
                     self.assertEqual(row["citations"], [BORROWED])
                     self.assertEqual(row["discovery"], "pre-existing")
+                    if improved(self, row, circuit):
+                        continue
                     self.assertEqual(
                         (row["n"], row["k"], row["d"], row["N"], row["A_d"]),
                         (circuit["n"], circuit["k"], circuit["d"],
@@ -360,10 +382,31 @@ class TestMasterCatalogue(unittest.TestCase):
                             columns_of(circuit), row["columns"], row["k"]))
 
     def test_the_merge_added_new_classes_to_both_files(self):
-        self.assertEqual(len(self.added(self.main)), ADDED_MAIN)
-        self.assertEqual(len(self.added(self.large)), ADDED_LARGE)
-        self.assertEqual(len(self.added(self.main, FILE_D3)), ADDED_D3_MAIN)
-        self.assertEqual(len(self.added(self.large, FILE_D3)), ADDED_D3_LARGE)
+        """The counts the merges wrote.  A row a later merge improved can move
+        to the main file with its new circuit's columns (1056.6.2.a, by the
+        flat-toggle search of 7 November 2026), so the counts are of the rows
+        that still hold the paper's circuit, and the totals are fixed."""
+        def kept(rows, file):
+            return [row for row in self.added(rows, file)
+                    if (row["N"], row["A_d"]) == (
+                        self.circuits[row["sources"][0]["label"]]["wires"],
+                        self.circuits[row["sources"][0]["label"]]["A_d"])]
+        for file, in_main, in_large in ((FILE, ADDED_MAIN, ADDED_LARGE),
+                                        (FILE_D3, ADDED_D3_MAIN, ADDED_D3_LARGE)):
+            with self.subTest(file=file):
+                self.assertEqual(len(self.added(self.main, file))
+                                 + len(self.added(self.large, file)),
+                                 in_main + in_large)
+                self.assertLessEqual(len(kept(self.main, file)), in_main)
+                self.assertLessEqual(len(kept(self.large, file)), in_large)
+                moved = [row for row in self.added(self.main, file)
+                         if row["n"] > STORE_MAX_N
+                         and not any(c["stage"] == "gluing" for c in
+                                     [self.circuits[row["sources"][0]["label"]]])]
+                for row in moved:
+                    self.assertGreater(len(row["sources"]), 1)
+                self.assertEqual(len(self.added(self.large, file)) + len(moved),
+                                 in_large)
 
 
 if __name__ == "__main__":

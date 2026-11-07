@@ -108,12 +108,13 @@ on the 17- and 18-wire ones.
 
 ## What is in it
 
-**2102 distinct `(n, k, d, GL(k,2) gate)` classes**, 605 of them in the large
-file. 1233 are at distance 2, and 217 are at `d ≥ 3` with `n ≤ 54`. Widths run
-`k = 1..373`, injection counts `n = 8..262142`, and distances `d = 2..19`.
-The sweep here proves `d = 2..7`; on 31 rows `d` is a certified bound, from
-`d = 4` to `d = 19`, and 20 more rows carry a certificate this repository does
-not check (up to `d ≥ 31` on the transversal-T codes) beside the sweep's `d`.
+**2711 distinct `(n, k, d, GL(k,2) gate)` classes**, 869 of them in the large
+file. 1323 are at distance 2, and 229 are at `d ≥ 3` with `n ≤ 54`. Widths run
+`k = 1..974`, injection counts `n = 8..262142`, and distances `d = 2..40`.
+The sweep here proves `d = 2..7`. On 185 rows `d` is a certified bound, from
+`d = 4` to `d = 40`, each backed by a theorem or exhaustive-search record in
+this repository, and on 33 of them (`d ≥ 13`) it is a lower bound only. Every
+certificate in the file is now the row's `d`.
 
 **Transversal-T codes.**
 [`migrations/transversal_t_codes_2026_10_10.py`](migrations/transversal_t_codes_2026_10_10.py)
@@ -171,10 +172,37 @@ made the certified bound the distance on 31 rows, where an evidence file the
 repository is sure of states it, and relabelled them: `177.1.7.a` became
 `177.1.9.a`, for example, and keeps the old label in `former_labels`.
 
+**The second round of 7 November 2026.**
+[`migrations/doubled_qr_distances_2026_11_07.py`](migrations/doubled_qr_distances_2026_11_07.py)
+gave the 18 doubled codes from `[[1301,1,21]]` to `[[3239,1,31]]` the doubling
+theorem's distance, with the Table II distances of Jain and Albert as inputs
+(the length-168 one, 24, is now proved here by
+[`../transversal_t_codes/min_distance.py`](../transversal_t_codes/min_distance.py)),
+and relabelled them: `2017.1.3.a` became `2017.1.25.a`, for example.
+[`migrations/round2_evidence_2026_11_07.py`](migrations/round2_evidence_2026_11_07.py)
+wrote the records of [`../round2_certificates/`](../round2_certificates/README.md):
+faults that make `935.89.7.a`, `936.88.7.a` and `998.26.8.a` exact, more
+evidence on rows such as `599.1.15.a` and `988.36.7.a`, exact `A_d` counts,
+and `d = 6` on the row now labelled `1715.287.6.a`.
+[`migrations/sanjose_theorem_2026_11_07.py`](migrations/sanjose_theorem_2026_11_07.py)
+checked San José's theorem (arXiv:2609.08203) on the columns of two gamma
+frontier rows, so `756.32.6.a` became `756.32.9.a`.
+[`migrations/research_faults_2026_11_07.py`](migrations/research_faults_2026_11_07.py)
+made `218.5.7.a` and `708.58.6.a` exact with faults the research found, and
+[`migrations/import_counts_2026_11_07.py`](migrations/import_counts_2026_11_07.py)
+stored exact `A_d` counts from the research's tools on imported rows that
+`errorcoeff.py` cannot count.
+[`migrations/berardini_reference_2026_11_07.py`](migrations/berardini_reference_2026_11_07.py)
+added Berardini et al. (arXiv:2412.08586), whose `[[753,1,17]]` came in that
+day, and
+[`migrations/reframe_93_3_5_2026_11_07.py`](migrations/reframe_93_3_5_2026_11_07.py)
+stored `[[93,3,5]]` in the output frame where its gate is `T0·T1·T2`. The
+searches imported that day took the catalogue from 2114 to 2711 classes.
+
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running
 some rotations as `T³`, `T⁵` or `T†` makes that unnecessary
-(`rotation_powers`). 31 classes need nothing, 1511 need only powers, and 572
+(`rotation_powers`). 39 classes need nothing, 1819 need only powers, and 853
 need `S` or `CZ` gates whatever the powers.
 [`migrations/clifford_corrections_2026_10_10.py`](migrations/clifford_corrections_2026_10_10.py)
 added the fields, and [`clifford.py`](clifford.py) explains the method.

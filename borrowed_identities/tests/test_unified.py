@@ -325,6 +325,26 @@ class TestTheTwoGroupRule(unittest.TestCase):
                 self.assertEqual(len(ours), int(row["n"]))
 
 
+def improved(test, row, circuit):
+    """Whether a later merge replaced the paper's circuit in ``row`` by a better
+    one of the same class (`merge_results.improve`, e.g. the flat-toggle search
+    of 7 November 2026).  If so, check what the merge rule promises: the class
+    and the paper's credit stay, the first source is still the paper's circuit,
+    a later source is the stored one, and that circuit is no worse in wires
+    ``N`` and in ``A_d`` and better in one."""
+    if (row["N"], row["A_d"]) == (circuit["wires"], circuit["A_d"]):
+        return False
+    first = row["sources"][0]
+    test.assertEqual((row["n"], row["k"], row["d"]),
+                     (circuit["n"], circuit["k"], circuit["d"]))
+    test.assertEqual((first["N"], first["d"]), (circuit["wires"], circuit["d"]))
+    test.assertTrue(any(s["N"] == row["N"] for s in row["sources"][1:]))
+    test.assertLessEqual(row["N"], circuit["wires"])
+    if row["A_d"] is not None and circuit["A_d"] is not None:
+        test.assertLessEqual(row["A_d"], circuit["A_d"])
+    return True
+
+
 class TestMasterCatalogue(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -346,6 +366,8 @@ class TestMasterCatalogue(unittest.TestCase):
                 self.assertEqual(row["citations"], UPSTREAM_CREDIT.get(
                     circuit["id"], [BORROWED]))
                 self.assertEqual(row["discovery"], "pre-existing")
+                if improved(self, row, circuit):
+                    continue
                 self.assertEqual((row["n"], row["k"], row["d"], row["N"]),
                                  (circuit["n"], circuit["k"], circuit["d"],
                                   circuit["wires"]))

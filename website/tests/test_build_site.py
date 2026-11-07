@@ -122,25 +122,28 @@ class TheBuiltSite(unittest.TestCase):
     def test_a_certified_distance_says_how_it_was_proved(self):
         """A row whose d rests on a certificate: the page gives the certified
         distance, says how it was proved and what the sweep alone proves, and
-        its former label still leads to it."""
+        its former label, if it had one, still leads to it.  A row imported
+        with its certificate in hand was never relabelled."""
         rows = [r for r in self.catalog["factories"] if "d_sweep_floor" in r]
         self.assertTrue(rows)
         for row in rows:
             summary = next(f for f in self.index["factories"] if f["id"] == row["catalog_label"])
             self.assertEqual(summary["d"], row["d"])
             self.assertNotEqual(summary["d_by"], "sweep")
-            self.assertEqual(summary["former_ids"], row["former_labels"])
+            self.assertEqual(summary["former_ids"], row.get("former_labels") or [])
             text = (self.out / "f" / row["catalog_label"] / "index.html").read_text(encoding="utf-8")
             panel = text.split('id="distance-panel">', 1)[1].split("</div>", 1)[0]
             self.assertIn("this lower bound is certified by", panel)
             self.assertIn(f"d\\ge {row['d_sweep_floor']}", panel)
-            for old in row["former_labels"]:
+            for old in row.get("former_labels") or []:
                 stub = (self.out / "f" / old / "index.html").read_text(encoding="utf-8")
                 self.assertIn(f'url=../../f/{row["catalog_label"]}/', stub)
         plain = next(f for f in self.index["factories"] if f["id"] == "15.1.3.a")
         self.assertEqual((plain["d_by"], plain["former_ids"]), ("sweep", []))
         sitemap = (self.out / "sitemap.xml").read_text(encoding="utf-8")
-        self.assertNotIn(f"f/{rows[0]['former_labels'][0]}/", sitemap)
+        renamed = [r for r in rows if r.get("former_labels")]
+        self.assertTrue(renamed)
+        self.assertNotIn(f"f/{renamed[0]['former_labels'][0]}/", sitemap)
 
     def test_the_clifford_summary_follows_the_catalogue(self):
         """``none`` / ``powers`` / ``required``, read off the two catalogue
