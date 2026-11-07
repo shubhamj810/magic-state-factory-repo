@@ -46,6 +46,13 @@ WHAT IS RE-DERIVED, PER ROW
     floor stores ``d_is_exact: false`` and is printed as ``>=d``; if it carries
     a witness at all, that witness must lie strictly ABOVE the floor and equal
     ``d_upper``, because a fault at the floor would have made it exact.
+    Every witness is checked twice, by `faultcore` and by the literal XOR of
+    the columns' wire masks.  Where the sweep below ``d`` is out of reach, a
+    row's ``d`` may rest on a CERTIFICATE (``d_sweep_floor`` present): then
+    the sweep runs below ``d_sweep_floor``, the floor it proves, and the
+    certificate must exist with its source and evidence files, bound to this
+    circuit by the SHA-256 of its columns and stating exactly ``d``
+    (`certificate_problems`).
 5.  **No spectator output.**  The gate touches all ``k`` outputs; an output it
     never touches is padding, and ``k`` is the denominator of every rate anyone
     quotes off this table.
@@ -267,6 +274,19 @@ def exact_distance(columns, k, cap=4):
             if value and not value & ~outm:
                 return weight
     return cap + 1
+
+
+def literal_harmful(columns, k, indices):
+    """Whether the fault on ``indices`` is accepted and harmful, by the XOR of
+    the columns' wire masks: zero on every check wire, non-zero on the outputs.
+    The definition, transcribed; `faultcore.Circuit.harmful` is the fast one."""
+    value = 0
+    for index in indices:
+        mask = 0
+        for q in columns[index]:
+            mask |= 1 << q
+        value ^= mask
+    return value != 0 and not value >> k
 
 
 def effective_width(columns, k, N):
@@ -586,13 +606,17 @@ def recompute_metrics(gate, k):
 
 # ------------------------------------------------------------------- distance
 def confirm_distance(columns, k, N, d, d_is_exact, d_witness, d_upper,
-                     budget=None):
+                     budget=None, sweep_floor=None):
     """Re-prove a STORED distance from the columns; return a list of problems.
 
     Absence is proved and presence is witnessed, and the two halves are kept
     apart on purpose:
 
-    * every weight ``1..d-1`` is swept to completion.  ``found`` means the
+    * every weight ``1..d-1`` is swept to completion -- or, on a row whose
+      ``d`` rests on a certificate, every weight below ``sweep_floor`` (the
+      row's ``d_sweep_floor``), the floor the sweep itself proves; the weights
+      from there up to ``d`` are the certificate's, which
+      `certificate_problems` checks.  ``found`` means the
       stored ``d`` is inflated and the sweep names the fault that disproves it.
       ``skipped`` means the budget stopped the sweep, which proves NOTHING --
       and an unproved floor published as a floor is exactly the failure this
@@ -629,14 +653,28 @@ def confirm_distance(columns, k, N, d, d_is_exact, d_witness, d_upper,
         if len(set(indices)) != want:
             return [("distance-witness",
                      f"{label} has weight {len(set(indices))}, not {want}")]
-        if not circuit.harmful(indices):
+        fast = circuit.harmful(indices)
+        if fast != literal_harmful(circuit.columns, k, indices):
+            return [("implementation-disagreement",
+                     f"faultcore and the literal XOR of the wire masks "
+                     f"disagree on whether {label} is harmful")]
+        if not fast:
             return [("distance-witness",
                      f"{label} {sorted(set(indices))} is not an undetectable "
                      f"damaging fault: it does not have zero syndrome and a "
                      f"non-zero output part")]
         return []
 
-    for weight in range(1, min(d, circuit.n + 1)):
+    swept = d
+    if sweep_floor is not None:
+        if not _integer(sweep_floor) or not 2 <= sweep_floor < d:
+            problems.append(("certificate",
+                             f"d_sweep_floor={sweep_floor!r} is not a floor "
+                             f"from 2 up to below d={d}"))
+            sweep_floor = None
+        else:
+            swept = sweep_floor
+    for weight in range(1, min(swept, circuit.n + 1)):
         status, witness, _count = FC.scan_weight(circuit, weight)
         if status == "found":
             problems.append(("distance-inflated",
@@ -647,8 +685,9 @@ def confirm_distance(columns, k, N, d, d_is_exact, d_witness, d_upper,
         if status == "skipped":
             problems.append(("distance-unproved",
                              f"the weight-{weight} sweep did not run to "
-                             f"completion under the fault budget, so d >= {d} "
-                             f"is not proved here"))
+                             f"completion under the fault budget, so "
+                             f"{'d_sweep_floor' if sweep_floor else 'd'} >= "
+                             f"{swept} is not proved here"))
             break
 
     if d_is_exact:
@@ -814,13 +853,14 @@ def clifford_problems(facts, row):
 
 
 # ------------------------------------------------------------------- one row
-def verify_row(row, budget=None, reference=True):
+def verify_row(row, budget=None, reference=True, evidence_root=None):
     """Re-derive a shipped row from its columns; return ``(facts, problems)``.
 
     ``problems`` is a list of ``(kind, detail)`` and is empty exactly when the
     row is true.  Every published field is compared, not just the interesting
     ones: a stale ``gate_human`` is a lie to a reader even though no computation
-    depends on it.
+    depends on it.  ``evidence_root`` is where a certificate's evidence files
+    are looked up (default: this repository; the tests use a scratch folder).
     """
     problems: list[tuple[str, str]] = []
     if not isinstance(row, dict):
@@ -847,7 +887,7 @@ def verify_row(row, budget=None, reference=True):
     problems += typed
     if typed:
         return {}, problems
-    problems += certificate_problems(row)
+    problems += certificate_problems(row, evidence_root)
     problems += construction_problems(row)
     problems += label_problems(row)
 
@@ -943,7 +983,8 @@ def verify_row(row, budget=None, reference=True):
 
     problems += confirm_distance(facts["columns"], row["k"], row["N"], row["d"],
                                  row["d_is_exact"], row["d_witness"],
-                                 row["d_upper"], budget)
+                                 row["d_upper"], budget,
+                                 sweep_floor=row.get("d_sweep_floor"))
     problems += error_coefficient_problems(facts["columns"], row)
 
     if reference and row["k"] <= REFERENCE_K_CAP \
@@ -1291,19 +1332,49 @@ def label_problems(row):
     if CF.label_letters(CF.label_index(letters)) != letters:
         problems.append(("label", f"catalog_label {label!r} is not the canonical "
                                   f"spelling of its letter code"))
+    former = row.get("former_labels")
+    if former is not None:
+        # The names the row had before its distance changed.  Each names the
+        # same n and k and another distance, and is spelt canonically, so that
+        # an old citation finds this row and nothing else.
+        if not former or len(set(former)) != len(former):
+            problems.append(("label", "former_labels is empty or names a label "
+                                      "twice"))
+        for name in former:
+            match = CF.LABEL_RE.match(name) if isinstance(name, str) else None
+            if not match:
+                problems.append(("label", f"former label {name!r} is not of the "
+                                          f"form n.k.d.x"))
+                continue
+            fn, fk, fd, fletters = match.groups()
+            if (int(fn), int(fk)) != (row["n"], row["k"]) or int(fd) == row["d"]:
+                problems.append(("label", f"former label {name!r} does not name "
+                                          f"this row's n={row['n']}, k={row['k']} "
+                                          f"at another distance"))
+            if CF.label_letters(CF.label_index(fletters)) != fletters:
+                problems.append(("label", f"former label {name!r} is not the "
+                                          f"canonical spelling of its letter code"))
     return problems
 
 
 def duplicate_label_problems(rows):
-    """Two rows sharing a ``catalog_label``: a label names exactly one class."""
+    """Two rows sharing a label: a label names exactly one class, and that
+    includes a row's ``former_labels``, which are never handed out again."""
     seen, problems = {}, []
     for index, row in enumerate(rows, 1):
-        label = row.get("catalog_label") if isinstance(row, dict) else None
-        if label in seen:
-            problems.append(("label", f"rows {seen[label]} and {index} are both "
-                                      f"labelled {label!r}"))
-        elif label is not None:
-            seen[label] = index
+        if not isinstance(row, dict):
+            continue
+        names = [row.get("catalog_label")] + [
+            name for name in (row.get("former_labels") or [])
+            if isinstance(row.get("former_labels"), list)]
+        for label in names:
+            if not isinstance(label, str):
+                continue
+            if label in seen and seen[label] != index:
+                problems.append(("label", f"rows {seen[label]} and {index} both "
+                                          f"use the label {label!r}"))
+            elif label not in seen:
+                seen[label] = index
     return problems
 
 
@@ -1345,33 +1416,196 @@ def construction_problems(row):
     return problems
 
 
-def certificate_problems(row):
-    """A source's distance certificate that is incomplete or says nothing true.
+#: The keys of one ``d_certified_evidence`` entry.
+EVIDENCE_ENTRY_KEYS = ("file", "method", "tool")
+_EVIDENCE_CACHE: dict = {}
 
-    The certificate is not re-derived -- it exists because the sweep that would
-    re-derive it is out of reach -- so what is checked is its consistency with
-    what WAS proved here: the three fields come together; the certificate is
-    stronger than the proved floor ``d`` (otherwise it is noise); the row's own
-    distance is not already exact (an exact ``d`` leaves nothing to certify);
-    and it does not exceed a proved upper bound ``d_upper``.
+
+def evidence_records(path, root=None):
+    """``(records, problem)`` for one evidence file named by a certificate.
+
+    ``path`` is relative to the repository root (``root``, by default this
+    repository) and must stay inside it.  The file is JSON: an object with a
+    ``records`` list, and optionally a file-wide ``method`` and ``tool`` that a
+    record without its own inherits.  Each record names the circuit by
+    ``n``, ``k``, ``N`` and ``columns_sha256`` (`constructions.digest` of its
+    columns) and states ``lower_bound``; it may carry a ``witness``.  The
+    records are returned with ``method`` and ``tool`` filled in, or ``None``
+    and a phrase saying why the file is not usable.
+    """
+    root = Path(root) if root is not None else REPO
+    if not isinstance(path, str) or not path or Path(path).is_absolute() \
+            or ".." in Path(path).parts:
+        return None, f"evidence path {path!r} is not a path inside the repository"
+    full = (root / path).resolve()
+    try:
+        full.relative_to(root.resolve())
+    except ValueError:
+        return None, f"evidence path {path!r} leaves the repository"
+    key = str(full)
+    if key not in _EVIDENCE_CACHE:
+        try:
+            blob = json.loads(full.read_text(encoding="utf-8"))
+        except FileNotFoundError:
+            return None, f"evidence file {path} does not exist"
+        except (OSError, ValueError) as error:
+            return None, f"evidence file {path} cannot be read: {error}"
+        if not isinstance(blob, dict) or not isinstance(blob.get("records"), list):
+            return None, f"evidence file {path} has no records list"
+        records = []
+        for position, record in enumerate(blob["records"]):
+            if not isinstance(record, dict):
+                return None, f"evidence file {path} record {position} is not an object"
+            record = {"method": blob.get("method"), "tool": blob.get("tool"), **record}
+            wrong = [name for name, ok in (
+                ("n", _integer(record.get("n"))), ("k", _integer(record.get("k"))),
+                ("N", _integer(record.get("N"))),
+                ("lower_bound", _integer(record.get("lower_bound"))),
+                ("columns_sha256", isinstance(record.get("columns_sha256"), str)),
+                ("method", record.get("method") in CF.EVIDENCE_METHODS),
+                ("tool", isinstance(record.get("tool"), str) and record.get("tool")))
+                if not ok]
+            if wrong:
+                return None, (f"evidence file {path} record {position} has no "
+                              f"usable {', '.join(wrong)}")
+            records.append(record)
+        _EVIDENCE_CACHE[key] = records
+    return _EVIDENCE_CACHE[key], None
+
+
+def evidence_problems(row, root=None):
+    """The ``d_certified_evidence`` of a row, checked against its files.
+
+    Every entry names a file, a method and a tool; the file must hold a record
+    of that method and tool for THIS circuit -- the same ``n``, ``k``, ``N``
+    and the SHA-256 of the same columns -- and the strongest lower bound those
+    records state must be exactly ``d_certified``.  A record's witness, where
+    it has one, must not be lighter than ``d_certified``: that would refute
+    the bound it sits beside.
+    """
+    entries = row.get("d_certified_evidence")
+    if not isinstance(entries, list) or not entries:
+        return [("certificate", "d_certified_evidence is not a non-empty list")]
+    problems, bounds, seen = [], [], set()
+    digest = K.digest(row["columns"])
+    for position, entry in enumerate(entries):
+        if not isinstance(entry, dict) or set(entry) != set(EVIDENCE_ENTRY_KEYS) \
+                or not all(isinstance(entry[name], str) and entry[name]
+                           for name in EVIDENCE_ENTRY_KEYS):
+            problems.append(("certificate",
+                             f"d_certified_evidence[{position}] is not an "
+                             f"object of the strings {', '.join(EVIDENCE_ENTRY_KEYS)}"))
+            continue
+        if entry["method"] not in CF.EVIDENCE_METHODS:
+            problems.append(("certificate",
+                             f"d_certified_evidence[{position}] names the method "
+                             f"{entry['method']!r}, not one of "
+                             f"{', '.join(CF.EVIDENCE_METHODS)}"))
+            continue
+        identity = tuple(entry[name] for name in EVIDENCE_ENTRY_KEYS)
+        if identity in seen:
+            problems.append(("certificate",
+                             f"d_certified_evidence names {identity} twice"))
+            continue
+        seen.add(identity)
+        records, wrong = evidence_records(entry["file"], root)
+        if wrong:
+            problems.append(("certificate", wrong))
+            continue
+        mine = [record for record in records
+                if record["columns_sha256"] == digest
+                and record["method"] == entry["method"]
+                and record["tool"] == entry["tool"]]
+        if not mine:
+            problems.append(("certificate",
+                             f"{entry['file']} holds no {entry['method']} record "
+                             f"by {entry['tool']!r} for this circuit (columns "
+                             f"SHA-256 {digest[:16]}...)"))
+            continue
+        for record in mine:
+            if (record["n"], record["k"], record["N"]) \
+                    != (row["n"], row["k"], row["N"]):
+                problems.append(("certificate",
+                                 f"{entry['file']} binds this circuit's digest "
+                                 f"to n, k, N = {record['n']}, {record['k']}, "
+                                 f"{record['N']}"))
+            witness = record.get("witness")
+            if isinstance(witness, list) and witness \
+                    and len(set(witness)) < row["d_certified"]:
+                problems.append(("certificate",
+                                 f"{entry['file']} records a fault of weight "
+                                 f"{len(set(witness))} for this circuit, below "
+                                 f"d_certified={row['d_certified']}"))
+            bounds.append(record["lower_bound"])
+    if bounds and max(bounds) != row["d_certified"]:
+        problems.append(("certificate",
+                         f"the evidence proves d >= {max(bounds)}, but the row "
+                         f"says d_certified={row['d_certified']}"))
+    return problems
+
+
+def certificate_problems(row, evidence_root=None):
+    """A distance certificate that is incomplete or says nothing true.
+
+    Two kinds, told apart by ``d_sweep_floor``.
+
+    * **The row's ``d`` rests on it** (``d_sweep_floor`` present).  Then
+      ``d_certified`` is ``d``; the sweep's own floor ``d_sweep_floor`` is
+      at least 2 and below ``d`` (a certificate at or below what the sweep
+      proves is no certificate); ``d_certified_is_exact`` is ``d_is_exact``;
+      and the evidence files exist, bind the bound to this circuit, and state
+      exactly that bound (`evidence_problems`).  `confirm_distance` then
+      sweeps below ``d_sweep_floor`` and re-checks the witness at ``d``.
+    * **It sits beside ``d``** (no ``d_sweep_floor``): a certificate this
+      repository cannot check, kept as a statement.  It must be stronger than
+      the floor ``d`` (otherwise it is noise), and the row's ``d`` must not
+      already be exact (an exact ``d`` leaves nothing to certify).
+
+    Either way the three fields come together, the certificate names its
+    source, and it does not exceed a proved upper bound ``d_upper``.
     """
     present = [name for name in CERTIFICATE_FIELDS if name in row]
     if not present:
-        return []
+        stray = [name for name in ("d_sweep_floor", "d_certified_evidence")
+                 if name in row]
+        return [("certificate", f"{', '.join(stray)} on a row with no "
+                                f"certificate")] if stray else []
     if len(present) != len(CERTIFICATE_FIELDS):
         missing = [name for name in CERTIFICATE_FIELDS if name not in row]
         return [("certificate", f"a distance certificate without "
                                 f"{', '.join(missing)}")]
     problems = []
-    if row["d_is_exact"]:
-        problems.append(("certificate",
-                         f"d={row['d']} is proved exact here, so a certificate "
-                         f"d_certified={row['d_certified']} is either redundant "
-                         f"or contradicts it"))
-    elif row["d_certified"] <= row["d"]:
-        problems.append(("certificate",
-                         f"d_certified={row['d_certified']} is not stronger "
-                         f"than the proved floor d>={row['d']}"))
+    if CF.rests_on_certificate(row):
+        floor = row["d_sweep_floor"]
+        if row["d_certified"] != row["d"]:
+            problems.append(("certificate",
+                             f"the row's d rests on its certificate "
+                             f"(d_sweep_floor={floor}), so d_certified="
+                             f"{row['d_certified']} must equal d={row['d']}"))
+        if floor < 2 or floor >= row["d"]:
+            problems.append(("certificate",
+                             f"d_sweep_floor={floor} is not a floor from 2 up to "
+                             f"below d={row['d']}: a certificate no stronger "
+                             f"than the sweep certifies nothing"))
+        if row["d_certified_is_exact"] != row["d_is_exact"]:
+            problems.append(("certificate",
+                             f"d_certified_is_exact={row['d_certified_is_exact']} "
+                             f"but d_is_exact={row['d_is_exact']}, on a row whose "
+                             f"d is the certificate's"))
+        if "d_certified_evidence" not in row:
+            problems.append(("certificate",
+                             "the row's d rests on a certificate with no "
+                             "d_certified_evidence"))
+    else:
+        if row["d_is_exact"]:
+            problems.append(("certificate",
+                             f"d={row['d']} is proved exact here, so a "
+                             f"certificate d_certified={row['d_certified']} is "
+                             f"either redundant or contradicts it"))
+        elif row["d_certified"] <= row["d"]:
+            problems.append(("certificate",
+                             f"d_certified={row['d_certified']} is not stronger "
+                             f"than the proved floor d>={row['d']}"))
     upper = row.get("d_upper")
     if isinstance(upper, int) and row["d_certified"] > upper:
         problems.append(("certificate",
@@ -1379,6 +1613,8 @@ def certificate_problems(row):
                          f"upper bound d_upper={upper}"))
     if not row["d_certified_source"].strip():
         problems.append(("certificate", "the certificate names no source"))
+    if "d_certified_evidence" in row:
+        problems += evidence_problems(row, evidence_root)
     return problems
 
 
@@ -1774,7 +2010,9 @@ def main(argv=None):
         return 1
     print(f"\nPASS: {checked} rows re-derived from their columns in "
           f"{elapsed:.1f}s -- gate, check parities, distance (absence proved "
-          f"below d, presence witnessed at it), output width modulo the check "
+          f"below d by the sweep, or below the sweep floor with a certificate "
+          f"bound to its evidence file above it, presence witnessed at d), "
+          f"output width modulo the check "
           f"span, spectator and pseudo-output freedom, no check wire whose "
           f"syndrome bit the others already decide, T-count and reduced "
           f"degree where computable, the Clifford correction with the "

@@ -22,7 +22,9 @@ re-derivation, so this list is also the list of things that get checked.
   ``n``          number of columns (pi/4 parity rotations)
   ``k``          output wires; they are ``0..k-1``, wires ``k..N-1`` are checks
   ``N``          ambient wires -- equal to the largest qubit index used, plus 1
-  ``d``          verified fault distance: exact if ``d_is_exact``, else a FLOOR
+  ``d``          verified fault distance: exact if ``d_is_exact``, else a FLOOR.
+                 The lower bound is this folder's own sweep, or, on a row that
+                 carries ``d_sweep_floor``, a certificate (see below)
   ``level``      3 throughout this catalogue (pi/4 rotations)
   ``columns``    the circuit: one qubit-support list per rotation
   ``gate``       the deposited output gate, as a monomial string
@@ -32,7 +34,9 @@ re-derivation, so this list is also the list of things that get checked.
                  It names the stored FRAME; the class is wider (see below)
   ``sk_canonical_frame``  whether the columns are shown in that canonical frame
   ``sk_fingerprint``      a permutation-invariant fingerprint of the gate
-  ``d_is_exact``  ``true`` iff a clean sweep below ``d`` met a witness AT ``d``
+  ``d_is_exact``  ``true`` iff a proved lower bound ``d`` met a witness AT ``d``:
+                 the lower bound is a clean sweep below ``d``, or the
+                 certificate the row's ``d`` rests on
   ``d_upper``     the weight of an explicit harmful fault, or ``null``
   ``d_witness``   that fault, as column indices
   ``A_d``         how many faults of weight ``d`` are accepted and harmful --
@@ -60,17 +64,47 @@ re-derivation, so this list is also the list of things that get checked.
   ``relabelled_into_canonical_frame``  whether the columns were permuted on the
                  way in, so a reader can tell the frame apart from the original
   ``catalog_label``  the row's permanent public name, ``n.k.d.x`` -- for
-                 example ``15.1.3.a`` -- with ``d`` the distance proved here and
+                 example ``15.1.3.a`` -- with ``d`` the row's distance and
                  ``x`` a letter code numbering the classes at that ``(n, k, d)``
                  in the order they entered the catalogue (``a`` .. ``z``, then
                  ``ba``, ``bb``, ... as LMFDB does).  Assigned once by
                  `merge_results.py`, never changed by an improvement, never
                  reused; `verify_catalog.label_problems` checks the format and
                  the uniqueness.  It is identity, not data: nothing about the
-                 circuit follows from it
+                 circuit follows from it.  It changes only when the row's
+                 ``d`` does (a certificate adopted as the distance), and then
+                 the old label is kept in ``former_labels``
   ``citations``  the works this class is credited to, as keys of the header's
                  ``references`` map.  Provenance like ``sources``: the keys must
                  resolve, and nothing about the circuit follows from them
+
+THE DISTANCE AND ITS CERTIFICATES
+---------------------------------
+``d`` is a proved lower bound, and ``d_is_exact`` says whether a stored fault
+of that weight pins it.  The lower bound is one of two things.
+
+  * The SWEEP: `verify_catalog` enumerates every fault of weight ``1..d-1``
+    and finds none harmful.  This is every row without ``d_sweep_floor``.
+  * A CERTIFICATE the catalogue is sure of -- a theorem whose hypotheses this
+    repository checks, or an exhaustive search by another program -- where
+    the sweep is out of reach.  Such a row carries
+
+      ``d_sweep_floor``  the floor the sweep itself proves: every weight below
+                         it is swept clean here, and ``d_sweep_floor < d``
+      ``d_certified``    equal to ``d``
+      ``d_certified_is_exact``  equal to ``d_is_exact``
+      ``d_certified_source``    who proved it, in words
+      ``d_certified_evidence``  ``[{"file", "method", "tool"}, ...]``: an
+                         evidence file in this repository (a path from its
+                         root), ``method`` ``theorem`` or ``exhaustive
+                         search``, and the tool or theorem.  The file holds a
+                         record bound to this circuit by the SHA-256 of its
+                         columns, with the lower bound
+
+A row may also carry a certificate its ``d`` does NOT rest on, because the
+repository cannot check it: then ``d_certified > d``, there is no
+``d_sweep_floor``, and ``d`` is the sweep's floor as before.
+``verify_catalog.certificate_problems`` tells the two apart and checks each.
 
 THE LARGE FILE
 --------------
@@ -158,17 +192,23 @@ REQUIRED_FIELDS = (
 #: Fields a row may carry.  Anything outside the two tuples is a field nobody
 #: documented, which is how a stale value survives a refactor.
 #: ``d_certified``, ``d_certified_is_exact`` and ``d_certified_source`` carry
-#: a distance a SOURCE certifies that this folder could not re-measure, which
-#: happens at the lengths where the sweep below ``d`` is out of reach.  The
-#: certificate is either an exact value or itself only a lower bound, and
-#: ``d_certified_is_exact`` says which, exactly as ``d_is_exact`` does for
-#: ``d``.  They never replace ``d``: ``d`` stays what was proved here, and a
-#: consumer that wants only what this folder proved can ignore all three.
-#: `verify_catalog.certificate_problems` checks that they come together and
-#: that a certificate says more than, and nothing against, what was proved.
+#: a distance a theorem or another program certifies, at the lengths where the
+#: sweep below ``d`` is out of reach.  The certificate is either an exact value
+#: or itself only a lower bound, and ``d_certified_is_exact`` says which,
+#: exactly as ``d_is_exact`` does for ``d``.  Since 2026-11-07 a certificate
+#: the catalogue is sure of IS the row's ``d`` (see "THE DISTANCE AND ITS
+#: CERTIFICATES" above): such a row also carries ``d_sweep_floor``, the floor
+#: the sweep proves, and ``d_certified_evidence``, the evidence files.  A
+#: consumer that wants only what the sweep proved reads ``d_sweep_floor`` where
+#: it is present and ``d`` elsewhere.  ``former_labels`` lists the labels a row
+#: had before its ``d`` changed, so that old citations of them still resolve.
+#: `verify_catalog.certificate_problems` checks that the fields come together,
+#: that the evidence exists and is bound to the circuit, and that a
+#: certificate says nothing against what the sweep proved.
 OPTIONAL_FIELDS = ("sk_key_note", "t_count_note", "poly_degree_note",
                    "columns_note", "dedup_note",
-                   "d_certified", "d_certified_is_exact", "d_certified_source")
+                   "d_certified", "d_certified_is_exact", "d_certified_source",
+                   "d_certified_evidence", "d_sweep_floor", "former_labels")
 
 #: Where a row's circuit is stored, not what it is: carried by exactly the rows
 #: of the large file (see the module docstring), both or neither.  Kept apart
@@ -205,7 +245,8 @@ FIELD_TYPES = {
     "sk_key_note": "str", "t_count_note": "str", "poly_degree_note": "str",
     "columns_note": "str", "dedup_note": "str",
     "d_certified": "int", "d_certified_is_exact": "bool",
-    "d_certified_source": "str",
+    "d_certified_source": "str", "d_certified_evidence": ["dict"],
+    "d_sweep_floor": "int", "former_labels": ["str"],
     "d_is_exact": "bool", "sk_canonical_frame": "bool",
     "relabelled_into_canonical_frame": "bool",
     "columns": [["int"]], "sk_key": [["int"]],
@@ -246,10 +287,15 @@ def next_label(rows, n: int, k: int, d: int) -> str:
     """The first unused label at ``(n, k, d)``: one past the highest in use.
 
     Rows are never deleted, so "one past the highest" is also "never used
-    before" -- a label, once given, is not handed out again.
+    before" -- a label, once given, is not handed out again.  That includes
+    the labels a row carried before its distance changed (``former_labels``):
+    ``2017.1.3.a`` stays the name of the row that had it, so a new
+    ``[[2017,1,3]]`` class is ``2017.1.3.b``.
     """
-    used = [label_index(m.group(4)) for row in rows
-            for m in [LABEL_RE.match(str(row.get("catalog_label", "")))]
+    names = [str(row.get("catalog_label", "")) for row in rows] + [
+        str(name) for row in rows for name in (row.get("former_labels") or [])]
+    used = [label_index(m.group(4)) for name in names
+            for m in [LABEL_RE.match(name)]
             if m and (int(m.group(1)), int(m.group(2)), int(m.group(3))) == (n, k, d)]
     return f"{n}.{k}.{d}.{label_letters(max(used) + 1 if used else 0)}"
 #: Fields whose value may be ``null`` INSTEAD of the shape above: a row with no
@@ -726,6 +772,27 @@ T_POWER = {3: "T³", 5: "T⁵", 7: "T†"}
 SPELL_OUT = 12
 
 
+#: How a certificate's evidence proves its bound: the two methods a row's
+#: ``d`` may rest on besides the sweep.
+EVIDENCE_METHODS = ("theorem", "exhaustive search")
+
+
+def rests_on_certificate(row) -> bool:
+    """Whether the row's ``d`` is a certificate's bound rather than the sweep's."""
+    return isinstance(row, dict) and "d_sweep_floor" in row
+
+
+def distance_basis(row) -> str:
+    """How the lower bound in ``d`` is proved: ``sweep``, ``theorem``,
+    ``exhaustive search``, or ``theorem and exhaustive search``."""
+    if not rests_on_certificate(row):
+        return "sweep"
+    methods = {entry.get("method") for entry in row.get("d_certified_evidence") or []
+               if isinstance(entry, dict)}
+    named = [method for method in EVIDENCE_METHODS if method in methods]
+    return " and ".join(named) if named else "certificate"
+
+
 def correction_kind(row) -> str:
     """``none``, ``T-powers`` or ``S, CZ`` -- the table's Clifford column."""
     corr = row["clifford_correction"]
@@ -870,9 +937,15 @@ def render_markdown(payload: dict) -> str:
     A("phase-polynomial degree. Both are exact minimisations over groups that")
     A("stop being finite in practice past `k = 6`, so above that they are blank")
     A("rather than estimated. A `d` marked `≥` is a proved floor, not a")
-    A("measured distance. `cert d` is a distance the row's source certifies")
-    A("where this folder could only prove the floor; it is not re-measured")
-    A("here, and a `≥` there means the source certifies only a lower bound.")
+    A("measured distance. `d by` says how the lower bound in `d` is proved:")
+    A("`sweep`, the exhaustive fault sweep of `verify_catalog.py`; otherwise a")
+    A("certificate that sweep cannot reach, a `theorem` whose hypotheses this")
+    A("repository checks or an `exhaustive search` by another program, with")
+    A("its evidence file in this repository. On those rows the sweep proves")
+    A("`d ≥ d_sweep_floor`, which the row also states. `cert d` is a certified")
+    A("distance; a `≥` there means a lower bound. Where `cert d` is larger")
+    A("than `d`, the certificate rests on a hypothesis this repository does")
+    A("not check, and `d` does not use it.")
     A("")
     references = payload.get("references") or {}
 
@@ -903,9 +976,9 @@ def render_markdown(payload: dict) -> str:
     A("the length-54 classification and/or the symmetry-and-AI report. Full")
     A("entries are under [References](#references).")
     A("")
-    A("| # | label | `[[n,k,d]]` | cert d | N | gate | T | deg | Clifford | "
+    A("| # | label | `[[n,k,d]]` | d by | cert d | N | gate | T | deg | Clifford | "
       "discovery | regime(s) | citation |")
-    A("|---:|---|---|---:|---:|---|---:|---:|---|---|---|---|")
+    A("|---:|---|---|---|---:|---:|---|---:|---:|---|---|---|---|")
     for index, row in enumerate(rows_, 1):
         t = "—" if row["t_count"] is None else row["t_count"]
         degree = "—" if row["poly_degree"] is None else row["poly_degree"]
@@ -914,7 +987,8 @@ def render_markdown(payload: dict) -> str:
         cert = ("—" if row.get("d_certified") is None
                 else row["d_certified"] if row.get("d_certified_is_exact")
                 else f"≥{row['d_certified']}")
-        A(f"| {index} | `{row['catalog_label']}` | `[[{row['n']},{row['k']},{d}]]` | {cert} | "
+        A(f"| {index} | `{row['catalog_label']}` | `[[{row['n']},{row['k']},{d}]]` | "
+          f"{distance_basis(row)} | {cert} | "
           f"{row['N']} | "
           f"`{gate}` | {t} | {degree} | {correction_kind(row)} | {row['discovery']} | "
           f"{'; '.join(row['regimes'])} | {cite(row)} |")
@@ -964,13 +1038,27 @@ def render_markdown(payload: dict) -> str:
               f"upper bound is the fault on columns {row['d_witness']}")
         else:
             A(f"- distance: proved `d >= {row['d']}`")
+        if rests_on_certificate(row):
+            A(f"- the lower bound `d >= {row['d']}` is certified "
+              f"({distance_basis(row)}); the sweep here proves "
+              f"`d >= {row['d_sweep_floor']}`"
+              + (f"; formerly `{'`, `'.join(row['former_labels'])}`"
+                 if row.get("former_labels") else ""))
+        elif row.get("former_labels"):
+            A(f"- formerly `{'`, `'.join(row['former_labels'])}`")
         if row["A_d"] is not None:
             A(f"- leading error coefficient: `A_{row['d']} = {row['A_d']}` "
               f"accepted harmful faults of weight {row['d']}")
         if row.get("d_certified") is not None:
             relation = "=" if row.get("d_certified_is_exact") else ">="
             A(f"- certified distance: `d {relation} {row['d_certified']}`, "
-              f"from {row['d_certified_source']}; not re-measured here")
+              f"from {row['d_certified_source']}; "
+              + ("the evidence is in "
+                 + ", ".join(f"`{name}`" for name in dict.fromkeys(
+                     entry["file"] for entry
+                     in row.get("d_certified_evidence") or []))
+                 if rests_on_certificate(row) else
+                 "not used for `d`, which is what the sweep here proves"))
         A(f"- Clifford correction, every rotation a `T`: "
           f"{correction_text(row['clifford_correction'])}")
         powers = row["rotation_powers"]

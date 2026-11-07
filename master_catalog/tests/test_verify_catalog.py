@@ -1132,6 +1132,174 @@ class TestDistanceCertificates(unittest.TestCase):
                                  f"{row['d_certified_source']}", text)
 
 
+class TestCertifiedDistance(unittest.TestCase):
+    """A row whose ``d`` rests on a certificate (``d_sweep_floor`` present).
+
+    Built on the 15-to-1, which the sweep proves exact at 3: here it says that
+    the sweep proves only ``d >= 2`` and that an evidence file in a scratch
+    repository certifies ``d >= 3``.  That row is true, so it must pass; each
+    test then breaks one thing and wants the reason back.
+    """
+
+    def setUp(self):
+        import constructions as K
+        self.K = K
+        self.row = copy.deepcopy(next(r for r in CF.load()["factories"]
+                                      if r["catalog_label"] == "15.1.3.a"))
+        self.root = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.root)
+        self.addCleanup(VC._EVIDENCE_CACHE.clear)
+        self.write_evidence(lower_bound=3)
+        self.row.update(d_sweep_floor=2, d_certified=3, d_certified_is_exact=True,
+                        d_certified_source="a test certificate",
+                        d_certified_evidence=[{"file": "evidence/cert.json",
+                                               "method": "exhaustive search",
+                                               "tool": "a test tool"}])
+
+    def write_evidence(self, lower_bound, columns=None, witness=None):
+        VC._EVIDENCE_CACHE.clear()
+        columns = columns if columns is not None else self.row["columns"]
+        path = self.root / "evidence" / "cert.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps({
+            "method": "exhaustive search", "tool": "a test tool",
+            "records": [{"label": "15.1.3.a", "n": self.row["n"],
+                         "k": self.row["k"], "N": self.row["N"],
+                         "columns_sha256": self.K.digest(columns),
+                         "lower_bound": lower_bound, "witness": witness}]}),
+            encoding="utf-8")
+
+    def problems(self):
+        _facts, problems = VC.verify_row(self.row, evidence_root=self.root)
+        return problems
+
+    def test_a_true_certified_row_passes(self):
+        self.assertEqual(self.problems(), [])
+        self.assertEqual(CF.distance_basis(self.row), "exhaustive search")
+
+    def test_a_wrong_witness_is_refused(self):
+        wrong = next(list(c) for c in itertools.combinations(range(15), 3)
+                     if not VC.literal_harmful(self.row["columns"], 1, c))
+        self.row["d_witness"] = wrong
+        self.assertIn("distance-witness", kinds(self.problems()))
+
+    def test_a_missing_certificate_is_refused(self):
+        for name in VC.CERTIFICATE_FIELDS:
+            self.row.pop(name)
+        self.assertIn("certificate", kinds(self.problems()))
+
+    def test_a_certificate_at_the_sweep_floor_is_refused(self):
+        self.row["d_sweep_floor"] = 3
+        self.assertIn("certificate", kinds(self.problems()))
+
+    def test_a_certificate_other_than_d_is_refused(self):
+        self.row["d_certified"] = 4
+        self.write_evidence(lower_bound=4)
+        self.assertIn("certificate", kinds(self.problems()))
+
+    def test_a_missing_evidence_file_is_refused(self):
+        self.row["d_certified_evidence"][0]["file"] = "evidence/none.json"
+        self.assertIn("certificate", kinds(self.problems()))
+
+    def test_no_evidence_at_all_is_refused(self):
+        self.row.pop("d_certified_evidence")
+        self.assertIn("certificate", kinds(self.problems()))
+
+    def test_evidence_for_another_circuit_is_refused(self):
+        other = [list(c) for c in self.row["columns"]]
+        other[0], other[1] = other[1], other[0]
+        self.write_evidence(lower_bound=3, columns=other)
+        self.assertIn("certificate", kinds(self.problems()))
+
+    def test_evidence_below_the_certified_bound_is_refused(self):
+        self.write_evidence(lower_bound=2)
+        self.assertIn("certificate", kinds(self.problems()))
+
+    def test_evidence_with_a_lighter_fault_is_refused(self):
+        self.write_evidence(lower_bound=3, witness=[0, 1])
+        self.assertIn("certificate", kinds(self.problems()))
+
+    def test_evidence_of_another_tool_is_not_this_certificate(self):
+        self.row["d_certified_evidence"][0]["tool"] = "another tool"
+        self.assertIn("certificate", kinds(self.problems()))
+
+    def test_an_unknown_method_is_refused(self):
+        self.row["d_certified_evidence"][0]["method"] = "belief"
+        self.assertIn("certificate", kinds(self.problems()))
+
+    def test_an_evidence_path_outside_the_repository_is_refused(self):
+        for path in ("../cert.json", "/tmp/cert.json"):
+            with self.subTest(path=path):
+                self.row["d_certified_evidence"][0]["file"] = path
+                self.assertIn("certificate", kinds(self.problems()))
+
+    def test_the_exactness_flags_must_agree(self):
+        self.row["d_certified_is_exact"] = False
+        self.assertIn("certificate", kinds(self.problems()))
+
+    def test_the_sweep_below_the_floor_still_catches_a_lighter_fault(self):
+        # The 15-to-1 has a harmful fault of weight 3.  A certificate claiming
+        # d >= 5 over a sweep floor of 4 is caught by the sweep itself, even
+        # though its evidence file says what the row says.
+        self.row.update(d=5, d_sweep_floor=4, d_certified=5, d_upper=None,
+                        d_is_exact=False, d_certified_is_exact=False,
+                        d_witness=None, A_d=None, catalog_label="15.1.5.a")
+        self.write_evidence(lower_bound=5)
+        self.assertIn("distance-inflated", kinds(self.problems()))
+
+    def test_a_sweep_floor_without_a_certificate_is_refused(self):
+        for name in VC.CERTIFICATE_FIELDS + ("d_certified_evidence",):
+            self.row.pop(name)
+        self.assertIn("certificate", kinds(VC.certificate_problems(self.row)))
+
+    def test_an_unadopted_certificate_on_an_exact_row_is_still_refused(self):
+        self.row.pop("d_sweep_floor")
+        self.row.pop("d_certified_evidence")
+        self.row["d_certified"] = 4
+        self.assertIn("certificate", kinds(VC.certificate_problems(self.row)))
+
+    def test_the_literal_xor_agrees_with_faultcore(self):
+        witness = self.row["d_witness"]
+        circuit = FC.Circuit(self.row["columns"], 1, self.row["N"])
+        self.assertTrue(VC.literal_harmful(self.row["columns"], 1, witness))
+        self.assertTrue(circuit.harmful(witness))
+        self.assertFalse(VC.literal_harmful(self.row["columns"], 1, witness[:2]))
+
+    def test_the_markdown_says_how_d_is_proved(self):
+        text = CF.render_markdown(payload_with(self.row))
+        self.assertIn("| exhaustive search |", text)
+        self.assertIn("the sweep here proves `d >= 2`", text)
+        self.assertIn("the evidence is in `evidence/cert.json`", text)
+
+
+class TestFormerLabels(unittest.TestCase):
+    """A row whose distance changed keeps its old label, and nobody gets it."""
+
+    def setUp(self):
+        self.row = copy.deepcopy(next(r for r in CF.load()["factories"]
+                                      if r["catalog_label"] == "15.1.3.a"))
+
+    def test_a_former_label_at_another_distance_passes(self):
+        self.row["former_labels"] = ["15.1.2.a"]
+        self.assertEqual(VC.label_problems(self.row), [])
+
+    def test_a_former_label_at_the_same_distance_is_refused(self):
+        self.row["former_labels"] = ["15.1.3.b"]
+        self.assertIn("label", kinds(VC.label_problems(self.row)))
+
+    def test_a_former_label_of_other_parameters_is_refused(self):
+        self.row["former_labels"] = ["16.1.2.a"]
+        self.assertIn("label", kinds(VC.label_problems(self.row)))
+
+    def test_a_former_label_is_never_handed_out_again(self):
+        self.row["former_labels"] = ["15.1.2.a"]
+        self.assertEqual(CF.next_label([self.row], 15, 1, 2), "15.1.2.b")
+        other = copy.deepcopy(self.row)
+        other.pop("former_labels")
+        other["catalog_label"] = "15.1.2.a"
+        self.assertIn("label", kinds(VC.duplicate_label_problems([self.row, other])))
+
+
 class TestChangedRows(unittest.TestCase):
     """`--changed`: re-verify what a merge changed, and nothing it did not."""
 
