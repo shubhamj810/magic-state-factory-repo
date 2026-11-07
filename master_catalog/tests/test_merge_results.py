@@ -48,7 +48,9 @@ and no 15-column check-only gadget on five wires escapes it -- an exhaustive
 sweep of the 25 parity conditions over all 31 subsets returns 26 such gadgets
 and every one is dependent, while the 16-column ones are all independent.
 """
+import contextlib
 import copy
+import io
 import itertools
 import json
 import shutil
@@ -418,8 +420,10 @@ class TestLifecycle(unittest.TestCase):
         and `verify_catalog` rightly refuses it.  `NOTE_FIELDS` must therefore
         list every optional note, not the three it happened to start with.
         """
+        # every optional field but former_labels, which names the label an
+        # improvement keeps rather than the circuit it replaces
         self.assertEqual(set(MR.NOTE_FIELDS),
-                         {f for f in CF.OPTIONAL_FIELDS},
+                         {f for f in CF.OPTIONAL_FIELDS} - {"former_labels"},
                          "NOTE_FIELDS must cover every optional note field")
         self.merge({"k": 1, "N": 10, "columns": narrow_46()})
         incumbent, = self.rows()
@@ -429,6 +433,13 @@ class TestLifecycle(unittest.TestCase):
         kept, = self.rows()
         self.assertNotIn("columns_note", kept,
                          "the improvement must clear the stale note")
+        kept["former_labels"] = ["46.1.2.a"]
+        kept["N"] = 14
+        kept["columns_note"] = "one redundant check wire deleted"
+        self.merge({"k": 1, "N": 10, "columns": narrow_46()})
+        again, = self.rows()
+        self.assertEqual(again["former_labels"], ["46.1.2.a"],
+                         "an improvement keeps the labels the row had")
         self.assertEqual(VC.verify_row(kept)[1], [])
 
     def test_an_undecided_candidate_is_KEPT_and_says_what_is_unproved(self):
@@ -571,6 +582,212 @@ class TestLifecycle(unittest.TestCase):
         self.assertEqual(row["columns"],
                          [sorted(c) for c in original["columns"]])
         self.assertEqual(VC.verify_row(row)[1], [])
+
+
+class TestRetentionWeighsTheErrorCoefficient(unittest.TestCase):
+    """Decision of 2026-11-07: a circuit replaces the stored one only if it is
+    no worse in both N and A_d and better in one; fewest wires when either
+    A_d is unknown."""
+
+    @staticmethod
+    def row(N=10, A=35, **changes):
+        base = {"N": N, "n": 46, "d": 3, "sk_key": [[0]], "A_d": A}
+        base.update(changes)
+        return base
+
+    def test_the_pareto_rule(self):
+        stored = self.row()
+        self.assertEqual(MR.replaces(self.row(N=9), stored), (True, None))
+        self.assertEqual(MR.replaces(self.row(A=30), stored), (True, None))
+        self.assertEqual(MR.replaces(self.row(N=9, A=30), stored), (True, None))
+        self.assertEqual(MR.replaces(self.row(), stored), (False, None))
+        self.assertEqual(MR.replaces(self.row(N=11, A=40), stored), (False, None))
+        for candidate in (self.row(N=9, A=40), self.row(N=11, A=30)):
+            better, note = MR.replaces(candidate, stored)
+            self.assertFalse(better)
+            self.assertTrue(note.startswith("not merged:"))
+
+    def test_an_unknown_coefficient_falls_back_to_fewest_wires(self):
+        stored = self.row(A=None)
+        self.assertEqual(MR.replaces(self.row(N=9, A=99), stored), (True, None))
+        self.assertEqual(MR.replaces(self.row(N=11, A=1), stored), (False, None))
+        self.assertEqual(MR.replaces(self.row(N=9, A=None), self.row()), (True, None))
+
+    def test_fewer_wires_with_a_larger_coefficient_is_not_merged_and_listed(self):
+        from unittest import mock
+        payload = empty_catalogue()
+        MR.merge(payload, [{"k": 1, "N": 14, "columns": wide_46()}], "test")
+        real = MR.EC.error_coefficient
+
+        def inflated(columns, k, N, w):
+            out = dict(real(columns, k, N, w))
+            out["count"] += 5
+            return out
+        with mock.patch.object(MR.EC, "error_coefficient", inflated), \
+                mock.patch.object(VC.EC, "error_coefficient", inflated):
+            verdicts = MR.merge(payload, [{"k": 1, "N": 10, "columns": narrow_46()}],
+                                "test")
+        self.assertEqual(verdicts_of(verdicts), ["duplicate"])
+        self.assertEqual(payload["factories"][0]["N"], 14)
+        self.assertTrue(verdicts[0][3].startswith("not merged:"))
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            MR.report(verdicts, 1, 1, False)
+        self.assertIn("not merged although", out.getvalue())
+
+
+class TestCertificateGuard(unittest.TestCase):
+    """An improvement may not lower a row's distance or drop its certificate."""
+
+    def test_the_toggles_2017_circuit_may_not_replace_2017_1_3_a(self):
+        """The 12-wire [[2017,1,3]] of the toggles search, exact at d = 3,
+        against the 511-wire row whose sweep reaches 3 and whose certificate
+        says d >= 25.  The fewest-wires rule alone would replace the row and
+        drop the certificate; the guard refuses, naming the row."""
+        fixture = json.loads((HERE / "data" / "toggles_2017_1_3.json")
+                             .read_text(encoding="utf-8"))
+        payload = CF.load()
+        incumbent = next(row for row in payload["factories"]
+                         if "2017.1.3.a" in [row["catalog_label"]]
+                         + (row.get("former_labels") or []))
+        payload["factories"] = [incumbent]
+        payload["n_classes"] = 1
+        before = copy.deepcopy(payload)
+        verdicts = MR.merge(payload, [{"k": fixture["k"], "N": fixture["N"],
+                                       "columns": fixture["columns"]}], "toggles")
+        if incumbent["d"] == 3:
+            # the certificate sits beside d: same key, so the guard decides
+            self.assertEqual(verdicts_of(verdicts), ["rejected"])
+            self.assertIn("certificate-guard", kinds(verdicts[0][3]))
+            self.assertTrue(any("2017.1.3.a" in detail
+                                for _kind, detail in verdicts[0][3]))
+            self.assertEqual(payload, before)
+        else:
+            # d rests on the certificate: another key, a class of its own
+            self.assertEqual(verdicts_of(verdicts), ["accepted"])
+            self.assertEqual(payload["factories"][0], before["factories"][0])
+
+    def test_the_guard_on_synthetic_rows(self):
+        stored = {"catalog_label": "46.1.3.a", "d": 3, "d_is_exact": False,
+                  "N": 14}
+        exact = {"d": 3, "d_is_exact": True, "N": 10}
+        self.assertIn("certificate-guard", kinds(MR.guard_problems(exact, stored)))
+        lower = {"d": 2, "d_is_exact": True, "N": 10}
+        self.assertIn("certificate-guard", kinds(MR.guard_problems(lower, stored)))
+        certified = dict(stored, d_is_exact=True, d_certified=3,
+                         d_certified_is_exact=True, d_certified_source="x")
+        self.assertIn("certificate-guard",
+                      kinds(MR.guard_problems(dict(exact), certified)))
+        matched = dict(exact, d_certified=3, d_certified_is_exact=True)
+        self.assertEqual(MR.guard_problems(matched, certified), [])
+        self.assertEqual(MR.guard_problems(
+            exact, dict(stored, d_is_exact=True)), [])
+
+
+class TestCertificateRecords(unittest.TestCase):
+    """A record may carry a certificate; its bound becomes the row's d.
+
+    The sweep proves the 15-to-1 exact at 3 by itself, so these tests make
+    the sweep weaker than it is (floor 2, no witness) and supply the bound 3
+    as a certificate with an evidence file in a scratch repository."""
+
+    def setUp(self):
+        from unittest import mock
+        import constructions as K
+        self.root = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.root)
+        self.addCleanup(VC._EVIDENCE_CACHE.clear)
+        VC._EVIDENCE_CACHE.clear()
+        patch = mock.patch.object(VC, "EVIDENCE_ROOT", self.root)
+        patch.start()
+        self.addCleanup(patch.stop)
+        self.columns = [sorted(c) for c in FIFTEEN_TO_ONE]
+        self.witness = next(list(c) for c in itertools.combinations(range(15), 3)
+                            if VC.literal_harmful(self.columns, 1, c))
+        self.write_evidence(3, K.digest(self.columns))
+        self.payload = empty_catalogue()
+        weak = {"d_at_least": 2, "d_exact": None, "d_upper": None, "witness": None}
+        measure = mock.patch.object(VC, "measure_distance",
+                                    lambda columns, k, N, budget=None: dict(weak))
+        measure.start()
+        self.addCleanup(measure.stop)
+
+    def write_evidence(self, bound, digest):
+        VC._EVIDENCE_CACHE.clear()
+        path = self.root / "evidence.json"
+        path.write_text(json.dumps({
+            "method": "exhaustive search", "tool": "a test tool",
+            "records": [{"n": 15, "k": 1, "N": 5, "columns_sha256": digest,
+                         "lower_bound": bound}]}), encoding="utf-8")
+
+    def record(self, **certificate):
+        cert = {"d": 3, "exact": True, "source": "a test certificate",
+                "witness": self.witness,
+                "evidence": [{"file": "evidence.json", "method": "exhaustive search",
+                              "tool": "a test tool"}]}
+        cert.update(certificate)
+        return {"k": 1, "N": 5, "columns": FIFTEEN_TO_ONE, "certificate": cert}
+
+    def test_a_certified_record_enters_at_its_bound(self):
+        verdicts = MR.merge(self.payload, [self.record()], "test")
+        self.assertEqual(verdicts_of(verdicts), ["accepted"])
+        row, = self.payload["factories"]
+        self.assertEqual((row["d"], row["d_is_exact"], row["d_sweep_floor"]), (3, True, 2))
+        self.assertEqual(row["d_certified"], 3)
+        self.assertEqual(row["catalog_label"], "15.1.3.a")
+        self.assertEqual(row["A_d"], 35)
+        self.assertEqual(VC.verify_row(row)[1], [])
+        # the same record again is its own row, whatever the sweep reaches
+        again = MR.merge(self.payload, [self.record()], "test")
+        self.assertEqual(verdicts_of(again), ["duplicate"])
+        bare = MR.merge(self.payload, [{"k": 1, "N": 5, "columns": FIFTEEN_TO_ONE}],
+                        "test")
+        self.assertEqual(verdicts_of(bare), ["rejected"])
+        self.assertIn("certificate-guard", kinds(bare[0][3]))
+
+    def test_a_missing_evidence_file_is_refused(self):
+        (self.root / "evidence.json").unlink()
+        verdicts = MR.merge(self.payload, [self.record()], "test")
+        self.assertEqual(verdicts_of(verdicts), ["rejected"])
+        self.assertIn("certificate", kinds(verdicts[0][3]))
+
+    def test_evidence_for_another_circuit_is_refused(self):
+        self.write_evidence(3, "0" * 64)
+        verdicts = MR.merge(self.payload, [self.record()], "test")
+        self.assertEqual(verdicts_of(verdicts), ["rejected"])
+        self.assertIn("SHA-256", verdicts[0][3][-1][1])
+
+    def test_a_wrong_witness_is_refused(self):
+        wrong = next(list(c) for c in itertools.combinations(range(15), 3)
+                     if not VC.literal_harmful(self.columns, 1, c))
+        verdicts = MR.merge(self.payload, [self.record(witness=wrong)], "test")
+        self.assertEqual(verdicts_of(verdicts), ["rejected"])
+
+    def test_an_exact_certificate_needs_its_witness(self):
+        record = self.record()
+        del record["certificate"]["witness"]
+        verdicts = MR.merge(self.payload, [record], "test")
+        self.assertEqual(verdicts_of(verdicts), ["rejected"])
+        self.assertIn("schema", kinds(verdicts[0][3]))
+
+    def test_a_certificate_the_sweep_refutes_is_refused(self):
+        from unittest import mock
+        found = {"d_at_least": 2, "d_exact": None, "d_upper": 3,
+                 "witness": self.witness}
+        with mock.patch.object(VC, "measure_distance",
+                               lambda columns, k, N, budget=None: dict(found)):
+            verdicts = MR.merge(self.payload, [self.record(d=5, exact=False,
+                                                           witness=None)], "test")
+        self.assertEqual(verdicts_of(verdicts), ["rejected"])
+        self.assertIn("certificate", kinds(verdicts[0][3]))
+
+    def test_a_floor_below_a_certified_row_of_its_class_is_refused(self):
+        MR.merge(self.payload, [self.record()], "test")
+        other = [sorted(c) for c in FIFTEEN_TO_ONE]
+        other = other[1:] + other[:1]                 # the same circuit, reordered
+        verdicts = MR.merge(self.payload, [{"k": 1, "N": 5, "columns": other}], "test")
+        self.assertEqual(verdicts_of(verdicts), ["rejected"])
+        self.assertTrue(any("15.1.3.a" in detail for _k, detail in verdicts[0][3]))
 
 
 class TestFindClass(unittest.TestCase):

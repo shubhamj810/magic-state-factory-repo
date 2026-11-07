@@ -91,9 +91,10 @@ on the 17- and 18-wire ones.
 
 **2102 distinct `(n, k, d, GL(k,2) gate)` classes**, 605 of them in the large
 file. 1233 are at distance 2, and 217 are at `d ≥ 3` with `n ≤ 54`. Widths run
-`k = 1..373`, injection counts `n = 8..262142`, and distances proved here
-`d = 2..7`. Sources
-certify up to `d ≥ 31` on the transversal-T codes.
+`k = 1..373`, injection counts `n = 8..262142`, and distances `d = 2..19`.
+The sweep here proves `d = 2..7`; on 31 rows `d` is a certified bound, from
+`d = 4` to `d = 19`, and 20 more rows carry a certificate this repository does
+not check (up to `d ≥ 31` on the transversal-T codes) beside the sweep's `d`.
 
 **Transversal-T codes.**
 [`migrations/transversal_t_codes_2026_10_10.py`](migrations/transversal_t_codes_2026_10_10.py)
@@ -108,8 +109,11 @@ the search in that folder, in place of the paper's formally self-dual
 `[70,35,14]`. Above `n = 95`
 the sweep here proves only a floor, from 7 down to 3. Each of those rows
 carries the paper's distance as a certified lower bound (`d_certified`) and an
-explicit fault of exactly that weight (`d_upper`, `d_witness`). Together they
-pin the distance, though the label, as always, uses the proved one.
+explicit fault of exactly that weight (`d_upper`, `d_witness`). Through
+`[[1011,1,19]]` the folder proves every input distance the doubling theorem
+needs, so the paper's distance is the row's `d` (see
+[The distance](#the-distance-and-what-a-number-in-that-column-means)); the 18
+codes from `[[1301,1,21]]` on keep the sweep's floor as `d`.
 [`migrations/gong_triply_even_2026_10_30.py`](migrations/gong_triply_even_2026_10_30.py)
 merged four shorter codes of the same kind from a note by A. Gong
 ([`gongaa/RM127`](https://github.com/gongaa/RM127/tree/main/triply-even)):
@@ -132,6 +136,21 @@ with this folder's own proof, since tropidist found a fault at their proved
 floor. Eighteen more carry its result as a certificate: an exact distance on
 eleven of them, from 4 to 13, a fault of weight 4 now stored on three of those,
 and `d ≥ 7` on four.
+
+**The Zaratan runs.**
+[`migrations/zaratan_certificates_2026_11_07.py`](migrations/zaratan_certificates_2026_11_07.py)
+records the runs of tropidist and of a meet-in-the-middle kernel made on the
+UMD cluster Zaratan and on a laptop on 6 November 2026
+([`../zaratan_certificates/`](../zaratan_certificates/README.md)):
+`937.87.7.a` at `d = 7`, `742.36.8.a` and `959.65.8.a` at `d = 8`, `988.36.7.a`
+at `d = 7`, `998.26.8.a` at `d ≥ 8`, and a second proof of the doubling
+theorem's value on five transversal-T rows.
+
+**Distances that rest on a certificate.**
+[`migrations/distance_policy_2026_11_07.py`](migrations/distance_policy_2026_11_07.py)
+made the certified bound the distance on 31 rows, where an evidence file the
+repository is sure of states it, and relabelled them: `177.1.7.a` became
+`177.1.9.a`, for example, and keeps the old label in `former_labels`.
 
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running
@@ -284,7 +303,7 @@ is also the list of what gets checked.
 | `n` | number of columns (π/4 parity rotations) |
 | `k` | output wires; they are `0..k-1`, wires `k..N-1` are the postselected checks |
 | `N` | ambient wires — equal to the largest qubit index used, plus one |
-| `d` | verified fault distance: **exact** if `d_is_exact`, otherwise a proved **floor** |
+| `d` | verified fault distance: **exact** if `d_is_exact`, otherwise a proved **floor**. The lower bound is the sweep of `verify_catalog.py`, or a certificate where the row carries `d_sweep_floor` (see [The distance](#the-distance-and-what-a-number-in-that-column-means)) |
 | `level` | 3 throughout this catalogue |
 | `columns` | the circuit: one qubit-support list per rotation, sorted and duplicate-free |
 | `gate` | the deposited output gate, as a monomial string |
@@ -292,7 +311,7 @@ is also the list of what gets checked.
 | `sk_key` | the `S_k` canonical monomial set, or `null` when the `k!` minimisation was not proved (then `sk_key_note` says so) |
 | `sk_canonical_frame` | whether the columns are shown in that canonical frame |
 | `sk_fingerprint` | a permutation-invariant fingerprint of the gate |
-| `d_is_exact` | `true` iff a clean sweep below `d` met a witness **at** `d` |
+| `d_is_exact` | `true` iff the proved lower bound `d` met a witness **at** `d` |
 | `d_upper` | the weight of an explicit harmful fault, or `null` |
 | `d_witness` | that fault, as column indices into this row's `columns` |
 | `A_d` | the number of faults of weight `d` that the checks accept and that damage the output, so the output error is `A_d p^d` to leading order: `35` for the 15-to-1, `28` for the 8-`T` `CCZ` factory. Counted exactly by [`errorcoeff.py`](errorcoeff.py); `null` on a floor, where it is undefined, and where neither counting method reaches |
@@ -304,8 +323,12 @@ is also the list of what gets checked.
 | `regimes`, `discovery`, `strongest_claim`, `sources` | provenance |
 | `relabelled_into_canonical_frame` | provenance too: whether the ingest permuted the columns on the way in. A self-contained row cannot prove or refute it — the source frame is not stored — so the verifier checks its type and nothing else |
 | `citations` | provenance too: keys of the header's `references` map crediting the class. The verifier checks that every key resolves, that a row cites at least one work and none twice; which works are credited is a curation decision |
+| `d_certified`, `d_certified_is_exact`, `d_certified_source` | a distance certified by a theorem or by another program, exact or a lower bound, and who proved it. Optional |
+| `d_sweep_floor` | only on a row whose `d` rests on its certificate: the floor the sweep itself proves, below `d` |
+| `d_certified_evidence` | `[{"file", "method", "tool"}, ...]`: evidence files in this repository, each holding a record for this circuit, bound by the SHA-256 of its columns, with `method` `theorem` or `exhaustive search`. Required when `d` rests on the certificate |
+| `former_labels` | the labels the row had before its `d` changed; old citations of them still find it, and they are never handed out again |
 | `construction`, `columns_sha256` | only on a row of the large file: the rule that builds `columns`, and the SHA-256 of those columns as compact JSON |
-| `catalog_label` | the row's permanent public name, `n.k.d.x` (e.g. `15.1.3.a`): `d` is the distance proved here, and the letters (`a`…`z`, then `ba`, `bb`, … as LMFDB numbers its classes) count the classes at that `(n, k, d)` in the order they entered the catalogue. `merge_results.py` gives a new class the next unused letter, and an improvement keeps the label, so a label is never changed or reused. The verifier checks the format and that no two rows share one. It is also the address of the class's page on the website |
+| `catalog_label` | the row's public name, `n.k.d.x` (e.g. `15.1.3.a`): `d` is the row's distance, and the letters (`a`…`z`, then `ba`, `bb`, … as LMFDB numbers its classes) count the classes at that `(n, k, d)` in the order they entered the catalogue. `merge_results.py` gives a new class the next unused letter, and an improvement keeps the label. A label changes only when the row's `d` does, and the old one stays in `former_labels`; a label is never reused. The verifier checks the format and that no two rows share one. It is also the address of the class's page on the website |
 
 **Provenance is inert.** `sources` and
 `relabelled_into_canonical_frame` record where a class came from and how it
@@ -349,7 +372,12 @@ For every row, from `columns`, `k` and `N` alone:
 4. **The distance.** Absence below `d` is *proved*: every weight `1..d-1` is
    swept to completion, and a sweep the budget cut short is a **failure**, not a
    pass — a floor nobody proved is not a floor. Presence at `d` is *witnessed*:
-   when `d_is_exact`, `d_witness` is re-checked against the true syndromes.
+   when `d_is_exact`, `d_witness` is re-checked against the true syndromes, by
+   `faultcore` and by the XOR of the wire masks. On a row whose `d` rests on a
+   certificate the sweep covers the weights below `d_sweep_floor`, and the
+   certificate must equal `d`, name its source, and have evidence files that
+   exist in the repository, hold a record of the stated method and tool for
+   this circuit's SHA-256, and state exactly `d`.
 5. **No spectator output**: the gate touches every one of the `k` outputs.
 6. **No pseudo-output**: the `k` output rows are linearly independent *modulo
    the check span*, so an output equal to another one, or to another one plus a
@@ -448,6 +476,7 @@ and merging it changes nothing.
 | `discovery` | optional; `AI search` (default) or `pre-existing` |
 | `citations` | optional; keys of the header's `references` map. Omitted, an **accepted** row is credited to the length-54 classification and the symmetry-and-AI report when `n ≤ 54` and `d ≥ 3`, and to the report alone otherwise. An improvement or a duplicate adds only the citations the record **names** — a held class keeps the credit it was given, so a class credited to a published work alone is not re-credited because a search found it again |
 | `label`, `provenance`, `origin`, `file`, `notes` | optional provenance strings — inert |
+| `certificate` | optional: a distance bound proved where the sweep cannot reach, `{"d", "exact", "source", "witness", "evidence"}`. It becomes the row's `d` (see below) |
 
 Anything else in a record is a typo and rejects it: `colums` silently ignored is
 a circuit merged from a field nobody read.
@@ -472,8 +501,8 @@ a circuit merged from a field nobody read.
    | verdict | |
    |---|---|
    | `accepted` | a class the catalogue did not have. Appended |
-   | `improved` | a class it had, with a better circuit. The retention rule is fewest ambient qubits, then fewest columns, then the strongest proved distance, then a proved canonical frame. The new provenance is **appended** to `sources` |
-   | `duplicate` | a class it had, with a circuit no better. **Nothing about the circuit or its provenance changes** — not the columns, not `sources`, not `regimes` — which is what makes re-merging a file a no-op the second time. Only a citation the record explicitly names is added |
+   | `improved` | a class it had, with a better circuit. Where both circuits have an `A_d`, the new one must be no worse in both `N` and `A_d` and better in one. Where either `A_d` is `null`, the rule is fewest ambient qubits, then fewest columns, then the strongest proved distance, then a proved canonical frame. The new provenance is **appended** to `sources` |
+   | `duplicate` | a class it had, with a circuit no better, or one with fewer wires and a larger `A_d` (or the reverse); the report lists the second kind as not merged. **Nothing about the circuit or its provenance changes** — not the columns, not `sources`, not `regimes` — which is what makes re-merging a file a no-op the second time. Only a citation the record explicitly names is added |
    | `rejected` | did not verify. The reason is printed, and the exit status is 1 |
 
 Both files are then regenerated from the merged payload, deterministically, so
@@ -482,6 +511,37 @@ up as a minimal diff rather than a reformat of twelve megabytes. Regenerating
 takes about two seconds; no existing row is re-verified by a merge. Afterwards,
 `verify_catalog.py --changed` re-derives exactly the rows the merge added or
 improved and re-runs the whole-file checks, in seconds.
+
+### Guards on certified rows
+
+An improvement is refused, with the row's label in the reason, when it would
+lower the row's distance, drop a certificate the new circuit does not match,
+or replace a floor `d ≥ x` by a circuit whose distance is exactly `x`. The
+toggles search of 2026-11-06 found a 12-wire `[[2017,1,3]]`, exact at 3, that
+the fewest-wires rule alone would have put in place of `2017.1.3.a`, whose
+511-wire circuit carries the certificate `d ≥ 25`; `tests/test_merge_results.py`
+keeps it as a regression case. Two more guards protect rows whose `d` rests on
+a certificate. The very circuit a row stores, submitted at another distance, is
+refused, since changing a stored row's distance is a migration. A circuit whose
+distance is only a floor is refused when a row with the same `n`, `k` and gate
+class holds a larger certified distance, since the two may be one class.
+
+### Records with a certificate
+
+A record may carry
+`"certificate": {"d": 16, "exact": false, "source": "...", "witness": null,
+"evidence": [{"file": "path/in/repo.json", "method": "exhaustive search",
+"tool": "..."}]}`. The evidence file holds `records`, each with `n`, `k`, `N`,
+`columns_sha256` (`constructions.digest` of the columns), `lower_bound` and,
+unless the file states them once at the top, `method` and `tool`. The merge
+measures the distance as usual and then requires that the sweep found no fault
+lighter than the bound, that the bound exceeds the sweep's floor, that the
+witness (required when `exact` is true, of weight `d`) is harmful, and that the
+evidence states exactly the bound for the circuit as stored. The digest is that
+of the columns after the outputs are relabelled into the canonical frame, and a
+refusal prints it. The row then has `d` equal to the bound, the sweep's floor
+in `d_sweep_floor`, and the certificate's fields, and `verify_catalog.py`
+checks it like every other certified row.
 
 **A claim is checked, never believed, and only a *disproved* claim rejects.** A
 `d` claimed above what an explicit witness allows rejects the record — a wrong
@@ -541,6 +601,19 @@ harmful fault below `d` **and** one is exhibited at it; the witness ships in
 `d_witness` and is three lines to re-check. When it is false, `d` is a proved
 floor and the tables print it as `≥d`. An unpinned distance is never quoted as a
 measured one.
+
+The lower bound is proved one of two ways. On most rows it is the sweep of
+`verify_catalog.py`. Since 2026-11-07 (the owner's decision, applied by
+[`migrations/distance_policy_2026_11_07.py`](migrations/distance_policy_2026_11_07.py)),
+a row may instead rest on a certificate the repository is sure of: the
+doubling theorem of Jain and Albert along a chain whose every input distance
+is proved in [`../transversal_t_codes/`](../transversal_t_codes/README.md), or
+an exhaustive search by tropidist or by the meet-in-the-middle kernel of the
+Zaratan runs. Such a row carries `d_sweep_floor`, what the sweep alone proves,
+and `d_certified_evidence`, its evidence files. A certificate the repository
+cannot check (the doubling theorem where it needs the distances of the
+extended QR codes of length 168, 192 or 200, and two gamma frontier records)
+stays in `d_certified` beside the sweep's `d`.
 
 ## Three implementations, on purpose
 

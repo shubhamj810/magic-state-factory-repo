@@ -81,6 +81,21 @@ Fields of a result object:
                  optional provenance strings for the row's ``sources`` entry.
                  They are INERT: nothing in this folder ever opens a path they
                  name.
+  ``certificate``  optional.  A distance bound proved where the sweep cannot
+                 reach, which becomes the row's ``d``:
+                 ``{"d": bound, "exact": bool, "source": "who proved it",
+                 "witness": [column, ...], "evidence": [{"file", "method",
+                 "tool"}, ...]}``.  ``evidence`` names files in this
+                 repository holding a record of that ``method`` (``theorem``
+                 or ``exhaustive search``) and ``tool`` for this circuit,
+                 bound by the SHA-256 of its columns AS STORED (after the
+                 output relabelling below; a refusal prints that digest), and
+                 stating exactly the bound.  ``witness`` is required when
+                 ``exact`` is true and must weigh ``d``.  The merge checks it
+                 like a stored certificate (`verify_catalog.certificate_problems`):
+                 the sweep must find nothing lighter, the bound must exceed
+                 the sweep's floor, which is kept as ``d_sweep_floor``, and the
+                 witness is re-checked.
 
 WHAT HAPPENS TO EACH RESULT
 ---------------------------
@@ -108,19 +123,33 @@ WHAT HAPPENS TO EACH RESULT
 4.  Then one of four verdicts:
 
     ``accepted``   a class the catalogue did not have.  Appended.
-    ``improved``   a class it had, with a better circuit: fewer ambient qubits,
+    ``improved``   a class it had, with a better circuit (`replaces`): where
+                   both circuits have an ``A_d``, no worse in both ``N`` and
+                   ``A_d`` and better in one; otherwise fewer ambient qubits,
                    then fewer columns, then a stronger proved distance, then a
-                   proved canonical frame.  The row's circuit fields are
+                   proved canonical frame.  An improvement may not lower the
+                   row's distance, drop a certificate it does not match, or
+                   replace a floor by a circuit exact at that floor
+                   (`guard_problems`); such a record is rejected, naming the
+                   row.  The row's circuit fields are
                    replaced and the new provenance is APPENDED to ``sources``,
                    so the class's history survives the replacement.
-    ``duplicate``  a class it had, with a circuit no better.  **Nothing
+    ``duplicate``  a class it had, with a circuit no better, or one better in
+                   ``N`` and worse in ``A_d`` (or the reverse), which the
+                   report lists as not merged.  **Nothing
                    changes** -- not even ``sources``.  The catalogue records
                    where the circuits it STORES came from, and re-merging the
                    same file must be a no-op the second time; accreting
                    provenance for a circuit that was thrown away would break
                    both.  The one exception is credit: a citation the record
                    explicitly names is added to the class.
-    ``rejected``   did not verify.  The reason is printed.
+    ``rejected``   did not verify, or a guard refused it.  The reason is
+                   printed.  Besides `guard_problems`, two guards protect the
+                   rows whose ``d`` rests on a certificate: the exact circuit a
+                   row stores, submitted at another distance, is refused (that
+                   is a migration); and a circuit whose distance is only a
+                   floor is refused when a row of the same ``n``, ``k`` and gate
+                   class holds a larger certified distance (`floor_conflict`).
 
 5.  Both catalogue files are regenerated from the merged payload by
     `catalogfile.write`, deterministically: rows are re-sorted on
@@ -157,7 +186,13 @@ RECORD_REQUIRED = ("k", "N")
 RECORD_CIRCUIT = ("columns", "construction")
 RECORD_OPTIONAL = ("n", "d", "gate", "t_count", "poly_degree",
                    "regime", "strength", "discovery", "citations",
-                   "label", "provenance", "origin", "file", "notes")
+                   "label", "provenance", "origin", "file", "notes",
+                   "certificate")
+#: A record's ``certificate``: a distance bound proved outside this folder's
+#: sweep, which becomes the row's ``d``.  ``witness`` is required when
+#: ``exact`` is true and must then weigh exactly ``d``.
+CERTIFICATE_REQUIRED = ("d", "exact", "source", "evidence")
+CERTIFICATE_OPTIONAL = ("witness",)
 
 #: Where a result with no stated corpus is filed, and what such a row means.
 #: A new regime joins the header's regime order at the END, which is the order
@@ -290,6 +325,9 @@ def record_problems(record) -> list[tuple[str, str]]:
         if record.get(name) is not None and not isinstance(record[name], str):
             problems.append(("schema", f"{name} must be a string, not a "
                                        f"{type(record[name]).__name__}"))
+    certificate = record.get("certificate")
+    if certificate is not None:
+        problems += certificate_shape_problems(certificate)
     citations = record.get("citations")
     if citations is not None and not (
             isinstance(citations, list) and citations
@@ -297,6 +335,46 @@ def record_problems(record) -> list[tuple[str, str]]:
             and len(set(citations)) == len(citations)):
         problems.append(("schema", "citations must be a non-empty list of "
                                    "distinct reference keys"))
+    return problems
+
+
+def certificate_shape_problems(certificate):
+    """The envelope of a record's ``certificate``; its truth is checked later,
+    on the circuit, by the same code that checks a stored one."""
+    if not isinstance(certificate, dict):
+        return [("schema", "certificate must be an object")]
+    problems = []
+    missing = [name for name in CERTIFICATE_REQUIRED if name not in certificate]
+    unknown = [name for name in certificate
+               if name not in CERTIFICATE_REQUIRED + CERTIFICATE_OPTIONAL]
+    if missing:
+        problems.append(("schema", f"certificate is missing {', '.join(missing)}"))
+    if unknown:
+        problems.append(("schema", f"certificate carries undocumented field(s) "
+                                   f"{', '.join(sorted(unknown))}"))
+    if problems:
+        return problems
+    if not VC._integer(certificate["d"]) or certificate["d"] < 2:
+        problems.append(("schema", "certificate d must be an integer >= 2"))
+    if not isinstance(certificate["exact"], bool):
+        problems.append(("schema", "certificate exact must be true or false"))
+    if not isinstance(certificate["source"], str) or not certificate["source"].strip():
+        problems.append(("schema", "certificate source must name who proved it"))
+    evidence = certificate["evidence"]
+    if not isinstance(evidence, list) or not evidence or not all(
+            isinstance(e, dict) and set(e) == set(VC.EVIDENCE_ENTRY_KEYS)
+            and all(isinstance(e[k], str) and e[k] for k in VC.EVIDENCE_ENTRY_KEYS)
+            for e in evidence):
+        problems.append(("schema", "certificate evidence must be a non-empty list of "
+                                   "{file, method, tool} strings"))
+    witness = certificate.get("witness")
+    if witness is not None and not (isinstance(witness, list) and witness
+                                    and all(VC._integer(j) for j in witness)):
+        problems.append(("schema", "certificate witness must be a list of column "
+                                   "indices"))
+    if certificate.get("exact") is True and witness is None:
+        problems.append(("schema", "an exact certificate needs the witness of "
+                                   "weight d that makes it exact"))
     return problems
 
 
@@ -410,6 +488,54 @@ def candidate_row(record, payload, source_file: str, index: int):
                          f"the distance is {d}: this catalogue is d >= 2, and "
                          f"a circuit with an undetectable single fault "
                          f"distils nothing"))
+    # ---- a certificate, where the record carries one: its bound becomes d,
+    # and the sweep's floor is kept as d_sweep_floor.  What the sweep found is
+    # checked against it first: a fault lighter than the certified bound
+    # refutes it, and a bound the sweep already reaches certifies nothing.
+    certificate = record.get("certificate")
+    sweep_floor = None
+    if certificate is not None and not problems:
+        bound = certificate["d"]
+        if d_upper is not None and d_upper < bound:
+            problems.append(("certificate",
+                             f"the certificate says d >= {bound}, but the fault "
+                             f"on columns {witness} has weight {d_upper}"))
+        elif exact or bound <= d:
+            problems.append(("certificate",
+                             f"the sweep here already proves "
+                             f"{'d = ' if exact else 'd >= '}{d}, so a "
+                             f"certificate of d >= {bound} adds nothing: drop it "
+                             f"from the record"))
+        else:
+            given = certificate.get("witness")
+            if given is not None:
+                circuit = FC.Circuit(facts["columns"], k, N)
+                if len(set(given)) != len(given) or not all(
+                        j < facts["n"] for j in given) or not (
+                        circuit.harmful(given)
+                        and VC.literal_harmful(facts["columns"], k, given)):
+                    problems.append(("certificate",
+                                     f"the certificate's witness {given[:12]} is "
+                                     f"not a harmful fault of this circuit"))
+                elif len(given) < bound or (certificate["exact"]
+                                            and len(given) != bound):
+                    problems.append(("certificate",
+                                     f"the certificate's witness weighs "
+                                     f"{len(given)}, but it claims d "
+                                     f"{'=' if certificate['exact'] else '>='} {bound}"))
+                elif d_upper is None or len(given) <= d_upper:
+                    d_upper, witness = len(given), sorted(given)
+            if not problems:
+                sweep_floor, d = d, bound
+                exact = certificate["exact"]
+                if exact and d_upper != bound:
+                    problems.append(("certificate",
+                                     "an exact certificate needs a stored fault of "
+                                     "weight d"))
+                if not exact and d_upper is not None and d_upper == bound:
+                    problems.append(("certificate",
+                                     f"a fault of weight {bound} is stored, so the "
+                                     f"certificate is exact: say so"))
     if record.get("d") is not None and d_upper is not None \
             and record["d"] > d_upper:
         problems.append(("distance-claim",
@@ -480,6 +606,8 @@ def candidate_row(record, payload, source_file: str, index: int):
         "d_is_exact": exact, "d_upper": d_upper, "d_witness": witness,
         "A_d": (EC.error_coefficient(facts["columns"], k, N, d)["count"]
                 if exact else None),
+        # the other half of d_upper / d_witness: a floor whose witness lies
+        # above it, an exact row whose witness is at it
         # in the stored frame: the correction names output wires
         "clifford_correction": facts["clifford_correction"],
         "rotation_powers": CL.rotation_powers(
@@ -506,6 +634,21 @@ def candidate_row(record, payload, source_file: str, index: int):
             **({"notes": record["notes"]} if record.get("notes") else {}),
         }],
     }
+    if sweep_floor is not None:
+        row["d_certified"] = d
+        row["d_certified_is_exact"] = exact
+        row["d_certified_source"] = certificate["source"]
+        row["d_certified_evidence"] = [dict(e) for e in certificate["evidence"]]
+        row["d_sweep_floor"] = sweep_floor
+        wrong = VC.evidence_problems(row)
+        if wrong:
+            hint = ("; the outputs were relabelled into the canonical frame, so "
+                    "the evidence must be bound to the columns as stored, whose "
+                    f"SHA-256 is {K.digest(facts['columns'])}" if relabelled
+                    else f"; the circuit's columns have SHA-256 "
+                         f"{K.digest(facts['columns'])}")
+            problems += [(kind, detail + hint) for kind, detail in wrong]
+            return None, problems
     if not canonical:
         row["sk_key_note"] = (
             f"the S_k lex-minimum over {k}! relabellings of a "
@@ -547,6 +690,101 @@ def sort_key(row):
     """The catalogue's row order, and the reason a no-op merge is byte-identical."""
     n, k, d, cls = class_key(row)
     return (n, k, d, str(cls))
+
+
+def replaces(candidate, incumbent):
+    """``(verdict, note)``: whether ``candidate`` replaces the stored circuit.
+
+    Since 2026-11-07 the leading error coefficient counts as well as the wire
+    count.  When both circuits have an ``A_d``, the candidate replaces the
+    incumbent only if it is no worse in both ``N`` and ``A_d`` and better in at
+    least one (Pareto).  A candidate that saves wires but has a larger
+    ``A_d``, or the reverse, is not merged; ``note`` says so, and the report
+    lists it.  When either ``A_d`` is unknown (``null``), the fewest-wires rule
+    of `retention_key` decides, as before.
+    """
+    mine, theirs = candidate.get("A_d"), incumbent.get("A_d")
+    if mine is None or theirs is None:
+        return retention_key(candidate) < retention_key(incumbent), None
+    fewer, smaller = candidate["N"] - incumbent["N"], mine - theirs
+    if fewer <= 0 and smaller <= 0 and (fewer < 0 or smaller < 0):
+        return True, None
+    if (fewer < 0 and smaller > 0) or (fewer > 0 and smaller < 0):
+        return False, (f"not merged: N={candidate['N']}, A_{candidate['d']}={mine} "
+                       f"against the stored N={incumbent['N']}, "
+                       f"A_{incumbent['d']}={theirs}; neither is better in both")
+    return False, None
+
+
+def guard_problems(candidate, incumbent):
+    """Why ``candidate`` may NOT replace ``incumbent``, or ``[]``.
+
+    A hard guard, applied before any improvement: a circuit with fewer wires
+    is no improvement if what is proved about its distance is weaker.  It may
+    not lower the row's stored distance, drop a certificate it does not
+    match, or replace a circuit whose distance is only a floor by one whose
+    distance is exactly that floor (the incumbent may well be better).  The
+    toggles search of 2026-11-06 found a 12-wire ``[[2017,1,3]]`` that would
+    have replaced ``2017.1.3.a`` -- a floor of 3 with a certified ``d >= 25``
+    -- in exactly this way.
+    """
+    label = incumbent.get("catalog_label")
+    problems = []
+    if candidate["d"] < incumbent["d"]:
+        problems.append(("certificate-guard",
+                         f"{label} stores d={incumbent['d']}; this circuit's d is "
+                         f"{candidate['d']}, which would lower it"))
+    held = incumbent.get("d_certified")
+    if held is not None:
+        theirs = (held, incumbent.get("d_certified_is_exact"))
+        mine = candidate.get("d_certified")
+        if mine is None or mine < held or (theirs[1] and not candidate["d_is_exact"]):
+            problems.append(("certificate-guard",
+                             f"{label} carries the certificate d "
+                             f"{'=' if theirs[1] else '>='} {held} "
+                             f"({incumbent['d_certified_source'][:80]}...), which "
+                             f"this circuit does not match: replacing it would "
+                             f"drop the certificate"))
+    if not incumbent["d_is_exact"] and candidate["d_is_exact"] \
+            and candidate["d"] == incumbent["d"]:
+        problems.append(("certificate-guard",
+                         f"{label} has d >= {incumbent['d']}, only a floor, and "
+                         f"this circuit has d = {candidate['d']} exactly: the "
+                         f"stored circuit may have the larger distance, so it is "
+                         f"not replaced"))
+    return problems
+
+
+def same_circuit(rows, candidate):
+    """Index of a row storing exactly the candidate's circuit, or ``None``."""
+    mine = K.digest(candidate["columns"])
+    for index, row in enumerate(rows):
+        if (row["k"], row["N"], row["n"]) == (candidate["k"], candidate["N"],
+                                              candidate["n"]) \
+                and K.digest(row["columns"]) == mine:
+            return index
+    return None
+
+
+def floor_conflict(rows, candidate):
+    """A row the catalogue holds at a CERTIFIED distance above the candidate's
+    floor, with the same ``n``, ``k`` and gate class -- or ``None``.
+
+    The candidate's distance is only proved ``>= d`` here, so it may be the
+    same class as that row, which keys on the certified distance; filing it
+    as a class of its own could hold one class twice.  It needs a
+    certificate, or a sweep that pins its distance."""
+    if candidate["d_is_exact"]:
+        return None
+    mine = None
+    for row in rows:
+        if (row["n"], row["k"]) != (candidate["n"], candidate["k"]) \
+                or row["d"] <= candidate["d"] or not CF.rests_on_certificate(row):
+            continue
+        mine = mine if mine is not None else VC.row_monomials(candidate)
+        if GC.gl_isomorphic(row["k"], VC.row_monomials(row), mine) is not False:
+            return row
+    return None
 
 
 def retention_key(row):
@@ -639,8 +877,12 @@ CIRCUIT_FIELDS = ("d", "N", "gate", "gate_human", "sk_key",
 NOTE_FIELDS = ("sk_key_note", "t_count_note", "poly_degree_note",
                "columns_note", "dedup_note",
                # a certificate belongs to the circuit it certified, so an
-               # improvement that replaces the circuit must drop it
-               "d_certified", "d_certified_is_exact", "d_certified_source")
+               # improvement that replaces the circuit takes the candidate's;
+               # `guard_problems` refuses one that would drop a certificate
+               # the candidate does not match.  ``former_labels`` is about the
+               # label, which an improvement keeps, so it stays.
+               "d_certified", "d_certified_is_exact", "d_certified_source",
+               "d_certified_evidence", "d_sweep_floor")
 
 
 def improve(incumbent, candidate, regimes):
@@ -712,8 +954,34 @@ def merge(payload, records, source_file: str):
             continue
         brought = list(record.get("citations") or []) \
             if isinstance(record, dict) else []
+        # The very circuit a row stores is that row, whatever distance this
+        # record's sweep reached: a row whose d rests on a certificate keys on
+        # the certified distance, and the same columns measured afresh would
+        # otherwise land at the sweep's floor as a class of their own.
+        twin = held = same_circuit(rows, candidate)
+        if twin is not None:
+            if candidate["d"] != rows[twin]["d"]:
+                verdicts.append((index, "rejected", None, [(
+                    "certificate-guard",
+                    f"this is the circuit of {rows[twin]['catalog_label']}, "
+                    f"stored at d={rows[twin]['d']}; the record gives "
+                    f"d={candidate['d']}. A change to a stored row's distance "
+                    f"is a migration, not a merge")]))
+                continue
+        else:
+            conflict = floor_conflict(rows, candidate)
+            if conflict is not None:
+                verdicts.append((index, "rejected", None, [(
+                    "certificate-guard",
+                    f"{conflict['catalog_label']} holds this gate class at "
+                    f"n={conflict['n']} with the certified d={conflict['d']}, and "
+                    f"this circuit's distance is proved only >= {candidate['d']} "
+                    f"here, so it may be the same class; give the record a "
+                    f"certificate")]))
+                continue
         try:
-            held = find_class(rows, candidate)
+            if twin is None:
+                held = find_class(rows, candidate)
         except Undecided as undecided:
             # KEEP IT.  The alternative was to refuse, and refusing throws away
             # a verified factory over a question about bookkeeping: the circuit
@@ -736,7 +1004,14 @@ def merge(payload, records, source_file: str):
                   "decided: the GL(k,2) isomorphism search that decides such "
                   "pairs ran out of budget, so this row is held as a distinct "
                   "class WITHOUT that having been proved")
-        if held is not None and retention_key(candidate) >= retention_key(rows[held]):
+        better, note = (replaces(candidate, rows[held]) if held is not None
+                        else (True, None))
+        if held is not None and better:
+            guard = guard_problems(candidate, rows[held])
+            if guard:
+                verdicts.append((index, "rejected", None, guard))
+                continue
+        if held is not None and not better:
             # The CIRCUIT changes nothing -- not the columns, not ``sources``,
             # not ``regimes``: re-merging a file must be a no-op the second
             # time, and provenance accreted for a circuit that was thrown away
@@ -753,8 +1028,8 @@ def merge(payload, records, source_file: str):
                     if key not in references:
                         references[key] = dict(DEFAULT_REFERENCES[key])
             verdicts.append((index, "duplicate", rows[held],
-                             f"already held as N={rows[held]['N']}, "
-                             f"d={rows[held]['d']}"))
+                             note or f"already held as N={rows[held]['N']}, "
+                                     f"d={rows[held]['d']}"))
             continue
         regime = candidate["regimes"][0]
         if regime not in payload["regimes"]:
@@ -803,6 +1078,14 @@ def report(verdicts, before, after, wrote):
             print(f"  improved   result {index}: {_describe(row)} ({detail})")
         else:
             print(f"  duplicate  result {index}: {_describe(row)} ({detail})")
+    kept = [(index, row, detail) for index, verdict, row, detail in verdicts
+            if verdict == "duplicate" and str(detail).startswith("not merged:")]
+    if kept:
+        print(f"\n{len(kept)} result(s) not merged although they differ from the "
+              f"stored circuit in N or A_d (each is better in one and worse in "
+              f"the other; the stored circuit is kept):")
+        for index, row, detail in kept:
+            print(f"  result {index}, {row['catalog_label']}: {detail[len('not merged: '):]}")
     print(f"\n{len(verdicts)} result(s): "
           + ", ".join(f"{counts[name]} {name}" for name in counts))
     print(f"catalogue: {before} -> {after} classes"
@@ -852,6 +1135,7 @@ def main(argv=None):
     # rejects, which is the one promise this tool makes.  So the file-level
     # passes run here, on the result, and nothing is written if they fail.
     residue = (VC.duplicate_class_problems(payload["factories"])
+               + VC.duplicate_label_problems(payload["factories"])
                + VC.provenance_problems(payload)
                + VC.citation_problems(payload)
                + VC.header_problems(payload))

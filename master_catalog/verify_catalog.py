@@ -1418,6 +1418,9 @@ def construction_problems(row):
 
 #: The keys of one ``d_certified_evidence`` entry.
 EVIDENCE_ENTRY_KEYS = ("file", "method", "tool")
+#: Where evidence paths are resolved: this repository.  The tests point it at
+#: a scratch folder.
+EVIDENCE_ROOT = REPO
 _EVIDENCE_CACHE: dict = {}
 
 
@@ -1433,7 +1436,7 @@ def evidence_records(path, root=None):
     records are returned with ``method`` and ``tool`` filled in, or ``None``
     and a phrase saying why the file is not usable.
     """
-    root = Path(root) if root is not None else REPO
+    root = Path(root) if root is not None else EVIDENCE_ROOT
     if not isinstance(path, str) or not path or Path(path).is_absolute() \
             or ".." in Path(path).parts:
         return None, f"evidence path {path!r} is not a path inside the repository"
