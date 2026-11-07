@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """One-off migration: a floor ``d >= w`` that the sweep proves, made exact by a
-fault of weight ``w`` the research found.
+fault of weight ``w`` the research found ([[218,5,7]] and [[708,58,6]]).
 
     python master_catalog/migrations/research_faults_2026_11_07.py [--dry-run]
 
@@ -38,6 +38,10 @@ FAULTS = {
     # (label c223_218_5_7 there), the fault in the stored column order
     "21a281eea9346dd1fb3293e3567f1a54cabfb7dbc9537795f0ebffc5fc05176b":
         [0, 6, 76, 85, 113, 128, 133],
+    # [[708,58,6]], small-cyc, research/search2/small-cyc/data/claims.jsonl at
+    # 27ac40e (name c766_708_58_6, witness_D), the same column order
+    "b193fae92c64d79fd18dab74a0c142dfa2d1dcc26d8d41cab2a7962edee2f667":
+        [0, 58, 182, 298, 505, 639],
 }
 
 

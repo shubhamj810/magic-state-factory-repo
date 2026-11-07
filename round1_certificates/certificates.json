@@ -581,6 +581,176 @@
    "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
    "lower_bound": 6,
    "how": "count mode, weights 1 to 5 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.039b36d7",
+   "n": 540,
+   "k": 46,
+   "N": 89,
+   "columns_sha256": "039b36d713d08604dfbb545d87a679a813ef339bf883d2633166de05a2ca937c",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 7,
+   "how": "count mode, weights 1 to 6 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.13408c18",
+   "n": 554,
+   "k": 32,
+   "N": 77,
+   "columns_sha256": "13408c185ea7c78f3ee8fc58f65b282a74f62006eaa1068f2e69cd12885a5819",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 7,
+   "how": "count mode, weights 1 to 6 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.13fc4164",
+   "n": 327,
+   "k": 15,
+   "N": 46,
+   "columns_sha256": "13fc416448c1b9b446991d50c6fa3c4326016b8c8e7af2408183d5d09b45af74",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 6,
+   "how": "count mode, weights 1 to 5 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.272d9024",
+   "n": 541,
+   "k": 45,
+   "N": 89,
+   "columns_sha256": "272d90247c8d56b45b616d82eb2b93088feec15334e5bd19969884260325ff19",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 7,
+   "how": "count mode, weights 1 to 6 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.3337e0a4",
+   "n": 238,
+   "k": 18,
+   "N": 41,
+   "columns_sha256": "3337e0a47e7bb4345ecce6fa85e31da3a19013710f22488dd46974c39a8cecdc",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 5,
+   "how": "count mode, weights 1 to 4 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.4158fcbc",
+   "n": 691,
+   "k": 75,
+   "N": 105,
+   "columns_sha256": "4158fcbcbdc889004439d02a271a1215e5bee0c4500e554e40e0f19426d7fa78",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 5,
+   "how": "count mode, weights 1 to 4 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.51d2c553",
+   "n": 524,
+   "k": 62,
+   "N": 89,
+   "columns_sha256": "51d2c553b170b0a3b6bc844938da9c41d519b7457e85a945205465e250470577",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 5,
+   "how": "count mode, weights 1 to 4 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.5a17eee2",
+   "n": 244,
+   "k": 12,
+   "N": 41,
+   "columns_sha256": "5a17eee2465c5123b6de1fcb4230b2742277869d0f75b3875c63ef6ab6d79df1",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 6,
+   "how": "count mode, weights 1 to 5 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.69bae4f9",
+   "n": 217,
+   "k": 7,
+   "N": 38,
+   "columns_sha256": "69bae4f96f9edd256853a9fbc3a45944ed112bbf3d5fd6e7228fe9fb586fdb62",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 7,
+   "how": "count mode, weights 1 to 6 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.7ea276b2",
+   "n": 357,
+   "k": 25,
+   "N": 50,
+   "columns_sha256": "7ea276b21f67db3fdcc17862af09b85d7db588ed4ea217811a95b972ba9b5361",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 5,
+   "how": "count mode, weights 1 to 4 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.98b141af",
+   "n": 208,
+   "k": 16,
+   "N": 38,
+   "columns_sha256": "98b141afe0ae3c72e1fc7d68da3ddefb7d4870136ee9074cef9a105a1c6b0dd4",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 5,
+   "how": "count mode, weights 1 to 4 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.b193fae9",
+   "n": 708,
+   "k": 58,
+   "N": 105,
+   "columns_sha256": "b193fae92c64d79fd18dab74a0c142dfa2d1dcc26d8d41cab2a7962edee2f667",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 6,
+   "how": "count mode, weights 1 to 5 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.c7c2850e",
+   "n": 532,
+   "k": 54,
+   "N": 89,
+   "columns_sha256": "c7c2850ed4fc3f86111044a591023c09530efe8d582fcb80db69d74906d50b34",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 6,
+   "how": "count mode, weights 1 to 5 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.dcbef2cb",
+   "n": 124,
+   "k": 4,
+   "N": 22,
+   "columns_sha256": "dcbef2cb5aeb1e87ca9d33baec066356217c3b64e6195df9109df093e792140e",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 5,
+   "how": "count mode, weights 1 to 4 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.e7513b0a",
+   "n": 213,
+   "k": 11,
+   "N": 38,
+   "columns_sha256": "e7513b0aa09884fa501d7ca80302426dfb9550c040424681b5aaca1942b7ad2d",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 6,
+   "how": "count mode, weights 1 to 5 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.f4b08890",
+   "n": 364,
+   "k": 18,
+   "N": 50,
+   "columns_sha256": "f4b088904483d89341996b07835100499c5c3c2ad9601a108846ccd2054ec50c",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 6,
+   "how": "count mode, weights 1 to 5 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.f75e8155",
+   "n": 320,
+   "k": 22,
+   "N": 46,
+   "columns_sha256": "f75e81550c8911374dcc63490e15e54aa5f77fdcf6e9db4b5b02963b0a35fa18",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 5,
+   "how": "count mode, weights 1 to 4 complete with no harmful fault (2026-11-07)"
   }
  ]
 }
