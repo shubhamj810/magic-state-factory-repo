@@ -60,6 +60,16 @@ THE FAMILIES
 
 Each family module keeps the contract above: its `columns` returns the sorted
 order, and its `problems` bounds every field before anything is built.
+
+``explicit``
+    ``{"family": "explicit", "k": k, "N": N, "n": n, "columns_zlib_b64": s}``:
+    no rule, the columns themselves, as compact JSON compressed with zlib and
+    written in base64.  For a row with no family of its own whose columns
+    would take the main file past GitHub's 50 MB, such as the four gamma
+    frontier rows from n = 1675 to 1715.  The one exception to the order
+    above: the columns come back in the order they were stored in, which
+    ``d_witness`` and ``rotation_powers`` count in; ``columns_sha256`` pins
+    them as for every family.
 """
 from __future__ import annotations
 
@@ -74,7 +84,7 @@ import construction_sanjose as _SJ
 _MODULES = {**{name: _SJ for name in _SJ.FAMILIES},
             **{name: _RM for name in _RM.FAMILIES}}
 
-FAMILIES = ("two-group",) + tuple(_MODULES)
+FAMILIES = ("two-group",) + tuple(_MODULES) + ("explicit",)
 
 #: The fields of each family's construction object and their meaning, which
 #: the large file's header repeats so a reader of the JSON alone can rebuild a
@@ -82,6 +92,7 @@ FAMILIES = ("two-group",) + tuple(_MODULES)
 FAMILY_FIELDS = {
     "two-group": ("k", "N", "s_total", "s_O"),
     **{name: tuple(module.FAMILIES[name]) for name, module in _MODULES.items()},
+    "explicit": ("k", "N", "n", "columns_zlib_b64"),
 }
 FAMILY_DESCRIPTIONS = {
     "two-group": (
@@ -91,7 +102,14 @@ FAMILY_DESCRIPTIONS = {
         "|A| + |B| = 1 mod s_total; columns sorted ascending, then the list "
         "sorted lexicographically"),
     **{name: module.DESCRIPTIONS[name] for name, module in _MODULES.items()},
+    "explicit": (
+        "the columns themselves: columns_zlib_b64 is the compact JSON of the list "
+        "of columns (each a sorted list of wires), compressed with zlib and "
+        "written in base64; they are used in the order stored"),
 }
+
+#: The largest explicit column list accepted, decompressed (bytes).
+MAX_EXPLICIT_BYTES = 8_000_000
 
 #: Bounds that keep a malformed construction from being expanded at all: a
 #: two-group circuit on N wires has up to 2^N - 1 columns, so N is what decides
@@ -115,6 +133,8 @@ def problems(construction) -> list[str]:
                 f"knows {', '.join(FAMILIES)}"]
     if family in _MODULES:
         return list(_MODULES[family].problems(construction))
+    if family == "explicit":
+        return _explicit_problems(construction)
     fields = FAMILY_FIELDS[family]
     found = [name for name in construction if name != "family"]
     if sorted(found) != sorted(fields):
@@ -142,6 +162,8 @@ def columns(construction) -> list[list[int]]:
     family = construction["family"]
     if family in _MODULES:
         return _MODULES[family].columns(construction)
+    if family == "explicit":
+        return _explicit_columns(construction)
     if family == "two-group":
         return _two_group(construction["k"], construction["N"],
                           construction["s_total"], construction["s_O"])
@@ -162,6 +184,53 @@ def _two_group(k, N, s_total, s_O):
                     out.append(list(A + B))
     out.sort()
     return out
+
+
+def explicit(columns, k: int, N: int) -> dict:
+    """The ``explicit`` construction object of a column list."""
+    import base64
+    import zlib
+    data = zlib.compress(canonical_text(columns).encode("ascii"), 9)
+    return {"family": "explicit", "k": k, "N": N, "n": len(columns),
+            "columns_zlib_b64": base64.b64encode(data).decode("ascii")}
+
+
+def _explicit_decode(construction):
+    import base64
+    import zlib
+    raw = base64.b64decode(construction["columns_zlib_b64"], validate=True)
+    d = zlib.decompressobj()
+    text = d.decompress(raw, MAX_EXPLICIT_BYTES + 1)
+    if len(text) > MAX_EXPLICIT_BYTES or d.unconsumed_tail:
+        raise ValueError("the explicit columns are too long")
+    return json.loads(text.decode("ascii"))
+
+
+def _explicit_problems(construction):
+    fields = FAMILY_FIELDS["explicit"]
+    found = [name for name in construction if name != "family"]
+    if sorted(found) != sorted(fields):
+        return [f"an explicit construction has the fields {', '.join(fields)}, "
+                f"not {', '.join(sorted(found))}"]
+    for name in ("k", "N", "n"):
+        if type(construction[name]) is not int or construction[name] < 1:
+            return [f"{name} must be a positive whole number"]
+    if not isinstance(construction["columns_zlib_b64"], str):
+        return ["columns_zlib_b64 must be a string"]
+    try:
+        cols = _explicit_decode(construction)
+    except (ValueError, TypeError) as error:
+        return [f"columns_zlib_b64 does not decode: {error}"]
+    N = construction["N"]
+    if not isinstance(cols, list) or len(cols) != construction["n"] or not all(
+            isinstance(c, list) and all(type(w) is int and 0 <= w < N for w in c)
+            and all(a < b for a, b in zip(c, c[1:])) for c in cols):
+        return ["the explicit columns are not n sorted lists of wires below N"]
+    return []
+
+
+def _explicit_columns(construction):
+    return _explicit_decode(construction)
 
 
 def canonical_text(cols) -> str:

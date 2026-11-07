@@ -78,7 +78,12 @@ every field of a row of the main file except `columns`, plus
   the CCZ frame on F_2^(3q), and the four-block family). The large file's
   header describes every field of each. Each module also holds the check of
   its family's distance theorem from the columns, which
-  [`theorem_certificates/`](../theorem_certificates/README.md) runs.
+  [`theorem_certificates/`](../theorem_certificates/README.md) runs. A last family, `explicit`, is no rule at all:
+  the columns themselves, compressed with zlib and written in base64, in the
+  order they were stored. It holds the four gamma frontier rows from `n = 1675`
+  to `1715` (4.3 MB of columns), moved there on 2026-11-07 by
+  [`explicit_storage_2026_11_07.py`](migrations/explicit_storage_2026_11_07.py)
+  when the imports of that day took the main file past 50 MB.
 - `columns_sha256`, the SHA-256 of those columns as compact JSON. It pins the
   circuit independently of the code that builds it.
 
@@ -589,6 +594,16 @@ The header, in order:
 | `AI search: generalised triorthogonal search 55<=n<=64` | found by the AI-assisted public search for generalised triorthogonal protocols at lengths 55–64; a verified witness, not a maximum |
 | `community contribution` | a protocol an outside author submitted through [`../community_contributions/`](../community_contributions/), verified here from its columns; a verified witness, not a maximum. Registered the first time one is merged |
 | `borrowed-identity search: two-group`, `borrowed-identity search: symmetry-free` | found by the two searches of Singh, Gidney and Jones (arXiv:2606.28518), imported in [`../borrowed_identities/`](../borrowed_identities/); verified witnesses, not maxima |
+| `AI search: Reed-Muller flat-toggle local search` | the catalogue's own local search of 6 November 2026 over Reed–Muller flat toggles, started from catalogue rows (research/search/toggles/); verified witnesses, not maxima |
+| `AI search: punctured RM(3,10) lift and regrowth` | RM(3,10) punctured at searched sets (Haah and Hastings's construction), from the catalogue's lift search of 6 to 7 November 2026; `d` = 7 or 8 by mitml sweeps run here (`round1_certificates/`) |
+| `AI search: CCZ frame on RM(3,12)` | the CCZ frame with 55 disjoint CCZ triples, `d = 16` by the frame theorem checked from the columns (`theorem_certificates/`) |
+| `AI search: punctured weighted Reed-Muller parents`, `AI search: weighted Reed-Muller parent on 11 variables` | Wills's weighted Reed–Muller codes (arXiv:2608.24000) punctured at searched sets, from the sparse-cells search of 6 November 2026 (`[[480,32,6]]`, `[[479,33,5]]`) and the weighted search of 7 November 2026 (`[[1842,206,7]]`, `[[1845,203,7]]`, `[[1893,155,8]]`, `[[1894,154,8]]`, `d = 8` by mitml sweeps and the fibre theorem) |
+| `AI search (gamma frontier): San José GRS construction`, `AI search: San José construction beyond the release` | San-José's construction (arXiv:2609.08203): the gamma frontier release's records, and circuits of the same construction the catalogue's own searches built; `d` from his theorem, its hypotheses checked from the columns (`theorem_certificates/`), exact where a fault of that weight is known |
+| `AI search: four-block distance-3 factories` | punctured four-block parents at `d = 3` from the catalogue's second-round strategist and four-block searches; low `A_3` rather than new `(n, k)` |
+| `AI search: small distance-5 and 6 factories` | three small factories at `d = 5` and 6 from the catalogue's second-round search, `[[93,3,5]]`, `[[127,9,5]]` and `[[128,7,6]]`; the sweep here proves each distance |
+| `Vuillot-Breuckmann pin codes`, `Bravyi-Haah distance-2 family`, `Campbell-Howard distance-2 families`, `Berardini et al. doubling` | published factories the catalogue lacked, rebuilt by its second-round search from the constructions their papers give (arXiv:1906.11394, arXiv:1209.2426, arXiv:1606.01904, arXiv:2412.08586) and credited to those papers |
+| `AI search: punctured pin codes`, `AI search: Berardini doubling of Gong's code` | the same constructions with a choice the search made: puncture sets of pin codes it found, and Berardini et al.'s doubling onto A. Gong's `[[559,1,15]]` |
+| `AI search: symmetric CP-SAT search n<=127`, `AI search: punctured triply even cyclic codes`, `AI search: descent from catalogue rows` | the catalogue's second-round small-factory searches of 7 November 2026: a symmetric CP-SAT search, punctured extended triply even cyclic codes, and shortening and output restriction of held rows (credited also to the parent row's works); each row's distance is the sweep's or a mitml sweep run here (`round1_certificates/`) |
 
 The full sentence for each is in the header and on the first page of
 `MASTER_CATALOG.md`. A regime a merge introduces is registered at the **end** of

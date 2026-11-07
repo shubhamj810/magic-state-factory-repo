@@ -1,0 +1,89 @@
+{
+ "about": "Evidence for circuits of the first research round of 6 to 7 November 2026 that the catalogue stores as constructions; each record is bound by columns_sha256 to the columns constructions.columns builds. Written by round1_certificates/assemble.py. count: the harmful accepted faults of the given weight.",
+ "records": [
+  {
+   "name": "930.94.7.8edc44a935",
+   "n": 930,
+   "k": 94,
+   "N": 176,
+   "columns_sha256": "9838ec3857c3a5b34c4353baa1a6005fb11408a3c8c2bfd7eb37bbb2a512ac4e",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "weight": 7,
+   "count": 2760,
+   "accepted": 2760,
+   "how": "count mode over 2^11 partitions in 1 slice(s) (2026-11-07)"
+  },
+  {
+   "name": "930.94.7.41eb2a9cef",
+   "n": 930,
+   "k": 94,
+   "N": 176,
+   "columns_sha256": "80a80ce8a50be1f856ff5137431b791b0f4b54d7943d06a220c10d0b858a560d",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "weight": 7,
+   "count": 2769,
+   "accepted": 2769,
+   "how": "count mode over 2^11 partitions in 1 slice(s) (2026-11-07)"
+  },
+  {
+   "name": "930.94.7.f34845ed1a",
+   "n": 930,
+   "k": 94,
+   "N": 176,
+   "columns_sha256": "d9d35447831b06b28cae5a80ea19313a85796240b9360a2ce50db3457c7a0ce4",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "weight": 7,
+   "count": 3034,
+   "accepted": 3034,
+   "how": "count mode over 2^11 partitions in 1 slice(s) (2026-11-07)"
+  },
+  {
+   "name": "930.94.7.f34845ed1a",
+   "n": 930,
+   "k": 94,
+   "N": 176,
+   "columns_sha256": "d9d35447831b06b28cae5a80ea19313a85796240b9360a2ce50db3457c7a0ce4",
+   "tool": "the plan's meet-in-the-middle kernel in count mode, run by the lift search on Zaratan (round1_certificates/evidence/research/lift_counts.jsonl)",
+   "weight": 7,
+   "count": 3034,
+   "accepted": 3034,
+   "how": "977.8 s on Zaratan, on the research's column order f34845ed1a187fcb..."
+  },
+  {
+   "name": "930.94.7.41eb2a9cef",
+   "n": 930,
+   "k": 94,
+   "N": 176,
+   "columns_sha256": "80a80ce8a50be1f856ff5137431b791b0f4b54d7943d06a220c10d0b858a560d",
+   "tool": "the plan's meet-in-the-middle kernel in count mode, run by the lift search on Zaratan (round1_certificates/evidence/research/lift_counts.jsonl)",
+   "weight": 7,
+   "count": 2769,
+   "accepted": 2769,
+   "how": "980.7 s on Zaratan, on the research's column order 41eb2a9cefa5cebf..."
+  },
+  {
+   "name": "930.94.7.8edc44a935",
+   "n": 930,
+   "k": 94,
+   "N": 176,
+   "columns_sha256": "9838ec3857c3a5b34c4353baa1a6005fb11408a3c8c2bfd7eb37bbb2a512ac4e",
+   "tool": "the plan's meet-in-the-middle kernel in count mode, run by the lift search on Zaratan (round1_certificates/evidence/research/lift_counts.jsonl)",
+   "weight": 7,
+   "count": 2760,
+   "accepted": 2760,
+   "how": "704.7 s on Zaratan, on the research's column order 8edc44a9350ca9b4..."
+  },
+  {
+   "name": "ccz-frame-q4-c55",
+   "n": 4096,
+   "k": 165,
+   "N": 464,
+   "columns_sha256": "fc716035a631f14dfccf01f84aa6ee3fb4fb3ce3f03e3f715e2761dd2c06cf21",
+   "tool": "plucker_count.c of the parents search: every 4-dimensional subspace of F_2^12 and its output minors (round1_certificates/evidence/research/)",
+   "weight": 16,
+   "count": 3561183808512,
+   "accepted": null,
+   "how": "13910980083 subspaces (the Gaussian binomial), 105831 with every output minor zero; each of the others gives 2^8 harmful cosets (Zaratan, 64 slices)"
+  }
+ ]
+}

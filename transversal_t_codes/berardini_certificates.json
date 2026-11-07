@@ -1,0 +1,30 @@
+{
+ "about": "Theorem 12 of Berardini et al. on two doublings of their [[89,1,17]] code; written by transversal_t_codes/berardini.py.",
+ "method": "theorem",
+ "records": [
+  {
+   "name": "berardini-753",
+   "n": 753,
+   "k": 1,
+   "N": 193,
+   "columns_sha256": "4799bd9cc6329db8c1d8e5830a61381ca33a4bd6b2a3a3c1175d9937d4842736",
+   "tool": "Theorem 12 of Berardini et al. (arXiv:2412.08586), the doubling of Jain and Albert: d >= min(d1, d2 + 2), with d1 = 17 for the cyclic [89,44] code proved by transversal_t_codes/odd_distance.py and d2 = 15 the catalogue's distance of the inner row",
+   "lower_bound": 17,
+   "witness": [0, 9, 17, 18, 20, 28, 30, 51, 55, 58, 62, 65, 67, 68, 77, 85, 86],
+   "inner_row": "575.1.15.a",
+   "how": "d1 from transversal_t_codes/berardini89_distance.json; d2 = 15 for 575.1.15.a"
+  },
+  {
+   "name": "berardini-737",
+   "n": 737,
+   "k": 1,
+   "N": 189,
+   "columns_sha256": "8a333b56dd5f6d5579d6a2e856c9581f139e62aefdab79e9a26298cb8fd81e30",
+   "tool": "Theorem 12 of Berardini et al. (arXiv:2412.08586), the doubling of Jain and Albert: d >= min(d1, d2 + 2), with d1 = 17 for the cyclic [89,44] code proved by transversal_t_codes/odd_distance.py and d2 = 15 the catalogue's distance of the inner row",
+   "lower_bound": 17,
+   "witness": [0, 9, 17, 18, 20, 28, 30, 51, 55, 58, 62, 65, 67, 68, 77, 85, 86],
+   "inner_row": "559.1.15.a",
+   "how": "d1 from transversal_t_codes/berardini89_distance.json; d2 = 15 for 559.1.15.a"
+  }
+ ]
+}

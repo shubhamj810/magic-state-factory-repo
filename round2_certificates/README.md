@@ -6,7 +6,10 @@ the night of 6 to 7 November 2026. It was assembled on 7 November 2026.
 
 | file | what it is |
 |---|---|
-| `evidence/distances/` | the second-round distance search, copied unchanged from the research branch (`research/search2/distances/` at commit `2c3ce12`): its report, `results.jsonl`, the raw run records in `data/`, and the sources of the tools it wrote (`mitml/`, `trellis/`, `flat512.py`, `dp_perm.py`) |
+| `evidence/distances/` | the second-round distance search, copied unchanged from the research branch (`research/search2/distances/` at commit `2c3ce12`, and `results.jsonl` and `data/zaratan/` at `48453b7`, after its Zaratan runs): its report, `results.jsonl`, the raw run records in `data/`, and the sources of the tools it wrote (`mitml/`, `trellis/`, `flat512.py`, `dp_perm.py`) |
+| `evidence/zaratan2/` | the report of those Zaratan runs and the combined weight-7 sweeps of the two `d = 8` weighted rows (`research/search2/zaratan2/` at `48453b7`) |
+| `evidence/weighted/`, `evidence/review/` | the weighted Reed–Muller search (`research/search2/weighted/` at `c2df149`: report, the fibre-theorem code, `A_d.jsonl`, and `circuits.json`, the construction objects of its three rows) and the adversarial review of the second round (`research/search2/review/` at `121e495`: report, code and logs) |
+| `weighted.py` | writes `weighted_certificates.json` and `weighted_coefficients.json` for `[[1842,206,7]]`, `[[1893,155,8]]` and `[[1894,154,8]]` |
 | `evidence/plan/` | the plan's meet-in-the-middle kernel (`mitm/`), its runs on 935.89.6.a, 936.88.6.a and 1715.287.3.a, its counts (`A_d_counts.json`), the cached rows it read, and the research's run of this catalogue's own sweep on 1715.287.3.a (`own_sweep.py`, `own_sweeps.jsonl`), all from `research/plan/` at commit `9932b15` |
 | `own_sweep.py`, `evidence/own_sweep_1715.json` | this catalogue's `faultcore.scan_weight`, unchanged, run here on 1715.287.3.a with the raised budget the research used |
 | `assemble.py` | writes the two files below from `evidence/`, `--check` compares |
@@ -15,7 +18,13 @@ the night of 6 to 7 November 2026. It was assembled on 7 November 2026.
 
 `assemble.py` binds every record to a catalogue row by the SHA-256 of the
 row's columns (`constructions.digest`), the row being the one the research
-named (its label then, which may now be a former label). It re-checks every
+named (its label then, which may now be a former label). A circuit the
+catalogue imports as a construction is named by the research by the digest
+of its own column order; the script checks that order against the
+construction (`theorem_certificates/inputs.json`,
+`round1_certificates/evidence/research/native_digests.json`,
+`evidence/weighted/circuits.json`) and writes the record for the sorted
+columns the large file stores, with every fault moved to that order. It re-checks every
 fault with `faultcore.Circuit.harmful` and by the XOR of the wire masks. A
 lower bound is written only when every weight below it was swept completely
 and no harmful fault was found. Where two tools counted the same circuit
@@ -49,8 +58,8 @@ writes the records into the rows.
   `[0, 3, 117, 120, 448, 502, 934]`. Both rows are now exact at 7.
 * 998.26.8.a was a floor `d ≥ 8` proved by tropidist at threshold 7. mitml
   found the weight-8 fault `[15, 64, 72, 245, 260, 307, 315, 323]`, so the
-  row is exact at 8. Weight 7 still rests on tropidist alone; mitml swept
-  only to weight 6.
+  row is exact at 8, and mitml's sweep of weights 1 to 7 (weight 7 on
+  Zaratan) is a second tool for the floor.
 * 599.1.15.a gets tropidist's dense DP as a second proof beside the doubling
   theorem, and 988.36.7.a mitml's sweep beside tropidist.
 * 1715.287.3.a becomes 1715.287.6.a. Until now its `d = 6` rested on the

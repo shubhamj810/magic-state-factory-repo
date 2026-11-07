@@ -1,0 +1,39 @@
+== node compute-a7-34.zaratan.umd.edu Sat Nov  7 06:11:52 EST 2026
+built ['mitml2', 'mitml3', 'mitml5']
+== 512.84.6.a w8 Q9 06:11:53
+{'id': '512.84.6.a', 'w': 8, 'status': 'found', 'accepted': 50434240, 'harmful': 50434240, 'witness': [0, 1, 2, 3, 32, 33, 34, 35], 'wall_seconds': 11.75} slice max 10.989
+== 512.39.6.a w8 Q9 06:12:06
+{'id': '512.39.6.a', 'w': 8, 'status': 'found', 'accepted': 50434240, 'harmful': 50397952, 'witness': [0, 1, 2, 3, 27, 29, 47, 55], 'wall_seconds': 11.81} slice max 11.086
+== 930.94.7.8edc44a935 w7 Q11 06:12:18
+{'id': '930.94.7.8edc44a935', 'w': 7, 'status': 'found', 'accepted': 2760, 'harmful': 2760, 'witness': [16, 99, 254, 616, 649, 844, 866], 'wall_seconds': 8.75} slice max 8.513
+== 930.94.7.41eb2a9cef w7 Q11 06:12:27
+{'id': '930.94.7.41eb2a9cef', 'w': 7, 'status': 'found', 'accepted': 2769, 'harmful': 2769, 'witness': [0, 68, 114, 134, 148, 631, 641], 'wall_seconds': 8.68} slice max 8.552
+== 930.94.7.f34845ed1a w7 Q11 06:12:37
+{'id': '930.94.7.f34845ed1a', 'w': 7, 'status': 'found', 'accepted': 3034, 'harmful': 3034, 'witness': [6, 79, 279, 424, 530, 811, 884], 'wall_seconds': 9.37} slice max 8.828
+== 931.93.7.83a91c80c5 w7 Q11 06:12:46
+{'id': '931.93.7.83a91c80c5', 'w': 7, 'status': 'found', 'accepted': 2857, 'harmful': 2857, 'witness': [8, 113, 175, 180, 528, 583, 676], 'wall_seconds': 8.63} slice max 7.884
+== 932.92.7.0f5a3a3102 w7 Q11 06:12:56
+{'id': '932.92.7.0f5a3a3102', 'w': 7, 'status': 'found', 'accepted': 2450, 'harmful': 2450, 'witness': [2, 32, 49, 263, 289, 483, 708], 'wall_seconds': 8.19} slice max 7.329
+== 933.91.7.6a25de9b43 w7 Q11 06:13:05
+{'id': '933.91.7.6a25de9b43', 'w': 7, 'status': 'found', 'accepted': 2441, 'harmful': 2441, 'witness': [0, 150, 176, 343, 406, 671, 918], 'wall_seconds': 7.82} slice max 7.232
+== 936.88.6.a w7 Q11 06:13:14
+{'id': '936.88.6.a', 'w': 7, 'status': 'found', 'accepted': 1784, 'harmful': 1784, 'witness': [10, 100, 227, 463, 737, 817, 907], 'wall_seconds': 8.3} slice max 7.293
+== 937.87.6.a w7 Q11 06:13:22
+{'id': '937.87.6.a', 'w': 7, 'status': 'found', 'accepted': 1598, 'harmful': 1598, 'witness': [24, 79, 172, 341, 431, 602, 649], 'wall_seconds': 8.01} slice max 7.436
+== 988.36.6.a w7 Q11 06:13:31
+{'id': '988.36.6.a', 'w': 7, 'status': 'found', 'accepted': 400, 'harmful': 400, 'witness': [12, 123, 246, 359, 360, 374, 377], 'wall_seconds': 12.21} slice max 11.31
+== 998.26.6.a w7 Q11 06:13:44
+{'id': '998.26.6.a', 'w': 7, 'status': 'clean', 'accepted': 0, 'harmful': 0, 'witness': None, 'wall_seconds': 13.1} slice max 12.409
+== 742.36.6.a w8 Q11 06:13:57
+{'id': '742.36.6.a', 'w': 8, 'status': 'found', 'accepted': 1061648, 'harmful': 331891, 'witness': [0, 21, 206, 240, 258, 380, 625, 655], 'wall_seconds': 39.34} slice max 38.322
+== 756.32.6.a w8 Q11 06:14:37
+{'id': '756.32.6.a', 'w': 8, 'status': 'clean', 'accepted': 757782, 'harmful': 0, 'witness': None, 'wall_seconds': 41.75} slice max 40.8
+== 954.70.8.ff92d26dfe w8 Q11 06:15:19
+{'id': '954.70.8.ff92d26dfe', 'w': 8, 'status': 'found', 'accepted': 3649, 'harmful': 3649, 'witness': [5, 7, 25, 122, 124, 146, 486, 606], 'wall_seconds': 117.2} slice max 116.199
+== 955.69.8.6627c613e4 w8 Q11 06:17:18
+{'id': '955.69.8.6627c613e4', 'w': 8, 'status': 'found', 'accepted': 3328, 'harmful': 3328, 'witness': [2, 98, 207, 299, 324, 457, 540, 718], 'wall_seconds': 116.54} slice max 115.197
+== 959.65.6.a w8 Q11 06:19:15
+{'id': '959.65.6.a', 'w': 8, 'status': 'found', 'accepted': 1770, 'harmful': 1770, 'witness': [8, 81, 98, 179, 709, 789, 810, 927], 'wall_seconds': 136.14} slice max 135.552
+== 998.26.6.a w8 Q11 06:21:34
+{'id': '998.26.6.a', 'w': 8, 'status': 'found', 'accepted': 70, 'harmful': 70, 'witness': [5, 60, 241, 245, 249, 303, 307, 311], 'wall_seconds': 146.16} slice max 145.049
+== done Sat Nov  7 06:24:01 EST 2026

@@ -1,0 +1,43 @@
+== node compute-b8-57.zaratan.umd.edu Sat Nov  7 05:29:03 EST 2026
+Model name:          AMD EPYC 7763 64-Core Processor
+built ['mitml2', 'mitml3', 'mitml5']
+== brute force (laptop: 1,759 pairs agree, seed 7)
+ok: 1345 (problem, weight) pairs agree with brute force (counts, slices, lists, witnesses)
+
+real	0m53.384s
+user	0m34.430s
+sys	0m6.066s
+== known counts: 255.3.7.a w8 (3,011,805 accepted / 2,642,688 harmful), 901.123.6.a w6 (2,781 / 2,781)
+{"id": "255.3.7.a", "label": "255.3.7.a", "sha256": "9afc7a96561a51f0b3a84e6765aa9f4bf661df2d2e5543c02df3426df3aa1c81", "n": 255, "k": 3, "r": 35, "w": 8, "count": true, "slices": 1, "jobs": 1, "kerne
+{"id": "901.123.6.a", "label": "901.123.6.a", "sha256": "1411836c964e1be82ac0b1f9e8ef5e161a4bb8417c9bc0a0df0bda6dc82533b1", "n": 901, "k": 123, "r": 53, "w": 6, "count": true, "slices": 1, "jobs": 1, 
+== 935.89.6.a w7, 32 slices (pilot kernel on Zaratan: A_7 = 1,883)
+{'id': '935.89.6.a', 'w': 7, 'status': 'found', 'accepted': 1883, 'harmful': 1883, 'wall_seconds': 117.07, 'parts_log2': 7} 116.961
+
+real	1m57.603s
+user	45m54.833s
+sys	0m0.590s
+== sjfast timing at bound 12 (P = 53), 16 seeds x 60 s (laptop: 3.4e8 completions per s)
+P53 seed10: FOUND 32011982 171 133:5 248:16 123:1 152:9 72:20 138:10 81:10 58:3 192:13 170:2 53:16 143:15
+P53 seed10: cores 32011982 ands 18320655660 seconds 49.8
+P53 seed11: NONE 38993920 60.0 0 0 22316461196
+P53 seed12: NONE 38961152 60.0 0 0 22297720475
+P53 seed13: FOUND 27221298 37 75:5 189:3 221:8 94:5 181:0 213:2 125:18 224:5 185:9 143:15 135:3 76:0
+P53 seed13: cores 27221298 ands 15578927338 seconds 41.9
+P53 seed14: NONE 38502400 60.0 0 0 22035177328
+P53 seed15: FOUND 9739561 151 126:0 195:9 216:19 117:15 132:0 72:19 237:19 220:17 68:0 130:9 217:8 196:2
+P53 seed15: cores 9739561 ands 5574013405 seconds 15.0
+P53 seed16: NONE 38993920 60.0 0 0 22316468056
+P53 seed1: NONE 38993920 60.0 0 0 22316481587
+P53 seed2: NONE 38993920 60.0 0 0 22316477964
+P53 seed3: NONE 38944768 60.0 0 0 22288314606
+P53 seed4: FOUND 14806791 29 195:15 234:6 90:11 197:3 103:6 244:2 191:17 227:14 144:17 214:6 68:14 166:18
+P53 seed4: cores 14806791 ands 8474016837 seconds 22.9
+P53 seed5: NONE 38977536 60.0 0 0 22307101244
+P53 seed6: NONE 38862848 60.0 0 0 22241461523
+P53 seed7: FOUND 9450079 99 64:8 226:14 116:2 159:18 238:1 242:9 93:0 214:20 79:11 84:5 124:15 162:11
+P53 seed7: cores 9450079 ands 5408348150 seconds 14.6
+P53 seed8: NONE 38977536 60.0 0 0 22307099793
+P53 seed9: NONE 38912000 60.0 0 0 22269591155
+== tropidist smoke: 901.123.6.a K=6, 32 threads (laptop: found, 0.1 s)
+{"label": "901.123.6.a", "sha256": "1411836c964e1be82ac0b1f9e8ef5e161a4bb8417c9bc0a0df0bda6dc82533b1", "tag": "z-smoke", "threads": "32", "host": "compute-b8-57.zaratan.umd.edu", "n": 901, "k": 123, "r": 53, "K": 6, "status": "found", "best": 6, "witness": [13, 14, 45, 130, 461, 589], "witness_check
+== done Sat Nov  7 05:34:00 EST 2026

@@ -1,0 +1,83 @@
+{
+ "about": "The weighted Reed-Muller factories of the second research round; each record is bound by columns_sha256 to the sorted columns constructions.columns builds, and names the research's digest of its own column order. Written by round2_certificates/weighted.py.",
+ "records": [
+  {
+   "name": "1842.206.7.5d387ef445",
+   "research_sha256": "5d387ef445ef7101fd5f91f1a283dd6f6939914cf86d3e41b8e7625e37583e25",
+   "n": 1842,
+   "k": 206,
+   "N": 324,
+   "columns_sha256": "f5eafa0b1d1011e15ae3fe9e08af3e4aca6312c6fc297e22303aba8f7261978a",
+   "tool": "countad.py of the weighted search, by the fibre decomposition (round2_certificates/evidence/weighted/data/A_d.jsonl)",
+   "weight": 7,
+   "count": 4745,
+   "accepted": null,
+   "how": "Case B 4744, Case C 1"
+  },
+  {
+   "name": "1842.206.7.5d387ef445",
+   "research_sha256": "5d387ef445ef7101fd5f91f1a283dd6f6939914cf86d3e41b8e7625e37583e25",
+   "n": 1842,
+   "k": 206,
+   "N": 324,
+   "columns_sha256": "f5eafa0b1d1011e15ae3fe9e08af3e4aca6312c6fc297e22303aba8f7261978a",
+   "tool": "the review's own fibre count, fibown.py and casec.py (round2_certificates/evidence/review/logs/)",
+   "weight": 7,
+   "count": 4745,
+   "accepted": null,
+   "how": "Case B 4744 (fibown_5d387e.log), Case C 1 (casec_5d387e.log)"
+  },
+  {
+   "name": "1893.155.8.188c0f5df2",
+   "research_sha256": "188c0f5df278b001950795365494870f5f7120044cf6962c11d4d31f1b31fc43",
+   "n": 1893,
+   "k": 155,
+   "N": 324,
+   "columns_sha256": "fbe766b2bbc11e722fffb329983ad16a544920c99b4657240a3b6c60b9e3dd27",
+   "tool": "countad.py of the weighted search, by the fibre decomposition (round2_certificates/evidence/weighted/data/A_d.jsonl)",
+   "weight": 8,
+   "count": 5600,
+   "accepted": null,
+   "how": "Case B 5600, Case C 0"
+  },
+  {
+   "name": "1893.155.8.188c0f5df2",
+   "research_sha256": "188c0f5df278b001950795365494870f5f7120044cf6962c11d4d31f1b31fc43",
+   "n": 1893,
+   "k": 155,
+   "N": 324,
+   "columns_sha256": "fbe766b2bbc11e722fffb329983ad16a544920c99b4657240a3b6c60b9e3dd27",
+   "tool": "the review's own fibre count, fibown.py and casec.py (round2_certificates/evidence/review/logs/)",
+   "weight": 8,
+   "count": 5600,
+   "accepted": null,
+   "how": "Case B 5600 (fibown_188c0f.log), Case C 0 (casec_188c0f.log)"
+  },
+  {
+   "name": "1894.154.8.a6e3040381",
+   "research_sha256": "a6e3040381c9e5b41ab04682b88ffc5a0b54c9123db19863a86edb7b327f1cdc",
+   "n": 1894,
+   "k": 154,
+   "N": 324,
+   "columns_sha256": "76d7d8704667683a1a19278343be698ffd8c961216afce1e6e6affb5fd22590e",
+   "tool": "countad.py of the weighted search, by the fibre decomposition (round2_certificates/evidence/weighted/data/A_d.jsonl)",
+   "weight": 8,
+   "count": 5398,
+   "accepted": null,
+   "how": "Case B 5398, Case C 0"
+  },
+  {
+   "name": "1894.154.8.a6e3040381",
+   "research_sha256": "a6e3040381c9e5b41ab04682b88ffc5a0b54c9123db19863a86edb7b327f1cdc",
+   "n": 1894,
+   "k": 154,
+   "N": 324,
+   "columns_sha256": "76d7d8704667683a1a19278343be698ffd8c961216afce1e6e6affb5fd22590e",
+   "tool": "the review's own fibre count, fibown.py and casec.py (round2_certificates/evidence/review/logs/)",
+   "weight": 8,
+   "count": 5398,
+   "accepted": null,
+   "how": "Case B 5398 (fibown_a6e304.log), Case C 0 (casec_a6e304.log)"
+  }
+ ]
+}

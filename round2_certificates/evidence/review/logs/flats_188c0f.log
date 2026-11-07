@@ -1,0 +1,2 @@
+{"file": "../weighted/data/problems/188c0f.json", "U3_count": 97155, "max_punctures_in_dual_4flat": 8, "min_fault_weight_over_4flats": 8, "U3_attaining": 3811}
+{"random_5flats": 200000, "dual": 200000, "min_fault_weight_seen": 17, "seconds": 59.4}

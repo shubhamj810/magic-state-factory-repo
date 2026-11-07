@@ -1,0 +1,3 @@
+{"digest": "5d387ef445ef7101fd5f91f1a283dd6f6939914cf86d3e41b8e7625e37583e25", "D": 7, "A_D": 4745, "flips": 42705, "k": 206, "c": 207.30582524271844, "case_C_faults": 1, "case_B_faults": 4744}
+{"digest": "a6e3040381c9e5b41ab04682b88ffc5a0b54c9123db19863a86edb7b327f1cdc", "D": 8, "A_D": 5398, "flips": 43184, "k": 154, "c": 280.4155844155844, "case_C_faults": 0, "case_B_faults": 5398}
+{"digest": "188c0f5df278b001950795365494870f5f7120044cf6962c11d4d31f1b31fc43", "D": 8, "A_D": 5600, "flips": 44800, "k": 155, "c": 289.03225806451616, "case_C_faults": 0, "case_B_faults": 5600}

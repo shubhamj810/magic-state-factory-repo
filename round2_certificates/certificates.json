@@ -113,6 +113,17 @@
    "how": "A_w = 0 for w < 13 in 2 column order(s) (evidence/distances/data/trellis_counts.jsonl)"
   },
   {
+   "label": "417.1.13.a",
+   "research_label": "417.1.6.a",
+   "n": 417,
+   "k": 1,
+   "N": 108,
+   "columns_sha256": "da8cf16fabf4b860acab3e932a18d48307e1e80d03805cc60bd9c7c9e4e5b74b",
+   "tool": "the counting syndrome trellis of the second-round distance search (evidence/distances/trellis/trellis_count.c)",
+   "lower_bound": 13,
+   "how": "A_w = 0 for w < 13 in 1 column order(s) (evidence/distances/data/trellis_counts.jsonl)"
+  },
+  {
    "label": "599.1.15.a",
    "research_label": "599.1.6.a",
    "n": 599,
@@ -157,7 +168,18 @@
    "how": "count mode, weights 1 to 6: no harmful fault (evidence/distances/data/mitml_runs.jsonl, counts.jsonl)"
   },
   {
-   "label": "1715.287.3.a",
+   "label": "998.26.8.a",
+   "research_label": "998.26.6.a",
+   "n": 998,
+   "k": 26,
+   "N": 176,
+   "columns_sha256": "c7193dbd9a8efba2a54376d18edd7759bdf2febec411020af934417189893e3d",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "lower_bound": 8,
+   "how": "count mode, weights 1 to 7: no harmful fault (evidence/distances/data/mitml_runs.jsonl, counts.jsonl)"
+  },
+  {
+   "label": "1715.287.6.a",
    "research_label": "1715.287.3.a",
    "n": 1715,
    "k": 287,
@@ -168,7 +190,7 @@
    "how": "status mode, weights 1 to 5 complete and clean (evidence/plan/data/mitm_runs.jsonl); the row it read is evidence/plan/data/rows/1715.287.3.a.json"
   },
   {
-   "label": "1715.287.3.a",
+   "label": "1715.287.6.a",
    "research_label": "1715.287.3.a",
    "n": 1715,
    "k": 287,
@@ -181,7 +203,127 @@
  ],
  "witnesses": [
   {
-   "label": "1715.287.3.a",
+   "label": null,
+   "research_label": null,
+   "columns_sha256": "8a053282356e2747f8849240f45cdd9a38fc7784347d9b216034b16d04f56006",
+   "witness": [302, 355, 395, 625, 766, 769, 898],
+   "weight": 7,
+   "found_by": "research/search/lift/mitm/mitm.c (the lift search's copy of the pilot kernel): weights 1 to 6 clean (lift REPORT); mitml.c sha256 79c7eeb92ecb: weights 1 to 6 clean in count mode, no accepted fault at all (laptop); tropidist threshold 6 exhausted over all anchors (Zaratan, 64 threads, 58.492 s); weight-7 fault from the lift search, re-checked",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": null,
+   "research_label": "sjL_m8_L254_deg63_P51",
+   "columns_sha256": "beeddd571fdaa4aad8e09671f37332744abcef68d0631b4824fb1615af3c5952",
+   "witness": [9, 48, 185, 534, 553, 944, 1189, 1566, 2728, 2836, 2922, 3233, 3491, 3764],
+   "weight": 14,
+   "found_by": "sjfast on Zaratan, P51 seed51045 (evidence/distances/data/zaratan/sjfast_recheck.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": null,
+   "research_label": "sjL_m8_L254_deg63_P50",
+   "columns_sha256": "c00f79d690242cd3064c37ab4984bd57c03c4d8692ede047c32c3ac95c1a2eb1",
+   "witness": [137, 305, 311, 619, 1028, 1767, 1884, 2125, 2141, 2589, 2617, 3103, 3787, 4036, 4230],
+   "weight": 15,
+   "found_by": "sjfast on Zaratan, P50 seed50106 (evidence/distances/data/zaratan/sjfast_recheck.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": null,
+   "research_label": "sjL_m8_L254_deg63_P53",
+   "columns_sha256": "c6bb80fa95a981286cc43cbf05d627ba8d6bc68fed8576d61269724bdd152fe2",
+   "witness": [152, 267, 573, 757, 2042, 2152, 2442, 2866, 3376, 3968, 3991, 4106],
+   "weight": 12,
+   "found_by": "sjfast on Zaratan, P53 seed10 (evidence/distances/data/zaratan/sjfast_recheck.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": null,
+   "research_label": "sjL_m8_L254_deg63_P53",
+   "columns_sha256": "c6bb80fa95a981286cc43cbf05d627ba8d6bc68fed8576d61269724bdd152fe2",
+   "witness": [50, 476, 1037, 1266, 1857, 2312, 2442, 2857, 3328, 3503, 3536, 3556],
+   "weight": 12,
+   "found_by": "sjfast on Zaratan, P53 seed13 (evidence/distances/data/zaratan/sjfast_recheck.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": null,
+   "research_label": "sjL_m8_L254_deg63_P53",
+   "columns_sha256": "c6bb80fa95a981286cc43cbf05d627ba8d6bc68fed8576d61269724bdd152fe2",
+   "witness": [38, 109, 384, 830, 1164, 1430, 1523, 1736, 1745, 2877, 3452, 3549],
+   "weight": 12,
+   "found_by": "sjfast on Zaratan, P53 seed15 (evidence/distances/data/zaratan/sjfast_recheck.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": null,
+   "research_label": "sjL_m8_L254_deg63_P53",
+   "columns_sha256": "c6bb80fa95a981286cc43cbf05d627ba8d6bc68fed8576d61269724bdd152fe2",
+   "witness": [629, 712, 847, 1351, 2222, 2355, 2387, 2463, 2587, 2758, 2860, 3396],
+   "weight": 12,
+   "found_by": "sjfast on Zaratan, P53 seed4 (evidence/distances/data/zaratan/sjfast_recheck.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": null,
+   "research_label": "sjL_m8_L254_deg63_P53",
+   "columns_sha256": "c6bb80fa95a981286cc43cbf05d627ba8d6bc68fed8576d61269724bdd152fe2",
+   "witness": [81, 135, 212, 862, 1914, 2077, 2789, 3259, 3298, 3662, 3706, 3966],
+   "weight": 12,
+   "found_by": "sjfast on Zaratan, P53 seed7 (evidence/distances/data/zaratan/sjfast_recheck.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": null,
+   "research_label": "sjL_m8_L254_deg63_P52",
+   "columns_sha256": "db5ff4f0445cf772631fda63d5649cd39d35b15f2b0c033d12a52c3fd20cd586",
+   "witness": [40, 1158, 1549, 1630, 1650, 1664, 1982, 2162, 2363, 2390, 2457, 2758, 3155],
+   "weight": 13,
+   "found_by": "sjfast on Zaratan, P52 seed52048 (evidence/distances/data/zaratan/sjfast_recheck.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "columns_sha256": "e5496ed6eb7200d463e2f0b66a9c7d362f580f0ce0e2f6e41ec89369eaf1d7c5",
+   "witness": [223, 230, 412, 547, 600, 730, 835],
+   "weight": 7,
+   "found_by": "research/search/lift/mitm/mitm.c (the lift search's copy of the pilot kernel): weights 1 to 6 clean (lift REPORT); mitml.c sha256 79c7eeb92ecb: weights 1 to 6 clean in count mode, no accepted fault at all (laptop); tropidist threshold 6 exhausted over all anchors (Zaratan, 64 threads, 70.436 s); weight-7 fault from the lift search, re-checked",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "1715.287.6.a",
    "research_label": "1715.287.3.a",
    "columns_sha256": "c44ed2f4d348d4a25010180ef77c04c8dfb1a6f56970f7ee0b74edd791e19974",
    "witness": [0, 423, 572, 851, 998, 1433],
@@ -241,6 +383,18 @@
    }
   },
   {
+   "label": "417.1.13.a",
+   "research_label": "417.1.6.a",
+   "columns_sha256": "da8cf16fabf4b860acab3e932a18d48307e1e80d03805cc60bd9c7c9e4e5b74b",
+   "witness": [0, 69, 138, 185, 232, 277, 322, 345, 368, 385, 402, 409, 416],
+   "weight": 13,
+   "found_by": "counting trellis: no harmful fault of weight below 13, and 7598286923 of weight 13; agrees with tropidist's DP, the independent trellis of research/tropidist/ and the doubling theorem",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
    "label": "599.1.15.a",
    "research_label": "599.1.6.a",
    "columns_sha256": "d4500cc49d29e16ed7d8cd39ae9dab53dafac2f758aef2ab269fdf6c15f2fd64",
@@ -294,7 +448,7 @@
    "columns_sha256": "c7193dbd9a8efba2a54376d18edd7759bdf2febec411020af934417189893e3d",
    "witness": [15, 64, 72, 245, 260, 307, 315, 323],
    "weight": 8,
-   "found_by": "mitml.c sha256 79c7eeb92ecb: weights 1 to 6 swept clean in count mode (laptop); tropidist threshold 7 exhausted over all anchors (first round, Zaratan, 64 threads, 175 s); weight-8 fault from mitml.c sha256 79c7eeb92ecb in status mode (third of 2,048 partitions, laptop, 6.6 s)",
+   "found_by": "mitml.c sha256 79c7eeb92ecb: weights 1 to 6 swept clean in count mode (laptop); mitml.c sha256 79c7eeb92ecb: weight 7 swept clean (Zaratan, 128 slices); tropidist threshold 7 exhausted over all anchors (first round, Zaratan, 64 threads, 175 s); weight-8 fault from mitml.c sha256 79c7eeb92ecb in status mode (third of 2,048 partitions, laptop, 6.6 s)",
    "checks": {
     "faultcore_harmful": true,
     "literal_harmful": true

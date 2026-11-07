@@ -1,0 +1,32 @@
+built ['mitml2', 'mitml3', 'mitml5']
+== sj_m6_L30_deg7_P1 w8 05:50:51
+{'id': 'sj_m6_L30_deg7_P1', 'w': 8, 'status': 'found', 'accepted': 217198, 'harmful': 1575, 'wall_seconds': 3.69}
+== sj_m6_L34_deg8_P2 w8 05:50:57
+{'id': 'sj_m6_L34_deg8_P2', 'w': 8, 'status': 'found', 'accepted': 267414, 'harmful': 4194, 'wall_seconds': 5.15}
+== sj_m6_L38_deg9_P3 w8 05:51:03
+{'id': 'sj_m6_L38_deg9_P3', 'w': 8, 'status': 'found', 'accepted': 324566, 'harmful': 8970, 'wall_seconds': 7.61}
+== sj_m6_L42_deg10_P4 w8 05:51:11
+{'id': 'sj_m6_L42_deg10_P4', 'w': 8, 'status': 'found', 'accepted': 391207, 'harmful': 18465, 'wall_seconds': 10.84}
+== sj_m6_L46_deg11_P5 w8 05:51:22
+{'id': 'sj_m6_L46_deg11_P5', 'w': 8, 'status': 'found', 'accepted': 470650, 'harmful': 36009, 'wall_seconds': 15.42}
+== sj_m6_L50_deg12_P6 w8 05:51:38
+{'id': 'sj_m6_L50_deg12_P6', 'w': 8, 'status': 'found', 'accepted': 568995, 'harmful': 67703, 'wall_seconds': 19.94}
+== sj_m6_L54_deg13_P7 w8 05:51:58
+{'id': 'sj_m6_L54_deg13_P7', 'w': 8, 'status': 'found', 'accepted': 691115, 'harmful': 118420, 'wall_seconds': 25.73}
+== sj_m6_L58_deg14_P8 w8 05:52:24
+{'id': 'sj_m6_L58_deg14_P8', 'w': 8, 'status': 'found', 'accepted': 851205, 'harmful': 202355, 'wall_seconds': 32.14}
+== sj_m6_L34_deg8_P1 w8 05:52:57
+{'id': 'sj_m6_L34_deg8_P1', 'w': 8, 'status': 'clean', 'accepted': 280137, 'harmful': 0, 'wall_seconds': 6.1}
+== sj_m6_L38_deg9_P2 w8 05:53:03
+{'id': 'sj_m6_L38_deg9_P2', 'w': 8, 'status': 'clean', 'accepted': 334116, 'harmful': 0, 'wall_seconds': 8.45}
+== sj_m6_L42_deg10_P3 w8 05:53:12
+{'id': 'sj_m6_L42_deg10_P3', 'w': 8, 'status': 'clean', 'accepted': 392847, 'harmful': 0, 'wall_seconds': 11.7}
+== sj_m6_L46_deg11_P4 w8 05:53:24
+{'id': 'sj_m6_L46_deg11_P4', 'w': 8, 'status': 'clean', 'accepted': 456330, 'harmful': 0, 'wall_seconds': 15.67}
+== sj_m6_L50_deg12_P5 w8 05:53:39
+{'id': 'sj_m6_L50_deg12_P5', 'w': 8, 'status': 'clean', 'accepted': 524565, 'harmful': 0, 'wall_seconds': 20.56}
+== sj_m6_L54_deg13_P6 w8 05:54:00
+{'id': 'sj_m6_L54_deg13_P6', 'w': 8, 'status': 'clean', 'accepted': 597552, 'harmful': 0, 'wall_seconds': 27.87}
+== sj_m6_L58_deg14_P7 w8 05:54:28
+{'id': 'sj_m6_L58_deg14_P7', 'w': 8, 'status': 'clean', 'accepted': 675291, 'harmful': 0, 'wall_seconds': 34.77}
+== done Sat Nov  7 05:55:03 EST 2026

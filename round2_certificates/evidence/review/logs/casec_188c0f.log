@@ -1,0 +1,9 @@
+{"z": 0, "summary": ["TOTAL 130373069 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}
+{"z": 1, "summary": ["TOTAL 130373069 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}
+{"z": 2, "summary": ["TOTAL 130373069 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}
+{"z": 3, "summary": ["TOTAL 130373069 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}
+{"z": 4, "summary": ["TOTAL 128182162 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}
+{"z": 5, "summary": ["TOTAL 130373069 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}
+{"z": 6, "summary": ["TOTAL 128182162 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}
+{"z": 7, "summary": ["TOTAL 128182162 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}
+{"file": "../weighted/data/problems/188c0f.json", "W": 8, "fibres": {"0": {"summary": ["TOTAL 130373069 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}, "1": {"summary": ["TOTAL 130373069 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}, "2": {"summary": ["TOTAL 130373069 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}, "3": {"summary": ["TOTAL 130373069 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}, "4": {"summary": ["TOTAL 128182162 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}, "5": {"summary": ["TOTAL 130373069 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}, "6": {"summary": ["TOTAL 128182162 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}, "7": {"summary": ["TOTAL 128182162 DUPS 0"], "collisions": 0, "zero_sets_by_weight": {}, "examples": []}}, "seconds": 9.6}

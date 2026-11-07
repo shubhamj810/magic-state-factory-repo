@@ -1,0 +1,15 @@
+{"pair": [2, 4], "columns": 461, "dups": 0, "hits": 4865, "sets": 139.0, "t": 70.3}
+{"pair": [2, 5], "columns": 460, "dups": 0, "hits": 6650, "sets": 190.0, "t": 138.1}
+{"pair": [2, 6], "columns": 461, "dups": 0, "hits": 6370, "sets": 182.0, "t": 214.3}
+{"pair": [2, 7], "columns": 460, "dups": 0, "hits": 7630, "sets": 218.0, "t": 283.7}
+{"pair": [3, 4], "columns": 461, "dups": 0, "hits": 5600, "sets": 160.0, "t": 354.9}
+{"pair": [3, 5], "columns": 460, "dups": 0, "hits": 6965, "sets": 199.0, "t": 424.7}
+{"pair": [3, 6], "columns": 461, "dups": 0, "hits": 5180, "sets": 148.0, "t": 497.1}
+{"pair": [3, 7], "columns": 460, "dups": 0, "hits": 6650, "sets": 190.0, "t": 566.3}
+{"pair": [4, 5], "columns": 461, "dups": 0, "hits": 6440, "sets": 184.0, "t": 638.7}
+{"pair": [4, 6], "columns": 462, "dups": 0, "hits": 4795, "sets": 137.0, "t": 714.2}
+{"pair": [4, 7], "columns": 461, "dups": 0, "hits": 5285, "sets": 151.0, "t": 786.8}
+{"pair": [5, 6], "columns": 461, "dups": 0, "hits": 4585, "sets": 131.0, "t": 858.0}
+{"pair": [5, 7], "columns": 460, "dups": 0, "hits": 5635, "sets": 161.0, "t": 926.6}
+{"pair": [6, 7], "columns": 461, "dups": 0, "hits": 6825, "sets": 195.0, "t": 997.8}
+{"total_hits": 83475, "total_sets_counted": 2385.0, "seconds": 997.8}

@@ -1,0 +1,1 @@
+{"n": 1893, "k": 155, "N": 324, "A": 3, "odd": false, "summary": ["TOTAL 1130579738 DUPS 0"], "collisions": 0, "seed": 12345, "zero_syndrome_sets": [], "n_zero_syndrome_sets": 0, "min_weight_found": null, "min_harmful_weight_found": null, "seconds": 26.7, "file": "../weighted/data/problems/188c0f.json"}

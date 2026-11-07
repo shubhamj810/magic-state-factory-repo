@@ -12,7 +12,7 @@
    "weight": 9,
    "count": 2172877,
    "accepted": 2172877,
-   "how": "count mode, 1 slice(s) summed before the division, 2 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 2 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "177.1.9.a",
@@ -38,7 +38,7 @@
    "weight": 9,
    "count": 2245345,
    "accepted": 2245345,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "185.1.9.a",
@@ -64,7 +64,7 @@
    "weight": 9,
    "count": 2286315,
    "accepted": 2286315,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "189.1.9.a",
@@ -90,7 +90,7 @@
    "weight": 7,
    "count": 85248,
    "accepted": 97155,
-   "how": "count mode, 1 slice(s) summed before the division, 3 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 3 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "255.3.7.a",
@@ -116,7 +116,7 @@
    "weight": 7,
    "count": 91107,
    "accepted": 97155,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "255.4.7.a",
@@ -142,7 +142,7 @@
    "weight": 7,
    "count": 93488,
    "accepted": 97155,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "255.5.7.a",
@@ -168,7 +168,7 @@
    "weight": 7,
    "count": 97155,
    "accepted": 97155,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "255.6.7.a",
@@ -223,6 +223,20 @@
    "how": "B_w(ker H) - B_w(ker [H;L]) in 2 column order(s): data/orders/283.1.7.a.json, stored (evidence/distances/data/trellis_counts.jsonl)"
   },
   {
+   "label": null,
+   "research_label": null,
+   "n": 290,
+   "k": 3,
+   "N": 38,
+   "columns_sha256": "b6e82c5f41e400e46c910cf09135f07685ecb0280ceada5f421b3bfc9c613881",
+   "research_sha256": "502c1e24853944def5ba46e6ed022d77cc9d03bdf6de23ac81953485a9b1bc45",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 14412,
+   "accepted": 50472,
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
    "label": "401.1.13.a",
    "research_label": "401.1.6.a",
    "n": 401,
@@ -236,6 +250,61 @@
    "how": "B_w(ker H) - B_w(ker [H;L]) in 2 column order(s): data/orders/401.1.6.a.json, data/orders/401.1.6.a.reversed.json (evidence/distances/data/trellis_counts.jsonl)"
   },
   {
+   "label": null,
+   "research_label": null,
+   "n": 406,
+   "k": 4,
+   "N": 46,
+   "columns_sha256": "ca25b7020ea65ec756b01f0e60bb2b7be9d5d8b1620d5393d83b0df1605d87c3",
+   "research_sha256": "a254d8b4fe3fa6bac0f93dbdb67033fa23d3657b417db01801d4560ac3f7b7fa",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 1575,
+   "accepted": 217198,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": "417.1.13.a",
+   "research_label": "417.1.6.a",
+   "n": 417,
+   "k": 1,
+   "N": 108,
+   "columns_sha256": "da8cf16fabf4b860acab3e932a18d48307e1e80d03805cc60bd9c7c9e4e5b74b",
+   "tool": "the counting syndrome trellis of the second-round distance search (evidence/distances/trellis/trellis_count.c)",
+   "weight": 13,
+   "count": 7598286923,
+   "accepted": 7598286923,
+   "how": "B_w(ker H) - B_w(ker [H;L]) in 1 column order(s): data/orders/417.1.6.a.json (evidence/distances/data/trellis_counts.jsonl)"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 448,
+   "k": 8,
+   "N": 50,
+   "columns_sha256": "7a9fc07fa0850b845c31a66c3da49695b68df45f019837ed676e6f59b2fb744a",
+   "research_sha256": "05d0be2a0d98a8a9d5877f9485b97115b24600f8af8d2fa8324bd3669828a01a",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 4194,
+   "accepted": 267414,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 490,
+   "k": 12,
+   "N": 54,
+   "columns_sha256": "cf5fc7d82148deca72c2905aab22d337d3a5b3cca99c20c9c2ba18043e0da96f",
+   "research_sha256": "7756480d540502c4a12f98ade99b645dca71bf6f53c7752fc3c132f5eb1440ca",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 8970,
+   "accepted": 324566,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
    "label": "496.16.6.a",
    "research_label": "496.16.6.a",
    "n": 496,
@@ -246,7 +315,7 @@
    "weight": 6,
    "count": 2140,
    "accepted": 2140,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "496.16.6.a",
@@ -272,7 +341,7 @@
    "weight": 7,
    "count": 13271112,
    "accepted": 13297315,
-   "how": "count mode, 4 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 4 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "512.39.8.a",
@@ -288,6 +357,115 @@
    "how": "every one of the 788035 3-dimensional subspaces and its 64 cosets (evidence/distances/data/flat512.json)"
   },
   {
+   "label": "512.39.8.a",
+   "research_label": "512.39.6.a",
+   "n": 512,
+   "k": 39,
+   "N": 85,
+   "columns_sha256": "18b286cb2cb00a88cadbffbd0957771f657ab73cd6fee494ec1e468c48665b80",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 50397952,
+   "accepted": 50434240,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": "512.84.8.a",
+   "research_label": "512.84.6.a",
+   "n": 512,
+   "k": 84,
+   "N": 130,
+   "columns_sha256": "add2ab66114569269379d8ebc9781df356afdb3051c603c9699aced885b4d941",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 50434240,
+   "accepted": 50434240,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 532,
+   "k": 16,
+   "N": 58,
+   "columns_sha256": "8122676ccc572053ecf156430a0d959a441a0e3a485a4072bdd96deb0f71ad9f",
+   "research_sha256": "55907d382d998a46553e3764945cb8885ed6da62bfa6266f457b88467ff4e34d",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 18465,
+   "accepted": 391207,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 574,
+   "k": 20,
+   "N": 62,
+   "columns_sha256": "b5f81d6027409cecf6f532ab8266e0ed0ab9be06937efa03e2c1cfd872151ab8",
+   "research_sha256": "9209962cab39c65ca029c5fb938e84c8c106d1852f5934c1dfd249bbf508c04a",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 36009,
+   "accepted": 470650,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 616,
+   "k": 24,
+   "N": 66,
+   "columns_sha256": "40292ebf7b3bddec467b6b1ba9a2362f7648e09a133dc054785a43ff05211e91",
+   "research_sha256": "63015a4f35396ef84669352e16248d227a2fb24e02c87a01b521ab273328ce38",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 67703,
+   "accepted": 568995,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 658,
+   "k": 28,
+   "N": 70,
+   "columns_sha256": "17f7c4f23bcaa438666c158c635b247f7c3571f82ac5b5e93ca31e68dc7c946a",
+   "research_sha256": "dac35a5ec890db927530994c91bb0fd3b489d5f61fd1894e662c249d9a042f58",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 118420,
+   "accepted": 691115,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 700,
+   "k": 32,
+   "N": 74,
+   "columns_sha256": "2661e527a85be6f79dcdcf32a2cdc3e603491b821221f5ab12f3dc576d977fe7",
+   "research_sha256": "0a5703b0cfd3a8df0c94fe95934b033a21705a5ab41917d479651ba44ac25e73",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 202355,
+   "accepted": 851205,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": "742.36.8.a",
+   "research_label": "742.36.6.a",
+   "n": 742,
+   "k": 36,
+   "N": 78,
+   "columns_sha256": "a4348bc8e0b996ac86c46491222def83bf939517af730b1c3fa508d397ddc940",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 331891,
+   "accepted": 1061648,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
    "label": "846.122.6.a",
    "research_label": "846.122.6.a",
    "n": 846,
@@ -298,7 +476,7 @@
    "weight": 6,
    "count": 44745,
    "accepted": 44751,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "846.122.6.a",
@@ -324,7 +502,7 @@
    "weight": 6,
    "count": 44664,
    "accepted": 44671,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "848.122.6.a",
@@ -350,7 +528,7 @@
    "weight": 6,
    "count": 47112,
    "accepted": 47113,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "850.126.6.a",
@@ -376,7 +554,7 @@
    "weight": 6,
    "count": 48762,
    "accepted": 48763,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "850.128.6.a",
@@ -402,7 +580,7 @@
    "weight": 6,
    "count": 47012,
    "accepted": 47013,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "852.126.6.a",
@@ -428,7 +606,7 @@
    "weight": 6,
    "count": 47982,
    "accepted": 47984,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "852.128.6.a",
@@ -454,7 +632,7 @@
    "weight": 6,
    "count": 46680,
    "accepted": 46681,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "854.124.6.a",
@@ -480,7 +658,7 @@
    "weight": 6,
    "count": 47103,
    "accepted": 47104,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "854.126.6.a",
@@ -506,7 +684,7 @@
    "weight": 6,
    "count": 47747,
    "accepted": 47749,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "854.128.6.a",
@@ -532,7 +710,7 @@
    "weight": 6,
    "count": 47827,
    "accepted": 47828,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "856.128.6.a",
@@ -558,7 +736,7 @@
    "weight": 6,
    "count": 48025,
    "accepted": 48027,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "858.128.6.a",
@@ -584,7 +762,7 @@
    "weight": 6,
    "count": 47737,
    "accepted": 47738,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "860.124.6.a",
@@ -610,7 +788,7 @@
    "weight": 6,
    "count": 47885,
    "accepted": 47888,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "860.126.6.a",
@@ -636,7 +814,7 @@
    "weight": 6,
    "count": 48337,
    "accepted": 48340,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "860.128.6.a",
@@ -662,7 +840,7 @@
    "weight": 6,
    "count": 56899,
    "accepted": 56899,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "896.128.6.a",
@@ -688,7 +866,7 @@
    "weight": 6,
    "count": 2781,
    "accepted": 2781,
-   "how": "count mode, 1 slice(s) summed before the division, 2 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 2 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "901.123.6.a",
@@ -714,7 +892,7 @@
    "weight": 6,
    "count": 2475,
    "accepted": 2475,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "902.122.6.a",
@@ -740,7 +918,7 @@
    "weight": 6,
    "count": 2555,
    "accepted": 2555,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "904.120.6.a",
@@ -766,7 +944,7 @@
    "weight": 6,
    "count": 2321,
    "accepted": 2321,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "905.119.6.a",
@@ -792,7 +970,7 @@
    "weight": 6,
    "count": 1958,
    "accepted": 1958,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "906.118.6.a",
@@ -818,7 +996,7 @@
    "weight": 6,
    "count": 1958,
    "accepted": 1958,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "907.117.6.a",
@@ -844,7 +1022,7 @@
    "weight": 6,
    "count": 1763,
    "accepted": 1763,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "908.116.6.a",
@@ -870,7 +1048,7 @@
    "weight": 6,
    "count": 1621,
    "accepted": 1621,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "909.115.6.a",
@@ -896,7 +1074,7 @@
    "weight": 6,
    "count": 1405,
    "accepted": 1405,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "910.114.6.a",
@@ -922,7 +1100,7 @@
    "weight": 6,
    "count": 1286,
    "accepted": 1286,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "911.113.6.a",
@@ -948,7 +1126,7 @@
    "weight": 6,
    "count": 1191,
    "accepted": 1191,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "912.112.6.a",
@@ -962,6 +1140,196 @@
    "count": 1191,
    "accepted": 1191,
    "how": "count mode (evidence/plan/data/A_d_counts.json); the plan cached the row by label from the catalogue at dadb221, and mitml's run on these columns gives the same count"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 930,
+   "k": 94,
+   "N": 176,
+   "columns_sha256": "80a80ce8a50be1f856ff5137431b791b0f4b54d7943d06a220c10d0b858a560d",
+   "research_sha256": "41eb2a9cefa5cebf0267607ce381313eab21a6cb563ebbd9f27d1878bec7bf43",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 7,
+   "count": 2769,
+   "accepted": 2769,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 930,
+   "k": 94,
+   "N": 176,
+   "columns_sha256": "9838ec3857c3a5b34c4353baa1a6005fb11408a3c8c2bfd7eb37bbb2a512ac4e",
+   "research_sha256": "8edc44a9350ca9b4c0df21dfab4aaa0ec4e768a87376b802d29208dc74f35474",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 7,
+   "count": 2760,
+   "accepted": 2760,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 930,
+   "k": 94,
+   "N": 176,
+   "columns_sha256": "d9d35447831b06b28cae5a80ea19313a85796240b9360a2ce50db3457c7a0ce4",
+   "research_sha256": "f34845ed1a187fcb28d46b3bfb5832965e7ceeb4d3b02f02ca00f6609fc45e4e",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 7,
+   "count": 3034,
+   "accepted": 3034,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 931,
+   "k": 93,
+   "N": 176,
+   "columns_sha256": "e5496ed6eb7200d463e2f0b66a9c7d362f580f0ce0e2f6e41ec89369eaf1d7c5",
+   "research_sha256": "83a91c80c53823b27ec5aac9eb84fd1ebe564989ae4fcb3ade90553ac77e807d",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 7,
+   "count": 2857,
+   "accepted": 2857,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 932,
+   "k": 92,
+   "N": 176,
+   "columns_sha256": "8a053282356e2747f8849240f45cdd9a38fc7784347d9b216034b16d04f56006",
+   "research_sha256": "0f5a3a310223b3d6fe9a720959ecc226feacaecefbd783b9a5d98859326bda6f",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 7,
+   "count": 2450,
+   "accepted": 2450,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 933,
+   "k": 91,
+   "N": 176,
+   "columns_sha256": "bc7e36767197f207938fb040bb9d8ef59b2d119f2de66f6a00a7ed9ebdd87e36",
+   "research_sha256": "6a25de9b4305908eda17b5e40744008bbb0e79e8631d954d35f07782efd79016",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 7,
+   "count": 2441,
+   "accepted": 2441,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": "935.89.7.a",
+   "research_label": "935.89.6.a",
+   "n": 935,
+   "k": 89,
+   "N": 176,
+   "columns_sha256": "33fe52c0d85eb9f90397f1e9e9a2cf32726c94aa9e967d4dd5b287112de60338",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 7,
+   "count": 1883,
+   "accepted": 1883,
+   "how": "count mode, 32 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": "936.88.7.a",
+   "research_label": "936.88.6.a",
+   "n": 936,
+   "k": 88,
+   "N": 176,
+   "columns_sha256": "3ac08541181f1472b393bf879556625a90f514f20e942637f8462c9c9358bc1d",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 7,
+   "count": 1784,
+   "accepted": 1784,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": "937.87.7.a",
+   "research_label": "937.87.6.a",
+   "n": 937,
+   "k": 87,
+   "N": 176,
+   "columns_sha256": "8df1288ab62f5bd55356e89e8f50a0773471a6a75cdece4f698cad1b630bf73e",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 7,
+   "count": 1598,
+   "accepted": 1598,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 954,
+   "k": 70,
+   "N": 176,
+   "columns_sha256": "c1007e22f538cf1467d9da3c257395ee8b97ca0eacf7fd93968f5bc011918cf9",
+   "research_sha256": "ff92d26dfec9fb2b7910a8fb98e3096c5b2f77a52eb6d825bc82b93d361ec9b0",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 3649,
+   "accepted": 3649,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": null,
+   "research_label": null,
+   "n": 955,
+   "k": 69,
+   "N": 176,
+   "columns_sha256": "8bb4bcea05d8c47d0642f338187c6f3551d38f634e7c85858089a0a0dfd1e8aa",
+   "research_sha256": "6627c613e4143b5ad7f678f339e9970638820da86c716f0bbe07d60ca90688de",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 3328,
+   "accepted": 3328,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": "959.65.8.a",
+   "research_label": "959.65.6.a",
+   "n": 959,
+   "k": 65,
+   "N": 176,
+   "columns_sha256": "4daa3821ca1c41745df779815e49e3bd81c7c86e89733a6f30c998372d4e2aee",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 1770,
+   "accepted": 1770,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": "988.36.7.a",
+   "research_label": "988.36.6.a",
+   "n": 988,
+   "k": 36,
+   "N": 176,
+   "columns_sha256": "63e6c574b26b1f346eca4798dcac780283a4ff827918ebd226fec888dff350b7",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 7,
+   "count": 400,
+   "accepted": 400,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
+  },
+  {
+   "label": "998.26.8.a",
+   "research_label": "998.26.6.a",
+   "n": 998,
+   "k": 26,
+   "N": 176,
+   "columns_sha256": "c7193dbd9a8efba2a54376d18edd7759bdf2febec411020af934417189893e3d",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "weight": 8,
+   "count": 70,
+   "accepted": 70,
+   "how": "count mode, 128 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "1675.373.4.a",
@@ -974,7 +1342,7 @@
    "weight": 4,
    "count": 792819,
    "accepted": 792819,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "1676.372.4.a",
@@ -987,7 +1355,7 @@
    "weight": 4,
    "count": 776378,
    "accepted": 776378,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
    "label": "1683.365.4.a",
@@ -1000,10 +1368,10 @@
    "weight": 4,
    "count": 712803,
    "accepted": 712803,
-   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 1 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   },
   {
-   "label": "1715.287.3.a",
+   "label": "1715.287.6.a",
    "research_label": "1715.287.3.a",
    "n": 1715,
    "k": 287,
@@ -1013,7 +1381,7 @@
    "weight": 6,
    "count": 49405,
    "accepted": 49416,
-   "how": "count mode, 4 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl)"
+   "how": "count mode, 4 slice(s) summed before the division, 1 run(s) (evidence/distances/data/counts.jsonl, validation.jsonl, zaratan/data/counts.jsonl)"
   }
  ]
 }

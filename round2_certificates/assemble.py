@@ -94,7 +94,9 @@ class Book:
     def __init__(self):
         self.rows = catalogue_rows()
         self.distance, self.counts, self.witnesses = [], [], []
-        self.circuits = {}                        # digest -> (label, n, k, N)
+        # research digest -> (label, n, k, N, stored digest)
+        self.circuits = {}
+        self.native = translations()
 
     def bind(self, label, digest):
         """The circuit a record speaks of: the catalogue row ``label`` names,
@@ -108,29 +110,82 @@ class Book:
             if got != digest:
                 raise AssertionError(f"{label}: the run's columns have SHA-256 "
                                      f"{digest[:16]}..., the row's {got[:16]}...")
-            self.circuits[digest] = (row["catalog_label"], row["n"], row["k"], row["N"])
+            self.circuits[digest] = (row["catalog_label"], row["n"], row["k"],
+                                     row["N"], digest)
             return row
-        return None
+        cons = self.native.get(digest)
+        if cons is None:
+            return None
+        stored = K.columns(cons)
+        self.circuits[digest] = (None, len(stored), cons["k"], cons["N"],
+                                 K.digest(stored))
+        return {"catalog_label": None, "columns": stored, "k": cons["k"],
+                "N": cons["N"], "n": len(stored), "construction": cons,
+                "native_position": native_position(cons)}
 
     def add_distance(self, digest, tool, bound, how, label=None):
-        lab, n, k, N = self.circuits[digest]
+        lab, n, k, N, stored = self.circuits[digest]
         self.distance.append({"label": lab, "research_label": label, "n": n,
-                              "k": k, "N": N, "columns_sha256": digest,
+                              "k": k, "N": N, "columns_sha256": stored,
+                              **({"research_sha256": digest} if stored != digest else {}),
                               "tool": tool, "lower_bound": bound, "how": how})
 
     def add_count(self, digest, tool, weight, count, accepted, how, label=None):
-        lab, n, k, N = self.circuits[digest]
+        lab, n, k, N, stored = self.circuits[digest]
         self.counts.append({"label": lab, "research_label": label, "n": n, "k": k,
-                            "N": N, "columns_sha256": digest, "tool": tool,
+                            "N": N, "columns_sha256": stored,
+                            **({"research_sha256": digest} if stored != digest else {}),
+                            "tool": tool,
                             "weight": weight, "count": count,
                             "accepted": accepted, "how": how})
 
     def add_witness(self, row, witness, found_by, label=None):
+        if "native_position" in row:      # a research column index -> stored
+            witness = sorted(row["native_position"][j] for j in witness)
         checks = recheck(row["columns"], row["k"], row["N"], witness)
         self.witnesses.append({"label": row["catalog_label"], "research_label": label,
                                "columns_sha256": K.digest(row["columns"]),
                                "witness": list(witness), "weight": len(witness),
                                "found_by": found_by, "checks": checks})
+
+
+def native_position(cons):
+    """For a construction, the stored (sorted) index of each column of the
+    research's own (native) order."""
+    import construction_rm as RM
+    import construction_sanjose as SJ
+    native = (SJ.build(cons)["columns"] if cons["family"] in SJ.FAMILIES
+              else RM.native_columns(cons))
+    where = {tuple(c): i for i, c in enumerate(K.columns(cons))}
+    return [where[tuple(c)] for c in native]
+
+
+def translations():
+    """The research's digest of its own column order -> the construction
+    object, for every research circuit the catalogue imports as a
+    construction: the San Jose circuits of `theorem_certificates/inputs.json`
+    (native order = `construction_sanjose.build`) and the Reed-Muller-type
+    circuits of `round1_certificates/evidence/research/native_digests.json`
+    and `evidence/weighted/circuits.json`, whose recorded research digest is
+    checked against the native order here."""
+    import construction_rm as RM
+    import construction_sanjose as SJ
+    out = {}
+    for item in json.loads((REPO / "theorem_certificates" / "inputs.json")
+                           .read_text())["circuits"]:
+        cons = item["construction"]
+        if cons["family"] in SJ.FAMILIES:
+            out[K.digest(SJ.build(cons)["columns"])] = cons
+    for path in (REPO / "round1_certificates" / "evidence" / "research" / "native_digests.json",
+                 EV / "weighted" / "circuits.json"):
+        for name, item in json.loads(path.read_text())["circuits"].items():
+            if "research_sha256" not in item:
+                continue
+            cons = item["construction"]
+            if K.digest(RM.native_columns(cons)) != item["research_sha256"]:
+                raise AssertionError(f"{name}: the native order is not the research's")
+            out[item["research_sha256"]] = cons
+    return out
 
 
 def swept_clean(runs, upto):
@@ -166,8 +221,10 @@ def assemble():
     book = Book()
     results = jsonl(DIST / "results.jsonl")
     mruns = jsonl(DIST / "data" / "mitml_runs.jsonl")
-    counts = jsonl(DIST / "data" / "counts.jsonl") + jsonl(DIST / "data" / "validation.jsonl")
-    trellis = jsonl(DIST / "data" / "trellis_counts.jsonl")
+    counts = (jsonl(DIST / "data" / "counts.jsonl") + jsonl(DIST / "data" / "validation.jsonl")
+              + jsonl(DIST / "data" / "zaratan" / "data" / "counts.jsonl"))
+    trellis = (jsonl(DIST / "data" / "trellis_counts.jsonl")
+               + jsonl(DIST / "data" / "zaratan" / "data" / "trellis_counts.jsonl"))
     plan_counts = {r["label"]: r for r in
                    json.loads((PLAN / "data" / "A_d_counts.json").read_text())["rows"]}
 
@@ -196,7 +253,8 @@ def assemble():
             book.add_count(digest, MITML, w, count, accepted,
                            f"count mode, {mine[0]['slices']} slice(s) summed "
                            f"before the division, {len(mine)} run(s) "
-                           f"(evidence/distances/data/counts.jsonl, validation.jsonl)",
+                           f"(evidence/distances/data/counts.jsonl, validation.jsonl, "
+                           f"zaratan/data/counts.jsonl)",
                            label)
         ours = [t for t in trellis if t["sha256"] == digest and t["W"] == w]
         for t in ours:
@@ -232,9 +290,10 @@ def assemble():
 
     # ---- lower bounds -----------------------------------------------------
     by_label = {r["label"]: r for r in results if r["kind"] == "distance"}
-    # mitml swept clean below d: 988 to weight 6, 177, 185, 189 to weight 8
-    for label, upto in (("988.36.6.a", 6), ("177.1.7.a", 8), ("185.1.7.a", 8),
-                        ("189.1.7.a", 8)):
+    # mitml swept clean below d: 988 to weight 6, 998 to weight 7 (the last on
+    # Zaratan), 177, 185, 189 to weight 8
+    for label, upto in (("988.36.6.a", 6), ("998.26.6.a", 7), ("177.1.7.a", 8),
+                        ("185.1.7.a", 8), ("189.1.7.a", 8)):
         digest = by_label[label]["sha256"]
         runs = [r for r in mruns + counts if r["sha256"] == digest and r["count"]]
         if not swept_clean(runs, upto):
@@ -245,7 +304,7 @@ def assemble():
                           label)
     # the trellis: A_w = 0 below W in every order it ran
     for label in ("177.1.7.a", "185.1.7.a", "189.1.7.a", "271.1.7.a",
-                  "279.1.7.a", "283.1.7.a", "401.1.6.a"):
+                  "279.1.7.a", "283.1.7.a", "401.1.6.a", "417.1.6.a"):
         digest = book.rows[label] and K.digest(book.rows[label]["columns"])
         ours = [t for t in trellis if t["sha256"] == digest]
         if not ours:
@@ -302,6 +361,19 @@ def assemble():
                       f"round2_certificates/evidence/own_sweep_1715.json), as the "
                       f"research's run of the same code at dadb221 found "
                       f"(evidence/plan/data/own_sweeps.jsonl)", "1715.287.3.a")
+    # faults at San Jose's bound on the GF(256) rows, found by sjfast on
+    # Zaratan and re-checked there; re-checked again here on the stored order
+    for rec in jsonl(DIST / "data" / "zaratan" / "sjfast_recheck.jsonl"):
+        if not rec.get("ok"):
+            continue
+        row = book.bind(None, rec["digest"])
+        if row is None:
+            raise AssertionError(f"{rec['id']}: no construction for this circuit")
+        if len(rec["witness"]) != rec["bound"]:
+            raise AssertionError(f"{rec['id']}: a fault off the bound")
+        book.add_witness(row, rec["witness"], f"sjfast on Zaratan, {rec['tag']} "
+                         f"(evidence/distances/data/zaratan/sjfast_recheck.jsonl)",
+                         rec["id"])
     # the weight-6 fault of 1715, found by mitml's count
     row = book.rows["1715.287.3.a"]
     c1715 = [c for c in counts if c["id"] == "1715.287.3.a" and c["w"] == 6]
@@ -311,7 +383,8 @@ def assemble():
 
 
 def payloads(book):
-    key = lambda r: (r["n"], r["k"], r["label"], r["tool"])         # noqa: E731
+    key = lambda r: (r["n"], r["k"], r["label"] or "", r["tool"],   # noqa: E731
+                     r["columns_sha256"])
     head = ("Records of the second-round distance search of 7 November 2026 "
             "(research branch, research/search2/distances at 2c3ce12) and of "
             "the plan's kernel (research/plan at 9932b15), copied to evidence/, "
@@ -327,7 +400,9 @@ def payloads(book):
                  "re-checked with faultcore and by the XOR of the wire masks.",
         "method": "exhaustive search",
         "records": sorted(book.distance, key=key),
-        "witnesses": sorted(book.witnesses, key=lambda r: (r["label"], r["weight"])),
+        "witnesses": sorted(book.witnesses, key=lambda r: (r["label"] or "",
+                                                           r["columns_sha256"],
+                                                           r["weight"])),
     }
     coefficients = {
         "about": head + " A count record states count, the number of harmful "
