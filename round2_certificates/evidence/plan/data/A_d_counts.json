@@ -1,0 +1,228 @@
+{
+ "method": "research/plan/mitm (exact meet-in-the-middle, count mode)",
+ "checks": {
+  "901.123.6.a": "2781 = campaign value (agent_context/02_RULES.md rule 7, 03_STATE.md)",
+  "902.122.6.a": "2475 = campaign value (same)",
+  "912.112.6.a": "1191 = Haah-Hastings published value (agent_context/09_BASELINES.md section 1)",
+  "496.16.6.a": "2140 = faultcore.scan_weight(6, want_count=True) with a raised budget (logs/b12_xcheck.log)"
+ },
+ "rows": [
+  {
+   "label": "496.16.6.a",
+   "d": 6,
+   "A_d": 2140,
+   "accepted": 2140,
+   "seconds": 3.1
+  },
+  {
+   "label": "846.122.6.a",
+   "d": 6,
+   "A_d": 44745,
+   "accepted": 44751,
+   "seconds": 21.29
+  },
+  {
+   "label": "848.122.6.a",
+   "d": 6,
+   "A_d": 44664,
+   "accepted": 44671,
+   "seconds": 21.61
+  },
+  {
+   "label": "850.126.6.a",
+   "d": 6,
+   "A_d": 47112,
+   "accepted": 47113,
+   "seconds": 21.87
+  },
+  {
+   "label": "850.128.6.a",
+   "d": 6,
+   "A_d": 48762,
+   "accepted": 48763,
+   "seconds": 21.68
+  },
+  {
+   "label": "852.126.6.a",
+   "d": 6,
+   "A_d": 47012,
+   "accepted": 47013,
+   "seconds": 21.95
+  },
+  {
+   "label": "852.128.6.a",
+   "d": 6,
+   "A_d": 47982,
+   "accepted": 47984,
+   "seconds": 22.15
+  },
+  {
+   "label": "854.124.6.a",
+   "d": 6,
+   "A_d": 46680,
+   "accepted": 46681,
+   "seconds": 22.7
+  },
+  {
+   "label": "854.126.6.a",
+   "d": 6,
+   "A_d": 47103,
+   "accepted": 47104,
+   "seconds": 22.72
+  },
+  {
+   "label": "854.128.6.a",
+   "d": 6,
+   "A_d": 47747,
+   "accepted": 47749,
+   "seconds": 22.07
+  },
+  {
+   "label": "856.128.6.a",
+   "d": 6,
+   "A_d": 47827,
+   "accepted": 47828,
+   "seconds": 22.38
+  },
+  {
+   "label": "858.128.6.a",
+   "d": 6,
+   "A_d": 48025,
+   "accepted": 48027,
+   "seconds": 22.63
+  },
+  {
+   "label": "860.124.6.a",
+   "d": 6,
+   "A_d": 47737,
+   "accepted": 47738,
+   "seconds": 23.11
+  },
+  {
+   "label": "860.126.6.a",
+   "d": 6,
+   "A_d": 47885,
+   "accepted": 47888,
+   "seconds": 23.62
+  },
+  {
+   "label": "860.128.6.a",
+   "d": 6,
+   "A_d": 48337,
+   "accepted": 48340,
+   "seconds": 24.03
+  },
+  {
+   "label": "896.128.6.a",
+   "d": 6,
+   "A_d": 56899,
+   "accepted": 56899,
+   "seconds": 26.69
+  },
+  {
+   "label": "901.123.6.a",
+   "d": 6,
+   "A_d": 2781,
+   "accepted": 2781,
+   "seconds": 27.72
+  },
+  {
+   "label": "902.122.6.a",
+   "d": 6,
+   "A_d": 2475,
+   "accepted": 2475,
+   "seconds": 27.1
+  },
+  {
+   "label": "904.120.6.a",
+   "d": 6,
+   "A_d": 2555,
+   "accepted": 2555,
+   "seconds": 27.58
+  },
+  {
+   "label": "905.119.6.a",
+   "d": 6,
+   "A_d": 2321,
+   "accepted": 2321,
+   "seconds": 27.69
+  },
+  {
+   "label": "906.118.6.a",
+   "d": 6,
+   "A_d": 1958,
+   "accepted": 1958,
+   "seconds": 27.58
+  },
+  {
+   "label": "907.117.6.a",
+   "d": 6,
+   "A_d": 1958,
+   "accepted": 1958,
+   "seconds": 27.71
+  },
+  {
+   "label": "908.116.6.a",
+   "d": 6,
+   "A_d": 1763,
+   "accepted": 1763,
+   "seconds": 27.84
+  },
+  {
+   "label": "909.115.6.a",
+   "d": 6,
+   "A_d": 1621,
+   "accepted": 1621,
+   "seconds": 28.12
+  },
+  {
+   "label": "910.114.6.a",
+   "d": 6,
+   "A_d": 1405,
+   "accepted": 1405,
+   "seconds": 27.96
+  },
+  {
+   "label": "911.113.6.a",
+   "d": 6,
+   "A_d": 1286,
+   "accepted": 1286,
+   "seconds": 28.34
+  },
+  {
+   "label": "912.112.6.a",
+   "d": 6,
+   "A_d": 1191,
+   "accepted": 1191,
+   "seconds": 28.88
+  },
+  {
+   "label": "255.3.7.a",
+   "d": 7,
+   "A_d": 85248,
+   "accepted": 97155,
+   "seconds": 4.62
+  },
+  {
+   "label": "255.4.7.a",
+   "d": 7,
+   "A_d": 91107,
+   "accepted": 97155,
+   "seconds": 4.72
+  },
+  {
+   "label": "255.5.7.a",
+   "d": 7,
+   "A_d": 93488,
+   "accepted": 97155,
+   "seconds": 4.63
+  },
+  {
+   "label": "255.6.7.a",
+   "d": 7,
+   "A_d": 97155,
+   "accepted": 97155,
+   "seconds": 4.7
+  }
+ ]
+}

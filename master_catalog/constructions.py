@@ -42,6 +42,24 @@ THE FAMILIES
     output-only gates (``B`` empty) left out, written again here from the
     definition rather than imported; `borrowed_identities/tests/test_unified.py`
     compares the two on every level-3 row of the upstream large sweep.
+
+``san-jose-grs``, ``san-jose-curve``
+    San Jose's factories: an outer code over GF(2^m) (a generalised
+    Reed-Solomon code, or the one-point code of the curve y^t + y = x^e) is
+    punctured at a chosen set of coordinates and mapped to binary through an
+    inner map.  Built by `construction_sanjose.py`, which also holds the
+    distance theorem ``d >= deg + 2 - P`` and `hypothesis_check`, a check of
+    its hypotheses from the binary columns alone.
+
+``punctured-rm``, ``punctured-weighted-rm``, ``ccz-frame``, ``four-block``
+    Reed-Muller-type families, built by `construction_rm.py`: the puncture
+    construction of Haah and Hastings on RM(r, m); the same on Wills's weighted
+    Reed-Muller codes; the CCZ frame on F_2^(3q), with `packing_check` and
+    `frame_check` for its theorem's hypotheses; and the four-block family of
+    the catalogue's second-round search.
+
+Each family module keeps the contract above: its `columns` returns the sorted
+order, and its `problems` bounds every field before anything is built.
 """
 from __future__ import annotations
 
@@ -49,13 +67,21 @@ import hashlib
 import json
 from itertools import combinations
 
-FAMILIES = ("two-group",)
+import construction_rm as _RM
+import construction_sanjose as _SJ
+
+#: The family modules, by family name.
+_MODULES = {**{name: _SJ for name in _SJ.FAMILIES},
+            **{name: _RM for name in _RM.FAMILIES}}
+
+FAMILIES = ("two-group",) + tuple(_MODULES)
 
 #: The fields of each family's construction object and their meaning, which
 #: the large file's header repeats so a reader of the JSON alone can rebuild a
 #: circuit.
 FAMILY_FIELDS = {
     "two-group": ("k", "N", "s_total", "s_O"),
+    **{name: tuple(module.FAMILIES[name]) for name, module in _MODULES.items()},
 }
 FAMILY_DESCRIPTIONS = {
     "two-group": (
@@ -64,6 +90,7 @@ FAMILY_DESCRIPTIONS = {
         "non-empty set B of checks with (|A| = 0 or |A| = 1 mod s_O) and "
         "|A| + |B| = 1 mod s_total; columns sorted ascending, then the list "
         "sorted lexicographically"),
+    **{name: module.DESCRIPTIONS[name] for name, module in _MODULES.items()},
 }
 
 #: Bounds that keep a malformed construction from being expanded at all: a
@@ -86,6 +113,8 @@ def problems(construction) -> list[str]:
     if family not in FAMILIES:
         return [f"unknown construction family {family!r}; this catalogue "
                 f"knows {', '.join(FAMILIES)}"]
+    if family in _MODULES:
+        return list(_MODULES[family].problems(construction))
     fields = FAMILY_FIELDS[family]
     found = [name for name in construction if name != "family"]
     if sorted(found) != sorted(fields):
@@ -111,6 +140,8 @@ def columns(construction) -> list[list[int]]:
     if wrong:
         raise ValueError("; ".join(wrong))
     family = construction["family"]
+    if family in _MODULES:
+        return _MODULES[family].columns(construction)
     if family == "two-group":
         return _two_group(construction["k"], construction["N"],
                           construction["s_total"], construction["s_O"])

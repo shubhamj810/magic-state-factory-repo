@@ -202,13 +202,19 @@ REQUIRED_FIELDS = (
 #: consumer that wants only what the sweep proved reads ``d_sweep_floor`` where
 #: it is present and ``d`` elsewhere.  ``former_labels`` lists the labels a row
 #: had before its ``d`` changed, so that old citations of them still resolve.
+#: ``A_d_evidence`` (``[{"file", "tool"}, ...]``) names the evidence files of
+#: an ``A_d`` that another program counted exactly where `errorcoeff` does
+#: not reach: each file holds a record bound to the circuit by the SHA-256 of
+#: its columns with the weight ``d`` and that count.  `verify_catalog` checks
+#: the binding and recounts wherever `errorcoeff` reaches.
 #: `verify_catalog.certificate_problems` checks that the fields come together,
 #: that the evidence exists and is bound to the circuit, and that a
 #: certificate says nothing against what the sweep proved.
 OPTIONAL_FIELDS = ("sk_key_note", "t_count_note", "poly_degree_note",
                    "columns_note", "dedup_note",
                    "d_certified", "d_certified_is_exact", "d_certified_source",
-                   "d_certified_evidence", "d_sweep_floor", "former_labels")
+                   "d_certified_evidence", "d_sweep_floor", "former_labels",
+                   "A_d_evidence")
 
 #: Where a row's circuit is stored, not what it is: carried by exactly the rows
 #: of the large file (see the module docstring), both or neither.  Kept apart
@@ -246,7 +252,7 @@ FIELD_TYPES = {
     "columns_note": "str", "dedup_note": "str",
     "d_certified": "int", "d_certified_is_exact": "bool",
     "d_certified_source": "str", "d_certified_evidence": ["dict"],
-    "d_sweep_floor": "int", "former_labels": ["str"],
+    "d_sweep_floor": "int", "former_labels": ["str"], "A_d_evidence": ["dict"],
     "d_is_exact": "bool", "sk_canonical_frame": "bool",
     "relabelled_into_canonical_frame": "bool",
     "columns": [["int"]], "sk_key": [["int"]],

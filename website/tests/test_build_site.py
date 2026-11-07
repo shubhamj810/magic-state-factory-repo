@@ -214,10 +214,18 @@ class TheBuiltSite(unittest.TestCase):
             self.assertIn(f"A_{{{d}}}={a_d}", text)
             panel = text.split('id="distance-panel">', 1)[1].split("</div>", 1)[0]
             self.assertIn(f"Exactly {a_d} faults of weight {d}", panel)
-        floor = next(f for f in self.index["factories"] if not f["d_is_exact"])
-        self.assertIsNone(floor["A_d"])
-        text = (self.out / "f" / floor["id"] / "index.html").read_text(encoding="utf-8")
-        self.assertIn("Undefined while the distance is only a lower bound.", text)
+        # every row whose distance is only a floor (there may be none: on
+        # 2026-11-07 every row of the catalogue was exact for a while)
+        for floor in [f for f in self.index["factories"] if not f["d_is_exact"]][:20]:
+            self.assertIsNone(floor["A_d"])
+            text = (self.out / "f" / floor["id"] / "index.html").read_text(encoding="utf-8")
+            self.assertIn("Undefined while the distance is only a lower bound.", text)
+        # a count from another program names its tool and file
+        counted = next(f for f in self.index["factories"] if f["A_d"] is not None
+                       and self.row_of(f).get("A_d_evidence"))
+        text = (self.out / "f" / counted["id"] / "index.html").read_text(encoding="utf-8")
+        for entry in self.row_of(counted)["A_d_evidence"]:
+            self.assertIn(entry["file"], text)
 
     def test_a_met_certificate_reads_as_the_distance(self):
         """A source's lower bound that the row's own fault meets is shown as

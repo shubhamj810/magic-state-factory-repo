@@ -137,8 +137,12 @@ class TestRejections(unittest.TestCase):
         self.assertIn("A_d-mismatch", [kind for kind, _ in problems])
 
     def test_count_on_a_floor(self):
-        row = copy.deepcopy(next(r for r in Fixtures.rows()
-                                 if not r["d_is_exact"]))
+        row = next((r for r in Fixtures.rows() if not r["d_is_exact"]), None)
+        if row is None:
+            # no floor in the catalogue: make one from an exact row
+            row = dict(Fixtures.row("15.1.3.a"), d_is_exact=False, d_upper=None,
+                       d_witness=None)
+        row = copy.deepcopy(row)
         row["A_d"] = 1
         _facts, problems = VC.verify_row(row)
         self.assertIn("A_d-mismatch", [kind for kind, _ in problems])

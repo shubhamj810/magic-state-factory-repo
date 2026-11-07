@@ -883,7 +883,10 @@ NOTE_FIELDS = ("sk_key_note", "t_count_note", "poly_degree_note",
                # the candidate does not match.  ``former_labels`` is about the
                # label, which an improvement keeps, so it stays.
                "d_certified", "d_certified_is_exact", "d_certified_source",
-               "d_certified_evidence", "d_sweep_floor")
+               "d_certified_evidence", "d_sweep_floor",
+               # an A_d counted elsewhere is a count of the circuit it was
+               # counted on, so it goes with that circuit too
+               "A_d_evidence")
 
 
 def improve(incumbent, candidate, regimes):

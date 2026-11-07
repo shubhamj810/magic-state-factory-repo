@@ -82,7 +82,7 @@ nothing about them.
 ## Summary
 
 - output widths: `k=1`: 126, `k=2`: 149, `k=3`: 200, `k=4`: 217, `k=5`: 250, `k=6`: 245, `k=7`: 151, `k=8`: 137, `k=9`: 133, `k=10`: 114, `k=11`: 81, `k=12`: 76, `k=13`: 11, `k=14`: 10, `k=15`: 12, `k=16`: 11, `k=17`: 8, `k=18`: 2, `k=19`: 6, `k=20`: 2, `k=21`: 3, `k=22`: 1, `k=23`: 2, `k=24`: 1, `k=25`: 1, `k=26`: 4, `k=27`: 3, `k=28`: 6, `k=29`: 5, `k=30`: 2, `k=31`: 2, `k=32`: 2, `k=35`: 2, `k=36`: 4, `k=37`: 2, `k=39`: 1, `k=40`: 7, `k=41`: 6, `k=42`: 4, `k=43`: 4, `k=44`: 2, `k=46`: 2, `k=47`: 1, `k=59`: 1, `k=64`: 1, `k=65`: 1, `k=68`: 1, `k=70`: 3, `k=71`: 2, `k=72`: 1, `k=73`: 2, `k=76`: 1, `k=77`: 1, `k=80`: 5, `k=81`: 4, `k=82`: 2, `k=83`: 1, `k=84`: 2, `k=85`: 2, `k=86`: 2, `k=87`: 2, `k=88`: 2, `k=89`: 2, `k=92`: 1, `k=94`: 1, `k=99`: 1, `k=100`: 4, `k=101`: 3, `k=102`: 2, `k=104`: 1, `k=112`: 1, `k=113`: 1, `k=114`: 1, `k=115`: 1, `k=116`: 2, `k=117`: 1, `k=118`: 1, `k=119`: 1, `k=120`: 1, `k=122`: 3, `k=123`: 1, `k=124`: 2, `k=126`: 4, `k=128`: 7, `k=132`: 2, `k=137`: 1, `k=144`: 1, `k=145`: 1, `k=146`: 1, `k=152`: 1, `k=153`: 1, `k=154`: 1, `k=161`: 1, `k=162`: 2, `k=171`: 1, `k=176`: 1, `k=177`: 1, `k=184`: 1, `k=185`: 1, `k=189`: 1, `k=194`: 1, `k=197`: 1, `k=199`: 1, `k=201`: 1, `k=210`: 1, `k=224`: 1, `k=287`: 1, `k=365`: 1, `k=372`: 1, `k=373`: 1
-- distances: `d=2`: 1233, `d=3`: 636, `d=4`: 89, `d=5`: 70, `d=6`: 34, `d=7`: 11, `d=8`: 5, `d=9`: 3, `d=11`: 3, `d=13`: 3, `d=15`: 3, `d=17`: 3, `d=19`: 3, `d=21`: 3, `d=23`: 3, `d=25`: 3, `d=27`: 3, `d=29`: 3, `d=31`: 3 (2109 pinned exactly, the rest proved floors)
+- distances: `d=2`: 1233, `d=3`: 635, `d=4`: 89, `d=5`: 70, `d=6`: 34, `d=7`: 11, `d=8`: 5, `d=9`: 4, `d=11`: 3, `d=13`: 3, `d=15`: 3, `d=17`: 3, `d=19`: 3, `d=21`: 3, `d=23`: 3, `d=25`: 3, `d=27`: 3, `d=29`: 3, `d=31`: 3 (2114 pinned exactly, the rest proved floors)
 - exact minimal T-count reaches **17** (927 rows are too wide for it to be computed)
 - injection counts from `n=8` to `n=262142`
 
@@ -1271,7 +1271,7 @@ entries are under [References](#references).
 | 1151 | `584.8.2.a` | `[[584,8,2]]` | sweep | — | 13 | `0+1+2+3+4+5+6+7` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1152 | `589.9.2.a` | `[[589,9,2]]` | sweep | — | 14 | `0+1+2+3+4+5+6+7+8+01+02+03+04+05+06+0…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1153 | `595.9.2.a` | `[[595,9,2]]` | sweep | — | 16 | `0+1+2+3+4+5+6+7+8` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1154 | `599.1.15.a` | `[[599,1,15]]` | theorem | 15 | 154 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
+| 1154 | `599.1.15.a` | `[[599,1,15]]` | theorem and exhaustive search | 15 | 154 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 1155 | `599.9.2.a` | `[[599,9,2]]` | sweep | — | 15 | `0+1+2+3+4+5+6+7+8` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1156 | `606.162.3.a` | `[[606,162,3]]` | sweep | — | 174 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1157 | `617.7.2.a` | `[[617,7,2]]` | sweep | — | 15 | `0+1+2+3+4+5+6` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1327,12 +1327,12 @@ entries are under [References](#references).
 | 1207 | `727.201.3.a` | `[[727,201,3]]` | sweep | — | 213 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1208 | `728.10.2.a` | `[[728,10,2]]` | sweep | — | 17 | `012+013+014+015+016+017+018+019+023+0…` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1209 | `739.5.2.a` | `[[739,5,2]]` | sweep | — | 13 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1210 | `742.36.8.a` | `[[742,36,8]]` | exhaustive search | 8 | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1210 | `742.36.8.a` | `[[742,36,8]]` | theorem and exhaustive search | 8 | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1211 | `743.9.2.a` | `[[743,9,2]]` | sweep | — | 13 | `0+1+2+3+4+5+6+7+8` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1212 | `750.210.3.a` | `[[750,210,3]]` | sweep | — | 221 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1213 | `756.10.2.a` | `[[756,10,2]]` | sweep | — | 16 | `01+02+03+04+05+06+07+08+09+12+13+14+1…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1214 | `756.11.2.a` | `[[756,11,2]]` | sweep | — | 17 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1215 | `756.32.6.a` | `[[756,32,≥6]]` | sweep | ≥9 | 80 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1215 | `756.32.9.a` | `[[756,32,9]]` | theorem | 9 | 80 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1216 | `757.11.2.a` | `[[757,11,2]]` | sweep | — | 18 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1217 | `758.10.2.a` | `[[758,10,2]]` | sweep | — | 17 | `0+1+2+3+4+5+6+7+8+9` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1218 | `761.1.17.a` | `[[761,1,17]]` | theorem | 17 | 195 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
@@ -1405,8 +1405,8 @@ entries are under [References](#references).
 | 1285 | `911.113.6.a` | `[[911,113,6]]` | sweep | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1286 | `912.112.6.a` | `[[912,112,6]]` | sweep | — | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
 | 1287 | `916.6.2.a` | `[[916,6,2]]` | sweep | — | 14 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1288 | `935.89.7.a` | `[[935,89,≥7]]` | exhaustive search | ≥7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1289 | `936.88.7.a` | `[[936,88,≥7]]` | exhaustive search | ≥7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1288 | `935.89.7.a` | `[[935,89,7]]` | exhaustive search | 7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1289 | `936.88.7.a` | `[[936,88,7]]` | exhaustive search | 7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1290 | `937.87.7.a` | `[[937,87,7]]` | exhaustive search | 7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search | [Haah & Hastings (2018)](https://doi.org/10.22331/q-2018-06-07-71) |
 | 1291 | `945.7.2.a` | `[[945,7,2]]` | sweep | — | 13 | `0+1+2+3+4+5+6+01+02+03+04+05+06+12+13…` | — | — | none | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1292 | `946.5.2.a` | `[[946,5,2]]` | sweep | — | 14 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -1417,7 +1417,7 @@ entries are under [References](#references).
 | 1297 | `967.1.19.a` | `[[967,1,19]]` | theorem | 19 | 247 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
 | 1298 | `983.1.19.a` | `[[983,1,19]]` | theorem | 19 | 251 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 1299 | `988.36.7.a` | `[[988,36,7]]` | exhaustive search | 7 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1300 | `998.26.8.a` | `[[998,26,≥8]]` | exhaustive search | ≥8 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1300 | `998.26.8.a` | `[[998,26,8]]` | exhaustive search | 8 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: Wills downset framework | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1301 | `1008.6.2.a` | `[[1008,6,2]]` | sweep | — | 13 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1302 | `1009.7.2.a` | `[[1009,7,2]]` | sweep | — | 15 | `0+1+2+3+4+5+6` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1303 | `1011.1.19.a` | `[[1011,1,19]]` | theorem | 19 | 258 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
@@ -1521,7 +1521,7 @@ entries are under [References](#references).
 | 1401 | `1676.372.4.a` | `[[1676,372,4]]` | exhaustive search | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1402 | `1679.1.23.a` | `[[1679,1,23]]` | theorem | 23 | 426 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: weak triply even family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
 | 1403 | `1683.365.4.a` | `[[1683,365,4]]` | exhaustive search | 4 | 397 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 1404 | `1715.287.3.a` | `[[1715,287,≥3]]` | sweep | 6 | 329 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1404 | `1715.287.6.a` | `[[1715,287,6]]` | exhaustive search | 6 | 329 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1405 | `1756.6.2.a` | `[[1756,6,2]]` | sweep | — | 15 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1406 | `1785.5.2.a` | `[[1785,5,2]]` | sweep | — | 13 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1407 | `1785.6.2.a` | `[[1785,6,2]]` | sweep | — | 14 | `0+1+2+3+4+5` | 6 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -18360,7 +18360,8 @@ SHA-256 of those columns.
 - `N = 47` (1 output + 46 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 9, witnessed by the fault on columns [30, 71, 96, 97, 98, 109, 110, 113, 126]
 - the lower bound `d >= 9` is certified (theorem and exhaustive search); the sweep here proves `d >= 7`; formerly `177.1.7.a`
-- certified distance: `d = 9`, from A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[41,1,9]] code doubled onto [[95,1,7]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 9; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 177.1.7.a); independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the dense dynamic programme of tropidist's pipeline (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; at b03ec2d4), config dp=2,table_gb=16, 8 threads, 5 s, peak 0.1 GiB (evidence/zaratan/dp_records/zaratan_t2c.jsonl): d = 9, a lower bound of 9 met by a fault of weight 9 (zaratan_certificates/certificates.json, record 177.1.7.a); the evidence is in `transversal_t_codes/distance_certificates.json`, `tropidist_certificates/certificates.json`, `zaratan_certificates/certificates.json`
+- leading error coefficient: `A_9 = 2172877` accepted harmful faults of weight 9
+- certified distance: `d = 9`, from A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[41,1,9]] code doubled onto [[95,1,7]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 9; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 177.1.7.a); independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the dense dynamic programme of tropidist's pipeline (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; at b03ec2d4), config dp=2,table_gb=16, 8 threads, 5 s, peak 0.1 GiB (evidence/zaratan/dp_records/zaratan_t2c.jsonl): d = 9, a lower bound of 9 met by a fault of weight 9 (zaratan_certificates/certificates.json, record 177.1.7.a); the evidence is in `transversal_t_codes/distance_certificates.json`, `tropidist_certificates/certificates.json`, `zaratan_certificates/certificates.json`, `round2_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: none
 - discovery: pre-existing
 - regime: Gong doubling: triply even family — a code of the triply even family of A. Gong (note in github.com/gongaa/RM127, triply-even/; transversal_t_codes/): her doubly even self-dual [[41,1,9]] and [[65,1,13]] codes and quantum QR codes doubled onto [[95,1,7]], rebuilt here from her self-dual codes, where T on every qubit is a logical T or T-dagger; a verified witness, not a maximum
@@ -18473,7 +18474,8 @@ SHA-256 of those columns.
 - `N = 49` (1 output + 48 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 9, witnessed by the fault on columns [26, 71, 93, 116, 136, 147, 149, 156, 163]
 - the lower bound `d >= 9` is certified (theorem and exhaustive search); the sweep here proves `d >= 7`; formerly `185.1.7.a`
-- certified distance: `d = 9`, from Jain and Albert (arXiv:2408.12752), Table I: [[45,1,9]] code of the self-dual [46,23,10] code sub(XQ47) doubled onto [[95,1,7]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 9, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 185.1.7.a); the evidence is in `transversal_t_codes/distance_certificates.json`, `tropidist_certificates/certificates.json`
+- leading error coefficient: `A_9 = 2245345` accepted harmful faults of weight 9
+- certified distance: `d = 9`, from Jain and Albert (arXiv:2408.12752), Table I: [[45,1,9]] code of the self-dual [46,23,10] code sub(XQ47) doubled onto [[95,1,7]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 9, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 185.1.7.a); the evidence is in `transversal_t_codes/distance_certificates.json`, `tropidist_certificates/certificates.json`, `round2_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 4`, `Z on 5`, `Z on 8`, `Z on 9`, `Z on 11`, `Z on 12`, `Z on 15`, `Z on 18`, `Z on 20`, `Z on 48`, `CZ on (1,48)` and 9 more (11 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 4, 6, 8, 9, 11, 13, 14, 16, 17, 18, 19 and 16 more, `T` on the rest
 - discovery: pre-existing
@@ -18596,7 +18598,8 @@ SHA-256 of those columns.
 - `N = 50` (1 output + 49 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 9, witnessed by the fault on columns [41, 88, 94, 95, 105, 107, 109, 120, 136]
 - the lower bound `d >= 9` is certified (theorem and exhaustive search); the sweep here proves `d >= 7`; formerly `189.1.7.a`
-- certified distance: `d = 9`, from Jain and Albert (arXiv:2408.12752), Table II: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[95,1,7]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 9, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 189.1.7.a); the evidence is in `transversal_t_codes/distance_certificates.json`, `tropidist_certificates/certificates.json`
+- leading error coefficient: `A_9 = 2286315` accepted harmful faults of weight 9
+- certified distance: `d = 9`, from Jain and Albert (arXiv:2408.12752), Table II: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[95,1,7]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 9, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 9, a lower bound of 9 met by a fault of weight 9 (tropidist_certificates/certificates.json, record 189.1.7.a); the evidence is in `transversal_t_codes/distance_certificates.json`, `tropidist_certificates/certificates.json`, `round2_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 49`, `CZ on (0,49)`
 - or no correction at all, with rotations run as `T†` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 82 more, `T` on the rest
 - discovery: pre-existing
@@ -19987,6 +19990,7 @@ SHA-256 of those columns.
 - output gate: `012`
 - `N = 38` (3 outputs + 35 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 7, witnessed by the fault on columns [28, 37, 84, 138, 148, 154, 159]
+- leading error coefficient: `A_7 = 85248` accepted harmful faults of weight 7
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,6)`, `CZ on (0,7)`, `CZ on (0,8)`, `CZ on (0,12)`, `CZ on (0,14)`, `CZ on (0,16)`, `CZ on (0,17)`, `CZ on (0,19)` and 37 more (2 single-wire, 47 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -20019,6 +20023,7 @@ SHA-256 of those columns.
 - output gate: `0+123`
 - `N = 39` (4 outputs + 35 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 7, witnessed by the fault on columns [28, 37, 84, 138, 148, 154, 159]
+- leading error coefficient: `A_7 = 91107` accepted harmful faults of weight 7
 - Clifford correction, every rotation a `T`: `S on 0`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,9)`, `CZ on (0,16)`, `CZ on (0,17)`, `CZ on (0,18)`, `CZ on (0,19)`, `CZ on (0,22)`, `CZ on (0,24)` and 61 more (1 single-wire, 72 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -20051,6 +20056,7 @@ SHA-256 of those columns.
 - output gate: `012+034`
 - `N = 41` (5 outputs + 36 checks), exact minimal T-count 11, reduced degree 3
 - distance: exactly 7, witnessed by the fault on columns [28, 37, 84, 138, 148, 154, 159]
+- leading error coefficient: `A_7 = 93488` accepted harmful faults of weight 7
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (0,9)`, `CZ on (0,16)`, `CZ on (0,18)` and 72 more (4 single-wire, 80 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -20082,6 +20088,7 @@ SHA-256 of those columns.
 - output gate: `0+1+01+012+013+014+015+023+024+025+123+124+135+145+235+245`
 - `N = 41` (6 outputs + 35 checks), exact minimal T-count 7, reduced degree 3
 - distance: exactly 7, witnessed by the fault on columns [28, 37, 84, 138, 148, 154, 159]
+- leading error coefficient: `A_7 = 97155` accepted harmful faults of weight 7
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 3`, `Z on 4`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,4)`, `CZ on (0,5)`, `CZ on (0,8)`, `CZ on (0,10)`, `CZ on (0,12)` and 126 more (4 single-wire, 134 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -20482,7 +20489,8 @@ SHA-256 of those columns.
 - `N = 71` (1 output + 70 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 11, witnessed by the fault on columns [0, 47, 94, 135, 176, 199, 222, 239, 256, 263, 270]
 - the lower bound `d >= 11` is certified (theorem and exhaustive search); the sweep here proves `d >= 7`; formerly `271.1.7.a`
-- certified distance: `d = 11`, from A. Gong (github.com/gongaa/RM127, triply-even/): [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[177,1,9]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 11; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 11, a lower bound of 11 met by a fault of weight 11 (tropidist_certificates/certificates.json, record 271.1.7.a); the evidence is in `transversal_t_codes/distance_certificates.json`, `tropidist_certificates/certificates.json`
+- leading error coefficient: `A_11 = 106552995` accepted harmful faults of weight 11
+- certified distance: `d = 11`, from A. Gong (github.com/gongaa/RM127, triply-even/): [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[177,1,9]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 11; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 11, a lower bound of 11 met by a fault of weight 11 (tropidist_certificates/certificates.json, record 271.1.7.a); the evidence is in `transversal_t_codes/distance_certificates.json`, `tropidist_certificates/certificates.json`, `round2_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S on 0`
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: pre-existing
@@ -20545,7 +20553,8 @@ SHA-256 of those columns.
 - `N = 73` (1 output + 72 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 11, witnessed by the fault on columns [0, 47, 94, 139, 184, 207, 230, 247, 264, 271, 278]
 - the lower bound `d >= 11` is certified (theorem and exhaustive search); the sweep here proves `d >= 7`; formerly `279.1.7.a`
-- certified distance: `d = 11`, from Jain and Albert (arXiv:2408.12752), Table I: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[185,1,9]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 11, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 11, a lower bound of 11 met by a fault of weight 11 (tropidist_certificates/certificates.json, record 279.1.7.a); the evidence is in `transversal_t_codes/distance_certificates.json`, `tropidist_certificates/certificates.json`
+- leading error coefficient: `A_11 = 109958991` accepted harmful faults of weight 11
+- certified distance: `d = 11`, from Jain and Albert (arXiv:2408.12752), Table I: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[185,1,9]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 11, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 11, a lower bound of 11 met by a fault of weight 11 (tropidist_certificates/certificates.json, record 279.1.7.a); the evidence is in `transversal_t_codes/distance_certificates.json`, `tropidist_certificates/certificates.json`, `round2_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 24`, `Z on 27`, `Z on 28`, `Z on 31`, `Z on 32`, `Z on 34`, `Z on 35`, `Z on 38`, `Z on 41`, `Z on 43`, `Z on 71` and 10 more (12 single-wire, 10 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 51, 55, 58, 62, 63, 64, 67, 68, 69, 71, 72, 73 and 96 more; `T†` on columns 0, 1, 2, 3, 5, 6, 7, 9, 10, 12, 13, 14 and 3 more, `T` on the rest
 - discovery: pre-existing
@@ -20689,7 +20698,8 @@ SHA-256 of those columns.
 - `N = 74` (1 output + 73 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 11, witnessed by the fault on columns [0, 47, 94, 141, 188, 211, 234, 251, 268, 275, 282]
 - the lower bound `d >= 11` is certified (theorem and exhaustive search); the sweep here proves `d >= 7`; formerly `283.1.7.a`
-- certified distance: `d = 11`, from Jain and Albert (arXiv:2408.12752), Table II: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[189,1,9]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 11, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 11, a lower bound of 11 met by a fault of weight 11 (tropidist_certificates/certificates.json, record 283.1.7.a); the evidence is in `transversal_t_codes/distance_certificates.json`, `tropidist_certificates/certificates.json`
+- leading error coefficient: `A_11 = 111884581` accepted harmful faults of weight 11
+- certified distance: `d = 11`, from Jain and Albert (arXiv:2408.12752), Table II: [[47,1,11]] quantum QR code (extended QR [48,24,12]) doubled onto [[189,1,9]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 11, with d_sd at least the classical distance less one (their Lemma 2.4); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 11, a lower bound of 11 met by a fault of weight 11 (tropidist_certificates/certificates.json, record 283.1.7.a); the evidence is in `transversal_t_codes/distance_certificates.json`, `tropidist_certificates/certificates.json`, `round2_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 72`, `Z on 73`, `CZ on (0,72)`, `CZ on (72,73)`
 - or no correction at all, with rotations run as `T†` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 177 more, `T` on the rest
 - discovery: pre-existing
@@ -21849,7 +21859,8 @@ SHA-256 of those columns.
 - `N = 104` (1 output + 103 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 13, witnessed by the fault on columns [0, 65, 130, 177, 224, 265, 306, 329, 352, 369, 386, 393, 400]
 - the lower bound `d >= 13` is certified (theorem and exhaustive search); the sweep here proves `d >= 6`; formerly `401.1.6.a`
-- certified distance: `d = 13`, from A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[65,1,13]] code doubled onto [[271,1,11]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 13; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 13, a lower bound of 13 met by a fault of weight 13 (tropidist_certificates/certificates.json, record 401.1.6.a); the evidence is in `transversal_t_codes/distance_certificates.json`, `tropidist_certificates/certificates.json`
+- leading error coefficient: `A_13 = 6958671715` accepted harmful faults of weight 13
+- certified distance: `d = 13`, from A. Gong (github.com/gongaa/RM127, triply-even/): Gong's doubly even self-dual [[65,1,13]] code doubled onto [[271,1,11]]; the doubling theorem (Jain and Albert, arXiv:2408.12752, Sec. III) gives d >= min(d_sd, d_tri + 2) = 13; the distances of Gong's self-dual [[41,1,9]] and [[65,1,13]] codes are proved here by enumerating every word of their stabiliser spaces; independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 13, a lower bound of 13 met by a fault of weight 13 (tropidist_certificates/certificates.json, record 401.1.6.a); the evidence is in `transversal_t_codes/distance_certificates.json`, `tropidist_certificates/certificates.json`, `round2_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: none
 - discovery: pre-existing
 - regime: Gong doubling: triply even family — a code of the triply even family of A. Gong (note in github.com/gongaa/RM127, triply-even/; transversal_t_codes/): her doubly even self-dual [[41,1,9]] and [[65,1,13]] codes and quantum QR codes doubled onto [[95,1,7]], rebuilt here from her self-dual codes, where T on every qubit is a logical T or T-dagger; a verified witness, not a maximum
@@ -22725,6 +22736,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15`
 - `N = 78` (16 outputs + 62 checks)
 - distance: exactly 6, witnessed by the fault on columns [253, 271, 355, 373, 396, 479]
+- leading error coefficient: `A_6 = 2140` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 4 more (16 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -23136,6 +23148,7 @@ SHA-256 of those columns.
 - `N = 36` (9 outputs + 27 checks)
 - distance: exactly 7, witnessed by the fault on columns [34, 149, 303, 331, 365, 369, 381]
 - the lower bound `d >= 7` is certified (exhaustive search); the sweep here proves `d >= 6`; formerly `511.9.6.a`
+- leading error coefficient: `A_7 = 13271112` accepted harmful faults of weight 7
 - certified distance: `d = 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 7, a lower bound of 7 met by a fault of weight 7 (tropidist_certificates/certificates.json, record 511.9.6.a); the evidence is in `tropidist_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S on 4`, `Z on 5`, `Z on 7`, `CZ on (0,1)`, `CZ on (0,2)`, `CZ on (0,3)`, `CZ on (0,6)`, `CZ on (0,7)` and 137 more (7 single-wire, 142 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
@@ -23359,6 +23372,7 @@ SHA-256 of those columns.
 - `N = 85` (39 outputs + 46 checks)
 - distance: exactly 8, witnessed by the fault on columns [5, 142, 188, 213, 243, 382, 416, 463]
 - the lower bound `d >= 8` is certified (exhaustive search); the sweep here proves `d >= 6`; formerly `512.39.6.a`
+- leading error coefficient: `A_8 = 50397952` accepted harmful faults of weight 8
 - certified distance: `d = 8`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 8, a lower bound of 8 met by a fault of weight 8 (tropidist_certificates/certificates.json, record 512.39.6.a); the evidence is in `tropidist_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: none
 - discovery: AI search
@@ -24038,8 +24052,8 @@ SHA-256 of those columns.
 - output gate: `0`
 - `N = 154` (1 output + 153 checks), exact minimal T-count 1, reduced degree 1
 - distance: exactly 15, witnessed by the fault on columns [0, 79, 158, 237, 316, 363, 410, 457, 504, 527, 550, 567, 584, 591, 598]
-- the lower bound `d >= 15` is certified (theorem); the sweep here proves `d >= 6`; formerly `599.1.6.a`
-- certified distance: `d = 15`, from Jain and Albert (arXiv:2408.12752), Table II: [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[441,1,13]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 15, with d_sd at least the classical distance less one (their Lemma 2.4); the evidence is in `transversal_t_codes/distance_certificates.json`
+- the lower bound `d >= 15` is certified (theorem and exhaustive search); the sweep here proves `d >= 6`; formerly `599.1.6.a`
+- certified distance: `d = 15`, from Jain and Albert (arXiv:2408.12752), Table II: [[79,1,15]] quantum QR code (extended QR [80,40,16]) doubled onto [[441,1,13]]; the doubling theorem of their Sec. III gives d >= min(d_sd, d_tri + 2) = 15, with d_sd at least the classical distance less one (their Lemma 2.4); the evidence is in `transversal_t_codes/distance_certificates.json`, `round2_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 150`, `Z on 151`, `S† on 152`, `CZ on (0,150)`, `CZ on (0,152)`, `CZ on (150,151)`, `CZ on (150,152)`, `CZ on (150,153)`, `CZ on (152,153)`
 - or no correction at all, with rotations run as `T†` on columns 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 335 more, `T` on the rest
 - discovery: pre-existing
@@ -24958,8 +24972,8 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35`
 - `N = 78` (36 outputs + 42 checks)
 - distance: exactly 8, witnessed by the fault on columns [0, 14, 168, 249, 434, 534, 569, 660]
-- the lower bound `d >= 8` is certified (exhaustive search); the sweep here proves `d >= 6`; formerly `742.36.6.a`
-- certified distance: `d = 8`, from gamma frontier release record weighted_sources_742_36_8 (gamma_frontier_release/frontier.json, distance_kind lower_bound, Z distance); independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the meet-in-the-middle kernel research/plan/mitm/mitm.c, weights 1 to 7 swept clean; tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) at one threshold, threshold 7 exhausted over all anchors, Zaratan run zaratan-j4: d = 8, a lower bound of 8 met by a fault of weight 8 (zaratan_certificates/certificates.json, record 742.36.6.a); the evidence is in `zaratan_certificates/certificates.json`
+- the lower bound `d >= 8` is certified (theorem and exhaustive search); the sweep here proves `d >= 6`; formerly `742.36.6.a`
+- certified distance: `d = 8`, from gamma frontier release record weighted_sources_742_36_8 (gamma_frontier_release/frontier.json, distance_kind lower_bound, Z distance); independently, runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of the meet-in-the-middle kernel research/plan/mitm/mitm.c, weights 1 to 7 swept clean; tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) at one threshold, threshold 7 exhausted over all anchors, Zaratan run zaratan-j4: d = 8, a lower bound of 8 met by a fault of weight 8 (zaratan_certificates/certificates.json, record 742.36.6.a); the evidence is in `zaratan_certificates/certificates.json`, `theorem_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `S on 13`, `S on 14`, `Z on 15` and 1587 more (42 single-wire, 1557 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -25040,12 +25054,13 @@ SHA-256 of those columns.
 
 - 756 columns — see `master_catalog.json`, `factories[1213]`
 
-### 1215. `[[756,32,≥6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31
+### 1215. `[[756,32,9]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31`
 - `N = 80` (32 outputs + 48 checks)
-- distance: proved `d >= 6`
-- certified distance: `d >= 9`, from gamma frontier release record weighted_sources_756_32_9 (gamma_frontier_release/frontier.json, distance_kind lower_bound, Z distance); not used for `d`, which is what the sweep here proves
+- distance: exactly 9, witnessed by the fault on columns [90, 115, 177, 226, 316, 466, 487, 564, 672]
+- the lower bound `d >= 9` is certified (theorem); the sweep here proves `d >= 6`; formerly `756.32.6.a`
+- certified distance: `d = 9`, from gamma frontier release record weighted_sources_756_32_9 (gamma_frontier_release/frontier.json, distance_kind lower_bound, Z distance); since 2026-11-07 the row's d: the columns are San Jose's GRS construction (arXiv:2609.08203) over GF(64), L = 62, degree 15, P = 8, whose theorem gives d >= 9, its hypotheses checked from the columns (theorem_certificates/), and a fault of weight 9 found by the research's sparse-cells search and re-checked; the evidence is in `theorem_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `S on 13`, `S on 14`, `Z on 15` and 1677 more (40 single-wire, 1649 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
@@ -25520,6 +25535,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121`
 - `N = 161` (122 outputs + 39 checks)
 - distance: exactly 6, witnessed by the fault on columns [94, 127, 443, 517, 552, 621]
+- leading error coefficient: `A_6 = 44745` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 277 more (153 single-wire, 136 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 10, 11, 12, 16, 18, 22, 25, 27, 28, 32, 33 and 353 more; `T⁵` on columns 2, 4, 23, 26, 29, 35, 36, 39, 45, 46, 47, 51 and 29 more; `T†` on columns 1, 3, 6, 8, 9, 15, 19, 20, 21, 30, 37, 42 and 25 more, `T` on the rest
 - discovery: AI search
@@ -25536,6 +25552,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121`
 - `N = 162` (122 outputs + 40 checks)
 - distance: exactly 6, witnessed by the fault on columns [153, 272, 487, 576, 700, 789]
+- leading error coefficient: `A_6 = 44664` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 137 more (149 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 10, 11, 12, 16, 18, 22, 25, 27, 28, 32, 33 and 354 more; `T⁵` on columns 2, 4, 23, 26, 29, 35, 36, 39, 45, 46, 47, 51 and 30 more; `T†` on columns 1, 3, 6, 8, 9, 15, 19, 20, 21, 30, 37, 42 and 25 more, `T` on the rest
 - discovery: AI search
@@ -25552,6 +25569,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125`
 - `N = 165` (126 outputs + 39 checks)
 - distance: exactly 6, witnessed by the fault on columns [193, 209, 320, 538, 729, 833]
+- leading error coefficient: `A_6 = 47112` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 190 more (149 single-wire, 53 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 4, 5, 9, 10, 12, 16, 21, 22, 26, 28, 29 and 349 more; `T⁵` on columns 3, 6, 11, 14, 15, 18, 25, 27, 35, 46, 49, 54 and 27 more; `T†` on columns 0, 1, 7, 8, 13, 17, 20, 32, 34, 50, 56, 58 and 21 more, `T` on the rest
 - discovery: AI search
@@ -25568,6 +25586,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127`
 - `N = 166` (128 outputs + 38 checks)
 - distance: exactly 6, witnessed by the fault on columns [38, 244, 369, 478, 567, 695]
+- leading error coefficient: `A_6 = 48762` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `S on 8`, `Z on 9`, `S on 10`, `Z on 11` and 2593 more (150 single-wire, 2455 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 9, 15, 16, 25, 28, 30, 35, 37, 40, 45, 53 and 350 more; `T⁵` on columns 4, 5, 8, 10, 11, 14, 20, 24, 32, 34, 39, 42 and 38 more; `T†` on columns 12, 13, 21, 23, 26, 27, 33, 36, 38, 44, 46, 48 and 27 more, `T` on the rest
 - discovery: AI search
@@ -25584,6 +25603,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125`
 - `N = 166` (126 outputs + 40 checks)
 - distance: exactly 6, witnessed by the fault on columns [209, 390, 427, 499, 538, 605]
+- leading error coefficient: `A_6 = 47012` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 165 more (149 single-wire, 28 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 4, 5, 9, 10, 12, 16, 21, 22, 26, 28, 29 and 350 more; `T⁵` on columns 3, 6, 11, 14, 15, 18, 25, 27, 35, 46, 49, 54 and 28 more; `T†` on columns 0, 1, 7, 8, 13, 17, 20, 32, 34, 50, 56, 58 and 21 more, `T` on the rest
 - discovery: AI search
@@ -25600,6 +25620,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127`
 - `N = 167` (128 outputs + 39 checks)
 - distance: exactly 6, witnessed by the fault on columns [49, 324, 362, 539, 647, 690]
+- leading error coefficient: `A_6 = 47982` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `S on 8`, `Z on 9`, `S on 10`, `Z on 11` and 2578 more (150 single-wire, 2440 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 15, 16, 21, 25, 26, 27, 33, 37, 40, 50, 53, 54 and 350 more; `T⁵` on columns 0, 1, 2, 5, 17, 20, 24, 29, 41, 42, 43, 47 and 28 more; `T†` on columns 7, 9, 12, 13, 23, 28, 30, 35, 36, 38, 44, 45 and 28 more, `T` on the rest
 - discovery: AI search
@@ -25616,6 +25637,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123`
 - `N = 166` (124 outputs + 42 checks)
 - distance: exactly 6, witnessed by the fault on columns [194, 235, 345, 456, 732, 837]
+- leading error coefficient: `A_6 = 46680` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 135 more (147 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 4, 8, 11, 13, 15, 17, 19, 22, 26, 28, 32 and 370 more; `T⁵` on columns 2, 9, 12, 21, 24, 33, 34, 42, 43, 45, 50, 51 and 22 more; `T†` on columns 1, 5, 6, 10, 16, 18, 27, 30, 36, 41, 49, 53 and 27 more, `T` on the rest
 - discovery: AI search
@@ -25632,6 +25654,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125`
 - `N = 167` (126 outputs + 41 checks)
 - distance: exactly 6, witnessed by the fault on columns [194, 235, 345, 456, 732, 837]
+- leading error coefficient: `A_6 = 47103` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 136 more (148 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 3, 4, 6, 13, 14, 16, 18, 27, 29, 30, 32 and 348 more; `T⁵` on columns 7, 9, 15, 20, 22, 23, 25, 28, 35, 38, 41, 45 and 26 more; `T†` on columns 0, 2, 10, 11, 12, 19, 21, 24, 26, 31, 37, 43 and 24 more, `T` on the rest
 - discovery: AI search
@@ -25648,6 +25671,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127`
 - `N = 168` (128 outputs + 40 checks)
 - distance: exactly 6, witnessed by the fault on columns [65, 170, 307, 415, 596, 848]
+- leading error coefficient: `A_6 = 47747` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `S on 8`, `Z on 9`, `S on 10`, `Z on 11` and 2574 more (150 single-wire, 2436 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 13, 14, 21, 22, 27, 33, 34, 36, 38, 41, 42, 44 and 357 more; `T⁵` on columns 5, 6, 11, 15, 18, 20, 25, 30, 39, 40, 46, 47 and 27 more; `T†` on columns 2, 3, 7, 8, 16, 17, 26, 31, 32, 48, 51, 63 and 30 more, `T` on the rest
 - discovery: AI search
@@ -25664,6 +25688,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127`
 - `N = 169` (128 outputs + 41 checks)
 - distance: exactly 6, witnessed by the fault on columns [29, 130, 228, 346, 446, 563]
+- leading error coefficient: `A_6 = 47827` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 164 more (147 single-wire, 29 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 3, 7, 14, 16, 17, 21, 26, 32, 33, 38, 45 and 359 more; `T⁵` on columns 0, 10, 11, 12, 24, 25, 28, 29, 30, 40, 46, 52 and 27 more; `T†` on columns 8, 13, 22, 27, 31, 34, 36, 41, 42, 44, 48, 53 and 29 more, `T` on the rest
 - discovery: AI search
@@ -25680,6 +25705,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127`
 - `N = 170` (128 outputs + 42 checks)
 - distance: exactly 6, witnessed by the fault on columns [38, 86, 353, 463, 509, 838]
+- leading error coefficient: `A_6 = 48025` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 163 more (147 single-wire, 28 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 19, 22, 32, 41, 46, 56, 60, 73, 76, 82 and 336 more; `T⁵` on columns 12, 13, 14, 15, 16, 21, 27, 28, 34, 35, 37, 42 and 38 more; `T†` on columns 1, 4, 8, 9, 11, 17, 18, 20, 26, 30, 33, 36 and 29 more, `T` on the rest
 - discovery: AI search
@@ -25696,6 +25722,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123`
 - `N = 169` (124 outputs + 45 checks)
 - distance: exactly 6, witnessed by the fault on columns [217, 295, 548, 622, 768, 842]
+- leading error coefficient: `A_6 = 47737` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 132 more (144 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 7, 13, 24, 25, 27, 31, 34, 38, 39, 45, 46 and 347 more; `T⁵` on columns 0, 2, 5, 10, 12, 14, 15, 16, 19, 22, 28, 30 and 31 more; `T†` on columns 3, 6, 17, 18, 20, 26, 32, 33, 37, 40, 41, 54 and 29 more, `T` on the rest
 - discovery: AI search
@@ -25712,6 +25739,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125`
 - `N = 170` (126 outputs + 44 checks)
 - distance: exactly 6, witnessed by the fault on columns [217, 295, 548, 622, 768, 842]
+- leading error coefficient: `A_6 = 47885` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 133 more (145 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 7, 14, 18, 26, 29, 30, 31, 37, 38, 40, 43 and 351 more; `T⁵` on columns 2, 5, 6, 10, 24, 27, 28, 32, 33, 34, 41, 42 and 29 more; `T†` on columns 0, 1, 9, 11, 15, 17, 22, 23, 35, 46, 50, 53 and 32 more, `T` on the rest
 - discovery: AI search
@@ -25728,6 +25756,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127`
 - `N = 171` (128 outputs + 43 checks)
 - distance: exactly 6, witnessed by the fault on columns [217, 295, 548, 622, 768, 842]
+- leading error coefficient: `A_6 = 48337` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 134 more (146 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 4, 17, 18, 19, 22, 26, 32, 33, 36, 41, 47 and 339 more; `T⁵` on columns 5, 6, 12, 23, 25, 28, 29, 31, 35, 37, 42, 45 and 35 more; `T†` on columns 1, 3, 8, 9, 11, 20, 30, 38, 46, 58, 59, 61 and 27 more, `T` on the rest
 - discovery: AI search
@@ -26012,6 +26041,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127`
 - `N = 189` (128 outputs + 61 checks)
 - distance: exactly 6, witnessed by the fault on columns [124, 346, 414, 527, 687, 756]
+- leading error coefficient: `A_6 = 56899` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 116 more (128 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26028,6 +26058,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122`
 - `N = 176` (123 outputs + 53 checks)
 - distance: exactly 6, witnessed by the fault on columns [0, 10, 48, 501, 692, 699]
+- leading error coefficient: `A_6 = 2781` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 111 more (123 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26044,6 +26075,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121`
 - `N = 176` (122 outputs + 54 checks)
 - distance: exactly 6, witnessed by the fault on columns [0, 3, 53, 296, 573, 862]
+- leading error coefficient: `A_6 = 2475` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 110 more (122 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26060,6 +26092,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119`
 - `N = 176` (120 outputs + 56 checks)
 - distance: exactly 6, witnessed by the fault on columns [0, 7, 155, 419, 455, 775]
+- leading error coefficient: `A_6 = 2555` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 108 more (120 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26076,6 +26109,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118`
 - `N = 176` (119 outputs + 57 checks)
 - distance: exactly 6, witnessed by the fault on columns [0, 49, 86, 294, 587, 838]
+- leading error coefficient: `A_6 = 2321` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 107 more (119 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26092,6 +26126,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117`
 - `N = 176` (118 outputs + 58 checks)
 - distance: exactly 6, witnessed by the fault on columns [0, 4, 254, 420, 668, 708]
+- leading error coefficient: `A_6 = 1958` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 106 more (118 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26108,6 +26143,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116`
 - `N = 176` (117 outputs + 59 checks)
 - distance: exactly 6, witnessed by the fault on columns [0, 1, 63, 117, 310, 367]
+- leading error coefficient: `A_6 = 1958` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 105 more (117 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26124,6 +26160,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115`
 - `N = 176` (116 outputs + 60 checks)
 - distance: exactly 6, witnessed by the fault on columns [0, 27, 152, 245, 399, 783]
+- leading error coefficient: `A_6 = 1763` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 104 more (116 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26141,6 +26178,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114`
 - `N = 176` (115 outputs + 61 checks)
 - distance: exactly 6, witnessed by the fault on columns [0, 27, 152, 245, 399, 783]
+- leading error coefficient: `A_6 = 1621` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 103 more (115 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26174,6 +26212,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113`
 - `N = 176` (114 outputs + 62 checks)
 - distance: exactly 6, witnessed by the fault on columns [0, 53, 374, 417, 455, 909]
+- leading error coefficient: `A_6 = 1405` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 102 more (114 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26190,6 +26229,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112`
 - `N = 176` (113 outputs + 63 checks)
 - distance: exactly 6, witnessed by the fault on columns [0, 31, 206, 322, 353, 578]
+- leading error coefficient: `A_6 = 1286` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 101 more (113 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26206,6 +26246,7 @@ SHA-256 of those columns.
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111`
 - `N = 176` (112 outputs + 64 checks)
 - distance: exactly 6, witnessed by the fault on columns [0, 31, 206, 323, 354, 579]
+- leading error coefficient: `A_6 = 1191` accepted harmful faults of weight 6
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 100 more (112 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26233,13 +26274,13 @@ SHA-256 of those columns.
 
 - 916 columns — see `master_catalog.json`, `factories[1286]`
 
-### 1288. `[[935,89,≥7]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88
+### 1288. `[[935,89,7]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88`
 - `N = 176` (89 outputs + 87 checks)
-- distance: proved `d >= 7`
+- distance: exactly 7, witnessed by the fault on columns [0, 28, 165, 175, 254, 282, 927]
 - the lower bound `d >= 7` is certified (exhaustive search); the sweep here proves `d >= 6`; formerly `935.89.6.a`
-- certified distance: `d >= 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 935.89.6.a); the evidence is in `tropidist_certificates/certificates.json`
+- certified distance: `d = 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 935.89.6.a); a fault of weight 7, found by the research's sweeps and re-checked, makes it exact (round2_certificates/certificates.json); the evidence is in `tropidist_certificates/certificates.json`, `round2_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 77 more (89 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26251,13 +26292,13 @@ SHA-256 of those columns.
 
 - 935 columns — see `master_catalog.json`, `factories[1287]`
 
-### 1289. `[[936,88,≥7]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87
+### 1289. `[[936,88,7]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87`
 - `N = 176` (88 outputs + 88 checks)
-- distance: proved `d >= 7`
+- distance: exactly 7, witnessed by the fault on columns [0, 3, 117, 120, 448, 502, 934]
 - the lower bound `d >= 7` is certified (exhaustive search); the sweep here proves `d >= 6`; formerly `936.88.6.a`
-- certified distance: `d >= 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 936.88.6.a); the evidence is in `tropidist_certificates/certificates.json`
+- certified distance: `d = 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 936.88.6.a); a fault of weight 7, found by the research's sweeps and re-checked, makes it exact (round2_certificates/certificates.json); the evidence is in `tropidist_certificates/certificates.json`, `round2_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 76 more (88 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26424,7 +26465,7 @@ SHA-256 of those columns.
 - `N = 176` (36 outputs + 140 checks)
 - distance: exactly 7, witnessed by the fault on columns [0, 1, 2, 3, 4, 5, 6]
 - the lower bound `d >= 7` is certified (exhaustive search); the sweep here proves `d >= 6`; formerly `988.36.6.a`
-- certified distance: `d = 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 988.36.6.a); a fault of weight 7 found on Zaratan (zaratan_certificates/certificates.json) meets it; the evidence is in `tropidist_certificates/certificates.json`
+- certified distance: `d = 7`, from tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d >= 7 (tropidist_certificates/certificates.json, record 988.36.6.a); a fault of weight 7 found on Zaratan (zaratan_certificates/certificates.json) meets it; the evidence is in `tropidist_certificates/certificates.json`, `round2_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 24 more (36 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -26436,13 +26477,13 @@ SHA-256 of those columns.
 
 - 988 columns — see `master_catalog.json`, `factories[1298]`
 
-### 1300. `[[998,26,≥8]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25
+### 1300. `[[998,26,8]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25`
 - `N = 176` (26 outputs + 150 checks)
-- distance: proved `d >= 8`
+- distance: exactly 8, witnessed by the fault on columns [15, 64, 72, 245, 260, 307, 315, 323]
 - the lower bound `d >= 8` is certified (exhaustive search); the sweep here proves `d >= 6`; formerly `998.26.6.a`
-- certified distance: `d >= 8`, from runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) at one threshold, threshold 7 exhausted over all anchors, Zaratan run zaratan-j4: d >= 8 (zaratan_certificates/certificates.json, record 998.26.6.a); the evidence is in `zaratan_certificates/certificates.json`
+- certified distance: `d = 8`, from runs on the UMD cluster Zaratan and on a laptop, 6 November 2026, of tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) at one threshold, threshold 7 exhausted over all anchors, Zaratan run zaratan-j4: d >= 8 (zaratan_certificates/certificates.json, record 998.26.6.a); a fault of weight 8, found by the research's sweeps and re-checked, makes it exact (round2_certificates/certificates.json); the evidence is in `zaratan_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 14 more (26 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
@@ -28046,6 +28087,7 @@ SHA-256 of those columns.
 - `N = 397` (373 outputs + 24 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 3, 31, 890]
 - the lower bound `d >= 4` is certified (exhaustive search); the sweep here proves `d >= 3`; formerly `1675.373.3.a`
+- leading error coefficient: `A_4 = 792819` accepted harmful faults of weight 4
 - certified distance: `d = 4`, from gamma frontier release record one_heavy_large_1675_373_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 4, a lower bound of 4 met by a fault of weight 4 (tropidist_certificates/certificates.json, record 1675.373.3.a); the evidence is in `tropidist_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 361 more (373 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
@@ -28064,6 +28106,7 @@ SHA-256 of those columns.
 - `N = 397` (372 outputs + 25 checks)
 - distance: exactly 4, witnessed by the fault on columns [0, 52, 808, 1097]
 - the lower bound `d >= 4` is certified (exhaustive search); the sweep here proves `d >= 3`; formerly `1676.372.3.a`
+- leading error coefficient: `A_4 = 776378` accepted harmful faults of weight 4
 - certified distance: `d = 4`, from gamma frontier release record one_heavy_large_1676_372_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 4, a lower bound of 4 met by a fault of weight 4 (tropidist_certificates/certificates.json, record 1676.372.3.a); the evidence is in `tropidist_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 360 more (372 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
@@ -28098,6 +28141,7 @@ SHA-256 of those columns.
 - `N = 397` (365 outputs + 32 checks)
 - distance: exactly 4, witnessed by the fault on columns [1, 7, 8, 863]
 - the lower bound `d >= 4` is certified (exhaustive search); the sweep here proves `d >= 3`; formerly `1683.365.3.a`
+- leading error coefficient: `A_4 = 712803` accepted harmful faults of weight 4
 - certified distance: `d = 4`, from gamma frontier release record one_heavy_large_1683_365_4 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance); independently, tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; github.com/Fanerst/tropidist at b03ec2d4) run here on 6 November 2026: d = 4, a lower bound of 4 met by a fault of weight 4 (tropidist_certificates/certificates.json, record 1683.365.3.a); the evidence is in `tropidist_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 353 more (365 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
@@ -28110,12 +28154,14 @@ SHA-256 of those columns.
 
 - 1683 columns — see `master_catalog.json`, `factories[1402]`
 
-### 1404. `[[1715,287,≥3]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200·T201·T202·T203·T204·T205·T206·T207·T208·T209·T210·T211·T212·T213·T214·T215·T216·T217·T218·T219·T220·T221·T222·T223·T224·T225·T226·T227·T228·T229·T230·T231·T232·T233·T234·T235·T236·T237·T238·T239·T240·T241·T242·T243·T244·T245·T246·T247·T248·T249·T250·T251·T252·T253·T254·T255·T256·T257·T258·T259·T260·T261·T262·T263·T264·T265·T266·T267·T268·T269·T270·T271·T272·T273·T274·T275·T276·T277·T278·T279·T280·T281·T282·T283·T284·T285·T286
+### 1404. `[[1715,287,6]]` — T0·T1·T2·T3·T4·T5·T6·T7·T8·T9·T10·T11·T12·T13·T14·T15·T16·T17·T18·T19·T20·T21·T22·T23·T24·T25·T26·T27·T28·T29·T30·T31·T32·T33·T34·T35·T36·T37·T38·T39·T40·T41·T42·T43·T44·T45·T46·T47·T48·T49·T50·T51·T52·T53·T54·T55·T56·T57·T58·T59·T60·T61·T62·T63·T64·T65·T66·T67·T68·T69·T70·T71·T72·T73·T74·T75·T76·T77·T78·T79·T80·T81·T82·T83·T84·T85·T86·T87·T88·T89·T90·T91·T92·T93·T94·T95·T96·T97·T98·T99·T100·T101·T102·T103·T104·T105·T106·T107·T108·T109·T110·T111·T112·T113·T114·T115·T116·T117·T118·T119·T120·T121·T122·T123·T124·T125·T126·T127·T128·T129·T130·T131·T132·T133·T134·T135·T136·T137·T138·T139·T140·T141·T142·T143·T144·T145·T146·T147·T148·T149·T150·T151·T152·T153·T154·T155·T156·T157·T158·T159·T160·T161·T162·T163·T164·T165·T166·T167·T168·T169·T170·T171·T172·T173·T174·T175·T176·T177·T178·T179·T180·T181·T182·T183·T184·T185·T186·T187·T188·T189·T190·T191·T192·T193·T194·T195·T196·T197·T198·T199·T200·T201·T202·T203·T204·T205·T206·T207·T208·T209·T210·T211·T212·T213·T214·T215·T216·T217·T218·T219·T220·T221·T222·T223·T224·T225·T226·T227·T228·T229·T230·T231·T232·T233·T234·T235·T236·T237·T238·T239·T240·T241·T242·T243·T244·T245·T246·T247·T248·T249·T250·T251·T252·T253·T254·T255·T256·T257·T258·T259·T260·T261·T262·T263·T264·T265·T266·T267·T268·T269·T270·T271·T272·T273·T274·T275·T276·T277·T278·T279·T280·T281·T282·T283·T284·T285·T286
 
 - output gate: `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78+79+80+81+82+83+84+85+86+87+88+89+90+91+92+93+94+95+96+97+98+99+100+101+102+103+104+105+106+107+108+109+110+111+112+113+114+115+116+117+118+119+120+121+122+123+124+125+126+127+128+129+130+131+132+133+134+135+136+137+138+139+140+141+142+143+144+145+146+147+148+149+150+151+152+153+154+155+156+157+158+159+160+161+162+163+164+165+166+167+168+169+170+171+172+173+174+175+176+177+178+179+180+181+182+183+184+185+186+187+188+189+190+191+192+193+194+195+196+197+198+199+200+201+202+203+204+205+206+207+208+209+210+211+212+213+214+215+216+217+218+219+220+221+222+223+224+225+226+227+228+229+230+231+232+233+234+235+236+237+238+239+240+241+242+243+244+245+246+247+248+249+250+251+252+253+254+255+256+257+258+259+260+261+262+263+264+265+266+267+268+269+270+271+272+273+274+275+276+277+278+279+280+281+282+283+284+285+286`
 - `N = 329` (287 outputs + 42 checks)
-- distance: proved `d >= 3`
-- certified distance: `d = 6`, from gamma frontier release record simultaneous_physical_contraction_logical_repair_1715_287_6 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance); not used for `d`, which is what the sweep here proves
+- distance: exactly 6, witnessed by the fault on columns [0, 423, 572, 851, 998, 1433]
+- the lower bound `d >= 6` is certified (exhaustive search); the sweep here proves `d >= 3`; formerly `1715.287.3.a`
+- leading error coefficient: `A_6 = 49405` accepted harmful faults of weight 6
+- certified distance: `d = 6`, from gamma frontier release record simultaneous_physical_contraction_logical_repair_1715_287_6 (gamma_frontier_release/frontier.json, distance_kind exact, Z distance); since 2026-11-07 the row's d: weights 1 to 5 swept clean by the plan's meet-in-the-middle kernel and by this catalogue's own sweep at a raised budget, and a fault of weight 6 found by mitml and re-checked (round2_certificates/); the evidence is in `round2_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S on 5`, `S on 6`, `S on 7`, `S† on 8`, `S on 9`, `S† on 10`, `S on 11` and 27126 more (317 single-wire, 26821 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 5, 7, 11, 14, 16, 20, 24, 25, 28, 33 and 747 more; `T⁵` on columns 2, 9, 15, 17, 19, 26, 30, 32, 34, 39, 40, 42 and 65 more; `T†` on columns 3, 4, 8, 12, 13, 18, 22, 35, 41, 46, 48, 50 and 79 more, `T` on the rest
 - discovery: AI search

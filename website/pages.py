@@ -595,7 +595,15 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
         + (f"<p>Exactly {a_d:,} faults of weight {d} are undetectable and damaging, so "
            f"{tex(f'A_{{{d}}}={a_d_tex}')}. If each rotation fails independently "
            f"with probability {tex('p')}, an accepted run has a damaged output with probability "
-           f"{tex(f'A_{{{d}}}\\,p^{{{d}}}+O(p^{{{d + 1}}})')}.</p>" if a_d is not None else
+           f"{tex(f'A_{{{d}}}\\,p^{{{d}}}+O(p^{{{d + 1}}})')}.</p>"
+           + (f'<p class="small">{tex(f"A_{{{d}}}")} was counted exactly by '
+              + esc("; ".join(dict.fromkeys(e["tool"] for e in dist["A_d_evidence"])))
+              + ". The record is in this repository ("
+              + ", ".join(f"<code>{esc(f)}</code>" for f in dict.fromkeys(
+                  e["file"] for e in dist["A_d_evidence"]))
+              + "), and the catalogue's verifier recounts the number wherever its own "
+                "counter reaches.</p>"
+              if dist.get("A_d_evidence") else "") if a_d is not None else
            f"<p class=\"small muted\">The number of such faults of weight {d}, {tex(f'A_{{{d}}}')}, is not "
            f"computed: there are too many to count at this size.</p>" if dist["is_exact"] else "")
         + (f'<p class="small">A damaging fault of weight {dist["upper"]}'

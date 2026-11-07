@@ -711,23 +711,146 @@ def confirm_distance(columns, k, N, d, d_is_exact, d_witness, d_upper,
     return problems
 
 
-def error_coefficient_problems(columns, row):
-    """Re-count ``A_d`` and compare it with the row (see `errorcoeff`)."""
+def error_coefficient_problems(columns, row, evidence_root=None):
+    """Re-count ``A_d`` and compare it with the row (see `errorcoeff`).
+
+    Where `errorcoeff` reaches, its count must equal the stored ``A_d``,
+    whatever evidence the row cites.  Where it does not, a stored ``A_d`` must
+    rest on ``A_d_evidence`` that `coefficient_evidence_problems` accepts: a
+    record of another program's exact count, bound to this circuit.
+    """
     stored = row["A_d"]
+    problems = coefficient_evidence_problems(row, evidence_root) \
+        if "A_d_evidence" in row else []
     if not row["d_is_exact"]:
         if stored is not None:
-            return [("A_d-mismatch", f"A_d={stored} on a floor d >= {row['d']}: "
-                                     f"the lighter weights are not all proved "
-                                     f"clean, so there is no leading coefficient")]
-        return []
+            problems.append(("A_d-mismatch",
+                             f"A_d={stored} on a floor d >= {row['d']}: the "
+                             f"lighter weights are not all proved clean, so "
+                             f"there is no leading coefficient"))
+        return problems
     try:
         got = EC.error_coefficient(columns, row["k"], row["N"], row["d"])["count"]
     except AssertionError as failure:
-        return [("A_d-disagreement", str(failure))]
+        return problems + [("A_d-disagreement", str(failure))]
+    if got is None and stored is not None and "A_d_evidence" in row:
+        return problems                   # out of reach here; the evidence holds
     if got != stored:
-        return [("A_d-mismatch", f"row says A_d={stored!r}, counted "
-                                 f"{got!r} at weight {row['d']}")]
-    return []
+        problems.append(("A_d-mismatch", f"row says A_d={stored!r}, counted "
+                                         f"{got!r} at weight {row['d']}"))
+    return problems
+
+
+#: The keys of one ``A_d_evidence`` entry.
+COEFFICIENT_ENTRY_KEYS = ("file", "tool")
+
+
+def coefficient_records(path, root=None):
+    """``(records, problem)`` for one evidence file named by ``A_d_evidence``.
+
+    Like `evidence_records`: a JSON object with a ``records`` list (and an
+    optional file-wide ``tool``), each record naming the circuit by ``n``,
+    ``k``, ``N`` and ``columns_sha256`` and stating ``weight`` and ``count``,
+    the number of harmful accepted faults of that weight.
+    """
+    root = Path(root) if root is not None else EVIDENCE_ROOT
+    if not isinstance(path, str) or not path or Path(path).is_absolute() \
+            or ".." in Path(path).parts:
+        return None, f"evidence path {path!r} is not a path inside the repository"
+    full = (root / path).resolve()
+    try:
+        full.relative_to(root.resolve())
+    except ValueError:
+        return None, f"evidence path {path!r} leaves the repository"
+    key = ("coefficients", str(full))
+    if key not in _EVIDENCE_CACHE:
+        try:
+            blob = json.loads(full.read_text(encoding="utf-8"))
+        except FileNotFoundError:
+            return None, f"evidence file {path} does not exist"
+        except (OSError, ValueError) as error:
+            return None, f"evidence file {path} cannot be read: {error}"
+        if not isinstance(blob, dict) or not isinstance(blob.get("records"), list):
+            return None, f"evidence file {path} has no records list"
+        records = []
+        for position, record in enumerate(blob["records"]):
+            if not isinstance(record, dict):
+                return None, f"evidence file {path} record {position} is not an object"
+            record = {"tool": blob.get("tool"), **record}
+            wrong = [name for name, ok in (
+                ("n", _integer(record.get("n"))), ("k", _integer(record.get("k"))),
+                ("N", _integer(record.get("N"))),
+                ("weight", _integer(record.get("weight"))),
+                ("count", _integer(record.get("count"))),
+                ("columns_sha256", isinstance(record.get("columns_sha256"), str)),
+                ("tool", isinstance(record.get("tool"), str) and record.get("tool")))
+                if not ok]
+            if wrong:
+                return None, (f"evidence file {path} record {position} has no "
+                              f"usable {', '.join(wrong)}")
+            records.append(record)
+        _EVIDENCE_CACHE[key] = records
+    return _EVIDENCE_CACHE[key], None
+
+
+def coefficient_evidence_problems(row, root=None):
+    """The ``A_d_evidence`` of a row, checked against its files.
+
+    The row's ``d`` must be exact and its ``A_d`` a count; every entry names a
+    file and a tool, and the file must hold a record by that tool for THIS
+    circuit -- the same ``n``, ``k``, ``N`` and the SHA-256 of the same
+    columns -- at weight ``d`` stating exactly ``A_d``.
+    """
+    entries = row.get("A_d_evidence")
+    if not isinstance(entries, list) or not entries:
+        return [("A_d-evidence", "A_d_evidence is not a non-empty list")]
+    problems = []
+    if not row.get("d_is_exact") or not _integer(row.get("A_d")):
+        problems.append(("A_d-evidence", "A_d_evidence on a row whose d is not "
+                                         "exact or whose A_d is not a count"))
+        return problems
+    digest = K.digest(row["columns"])
+    seen = set()
+    for position, entry in enumerate(entries):
+        if not isinstance(entry, dict) or set(entry) != set(COEFFICIENT_ENTRY_KEYS) \
+                or not all(isinstance(entry[name], str) and entry[name]
+                           for name in COEFFICIENT_ENTRY_KEYS):
+            problems.append(("A_d-evidence",
+                             f"A_d_evidence[{position}] is not an object of the "
+                             f"strings {', '.join(COEFFICIENT_ENTRY_KEYS)}"))
+            continue
+        identity = (entry["file"], entry["tool"])
+        if identity in seen:
+            problems.append(("A_d-evidence", f"A_d_evidence names {identity} twice"))
+            continue
+        seen.add(identity)
+        records, wrong = coefficient_records(entry["file"], root)
+        if wrong:
+            problems.append(("A_d-evidence", wrong))
+            continue
+        mine = [record for record in records
+                if record["columns_sha256"] == digest
+                and record["tool"] == entry["tool"]]
+        if not mine:
+            problems.append(("A_d-evidence",
+                             f"{entry['file']} holds no count by "
+                             f"{entry['tool']!r} for this circuit (columns "
+                             f"SHA-256 {digest[:16]}...)"))
+            continue
+        for record in mine:
+            if (record["n"], record["k"], record["N"]) \
+                    != (row["n"], row["k"], row["N"]):
+                problems.append(("A_d-evidence",
+                                 f"{entry['file']} binds this circuit's digest "
+                                 f"to n, k, N = {record['n']}, {record['k']}, "
+                                 f"{record['N']}"))
+            elif (record["weight"], record["count"]) != (row["d"], row["A_d"]):
+                problems.append(("A_d-evidence",
+                                 f"{entry['file']} counts {record['count']} "
+                                 f"harmful faults of weight {record['weight']} "
+                                 f"for this circuit, not A_d={row['A_d']} at "
+                                 f"d={row['d']}"))
+    return problems
 
 
 def measure_distance(columns, k, N, budget=None):
@@ -985,7 +1108,7 @@ def verify_row(row, budget=None, reference=True, evidence_root=None):
                                  row["d_is_exact"], row["d_witness"],
                                  row["d_upper"], budget,
                                  sweep_floor=row.get("d_sweep_floor"))
-    problems += error_coefficient_problems(facts["columns"], row)
+    problems += error_coefficient_problems(facts["columns"], row, evidence_root)
 
     if reference and row["k"] <= REFERENCE_K_CAP \
             and facts["n"] <= REFERENCE_N_CAP \

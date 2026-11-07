@@ -239,6 +239,7 @@ def build_rows(catalog: dict):
             "distance": {"d": d, "is_exact": bool(row.get("d_is_exact")),
                          "upper": row.get("d_upper"), "witness": row.get("d_witness"),
                          "A_d": row.get("A_d"),
+                         "A_d_evidence": row.get("A_d_evidence") or [],
                          "basis": CF.distance_basis(row),
                          "sweep_floor": row.get("d_sweep_floor"),
                          "evidence": row.get("d_certified_evidence") or [],

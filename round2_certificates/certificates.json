@@ -1,0 +1,304 @@
+{
+ "about": "Records of the second-round distance search of 7 November 2026 (research branch, research/search2/distances at 2c3ce12) and of the plan's kernel (research/plan at 9932b15), copied to evidence/, with one run of this catalogue's own sweep made here. Each record is bound to its circuit by columns_sha256 (constructions.digest of the columns); label is the catalogue row at assembly, research_label the label the research used. Written by round2_certificates/assemble.py. A distance record states lower_bound: every weight below it was swept completely by the tool and no harmful fault found. witnesses lists every fault the runs returned, re-checked with faultcore and by the XOR of the wire masks.",
+ "method": "exhaustive search",
+ "records": [
+  {
+   "label": "177.1.9.a",
+   "research_label": "177.1.7.a",
+   "n": 177,
+   "k": 1,
+   "N": 47,
+   "columns_sha256": "90682c1308391f5540331c3fcbefa9d1c990e877fa8978f56ff1712d996a0d7d",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "lower_bound": 9,
+   "how": "count mode, weights 1 to 8: no harmful fault (evidence/distances/data/mitml_runs.jsonl, counts.jsonl)"
+  },
+  {
+   "label": "177.1.9.a",
+   "research_label": "177.1.7.a",
+   "n": 177,
+   "k": 1,
+   "N": 47,
+   "columns_sha256": "90682c1308391f5540331c3fcbefa9d1c990e877fa8978f56ff1712d996a0d7d",
+   "tool": "the counting syndrome trellis of the second-round distance search (evidence/distances/trellis/trellis_count.c)",
+   "lower_bound": 9,
+   "how": "A_w = 0 for w < 9 in 1 column order(s) (evidence/distances/data/trellis_counts.jsonl)"
+  },
+  {
+   "label": "185.1.9.a",
+   "research_label": "185.1.7.a",
+   "n": 185,
+   "k": 1,
+   "N": 49,
+   "columns_sha256": "70a26037d54fd19a8fab6ba0162f89f871e531481e7e17b172bfec71e48f471f",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "lower_bound": 9,
+   "how": "count mode, weights 1 to 8: no harmful fault (evidence/distances/data/mitml_runs.jsonl, counts.jsonl)"
+  },
+  {
+   "label": "185.1.9.a",
+   "research_label": "185.1.7.a",
+   "n": 185,
+   "k": 1,
+   "N": 49,
+   "columns_sha256": "70a26037d54fd19a8fab6ba0162f89f871e531481e7e17b172bfec71e48f471f",
+   "tool": "the counting syndrome trellis of the second-round distance search (evidence/distances/trellis/trellis_count.c)",
+   "lower_bound": 9,
+   "how": "A_w = 0 for w < 9 in 1 column order(s) (evidence/distances/data/trellis_counts.jsonl)"
+  },
+  {
+   "label": "189.1.9.a",
+   "research_label": "189.1.7.a",
+   "n": 189,
+   "k": 1,
+   "N": 50,
+   "columns_sha256": "2f0cf972522d3d1af72bd7410100b7e3e7c1afe7856f29d006d812b2cdf45d66",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "lower_bound": 9,
+   "how": "count mode, weights 1 to 8: no harmful fault (evidence/distances/data/mitml_runs.jsonl, counts.jsonl)"
+  },
+  {
+   "label": "189.1.9.a",
+   "research_label": "189.1.7.a",
+   "n": 189,
+   "k": 1,
+   "N": 50,
+   "columns_sha256": "2f0cf972522d3d1af72bd7410100b7e3e7c1afe7856f29d006d812b2cdf45d66",
+   "tool": "the counting syndrome trellis of the second-round distance search (evidence/distances/trellis/trellis_count.c)",
+   "lower_bound": 9,
+   "how": "A_w = 0 for w < 9 in 1 column order(s) (evidence/distances/data/trellis_counts.jsonl)"
+  },
+  {
+   "label": "271.1.11.a",
+   "research_label": "271.1.7.a",
+   "n": 271,
+   "k": 1,
+   "N": 71,
+   "columns_sha256": "1ce8db8f5b6efc68aaa2a0e71964ca91f77537f6bb7fa397f1f741b0d5753fe2",
+   "tool": "the counting syndrome trellis of the second-round distance search (evidence/distances/trellis/trellis_count.c)",
+   "lower_bound": 11,
+   "how": "A_w = 0 for w < 11 in 2 column order(s) (evidence/distances/data/trellis_counts.jsonl)"
+  },
+  {
+   "label": "279.1.11.a",
+   "research_label": "279.1.7.a",
+   "n": 279,
+   "k": 1,
+   "N": 73,
+   "columns_sha256": "2fe6901899585a1494e10d1a724ea6e6b7fa7bfbd2a81b9bd831e5bd50899e9c",
+   "tool": "the counting syndrome trellis of the second-round distance search (evidence/distances/trellis/trellis_count.c)",
+   "lower_bound": 11,
+   "how": "A_w = 0 for w < 11 in 2 column order(s) (evidence/distances/data/trellis_counts.jsonl)"
+  },
+  {
+   "label": "283.1.11.a",
+   "research_label": "283.1.7.a",
+   "n": 283,
+   "k": 1,
+   "N": 74,
+   "columns_sha256": "d410afc41a35707fabfa80020206591924b4ed012f3c16915453c45530682d95",
+   "tool": "the counting syndrome trellis of the second-round distance search (evidence/distances/trellis/trellis_count.c)",
+   "lower_bound": 11,
+   "how": "A_w = 0 for w < 11 in 2 column order(s) (evidence/distances/data/trellis_counts.jsonl)"
+  },
+  {
+   "label": "401.1.13.a",
+   "research_label": "401.1.6.a",
+   "n": 401,
+   "k": 1,
+   "N": 104,
+   "columns_sha256": "bf241fe68362c5a0870e5d66581063a17e9b98632f0859613f85846333f2364d",
+   "tool": "the counting syndrome trellis of the second-round distance search (evidence/distances/trellis/trellis_count.c)",
+   "lower_bound": 13,
+   "how": "A_w = 0 for w < 13 in 2 column order(s) (evidence/distances/data/trellis_counts.jsonl)"
+  },
+  {
+   "label": "599.1.15.a",
+   "research_label": "599.1.6.a",
+   "n": 599,
+   "k": 1,
+   "N": 154,
+   "columns_sha256": "d4500cc49d29e16ed7d8cd39ae9dab53dafac2f758aef2ab269fdf6c15f2fd64",
+   "tool": "tropidist pipeline, dense DP (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247; commit b03ec2d4), on a column order of cut rank 30",
+   "lower_bound": 15,
+   "how": "config dp=2,table_gb=3,dp_fast=300, one thread, laptop; the DP returned 15 after 33.7 s on the columns permuted by evidence/distances/data/orders/599.1.6.a.json (the distance does not depend on the column order) (evidence/distances/data/dp_records/599.1.6.a.ord.json)"
+  },
+  {
+   "label": "935.89.7.a",
+   "research_label": "935.89.6.a",
+   "n": 935,
+   "k": 89,
+   "N": 176,
+   "columns_sha256": "33fe52c0d85eb9f90397f1e9e9a2cf32726c94aa9e967d4dd5b287112de60338",
+   "tool": "the plan's meet-in-the-middle kernel (evidence/plan/mitm/mitm.c)",
+   "lower_bound": 7,
+   "how": "status mode, weights 1 to 6 complete and clean (evidence/plan/data/mitm_runs.jsonl); the row it read is evidence/plan/data/rows/935.89.6.a.json"
+  },
+  {
+   "label": "936.88.7.a",
+   "research_label": "936.88.6.a",
+   "n": 936,
+   "k": 88,
+   "N": 176,
+   "columns_sha256": "3ac08541181f1472b393bf879556625a90f514f20e942637f8462c9c9358bc1d",
+   "tool": "the plan's meet-in-the-middle kernel (evidence/plan/mitm/mitm.c)",
+   "lower_bound": 7,
+   "how": "status mode, weights 1 to 6 complete and clean (evidence/plan/data/mitm_runs.jsonl); the row it read is evidence/plan/data/rows/936.88.6.a.json"
+  },
+  {
+   "label": "988.36.7.a",
+   "research_label": "988.36.6.a",
+   "n": 988,
+   "k": 36,
+   "N": 176,
+   "columns_sha256": "63e6c574b26b1f346eca4798dcac780283a4ff827918ebd226fec888dff350b7",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (evidence/distances/mitml/mitml.c)",
+   "lower_bound": 7,
+   "how": "count mode, weights 1 to 6: no harmful fault (evidence/distances/data/mitml_runs.jsonl, counts.jsonl)"
+  },
+  {
+   "label": "1715.287.3.a",
+   "research_label": "1715.287.3.a",
+   "n": 1715,
+   "k": 287,
+   "N": 329,
+   "columns_sha256": "c44ed2f4d348d4a25010180ef77c04c8dfb1a6f56970f7ee0b74edd791e19974",
+   "tool": "the plan's meet-in-the-middle kernel (evidence/plan/mitm/mitm.c)",
+   "lower_bound": 6,
+   "how": "status mode, weights 1 to 5 complete and clean (evidence/plan/data/mitm_runs.jsonl); the row it read is evidence/plan/data/rows/1715.287.3.a.json"
+  },
+  {
+   "label": "1715.287.3.a",
+   "research_label": "1715.287.3.a",
+   "n": 1715,
+   "k": 287,
+   "N": 329,
+   "columns_sha256": "c44ed2f4d348d4a25010180ef77c04c8dfb1a6f56970f7ee0b74edd791e19974",
+   "tool": "this catalogue's faultcore.scan_weight with a raised budget (round2_certificates/own_sweep.py)",
+   "lower_bound": 6,
+   "how": "weights 1 to 5 clean, run in this repository at commit 020feb6 (760 s; round2_certificates/evidence/own_sweep_1715.json), as the research's run of the same code at dadb221 found (evidence/plan/data/own_sweeps.jsonl)"
+  }
+ ],
+ "witnesses": [
+  {
+   "label": "1715.287.3.a",
+   "research_label": "1715.287.3.a",
+   "columns_sha256": "c44ed2f4d348d4a25010180ef77c04c8dfb1a6f56970f7ee0b74edd791e19974",
+   "witness": [0, 423, 572, 851, 998, 1433],
+   "weight": 6,
+   "found_by": "mitml count of weight 6 (evidence/distances/data/counts.jsonl)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "271.1.11.a",
+   "research_label": "271.1.7.a",
+   "columns_sha256": "1ce8db8f5b6efc68aaa2a0e71964ca91f77537f6bb7fa397f1f741b0d5753fe2",
+   "witness": [0, 47, 94, 135, 176, 199, 222, 239, 256, 263, 270],
+   "weight": 11,
+   "found_by": "counting trellis: no harmful fault of weight below 11, and 106552995 of weight 11; agrees with tropidist's DP, the independent trellis of research/tropidist/ and the doubling theorem",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "279.1.11.a",
+   "research_label": "279.1.7.a",
+   "columns_sha256": "2fe6901899585a1494e10d1a724ea6e6b7fa7bfbd2a81b9bd831e5bd50899e9c",
+   "witness": [0, 47, 94, 139, 184, 207, 230, 247, 264, 271, 278],
+   "weight": 11,
+   "found_by": "counting trellis: no harmful fault of weight below 11, and 109958991 of weight 11; agrees with tropidist's DP, the independent trellis of research/tropidist/ and the doubling theorem",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "283.1.11.a",
+   "research_label": "283.1.7.a",
+   "columns_sha256": "d410afc41a35707fabfa80020206591924b4ed012f3c16915453c45530682d95",
+   "witness": [0, 47, 94, 141, 188, 211, 234, 251, 268, 275, 282],
+   "weight": 11,
+   "found_by": "counting trellis: no harmful fault of weight below 11, and 111884581 of weight 11; agrees with tropidist's DP, the independent trellis of research/tropidist/ and the doubling theorem",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "401.1.13.a",
+   "research_label": "401.1.6.a",
+   "columns_sha256": "bf241fe68362c5a0870e5d66581063a17e9b98632f0859613f85846333f2364d",
+   "witness": [0, 65, 130, 177, 224, 265, 306, 329, 352, 369, 386, 393, 400],
+   "weight": 13,
+   "found_by": "counting trellis: no harmful fault of weight below 13, and 6958671715 of weight 13; agrees with tropidist's DP, the independent trellis of research/tropidist/ and the doubling theorem",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "599.1.15.a",
+   "research_label": "599.1.6.a",
+   "columns_sha256": "d4500cc49d29e16ed7d8cd39ae9dab53dafac2f758aef2ab269fdf6c15f2fd64",
+   "witness": [0, 79, 158, 237, 316, 363, 410, 457, 504, 527, 550, 567, 584, 591, 598],
+   "weight": 15,
+   "found_by": "tropidist b03ec2d4 (Cheng, Guo and Pan, arXiv:2611.08247): dense rank DP, value 15, on the columns in the order data/orders/599.1.6.a.json (cut rank 30, against 39 for the best order tropidist finds itself); DP 33.659 s, peak 2171.8 MB, laptop, one thread, config dp=2,table_gb=3,dp_fast=300; the doubling theorem of Jain and Albert (arXiv:2408.12752) gives d >= 15 (the row's d_certified); stored weight-15 witness (d_witness), re-checked",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "935.89.7.a",
+   "research_label": "935.89.6.a",
+   "columns_sha256": "33fe52c0d85eb9f90397f1e9e9a2cf32726c94aa9e967d4dd5b287112de60338",
+   "witness": [0, 28, 165, 175, 254, 282, 927],
+   "weight": 7,
+   "found_by": "research/plan/mitm/mitm.c (pilot kernel): weights 1 to 6 swept clean (research/plan/data/mitm_runs.jsonl, laptop, one thread); tropidist threshold 6 exhausted over all anchors (research/plan/data/pilots.jsonl, one thread, 1055.9 s); weight-7 fault from the pilot kernel",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "936.88.7.a",
+   "research_label": "936.88.6.a",
+   "columns_sha256": "3ac08541181f1472b393bf879556625a90f514f20e942637f8462c9c9358bc1d",
+   "witness": [0, 3, 117, 120, 448, 502, 934],
+   "weight": 7,
+   "found_by": "research/plan/mitm/mitm.c (pilot kernel): weights 1 to 6 swept clean (research/plan/data/mitm_runs.jsonl, laptop, one thread); tropidist threshold 6 exhausted (research/tropidist/ pass o3, lower bound 7); weight-7 fault from the pilot kernel",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "988.36.7.a",
+   "research_label": "988.36.6.a",
+   "columns_sha256": "63e6c574b26b1f346eca4798dcac780283a4ff827918ebd226fec888dff350b7",
+   "witness": [0, 1, 2, 3, 4, 5, 6],
+   "weight": 7,
+   "found_by": "mitml.c sha256 79c7eeb92ecb: weights 1 to 6 swept clean in count mode, no accepted fault at all (laptop, one thread); tropidist threshold 6 exhausted (research/tropidist/, pass o3); weight-7 fault from tropidist (first round)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  },
+  {
+   "label": "998.26.8.a",
+   "research_label": "998.26.6.a",
+   "columns_sha256": "c7193dbd9a8efba2a54376d18edd7759bdf2febec411020af934417189893e3d",
+   "witness": [15, 64, 72, 245, 260, 307, 315, 323],
+   "weight": 8,
+   "found_by": "mitml.c sha256 79c7eeb92ecb: weights 1 to 6 swept clean in count mode (laptop); tropidist threshold 7 exhausted over all anchors (first round, Zaratan, 64 threads, 175 s); weight-8 fault from mitml.c sha256 79c7eeb92ecb in status mode (third of 2,048 partitions, laptop, 6.6 s)",
+   "checks": {
+    "faultcore_harmful": true,
+    "literal_harmful": true
+   }
+  }
+ ]
+}

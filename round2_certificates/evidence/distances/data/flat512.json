@@ -1,0 +1,25 @@
+{
+ "row": "512.39.6.a",
+ "sha256": "18b286cb2cb00a88cadbffbd0957771f657ab73cd6fee494ec1e468c48665b80",
+ "subspaces": 788035,
+ "flats": 50434240,
+ "accepted_flats": 50434240,
+ "harmful_flats": 50397952,
+ "subspaces_with_harmful_coset": 787468,
+ "flips_per_output_min_max": [
+  16777216,
+  16777216
+ ],
+ "coordinates_wires": [
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48
+ ],
+ "seconds": 16.8
+}

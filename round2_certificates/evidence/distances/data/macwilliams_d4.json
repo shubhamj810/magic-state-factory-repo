@@ -1,0 +1,24 @@
+{
+ "1675.373.3.a": {
+  "sha256": "7d4b1f52e551fc2abd510f7f846cec762e67b5bb3f20aa20337fe6b70229d5d4",
+  "rank_checks": 24,
+  "B_w_kerC_macwilliams": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 792819
+  },
+  "seconds": 2.8
+ },
+ "1676.372.3.a": {
+  "sha256": "a859d397da1ad62d99187ec7617ca6eb70a53ff8d63cb07e35c667c50510cd5a",
+  "rank_checks": 25,
+  "B_w_kerC_macwilliams": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 776378
+  },
+  "seconds": 5.4
+ }
+}

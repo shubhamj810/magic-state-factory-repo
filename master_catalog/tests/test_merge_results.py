@@ -665,7 +665,9 @@ class TestCertificateGuard(unittest.TestCase):
         else:
             # d rests on the certificate: another key, a class of its own
             self.assertEqual(verdicts_of(verdicts), ["accepted"])
-            self.assertEqual(payload["factories"][0], before["factories"][0])
+            kept = next(row for row in payload["factories"]
+                        if row["catalog_label"] == incumbent["catalog_label"])
+            self.assertEqual(kept, before["factories"][0])
 
     def test_the_guard_on_synthetic_rows(self):
         stored = {"catalog_label": "46.1.3.a", "d": 3, "d_is_exact": False,

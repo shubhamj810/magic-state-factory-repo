@@ -1,0 +1,69 @@
+{
+ "method": "ours_pipeline",
+ "version": null,
+ "config": {
+  "symmetry": 1,
+  "cover": 1,
+  "collapse": 1,
+  "lift": 1,
+  "window": 1,
+  "k_coll": 3,
+  "k_table": 2,
+  "kmax": 40,
+  "kmin": 1,
+  "table_gb": 3,
+  "dp": 2,
+  "dp_fast": 300,
+  "dp_head": -1,
+  "deepen": 1
+ },
+ "instance": "599.1.6.a.ord",
+ "variant": "full",
+ "rows": 153,
+ "cols": 599,
+ "obs": 1,
+ "threads": 1,
+ "time_limit": 50.0,
+ "status": "timeout",
+ "lower_bound": 15,
+ "upper_bound": null,
+ "witness": null,
+ "witness_ok": null,
+ "seconds": 50.053,
+ "trace": [
+  {
+   "t": 0.077,
+   "lb": 1
+  },
+  {
+   "t": 0.444,
+   "lb": 2
+  },
+  {
+   "t": 0.446,
+   "lb": 3
+  },
+  {
+   "t": 0.454,
+   "lb": 4
+  },
+  {
+   "t": 0.621,
+   "lb": 5
+  },
+  {
+   "t": 0.881,
+   "lb": 6
+  },
+  {
+   "t": 35.038,
+   "lb": 15
+  }
+ ],
+ "peak_rss_mb": 2154.9,
+ "truth": null,
+ "truth_kind": "unknown",
+ "notes": "{\"dp\": {\"main\": {\"columns\": 599, \"cut_rank\": 30, \"decision\": \"dp (after a 1 s head start of the search)\", \"estimate_seconds\": 0.235, \"fits\": true, \"peak_bits\": 31, \"predicted_seconds\": 67.479, \"queries\": 1, \"seconds\": 33.659, \"value\": 15, \"work\": 87722866320}}, \"kernel_threads\": 1, \"mode\": \"code instance: plain weight-bounded search (as ours.py)\", \"stages\": {\"main_witness\": {\"cols\": 599, \"rows\": 153, \"runs\": []}, \"plain\": {\"cols\": 599, \"rows\": 153, \"runs\": [{\"K\": 1, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 0.0015752315521240234, \"status\": \"exhausted\"}, {\"K\": 2, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 0.0017800331115722656, \"status\": \"exhausted\"}, {\"K\": 3, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 0.007980108261108398, \"status\": \"exhausted\"}, {\"K\": 4, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 0.16660022735595703, \"status\": \"exhausted\"}, {\"K\": 5, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 0.25945591926574707, \"status\": \"exhausted\"}, {\"K\": 6, \"best\": null, \"nsol_recorded\": 0, \"seconds\": 0.4981088638305664, \"status\": \"timeout\"}]}}, \"stop_reason\": \"whole-run wall-time limit reached\", \"table_budget_gib\": 3.0}",
+ "value_only": false,
+ "agrees_with_truth": null
+}

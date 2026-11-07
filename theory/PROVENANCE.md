@@ -115,6 +115,14 @@ on the rows whose distance the sweep here does not pin. See
 | lower bounds above the proved floor on 18 rows | tropidist's dense rank DP or weight-bounded search, in [`tropidist_certificates/certificates.json`](../tropidist_certificates/certificates.json) | not re-proved here; stored as `d_certified`, exact where the bound meets `d_upper`, by [`master_catalog/migrations/tropidist_certificates_2026_11_06.py`](../master_catalog/migrations/tropidist_certificates_2026_11_06.py), which ties each record to its row by the SHA-256 of the columns. Since 2026-11-07 these bounds are the rows' `d` (`distance_policy_2026_11_07.py`), and the rows were relabelled, `1675.373.3.a` to `1675.373.4.a` for example |
 | `d = 7` on `937.87.7.a`, `d = 8` on `742.36.8.a` and `959.65.8.a`, `d = 7` on `988.36.7.a`, `d ≥ 8` on `998.26.8.a`, and a second proof on five doubled codes | the Zaratan runs of tropidist and of the meet-in-the-middle kernel `research/plan/mitm/mitm.c`, in [`zaratan_certificates/`](../zaratan_certificates/README.md) | the lower bounds are the tools', not re-proved here; every fault is re-checked by `assemble.py` and, where stored, by `verify_catalog.py`; entered by `zaratan_certificates_2026_11_07.py` and used as `d` |
 
+## The catalogue's searches of 6 and 7 November 2026 (this project)
+
+| claim | evidence | status here |
+|---|---|---|
+| `d = 7` exactly on `935.89.7.a` and `936.88.7.a`, `d = 8` exactly on `998.26.8.a`, a second tool on `599.1.15.a` and `988.36.7.a`, and `d = 6` exactly on `1715.287.6.a` (was `1715.287.3.a`) | the second-round distance search and the plan's kernel, copied to [`round2_certificates/`](../round2_certificates/README.md), and this catalogue's own sweep at a raised budget run there | every fault re-checked by `assemble.py` and by `verify_catalog.py`; the lower bounds are the tools', bound to each circuit by the SHA-256 of its columns; entered by `round2_evidence_2026_11_07.py` |
+| `A_d` on 49 exact rows, from 255.3.7.a to 1715.287.6.a | mitml, the plan's kernel, the counting trellis and a literal 3-flat count, in `round2_certificates/coefficients.json` | the counts are the tools'; two tools agree wherever both ran; `verify_catalog.py` recounts wherever `errorcoeff` reaches and otherwise checks the record (`A_d_evidence`) |
+| `d = 9` on `756.32.9.a` (was `756.32.6.a`), and the theorem as further evidence on `742.36.8.a` | San-José's theorem (arXiv:2609.08203), its hypotheses checked from the columns by `construction_sanjose.hypothesis_check` in [`theorem_certificates/`](../theorem_certificates/README.md), and the research's fault of weight 9 | the hypotheses are checked here; the theorem's proof is in the module's docstring; entered by `sanjose_theorem_2026_11_07.py` |
+
 ## Clifford corrections
 
 | claim | producer | certificate/check |

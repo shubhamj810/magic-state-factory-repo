@@ -1075,9 +1075,14 @@ class TestDistanceCertificates(unittest.TestCase):
     """A source's distance certificate is complete and says more than the floor."""
 
     def setUp(self):
-        self.row = copy.deepcopy(next(r for r in CF.load()["factories"]
-                                      if not r["d_is_exact"]
-                                      and r["d_upper"] is None))
+        rows = CF.load()["factories"]
+        floor = next((r for r in rows if not r["d_is_exact"] and r["d_upper"] is None),
+                     None)
+        if floor is None:
+            # no plain floor in the catalogue: make one from an exact row
+            floor = dict(next(r for r in rows if r["catalog_label"] == "15.1.3.a"),
+                         d_is_exact=False, d_upper=None, d_witness=None, A_d=None)
+        self.row = copy.deepcopy(floor)
         for name in VC.CERTIFICATE_FIELDS:
             self.row.pop(name, None)
 

@@ -68,7 +68,17 @@ every field of a row of the main file except `columns`, plus
   `A ∪ B` for every set `A` of outputs and non-empty set `B` of checks with
   `|A| = 0` or `|A| ≡ 1 (mod b)`, and `|A| + |B| ≡ 1 (mod a)`. The columns
   come out in one fixed order, which `d_witness` and `rotation_powers` count
-  in.
+  in. Since 2026-11-07 there are six more families, each built by its own
+  module and kept to the same order: `san-jose-grs` and `san-jose-curve`
+  ([`construction_sanjose.py`](construction_sanjose.py), San-José's
+  construction from an outer code over GF(2^m), arXiv:2609.08203), and
+  `punctured-rm`, `punctured-weighted-rm`, `ccz-frame` and `four-block`
+  ([`construction_rm.py`](construction_rm.py): Haah and Hastings's punctured
+  RM(r, m), the same on Wills's weighted Reed–Muller codes, arXiv:2608.24000,
+  the CCZ frame on F_2^(3q), and the four-block family). The large file's
+  header describes every field of each. Each module also holds the check of
+  its family's distance theorem from the columns, which
+  [`theorem_certificates/`](../theorem_certificates/README.md) runs.
 - `columns_sha256`, the SHA-256 of those columns as compact JSON. It pins the
   circuit independently of the code that builds it.
 
@@ -314,7 +324,7 @@ is also the list of what gets checked.
 | `d_is_exact` | `true` iff the proved lower bound `d` met a witness **at** `d` |
 | `d_upper` | the weight of an explicit harmful fault, or `null` |
 | `d_witness` | that fault, as column indices into this row's `columns` |
-| `A_d` | the number of faults of weight `d` that the checks accept and that damage the output, so the output error is `A_d p^d` to leading order: `35` for the 15-to-1, `28` for the 8-`T` `CCZ` factory. Counted exactly by [`errorcoeff.py`](errorcoeff.py); `null` on a floor, where it is undefined, and where neither counting method reaches |
+| `A_d` | the number of faults of weight `d` that the checks accept and that damage the output, so the output error is `A_d p^d` to leading order: `35` for the 15-to-1, `28` for the 8-`T` `CCZ` factory. Counted exactly by [`errorcoeff.py`](errorcoeff.py), or, where neither of its methods reaches, by another program whose record `A_d_evidence` names; `null` on a floor, where it is undefined, and where no count exists |
 | `t_count` | exact minimal level-3 T-count, or `null` with `t_count_note` |
 | `poly_degree` | CNOT-frame-reduced phase-polynomial degree, or `null` with a note |
 | `effective_width` | rank of the output rows modulo the check span; must equal `k` |
@@ -327,6 +337,7 @@ is also the list of what gets checked.
 | `d_sweep_floor` | only on a row whose `d` rests on its certificate: the floor the sweep itself proves, below `d` |
 | `d_certified_evidence` | `[{"file", "method", "tool"}, ...]`: evidence files in this repository, each holding a record for this circuit, bound by the SHA-256 of its columns, with `method` `theorem` or `exhaustive search`. Required when `d` rests on the certificate |
 | `former_labels` | the labels the row had before its `d` changed; old citations of them still find it, and they are never handed out again |
+| `A_d_evidence` | `[{"file", "tool"}, ...]`: evidence files in this repository, each holding a record for this circuit, bound by the SHA-256 of its columns, that counts exactly `A_d` harmful faults of weight `d`. Present where another program counted `A_d` (since 2026-11-07, [`round2_certificates/`](../round2_certificates/README.md)) |
 | `construction`, `columns_sha256` | only on a row of the large file: the rule that builds `columns`, and the SHA-256 of those columns as compact JSON |
 | `catalog_label` | the row's public name, `n.k.d.x` (e.g. `15.1.3.a`): `d` is the row's distance, and the letters (`a`…`z`, then `ba`, `bb`, … as LMFDB numbers its classes) count the classes at that `(n, k, d)` in the order they entered the catalogue. `merge_results.py` gives a new class the next unused letter, and an improvement keeps the label. A label changes only when the row's `d` does, and the old one stays in `former_labels`; a label is never reused. The verifier checks the format and that no two rows share one. It is also the address of the class's page on the website |
 
@@ -409,8 +420,12 @@ For every row, from `columns`, `k` and `N` alone:
     weight `d` less the harmless ones, each by the MacWilliams identity (from
     the `2^rank` words of the row space) or by enumeration, whichever is
     cheap. Where the direct enumeration of the harmful faults also finishes,
-    it must give the same number. A floor carries `null`, and so does an exact
-    row only where the recount cannot reach either.
+    it must give the same number. A floor carries `null`. An exact row
+    carries `null` only where no count exists: where the recount here cannot
+    reach, `A_d` may come from another program, and then `A_d_evidence` must
+    name a record of exactly that count, at weight `d`, bound to this
+    circuit by the SHA-256 of its columns. Wherever the recount reaches, it
+    must agree whatever the evidence says.
 11. **The construction**, on a row of the large file: the rule is well formed,
     agrees with the row's `k` and `N`, rebuilds exactly the columns every
     check above read, and their SHA-256 is the row's `columns_sha256`. The
