@@ -60,7 +60,10 @@ def tropidist_source(record, commit, value, exact):
 
 
 def apply(payload, evidence):
-    rows = {row["catalog_label"]: row for row in payload["factories"]}
+    # a row relabelled since (its d became a certificate's, 2026-11-07) is
+    # found by the label it had, which it keeps in former_labels
+    rows = {label: row for row in payload["factories"]
+            for label in [row["catalog_label"]] + (row.get("former_labels") or [])}
     commit = evidence["tropidist"]["commit"]
     changed = []
     for record in evidence["records"]:
@@ -74,7 +77,7 @@ def apply(payload, evidence):
                              f"tropidist was run on")
         before = json.dumps(row, sort_keys=True)
         lower, witness = record["lower_bound"], record["witness"]
-        if row["d_is_exact"]:
+        if row["d_is_exact"] or CF.rests_on_certificate(row):
             continue
         if witness is not None and len(witness) != record["upper_bound"]:
             raise SystemExit(f"{record['label']}: witness weight disagrees")

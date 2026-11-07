@@ -70,3 +70,17 @@ codes, the doubling theorem gives the same lower bound by a separate argument.
 The values of 417.1.6.a (13), 512.39.6.a (8) and 512.84.6.a (8), and the
 four bounds `d ≥ 7`, rest on tropidist alone. Every fault stored here is
 re-checked by `verify_catalog.py`.
+
+## Since 2026-11-07
+
+The certified bounds are now the rows' distances.
+[`../master_catalog/migrations/distance_policy_2026_11_07.py`](../master_catalog/migrations/distance_policy_2026_11_07.py)
+made `d` the certified bound wherever an evidence file the catalogue is sure
+of states it, and this file is one of them (its records now say `method` and
+`tool` at the top). The rows named above changed label with their distance,
+`1675.373.3.a` to `1675.373.4.a` for example, and keep the old label in
+`former_labels`; the migration above finds a row by either. The bounds `d ≥ 8`
+on `742.36.6.a`, `959.65.6.a` and `998.26.6.a` and `d = 13` and `15` on
+`441.1.6.a`, `559.1.6.a` and `575.1.6.a` come from the later runs in
+[`../zaratan_certificates/`](../zaratan_certificates/README.md).
+

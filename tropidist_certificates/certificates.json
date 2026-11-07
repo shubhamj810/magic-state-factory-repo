@@ -1,5 +1,7 @@
 {
  "about": "Distance bounds computed by tropidist (B. Cheng, N. Guo and F. Pan, \"Certifying quantum code and circuit distances at scale\", arXiv:2611.08247; github.com/Fanerst/tropidist) for every catalogue row whose distance was not proved exact. Problem: H = the check rows, L = the output rows, one column per rotation in the row's stored order; Delta(H, L) = min{|e| : He = 0, Le != 0}, which is the factory distance. lower_bound is tropidist's certified lower bound (the best over the passes); witness, when present, is a fault set of weight upper_bound that tropidist returned. Witnesses are re-checked by verify_catalog.py; lower bounds are tropidist's and are not re-derived here.",
+ "method": "exhaustive search",
+ "tool": "tropidist pipeline",
  "tropidist": {
   "repository": "https://github.com/Fanerst/tropidist",
   "commit": "b03ec2d4077f287f89f97b5c2c16ce5ce17c2c58",

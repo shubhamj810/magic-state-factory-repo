@@ -161,10 +161,14 @@ builds every code of both of its tables from the classical codes it names,
 and writes each one as a factory. That is 27 codes, 25 of them new to the
 catalogue.
 
-The catalogue's fault sweep proves only a floor at these lengths. So each row
-also carries the paper's distance as a certified lower bound (`d_certified`),
-and an explicit fault of exactly that weight (`d_upper`), which together pin
-the distance. Ten of the triorthogonal codes need a `[[69,1,13]]` code. The
+The catalogue's fault sweep proves only a floor at these lengths. Each row
+carries the paper's distance as a certified lower bound (`d_certified`) and an
+explicit fault of exactly that weight (`d_upper`). Where the repository checks
+every input distance of the doubling theorem, through `[[1011,1,19]]`, that
+certified distance is the row's `d` and the row is exact; the codes from
+`[[1301,1,21]]` on rest on the distances of extended QR codes of length 168,
+192 and 200 that the repository does not check, and keep the sweep's floor as
+`d`. Ten of the triorthogonal codes need a `[[69,1,13]]` code. The
 paper takes it from a `[70,35,14]` code that is only formally self-dual.
 [`transversal_t_codes/search_sd70.py`](transversal_t_codes/search_sd70.py)
 found a self-dual `[70,35,12]` code whose words through one coordinate all

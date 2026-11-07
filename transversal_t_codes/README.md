@@ -33,6 +33,8 @@ the paper for these codes.
 | file | contents |
 |---|---|
 | [`build_codes.py`](build_codes.py) | builds every code, checks it, and writes the two files below. `--check` rebuilds them and fails if a committed file differs |
+| [`min_distance.py`](min_distance.py) | a proved lower bound on a code's minimum distance (Brouwer–Zimmermann, two disjoint information sets), used for the self-dual inputs of length 79 to 103 |
+| [`certify_distances.py`](certify_distances.py) | writes `distance_certificates.json`: the doubling theorem's bound for each code whose inputs' distances are all proved here, `--check` compares |
 | [`search_sd70.py`](search_sd70.py) | the exhaustive search that found the self-dual `[70,35,12]` code behind Table I's `[[69,1,13]]` (see below), ~2 minutes |
 | [`gong_self_dual_codes.json`](gong_self_dual_codes.json) | the stabilisers of A. Gong's doubly even self-dual `[[41,1,9]]` and `[[65,1,13]]` codes, copied from her repository (see [Gong's codes](#gongs-codes)) |
 | [`codes.json`](codes.json) | one entry per code: parameters, the paper's tables, how it was built, its two inputs, a harmful fault of the paper's weight, the weak-triply-even partition where there is one, and the distance certificate |
@@ -163,45 +165,67 @@ the paper's theorem: `d ≥ min(d_sd, d_tri + 2)`, where `d_sd` is at least the
 classical distance less one. For the codes doubled from `[[69,1,13]]`, that
 input's distance is the one proved here.
 
-The catalogue's own fault sweep proves only a floor above `n = 95`. For each
-of those rows the paper's distance is stored as a certificate,
-`d_certified`, marked as a lower bound (`d_certified_is_exact: false`), with
-the doubling theorem as its source. The fault of that weight is stored as
-`d_upper` and `d_witness`, and the verifier re-checks it against the true
-syndromes. Together they pin the distance.
+The theorem needs the distance of every self-dual input along a code's chain.
+This folder proves them for every input up to length 103: by enumerating
+every word for the small inputs, `[[45,1,9]]`, `[[47,1,11]]` and Gong's two
+codes, through the code's structure for `[[69,1,13]]`, and by the
+Brouwer–Zimmermann bound of [`min_distance.py`](min_distance.py) for
+`[[79,1,15]]`, `[[101,1,17]]` and `[[103,1,19]]` (the extended QR codes
+`[80,40]` and `[104,52]` and `sub(XQ103)` have distance at least 14, 18 and 18,
+so 16, 20 and 18 since their weights are multiples of 4, 4 and 2).
+[`certify_distances.py`](certify_distances.py) applies the theorem along each
+chain whose inputs are all proved and writes
+[`distance_certificates.json`](distance_certificates.json), one record per
+code, bound to its circuit by the SHA-256 of the columns. The quantum QR codes
+of length 167, 191 and 199 rest on the minimum distances 24, 28 and 32 of the
+extended QR codes of length 168, 192 and 200, as the paper's Table II states
+them. The bound of `min_distance.py` would need about `3·10^12`, `2·10^14` and
+`4·10^16` sums of rows to prove them, so they are not checked here, and the 18
+codes from `[[1301,1,21]]` on are listed in the file as unchecked.
 
-| code | paper | catalogue row | proved here | certified | fault | credit |
+The catalogue's own fault sweep proves only a floor above `n = 95`. Since
+2026-11-07 the theorem's bound is the row's distance wherever the file
+certifies it: the row is exact at the paper's distance, keeps the sweep's
+floor in `d_sweep_floor`, cites the file in `d_certified_evidence`, and was
+relabelled, keeping its old label in `former_labels`. On most of these rows
+tropidist computes the same value, a second proof. For the 18 unchecked codes
+the paper's distance stays a certificate beside the sweep's floor. Every row
+stores a fault of the paper's weight as `d_upper` and `d_witness`, and the
+verifier re-checks it against the true syndromes.
+
+| code | paper | catalogue row | `d` | sweep proves | how `d` is proved | credit |
 |---|---|---|---|---|---|---|
-| `[[15,1,3]]` | I, II | `15.1.3.a` (held) | `d = 3` | — | — | Bravyi & Kitaev (2005) |
-| `[[49,1,5]]` | I, II | `49.1.5.a` (held) | `d = 5` | — | — | Bravyi & Haah (2012) |
-| `[[95,1,7]]` | I, II | `95.1.7.a` | `d = 7` | — | 7 | Sullivan (2024) |
-| `[[185,1,9]]` | I | `185.1.7.a` | `d ≥ 7` | `≥ 9` | 9 | Jain & Albert |
-| `[[189,1,9]]` | II | `189.1.7.a` | `d ≥ 7` | `≥ 9` | 9 | Jain & Albert |
-| `[[279,1,11]]` | I | `279.1.7.a` | `d ≥ 7` | `≥ 11` | 11 | Jain & Albert |
-| `[[283,1,11]]` | II | `283.1.7.a` | `d ≥ 7` | `≥ 11` | 11 | Jain & Albert |
-| `[[417,1,13]]` | I | `417.1.6.a` | `d ≥ 6` | `≥ 13` | 13 | Jain & Albert |
-| `[[441,1,13]]` | II | `441.1.6.a` | `d ≥ 6` | `≥ 13` | 13 | Jain & Albert |
-| `[[575,1,15]]` | I | `575.1.6.a` | `d ≥ 6` | `≥ 15` | 15 | Jain & Albert |
-| `[[599,1,15]]` | II | `599.1.6.a` | `d ≥ 6` | `≥ 15` | 15 | Jain & Albert |
-| `[[777,1,17]]` | I | `777.1.6.a` | `d ≥ 6` | `≥ 17` | 17 | Jain & Albert |
-| `[[805,1,17]]` | II | `805.1.6.a` | `d ≥ 6` | `≥ 17` | 17 | Jain & Albert |
-| `[[983,1,19]]` | I | `983.1.6.a` | `d ≥ 6` | `≥ 19` | 19 | Jain & Albert |
-| `[[1011,1,19]]` | II | `1011.1.6.a` | `d ≥ 6` | `≥ 19` | 19 | Jain & Albert |
-| `[[1317,1,21]]` | I | `1317.1.3.a` | `d ≥ 3` | `≥ 21` | 21 | Jain & Albert |
-| `[[1345,1,21]]` | II | `1345.1.3.a` | `d ≥ 3` | `≥ 21` | 21 | Jain & Albert |
-| `[[1651,1,23]]` | I | `1651.1.3.a` | `d ≥ 3` | `≥ 23` | 23 | Jain & Albert |
-| `[[1679,1,23]]` | II | `1679.1.3.a` | `d ≥ 3` | `≥ 23` | 23 | Jain & Albert |
-| `[[2033,1,25]]` | I | `2033.1.3.a` | `d ≥ 3` | `≥ 25` | 25 | Jain & Albert |
-| `[[2061,1,25]]` | II | `2061.1.3.a` | `d ≥ 3` | `≥ 25` | 25 | Jain & Albert |
-| `[[2415,1,27]]` | I | `2415.1.3.a` | `d ≥ 3` | `≥ 27` | 27 | Jain & Albert |
-| `[[2443,1,27]]` | II | `2443.1.3.a` | `d ≥ 3` | `≥ 27` | 27 | Jain & Albert |
-| `[[2813,1,29]]` | I | `2813.1.3.a` | `d ≥ 3` | `≥ 29` | 29 | Jain & Albert |
-| `[[2841,1,29]]` | II | `2841.1.3.a` | `d ≥ 3` | `≥ 29` | 29 | Jain & Albert |
-| `[[3211,1,31]]` | I | `3211.1.3.a` | `d ≥ 3` | `≥ 31` | 31 | Jain & Albert |
-| `[[3239,1,31]]` | II | `3239.1.3.a` | `d ≥ 3` | `≥ 31` | 31 | Jain & Albert |
+| `[[15,1,3]]` | I, II | `15.1.3.a` (held) | `d = 3` | `d = 3` | sweep | Bravyi & Kitaev (2005) |
+| `[[49,1,5]]` | I, II | `49.1.5.a` (held) | `d = 5` | `d = 5` | sweep | Bravyi & Haah (2012) |
+| `[[95,1,7]]` | I, II | `95.1.7.a` | `d = 7` | `d = 7` | sweep | Sullivan (2024) |
+| `[[185,1,9]]` | I | `185.1.9.a` (was `185.1.7.a`) | `d = 9` | `d ≥ 7` | theorem and exhaustive search | Jain & Albert |
+| `[[189,1,9]]` | II | `189.1.9.a` (was `189.1.7.a`) | `d = 9` | `d ≥ 7` | theorem and exhaustive search | Jain & Albert |
+| `[[279,1,11]]` | I | `279.1.11.a` (was `279.1.7.a`) | `d = 11` | `d ≥ 7` | theorem and exhaustive search | Jain & Albert |
+| `[[283,1,11]]` | II | `283.1.11.a` (was `283.1.7.a`) | `d = 11` | `d ≥ 7` | theorem and exhaustive search | Jain & Albert |
+| `[[417,1,13]]` | I | `417.1.13.a` (was `417.1.6.a`) | `d = 13` | `d ≥ 6` | theorem and exhaustive search | Jain & Albert |
+| `[[441,1,13]]` | II | `441.1.13.a` (was `441.1.6.a`) | `d = 13` | `d ≥ 6` | theorem and exhaustive search | Jain & Albert |
+| `[[575,1,15]]` | I | `575.1.15.a` (was `575.1.6.a`) | `d = 15` | `d ≥ 6` | theorem and exhaustive search | Jain & Albert |
+| `[[599,1,15]]` | II | `599.1.15.a` (was `599.1.6.a`) | `d = 15` | `d ≥ 6` | theorem | Jain & Albert |
+| `[[777,1,17]]` | I | `777.1.17.a` (was `777.1.6.a`) | `d = 17` | `d ≥ 6` | theorem | Jain & Albert |
+| `[[805,1,17]]` | II | `805.1.17.a` (was `805.1.6.a`) | `d = 17` | `d ≥ 6` | theorem | Jain & Albert |
+| `[[983,1,19]]` | I | `983.1.19.a` (was `983.1.6.a`) | `d = 19` | `d ≥ 6` | theorem | Jain & Albert |
+| `[[1011,1,19]]` | II | `1011.1.19.a` (was `1011.1.6.a`) | `d = 19` | `d ≥ 6` | theorem | Jain & Albert |
+| `[[1317,1,21]]` | I | `1317.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 21` beside it | Jain & Albert |
+| `[[1345,1,21]]` | II | `1345.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 21` beside it | Jain & Albert |
+| `[[1651,1,23]]` | I | `1651.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 23` beside it | Jain & Albert |
+| `[[1679,1,23]]` | II | `1679.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 23` beside it | Jain & Albert |
+| `[[2033,1,25]]` | I | `2033.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 25` beside it | Jain & Albert |
+| `[[2061,1,25]]` | II | `2061.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 25` beside it | Jain & Albert |
+| `[[2415,1,27]]` | I | `2415.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 27` beside it | Jain & Albert |
+| `[[2443,1,27]]` | II | `2443.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 27` beside it | Jain & Albert |
+| `[[2813,1,29]]` | I | `2813.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 29` beside it | Jain & Albert |
+| `[[2841,1,29]]` | II | `2841.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 29` beside it | Jain & Albert |
+| `[[3211,1,31]]` | I | `3211.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 31` beside it | Jain & Albert |
+| `[[3239,1,31]]` | II | `3239.1.3.a` | `d ≥ 3` | `d ≥ 3` | sweep; certified `d ≥ 31` beside it | Jain & Albert |
 
-A catalogue label carries the distance proved here, as every label in the
-catalogue does. That is why `[[3239,1,31]]` is `3239.1.3.a`.
+A catalogue label carries the row's distance. That is why `[[1011,1,19]]` is
+`1011.1.19.a` and `[[3239,1,31]]`, whose distance rests on an unchecked input,
+is still `3239.1.3.a`.
 
 ## Credit
 
@@ -306,6 +330,11 @@ solver found. Their labels are `GJ-761` to `GJ-3195` and their regime is
 note, and its regime description and source say how it was built. They came in
 through
 [`gong_doubled_2026_10_30.py`](../master_catalog/migrations/gong_doubled_2026_10_30.py).
+
+Her four codes are the rows `177.1.9.a`, `271.1.11.a`, `401.1.13.a` and
+`559.1.15.a`, at the certified distance. Of the eight doubled on, `761.1.17.a`
+and `967.1.19.a` are too; the six from `[[1301,1,21]]` on need the unchecked
+QR distances and keep the sweep's floor, `2017.1.3.a` among them.
 
 ## Reproduce
 

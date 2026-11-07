@@ -452,26 +452,47 @@ class Catalogue(unittest.TestCase):
                 self.assertEqual(row["discovery"], "pre-existing")
 
     def test_the_paper_s_distance_is_certified_and_witnessed(self):
-        """A floor proved here, the paper's distance as a certified lower
-        bound, and an explicit fault of exactly that weight -- or, where the
-        sweep reaches, the exact distance itself."""
+        """The paper's distance, and an explicit fault of exactly that weight.
+
+        Where the sweep reaches, it is the exact distance proved here.  Where
+        every input of the code's chain is proved in this folder
+        (`distance_certificates.json`), it is the row's ``d``: the theorem's
+        bound, with the sweep's own floor in ``d_sweep_floor``.  For the codes
+        that rest on the unchecked QR distances it is a certificate beside the
+        sweep's floor."""
+        certified = json.loads((FOLDER / "distance_certificates.json")
+                               .read_text(encoding="utf-8"))
+        checked = {r["label"] for r in certified["records"]}
+        unchecked = {r["label"] for r in certified["unchecked"]}
         for record in self.records:
             row = self.row_of(record["label"])
             if row is None:
                 continue
             claim = record["d"]
             with self.subTest(code=record["label"]):
-                if row["d_is_exact"]:
+                circuit = FC.Circuit(row["columns"], 1, row["N"])
+                if row["d_is_exact"] and "d_sweep_floor" not in row:
                     self.assertEqual(row["d"], claim)
                     self.assertNotIn("d_certified", row)
                     continue
-                self.assertLess(row["d"], claim)
                 self.assertEqual(row["d_certified"], claim)
-                self.assertFalse(row["d_certified_is_exact"])
                 self.assertIn("arXiv:2408.12752", row["d_certified_source"])
                 self.assertEqual(row["d_upper"], claim)
-                circuit = FC.Circuit(row["columns"], 1, row["N"])
                 self.assertTrue(circuit.harmful(row["d_witness"]))
+                self.assertEqual(len(row["d_witness"]), claim)
+                if record["label"] in checked:
+                    self.assertEqual(row["d"], claim)
+                    self.assertTrue(row["d_is_exact"])
+                    self.assertLess(row["d_sweep_floor"], claim)
+                    self.assertIn({"file": "transversal_t_codes/distance_certificates.json",
+                                   "method": "theorem",
+                                   "tool": certified["tool"]},
+                                  row["d_certified_evidence"])
+                else:
+                    self.assertIn(record["label"], unchecked)
+                    self.assertLess(row["d"], claim)
+                    self.assertFalse(row["d_is_exact"])
+                    self.assertNotIn("d_sweep_floor", row)
 
     def test_credit_goes_to_the_earliest_publication(self):
         for record in self.records:
