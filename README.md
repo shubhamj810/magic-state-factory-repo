@@ -44,7 +44,7 @@ are the outputs and the rest are postselected checks. `d` is the circuit's
 fault distance. Each row also gives the circuit's **Clifford correction**: the
 `S` and `CZ` gates that make its action exactly the gate shown (see below).
 
-The catalogue holds **2922 classes**:
+The catalogue holds **2931 classes**:
 
 - `n = 8..262142`, `k = 1..974` and `d = 2..40`. The sweep here proves
   `d = 2..7`. On 200 rows `d`, from 4 to 40, is a bound certified by a theorem
@@ -92,8 +92,8 @@ also stores whether the correction can be avoided by running some rotations as
 transversal `T` gate in the sense of Jain and Albert.
 
 - 42 classes need no correction at all;
-- 1884 need none once some rotations run at another power of `T`;
-- 996 need `S` or `CZ` gates whatever the powers, which the verifier proves.
+- 1892 need none once some rotations run at another power of `T`;
+- 997 need `S` or `CZ` gates whatever the powers, which the verifier proves.
 
 [`master_catalog/clifford.py`](master_catalog/clifford.py) computes all three.
 The verifier then checks the logical action two more ways. It evaluates the
@@ -110,7 +110,7 @@ rate of one input `T` state. The 15-to-1 has `A_3 = 35`, the 8-`T` `CCZ`
 factory `A_2 = 28`.
 [`master_catalog/errorcoeff.py`](master_catalog/errorcoeff.py) counts it
 exactly, as the accepted faults less the harmless ones, each counted by the
-MacWilliams identity or by enumeration. Of the 2889 exact rows, 2720 have a
+MacWilliams identity or by enumeration. Of the 2898 exact rows, 2729 have a
 count. 96 of those counts also cite an evidence file (`A_d_evidence`) from
 another program. The verifier checks that the file's record is bound to the
 row's columns, and wherever `errorcoeff.py` reaches, its count must agree. The
