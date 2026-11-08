@@ -109,10 +109,10 @@ on the 17- and 18-wire ones.
 
 ## What is in it
 
-**2796 distinct `(n, k, d, GL(k,2) gate)` classes**, 869 of them in the large
+**2845 distinct `(n, k, d, GL(k,2) gate)` classes**, 869 of them in the large
 file. 1323 are at distance 2, and 229 are at `d ≥ 3` with `n ≤ 54`. Widths run
 `k = 1..974`, injection counts `n = 8..262142`, and distances `d = 2..40`.
-The sweep here proves `d = 2..7`. On 186 rows `d` is a certified bound, from
+The sweep here proves `d = 2..7`. On 194 rows `d` is a certified bound, from
 `d = 4` to `d = 40`, each backed by a theorem or exhaustive-search record in
 this repository, and on 33 of them (`d ≥ 13`) it is a lower bound only. Every
 certificate in the file is now the row's `d`.
@@ -205,7 +205,17 @@ descent search (`176.1.8.a`, `255.84.3.a`, `255.11.5.a`, `254.6.6.a` and
 s3-d56 and s3-d7 (lifts, contractions, Golay doublings and shortenings, with
 `A_7` counted by two programs on the twelve `d = 7` rows) took it to 2782, and
 the 14 T-only rows of s3-T (12 contractions and two group-invariant SAT
-solutions) to 2796;
+solutions) to 2796, and 49 rows of the round-4 searches to 2845: s4-d8's
+five doublings of held rows with Gong's `[[41,1,9]]` or the quantum QR
+`[[47,1,11]]` blocks (`270.1.10.a`, `318.2.9.a`, `410.2.11.a`, `451.3.9.a`,
+`459.2.9.a`), whose distances are mitml sweeps in
+[`../round1_certificates/`](../round1_certificates/README.md) (weight 10 of
+`410.2.11.a` run on the UMD cluster Zaratan), and 44 of s4-csum's
+contracted direct sums, from `94.6.4.a` to `478.149.4.a`. s4-csum's `[[136,9,4]]` CS was held back,
+since it is a record only if s3-cs's held-back output restrictions are set
+aside, which the owner has not decided;
+[`migrations/contraction_sentence_s4_2026_11_08.py`](migrations/contraction_sentence_s4_2026_11_08.py)
+added s4-csum to the contraction regime's sentence;
 [`migrations/store_217_7_7_2026_11_07.py`](migrations/store_217_7_7_2026_11_07.py)
 stored the `[[217,7,7]]` circuit with the smaller `A_7` (973 against 1,034,
 each counted by two programs in [`../round1_certificates/`](../round1_certificates/README.md));
@@ -228,7 +238,7 @@ That migration's rule now reads the recipe's category.
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running
 some rotations as `T³`, `T⁵` or `T†` makes that unnecessary
-(`rotation_powers`). 42 classes need nothing, 1858 need only powers, and 896
+(`rotation_powers`). 42 classes need nothing, 1881 need only powers, and 922
 need `S` or `CZ` gates whatever the powers.
 [`migrations/clifford_corrections_2026_10_10.py`](migrations/clifford_corrections_2026_10_10.py)
 added the fields, and [`clifford.py`](clifford.py) explains the method.
@@ -681,8 +691,9 @@ The header, in order:
 | `AI search: even CCZ construction` | the catalogue's small-d4 search (7 November 2026): `d = 4` factories of its even CCZ construction, whose punctured parents follow Haah and Hastings (arXiv:1709.02832, Sec. 2.2), 20 CCZ rows from `[[94,16,4]]` to `[[240,74,4]]`, `T` and `CS` rows |
 | `AI search: invariant radical growth` | the catalogue's small-radical search (7 November 2026, after small-d56): exact invariant radical growth on triorthogonal BCH-type check codes, 26 rows from `n = 93` to 512 at `d` from 5 to 8 in the `T`, `CS`, `CCZ` and mixed classes; it also gave the `T` frame in which `[[93,3,5]]` is stored |
 | `AI search: lift of even distance-4 factories` | the catalogue's round-3 small-n search s3-mid (7 November 2026): an even `d = 4` row with one column deleted and moved to the origin, which adds an output (a `T` on it) at `d = 3`; 31 rows from `[[95,24,3]]` to `[[255,85,3]]` |
-| `AI search: paired-column contraction of catalogue rows and their direct sums` | the round-3 searches s3-mid, s3-d56, s3-d7 and s3-T: paired-column contractions (the gamma frontier release's method, `CONTRACTION_PROOF.md`) of a row or a direct sum of rows, with shortenings, deletion of repeated column pairs and output restriction where noted; a contracted sum has fewer inputs than the sum, so it is not a direct sum. 29 rows, among them `[[92,16,4]]`, `[[70,2,5]]` to `[[126,6,6]]` and the T-only `[[57,2,4]]` to `[[243,37,4]]` |
+| `AI search: paired-column contraction of catalogue rows and their direct sums` | the round-3 searches s3-mid, s3-d56, s3-d7 and s3-T and the round-4 search s4-csum: paired-column contractions (the gamma frontier release's method, `CONTRACTION_PROOF.md`) of a row or a direct sum of rows, with shortenings, deletion of repeated column pairs and output restriction where noted; a contracted sum has fewer inputs than the sum, so it is not a direct sum. 73 rows, among them `[[92,16,4]]`, `[[70,2,5]]` to `[[126,6,6]]`, the T-only `[[57,2,4]]` to `[[243,37,4]]`, and s4-csum's 44 contracted sums from `[[94,6,4]]` to `[[478,149,4]]`. The 27 of those from `n = 302` up are each a single free cross contraction of a direct sum (`n` falls by 2), with no further search, so they are records only through the direct-sum rule |
 | `AI search: Golay doubling of catalogue and search rows` | the round-3 search s3-d7: the doubling of Jain and Albert (arXiv:2408.12752) generalised to `k` outputs with Golay `[[23,1,7]]` weak blocks, `d >= min(7, d_t + 2)` (proof in research/search2/s3-d7/REPORT.md, section 2.1), applied to a held or searched row and then contracted where the source says so: T rows from `[[154,2,7]]`, CS rows from `[[148,2,6]]` to `[[304,3,7]]` |
+| `AI search: doubling of catalogue rows with Gong and quadratic-residue blocks` | the round-4 search s4-d8 (8 November 2026): the doubling of Jain and Albert (arXiv:2408.12752) generalised to `k` outputs (s3-d7's proof), with A. Gong's `[[41,1,9]]` or the quantum QR `[[47,1,11]]` code as weak blocks, `d >= min(d_b, d_t + 2)`, applied to a held row: `[[318,2,9]]`, `[[451,3,9]]`, `[[459,2,9]]` (CS), `[[270,1,10]]` and `[[410,2,11]]`; each distance is a mitml sweep (`round1_certificates/`; weight 10 of `[[410,2,11]]` on the UMD cluster Zaratan) and a fault at `d`; credited also to Gong's note or to Jain and Albert, as `177.1.9.a` and `189.1.9.a` are |
 
 The full sentence for each is in the header and on the first page of
 `MASTER_CATALOG.md`. A regime a merge introduces is registered at the **end** of
@@ -792,7 +803,7 @@ or undocumented fields.
   ([`glcanon.intrinsic_width`](glcanon.py)), and the verifier recomputes it;
   [`migrations/intrinsic_width_2026_11_07.py`](migrations/intrinsic_width_2026_11_07.py)
   computed it a second way, from the columns, on every row. 286 of the 2716
-  classes then held had `intrinsic_width < k`; none of the 80 rows imported
+  classes then held had `intrinsic_width < k`; none of the 129 rows imported
   after that has one. 151 are at distance 2 (148 two-group
   circuits of the borrowed-identity searches, up to `n = 147447`, and three from
   the symmetry-SAT search). 135 are at `d ≥ 3`: 82 with `n ≤ 54` (67 inside the

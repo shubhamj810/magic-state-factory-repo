@@ -398,6 +398,78 @@
    "how": "count mode, split 4 + 3 over all columns (2026-11-08)"
   },
   {
+   "name": "s4-csum.424.22.6.a",
+   "n": 424,
+   "k": 22,
+   "N": 75,
+   "columns_sha256": "6859539ee0318b8bc971ae5ab25069df6291b9e4ef9d9f8c5041ce0fa39ae320",
+   "weight": 6,
+   "tool": "mitml in list mode, every harmful set of the weight listed once and re-checked by its own XOR (round2_certificates/evidence/distances/mitml/mitml.c, run here by round1_certificates/count_weight.py)",
+   "count": 1224,
+   "accepted": 1224,
+   "how": "list mode over 2^8 partitions, round1_certificates/evidence/lists/s4-csum.424.22.6.a_w6.txt.gz (2026-11-08)"
+  },
+  {
+   "name": "s4-csum.424.22.6.a",
+   "n": 424,
+   "k": 22,
+   "N": 75,
+   "columns_sha256": "6859539ee0318b8bc971ae5ab25069df6291b9e4ef9d9f8c5041ce0fa39ae320",
+   "weight": 6,
+   "tool": "mydist.py of the research's small-review agent, a numpy meet-in-the-middle sharing no code with mitml (round1_certificates/evidence/small_review/, run here by round1_certificates/count_weight.py)",
+   "count": 1224,
+   "accepted": 1224,
+   "how": "count mode, split 3 + 3 over all columns (2026-11-08)"
+  },
+  {
+   "name": "s4-csum.455.23.6.a",
+   "n": 455,
+   "k": 23,
+   "N": 78,
+   "columns_sha256": "1062c0d93d5e29874e3475c83a81a2d950b6400c1a86a706e9a5026ff97c0297",
+   "weight": 6,
+   "tool": "mitml in list mode, every harmful set of the weight listed once and re-checked by its own XOR (round2_certificates/evidence/distances/mitml/mitml.c, run here by round1_certificates/count_weight.py)",
+   "count": 1162,
+   "accepted": 1162,
+   "how": "list mode over 2^8 partitions, round1_certificates/evidence/lists/s4-csum.455.23.6.a_w6.txt.gz (2026-11-08)"
+  },
+  {
+   "name": "s4-csum.455.23.6.a",
+   "n": 455,
+   "k": 23,
+   "N": 78,
+   "columns_sha256": "1062c0d93d5e29874e3475c83a81a2d950b6400c1a86a706e9a5026ff97c0297",
+   "weight": 6,
+   "tool": "mydist.py of the research's small-review agent, a numpy meet-in-the-middle sharing no code with mitml (round1_certificates/evidence/small_review/, run here by round1_certificates/count_weight.py)",
+   "count": 1162,
+   "accepted": 1162,
+   "how": "count mode, split 3 + 3 over all columns (2026-11-08)"
+  },
+  {
+   "name": "s4-csum.432.14.7.a",
+   "n": 432,
+   "k": 14,
+   "N": 75,
+   "columns_sha256": "1c7169b97376373ac05ac0ebd2970b8904355e2a46627ba0c05d45b55070d175",
+   "weight": 7,
+   "tool": "mitml in list mode, every harmful set of the weight listed once and re-checked by its own XOR (round2_certificates/evidence/distances/mitml/mitml.c, run here by round1_certificates/count_weight.py)",
+   "count": 1877,
+   "accepted": 1877,
+   "how": "list mode over 2^8 partitions, round1_certificates/evidence/lists/s4-csum.432.14.7.a_w7.txt.gz (2026-11-08)"
+  },
+  {
+   "name": "s4-csum.432.14.7.a",
+   "n": 432,
+   "k": 14,
+   "N": 75,
+   "columns_sha256": "1c7169b97376373ac05ac0ebd2970b8904355e2a46627ba0c05d45b55070d175",
+   "weight": 7,
+   "tool": "mydist.py of the research's small-review agent, a numpy meet-in-the-middle sharing no code with mitml (round1_certificates/evidence/small_review/, run here by round1_certificates/count_weight.py)",
+   "count": 1877,
+   "accepted": 1877,
+   "how": "count mode, split 4 + 3 over all columns (2026-11-08)"
+  },
+  {
    "name": "930.94.7.f34845ed1a",
    "n": 930,
    "k": 94,
