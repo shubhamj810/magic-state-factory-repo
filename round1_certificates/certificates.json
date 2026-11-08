@@ -851,6 +851,86 @@
    "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
    "lower_bound": 11,
    "how": "count mode, weights 1 to 10 complete with no harmful fault (2026-11-08)"
+  },
+  {
+   "name": "s3-cs.217.6.7",
+   "n": 217,
+   "k": 6,
+   "N": 37,
+   "columns_sha256": "6479dec50a70537d5cddb7ad72692ffcb67c7915260a295bf8748ffa8870c54c",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 7,
+   "how": "count mode, weights 1 to 6 complete with no harmful fault (2026-11-08)"
+  },
+  {
+   "name": "s3-cs.221.2.8",
+   "n": 221,
+   "k": 2,
+   "N": 37,
+   "columns_sha256": "5cea4c981ae039321e3f25735cb16eb98b1e9de0b9a0ed9d798f47f82f18c5c8",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 8,
+   "how": "count mode, weights 1 to 7 complete with no harmful fault (2026-11-08)"
+  },
+  {
+   "name": "s3-cs.319.8.7",
+   "n": 319,
+   "k": 8,
+   "N": 45,
+   "columns_sha256": "3142c5e73198793970ac91ed9960b6231471db441841875d94d5fd001b018c04",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 7,
+   "how": "count mode, weights 1 to 6 complete with no harmful fault (2026-11-08)"
+  },
+  {
+   "name": "s3-cs.341.10.7",
+   "n": 341,
+   "k": 10,
+   "N": 45,
+   "columns_sha256": "e5026deed1af9de46a26abba06a756ef85fc71e39a4e8f4280f8c7db1073d025",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 7,
+   "how": "count mode, weights 1 to 6 complete with no harmful fault (2026-11-08)"
+  },
+  {
+   "name": "s3-cs.406.3.8",
+   "n": 406,
+   "k": 3,
+   "N": 45,
+   "columns_sha256": "96afeedf42dc0d005b707816d22b530b6d168bb1ab3ddbf8e936d08c347ad4cf",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 8,
+   "how": "count mode, weights 1 to 7 complete with no harmful fault (2026-11-08)"
+  },
+  {
+   "name": "s3-cs.448.7.8",
+   "n": 448,
+   "k": 7,
+   "N": 49,
+   "columns_sha256": "bb71b3e74588deac8d83382f7a7fa7b412abff9a2a5066415f4584bb0cf3dd2b",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 8,
+   "how": "count mode, weights 1 to 7 complete with no harmful fault (2026-11-08)"
+  },
+  {
+   "name": "s3-cs.476.15.7",
+   "n": 476,
+   "k": 15,
+   "N": 51,
+   "columns_sha256": "f468e6628d85c1a3d67ec29f9a388fefb5bbb8ce39c2f4057ba24cce0de75829",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 7,
+   "how": "count mode, weights 1 to 6 complete with no harmful fault (2026-11-08)"
+  },
+  {
+   "name": "s3-cs.490.11.8",
+   "n": 490,
+   "k": 11,
+   "N": 53,
+   "columns_sha256": "3d468af983895640e2f2ab0bbc173f8e3bce590b756695a2cc35de8c6b109749",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 8,
+   "how": "count mode, weights 1 to 7 complete with no harmful fault (2026-11-08)"
   }
  ]
 }
