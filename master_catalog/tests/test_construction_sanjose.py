@@ -92,13 +92,22 @@ def stored_rows():
     for r in CF.load_all()["factories"]:          # by label and by former label
         for name in [r["catalog_label"]] + (r.get("former_labels") or []):
             rows[name] = r
-    return rows["742.36.8.a"], rows["756.32.6.a"]
+    return rows["742.36.8.a"], rows["756.32.9.a"]
 
 
 class CatalogueRows(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.r742, cls.r756 = stored_rows()
+
+    def test_filed_under_san_jose(self):
+        """Both rows are San-Jose GRS codes of the gamma frontier release, and
+        are filed under that regime (provenance_742_756_2026_11_07.py), not
+        under Wills's parent codes."""
+        for row in (self.r742, self.r756):
+            self.assertEqual(row["regimes"],
+                             ["AI search (gamma frontier): San José GRS construction"])
+            self.assertIn("san_jose_grs", row["sources"][0]["origin"])
 
     def test_parameters(self):
         for row, c, d in ((self.r742, ROW_742, 8), (self.r756, ROW_756, 9)):

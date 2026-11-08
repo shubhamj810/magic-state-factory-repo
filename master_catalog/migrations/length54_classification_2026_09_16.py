@@ -96,6 +96,21 @@ G_CONTRACT = "AI search (gamma frontier): contraction of an existing code"
 G_RESTRICT = ("AI search (gamma frontier): logical restriction of a length-54 "
               "Pareto point")
 G_RM = "AI search (gamma frontier): punctured Reed-Muller code"
+G_SANJOSE = "AI search (gamma frontier): San José GRS construction"
+#: The categories of the release's weighted_sources/ recipes
+#: (gamma_frontier_release/sources/gamma_frontier/weighted_sources/protocol_*.json,
+#: field "category"; SHA-256 of each recipe in the release's MANIFEST.json). The
+#: folder holds both Wills's weighted-monomial parents and San-José GRS codes, so
+#: the regime is read from the category, not from the folder's name. Until
+#: 2026-11-07 this rule sent every weighted_sources_ record to G_WILLS, which
+#: misfiled 742.36.8.a and 756.32.9.a (provenance_742_756_2026_11_07.py).
+WEIGHTED_SOURCES_CATEGORY = {
+    "weighted_sources_15_1_3": "weighted_monomial",
+    "weighted_sources_427_85_3": "weighted_monomial",
+    "weighted_sources_825_199_3": "weighted_monomial",
+    "weighted_sources_742_36_8": "san_jose_grs",
+    "weighted_sources_756_32_9": "san_jose_grs",
+}
 DOWNSET = "AI search: Wills downset framework"
 WIDTH = "AI search: pure-T width campaign n=255, 511"
 RELEASE = "search release 55<=n<=64"
@@ -140,6 +155,9 @@ def build_header(old):
                      "code, " + GAMMA_TAIL),
         G_RESTRICT: ("a restriction to fewer logical rows of a Pareto point of "
                      "the length-54 classification, " + GAMMA_TAIL),
+        G_SANJOSE: ("a factory of San José's construction (arXiv:2609.08203) built "
+                    "by the gamma frontier release, a GRS outer code over GF(2^m) "
+                    "mapped to binary; a verified witness, not a maximum"),
         G_RM: ("a punctured Reed-Muller code found by the gamma sub-1000 AI "
                "campaign (RM(3,10) punctured at 123 points), filed with the "
                "pure-T distillation-exponent frontier (gamma = log(n/k)/log d, "
@@ -171,7 +189,7 @@ GAMMA = "gamma frontier"
 
 #: The regimes of this project's own searches, for the citation rule.
 OUR_SEARCHES = (SAT, AI, AI_SIMPLEX, AI_MULTI, G_WILLS, G_CONTRACT, G_RESTRICT,
-                G_RM, DOWNSET, WIDTH, CAPS, FRAMES)
+                G_RM, G_SANJOSE, DOWNSET, WIDTH, CAPS, FRAMES)
 #: The regimes that make a class an AI discovery, absent an earlier catalogue.
 AI_FOUND = tuple(r for r in OUR_SEARCHES if r != SAT) + (RELEASE,)
 #: The classification stages this repository ran itself -- every catalogue under
@@ -222,8 +240,18 @@ def gamma_regime(source):
     if label.startswith("logical_restriction_"):
         return G_RESTRICT
     # the release's weighted_sources records name no construction ("Triorthogonal;
-    # matrix verified"), but their recipes cite Wills, arXiv:2608.24000, Prop. 3.7
-    if "Wills" in origin or label.startswith("weighted_sources_"):
+    # matrix verified"); their recipes' category says which construction it is:
+    # Wills's weighted monomials (arXiv:2608.24000) or San-Jose's GRS codes
+    # (arXiv:2609.08203)
+    if label.startswith("weighted_sources_"):
+        category = WEIGHTED_SOURCES_CATEGORY.get(label)
+        if category == "weighted_monomial":
+            return G_WILLS
+        if category == "san_jose_grs":
+            return G_SANJOSE
+        raise SystemExit(f"gamma frontier source {label!r}: no recipe category is "
+                         f"recorded for it; refusing to guess its regime")
+    if "Wills" in origin:
         return G_WILLS
     if origin.startswith(("Existing triorthogonal code", "Haah")):
         return G_CONTRACT

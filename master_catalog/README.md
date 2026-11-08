@@ -214,6 +214,12 @@ the AI searches; and
 [`migrations/record_wording_2026_11_07.py`](migrations/record_wording_2026_11_07.py)
 took "undominated" out of the 84 release San-José rows' provenance (see
 [Records](#records)).
+[`migrations/provenance_742_756_2026_11_07.py`](migrations/provenance_742_756_2026_11_07.py)
+filed `742.36.8.a` and `756.32.9.a` under "AI search (gamma frontier): San José
+GRS construction": the release's recipes for them are San-José GRS codes
+(category `san_jose_grs`), which the 2026-09-16 migration had filed under
+Wills's parent codes by the name of the release folder that holds both kinds.
+That migration's rule now reads the recipe's category.
 
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running

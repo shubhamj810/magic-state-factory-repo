@@ -654693,11 +654693,11 @@
    },
    "rotation_powers": null,
    "regimes": [
-    "AI search (gamma frontier): from Wills parent codes"
+    "AI search (gamma frontier): San Jos\u00e9 GRS construction"
    ],
    "discovery": "AI search",
    "relabelled_into_canonical_frame": false,
-   "strongest_claim": "built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows",
+   "strongest_claim": "a factory of San Jos\u00e9's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum",
    "columns": [
     [36],
     [38],
@@ -655447,14 +655447,14 @@
    ],
    "sources": [
     {
-     "regime": "AI search (gamma frontier): from Wills parent codes",
+     "regime": "AI search (gamma frontier): San Jos\u00e9 GRS construction",
      "file": "gamma_frontier_release/protocols/weighted_sources_742_36_8.json",
      "label": "weighted_sources_742_36_8",
      "N": 78,
      "d": 6,
      "d_is_exact": false,
-     "origin": "Triorthogonal; matrix verified",
-     "provenance": "gamma frontier release record weighted_sources_742_36_8 (source catalogue id weighted_sources_742_36_8); construction: Triorthogonal; matrix verified; matrix fa76ff0d4c1757d4...; the release states d=8 (lower_bound), gamma=1.4551167917261638 (certified_upper_bound)",
+     "origin": "the gamma frontier release's recipe sources/gamma_frontier/weighted_sources/protocol_742_36_8.json (SHA-256 96ffe2906670c55300754e0a7fef194b4be7a53070cde236c9a62dc8683c8cac), category san_jose_grs: San-Jos\u00e9's GRS construction, arXiv:2609.08203, over GF(64) with L = 62, degree 15 and P = 9",
+     "provenance": "gamma frontier release record weighted_sources_742_36_8 (source catalogue id weighted_sources_742_36_8); construction: Triorthogonal; matrix verified; matrix fa76ff0d4c1757d4...; the release states d=8 (lower_bound), gamma=1.4551167917261638 (certified_upper_bound); the release's recipe (gamma_frontier_release/sources/gamma_frontier/weighted_sources/protocol_742_36_8.json, category san_jose_grs) is San-Jos\u00e9's GRS construction (arXiv:2609.08203) over GF(64) with L = 62, degree 15 and P = 9, built by that folder's build.py; until 2026-11-07 the row was filed under Wills parent codes because of the folder's name",
      "notes": "matrix gamma_frontier_release/matrices/fa76ff0d4c1757d4b94862278119908f7b16ea51c5c0fbcf9546b5511872efc7.matrix"
     }
    ],
@@ -662221,11 +662221,11 @@
    },
    "rotation_powers": null,
    "regimes": [
-    "AI search (gamma frontier): from Wills parent codes"
+    "AI search (gamma frontier): San Jos\u00e9 GRS construction"
    ],
    "discovery": "AI search",
    "relabelled_into_canonical_frame": false,
-   "strongest_claim": "built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows",
+   "strongest_claim": "a factory of San Jos\u00e9's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum",
    "columns": [
     [32],
     [34],
@@ -662989,14 +662989,14 @@
    ],
    "sources": [
     {
-     "regime": "AI search (gamma frontier): from Wills parent codes",
+     "regime": "AI search (gamma frontier): San Jos\u00e9 GRS construction",
      "file": "gamma_frontier_release/protocols/weighted_sources_756_32_9.json",
      "label": "weighted_sources_756_32_9",
      "N": 80,
      "d": 6,
      "d_is_exact": false,
-     "origin": "Triorthogonal; matrix verified",
-     "provenance": "gamma frontier release record weighted_sources_756_32_9 (source catalogue id weighted_sources_756_32_9); construction: Triorthogonal; matrix verified; matrix 0129c9c47d049a17...; the release states d=9 (lower_bound), gamma=1.4392272442235248 (certified_upper_bound)",
+     "origin": "the gamma frontier release's recipe sources/gamma_frontier/weighted_sources/protocol_756_32_9.json (SHA-256 ba34463d65b21c8f238dd4ec40de3693ab7a73f3b91fa666be3b6c3bab631a8d), category san_jose_grs: San-Jos\u00e9's GRS construction, arXiv:2609.08203, over GF(64) with L = 62, degree 15 and P = 8",
+     "provenance": "gamma frontier release record weighted_sources_756_32_9 (source catalogue id weighted_sources_756_32_9); construction: Triorthogonal; matrix verified; matrix 0129c9c47d049a17...; the release states d=9 (lower_bound), gamma=1.4392272442235248 (certified_upper_bound); the release's recipe (gamma_frontier_release/sources/gamma_frontier/weighted_sources/protocol_756_32_9.json, category san_jose_grs) is San-Jos\u00e9's GRS construction (arXiv:2609.08203) over GF(64) with L = 62, degree 15 and P = 8, built by that folder's build.py; until 2026-11-07 the row was filed under Wills parent codes because of the folder's name",
      "notes": "matrix gamma_frontier_release/matrices/0129c9c47d049a17dceb9026e43fad5aff14a11ce6a83c7a6cb59438483fe5ef.matrix"
     }
    ],
