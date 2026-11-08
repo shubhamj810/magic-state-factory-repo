@@ -23,11 +23,20 @@ Two kinds of evidence:
   order (the SHA-256 the research recorded) before binding the count to the
   stored, sorted columns.
 
+* `evidence/listed_counts.jsonl`: runs of `count_weight.py` made in this
+  repository, each counting one weight of a stored circuit twice, with
+  mitml's complete list (kept in `evidence/lists/`, every set re-checked by
+  the script) and with the small-review agent's `mydist.py`
+  (`evidence/small_review/`).  Each run gives one count record per program;
+  this script checks that the list file is the one the run hashed and that it
+  holds exactly that many sets.
+
 Every record is bound to its circuit by the SHA-256 of the stored columns.
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -48,6 +57,12 @@ MITML = ("mitml, the meet-in-the-middle sweep of the second-round distance "
          "here by round1_certificates/sweep.py")
 KERNEL = ("the plan's meet-in-the-middle kernel in count mode, run by the lift "
           "search on Zaratan (round1_certificates/evidence/research/lift_counts.jsonl)")
+MITML_LIST = ("mitml in list mode, every harmful set of the weight listed once and "
+              "re-checked by its own XOR (round2_certificates/evidence/distances/mitml/"
+              "mitml.c, run here by round1_certificates/count_weight.py)")
+MYDIST = ("mydist.py of the research's small-review agent, a numpy meet-in-the-middle "
+          "sharing no code with mitml (round1_certificates/evidence/small_review/, "
+          "run here by round1_certificates/count_weight.py)")
 PLUCKER = ("plucker_count.c of the parents search: every 4-dimensional subspace "
            "of F_2^12 and its output minors (round1_certificates/evidence/research/)")
 
@@ -87,6 +102,26 @@ def assemble():
                            "accepted": w["accepted"],
                            "how": f"count mode over 2^{w['parts_log2']} partitions "
                                   f"in {w['slices']} slice(s) ({run['date']})"})
+    listed = EV / "listed_counts.jsonl"
+    for run in (jsonl(listed) if listed.exists() else []):
+        listing = REPO / run["mitml"]["list_file"]
+        blob = listing.read_bytes()
+        if hashlib.sha256(blob).hexdigest() != run["mitml"]["list_sha256"]:
+            raise AssertionError(f"{run['name']}: the list file is not the one the run hashed")
+        sets = [x for x in blob.decode().splitlines() if x.strip()]
+        if not len(sets) == len(set(sets)) == run["mitml"]["harmful"] == run["mitml"]["rechecked"] \
+                == run["mydist"]["harmful"]:
+            raise AssertionError(f"{run['name']}: the list, mitml and mydist disagree")
+        base = {"name": run["name"], "n": run["n"], "k": run["k"], "N": run["N"],
+                "columns_sha256": run["columns_sha256"], "weight": run["weight"]}
+        counts.append({**base, "tool": MITML_LIST, "count": run["mitml"]["harmful"],
+                       "accepted": run["mitml"]["accepted"],
+                       "how": f"list mode over 2^{run['mitml']['parts_log2']} partitions, "
+                              f"{run['mitml']['list_file']} ({run['date']})"})
+        counts.append({**base, "tool": MYDIST, "count": run["mydist"]["harmful"],
+                       "accepted": run["mydist"]["accepted"],
+                       "how": f"count mode, split {run['mydist']['a']} + {run['mydist']['b']} "
+                              f"over all columns ({run['date']})"})
     # the research's counts, bound through the native order
     native = json.loads((EV / "research" / "native_digests.json").read_text())["circuits"]
     for rec in jsonl(EV / "research" / "lift_counts.jsonl"):

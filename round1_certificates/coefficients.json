@@ -38,6 +38,78 @@
    "how": "count mode over 2^11 partitions in 1 slice(s) (2026-11-07)"
   },
   {
+   "name": "small-d7.9c3da8b2",
+   "n": 217,
+   "k": 7,
+   "N": 38,
+   "columns_sha256": "9c3da8b2e0653b80185ffb7c695e16043627cbe57a70531ad09e023b65878d92",
+   "weight": 7,
+   "tool": "mitml in list mode, every harmful set of the weight listed once and re-checked by its own XOR (round2_certificates/evidence/distances/mitml/mitml.c, run here by round1_certificates/count_weight.py)",
+   "count": 1034,
+   "accepted": 1034,
+   "how": "list mode over 2^8 partitions, round1_certificates/evidence/lists/small-d7.9c3da8b2_w7.txt (2026-11-07)"
+  },
+  {
+   "name": "small-d7.9c3da8b2",
+   "n": 217,
+   "k": 7,
+   "N": 38,
+   "columns_sha256": "9c3da8b2e0653b80185ffb7c695e16043627cbe57a70531ad09e023b65878d92",
+   "weight": 7,
+   "tool": "mydist.py of the research's small-review agent, a numpy meet-in-the-middle sharing no code with mitml (round1_certificates/evidence/small_review/, run here by round1_certificates/count_weight.py)",
+   "count": 1034,
+   "accepted": 1034,
+   "how": "count mode, split 4 + 3 over all columns (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.69bae4f9",
+   "n": 217,
+   "k": 7,
+   "N": 38,
+   "columns_sha256": "69bae4f96f9edd256853a9fbc3a45944ed112bbf3d5fd6e7228fe9fb586fdb62",
+   "weight": 7,
+   "tool": "mitml in list mode, every harmful set of the weight listed once and re-checked by its own XOR (round2_certificates/evidence/distances/mitml/mitml.c, run here by round1_certificates/count_weight.py)",
+   "count": 973,
+   "accepted": 973,
+   "how": "list mode over 2^8 partitions, round1_certificates/evidence/lists/small-cyc.69bae4f9_w7.txt (2026-11-07)"
+  },
+  {
+   "name": "small-cyc.69bae4f9",
+   "n": 217,
+   "k": 7,
+   "N": 38,
+   "columns_sha256": "69bae4f96f9edd256853a9fbc3a45944ed112bbf3d5fd6e7228fe9fb586fdb62",
+   "weight": 7,
+   "tool": "mydist.py of the research's small-review agent, a numpy meet-in-the-middle sharing no code with mitml (round1_certificates/evidence/small_review/, run here by round1_certificates/count_weight.py)",
+   "count": 973,
+   "accepted": 973,
+   "how": "count mode, split 4 + 3 over all columns (2026-11-07)"
+  },
+  {
+   "name": "small-descent.5992593f",
+   "n": 510,
+   "k": 84,
+   "N": 128,
+   "columns_sha256": "5992593fd9a733fc148bb2b03974df25aff8bd7c7d93ed68bb29d6d7cc483163",
+   "weight": 6,
+   "tool": "mitml in list mode, every harmful set of the weight listed once and re-checked by its own XOR (round2_certificates/evidence/distances/mitml/mitml.c, run here by round1_certificates/count_weight.py)",
+   "count": 10795,
+   "accepted": 10795,
+   "how": "list mode over 2^8 partitions, round1_certificates/evidence/lists/small-descent.5992593f_w6.txt (2026-11-07)"
+  },
+  {
+   "name": "small-descent.5992593f",
+   "n": 510,
+   "k": 84,
+   "N": 128,
+   "columns_sha256": "5992593fd9a733fc148bb2b03974df25aff8bd7c7d93ed68bb29d6d7cc483163",
+   "weight": 6,
+   "tool": "mydist.py of the research's small-review agent, a numpy meet-in-the-middle sharing no code with mitml (round1_certificates/evidence/small_review/, run here by round1_certificates/count_weight.py)",
+   "count": 10795,
+   "accepted": 10795,
+   "how": "count mode, split 3 + 3 over all columns (2026-11-07)"
+  },
+  {
    "name": "930.94.7.f34845ed1a",
    "n": 930,
    "k": 94,

@@ -315,7 +315,9 @@ links each published one to its DOI or arXiv page.
   their credit. The four codes doubled from A. Gong's self-dual codes are
   credited to her note (`gong2025triply`). The eight codes built here by
   doubling her `[[559,1,15]]` with the paper's inputs cite both the paper and
-  her note.
+  her note. `737.1.17.a`, Berardini et al.'s Theorem 12 applied to her
+  `[[559,1,15]]` by the catalogue's AI search, cites Berardini et al. and her
+  note, and its source says the search made it.
 * **Distance 2.** The length-54 classification does not cover distance 2, so a
   distance-2 class never cites it. A class the borrowed-identity searches found
   is credited to their paper (Singh, Gidney and Jones), unless an earlier work
@@ -634,7 +636,8 @@ The header, in order:
 | `AI search: four-block distance-3 factories` | punctured four-block parents at `d = 3` from the catalogue's second-round strategist and four-block searches; low `A_3` rather than new `(n, k)` |
 | `AI search: small distance-5 and 6 factories` | three small factories at `d = 5` and 6 from the catalogue's second-round search, `[[93,3,5]]`, `[[127,9,5]]` and `[[128,7,6]]`; the sweep here proves each distance |
 | `Vuillot-Breuckmann pin codes`, `Bravyi-Haah distance-2 family`, `Campbell-Howard distance-2 families`, `Berardini et al. doubling` | published factories the catalogue lacked, rebuilt by its second-round search from the constructions their papers give (arXiv:1906.11394, arXiv:1209.2426, arXiv:1606.01904, arXiv:2412.08586) and credited to those papers |
-| `AI search: punctured pin codes`, `AI search: Berardini doubling of Gong's code` | the same constructions with a choice the search made: puncture sets of pin codes it found, and Berardini et al.'s doubling onto A. Gong's `[[559,1,15]]` |
+| `AI search: punctured pin codes` | the same construction with a choice the search made: puncture sets of pin codes it found |
+| `Berardini et al. doubling of Gong's code` | Berardini et al.'s doubling onto A. Gong's `[[559,1,15]]`, which the catalogue's second-round AI search made (`737.1.17.a`); credited to both works and tagged `pre-existing`, as the Jain–Albert doublings of Gong's codes are, with the search named in its provenance |
 | `AI search: symmetric CP-SAT search n<=127`, `AI search: punctured triply even cyclic codes`, `AI search: descent from catalogue rows` | the catalogue's second-round small-factory searches of 7 November 2026: a symmetric CP-SAT search, punctured extended triply even cyclic codes, and shortening and output restriction of held rows (credited also to the parent row's works); each row's distance is the sweep's or a mitml sweep run here (`round1_certificates/`) |
 | `AI search: pin codes with searched relations` | quantum pin codes of Vuillot and Breuckmann (arXiv:1906.11394) whose box-sum relations, and punctures where there are any, the catalogue's small-pin search found (7 November 2026): CCZ rows at `d = 4` from `[[112,27,4]]` to `[[496,164,4]]`, `T` rows at `d = 4` and 6 |
 | `AI search: even CCZ construction` | the catalogue's small-d4 search (7 November 2026): `d = 4` factories of its even CCZ construction, whose punctured parents follow Haah and Hastings (arXiv:1709.02832, Sec. 2.2), 20 CCZ rows from `[[94,16,4]]` to `[[240,74,4]]`, `T` and `CS` rows |

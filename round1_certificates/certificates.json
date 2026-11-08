@@ -751,6 +751,16 @@
    "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
    "lower_bound": 5,
    "how": "count mode, weights 1 to 4 complete with no harmful fault (2026-11-07)"
+  },
+  {
+   "name": "small-descent.c2c84c9d",
+   "n": 176,
+   "k": 1,
+   "N": 46,
+   "columns_sha256": "c2c84c9dd3c6689122a52b3b19beaacdc0e6e02215a5029fc43c709796b03fab",
+   "tool": "mitml, the meet-in-the-middle sweep of the second-round distance search (round2_certificates/evidence/distances/mitml/mitml.c), run here by round1_certificates/sweep.py",
+   "lower_bound": 8,
+   "how": "count mode, weights 1 to 7 complete with no harmful fault (2026-11-07)"
   }
  ]
 }

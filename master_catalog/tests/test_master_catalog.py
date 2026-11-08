@@ -76,11 +76,15 @@ BORROWED = ("borrowed-identity search: two-group",
 #: The codes of Jain and Albert (arXiv:2408.12752) and of A. Gong (her note in
 #: github.com/gongaa/RM127), rebuilt by `transversal_t_codes/build_codes.py`,
 #: and the codes it builds by doubling hers with theirs: literature and its
-#: direct combination, not an AI search.
+#: direct combination, not an AI search.  Since 2026-11-07 also Berardini et
+#: al.'s Theorem 12 applied to Gong's [[559,1,15]] (737.1.17.a), tagged the
+#: same way by the owner's decision; the AI search that made it is named in
+#: the row's provenance.
 DOUBLED = ("Jain-Albert doubling: weak triply even family",
            "Jain-Albert doubling: triorthogonal family",
            "Gong doubling: triply even family",
-           "Jain-Albert doubling of Gong's codes")
+           "Jain-Albert doubling of Gong's codes",
+           "Berardini et al. doubling of Gong's code")
 #: Published protocols rebuilt from their paper's construction:
 #: literature, not an AI search.  The last four came in from the small-lit
 #: search of 7 November 2026, which rebuilt them from their papers.
