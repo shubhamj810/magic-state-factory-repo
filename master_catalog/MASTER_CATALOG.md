@@ -16428,7 +16428,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: paired-column contraction of catalogue rows and their direct sums — paired-column contractions, the method of the gamma frontier release (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md), of a catalogue row or of a direct sum of catalogue rows, with shortenings, deletion of repeated column pairs and output restriction where the source says so, each kept only where an exact sweep shows the distance holds; it has fewer inputs than the sum, so it is not a direct sum; found by the catalogue's round-3 small-n searches s3-mid, s3-d56 and s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-mid 9f999fa336 (`paired-column contraction (1 pairs) of the direct sum 15.1.3.a + 63.16.3.a`)
+- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-mid 9f999fa336 (`one paired-column contraction of the direct sum 15.1.3.a + 63.16.3.a`)
 - note (T-count): not computed: exact minimisation is over GL(17,2) and a punctured RM(17-4,17) coset, neither feasible at k=17
 - note (reduced degree): not computed: exact minimisation is over GL(17,2) and a punctured RM(17-4,17) coset, neither feasible at k=17
 
@@ -17900,7 +17900,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: paired-column contraction of catalogue rows and their direct sums — paired-column contractions, the method of the gamma frontier release (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md), of a catalogue row or of a direct sum of catalogue rows, with shortenings, deletion of repeated column pairs and output restriction where the source says so, each kept only where an exact sweep shows the distance holds; it has fewer inputs than the sum, so it is not a direct sum; found by the catalogue's round-3 small-n searches s3-mid, s3-d56 and s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-mid e8317df09c (`paired-column contraction (2 pairs) of the direct sum 28.2.3.a + 63.16.3.a`)
+- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-mid e8317df09c (`two paired-column contractions of the direct sum 28.2.3.a + 63.16.3.a`)
 - note (T-count): not computed: exact minimisation is over GL(18,2) and a punctured RM(18-4,18) coset, neither feasible at k=18
 - note (reduced degree): not computed: exact minimisation is over GL(18,2) and a punctured RM(18-4,18) coset, neither feasible at k=18
 
@@ -18785,7 +18785,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: paired-column contraction of catalogue rows and their direct sums — paired-column contractions, the method of the gamma frontier release (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md), of a catalogue row or of a direct sum of catalogue rows, with shortenings, deletion of repeated column pairs and output restriction where the source says so, each kept only where an exact sweep shows the distance holds; it has fewer inputs than the sum, so it is not a direct sum; found by the catalogue's round-3 small-n searches s3-mid, s3-d56 and s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-mid fc6de01e9b (`paired-column contraction (1 pairs) of the direct sum 94.16.4.a`)
+- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-mid fc6de01e9b (`one paired-column contraction of 94.16.4.a`)
 - note (S_k key): the S_k lex-minimum over 16! relabellings of a 265-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
@@ -18805,7 +18805,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: paired-column contraction of catalogue rows and their direct sums — paired-column contractions, the method of the gamma frontier release (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md), of a catalogue row or of a direct sum of catalogue rows, with shortenings, deletion of repeated column pairs and output restriction where the source says so, each kept only where an exact sweep shows the distance holds; it has fewer inputs than the sum, so it is not a direct sum; found by the catalogue's round-3 small-n searches s3-mid, s3-d56 and s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-mid 4a50dee685 (`paired-column contraction (3 pairs) of the direct sum 35.3.3.b + 63.16.3.a`)
+- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-mid 4a50dee685 (`three paired-column contractions of the direct sum 35.3.3.b + 63.16.3.a`)
 - note (S_k key): the S_k lex-minimum over 19! relabellings of a 19-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(19,2) and a punctured RM(19-4,19) coset, neither feasible at k=19
 - note (reduced degree): not computed: exact minimisation is over GL(19,2) and a punctured RM(19-4,19) coset, neither feasible at k=19
@@ -18951,7 +18951,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: descent from catalogue rows — a circuit derived from a catalogue row or a row of the catalogue's own searches by shortening and output restriction, found by the catalogue's second-round descent search (7 November 2026); a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: descent from catalogue rows` · s3-mid 12400e3c68 (`descent from 94.16.4.a (N = 26): one shortening at column 0 with the all-ones check, so n and N each fall by 1 and d by 1; s3-mid: shortening of research/search2/small-d4/data/circuits/078e3fd5abd42bcac4d943795cafc69be12ebd7e5a17292226ed5ee42bf8ac74.json at column 0 with the all-ones check (formal CCZ d=3 row)`)
+- source: `AI search: descent from catalogue rows` · s3-mid 12400e3c68 (`descent from 94.16.4.a (N = 26): one shortening at column 0 with the all-ones check, so n and N each fall by 1 and d by 1; s3-mid: shortening of 94.16.4.a at column 0 with the all-ones check (formal CCZ d=3 row)`)
 - note (S_k key): the S_k lex-minimum over 16! relabellings of a 265-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
@@ -19326,7 +19326,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 1b111944ae (`lift:96.23.4.a:p0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 1b111944ae (`lift of the even d=4 row 96.23.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 24! relabellings of a 79-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
@@ -20428,7 +20428,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: paired-column contraction of catalogue rows and their direct sums — paired-column contractions, the method of the gamma frontier release (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md), of a catalogue row or of a direct sum of catalogue rows, with shortenings, deletion of repeated column pairs and output restriction where the source says so, each kept only where an exact sweep shows the distance holds; it has fewer inputs than the sum, so it is not a direct sum; found by the catalogue's round-3 small-n searches s3-mid, s3-d56 and s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-mid f381a0c929 (`paired-column contraction (3 pairs) of the direct sum 15.1.3.a + lin_lift_95_24.json`)
+- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-mid f381a0c929 (`three paired-column contractions of the direct sum 15.1.3.a + 95.24.3.a (s3-mid's lin_lift_95_24.json)`)
 - note (S_k key): the S_k lex-minimum over 25! relabellings of a 80-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(25,2) and a punctured RM(25-4,25) coset, neither feasible at k=25
 - note (reduced degree): not computed: exact minimisation is over GL(25,2) and a punctured RM(25-4,25) coset, neither feasible at k=25
@@ -21057,7 +21057,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 2862e713c1 (`lift:112.27.4.a:p0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 2862e713c1 (`lift of the even d=4 row 112.27.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 28! relabellings of a 97-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 - note (reduced degree): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
@@ -21796,7 +21796,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 4a6604fc77 (`lift:120.29.4.a:p0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 4a6604fc77 (`lift of the even d=4 row 120.29.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 30! relabellings of a 116-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(30,2) and a punctured RM(30-4,30) coset, neither feasible at k=30
 - note (reduced degree): not computed: exact minimisation is over GL(30,2) and a punctured RM(30-4,30) coset, neither feasible at k=30
@@ -22091,7 +22091,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid f48deeb787 (`lift:124.30.4.a:p0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid f48deeb787 (`lift of the even d=4 row 124.30.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 31! relabellings of a 124-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(31,2) and a punctured RM(31-4,31) coset, neither feasible at k=31
 - note (reduced degree): not computed: exact minimisation is over GL(31,2) and a punctured RM(31-4,31) coset, neither feasible at k=31
@@ -22254,7 +22254,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: paired-column contraction of catalogue rows and their direct sums — paired-column contractions, the method of the gamma frontier release (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md), of a catalogue row or of a direct sum of catalogue rows, with shortenings, deletion of repeated column pairs and output restriction where the source says so, each kept only where an exact sweep shows the distance holds; it has fewer inputs than the sum, so it is not a direct sum; found by the catalogue's round-3 small-n searches s3-mid, s3-d56 and s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-mid 314cee7088 (`paired-column contraction (1 pairs) of the direct sum 63.16.3.a + 63.16.3.a`)
+- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-mid 314cee7088 (`one paired-column contraction of the direct sum 63.16.3.a + 63.16.3.a`)
 - note (S_k key): the S_k lex-minimum over 32! relabellings of a 32-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 - note (reduced degree): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
@@ -22347,7 +22347,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: paired-column contraction of catalogue rows and their direct sums — paired-column contractions, the method of the gamma frontier release (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md), of a catalogue row or of a direct sum of catalogue rows, with shortenings, deletion of repeated column pairs and output restriction where the source says so, each kept only where an exact sweep shows the distance holds; it has fewer inputs than the sum, so it is not a direct sum; found by the catalogue's round-3 small-n searches s3-mid, s3-d56 and s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-d56 a086b9ae85 (`one shortening of the [[126,6,6]] contraction of 72.3.6.a + 72.3.6.a (claim above)`)
+- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-d56 a086b9ae85 (`one shortening of 126.6.6.a, the contraction of the direct sum 72.3.6.a + 72.3.6.a`)
 - note (reduced degree): reduced degree is an UPPER BOUND: |GL(6,2)|=2.02e+10 too large for exact enumeration; min over identity + 2,000,000 random frames
 
 ```text
@@ -22771,7 +22771,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 480d964f04 (`lift:128.32.4.a:p0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 480d964f04 (`lift of the even d=4 row 128.32.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 33! relabellings of a 2091-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(33,2) and a punctured RM(33-4,33) coset, neither feasible at k=33
 - note (reduced degree): not computed: exact minimisation is over GL(33,2) and a punctured RM(33-4,33) coset, neither feasible at k=33
@@ -23176,7 +23176,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid a282d4d672 (`lift of the even d=4 row 8bc041f2a3feffa7f7348350d76e68d6c96f88a947465a153a0c03b8529bd65d.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid a282d4d672 (`lift of the even d=4 row 136.33.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 34! relabellings of a 162-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(34,2) and a punctured RM(34-4,34) coset, neither feasible at k=34
 - note (reduced degree): not computed: exact minimisation is over GL(34,2) and a punctured RM(34-4,34) coset, neither feasible at k=34
@@ -23423,7 +23423,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 78dcdd0e70 (`lift of the even d=4 row 5fa85842c5dc1fc4cd3e9661d2b4a4eeebc81de19d4eef985638016eb5f0e35d.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 78dcdd0e70 (`lift of the even d=4 row 148.36.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 37! relabellings of a 238-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(37,2) and a punctured RM(37-4,37) coset, neither feasible at k=37
 - note (reduced degree): not computed: exact minimisation is over GL(37,2) and a punctured RM(37-4,37) coset, neither feasible at k=37
@@ -23554,7 +23554,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid d16d256797 (`lift of the even d=4 row 41ed083234b04a76a8fd0f065ae140c28bc82257b007766da77edde7c8b66b0e.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid d16d256797 (`lift of the even d=4 row 152.37.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 38! relabellings of a 207-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(38,2) and a punctured RM(38-4,38) coset, neither feasible at k=38
 - note (reduced degree): not computed: exact minimisation is over GL(38,2) and a punctured RM(38-4,38) coset, neither feasible at k=38
@@ -23613,7 +23613,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 940fe7710d (`lift of the even d=4 row dc43d46c84f70372ec3749389c50acb7391596c4639e9e70963f693201e36df4.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 940fe7710d (`lift of the even d=4 row 154.38.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 39! relabellings of a 271-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(39,2) and a punctured RM(39-4,39) coset, neither feasible at k=39
 - note (reduced degree): not computed: exact minimisation is over GL(39,2) and a punctured RM(39-4,39) coset, neither feasible at k=39
@@ -23633,7 +23633,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: Golay doubling of catalogue and search rows — the doubling of Jain and Albert (arXiv:2408.12752) generalised to k outputs with Golay [[23,1,7]] weak blocks, which gives d >= min(7, d_t + 2) (research/search2/s3-d7/REPORT.md, section 2.1, with the proof), applied to a catalogue row or a row of the catalogue's own searches, then paired-column contractions (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md) where the source says so; found by the catalogue's round-3 small-n search s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 033bbb3a3d (`paired-column contraction (gamma_frontier CONTRACTION_PROOF.md) of the Golay doubling [[162,2,7]] (2 Golay [[23,1,7]] blocks) of s3-d56 [[70,2,5]] T0.T1 claim ea0d7d6c at D=7; the moves are in the claim file`)
+- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 033bbb3a3d (`paired-column contraction (gamma_frontier CONTRACTION_PROOF.md) of the Golay doubling [[162,2,7]] (2 Golay [[23,1,7]] blocks) of 70.2.5.a (s3-d56's T0.T1 claim ea0d7d6c) at D=7; the moves are in the claim file`)
 
 ```text
 [{0,2,3,5,6,10,22,23,24,26,29,31}, {0,2,3,6,8,9,10,22,23,24,26,29,31,34,35}, {0,2,5,7,9,10,22,23,24,26,29,31,35}, {0,2,4,5,8,10,34,35}, {0,2,4,6,9,35}, {0,3,4,5,7,35}, {0,3,4,6,7,9,10}, {0,2,3,4,6,7,8,22,23,24,26,29,31,34}, {0,3,5,7,8,9,10,22,23,24,26,29,31,34}, {0,2,3,4,5,8,9}, {0,6,7,8,10,35}, {0,2,34}, {0,4,5,6,7,8,9,22,23,24,26,29,31,34,35}, {0,3,34}, {0,4,34}, {0,5,34}, {0,22,23,24,26,29,31,34}, {0,6,34}, {0,7,34}, {0,8,34}, {0,9,34}, {0,10,34}, {1,11,13,15,16,34,35}, {0,11,12,13,14,15,17,22,23,24,26,29,31}, {1,11,12,14,18,34,35}, {1,11,12,16,17,19,34}, {1,11,12,15,16,17,18}, {0,12,13,16,18,19,22,23,24,26,29,31,34}, {1,13,14,17,19,34,35}, {0,11,13,14,16,17,18,22,23,24,26,29,31,34,35}, {0,12,14,15,17,18,19,22,23,24,26,29,31,34,35}, {0,13,15,16,17,18,19,22,23,24,26,29,31}, {1,11,13,14,15,18,19}, {0,12,14,15,16,19,22,23,24,26,29,31,35}, {1,11,35}, {1,12,35}, {1,13,35}, {1,14,35}, {1,15,35}, {1,16,35}, {1,17,35}, {1,18,35}, {1,19,35}, {0,2,3,5,6,10,22,23,24,26,29,31,34}, {0,2,3,6,8,9,10,22,23,24,26,29,31,35}, {0,2,5,7,9,10,22,23,24,26,29,31,34,35}, {0,2,4,5,8,10,35}, {0,2,4,6,9,34,35}, {0,3,4,5,7,34,35}, {0,3,4,6,7,9,10,34}, {0,2,3,4,6,7,8,22,23,24,26,29,31}, {0,3,5,7,8,9,10,22,23,24,26,29,31}, {0,2,3,4,5,8,9,34}, {0,6,7,8,10,34,35}, {0,2}, {0,4,5,6,7,8,9,22,23,24,26,29,31,35}, {0,3}, {0,4}, {0,5}, {0,6}, {0,7}, {0,8}, {0,9}, {0,10}, {1,11,13,15,16,34}, {0,11,12,13,14,15,17,22,23,24,26,29,31,35}, {1,11,12,14,18,34}, {1,11,12,16,17,19,34,35}, {1,11,12,15,16,17,18,35}, {0,12,13,16,18,19,22,23,24,26,29,31,34,35}, {1,13,14,17,19,34}, {0,11,13,14,16,17,18,22,23,24,26,29,31,34}, {0,12,14,15,17,18,19,22,23,24,26,29,31,34}, {0,13,15,16,17,18,19,22,23,24,26,29,31,35}, {1,11,13,14,15,18,19,35}, {0,12,14,15,16,19,22,23,24,26,29,31}, {1,11}, {1,12}, {1,13}, {1,14}, {1,15}, {1,16}, {1,17}, {1,18}, {1,19}, {0,1,20,21,24,26,28,29,30,31,33,34,35}, {0,1,20,22,23,24,25,28,34,35}, {0,1,20,22,23,24,25,29,34,35}, {0,1,20,22,23,24,25,26,28,29,31,34,35}, {0,1,20,22,23,24,25,26,31,34,35}, {0,1,20,24,25,26,28,30,31,32,34,35}, {0,1,21,24,25,26,28,30,31,32,34,35}, {0,1,22,24,26,28,29,31,32,33,34,35}, {0,1,22,24,26,31,32,33,34,35}, {0,1,23,26,28,29,31,32,33,34,35}, {0,1,23,26,31,32,33,34,35}, {0,1,24,26,28,29,30,31,33,34,35}, {0,20,21,28,29,34}, {0,20,25,28,32,33,34}, {0,21,25,28,32,33,34}, {0,22,23,24,26,28,31,34}, {1,20,21,24,25,26,29,30,31,32,35}, {1,20,24,26,30,31,33,35}, {1,20,23,24,28,29,30,33,35}, {1,20,23,24,30,33,35}, {1,20,23,24,26,28,30,31,33,35}, {1,20,23,24,26,29,30,31,33,35}, {1,21,24,26,30,31,33,35}, {1,22,23,24,28,32,33,35}, {1,22,23,24,29,32,33,35}, {1,24,25,26,29,30,31,32,35}, {1,25,26,27,29,32,33,35}, {1,25,26,27,29,30,32,33,35}, {1,25,26,29,30,32,33,35}, {1,25,26,29,32,33,35}, {1,26,29,33,35}, {1,26,28,33,35}, {1,26,28,29,32,35}, {1,26,32,35}, {1,27,28,29,35}, {1,27,28,29,30,35}, {1,28,29,30,35}, {20,21,25,29,32,33}, {20}, {21}, {22,24,28,29}, {22,24}, {22,26,28,31}, {22,26,29,31}, {22,28,29}, {22}, {23,28,29}, {23}, {25,31,33}, {25,26,28,29,30,31,32}, {25,26,30,31,32}, {25,27,28,32,33}, {25,27,28,30,32,33}, {25,28,29,31,33}, {25,28,31,32}, {25,28,30,32}, {25,28,30,32,33}, {25,28,29}, {25,29,31,32}, {25,29,30,32}, {25}, {26,27,30}, {26,27}, {26,28,29,31}, {26,30}, {26,31}, {26}, {28}, {29}]
@@ -23963,7 +23963,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 66e2a4943c (`lift of the even d=4 row d9da2f8542fce043b4bc990aebf572069563423cd382411887a3c528d966c3de.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 66e2a4943c (`lift of the even d=4 row 160.39.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 40! relabellings of a 151-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
 - note (reduced degree): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
@@ -24115,7 +24115,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 662390f65e (`lift of the even d=4 row 7d3cc576c7bb61be65e5607437ad288836fe9edfe3b23167f539e6377dc52a5e.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 662390f65e (`lift of the even d=4 row 164.40.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 41! relabellings of a 189-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(41,2) and a punctured RM(41-4,41) coset, neither feasible at k=41
 - note (reduced degree): not computed: exact minimisation is over GL(41,2) and a punctured RM(41-4,41) coset, neither feasible at k=41
@@ -24228,7 +24228,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid f7f466148d (`lift of the even d=4 row 7cf5132eb5bb464b9642fb35e6a619f4452911f27f67c4f537d0e0c00cd197b3.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid f7f466148d (`lift of the even d=4 row 166.41.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 42! relabellings of a 308-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(42,2) and a punctured RM(42-4,42) coset, neither feasible at k=42
 - note (reduced degree): not computed: exact minimisation is over GL(42,2) and a punctured RM(42-4,42) coset, neither feasible at k=42
@@ -24306,7 +24306,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid a452435d6c (`lift of the even d=4 row d1ac8593eadf03e50b96c7a972cbecdbd8bd4ffaa8803b0e05517575e04907f0.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid a452435d6c (`lift of the even d=4 row 168.42.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 43! relabellings of a 277-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(43,2) and a punctured RM(43-4,43) coset, neither feasible at k=43
 - note (reduced degree): not computed: exact minimisation is over GL(43,2) and a punctured RM(43-4,43) coset, neither feasible at k=43
@@ -24436,7 +24436,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 9cf0560e08 (`lift of the even d=4 row 8d80f516ca7eb786bb56d9a1d59a5a03f122cf5df743368e53c14cb1bce9a256.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 9cf0560e08 (`lift of the even d=4 row 172.43.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 44! relabellings of a 275-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(44,2) and a punctured RM(44-4,44) coset, neither feasible at k=44
 - note (reduced degree): not computed: exact minimisation is over GL(44,2) and a punctured RM(44-4,44) coset, neither feasible at k=44
@@ -24549,7 +24549,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 3ee5db1bcd (`lift of the even d=4 row 451c182bc35e8355298f2c33d40898b88aaab730ca9652d7090fd347d2309ed0.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 3ee5db1bcd (`lift of the even d=4 row 176.44.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 45! relabellings of a 284-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(45,2) and a punctured RM(45-4,45) coset, neither feasible at k=45
 - note (reduced degree): not computed: exact minimisation is over GL(45,2) and a punctured RM(45-4,45) coset, neither feasible at k=45
@@ -24871,7 +24871,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 9aa86f1153 (`lift of the even d=4 row 1924c0776b4bbfa2b56bd2979e31f3dbf5769549ea287a3c73a38bd67937986f.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 9aa86f1153 (`lift of the even d=4 row 180.45.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 46! relabellings of a 272-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(46,2) and a punctured RM(46-4,46) coset, neither feasible at k=46
 - note (reduced degree): not computed: exact minimisation is over GL(46,2) and a punctured RM(46-4,46) coset, neither feasible at k=46
@@ -25007,7 +25007,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid e44f2de8cb (`lift of the even d=4 row a981de5dc3b490712d94e89a670038e728ba30bebb5f0e0111581c0ab34bc4be.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid e44f2de8cb (`lift of the even d=4 row 184.46.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 47! relabellings of a 291-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(47,2) and a punctured RM(47-4,47) coset, neither feasible at k=47
 - note (reduced degree): not computed: exact minimisation is over GL(47,2) and a punctured RM(47-4,47) coset, neither feasible at k=47
@@ -25086,7 +25086,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: Golay doubling of catalogue and search rows — the doubling of Jain and Albert (arXiv:2408.12752) generalised to k outputs with Golay [[23,1,7]] weak blocks, which gives d >= min(7, d_t + 2) (research/search2/s3-d7/REPORT.md, section 2.1, with the proof), applied to a catalogue row or a row of the catalogue's own searches, then paired-column contractions (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md) where the source says so; found by the catalogue's round-3 small-n search s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 c5aaaa0d4b (`Golay doubling (Jain-Albert map generalised to k outputs): 2 Golay [[23,1,7]] blocks with labels [1, 2], doubled onto small-radical:e16b7d7315571727 (n=93, k=2)`)
+- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 c5aaaa0d4b (`Golay doubling (Jain-Albert map generalised to k outputs): 2 Golay [[23,1,7]] blocks with labels [1, 2], doubled onto small-radical's e16b7d73, which is 93.3.5.a, with two of its three outputs kept (n=93, k=2)`)
 
 ```text
 [{0,2,4,6,7,8,12}, {0,2,3,4,5,6,9,12,39}, {0,2,3,5,8,10,12}, {0,2,3,7,8,9,11,12,39}, {0,2,3,6,7,9,10}, {0,3,4,7,8,10,11}, {0,4,5,8,9,11,12}, {0,2,4,5,7,8,9,10,39}, {0,3,5,6,8,9,10,11,39}, {0,4,6,7,9,10,11,12,39}, {0,2,4,5,6,10,11}, {0,3,5,6,7,11,12}, {0,2,39}, {0,3,39}, {0,4,39}, {0,5,39}, {0,6,39}, {0,7,39}, {0,8,39}, {0,9,39}, {0,10,39}, {0,11,39}, {0,12,39}, {1,13,15,17,18,19,23}, {1,13,14,15,16,17,20,23,40}, {1,13,14,16,19,21,23}, {1,13,14,18,19,20,22,23,40}, {1,13,14,17,18,20,21}, {1,14,15,18,19,21,22}, {1,15,16,19,20,22,23}, {1,13,15,16,18,19,20,21,40}, {1,14,16,17,19,20,21,22,40}, {1,15,17,18,20,21,22,23,40}, {1,13,15,16,17,21,22}, {1,14,16,17,18,22,23}, {1,13,40}, {1,14,40}, {1,15,40}, {1,16,40}, {1,17,40}, {1,18,40}, {1,19,40}, {1,20,40}, {1,21,40}, {1,22,40}, {1,23,40}, {0,2,4,6,7,8,12,39}, {0,2,3,4,5,6,9,12}, {0,2,3,5,8,10,12,39}, {0,2,3,7,8,9,11,12}, {0,2,3,6,7,9,10,39}, {0,3,4,7,8,10,11,39}, {0,4,5,8,9,11,12,39}, {0,2,4,5,7,8,9,10}, {0,3,5,6,8,9,10,11}, {0,4,6,7,9,10,11,12}, {0,2,4,5,6,10,11,39}, {0,3,5,6,7,11,12,39}, {0,2}, {0,3}, {0,4}, {0,5}, {0,6}, {0,7}, {0,8}, {0,9}, {0,10}, {0,11}, {0,12}, {1,13,15,17,18,19,23,40}, {1,13,14,15,16,17,20,23}, {1,13,14,16,19,21,23,40}, {1,13,14,18,19,20,22,23}, {1,13,14,17,18,20,21,40}, {1,14,15,18,19,21,22,40}, {1,15,16,19,20,22,23,40}, {1,13,15,16,18,19,20,21}, {1,14,16,17,19,20,21,22}, {1,15,17,18,20,21,22,23}, {1,13,15,16,17,21,22,40}, {1,14,16,17,18,22,23,40}, {1,13}, {1,14}, {1,15}, {1,16}, {1,17}, {1,18}, {1,19}, {1,20}, {1,21}, {1,22}, {1,23}, {0,1,26,27,30,31,32,33,34,35,36,37}, {0,25,26,28,29,30,31,35,37,38,40}, {0,24,28,30,32,33,37,39,40}, {0,24,27,29,30,33,36,39,40}, {0,1,25,27,29,30,31,38,39,40}, {25,26,27,28,31,35,39,40}, {0,24,25,27,28,30,31,32,33,35,36,37,39,40}, {24,25,26,27,28,29,30,33,34,36,38,39}, {24,25,29,33,34,36,37,38,40}, {1,26,29,30,31,32,35,36,38,39}, {0,1,26,28,30,32,36,37,38}, {0,24,26,30,31,32,34,37,38}, {0,26,28,31,34,37,40}, {1,24,26,27,28,30,31,33,34,35,37,39,40}, {1,24,25,26,28,29,31,33,35,37,39,40}, {0,1,24,27,28,29,32,33,35,37,39}, {1,24,25,29,30,31,33,34,36}, {0,26,27,28,29,30,31,32,38,40}, {24,25,26,28,30,32,34,36,37,39}, {24,31,34,35,37,38,40}, {0,28,30,32,34,35,36,39}, {1,24,27,32,33,34,38}, {1,25,29,30,32,33,35,40}, {1,26,27,29,31,33,34,39}, {0,1,25,26,27,28,29,30,33,34,35,36,37}, {1,24,25,29,30,33,35,37,38}, {0,26,27,29,30,31,34,35,36,40}, {1,25,26,28,30,33,35,36,37,38,39}, {24,29,30,31,32,33,37,38,40}, {0,27,28,29,30,31,33,35,36,39}, {1,24,25,27,28,29,31,34,38}, {0,1,24,25,26,28,30,31,32,35,40}, {0,1,24,28,31,32,35,36,37,39}, {24,28,30,33,34,36,38,40}, {0,24,27,29,30,32,35,38,39,40}, {0,25,27,30,31,33,34,35,39}, {0,25,26,27,28,29,32,34,40}, {0,24,25,27,30,34,35,36,37,39,40}, {25,26,27,30,32,34,36,38,39,40}, {0,1,25,30,31,34,36,37,38,39,40}, {1,26,27,28,32,35,36,38,39}, {0,1,24,25,26,27,30,31,32,36,37,38,40}, {0,25,28,31,32,34,37,38,39}, {0,1,24,26,28,32,33,35,36,40}, {1,24,26,27,29,31,32,35,36,37,38,39,40}, {25,26,27,28,32,37,38,39,40}, {0,1,24,25,27,30,31,32,34,37,39}, {0,1,25,26,27,28,30,32,33,36}, {24,25,29,30,31,32,34,35,36,37,38,40}, {26,27,28,30,31,32,33,34,35,36,38,39,40}, {24,25,26,28,29,30,31,36,37,38,39}, {1,24,28,32,33,34,37,38}, {1,24,29,30,32,33,35,36}, {27,29,30,31,33,34,38}, {25,27,28,29,31,32,35}, {0,24,25,26,28,31,33,34}, {1,24,27,28,29,31,33,34,35,36,37}, {24,25,28,29,30,31,32,34,36,38,40}, {24,26,27,28,30,31,32,33,35,38,39}, {0,24,25,26,28,29,31,32,36,37}, {1,24,27,28,32,34,35,37,38}, {24,25,30,32,33,34,35,36,40}, {1,26,27,29,30,32,33,34,38,39}, {0,1,25,26,29,30,34,36,37}, {30,33,34,35,37,38}, {1,27,29,32,34,35,36,40}, {0,25,31,32,33,34,38,39}, {0,1,26,28,29,32,33,35}, {0,1,24,26,27,29,30,32,35,36,37,40}, {25,26,32,35,37,38,39,40}, {0,1,27,30,31,32,37,39,40}, {0,25,27,28,33,36,39}, {0,1,24,25,26,29,38,40}, {0,1,27,32,33,34,36,37,39,40}, {0,1,25,29,32,33,36,38,39,40}, {26,29,31,33,35,38,39,40}, {26,27,28,29,30,32,33,36,37,39,40}, {24,25,26,29,30,32,34,35,37,38,39}, {37}, {36}, {38}, {35}, {34}, {32}, {33}, {29}, {31}, {28}, {1,24}, {30}, {27}, {25}, {0,1,26}]
@@ -25103,7 +25103,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: Golay doubling of catalogue and search rows — the doubling of Jain and Albert (arXiv:2408.12752) generalised to k outputs with Golay [[23,1,7]] weak blocks, which gives d >= min(7, d_t + 2) (research/search2/s3-d7/REPORT.md, section 2.1, with the proof), applied to a catalogue row or a row of the catalogue's own searches, then paired-column contractions (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md) where the source says so; found by the catalogue's round-3 small-n search s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 39b4336010 (`Golay doubling (Jain-Albert map generalised to k outputs): 3 Golay [[23,1,7]] blocks with labels [1, 2, 3], doubled onto cat:48.2.4.a (n=48, k=2)`)
+- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 39b4336010 (`Golay doubling (Jain-Albert map generalised to k outputs): 3 Golay [[23,1,7]] blocks with labels [1, 2, 3], doubled onto 48.2.4.a (n=48, k=2)`)
 
 ```text
 [{0,2,4,6,7,8,12}, {0,2,3,4,5,6,9,12,43,44}, {0,2,3,5,8,10,12}, {0,2,3,7,8,9,11,12,43,44}, {0,2,3,6,7,9,10}, {0,3,4,7,8,10,11}, {0,4,5,8,9,11,12}, {0,2,4,5,7,8,9,10,43,44}, {0,3,5,6,8,9,10,11,43,44}, {0,4,6,7,9,10,11,12,43,44}, {0,2,4,5,6,10,11}, {0,3,5,6,7,11,12}, {0,2,43,44}, {0,3,43,44}, {0,4,43,44}, {0,5,43,44}, {0,6,43,44}, {0,7,43,44}, {0,8,43,44}, {0,9,43,44}, {0,10,43,44}, {0,11,43,44}, {0,12,43,44}, {1,13,15,17,18,19,23}, {1,13,14,15,16,17,20,23,44}, {1,13,14,16,19,21,23}, {1,13,14,18,19,20,22,23,44}, {1,13,14,17,18,20,21}, {1,14,15,18,19,21,22}, {1,15,16,19,20,22,23}, {1,13,15,16,18,19,20,21,44}, {1,14,16,17,19,20,21,22,44}, {1,15,17,18,20,21,22,23,44}, {1,13,15,16,17,21,22}, {1,14,16,17,18,22,23}, {1,13,44}, {1,14,44}, {1,15,44}, {1,16,44}, {1,17,44}, {1,18,44}, {1,19,44}, {1,20,44}, {1,21,44}, {1,22,44}, {1,23,44}, {0,1,24,26,28,29,30,34}, {0,1,24,25,26,27,28,31,34,43}, {0,1,24,25,27,30,32,34}, {0,1,24,25,29,30,31,33,34,43}, {0,1,24,25,28,29,31,32}, {0,1,25,26,29,30,32,33}, {0,1,26,27,30,31,33,34}, {0,1,24,26,27,29,30,31,32,43}, {0,1,25,27,28,30,31,32,33,43}, {0,1,26,28,29,31,32,33,34,43}, {0,1,24,26,27,28,32,33}, {0,1,25,27,28,29,33,34}, {0,1,24,43}, {0,1,25,43}, {0,1,26,43}, {0,1,27,43}, {0,1,28,43}, {0,1,29,43}, {0,1,30,43}, {0,1,31,43}, {0,1,32,43}, {0,1,33,43}, {0,1,34,43}, {0,2,4,6,7,8,12,43,44}, {0,2,3,4,5,6,9,12}, {0,2,3,5,8,10,12,43,44}, {0,2,3,7,8,9,11,12}, {0,2,3,6,7,9,10,43,44}, {0,3,4,7,8,10,11,43,44}, {0,4,5,8,9,11,12,43,44}, {0,2,4,5,7,8,9,10}, {0,3,5,6,8,9,10,11}, {0,4,6,7,9,10,11,12}, {0,2,4,5,6,10,11,43,44}, {0,3,5,6,7,11,12,43,44}, {0,2}, {0,3}, {0,4}, {0,5}, {0,6}, {0,7}, {0,8}, {0,9}, {0,10}, {0,11}, {0,12}, {1,13,15,17,18,19,23,44}, {1,13,14,15,16,17,20,23}, {1,13,14,16,19,21,23,44}, {1,13,14,18,19,20,22,23}, {1,13,14,17,18,20,21,44}, {1,14,15,18,19,21,22,44}, {1,15,16,19,20,22,23,44}, {1,13,15,16,18,19,20,21}, {1,14,16,17,19,20,21,22}, {1,15,17,18,20,21,22,23}, {1,13,15,16,17,21,22,44}, {1,14,16,17,18,22,23,44}, {1,13}, {1,14}, {1,15}, {1,16}, {1,17}, {1,18}, {1,19}, {1,20}, {1,21}, {1,22}, {1,23}, {0,1,24,26,28,29,30,34,43}, {0,1,24,25,26,27,28,31,34}, {0,1,24,25,27,30,32,34,43}, {0,1,24,25,29,30,31,33,34}, {0,1,24,25,28,29,31,32,43}, {0,1,25,26,29,30,32,33,43}, {0,1,26,27,30,31,33,34,43}, {0,1,24,26,27,29,30,31,32}, {0,1,25,27,28,30,31,32,33}, {0,1,26,28,29,31,32,33,34}, {0,1,24,26,27,28,32,33,43}, {0,1,25,27,28,29,33,34,43}, {0,1,24}, {0,1,25}, {0,1,26}, {0,1,27}, {0,1,28}, {0,1,29}, {0,1,30}, {0,1,31}, {0,1,32}, {0,1,33}, {0,1,34}, {0,35,37,40,41,44}, {0,35,37,38,42,44}, {0,35,37,38,39,41,42,43,44}, {0,38,42,44}, {0,38,41,42,43,44}, {0,38,41,44}, {0,35,36,37,38,39,41,42,43,44}, {0,36,37,38,40,41,44}, {0,37,38,42,44}, {35,37,39,40}, {35,37,38,39,40}, {38}, {1,35,36,38,42,43,44}, {1,35,36,37,40,41,42,44}, {1,35,41,42,44}, {1,36,37,41,43,44}, {1,36,37,38,39,42,43,44}, {1,36,41,43,44}, {1,37,38,39,42,43,44}, {1,35,36,37,41,43,44}, {1,37,38,40,41,42,44}, {35,42,43}, {37,39,40,42,43}, {35,36,37,39,40,41,42}, {36,41,42}, {36,37,39,40,41,43}, {35,36,38,41,43}, {36,37,38,39,40,41,43}, {35,36,37,38,39,40,41,42}, {37,38,39,40,42,43}, {0,1,36,42}, {0,1,36,37,39,41}, {0,1,35,36,38,41,42,43}, {0,1,37,40,42}, {0,1,36,37,38,41,42,43}, {0,1,35,41}, {0,1,35,36,37,38,41,42,43}, {0,1,35,36,37,38,40,42}, {0,1,37,39,41}, {35,37}, {35,37,39}, {36,37,40}, {35,37,38,40}, {35,36,37,39}, {37}, {35,36,38}, {35}, {36}]
@@ -25374,7 +25374,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 61388fff05 (`lift of the even d=4 row 76d2befe2ae78b39d5bbf756ed5691171d87f03f0eb55dd91303a927ffebe6d9.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 61388fff05 (`lift of the even d=4 row 190.48.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 49! relabellings of a 567-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(49,2) and a punctured RM(49-4,49) coset, neither feasible at k=49
 - note (reduced degree): not computed: exact minimisation is over GL(49,2) and a punctured RM(49-4,49) coset, neither feasible at k=49
@@ -25527,7 +25527,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 3a31751625 (`lift of the even d=4 row 1de3c43fbb197406224da9c4ba262b2991f3f488f5b633aa942ae76df2c01cd1.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 3a31751625 (`lift of the even d=4 row 196.50.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 51! relabellings of a 313-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(51,2) and a punctured RM(51-4,51) coset, neither feasible at k=51
 - note (reduced degree): not computed: exact minimisation is over GL(51,2) and a punctured RM(51-4,51) coset, neither feasible at k=51
@@ -25660,7 +25660,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid ffb286e33a (`lift of the even d=4 row ac0e2f8a896c5b1851f4deaa9f8826fd31289e0df5cfb8b72630ac9f4242d2f4.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid ffb286e33a (`lift of the even d=4 row 202.51.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 52! relabellings of a 297-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(52,2) and a punctured RM(52-4,52) coset, neither feasible at k=52
 - note (reduced degree): not computed: exact minimisation is over GL(52,2) and a punctured RM(52-4,52) coset, neither feasible at k=52
@@ -25764,7 +25764,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 9793ca2dbb (`lift of the even d=4 row 667b51ad53a7dee3c4e4e5b90c35dcbfe8dafcf75d549eeb3a9867bee87aa0cc.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 9793ca2dbb (`lift of the even d=4 row 204.52.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 53! relabellings of a 580-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(53,2) and a punctured RM(53-4,53) coset, neither feasible at k=53
 - note (reduced degree): not computed: exact minimisation is over GL(53,2) and a punctured RM(53-4,53) coset, neither feasible at k=53
@@ -25835,7 +25835,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: Golay doubling of catalogue and search rows — the doubling of Jain and Albert (arXiv:2408.12752) generalised to k outputs with Golay [[23,1,7]] weak blocks, which gives d >= min(7, d_t + 2) (research/search2/s3-d7/REPORT.md, section 2.1, with the proof), applied to a catalogue row or a row of the catalogue's own searches, then paired-column contractions (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md) where the source says so; found by the catalogue's round-3 small-n search s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 9ea62e48fb (`paired-column contraction (gamma_frontier CONTRACTION_PROOF.md) of the Golay doubling [[231,3,7]] of small-radical [[93,3,5]] e16b7d73 (3 Golay [[23,1,7]] blocks) at D=7; the moves are in the claim file`)
+- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 9ea62e48fb (`paired-column contraction (gamma_frontier CONTRACTION_PROOF.md) of the Golay doubling [[231,3,7]] of 93.3.5.a (small-radical's e16b7d73) (3 Golay [[23,1,7]] blocks) at D=7; the moves are in the claim file`)
 
 - 205 columns — see `master_catalog.json`, `factories[1175]`
 
@@ -25982,7 +25982,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 11891c4a6b (`lift of the even d=4 row 7287bc2eab00272ecb398d9c059c30c5c1e03758d35d650ff7c7eff8377be36e.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 11891c4a6b (`lift of the even d=4 row 208.54.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 55! relabellings of a 11030-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(55,2) and a punctured RM(55-4,55) coset, neither feasible at k=55
 - note (reduced degree): not computed: exact minimisation is over GL(55,2) and a punctured RM(55-4,55) coset, neither feasible at k=55
@@ -26190,7 +26190,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: paired-column contraction of catalogue rows and their direct sums — paired-column contractions, the method of the gamma frontier release (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md), of a catalogue row or of a direct sum of catalogue rows, with shortenings, deletion of repeated column pairs and output restriction where the source says so, each kept only where an exact sweep shows the distance holds; it has fewer inputs than the sum, so it is not a direct sum; found by the catalogue's round-3 small-n searches s3-mid, s3-d56 and s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-d7 3af8f2448f (`paired-column contraction (gamma_frontier CONTRACTION_PROOF.md) of the direct sum data/claims/2e7f5934848d72a39527f9005952162ef97a5483155fd1fe5ee0b62527af4005.json + 95.1.7.a at D=7; the moves are in the claim file`)
+- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-d7 3af8f2448f (`paired-column contraction (gamma_frontier CONTRACTION_PROOF.md) of the direct sum 158.2.7.a (s3-d7's 2e7f5934) + 95.1.7.a at D=7; the moves are in the claim file`)
 
 - 211 columns — see `master_catalog.json`, `factories[1196]`
 
@@ -26239,7 +26239,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 48dcaa03bb (`lift of the even d=4 row fee1e49df148bb0751b3716c08b6f3c5e2d7e603ff94ef4d83dd076d0d3e92b0.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 48dcaa03bb (`lift of the even d=4 row 212.57.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 58! relabellings of a 12971-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(58,2) and a punctured RM(58-4,58) coset, neither feasible at k=58
 - note (reduced degree): not computed: exact minimisation is over GL(58,2) and a punctured RM(58-4,58) coset, neither feasible at k=58
@@ -26344,7 +26344,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: Golay doubling of catalogue and search rows — the doubling of Jain and Albert (arXiv:2408.12752) generalised to k outputs with Golay [[23,1,7]] weak blocks, which gives d >= min(7, d_t + 2) (research/search2/s3-d7/REPORT.md, section 2.1, with the proof), applied to a catalogue row or a row of the catalogue's own searches, then paired-column contractions (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md) where the source says so; found by the catalogue's round-3 small-n search s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 cdc0f5d2fd (`paired-column contraction (gamma_frontier CONTRACTION_PROOF.md) of the Golay doubling [[231,2,7]] (CS01) of small-radical [[93,2,5]] CS f0e29414 (3 Golay [[23,1,7]] blocks) at D=7; the moves are in the claim file`)
+- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 cdc0f5d2fd (`paired-column contraction (gamma_frontier CONTRACTION_PROOF.md) of the Golay doubling [[231,2,7]] (CS01) of 93.2.5.a (small-radical's CS f0e29414) (3 Golay [[23,1,7]] blocks) at D=7; the moves are in the claim file`)
 
 - 213 columns — see `master_catalog.json`, `factories[1205]`
 
@@ -26555,7 +26555,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 2543f1b1b3 (`lift of the even d=4 row 1d1cd0ff0a170ba2f6cd9fa0f9668bc955e3b53b5952bc272b8db6a37f35d348.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 2543f1b1b3 (`lift of the even d=4 row 220.59.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 60! relabellings of a 15347-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(60,2) and a punctured RM(60-4,60) coset, neither feasible at k=60
 - note (reduced degree): not computed: exact minimisation is over GL(60,2) and a punctured RM(60-4,60) coset, neither feasible at k=60
@@ -26591,7 +26591,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid b52b7c0d28 (`lift of the even d=4 row 3dab192e933dc7a4ce3a3a275f4a6b988f00bd4ef050fa552b5a7ed461eac15f.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid b52b7c0d28 (`lift of the even d=4 row 222.60.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 61! relabellings of a 16195-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(61,2) and a punctured RM(61-4,61) coset, neither feasible at k=61
 - note (reduced degree): not computed: exact minimisation is over GL(61,2) and a punctured RM(61-4,61) coset, neither feasible at k=61
@@ -26642,7 +26642,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 0bce8137bd (`lift of the even d=4 row 11e4b245038d150f7d37b44cd473295ce750c51f8a431fbfc2395611658d0534.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 0bce8137bd (`lift of the even d=4 row 224.63.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 64! relabellings of a 16941-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(64,2) and a punctured RM(64-4,64) coset, neither feasible at k=64
 - note (reduced degree): not computed: exact minimisation is over GL(64,2) and a punctured RM(64-4,64) coset, neither feasible at k=64
@@ -26882,7 +26882,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 97300afe51 (`lift of the even d=4 row ea71695c8e8e49fd960309746676e2db8c1d9d43b85af4b806e516fd171885f5.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 97300afe51 (`lift of the even d=4 row 228.65.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 66! relabellings of a 19614-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(66,2) and a punctured RM(66-4,66) coset, neither feasible at k=66
 - note (reduced degree): not computed: exact minimisation is over GL(66,2) and a punctured RM(66-4,66) coset, neither feasible at k=66
@@ -27028,7 +27028,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: Golay doubling of catalogue and search rows — the doubling of Jain and Albert (arXiv:2408.12752) generalised to k outputs with Golay [[23,1,7]] weak blocks, which gives d >= min(7, d_t + 2) (research/search2/s3-d7/REPORT.md, section 2.1, with the proof), applied to a catalogue row or a row of the catalogue's own searches, then paired-column contractions (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md) where the source says so; found by the catalogue's round-3 small-n search s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 d63fc97093 (`Golay doubling (Jain-Albert map generalised to k outputs): 3 Golay [[23,1,7]] blocks with labels [1, 2, 3], doubled onto small-radical:f0e29414b5acdbd7 (n=93, k=2)`)
+- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 d63fc97093 (`Golay doubling (Jain-Albert map generalised to k outputs): 3 Golay [[23,1,7]] blocks with labels [1, 2, 3], doubled onto 93.2.5.a (small-radical's f0e29414; n=93, k=2)`)
 
 - 231 columns — see `master_catalog.json`, `factories[1246]`
 
@@ -27043,7 +27043,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid af4afde6f3 (`lift of the even d=4 row e6ff1bc56277771ab7ca0ead1bd2c8b7813c0a2b758899be21ed74235fa96b42.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid af4afde6f3 (`lift of the even d=4 row 232.68.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 69! relabellings of a 22036-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(69,2) and a punctured RM(69-4,69) coset, neither feasible at k=69
 - note (reduced degree): not computed: exact minimisation is over GL(69,2) and a punctured RM(69-4,69) coset, neither feasible at k=69
@@ -27197,7 +27197,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: lift of even distance-4 factories — an even distance-4 factory with one column deleted and the point set translated so that column is the origin, which adds one output (a T on it) at distance 3; found by the catalogue's round-3 small-n search s3-mid of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: lift of even distance-4 factories` · s3-mid 9d032ef5fc (`lift of the even d=4 row 6f97de6551ee3cafc9710106b5bb8e4f772c19f45e05cf363088449eaef5bbee.json at column 0`)
+- source: `AI search: lift of even distance-4 factories` · s3-mid 9d032ef5fc (`lift of the even d=4 row 240.74.4.a at column 0`)
 - note (S_k key): the S_k lex-minimum over 75! relabellings of a 26858-monomial gate was not proved within the search budget, so this circuit is shown in its as-found output frame; only the displayed labelling is affected, and this row's class was decided against every other row of its shape by glcanon.gl_isomorphic
 - note (T-count): not computed: exact minimisation is over GL(75,2) and a punctured RM(75-4,75) coset, neither feasible at k=75
 - note (reduced degree): not computed: exact minimisation is over GL(75,2) and a punctured RM(75-4,75) coset, neither feasible at k=75
@@ -28040,7 +28040,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: Golay doubling of catalogue and search rows — the doubling of Jain and Albert (arXiv:2408.12752) generalised to k outputs with Golay [[23,1,7]] weak blocks, which gives d >= min(7, d_t + 2) (research/search2/s3-d7/REPORT.md, section 2.1, with the proof), applied to a catalogue row or a row of the catalogue's own searches, then paired-column contractions (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md) where the source says so; found by the catalogue's round-3 small-n search s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 5669fa9b75 (`Golay doubling (Jain-Albert map generalised to k outputs): 4 Golay [[23,1,7]] blocks with labels [2, 3, 4, 5], doubled onto cat:72.3.4.a (n=72, k=3)`)
+- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 5669fa9b75 (`Golay doubling (Jain-Albert map generalised to k outputs): 4 Golay [[23,1,7]] blocks with labels [2, 3, 4, 5], doubled onto 72.3.4.a (n=72, k=3)`)
 
 - 256 columns — see `master_catalog.json`, `factories[1307]`
 
@@ -28327,7 +28327,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: paired-column contraction of catalogue rows and their direct sums — paired-column contractions, the method of the gamma frontier release (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md), of a catalogue row or of a direct sum of catalogue rows, with shortenings, deletion of repeated column pairs and output restriction where the source says so, each kept only where an exact sweep shows the distance holds; it has fewer inputs than the sum, so it is not a direct sum; found by the catalogue's round-3 small-n searches s3-mid, s3-d56 and s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-d7 75a34baa21 (`paired-column contraction (gamma_frontier CONTRACTION_PROOF.md) of the direct sum small-d7 [[217,7,7]] 9c3da8b2 + 95.1.7.a at D=7; the moves are in the claim file`)
+- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-d7 75a34baa21 (`paired-column contraction (gamma_frontier CONTRACTION_PROOF.md) of the direct sum small-d7's [[217,7,7]] circuit 9c3da8b2 (research/search2/small-d7/data/claims/9c3da8b2e0653b80185ffb7c695e16043627cbe57a70531ad09e023b65878d92.json; the class of 217.7.7.a, which now stores small-cyc's circuit 69bae4f9) + 95.1.7.a at D=7; the moves are in the claim file`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -28406,7 +28406,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: Golay doubling of catalogue and search rows — the doubling of Jain and Albert (arXiv:2408.12752) generalised to k outputs with Golay [[23,1,7]] weak blocks, which gives d >= min(7, d_t + 2) (research/search2/s3-d7/REPORT.md, section 2.1, with the proof), applied to a catalogue row or a row of the catalogue's own searches, then paired-column contractions (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md) where the source says so; found by the catalogue's round-3 small-n search s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 75663242c4 (`paired-column contraction (gamma_frontier CONTRACTION_PROOF.md) of the Golay doubling [[304,3,7]] (CS01·CS02) of small-radical [[120,3,5]] CS 6766fa8b (4 Golay [[23,1,7]] blocks) at D=7; the moves are in the claim file`)
+- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 75663242c4 (`paired-column contraction (gamma_frontier CONTRACTION_PROOF.md) of the Golay doubling [[304,3,7]] (CS01·CS02) of 120.3.5.a (small-radical's CS 6766fa8b) (4 Golay [[23,1,7]] blocks) at D=7; the moves are in the claim file`)
 
 - 272 columns — see `master_catalog.json`, `factories[1329]`
 
@@ -28768,7 +28768,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: Golay doubling of catalogue and search rows — the doubling of Jain and Albert (arXiv:2408.12752) generalised to k outputs with Golay [[23,1,7]] weak blocks, which gives d >= min(7, d_t + 2) (research/search2/s3-d7/REPORT.md, section 2.1, with the proof), applied to a catalogue row or a row of the catalogue's own searches, then paired-column contractions (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md) where the source says so; found by the catalogue's round-3 small-n search s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 d577d87670 (`Golay doubling (Jain-Albert map generalised to k outputs): 4 Golay [[23,1,7]] blocks with labels [2, 3, 4, 5], doubled onto small-radical:6766fa8b37b29666 (n=120, k=3)`)
+- source: `AI search: Golay doubling of catalogue and search rows` · s3-d7 d577d87670 (`Golay doubling (Jain-Albert map generalised to k outputs): 4 Golay [[23,1,7]] blocks with labels [2, 3, 4, 5], doubled onto 120.3.5.a (small-radical's 6766fa8b; n=120, k=3)`)
 
 - 304 columns — see `master_catalog.json`, `factories[1351]`
 
@@ -29170,7 +29170,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search: paired-column contraction of catalogue rows and their direct sums — paired-column contractions, the method of the gamma frontier release (gamma_frontier_release/sources/gamma_frontier/continued_goal/CONTRACTION_PROOF.md), of a catalogue row or of a direct sum of catalogue rows, with shortenings, deletion of repeated column pairs and output restriction where the source says so, each kept only where an exact sweep shows the distance holds; it has fewer inputs than the sum, so it is not a direct sum; found by the catalogue's round-3 small-n searches s3-mid, s3-d56 and s3-d7 of 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-d7 f943d61a6f (`paired-column contraction (gamma_frontier CONTRACTION_PROOF.md) of the direct sum s3-d7 [[268,8,7]] 75a34baa (itself a contraction of small-d7 [[217,7,7]] 9c3da8b2 + 95.1.7.a) + 95.1.7.a at D=7; the moves are in the claim file`)
+- source: `AI search: paired-column contraction of catalogue rows and their direct sums` · s3-d7 f943d61a6f (`paired-column contraction (gamma_frontier CONTRACTION_PROOF.md) of the direct sum 268.8.7.a (s3-d7's 75a34baa, itself a contraction of the direct sum small-d7's [[217,7,7]] circuit 9c3da8b2 (research/search2/small-d7/data/claims/9c3da8b2e0653b80185ffb7c695e16043627cbe57a70531ad09e023b65878d92.json; the class of 217.7.7.a, which now stores small-cyc's circuit 69bae4f9) + 95.1.7.a) + 95.1.7.a at D=7; the moves are in the claim file`)
 - note (T-count): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 - note (reduced degree): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 
