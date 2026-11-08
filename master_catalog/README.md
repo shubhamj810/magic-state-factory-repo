@@ -109,7 +109,7 @@ on the 17- and 18-wire ones.
 
 ## What is in it
 
-**2716 distinct `(n, k, d, GL(k,2) gate)` classes**, 869 of them in the large
+**2782 distinct `(n, k, d, GL(k,2) gate)` classes**, 869 of them in the large
 file. 1323 are at distance 2, and 229 are at `d ≥ 3` with `n ≤ 54`. Widths run
 `k = 1..974`, injection counts `n = 8..262142`, and distances `d = 2..40`.
 The sweep here proves `d = 2..7`. On 186 rows `d` is a certified bound, from
@@ -201,7 +201,9 @@ stored `[[93,3,5]]` in the output frame where its gate is `T0·T1·T2`. The
 searches imported that day took the catalogue from 2114 to 2711 classes.
 Later that day, five one-step shortenings of held rows came in from the
 descent search (`176.1.8.a`, `255.84.3.a`, `255.11.5.a`, `254.6.6.a` and
-`510.84.6.a`), taking it to 2716;
+`510.84.6.a`), taking it to 2716, and 66 rows of the round-3 searches s3-mid,
+s3-d56 and s3-d7 (lifts, contractions, Golay doublings and shortenings, with
+`A_7` counted by two programs on the twelve `d = 7` rows) took it to 2782;
 [`migrations/store_217_7_7_2026_11_07.py`](migrations/store_217_7_7_2026_11_07.py)
 stored the `[[217,7,7]]` circuit with the smaller `A_7` (973 against 1,034,
 each counted by two programs in [`../round1_certificates/`](../round1_certificates/README.md));
@@ -224,7 +226,7 @@ That migration's rule now reads the recipe's category.
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running
 some rotations as `T³`, `T⁵` or `T†` makes that unnecessary
-(`rotation_powers`). 42 classes need nothing, 1819 need only powers, and 855
+(`rotation_powers`). 42 classes need nothing, 1847 need only powers, and 893
 need `S` or `CZ` gates whatever the powers.
 [`migrations/clifford_corrections_2026_10_10.py`](migrations/clifford_corrections_2026_10_10.py)
 added the fields, and [`clifford.py`](clifford.py) explains the method.
@@ -676,6 +678,9 @@ The header, in order:
 | `AI search: pin codes with searched relations` | quantum pin codes of Vuillot and Breuckmann (arXiv:1906.11394) whose box-sum relations, and punctures where there are any, the catalogue's small-pin search found (7 November 2026): CCZ rows at `d = 4` from `[[112,27,4]]` to `[[496,164,4]]`, `T` rows at `d = 4` and 6 |
 | `AI search: even CCZ construction` | the catalogue's small-d4 search (7 November 2026): `d = 4` factories of its even CCZ construction, whose punctured parents follow Haah and Hastings (arXiv:1709.02832, Sec. 2.2), 20 CCZ rows from `[[94,16,4]]` to `[[240,74,4]]`, `T` and `CS` rows |
 | `AI search: invariant radical growth` | the catalogue's small-radical search (7 November 2026, after small-d56): exact invariant radical growth on triorthogonal BCH-type check codes, 26 rows from `n = 93` to 512 at `d` from 5 to 8 in the `T`, `CS`, `CCZ` and mixed classes; it also gave the `T` frame in which `[[93,3,5]]` is stored |
+| `AI search: lift of even distance-4 factories` | the catalogue's round-3 small-n search s3-mid (7 November 2026): an even `d = 4` row with one column deleted and moved to the origin, which adds an output (a `T` on it) at `d = 3`; 31 rows from `[[95,24,3]]` to `[[255,85,3]]` |
+| `AI search: paired-column contraction of catalogue rows and their direct sums` | the round-3 searches s3-mid, s3-d56 and s3-d7: paired-column contractions (the gamma frontier release's method, `CONTRACTION_PROOF.md`) of a row or a direct sum of rows, with shortenings, deletion of repeated column pairs and output restriction where noted; a contracted sum has fewer inputs than the sum, so it is not a direct sum. 12 rows, among them `[[92,16,4]]` and `[[70,2,5]]` to `[[126,6,6]]` |
+| `AI search: Golay doubling of catalogue and search rows` | the round-3 search s3-d7: the doubling of Jain and Albert (arXiv:2408.12752) generalised to `k` outputs with Golay `[[23,1,7]]` weak blocks, `d >= min(7, d_t + 2)` (proof in research/search2/s3-d7/REPORT.md, section 2.1), applied to a held or searched row and then contracted where the source says so: T rows from `[[154,2,7]]`, CS rows from `[[148,2,6]]` to `[[304,3,7]]` |
 
 The full sentence for each is in the header and on the first page of
 `MASTER_CATALOG.md`. A regime a merge introduces is registered at the **end** of
@@ -785,7 +790,8 @@ or undocumented fields.
   ([`glcanon.intrinsic_width`](glcanon.py)), and the verifier recomputes it;
   [`migrations/intrinsic_width_2026_11_07.py`](migrations/intrinsic_width_2026_11_07.py)
   computed it a second way, from the columns, on every row. 286 of the 2716
-  classes have `intrinsic_width < k`. 151 are at distance 2 (148 two-group
+  classes then held had `intrinsic_width < k`; none of the 66 rows imported
+  after that has one. 151 are at distance 2 (148 two-group
   circuits of the borrowed-identity searches, up to `n = 147447`, and three from
   the symmetry-SAT search). 135 are at `d ≥ 3`: 82 with `n ≤ 54` (67 inside the
   length-54 classification, 12 from the flat-toggle search, 3 from other AI

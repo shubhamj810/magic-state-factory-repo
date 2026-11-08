@@ -12,7 +12,8 @@ stores them (their SHA-256 is what the record is bound to).
    This script then re-checks every listed set by its own XOR of the column
    supports (distinct columns, check part zero, output part non-zero and equal
    to the output XOR mitml printed), and requires the number of distinct sets
-   to equal mitml's own count.  The list is kept in `evidence/lists/`.
+   to equal mitml's own count.  The list is kept, gzipped, in `evidence/lists/`
+   (the recorded SHA-256 is that of the uncompressed list).
 2. `join` of the small-review agent's `mydist.py` (copied unchanged from the
    research branch, commit 82a5c7e, into `evidence/small_review/`): a numpy
    meet-in-the-middle written from the definitions, sharing no code with
@@ -23,6 +24,7 @@ Both counts and both accepted counts must agree, or nothing is written.
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
 import json
 import math
@@ -119,6 +121,11 @@ def main(argv=None):
     if (mine["count"], accepted) != (res["harmful"], res["accepted"]):
         raise AssertionError(f"the counts disagree: mitml {res['harmful']} harmful, "
                              f"{res['accepted']} accepted; mydist {mine['count']}, {accepted}")
+    text = listing.read_bytes()
+    packed = listing.with_name(listing.name + ".gz")
+    packed.write_bytes(gzip.compress(text, compresslevel=9, mtime=0))
+    listing.unlink()
+    listing = packed
     record = {"name": args.name, "n": len(columns), "k": k, "N": N,
               "columns_sha256": digest, "weight": w,
               "mitml": {"harmful": res["harmful"], "accepted": res["accepted"],
@@ -126,7 +133,7 @@ def main(argv=None):
                         "parts_log2": res["parts_log2"], "seconds": res["seconds"],
                         "list_file": (str(listing.relative_to(REPO)) if not args.scratch
                                       else str(listing)),
-                        "list_sha256": hashlib.sha256(listing.read_bytes()).hexdigest(),
+                        "list_sha256": hashlib.sha256(text).hexdigest(),
                         "mitml_sha256": hashlib.sha256(SWEEP.SOURCE.read_bytes()).hexdigest()},
               "mydist": {"harmful": mine["count"], "accepted": accepted, "a": a, "b": b,
                          "seconds": round(time.time() - started, 1),

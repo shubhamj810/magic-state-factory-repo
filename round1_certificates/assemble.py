@@ -28,7 +28,8 @@ Two kinds of evidence:
   mitml's complete list (kept in `evidence/lists/`, every set re-checked by
   the script) and with the small-review agent's `mydist.py`
   (`evidence/small_review/`).  Each run gives one count record per program;
-  this script checks that the list file is the one the run hashed and that it
+  this script checks that the list file (gzipped where it ends in .gz; the
+  hash is of the uncompressed list) is the one the run hashed and that it
   holds exactly that many sets.
 
 Every record is bound to its circuit by the SHA-256 of the stored columns.
@@ -36,6 +37,7 @@ Every record is bound to its circuit by the SHA-256 of the stored columns.
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
 import json
 import re
@@ -106,6 +108,8 @@ def assemble():
     for run in (jsonl(listed) if listed.exists() else []):
         listing = REPO / run["mitml"]["list_file"]
         blob = listing.read_bytes()
+        if listing.suffix == ".gz":              # long lists are kept compressed
+            blob = gzip.decompress(blob)
         if hashlib.sha256(blob).hexdigest() != run["mitml"]["list_sha256"]:
             raise AssertionError(f"{run['name']}: the list file is not the one the run hashed")
         sets = [x for x in blob.decode().splitlines() if x.strip()]
