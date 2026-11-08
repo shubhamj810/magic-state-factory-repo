@@ -22,6 +22,7 @@ AI-assisted and SAT searches, the literature and
 | [`attribute_classification.py`](attribute_classification.py) | credit a classification catalogue on the rows it certifies -- provenance only, no circuit field is touched; needed because a class first merged from a search and later covered by a classification is a `duplicate` to `merge_results.py`, which changes nothing |
 | [`faultcore.py`](faultcore.py), [`glcanon.py`](glcanon.py), [`skcanon.py`](skcanon.py), [`gatelabels.py`](gatelabels.py) | the primitives: fault search, the `GL(k,2)` class decision, the `S_k` frame, reading a claimed gate string |
 | [`errorcoeff.py`](errorcoeff.py) | the leading error coefficient `A_d`, counted exactly by the MacWilliams identity and by enumeration |
+| [`records.py`](records.py) | which rows are records under the owner's rule, direct sums included (see [Records](#records)); nothing stores the verdict, so it cannot go stale |
 | [`clifford.py`](clifford.py) | the Clifford correction a circuit needs, the rotation powers that avoid it (or the proof that none do), and a direct evaluation of the logical action |
 | [`migrations/`](migrations/) | the one-off scripts that made structural changes to the file (keying on `GL(k,2)` classes, citations, distance certificates, the length-54 classification, source paths, header wording, the distance-2 floor and the Borrowed Identities import, the Clifford corrections, the transversal-T codes), kept so each can be re-run and read |
 | [`reduced_degree_cache.json`](reduced_degree_cache.json) | memoised reduced-degree bounds, so re-verifying a `k = 5, 6` row is a lookup rather than a ~100 s re-search |
@@ -108,10 +109,10 @@ on the 17- and 18-wire ones.
 
 ## What is in it
 
-**2711 distinct `(n, k, d, GL(k,2) gate)` classes**, 869 of them in the large
+**2716 distinct `(n, k, d, GL(k,2) gate)` classes**, 869 of them in the large
 file. 1323 are at distance 2, and 229 are at `d ≥ 3` with `n ≤ 54`. Widths run
 `k = 1..974`, injection counts `n = 8..262142`, and distances `d = 2..40`.
-The sweep here proves `d = 2..7`. On 185 rows `d` is a certified bound, from
+The sweep here proves `d = 2..7`. On 186 rows `d` is a certified bound, from
 `d = 4` to `d = 40`, each backed by a theorem or exhaustive-search record in
 this repository, and on 33 of them (`d ≥ 13`) it is a lower bound only. Every
 certificate in the file is now the row's `d`.
@@ -198,11 +199,26 @@ day, and
 [`migrations/reframe_93_3_5_2026_11_07.py`](migrations/reframe_93_3_5_2026_11_07.py)
 stored `[[93,3,5]]` in the output frame where its gate is `T0·T1·T2`. The
 searches imported that day took the catalogue from 2114 to 2711 classes.
+Later that day, five one-step shortenings of held rows came in from the
+descent search (`176.1.8.a`, `255.84.3.a`, `255.11.5.a`, `254.6.6.a` and
+`510.84.6.a`), taking it to 2716;
+[`migrations/store_217_7_7_2026_11_07.py`](migrations/store_217_7_7_2026_11_07.py)
+stored the `[[217,7,7]]` circuit with the smaller `A_7` (973 against 1,034,
+each counted by two programs in [`../round1_certificates/`](../round1_certificates/README.md));
+[`migrations/credit_2026_11_07.py`](migrations/credit_2026_11_07.py) credited
+`737.1.17.a` to Berardini et al. and Gong;
+[`migrations/construction_references_2026_11_07.py`](migrations/construction_references_2026_11_07.py)
+added San-José's and Wills's papers to the references, named in the regime
+sentences of the rows built from their constructions, which stay credited to
+the AI searches; and
+[`migrations/record_wording_2026_11_07.py`](migrations/record_wording_2026_11_07.py)
+took "undominated" out of the 84 release San-José rows' provenance (see
+[Records](#records)).
 
 **Clifford corrections.** Every row says what its circuit needs besides the
 rotations to be exactly its gate (`clifford_correction`), and whether running
 some rotations as `T³`, `T⁵` or `T†` makes that unnecessary
-(`rotation_powers`). 39 classes need nothing, 1819 need only powers, and 853
+(`rotation_powers`). 42 classes need nothing, 1819 need only powers, and 855
 need `S` or `CZ` gates whatever the powers.
 [`migrations/clifford_corrections_2026_10_10.py`](migrations/clifford_corrections_2026_10_10.py)
 added the fields, and [`clifford.py`](clifford.py) explains the method.
@@ -318,6 +334,14 @@ links each published one to its DOI or arXiv page.
   her note. `737.1.17.a`, Berardini et al.'s Theorem 12 applied to her
   `[[559,1,15]]` by the catalogue's AI search, cites Berardini et al. and her
   note, and its source says the search made it.
+* **A construction from a paper, the instance from an AI search.** The rows
+  the AI searches built from San-José's GRS construction (arXiv:2609.08203)
+  and from Wills's parent codes (arXiv:2608.24000) are credited to the search
+  (`jain2026symmetry`, `discovery` `AI search`). The two papers are in the
+  header's references (`sanjose2026asymptotically`, `wills2026improved`) and
+  are named in those rows' regime sentences; the website shows them beside the
+  provenance, not as the original source (the owner's decision of
+  7 November 2026).
 * **Distance 2.** The length-54 classification does not cover distance 2, so a
   distance-2 class never cites it. A class the borrowed-identity searches found
   is credited to their paper (Singh, Gidney and Jones), unless an earlier work
@@ -684,6 +708,23 @@ and `d_certified_evidence`, its evidence files. A certificate the repository
 cannot check (the doubling theorem where it needs the distances of the
 extended QR codes of length 168, 192 or 200, and two gamma frontier records)
 stays in `d_certified` beside the sweep's `d`.
+
+## Records
+
+A row is a **record** when no other row of its gate class (`T` only, `CS`
+only, `CCZ` only, mixed, or any gate) has `n' <= n`, `k' >= k` and `d' >= d`
+with one of the three strict, and no direct sum of two or more rows of that
+class reaches `n' <= n`, `k' >= k` and `d' >= d`. The direct sum of
+`(n1, k1, d1)` and `(n2, k2, d2)` is `(n1 + n2, k1 + k2, min(d1, d2))`, and a sum
+that only equals the row also takes the record away. This is the owner's rule
+of 7 November 2026: a direct sum can be in the catalogue, but it is not a
+record. [`records.py`](records.py) applies it to the rows as they stand, and
+the website presents as best (its headline figures and the frontier staircase)
+only records. No field of a row says that it is a record, so the verdict is
+never stored where it could go stale; the regime sentences say what each
+source proves, and most of them say "a verified witness, not a maximum". A
+Pareto point of the length-54 classification is a statement about `n` and `N`
+within one output class, not a record in this sense.
 
 ## Three implementations, on purpose
 

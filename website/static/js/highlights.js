@@ -72,6 +72,11 @@
       return Object.assign({}, p, {
         d_verified: p.d, d: p.d_claim, gamma_rho: value, comparable: value !== null && value !== undefined,
         v_ex_best: metric === "gamma" ? p.k : p.v_ex_best,
+        /* a record under the owner's rule (master_catalog/records.py): no
+         * other factory, and no direct sum of factories, of the same gate class
+         * has as few inputs, as many outputs and as high a distance.  The class
+         * is the row's own: k counts wires, so k is not compared across gates */
+        record: metric === "gamma" ? !!p.record_pure : !!p.record_class,
         certified: p.d_claim_certified, lower_bound: p.d_claim_certified && p.d_claim_exact === false
       });
     });
@@ -107,10 +112,11 @@
   /* --------------------------------------------------------- the headline */
 
   function headline(parameters) {
-    var comparable = parameters.filter(function (r) { return r.comparable; });
+    /* only records are presented as best: a direct sum is never one */
+    var comparable = parameters.filter(function (r) { return r.comparable && r.record; });
     var best = bestBy(comparable, "gamma_rho");
     var widest = maxBy(comparable, "v_ex_best");
-    var deepest = maxBy(parameters, "d");
+    var deepest = maxBy(parameters.filter(function (r) { return r.record; }), "d");
     if (!best) return "";
     function cell(title, value, row, note) {
       return '<div class="head-stat">' +
@@ -186,7 +192,9 @@
     var html = byDistance(pts).map(function (group) {
       var rows = group.rows.slice().sort(function (a, b) { return a.n - b.n || a.gamma_rho - b.gamma_rho; });
       var run = Infinity, stair = [];
-      rows.forEach(function (p) { if (p.gamma_rho < run) { run = p.gamma_rho; stair.push(p); } });
+      /* the staircase steps only on records: a factory matched by a direct sum,
+       * or by another factory with at least its distance, is never a frontier point */
+      rows.forEach(function (p) { if (p.record && p.gamma_rho < run) { run = p.gamma_rho; stair.push(p); } });
       var best = stair[stair.length - 1];
       var parts = [];
 
@@ -272,7 +280,7 @@
       "<figcaption>Inputs " + C.tex("n") + " on a log scale against " + C.tex(M.sym) +
       ", on axes shared by all panels. " +
       '<span class="key"><span class="key-dot"></span><span>parameter set</span></span>' +
-      '<span class="key"><span class="stair-key"></span><span>lowest ' + C.tex(M.sym) + " up to this " + C.tex("n") + '</span></span>' +
+      '<span class="key"><span class="stair-key"></span><span>lowest ' + C.tex(M.sym) + " up to this " + C.tex("n") + ", among records</span></span>" +
       '<span class="key"><span class="unity-key"></span><span>' + C.tex(M.sym + "=1") + '</span></span>' +
       "<br>Hover over a point for details, or click it to open." +
       (clipped ? " " + clipped + " parameter set" + (clipped === 1 ? " lies" : "s lie") + " above the axis and " +
@@ -410,9 +418,9 @@
     var intro = document.getElementById("best-intro");
     if (intro) {
       intro.innerHTML = metric === "gamma"
-        ? "Lowest " + C.tex("\\gamma=\\log(n/k)/\\log d") + " among pure " + C.tex("T^{\\otimes k}") + " factories. " + '<a href="about.html#numbers">What this measures</a>'
+        ? "Lowest " + C.tex("\\gamma=\\log(n/k)/\\log d") + " among pure " + C.tex("T^{\\otimes k}") + " factories that are records. " + '<a href="about.html#numbers">What this measures</a>'
         : "Lowest " + C.tex("\\gamma_\\rho=\\log(n/V_{\\mathrm{ex}})/\\log d") + " across every gate, " +
-          "counting the T states a run yields. " + '<a href="about.html#numbers">What this measures</a>';
+          "counting the T states a run yields, among factories that are records in their own gate class. " + '<a href="about.html#numbers">What this measures</a>';
     }
     var plotNode = document.getElementById("frontier-plot");
     if (plotNode) plotNode.innerHTML = plot(p);

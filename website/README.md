@@ -73,8 +73,25 @@ results each filter value would give. A column chooser hides or shows columns
 focuses the search box on any page. The landing page ranks by γ among pure
 T⊗k factories by default, and by γ_ρ across every gate at the flip of a
 switch; the headline figures and the frontier both
-follow it. The frontier plot switches to a table of its frontier points and
-exports to SVG and PNG.
+follow it. Both present only records, under the owner's rule of 7 November
+2026 ([`master_catalog/records.py`](../master_catalog/records.py)): a factory is
+a record when no other factory, and no direct sum of factories, of its own gate
+class (T, CS, CCZ or mixed) has at most its inputs, at least its outputs and at
+least its distance. A direct sum can be in the catalogue, but it is never shown
+as best. Every other parameter set is still drawn as a grey point. The index
+carries the verdicts (`record_class` and `record_all` on each factory;
+`record_pure`, `record_class` and `record_all` on each parameter set). The
+frontier plot switches to a table of its frontier points and exports to SVG
+and PNG.
+
+A paper in the references that no row cites, named by its arXiv number in a
+factory's regime sentence, is the paper whose construction the factory was
+built from. It is shown on the factory page under the provenance
+("Construction from") and listed on the references page with the number of
+such factories. It is not the factory's
+original source: San-José's GRS construction and Wills's parent codes, for
+example, are named this way on the rows the AI searches built from them, and
+those rows stay credited to the searches (`construction_refs` in the index).
 [`CITATION.cff`](../CITATION.cff) at the repository root gives GitHub's
 "Cite this repository" button and describes releases archived on Zenodo.
 

@@ -28,7 +28,7 @@ witness are different kinds of statement.
 | `AI search` (371 rows) | found by an AI search campaign; a verified witness, not a maximum |
 | `AI search: punctured r=7 simplex parents` (19 rows) | found by the 48 < n < 128 AI campaigns, from punctured r=7 simplex parents with free-row appending; a verified witness, not a maximum |
 | `AI search: multi-agent campaign 39<=n<=127` (95 rows) | found by the 39 <= n <= 127 multi-actor AI campaign (three Opus 5 actors, two conferring Fable 5 reviewers, three rounds, 2026-09-01); a verified witness, not a maximum |
-| `AI search (gamma frontier): from Wills parent codes` (73 rows) | built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows |
+| `AI search (gamma frontier): from Wills parent codes` (73 rows) | built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows |
 | `AI search (gamma frontier): contraction of an existing code` (35 rows) | a paired-column contraction of an existing triorthogonal code, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows |
 | `AI search (gamma frontier): logical restriction of a length-54 Pareto point` (11 rows) | a restriction to fewer logical rows of a Pareto point of the length-54 classification, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows |
 | `AI search (gamma frontier): punctured Reed-Muller code` (1 rows) | a punctured Reed-Muller code found by the gamma sub-1000 AI campaign (RM(3,10) punctured at 123 points), filed with the pure-T distillation-exponent frontier (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum |
@@ -23224,7 +23224,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `Z on 2`, `S† on 3`, `Z on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 12` and 385 more (36 single-wire, 361 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 9, 10, 12, 20, 26, 28, 35, 36, 38, 39, 44 and 54 more; `T⁵` on columns 1, 2, 3, 6, 15, 18, 21, 22, 23, 24, 27, 41 and 4 more; `T†` on columns 5, 16, 19, 43, 49, 81, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_157_29_3_973bf059080a (`gamma frontier release record paired_column_contraction_157_29_3_973bf059080a (source catalogue id paired_column_contraction_157_29_3_973bf059080a); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=48), with searched graph punctures; 3 paired-column contractions; matrix 973bf059080a286d...; the release states d=3 (exact), gamma=1.5373485193847718 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(29,2) and a punctured RM(29-4,29) coset, neither feasible at k=29
@@ -23319,7 +23319,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 27 more (33 single-wire, 6 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 8, 9, 12, 13, 14, 27, 28, 38, 40, 43, 45 and 55 more; `T⁵` on columns 1, 21, 37, 39, 41; `T†` on columns 0, 3, 4, 6, 15, 16, 17, 18, 19, 20, 23, 26 and 2 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_160_30_3_e7719999144e (`gamma frontier release record paired_column_contraction_160_30_3_e7719999144e (source catalogue id paired_column_contraction_160_30_3_e7719999144e); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=48), with searched graph punctures; 1 paired-column contraction; matrix e7719999144ec242...; the release states d=3 (exact), gamma=1.5237190142858297 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(30,2) and a punctured RM(30-4,30) coset, neither feasible at k=30
@@ -23394,7 +23394,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 19 more (31 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_161_31_3 (`gamma frontier release record restricted_light_161_31_3 (source catalogue id restricted_light_161_31_3); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=48), with searched graph punctures; matrix ad9312f7779cd3dd...; the release states d=3 (exact), gamma=1.4995437221046783 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(31,2) and a punctured RM(31-4,31) coset, neither feasible at k=31
@@ -23953,7 +23953,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 2`, `S† on 3`, `S† on 4`, `S on 5`, `S on 6`, `S† on 7`, `S on 8`, `S† on 9`, `S on 10`, `S on 11` and 152 more (36 single-wire, 128 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 9, 12, 13, 14, 16, 23, 26, 27, 37, 38, 40 and 50 more; `T⁵` on columns 4, 5, 8, 10, 21, 22, 25, 43, 48, 50, 61, 85 and 2 more; `T†` on columns 1, 2, 3, 6, 11, 15, 45, 46, 86, 96, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_176_32_3 (`gamma frontier release record restricted_light_176_32_3 (source catalogue id restricted_light_176_32_3); construction: Wills-derived restricted-light construction; matrix 6c43caa529aade15...; the release states d=3 (exact), gamma=1.5517285850726805 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
@@ -24347,7 +24347,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 56 more (37 single-wire, 31 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 4, 6, 9, 10, 21, 23, 24, 31, 35, 42, 43 and 63 more; `T⁵` on columns 2, 5, 7, 8, 14, 15, 20, 25, 26, 49, 50, 55 and 3 more; `T†` on columns 3, 12, 13, 16, 18, 52, 74, 98, 118, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_188_36_3 (`gamma frontier release record restricted_light_188_36_3 (source catalogue id restricted_light_188_36_3); construction: Wills-derived restricted-light construction; matrix 97e823cdd28567f7...; the release states d=3 (exact), gamma=1.5045553753797365 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
@@ -24479,7 +24479,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 93 more (36 single-wire, 69 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 8, 15, 25, 26, 33, 34, 35, 43, 48, 53, 59 and 68 more; `T⁵` on columns 1, 2, 3, 11, 12, 27, 32, 36, 40, 50, 51, 95 and 2 more; `T†` on columns 0, 10, 13, 19, 23, 28, 37, 52, 55, 57, 97, 99 and 1 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_189_35_3 (`gamma frontier release record restricted_light_189_35_3 (source catalogue id restricted_light_189_35_3); construction: Wills-derived restricted-light construction; matrix 7f6444a2df8cf68d...; the release states d=3 (exact), gamma=1.535026479282073 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(35,2) and a punctured RM(35-4,35) coset, neither feasible at k=35
@@ -24796,7 +24796,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S† on 3`, `S on 4`, `S† on 5`, `S on 6`, `S† on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 105 more (43 single-wire, 74 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 2, 7, 10, 12, 14, 25, 40, 41, 44, 48 and 71 more; `T⁵` on columns 3, 4, 9, 11, 27, 28, 29, 31, 33, 38, 39, 53 and 7 more; `T†` on columns 8, 13, 18, 32, 52, 54, 86, 99, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_203_37_3 (`gamma frontier release record restricted_light_203_37_3 (source catalogue id restricted_light_203_37_3); construction: Wills-derived restricted-light construction; matrix c2d397f4adc1b7a1...; the release states d=3 (exact), gamma=1.549489373053812 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(37,2) and a punctured RM(37-4,37) coset, neither feasible at k=37
@@ -24813,7 +24813,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `Z on 6`, `S† on 7`, `S† on 8`, `S† on 9`, `S† on 10`, `S† on 12`, `S on 13`, `S on 14` and 254 more (45 single-wire, 221 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 6, 10, 11, 17, 18, 25, 37, 39, 40, 48, 52 and 81 more; `T⁵` on columns 1, 9, 12, 19, 20, 23, 27, 28, 32, 34, 47, 100 and 1 more; `T†` on columns 3, 4, 13, 15, 21, 22, 29, 33, 41, 50, 59, 98, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_205_41_3_e9df5bc28e07 (`gamma frontier release record paired_column_contraction_205_41_3_e9df5bc28e07 (source catalogue id paired_column_contraction_205_41_3_e9df5bc28e07); construction: Wills weighted Reed–Muller parent (weights 1^6,2^2, cutoff 3), with searched graph punctures; 5 paired-column contractions; matrix e9df5bc28e07d55b...; the release states d=3 (exact), gamma=1.4649735207179269 (exact); the release matrix has 205 columns of which 2 are a repeated pair -- equal columns cancel to a diagonal Clifford and deposit nothing, so they are deleted here and this circuit is the reduced one, with 203 injections for the same gate and distance`)
 - note (T-count): not computed: exact minimisation is over GL(41,2) and a punctured RM(41-4,41) coset, neither feasible at k=41
@@ -24848,7 +24848,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 3`, `S on 4`, `S† on 5`, `S† on 6`, `S† on 8`, `Z on 9`, `S† on 12`, `S on 13`, `Z on 14`, `S on 15`, `S† on 17` and 628 more (36 single-wire, 604 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 6, 7, 9, 11, 12, 20, 21, 22, 25, 26, 28 and 77 more; `T⁵` on columns 3, 8, 14, 15, 16, 50, 52; `T†` on columns 4, 10, 13, 18, 19, 41, 56, 106, 107, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_204_40_3_ef11821ff767 (`gamma frontier release record paired_column_contraction_204_40_3_ef11821ff767 (source catalogue id paired_column_contraction_204_40_3_ef11821ff767); construction: Wills weighted Reed–Muller parent (weights 1^6,2^2, cutoff 3), with searched graph punctures; 6 paired-column contractions; matrix ef11821ff76751c6...; the release states d=3 (exact), gamma=1.4829986488731812 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
@@ -24900,7 +24900,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S† on 2`, `S† on 3`, `S on 4`, `S on 5`, `S† on 6`, `S on 7`, `S† on 8`, `S on 9`, `S on 10`, `S on 11` and 145 more (52 single-wire, 105 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 6, 8, 9, 11, 14, 16, 20, 21, 30, 39 and 78 more; `T⁵` on columns 0, 13, 15, 18, 27, 31, 33, 36, 41, 43; `T†` on columns 4, 7, 12, 19, 23, 25, 26, 29, 32, 34, 53, 54 and 3 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_207_43_3_51a333ca691e (`gamma frontier release record paired_column_contraction_207_43_3_51a333ca691e (source catalogue id paired_column_contraction_207_43_3_51a333ca691e); construction: Wills weighted Reed–Muller parent (weights 1^6,2^2, cutoff 3), with searched graph punctures; 3 paired-column contractions; matrix 51a333ca691e0f18...; the release states d=3 (exact), gamma=1.4304579457025914 (exact); the release matrix has 207 columns of which 2 are a repeated pair -- equal columns cancel to a diagonal Clifford and deposit nothing, so they are deleted here and this circuit is the reduced one, with 205 injections for the same gate and distance`)
 - note (T-count): not computed: exact minimisation is over GL(43,2) and a punctured RM(43-4,43) coset, neither feasible at k=43
@@ -24949,7 +24949,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `S on 2`, `Z on 3`, `S on 4`, `Z on 5`, `S on 6`, `S on 7`, `Z on 8`, `S† on 9`, `S on 10`, `Z on 11` and 536 more (52 single-wire, 496 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 17, 18, 27, 32, 34, 51, 55, 57, 62, 65, 67, 71 and 59 more; `T⁵` on columns 1, 2, 3, 5, 9, 11, 13, 15, 19, 21, 23, 29 and 5 more; `T†` on columns 4, 6, 8, 10, 12, 20, 24, 33, 38, 53, 104, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_206_42_3_d293f2254ed0 (`gamma frontier release record paired_column_contraction_206_42_3_d293f2254ed0 (source catalogue id paired_column_contraction_206_42_3_d293f2254ed0); construction: Wills weighted Reed–Muller parent (weights 1^6,2^2, cutoff 3), with searched graph punctures; 4 paired-column contractions; matrix d293f2254ed0b64e...; the release states d=3 (exact), gamma=1.447468380709706 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(42,2) and a punctured RM(42-4,42) coset, neither feasible at k=42
@@ -25069,7 +25069,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `S† on 5`, `S on 6`, `S† on 7`, `Z on 8`, `S on 9`, `Z on 10`, `Z on 11` and 561 more (51 single-wire, 522 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 9, 10, 12, 13, 14, 26, 29, 32, 37, 40, 42 and 81 more; `T⁵` on columns 11, 15, 20, 22, 27, 30, 57, 63, 100, 108, 129; `T†` on columns 0, 2, 4, 6, 16, 18, 25, 28, 35, 39, 50, 53 and 1 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_208_44_3_3700258a70b8 (`gamma frontier release record paired_column_contraction_208_44_3_3700258a70b8 (source catalogue id paired_column_contraction_208_44_3_3700258a70b8); construction: Wills weighted Reed–Muller parent (weights 1^6,2^2, cutoff 3), with searched graph punctures; 2 paired-column contractions; matrix 3700258a70b884f8...; the release states d=3 (exact), gamma=1.4139186879715695 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(44,2) and a punctured RM(44-4,44) coset, neither feasible at k=44
@@ -25173,7 +25173,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 34 more (46 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · graph_210_46_3 (`gamma frontier release record graph_210_46_3 (source catalogue id graph_210_46_3); construction: Wills weighted Reed–Muller parent (weights 1^6,2^2, cutoff 3), with searched graph punctures; matrix 2665678fd5b2a0b3...; the release states d=3 (exact), gamma=1.3821674396790782 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(46,2) and a punctured RM(46-4,46) coset, neither feasible at k=46
@@ -27060,7 +27060,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 47 more (59 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_261_59_3 (`gamma frontier release record restricted_light_261_59_3 (source catalogue id restricted_light_261_59_3); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=80), with searched graph punctures; matrix 128272ad039bec0f...; the release states d=3 (exact), gamma=1.3535102226279492 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(59,2) and a punctured RM(59-4,59) coset, neither feasible at k=59
@@ -27416,7 +27416,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 124 more (65 single-wire, 71 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 6, 18, 25, 26, 27, 29, 31, 32, 55, 57, 67, 71 and 87 more; `T⁵` on columns 0, 1, 2, 3, 4, 13, 17, 19, 20, 30, 36, 38 and 9 more; `T†` on columns 10, 34, 42, 44, 48, 50, 52, 53, 73, 74, 92, 150 and 1 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_288_64_3 (`gamma frontier release record restricted_light_288_64_3 (source catalogue id restricted_light_288_64_3); construction: Wills-derived restricted-light construction; matrix c0079d836aad303e...; the release states d=3 (exact), gamma=1.3690702464285425 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(64,2) and a punctured RM(64-4,64) coset, neither feasible at k=64
@@ -27467,7 +27467,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 318 more (74 single-wire, 256 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 8, 10, 19, 26, 32, 33, 51, 55, 57, 71, 74, 77 and 88 more; `T⁵` on columns 3, 4, 5, 12, 14, 16, 18, 20, 25, 27, 30, 34 and 16 more; `T†` on columns 0, 1, 9, 15, 28, 29, 31, 35, 45, 48, 60, 73 and 4 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_300_68_3 (`gamma frontier release record restricted_light_300_68_3 (source catalogue id restricted_light_300_68_3); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=92), with searched graph punctures; matrix 2bac793753a158f0...; the release states d=3 (exact), gamma=1.3510451182732883 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(68,2) and a punctured RM(68-4,68) coset, neither feasible at k=68
@@ -27551,7 +27551,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S† on 2`, `Z on 3`, `Z on 5`, `S† on 7`, `S† on 9`, `S† on 10`, `S† on 12`, `S on 13`, `S on 15`, `S† on 16` and 1244 more (62 single-wire, 1194 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 2, 8, 10, 14, 16, 22, 25, 34, 38, 44, 45 and 110 more; `T⁵` on columns 1, 3, 5, 6, 7, 11, 26, 27, 29, 35, 40, 47 and 8 more; `T†` on columns 9, 13, 18, 23, 31, 32, 36, 41, 42, 49, 55, 56 and 9 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_308_70_3_cf4a3978731c (`gamma frontier release record paired_column_contraction_308_70_3_cf4a3978731c (source catalogue id paired_column_contraction_308_70_3_cf4a3978731c); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=96), with searched graph punctures; 3 paired-column contractions; matrix cf4a3978731c7946...; the release states d=3 (exact), gamma=1.3486145714976683 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(70,2) and a punctured RM(70-4,70) coset, neither feasible at k=70
@@ -27585,7 +27585,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `S on 3`, `S on 4`, `Z on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `Z on 10`, `Z on 11` and 856 more (79 single-wire, 789 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 7, 8, 17, 20, 22, 27, 28, 31, 32, 33, 36 and 116 more; `T⁵` on columns 6, 9, 11, 21, 37, 43, 45, 46, 48, 50, 54, 55 and 10 more; `T†` on columns 3, 4, 12, 13, 15, 18, 23, 25, 47, 59, 61, 72 and 3 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_309_71_3_2e205c5d61b9 (`gamma frontier release record paired_column_contraction_309_71_3_2e205c5d61b9 (source catalogue id paired_column_contraction_309_71_3_2e205c5d61b9); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=96), with searched graph punctures; 2 paired-column contractions; matrix 2e205c5d61b9d4a1...; the release states d=3 (exact), gamma=1.3386536952352588 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(71,2) and a punctured RM(71-4,71) coset, neither feasible at k=71
@@ -27653,7 +27653,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `S on 3`, `S on 4`, `Z on 5`, `S on 6`, `S on 7`, `Z on 8`, `S on 9`, `S on 10`, `S on 11` and 766 more (75 single-wire, 703 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 11, 17, 24, 27, 29, 30, 32, 33, 34, 35, 43 and 117 more; `T⁵` on columns 5, 10, 14, 15, 16, 18, 21, 23, 25, 39, 41, 48 and 7 more; `T†` on columns 0, 1, 2, 3, 4, 9, 13, 20, 26, 28, 37, 38 and 10 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_310_72_3_07b415183008 (`gamma frontier release record paired_column_contraction_310_72_3_07b415183008 (source catalogue id paired_column_contraction_310_72_3_07b415183008); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=96), with searched graph punctures; 1 paired-column contraction; matrix 07b415183008901e...; the release states d=3 (exact), gamma=1.328863870832027 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(72,2) and a punctured RM(72-4,72) coset, neither feasible at k=72
@@ -27704,7 +27704,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 61 more (73 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_311_73_3 (`gamma frontier release record restricted_light_311_73_3 (source catalogue id restricted_light_311_73_3); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=96), with searched graph punctures; matrix e9fb38a4a4978116...; the release states d=3 (exact), gamma=1.3192401777955043 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(73,2) and a punctured RM(73-4,73) coset, neither feasible at k=73
@@ -27972,7 +27972,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 328 more (78 single-wire, 262 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 19, 20, 23, 24, 25, 26, 31, 32, 33, 34, 38 and 132 more; `T⁵` on columns 2, 4, 7, 10, 13, 16, 17, 21, 36, 46, 49, 50 and 14 more; `T†` on columns 0, 8, 11, 14, 18, 22, 30, 59, 63, 69, 80, 168, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_324_76_3 (`gamma frontier release record restricted_light_324_76_3 (source catalogue id restricted_light_324_76_3); construction: Wills-derived restricted-light construction; matrix 10a93620b1e2f697...; the release states d=3 (exact), gamma=1.3198561407536247 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(76,2) and a punctured RM(76-4,76) coset, neither feasible at k=76
@@ -28161,7 +28161,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 194 more (80 single-wire, 126 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 12, 13, 16, 21, 25, 32, 33, 35, 44, 51, 52 and 126 more; `T⁵` on columns 8, 9, 11, 18, 24, 27, 31, 41, 45, 46, 59, 60 and 4 more; `T†` on columns 0, 2, 6, 14, 17, 19, 34, 38, 39, 40, 48, 50 and 10 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_336_80_3 (`gamma frontier release record restricted_light_336_80_3 (source catalogue id restricted_light_336_80_3); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=104), with searched graph punctures; matrix e0376e636f7c7c48...; the release states d=3 (exact), gamma=1.306270228443495 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(80,2) and a punctured RM(80-4,80) coset, neither feasible at k=80
@@ -28568,7 +28568,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S on 2`, `S on 3`, `Z on 4`, `Z on 5`, `S on 6`, `S on 7`, `S on 8`, `Z on 9`, `S on 10`, `S on 11` and 549 more (92 single-wire, 469 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 6, 10, 16, 18, 25, 28, 36, 45, 52, 55 and 130 more; `T⁵` on columns 3, 7, 12, 14, 20, 27, 31, 42, 49, 54, 73, 74 and 6 more; `T†` on columns 2, 11, 17, 19, 23, 32, 33, 37, 38, 39, 41, 43 and 14 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_358_86_3_63543349f23e (`gamma frontier release record paired_column_contraction_358_86_3_63543349f23e (source catalogue id paired_column_contraction_358_86_3_63543349f23e); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=112), with searched graph punctures; 2 paired-column contractions; matrix 63543349f23e4369...; the release states d=3 (exact), gamma=1.2981701596258428 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(86,2) and a punctured RM(86-4,86) coset, neither feasible at k=86
@@ -28601,7 +28601,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `Z on 3`, `Z on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 1026 more (92 single-wire, 946 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 10, 11, 30, 33, 39, 41, 45, 55, 57, 67 and 137 more; `T⁵` on columns 1, 5, 6, 7, 8, 9, 13, 16, 17, 19, 24, 28 and 9 more; `T†` on columns 2, 4, 12, 14, 18, 20, 22, 23, 29, 34, 36, 37 and 23 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_359_87_3_b8ef19793a88 (`gamma frontier release record paired_column_contraction_359_87_3_b8ef19793a88 (source catalogue id paired_column_contraction_359_87_3_b8ef19793a88); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=112), with searched graph punctures; 1 paired-column contraction; matrix b8ef19793a88ca32...; the release states d=3 (exact), gamma=1.290186068783266 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(87,2) and a punctured RM(87-4,87) coset, neither feasible at k=87
@@ -28635,7 +28635,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 76 more (88 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_360_88_3 (`gamma frontier release record restricted_light_360_88_3 (source catalogue id restricted_light_360_88_3); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=112), with searched graph punctures; matrix 60a4d4c4b39cae69...; the release states d=3 (exact), gamma=1.282315182073789 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(88,2) and a punctured RM(88-4,88) coset, neither feasible at k=88
@@ -29131,7 +29131,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 196 more (97 single-wire, 111 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 15, 20, 21, 23, 24, 25, 26, 27, 30, 32, 35 and 147 more; `T⁵` on columns 0, 3, 6, 10, 13, 16, 22, 36, 40, 47, 53, 55 and 9 more; `T†` on columns 1, 2, 4, 5, 8, 9, 11, 12, 14, 29, 33, 37 and 23 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_386_94_3 (`gamma frontier release record restricted_light_386_94_3 (source catalogue id restricted_light_386_94_3); construction: Wills-derived restricted-light construction; matrix 463bdfadd4d966a8...; the release states d=3 (exact), gamma=1.2857516721456912 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(94,2) and a punctured RM(94-4,94) coset, neither feasible at k=94
@@ -29334,7 +29334,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `S on 10`, `S† on 11` and 1782 more (108 single-wire, 1686 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 8, 9, 10, 15, 21, 26, 27, 30, 32, 39, 42 and 157 more; `T⁵` on columns 2, 4, 6, 12, 14, 20, 25, 28, 29, 33, 40, 44 and 15 more; `T†` on columns 1, 3, 5, 11, 13, 17, 18, 19, 22, 24, 31, 34 and 19 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_404_100_3_4d3f2b938859 (`gamma frontier release record paired_column_contraction_404_100_3_4d3f2b938859 (source catalogue id paired_column_contraction_404_100_3_4d3f2b938859); construction: Wills weighted Reed–Muller parent (weights 1^7,3^2, cutoff 4), with searched graph punctures; 4 paired-column contractions; matrix 4d3f2b938859db5e...; the release states d=3 (exact), gamma=1.2709166886033836 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(100,2) and a punctured RM(100-4,100) coset, neither feasible at k=100
@@ -29351,7 +29351,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `Z on 2`, `Z on 3`, `S on 4`, `S† on 5`, `S† on 6`, `S† on 7`, `S† on 8`, `S† on 10`, `Z on 11`, `Z on 12` and 3168 more (99 single-wire, 3081 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 7, 8, 14, 20, 22, 23, 26, 33, 35, 36, 42 and 166 more; `T⁵` on columns 2, 3, 4, 6, 9, 10, 11, 13, 15, 16, 25, 28 and 18 more; `T†` on columns 0, 12, 19, 21, 24, 31, 32, 38, 43, 50, 55, 70 and 10 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_405_101_3_edbc6b23c2b6 (`gamma frontier release record paired_column_contraction_405_101_3_edbc6b23c2b6 (source catalogue id paired_column_contraction_405_101_3_edbc6b23c2b6); construction: Wills weighted Reed–Muller parent (weights 1^7,3^2, cutoff 4), with searched graph punctures; 3 paired-column contractions; matrix edbc6b23c2b67106...; the release states d=3 (exact), gamma=1.2641097906786891 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(101,2) and a punctured RM(101-4,101) coset, neither feasible at k=101
@@ -29400,7 +29400,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `Z on 3`, `S on 4`, `S on 5`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `S on 10`, `Z on 11` and 1497 more (112 single-wire, 1397 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 3, 6, 10, 13, 20, 23, 25, 26, 41, 47 and 120 more; `T⁵` on columns 5, 8, 14, 27, 28, 33, 38, 43, 48, 49, 51, 53 and 20 more; `T†` on columns 11, 15, 31, 36, 39, 42, 46, 50, 52, 64, 69, 76 and 8 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_406_102_3_78f8d1d6794f (`gamma frontier release record paired_column_contraction_406_102_3_78f8d1d6794f (source catalogue id paired_column_contraction_406_102_3_78f8d1d6794f); construction: Wills weighted Reed–Muller parent (weights 1^7,3^2, cutoff 4), with searched graph punctures; 2 paired-column contractions; matrix 78f8d1d6794f840a...; the release states d=3 (exact), gamma=1.257386578109519 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(102,2) and a punctured RM(102-4,102) coset, neither feasible at k=102
@@ -29417,7 +29417,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 61 more (73 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · wills_one_heavy_restricted_407_73_4 (`gamma frontier release record wills_one_heavy_restricted_407_73_4 (source catalogue id wills_one_heavy_restricted_407_73_4); construction: Wills-derived one-heavy parent restricted away from an affine four-flat, with searched graph punctures; matrix bf23c5e87ede940b...; the release states d=4 (exact), gamma=1.239530212693115 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(73,2) and a punctured RM(73-4,73) coset, neither feasible at k=73
@@ -29485,7 +29485,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 92 more (104 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · graph_408_104_3 (`gamma frontier release record graph_408_104_3 (source catalogue id graph_408_104_3); construction: Wills parent + searched graph punctures; matrix 6fccf2c4a01aefc9...; the release states d=3 (exact), gamma=1.2441844036897731 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(104,2) and a punctured RM(104-4,104) coset, neither feasible at k=104
@@ -29648,7 +29648,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 3`, `S on 4`, `Z on 5`, `Z on 6`, `S† on 7`, `Z on 9`, `S† on 10`, `Z on 11`, `S† on 12`, `Z on 13` and 2174 more (91 single-wire, 2095 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 2, 4, 5, 9, 12, 13, 14, 16, 17, 21, 23 and 172 more; `T⁵` on columns 15, 19, 20, 31, 32, 33, 39, 45, 56, 83, 100, 101 and 2 more; `T†` on columns 0, 6, 8, 10, 11, 25, 29, 30, 34, 35, 41, 51 and 17 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_426_80_4_fb10a80ac5ea (`gamma frontier release record paired_column_contraction_426_80_4_fb10a80ac5ea (source catalogue id paired_column_contraction_426_80_4_fb10a80ac5ea); construction: Wills weighted Reed–Muller parent (weights 1^8,2^1, cutoff 3), with searched graph punctures; 3 paired-column contractions; matrix fb10a80ac5eaf2bd...; the release states d=4 (exact), gamma=1.206390762669238 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(80,2) and a punctured RM(80-4,80) coset, neither feasible at k=80
@@ -29665,7 +29665,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S on 2`, `S† on 3`, `S† on 4`, `Z on 5`, `S on 6`, `S† on 7`, `S on 8`, `S† on 9`, `S on 10`, `S† on 11` and 1861 more (93 single-wire, 1780 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 2, 6, 7, 11, 14, 18, 22, 34, 36, 40, 44 and 177 more; `T⁵` on columns 5, 13, 20, 24, 30, 37, 39, 46, 62, 70, 109, 111 and 9 more; `T†` on columns 1, 4, 10, 15, 19, 26, 32, 35, 47, 48, 55, 56 and 20 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_427_81_4_2eb1d1c3a580 (`gamma frontier release record paired_column_contraction_427_81_4_2eb1d1c3a580 (source catalogue id paired_column_contraction_427_81_4_2eb1d1c3a580); construction: Wills weighted Reed–Muller parent (weights 1^8,2^1, cutoff 3), with searched graph punctures; 2 paired-column contractions; matrix 2eb1d1c3a5800d38...; the release states d=4 (exact), gamma=1.199121128367933 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(81,2) and a punctured RM(81-4,81) coset, neither feasible at k=81
@@ -29682,7 +29682,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 73 more (85 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · weighted_sources_427_85_3 (`gamma frontier release record weighted_sources_427_85_3 (source catalogue id weighted_sources_427_85_3); construction: Triorthogonal; matrix verified; matrix bd3e4ee56f69be20...; the release states d=3 (exact), gamma=1.4692469521665226 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(85,2) and a punctured RM(85-4,85) coset, neither feasible at k=85
@@ -29716,7 +29716,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `Z on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 103 more (87 single-wire, 28 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 14, 18, 20, 21, 24, 26, 29, 36, 39, 63, 65, 70 and 176 more; `T⁵` on columns 0, 2, 4, 7, 9, 10, 23, 27, 30, 33, 35, 42 and 18 more; `T†` on columns 1, 3, 5, 6, 12, 16, 28, 31, 32, 52, 55, 69 and 13 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_428_82_4_29a641c9409e (`gamma frontier release record paired_column_contraction_428_82_4_29a641c9409e (source catalogue id paired_column_contraction_428_82_4_29a641c9409e); construction: Wills weighted Reed–Muller parent (weights 1^8,2^1, cutoff 3), with searched graph punctures; 1 paired-column contraction; matrix 29a641c9409e8841...; the release states d=4 (exact), gamma=1.1919574908915316 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(82,2) and a punctured RM(82-4,82) coset, neither feasible at k=82
@@ -29750,7 +29750,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 71 more (83 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · wills_one_heavy_429_83_4 (`gamma frontier release record wills_one_heavy_429_83_4 (source catalogue id wills_one_heavy_429_83_4); construction: Wills weighted Reed–Muller parent (weights 1^8,2^1, cutoff 3), with searched graph punctures; matrix 58eb54fc2c6be626...; the release states d=4 (exact), gamma=1.1848972030763105 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(83,2) and a punctured RM(83-4,83) coset, neither feasible at k=83
@@ -29784,7 +29784,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 70 more (82 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · wills_one_heavy_430_82_4 (`gamma frontier release record wills_one_heavy_430_82_4 (source catalogue id wills_one_heavy_430_82_4); construction: Wills parent + searched graph punctures; matrix aeb68707d956498f...; the release states d=4 (exact), gamma=1.1953204224856884 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(82,2) and a punctured RM(82-4,82) coset, neither feasible at k=82
@@ -29801,7 +29801,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 69 more (81 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · wills_one_heavy_431_81_4 (`gamma frontier release record wills_one_heavy_431_81_4 (source catalogue id wills_one_heavy_431_81_4); construction: Wills parent + searched graph punctures; matrix cbdfe5e7fd07e711...; the release states d=4 (exact), gamma=1.2058470281022367 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(81,2) and a punctured RM(81-4,81) coset, neither feasible at k=81
@@ -29818,7 +29818,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 68 more (80 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · wills_one_heavy_432_80_4 (`gamma frontier release record wills_one_heavy_432_80_4 (source catalogue id wills_one_heavy_432_80_4); construction: Wills parent + searched graph punctures; matrix a4023da712a8dcf3...; the release states d=4 (exact), gamma=1.2164797036380532 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(80,2) and a punctured RM(80-4,80) coset, neither feasible at k=80
@@ -30031,7 +30031,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 104 more (116 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_460_116_3 (`gamma frontier release record restricted_light_460_116_3 (source catalogue id restricted_light_460_116_3); construction: Wills-derived restricted-light construction; matrix 8d088005ae3d3724...; the release states d=3 (exact), gamma=1.2539785988075356 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(116,2) and a punctured RM(116-4,116) coset, neither feasible at k=116
@@ -30561,7 +30561,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 120 more (132 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_508_132_3 (`gamma frontier release record restricted_light_508_132_3 (source catalogue id restricted_light_508_132_3); construction: Wills-derived restricted-light construction; matrix 346bc476b2aa9f2b...; the release states d=3 (exact), gamma=1.2267107685696426 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(132,2) and a punctured RM(132-4,132) coset, neither feasible at k=132
@@ -31439,7 +31439,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 134 more (146 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_558_146_3 (`gamma frontier release record restricted_light_558_146_3 (source catalogue id restricted_light_558_146_3); construction: Wills-derived restricted-light construction; matrix 97cbd80b1741d9d3...; the release states d=3 (exact), gamma=1.2204053736722902 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(146,2) and a punctured RM(146-4,146) coset, neither feasible at k=146
@@ -31881,7 +31881,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 150 more (162 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_606_162_3 (`gamma frontier release record restricted_light_606_162_3 (source catalogue id restricted_light_606_162_3); construction: Wills-derived restricted-light construction; matrix 99ebdb8bd776fadd...; the release states d=3 (exact), gamma=1.200863730039238 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(162,2) and a punctured RM(162-4,162) coset, neither feasible at k=162
@@ -32079,7 +32079,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 165 more (177 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_655_177_3 (`gamma frontier release record restricted_light_655_177_3 (source catalogue id restricted_light_655_177_3); construction: Wills-derived restricted-light construction; matrix 2026d9a91cc6bc55...; the release states d=3 (exact), gamma=1.1910348323590578 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(177,2) and a punctured RM(177-4,177) coset, neither feasible at k=177
@@ -32176,7 +32176,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 475 more (186 single-wire, 301 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 9, 16, 19, 22, 24, 39, 41, 42, 53, 57, 59 and 286 more; `T⁵` on columns 2, 8, 10, 11, 12, 14, 15, 17, 23, 26, 29, 30 and 46 more; `T†` on columns 1, 4, 7, 13, 18, 21, 28, 35, 47, 52, 54, 55 and 33 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_679_185_3 (`gamma frontier release record restricted_light_679_185_3 (source catalogue id restricted_light_679_185_3); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=216), with searched graph punctures; matrix 7b0bfdd3b6ca5f22...; the release states d=3 (exact), gamma=1.1835524833394437 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(185,2) and a punctured RM(185-4,185) coset, neither feasible at k=185
@@ -32277,7 +32277,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 885 more (192 single-wire, 705 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 9, 14, 15, 18, 26, 32, 33, 36, 37, 40 and 285 more; `T⁵` on columns 2, 3, 6, 7, 8, 17, 20, 21, 25, 28, 30, 34 and 39 more; `T†` on columns 4, 5, 11, 13, 24, 27, 39, 45, 48, 52, 54, 61 and 38 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_691_189_3 (`gamma frontier release record restricted_light_691_189_3 (source catalogue id restricted_light_691_189_3); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=220), with searched graph punctures; matrix 970e6a2277b43d4b...; the release states d=3 (exact), gamma=1.1800275876029884 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(189,2) and a punctured RM(189-4,189) coset, neither feasible at k=189
@@ -32459,7 +32459,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 182 more (194 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_702_194_3 (`gamma frontier release record restricted_light_702_194_3 (source catalogue id restricted_light_702_194_3); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=224), with searched graph punctures; matrix 4218d587f3358f61...; the release states d=3 (exact), gamma=1.170636136358571 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(194,2) and a punctured RM(194-4,194) coset, neither feasible at k=194
@@ -32545,7 +32545,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 891 more (200 single-wire, 703 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 5, 7, 10, 15, 18, 19, 22, 29, 30, 32, 34, 35 and 314 more; `T⁵` on columns 9, 13, 28, 33, 36, 39, 40, 46, 54, 66, 68, 111 and 14 more; `T†` on columns 1, 3, 4, 12, 14, 16, 74, 75, 98, 99, 106, 109 and 9 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_715_197_3 (`gamma frontier release record restricted_light_715_197_3 (source catalogue id restricted_light_715_197_3); construction: Wills-derived restricted-light construction; matrix 2eb00670b0ed130c...; the release states d=3 (exact), gamma=1.1733701026763677 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(197,2) and a punctured RM(197-4,197) coset, neither feasible at k=197
@@ -32805,7 +32805,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `S on 13`, `S on 14`, `Z on 15` and 1587 more (42 single-wire, 1557 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · weighted_sources_742_36_8 (`gamma frontier release record weighted_sources_742_36_8 (source catalogue id weighted_sources_742_36_8); construction: Triorthogonal; matrix verified; matrix fa76ff0d4c1757d4...; the release states d=8 (lower_bound), gamma=1.4551167917261638 (certified_upper_bound)`)
 - note (T-count): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
@@ -32891,7 +32891,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `S on 13`, `S on 14`, `Z on 15` and 1677 more (40 single-wire, 1649 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · weighted_sources_756_32_9 (`gamma frontier release record weighted_sources_756_32_9 (source catalogue id weighted_sources_756_32_9); construction: Triorthogonal; matrix verified; matrix 0129c9c47d049a17...; the release states d=9 (lower_bound), gamma=1.4392272442235248 (certified_upper_bound)`)
 - note (T-count): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
@@ -33349,7 +33349,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 187 more (199 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · weighted_sources_825_199_3 (`gamma frontier release record weighted_sources_825_199_3 (source catalogue id weighted_sources_825_199_3); construction: Triorthogonal; matrix verified; matrix 0cdb74cb73d439b9...; the release states d=3 (exact), gamma=1.2944316901226631 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(199,2) and a punctured RM(199-4,199) coset, neither feasible at k=199
@@ -36692,7 +36692,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m4_L14_deg3_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m4_L14_deg3_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 91 columns, built by the san-jose-grs construction (k=3, N=15, field_degree=4, field_modulus=19, embedding_columns=[1, 3, 5, 6, 8, 14, 15], compatible_elements=[15, 13, 11], outer_length=14, outer_degree=3, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[0]`
 
@@ -36743,7 +36743,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L22_deg5_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L22_deg5_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 200 columns, built by the san-jose-grs construction (k=6, N=26, field_degree=5, field_modulus=37, embedding_columns=[2, 3, 5, 8, 13, 14, 24, 25, 27, 28], compatible_elements=[30, 26, 23], outer_length=22, outer_degree=5, punctures=[0, 1], echelon=reduced); see `master_catalog_large.json`, `factories[3]`
 
@@ -36812,7 +36812,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L22_deg5_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L22_deg5_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 210 columns, built by the san-jose-grs construction (k=3, N=28, field_degree=5, field_modulus=37, embedding_columns=[2, 3, 5, 8, 13, 14, 24, 25, 27, 28], compatible_elements=[30, 26, 23], outer_length=22, outer_degree=5, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[7]`
 
@@ -36985,7 +36985,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L26_deg6_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L26_deg6_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 - note (reduced degree): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 
@@ -37020,7 +37020,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L26_deg6_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L26_deg6_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 240 columns, built by the san-jose-grs construction (k=6, N=31, field_degree=5, field_modulus=37, embedding_columns=[2, 3, 5, 8, 13, 14, 24, 25, 27, 28], compatible_elements=[30, 26, 23], outer_length=26, outer_degree=6, punctures=[0, 1], echelon=reduced); see `master_catalog_large.json`, `factories[19]`
 
@@ -37052,7 +37052,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L26_deg6_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L26_deg6_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 250 columns, built by the san-jose-grs construction (k=3, N=33, field_degree=5, field_modulus=37, embedding_columns=[2, 3, 5, 8, 13, 14, 24, 25, 27, 28], compatible_elements=[30, 26, 23], outer_length=26, outer_degree=6, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[21]`
 
@@ -37067,7 +37067,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(15,2) and a punctured RM(15-4,15) coset, neither feasible at k=15
 - note (reduced degree): not computed: exact minimisation is over GL(15,2) and a punctured RM(15-4,15) coset, neither feasible at k=15
 
@@ -37084,7 +37084,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -37101,7 +37101,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 - note (reduced degree): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 
@@ -37117,7 +37117,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 280 columns, built by the san-jose-grs construction (k=6, N=36, field_degree=5, field_modulus=37, embedding_columns=[2, 3, 5, 8, 13, 14, 24, 25, 27, 28], compatible_elements=[30, 26, 23], outer_length=30, outer_degree=7, punctures=[0, 1], echelon=reduced); see `master_catalog_large.json`, `factories[25]`
 
@@ -37134,7 +37134,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 290 columns, built by the san-jose-grs construction (k=3, N=38, field_degree=5, field_modulus=37, embedding_columns=[2, 3, 5, 8, 13, 14, 24, 25, 27, 28], compatible_elements=[30, 26, 23], outer_length=30, outer_degree=7, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[26]`
 
@@ -37149,7 +37149,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L26_deg6_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L26_deg6_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -37166,7 +37166,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -37183,7 +37183,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -37199,7 +37199,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -37217,7 +37217,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -37234,7 +37234,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -37253,7 +37253,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 406 columns, built by the san-jose-grs construction (k=4, N=46, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=30, outer_degree=7, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[33]`
 
@@ -37268,7 +37268,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -37352,7 +37352,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -37370,7 +37370,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -37389,7 +37389,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -37406,7 +37406,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -37424,7 +37424,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 462 columns, built by the san-jose-grs construction (k=4, N=52, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=34, outer_degree=8, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[43]`
 
@@ -37438,7 +37438,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -37456,7 +37456,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -37508,7 +37508,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -37525,7 +37525,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 - note (reduced degree): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 
@@ -37560,7 +37560,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -37576,7 +37576,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -37594,7 +37594,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 518 columns, built by the san-jose-grs construction (k=4, N=58, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=38, outer_degree=9, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[53]`
 
@@ -37610,7 +37610,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -37629,7 +37629,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -37646,7 +37646,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 - note (reduced degree): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 
@@ -37664,7 +37664,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -37680,7 +37680,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 - note (reduced degree): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 
@@ -37698,7 +37698,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -37716,7 +37716,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -37734,7 +37734,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 574 columns, built by the san-jose-grs construction (k=4, N=64, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=42, outer_degree=10, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[61]`
 
@@ -37751,7 +37751,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -37768,7 +37768,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P9 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P9 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 - note (reduced degree): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 
@@ -37786,7 +37786,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -37802,7 +37802,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 - note (reduced degree): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 
@@ -37820,7 +37820,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -37838,7 +37838,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 - note (reduced degree): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 
@@ -37856,7 +37856,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -37875,7 +37875,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -37892,7 +37892,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P10 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P10 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
 - note (reduced degree): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
 
@@ -37910,7 +37910,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 630 columns, built by the san-jose-grs construction (k=4, N=70, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=46, outer_degree=11, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[71]`
 
@@ -37926,7 +37926,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -37942,7 +37942,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P9 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P9 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 - note (reduced degree): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 
@@ -37960,7 +37960,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -37978,7 +37978,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 - note (reduced degree): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 
@@ -37996,7 +37996,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -38015,7 +38015,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 - note (reduced degree): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 
@@ -38032,7 +38032,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P11 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P11 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(44,2) and a punctured RM(44-4,44) coset, neither feasible at k=44
 - note (reduced degree): not computed: exact minimisation is over GL(44,2) and a punctured RM(44-4,44) coset, neither feasible at k=44
 
@@ -38050,7 +38050,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -38068,7 +38068,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -38084,7 +38084,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P10 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P10 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
 - note (reduced degree): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
 
@@ -38102,7 +38102,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 686 columns, built by the san-jose-grs construction (k=4, N=76, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=50, outer_degree=12, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[82]`
 
@@ -38118,7 +38118,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -38136,7 +38136,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P9 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P9 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 - note (reduced degree): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 
@@ -38154,7 +38154,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -38173,7 +38173,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 - note (reduced degree): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 
@@ -38190,7 +38190,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P12 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P12 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(48,2) and a punctured RM(48-4,48) coset, neither feasible at k=48
 - note (reduced degree): not computed: exact minimisation is over GL(48,2) and a punctured RM(48-4,48) coset, neither feasible at k=48
 
@@ -38208,7 +38208,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -38226,7 +38226,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 - note (reduced degree): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 
@@ -38242,7 +38242,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P11 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P11 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(44,2) and a punctured RM(44-4,44) coset, neither feasible at k=44
 - note (reduced degree): not computed: exact minimisation is over GL(44,2) and a punctured RM(44-4,44) coset, neither feasible at k=44
 
@@ -38257,7 +38257,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 479 more (202 single-wire, 289 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 5, 6, 7, 8, 12, 15, 16, 18, 20, 22 and 328 more; `T⁵` on columns 3, 10, 30, 36, 51, 62, 65, 85, 93, 96, 112, 138 and 6 more; `T†` on columns 2, 11, 21, 23, 52, 53, 60, 64, 72, 77, 78, 82 and 15 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_727_201_3 (`gamma frontier release record restricted_light_727_201_3 (source catalogue id restricted_light_727_201_3); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=232), with searched graph punctures; matrix df0c5502a5c7370e...; the release states d=3 (exact), gamma=1.1702231831331982 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(201,2) and a punctured RM(201-4,201) coset, neither feasible at k=201
@@ -38277,7 +38277,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -38295,7 +38295,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -38313,7 +38313,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P10 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P10 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
 - note (reduced degree): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
 
@@ -38331,7 +38331,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 742 columns, built by the san-jose-grs construction (k=4, N=82, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=54, outer_degree=13, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[95]`
 
@@ -38347,7 +38347,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -38362,7 +38362,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 198 more (210 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · restricted_light_750_210_3 (`gamma frontier release record restricted_light_750_210_3 (source catalogue id restricted_light_750_210_3); construction: Wills-derived four-block Schur-orthogonal restricted-light parent (|S|=240), with searched graph punctures; matrix 94abad8f02869040...; the release states d=3 (exact), gamma=1.158703292274432 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(210,2) and a punctured RM(210-4,210) coset, neither feasible at k=210
@@ -38382,7 +38382,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -38400,7 +38400,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -38418,7 +38418,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 - note (reduced degree): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 
@@ -38436,7 +38436,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -38454,7 +38454,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -38472,7 +38472,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 798 columns, built by the san-jose-grs construction (k=4, N=88, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=58, outer_degree=14, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[103]`
 
@@ -38488,7 +38488,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -38503,7 +38503,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 212 more (224 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · graph_800_224_3 (`gamma frontier release record graph_800_224_3 (source catalogue id graph_800_224_3); construction: Wills parent + searched graph punctures; matrix e6017a2b4cebe5fc...; the release states d=3 (exact), gamma=1.158703292274432 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(224,2) and a punctured RM(224-4,224) coset, neither feasible at k=224
@@ -38591,7 +38591,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -38626,7 +38626,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -38661,7 +38661,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -38727,7 +38727,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 277 more (153 single-wire, 136 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 10, 11, 12, 16, 18, 22, 25, 27, 28, 32, 33 and 353 more; `T⁵` on columns 2, 4, 23, 26, 29, 35, 36, 39, 45, 46, 47, 51 and 29 more; `T†` on columns 1, 3, 6, 8, 9, 15, 19, 20, 21, 30, 37, 42 and 25 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_846_122_6_3c34f878e0f1 (`gamma frontier release record paired_column_contraction_846_122_6_3c34f878e0f1 (source catalogue id paired_column_contraction_846_122_6_3c34f878e0f1); construction: Wills weighted Reed–Muller parent (weights 1^7,2^3, cutoff 4), with searched graph punctures, then 27 disjoint logical-pair checks; 1 paired-column contraction; matrix 3c34f878e0f19b8b...; the release states d=6 (exact), gamma=1.080780287829186 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(122,2) and a punctured RM(122-4,122) coset, neither feasible at k=122
@@ -38744,7 +38744,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 137 more (149 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 10, 11, 12, 16, 18, 22, 25, 27, 28, 32, 33 and 354 more; `T⁵` on columns 2, 4, 23, 26, 29, 35, 36, 39, 45, 46, 47, 51 and 30 more; `T†` on columns 1, 3, 6, 8, 9, 15, 19, 20, 21, 30, 37, 42 and 25 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · wills_parent_paired_checks_848_122_6 (`gamma frontier release record wills_parent_paired_checks_848_122_6 (source catalogue id wills_parent_paired_checks_848_122_6); construction: Wills parent + disjoint logical-pair checks; matrix 43c239d6d7ee719d...; the release states d=6 (exact), gamma=1.0820981411606363 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(122,2) and a punctured RM(122-4,122) coset, neither feasible at k=122
@@ -38761,7 +38761,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 190 more (149 single-wire, 53 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 4, 5, 9, 10, 12, 16, 21, 22, 26, 28, 29 and 349 more; `T⁵` on columns 3, 6, 11, 14, 15, 18, 25, 27, 35, 46, 49, 54 and 27 more; `T†` on columns 0, 1, 7, 8, 13, 17, 20, 32, 34, 50, 56, 58 and 21 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_850_126_6_0161bbe8ea5c (`gamma frontier release record paired_column_contraction_850_126_6_0161bbe8ea5c (source catalogue id paired_column_contraction_850_126_6_0161bbe8ea5c); construction: Wills-derived code with physical paired-column contraction; matrix 0161bbe8ea5cf3bf...; the release states d=6 (exact), gamma=1.0654077599798149 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(126,2) and a punctured RM(126-4,126) coset, neither feasible at k=126
@@ -38778,7 +38778,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `S on 8`, `Z on 9`, `S on 10`, `Z on 11` and 2593 more (150 single-wire, 2455 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 7, 9, 15, 16, 25, 28, 30, 35, 37, 40, 45, 53 and 350 more; `T⁵` on columns 4, 5, 8, 10, 11, 14, 20, 24, 32, 34, 39, 42 and 38 more; `T†` on columns 12, 13, 21, 23, 26, 27, 33, 36, 38, 44, 46, 48 and 27 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_850_128_6_88f0ad3b3948 (`gamma frontier release record paired_column_contraction_850_128_6_88f0ad3b3948 (source catalogue id paired_column_contraction_850_128_6_88f0ad3b3948); construction: Wills weighted Reed–Muller parent (weights 1^7,2^3, cutoff 4), with searched graph punctures, then 18 disjoint logical-pair checks; 5 paired-column contractions; matrix 88f0ad3b3948451f...; the release states d=6 (exact), gamma=1.0566184346051741 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
@@ -38795,7 +38795,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 165 more (149 single-wire, 28 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 4, 5, 9, 10, 12, 16, 21, 22, 26, 28, 29 and 350 more; `T⁵` on columns 3, 6, 11, 14, 15, 18, 25, 27, 35, 46, 49, 54 and 28 more; `T†` on columns 0, 1, 7, 8, 13, 17, 20, 32, 34, 50, 56, 58 and 21 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_852_126_6_09caa820a032 (`gamma frontier release record paired_column_contraction_852_126_6_09caa820a032 (source catalogue id paired_column_contraction_852_126_6_09caa820a032); construction: Wills-derived code with physical paired-column contraction; matrix 09caa820a0329467...; the release states d=6 (exact), gamma=1.0667194189303135 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(126,2) and a punctured RM(126-4,126) coset, neither feasible at k=126
@@ -38812,7 +38812,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `S on 8`, `Z on 9`, `S on 10`, `Z on 11` and 2578 more (150 single-wire, 2440 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 15, 16, 21, 25, 26, 27, 33, 37, 40, 50, 53, 54 and 350 more; `T⁵` on columns 0, 1, 2, 5, 17, 20, 24, 29, 41, 42, 43, 47 and 28 more; `T†` on columns 7, 9, 12, 13, 23, 28, 30, 35, 36, 38, 44, 45 and 28 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_852_128_6 (`gamma frontier release record paired_column_contraction_852_128_6 (source catalogue id paired_column_contraction_852_128_6); construction: Wills-derived code with physical paired-column contraction; matrix 3f2f07024b87b363...; the release states d=6 (exact), gamma=1.0579300935556726 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
@@ -38832,7 +38832,7 @@ SHA-256 of those columns.
 - discovery: AI search
 - regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record, undominated`)
+- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 854 columns, built by the san-jose-grs construction (k=4, N=94, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=62, outer_degree=15, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[124]`
 
@@ -38845,7 +38845,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 135 more (147 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 4, 8, 11, 13, 15, 17, 19, 22, 26, 28, 32 and 370 more; `T⁵` on columns 2, 9, 12, 21, 24, 33, 34, 42, 43, 45, 50, 51 and 22 more; `T†` on columns 1, 5, 6, 10, 16, 18, 27, 30, 36, 41, 49, 53 and 27 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · wills_parent_paired_checks_854_124_6 (`gamma frontier release record wills_parent_paired_checks_854_124_6 (source catalogue id wills_parent_paired_checks_854_124_6); construction: Wills parent + disjoint logical-pair checks; matrix 407943102c9e716d...; the release states d=6 (exact), gamma=1.0769579630098929 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(124,2) and a punctured RM(124-4,124) coset, neither feasible at k=124
@@ -38862,7 +38862,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 136 more (148 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 1, 3, 4, 6, 13, 14, 16, 18, 27, 29, 30, 32 and 348 more; `T⁵` on columns 7, 9, 15, 20, 22, 23, 25, 28, 35, 38, 41, 45 and 26 more; `T†` on columns 0, 2, 10, 11, 12, 19, 21, 24, 26, 31, 37, 43 and 24 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · wills_parent_paired_checks_854_126_6 (`gamma frontier release record wills_parent_paired_checks_854_126_6 (source catalogue id wills_parent_paired_checks_854_126_6); construction: Wills parent + disjoint logical-pair checks; matrix a1bd53ac1f7fd1a9...; the release states d=6 (exact), gamma=1.0680280024759967 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(126,2) and a punctured RM(126-4,126) coset, neither feasible at k=126
@@ -38879,7 +38879,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `Z on 2`, `Z on 3`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 7`, `S on 8`, `Z on 9`, `S on 10`, `Z on 11` and 2574 more (150 single-wire, 2436 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 13, 14, 21, 22, 27, 33, 34, 36, 38, 41, 42, 44 and 357 more; `T⁵` on columns 5, 6, 11, 15, 18, 20, 25, 30, 39, 40, 46, 47 and 27 more; `T†` on columns 2, 3, 7, 8, 16, 17, 26, 31, 32, 48, 51, 63 and 30 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_854_128_6 (`gamma frontier release record paired_column_contraction_854_128_6 (source catalogue id paired_column_contraction_854_128_6); construction: Wills-derived code with physical paired-column contraction; matrix 4ca316c4ea202cc6...; the release states d=6 (exact), gamma=1.059238677101356 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
@@ -38896,7 +38896,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 164 more (147 single-wire, 29 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 2, 3, 7, 14, 16, 17, 21, 26, 32, 33, 38, 45 and 359 more; `T⁵` on columns 0, 10, 11, 12, 24, 25, 28, 29, 30, 40, 46, 52 and 27 more; `T†` on columns 8, 13, 22, 27, 31, 34, 36, 41, 42, 44, 48, 53 and 29 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_856_128_6 (`gamma frontier release record paired_column_contraction_856_128_6 (source catalogue id paired_column_contraction_856_128_6); construction: Wills-derived code with physical paired-column contraction; matrix 7e6f962b4b5462a4...; the release states d=6 (exact), gamma=1.0605441996301026 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
@@ -38913,7 +38913,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 163 more (147 single-wire, 28 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 3, 19, 22, 32, 41, 46, 56, 60, 73, 76, 82 and 336 more; `T⁵` on columns 12, 13, 14, 15, 16, 21, 27, 28, 34, 35, 37, 42 and 38 more; `T†` on columns 1, 4, 8, 9, 11, 17, 18, 20, 26, 30, 33, 36 and 29 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · paired_column_contraction_858_128_6 (`gamma frontier release record paired_column_contraction_858_128_6 (source catalogue id paired_column_contraction_858_128_6); construction: Wills-derived code with physical paired-column contraction; matrix de7d81898aa40847...; the release states d=6 (exact), gamma=1.0618466754290588 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
@@ -38930,7 +38930,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 132 more (144 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 4, 7, 13, 24, 25, 27, 31, 34, 38, 39, 45, 46 and 347 more; `T⁵` on columns 0, 2, 5, 10, 12, 14, 15, 16, 19, 22, 28, 30 and 31 more; `T†` on columns 3, 6, 17, 18, 20, 26, 32, 33, 37, 40, 41, 54 and 29 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · wills_parent_paired_checks_860_124_6 (`gamma frontier release record wills_parent_paired_checks_860_124_6 (source catalogue id wills_parent_paired_checks_860_124_6); construction: Wills parent + disjoint logical-pair checks; matrix 48aa10b1f685dbf5...; the release states d=6 (exact), gamma=1.080865404594114 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(124,2) and a punctured RM(124-4,124) coset, neither feasible at k=124
@@ -38947,7 +38947,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 133 more (145 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 3, 7, 14, 18, 26, 29, 30, 31, 37, 38, 40, 43 and 351 more; `T⁵` on columns 2, 5, 6, 10, 24, 27, 28, 32, 33, 34, 41, 42 and 29 more; `T†` on columns 0, 1, 9, 11, 15, 17, 22, 23, 35, 46, 50, 53 and 32 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · wills_parent_paired_checks_860_126_6 (`gamma frontier release record wills_parent_paired_checks_860_126_6 (source catalogue id wills_parent_paired_checks_860_126_6); construction: Wills parent + disjoint logical-pair checks; matrix 75bb9dba8199523d...; the release states d=6 (exact), gamma=1.071935444060218 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(126,2) and a punctured RM(126-4,126) coset, neither feasible at k=126
@@ -38964,7 +38964,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 134 more (146 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 4, 17, 18, 19, 22, 26, 32, 33, 36, 41, 47 and 339 more; `T⁵` on columns 5, 6, 12, 23, 25, 28, 29, 31, 35, 37, 42, 45 and 35 more; `T†` on columns 1, 3, 8, 9, 11, 20, 30, 38, 46, 58, 59, 61 and 27 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · wills_parent_paired_checks_860_128_6 (`gamma frontier release record wills_parent_paired_checks_860_128_6 (source catalogue id wills_parent_paired_checks_860_128_6); construction: Wills parent + disjoint logical-pair checks; matrix 86514136ab2b22b1...; the release states d=6 (exact), gamma=1.063146118685577 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
@@ -39120,7 +39120,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 116 more (128 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · wills_graph_896_128_6 (`gamma frontier release record wills_graph_896_128_6 (source catalogue id wills_graph_896_128_6); construction: Wills parent + searched graph punctures; matrix 3dbacb6261699013...; the release states d=6 (exact), gamma=1.0860331325016919 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(128,2) and a punctured RM(128-4,128) coset, neither feasible at k=128
@@ -40715,7 +40715,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 361 more (373 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · one_heavy_large_1675_373_4 (`gamma frontier release record one_heavy_large_1675_373_4 (source catalogue id one_heavy_large_1675_373_4); construction: Wills parent + searched graph punctures; matrix 3c7cd50d7b9c4095...; the release states d=4 (exact), gamma=1.0834567799886297 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(373,2) and a punctured RM(373-4,373) coset, neither feasible at k=373
@@ -40734,7 +40734,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 360 more (372 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · one_heavy_large_1676_372_4 (`gamma frontier release record one_heavy_large_1676_372_4 (source catalogue id one_heavy_large_1676_372_4); construction: Wills parent + searched graph punctures; matrix ac3839332de93469...; the release states d=4 (exact), gamma=1.0858238112956602 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(372,2) and a punctured RM(372-4,372) coset, neither feasible at k=372
@@ -40769,7 +40769,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 2`, `S on 3`, `S on 4`, `S on 5`, `S on 6`, `S on 7`, `S on 8`, `S on 9`, `S on 10`, `S on 11` and 353 more (365 single-wire, 0 CZ in all)
 - or no correction at all, with rotations run as `T†` on every rotation
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · one_heavy_large_1683_365_4 (`gamma frontier release record one_heavy_large_1683_365_4 (source catalogue id one_heavy_large_1683_365_4); construction: Wills parent + searched graph punctures; matrix f8e219445139cb62...; the release states d=4 (exact), gamma=1.1025334037812848 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(365,2) and a punctured RM(365-4,365) coset, neither feasible at k=365
@@ -40788,7 +40788,7 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `S on 5`, `S on 6`, `S on 7`, `S† on 8`, `S on 9`, `S† on 10`, `S on 11` and 27126 more (317 single-wire, 26821 CZ in all)
 - or no correction at all, with rotations run as `T³` on columns 0, 1, 5, 7, 11, 14, 16, 20, 24, 25, 28, 33 and 747 more; `T⁵` on columns 2, 9, 15, 17, 19, 26, 30, 32, 34, 39, 40, 42 and 65 more; `T†` on columns 3, 4, 8, 12, 13, 18, 22, 35, 41, 46, 48, 50 and 79 more, `T` on the rest
 - discovery: AI search
-- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
+- regime: AI search (gamma frontier): from Wills parent codes — built from one of Wills's parent codes (arXiv:2608.24000; weighted Reed-Muller, restricted-light or one-heavy) by searched punctures, paired-column contractions or logical-pair checks, in the pure-T distillation-exponent release (gamma = log(n/k)/log d, n < 1000); a verified witness, not a maximum -- only the release's own frontier points are the lowest gamma it knows
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
 - source: `AI search (gamma frontier): from Wills parent codes` · simultaneous_physical_contraction_logical_repair_1715_287_6 (`gamma frontier release record simultaneous_physical_contraction_logical_repair_1715_287_6 (source catalogue id simultaneous_physical_contraction_logical_repair_1715_287_6); construction: Wills weighted Reed–Muller parent (weights 1^9,2^2, cutoff 4), with searched graph punctures, then 8 disjoint logical-pair checks; delete 9 physical pairs under simultaneous equality restrictions, then add 6 logical-pair checks; matrix f10cd7072e5220bc...; the release states d=6 (exact), gamma=0.9977266338157595 (exact)`)
 - note (T-count): not computed: exact minimisation is over GL(287,2) and a punctured RM(287-4,287) coset, neither feasible at k=287
@@ -51070,6 +51070,8 @@ Newest first.
 - <a id="ref-gong2026magic"></a>**Gong et al. (2026)** (`gong2026magic`, 5 rows) — A. Gong, C. A. Pattison, P. Rall, and A. Wills, "Magic State Distillation via Codes over Binary Extension Fields," arXiv:2608.09727 (2026). <https://arxiv.org/abs/2608.09727>
 - <a id="ref-singh2026borrowed"></a>**Singh et al. (2026)** (`singh2026borrowed`, 1242 rows) — S. Singh, C. Gidney, and C. Jones, "Borrowed Identities: Malleable Distillation Factories and a Unified Numerical Search," arXiv:2606.28518 (2026). <https://arxiv.org/abs/2606.28518>
 - <a id="ref-jacinto2026exploring"></a>**Jacinto et al. (2026)** (`jacinto2026exploring`, 5 rows) — H. Jacinto, X. Valcarce, V. Barizien, É. Gouzien, and N. Sangouard, "Exploring the landscape of compact magic-state distillation factories," arXiv:2606.07734 (2026). <https://arxiv.org/abs/2606.07734>
+- <a id="ref-sanjose2026asymptotically"></a>**San-José (2026)** (`sanjose2026asymptotically`, 0 rows) — R. San-José, "Asymptotically good binary triorthogonal codes and higher-level transversal gates," arXiv:2609.08203 (2026). <https://arxiv.org/abs/2609.08203>
+- <a id="ref-wills2026improved"></a>**Wills (2026)** (`wills2026improved`, 0 rows) — A. Wills, "Improved Quantum Codes with Transversal T Gates," arXiv:2608.24000 (2026). <https://arxiv.org/abs/2608.24000>
 - <a id="ref-jain2025transversal"></a>**Jain & Albert (2025)** (`jain2025transversal`, 32 rows) — S. P. Jain and V. V. Albert, "Transversal Clifford and T-gate codes of short length and high distance," IEEE J. Sel. Areas Inf. Theory 6, 127-137 (2025); arXiv:2408.12752. <https://doi.org/10.1109/JSAIT.2025.3570832>
 - <a id="ref-gong2025triply"></a>**Gong (2025)** (`gong2025triply`, 14 rows) — A. Gong, "On some K=1 codes admitting strongly transversal T," note in the RM127 repository, triply-even/ (2025). <https://github.com/gongaa/RM127/tree/main/triply-even>
 - <a id="ref-berardini2024asymptotically"></a>**Berardini et al. (2024)** (`berardini2024asymptotically`, 2 rows) — E. Berardini, R. Dastbasteh, J. Etxezarreta Martinez, S. Jain, and O. Sanz Larrarte, "Asymptotically good CSS-T codes and a new construction of triorthogonal codes," arXiv:2412.08586 (2024). <https://arxiv.org/abs/2412.08586>

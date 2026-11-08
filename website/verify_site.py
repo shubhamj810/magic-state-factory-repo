@@ -220,7 +220,8 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
         for metric, button in (("gamma", None), ("rho", "#metric-switch [data-metric=rho]")):
             if button:
                 page.click(button)
-            ranked = [p for p in parameters if _ranked_value(p, metric) is not None]
+            ranked = [p for p in parameters if _ranked_value(p, metric) is not None
+                      and p["record_pure" if metric == "gamma" else "record_class"]]
             best_claim = min(_ranked_value(p, metric) for p in ranked)
             failures.check(f"{best_claim:.4f}" in page.inner_text("#headline-stats"),
                            f"index.html [{metric}]: headline does not show the best claim {best_claim:.4f}")
@@ -508,7 +509,9 @@ def verify(site: Path, base: str, *, full: bool, sample: int, seed: int):
                 best = float("inf")
                 for p in sorted((p for p in ranked if p["d_claim"] == dc),
                                 key=lambda p: (p["n"], _ranked_value(p, metric))):
-                    if _ranked_value(p, metric) < best:
+                    # the staircase steps only on records (master_catalog/records.py)
+                    if p["record_pure" if metric == "gamma" else "record_class"] \
+                            and _ranked_value(p, metric) < best:
                         best, stairs = _ranked_value(p, metric), stairs + 1
             page.click("#plot-view-table")
             rows_shown = len(page.query_selector_all(".plot-table tbody tr"))

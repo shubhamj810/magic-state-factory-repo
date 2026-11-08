@@ -17,6 +17,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 
 import build_site  # noqa: E402
+import pages  # noqa: E402
 
 
 class GateParsing(unittest.TestCase):
@@ -339,15 +340,44 @@ class TheBuiltSite(unittest.TestCase):
         for target in local.findall(page.read_text(encoding="utf-8")):
             self.assertTrue((page.parent / target).resolve().exists(), target)
 
+    def test_only_records_are_marked_as_records(self):
+        """The index's record flags are master_catalog/records.py's verdicts:
+        a direct sum, or a row another row matches, is never one."""
+        verdicts = build_site.RC.status(self.catalog["factories"])
+        by_id = {row["catalog_label"]: row for row in self.catalog["factories"]}
+        for f in self.index["factories"]:
+            own = build_site.RC.gate_class(by_id[f["id"]]["gate_human"])
+            self.assertEqual(f["record_class"], verdicts[f["id"]][own]["record"])
+            self.assertEqual(f["record_all"], verdicts[f["id"]]["all"]["record"])
+        groups = {}
+        for f in self.index["factories"]:
+            groups.setdefault((f["n"], f["k"], f["d"]), []).append(f)
+        for p in self.index["parameters"]:
+            members = groups[(p["n"], p["k"], p["d"])]
+            self.assertEqual(p["record_all"], any(m["record_all"] for m in members))
+            self.assertEqual(p["record_class"], any(m["record_class"] for m in members))
+            self.assertEqual(p["record_pure"],
+                             any(m["pure_t"] and m["record_class"] for m in members))
+
     def test_the_references_page_lists_every_paper(self):
         text = (self.out / "references.html").read_text(encoding="utf-8")
         self.assertEqual(text.count('<li id="ref-'), len(self.index["references"]))
         listed = re.findall(r'<li id="ref-([^"]+)"', text)
-        dates = [self.index["references"][key].get("date") for key in listed]
-        self.assertTrue(all(dates), "every listed paper carries a date")
-        self.assertEqual(dates, sorted(dates, reverse=True), "newest first")
+        # newest first, by date, or by the year the label prints where no file
+        # in the repository states a day (the two construction papers of
+        # 2026-11-07)
+        when = [pages._published(self.index["references"][key]) for key in listed]
+        self.assertEqual(when, sorted(when, reverse=True), "newest first")
+        cited = {key for f in self.index["factories"] for key in f["citations"]}
+        named = {key for f in self.index["factories"] for key in f["construction_refs"]}
+        self.assertEqual(set(self.index["references"]), cited | named)
         for key in self.index["references"]:
-            self.assertIn(f'href="search.html?cite={key}"', text)
+            if key in cited:
+                self.assertIn(f'href="search.html?cite={key}"', text)
+            else:
+                # a paper named only for its construction: no credit link
+                self.assertNotIn(f'href="search.html?cite={key}"', text)
+                self.assertIn("its construction is named in the provenance of", text)
         self.assertIn('id="contributor-list"', text)
         self.assertGreaterEqual(text.count('<li class="person">'), 3)
         for photo in re.findall(r'<img src="(img/people/[^"]+)"', text):

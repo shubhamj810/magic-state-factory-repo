@@ -343,13 +343,22 @@ def references_page(index: dict, contributors: list[dict]):
     for f in index["factories"]:
         for key in f["citations"]:
             counts[key] = counts.get(key, 0) + 1
+    # papers named only for a construction (see build_site.named_references)
+    named: dict[str, int] = {}
+    for f in index["factories"]:
+        for key in f.get("construction_refs") or []:
+            named[key] = named.get(key, 0) + 1
     # newest first; equal dates by key, so the page is reproducible
     refs = sorted(sorted(index["references"].items()),
                   key=lambda item: _published(item[1]), reverse=True)
     papers = "".join(
         f'<li id="ref-{esc(key)}">{reference_html(dict(key=key, **ref))} '
-        f'<span class="muted">·</span> <a class="small" href="search.html?cite={quote(key)}">{counts.get(key, 0)} '
-        f'{"factory" if counts.get(key, 0) == 1 else "factories"}</a></li>'
+        + (f'<span class="muted">·</span> <a class="small" href="search.html?cite={quote(key)}">{counts.get(key, 0)} '
+           f'{"factory" if counts.get(key, 0) == 1 else "factories"}</a>' if counts.get(key) else "")
+        + (f'{" " if counts.get(key) else ""}<span class="muted">·</span> <span class="small">its construction '
+           f'is named in the provenance of {named[key]} {"factory" if named[key] == 1 else "factories"}</span>'
+           if named.get(key) else "")
+        + "</li>"
         for key, ref in refs)
     # the core team, then everyone in community_contributions/contributors.json
     people = "".join(person_html(p) for p in PEOPLE) + "".join(
@@ -373,7 +382,9 @@ def references_page(index: dict, contributors: list[dict]):
   <div class="prose">
     <h2 id="papers">Papers</h2>
     <p>Every factory is credited to the work that found it. The papers are listed newest
-    first, and the link after each one lists its factories.</p>
+    first, and the link after each one lists its factories. A paper whose construction an AI
+    search used is named in those factories' provenance and listed here too, with the number
+    of such factories; those factories stay credited to the search.</p>
     <ol class="refs ref-list" id="paper-list">{papers}</ol>
 
     <h2 id="contributors">Contributors</h2>
@@ -624,8 +635,12 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
         '<ul class="plain source-list">' + "".join(f"<li>{reference_html(x)}</li>" for x in refs) + "</ul>"
         if refs else '<p class="muted">No source is recorded for this factory.</p>')
     sources = prov.get("sources") or []
+    named = record.get("construction_references") or []
     provenance_panel = (
         (f"<p>{esc(prov['strongest_claim'])}</p>" if prov.get("strongest_claim") else "")
+        + ('<p class="small">Construction from: ' + "; ".join(reference_html(x) for x in named)
+           + ". The paper is named here for the construction; the factory is credited to the "
+             "source above.</p>" if named else "")
         + ('<p class="small">Found by: ' + " ".join(
             f'<a class="tag" href="search.html?regime={quote(x)}">{esc(x)}</a>' for x in prov.get("regimes") or [])
            + "</p>" if prov.get("regimes") else "")

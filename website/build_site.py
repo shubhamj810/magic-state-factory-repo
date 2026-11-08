@@ -51,6 +51,7 @@ CATALOG = ROOT / "master_catalog" / "master_catalog.json"
 LARGE_NAME = "master_catalog_large.json"
 sys.path.insert(0, str(ROOT / "master_catalog"))
 import catalogfile as CF  # noqa: E402  (standard library only, like this file)
+import records as RC  # noqa: E402  (the record rule with direct sums; standard library only)
 CONTRIBUTORS = ROOT / "community_contributions" / "contributors.json"
 STATIC = HERE / "static"
 TEMPLATES = HERE / "templates"
@@ -145,6 +146,35 @@ def clifford_kind(row: dict) -> str:
     return "powers" if row["rotation_powers"] is not None else "required"
 
 
+ARXIV = re.compile(r"arXiv:(\d{4}\.\d{4,5})")
+
+
+def named_references(row: dict, catalog: dict) -> list[str]:
+    """The references a row's regime sentences name by arXiv number that no
+    row of the catalogue cites: papers in the references only for a
+    construction the AI searches used (San-Jose's GRS construction and Wills's
+    parent codes, the owner's decision of 2026-11-07: credit the search, name
+    the paper).  They are shown beside the provenance and never as the row's
+    source, which is ``citations`` alone.  A paper some row cites is credit
+    there, and is not repeated on other rows' pages."""
+    references = catalog.get("references") or {}
+    regimes = catalog.get("regimes") or {}
+    cited = {c for r in catalog["factories"] for c in r.get("citations") or []}
+    by_arxiv = {}
+    for key in sorted(k for k in references if k not in cited):
+        entry = references[key]
+        for found in ARXIV.findall(entry.get("full", "")) + ARXIV.findall(
+                (entry.get("url") or "").replace("arxiv.org/abs/", "arXiv:")):
+            by_arxiv.setdefault(found, key)
+    named = []
+    for regime in row.get("regimes") or []:
+        for found in ARXIV.findall(regimes.get(regime, "")):
+            key = by_arxiv.get(found)
+            if key and key not in named:
+                named.append(key)
+    return named
+
+
 def build_rows(catalog: dict):
     """Yield ``(summary, record)`` per row; raise on anything inconsistent."""
     references = catalog.get("references") or {}
@@ -217,6 +247,7 @@ def build_rows(catalog: dict):
             "regimes": list(row.get("regimes") or []),
             "discovery": row.get("discovery"),
             "citations": list(row.get("citations") or []),
+            "construction_refs": named_references(row, catalog),
             "row": stored_at["row"],
             "file": stored_at["file"],
         }
@@ -263,6 +294,8 @@ def build_rows(catalog: dict):
                            "strongest_claim": row.get("strongest_claim"),
                            "sources": row.get("sources") or []},
             "references": [dict(key=c, **references[c]) for c in row.get("citations") or []],
+            "construction_references": [dict(key=c, **references[c])
+                                        for c in named_references(row, catalog)],
             "former_ids": list(row.get("former_labels") or []),
         }
         yield summary, record
@@ -298,6 +331,14 @@ def parameter_groups(factories: list[dict]) -> list[dict]:
             "gamma_rho_claim": min(claims) if claims else None,
             # the landing page can also rank by plain gamma, among pure T^k gates only
             "has_pure": any(m["pure_t"] for m in members),
+            # a record under the owner's rule (see build): a pure T^k row of this
+            # (n, k, d) that is a record in the T class; any row that is a record
+            # in its own gate class (what the gamma_rho ranking uses: k counts
+            # wires, so a record over all gates would compare a CCZ's three
+            # wires with three T states); and a record over all gates
+            "record_pure": any(m["pure_t"] and m["record_class"] for m in members),
+            "record_class": any(m["record_class"] for m in members),
+            "record_all": any(m["record_all"] for m in members),
             "N_min": min(m["N"] for m in members),
             "ids": [m["id"] for m in members],
         })
@@ -483,6 +524,7 @@ def build(out: Path, catalog_path: Path = CATALOG, large_path: Path | None = Non
     large_path = large_path or catalog_path.with_name(LARGE_NAME)
     catalog = CF.load_all(catalog_path, large_path)
     summaries, records = [], []
+    by_label = {row["catalog_label"]: row for row in catalog["factories"]}
     for summary, record in build_rows(catalog):
         summaries.append(summary)
         records.append(record)
@@ -498,8 +540,17 @@ def build(out: Path, catalog_path: Path = CATALOG, large_path: Path | None = Non
         raise ValueError(f"n_classes says {catalog['n_classes']}, "
                          f"the main file has {main_count} rows")
 
+    # Which factories the site may present as best: a record under the owner's
+    # rule (master_catalog/records.py), in the row's own gate class and over
+    # all gates. A direct sum can be in the catalogue but is never a record.
+    verdicts = RC.status(catalog["factories"])
+    for s_ in summaries:
+        own = RC.gate_class(by_label[s_["id"]]["gate_human"])
+        s_["record_class"] = verdicts[s_["id"]][own]["record"]
+        s_["record_all"] = verdicts[s_["id"]]["all"]["record"]
     summaries.sort(key=lambda s: (s["n"], s["k"], s["d"], s["gate"]))
-    used = sorted({c for s in summaries for c in s["citations"]})
+    named = {c for row in catalog["factories"] for c in named_references(row, catalog)}
+    used = sorted({c for s in summaries for c in s["citations"]} | named)
     index = {
         "index_version": INDEX_VERSION,
         "counts": {"factories": len(summaries),

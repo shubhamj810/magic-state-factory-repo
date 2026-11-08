@@ -44,10 +44,10 @@ are the outputs and the rest are postselected checks. `d` is the circuit's
 fault distance. Each row also gives the circuit's **Clifford correction**: the
 `S` and `CZ` gates that make its action exactly the gate shown (see below).
 
-The catalogue holds **2711 classes**:
+The catalogue holds **2716 classes**:
 
 - `n = 8..262142`, `k = 1..974` and `d = 2..40`. The sweep here proves
-  `d = 2..7`. On 185 rows `d`, from 4 to 40, is a bound certified by a theorem
+  `d = 2..7`. On 186 rows `d`, from 4 to 40, is a bound certified by a theorem
   or an exhaustive search whose evidence is in this repository, and on 33 of
   them (`d >= 13`) it is a lower bound only;
 - 1323 classes at distance 2, most of them from the borrowed-identity searches
@@ -91,9 +91,9 @@ also stores whether the correction can be avoided by running some rotations as
 `T³`, `T⁵` or `T†` instead of `T` (`rotation_powers`). For a code this is a
 transversal `T` gate in the sense of Jain and Albert.
 
-- 39 classes need no correction at all;
+- 42 classes need no correction at all;
 - 1819 need none once some rotations run at another power of `T`;
-- 853 need `S` or `CZ` gates whatever the powers, which the verifier proves.
+- 855 need `S` or `CZ` gates whatever the powers, which the verifier proves.
 
 [`master_catalog/clifford.py`](master_catalog/clifford.py) computes all three.
 The verifier then checks the logical action two more ways. It evaluates the
@@ -110,11 +110,11 @@ rate of one input `T` state. The 15-to-1 has `A_3 = 35`, the 8-`T` `CCZ`
 factory `A_2 = 28`.
 [`master_catalog/errorcoeff.py`](master_catalog/errorcoeff.py) counts it
 exactly, as the accepted faults less the harmless ones, each counted by the
-MacWilliams identity or by enumeration. Of the 2678 exact rows, 2522 have a
-count. 72 of those counts also cite an evidence file (`A_d_evidence`) from
+MacWilliams identity or by enumeration. Of the 2683 exact rows, 2527 have a
+count. 74 of those counts also cite an evidence file (`A_d_evidence`) from
 another program. The verifier checks that the file's record is bound to the
 row's columns, and wherever `errorcoeff.py` reaches, its count must agree. The
-other 156 rows have `A_d = null`: circuits of 217 to 4284 rotations at
+other 156 rows have `A_d = null`: circuits of 176 to 4284 rotations at
 `d >= 6`, and 19 four-block circuits at `d = 3` with `n >= 1199`, out of reach
 of both methods. The count belongs to the stored
 circuit: another circuit of the same class can have a different `A_d`.
