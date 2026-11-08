@@ -1020,7 +1020,13 @@ class TestCitations(unittest.TestCase):
     def test_a_linked_reference_renders_as_a_link(self):
         payload = CF.load()
         text = CF.render_markdown(payload)
+        # A reference no row cites (San-José's and Wills's construction
+        # papers, named only in provenance) has no citation cell to link from.
+        cited = {key for row in payload["factories"]
+                 for key in row.get("citations", [])}
         for key, entry in payload["references"].items():
+            if key not in cited:
+                continue
             if entry.get("url"):
                 self.assertIn(f"[{entry['short']}]({entry['url']})", text)
             else:
