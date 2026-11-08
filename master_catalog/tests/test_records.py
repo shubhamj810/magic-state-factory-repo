@@ -16,7 +16,8 @@ import records as R                                               # noqa: E402
 def row(label, n, k, d, gate="T"):
     human = "·".join(f"{gate}{i}" if gate == "T" else f"{gate}{i}{i + 1}"
                      for i in range(k)) if gate in ("T", "CS") else gate
-    return {"catalog_label": label, "n": n, "k": k, "d": d, "gate_human": human}
+    return {"catalog_label": label, "n": n, "k": k, "d": d, "gate_human": human,
+            "intrinsic_width": k}
 
 
 def verdict(rows, label, cls="T"):
@@ -60,6 +61,17 @@ class TestRule(unittest.TestCase):
         rows = [row("t", 15, 1, 3), row("ccz", 30, 2, 3, gate="CCZ012")]
         self.assertTrue(verdict(rows, "ccz", "CCZ")["record"])
         self.assertFalse(verdict(rows, "ccz", "all")["record"])
+
+    def test_outputs_are_counted_by_the_intrinsic_width(self):
+        """A row with a hidden spectator is ranked by the outputs it uses."""
+        padded = dict(row("p", 37, 37, 3), intrinsic_width=31)
+        rows = [padded, row("q", 37, 32, 3)]
+        self.assertFalse(verdict(rows, "p")["record"])
+        self.assertEqual(verdict(rows, "p")["dominated_by"], "q")
+        self.assertTrue(verdict(rows, "q")["record"])
+        # and sums count the intrinsic width of their parts
+        rows = [dict(row("a", 10, 4, 3), intrinsic_width=1), row("b", 20, 3, 3)]
+        self.assertTrue(verdict(rows, "b")["record"])        # 10 + 10 gives 2, not 8
 
     def test_the_gate_classes(self):
         self.assertEqual(R.gate_class("T0·T1"), "T")

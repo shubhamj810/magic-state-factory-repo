@@ -193,6 +193,23 @@ def coarse_invariant(k: int, T) -> tuple:
     return (k, _rank(flat), _rank(diag))
 
 
+def intrinsic_width(k: int, monomials) -> int:
+    """How many outputs the gate really uses: ``k`` less the dimension of the
+    radical of ``tau``.
+
+    A vector ``u`` with ``tau(u, v, w) = 0`` for every ``v`` and ``w`` is an
+    output combination on which the gate acts as a Clifford, so in a CNOT frame
+    that has ``u`` as an output, that output is a spectator.  The radical is the
+    null space of ``u -> tau(u, ., .)``, so the width is the rank of the
+    flattening ``a -> (T[a][0], ..., T[a][k-1])``, the coarse invariant's
+    first rank.  It is a ``GL(k,2)`` invariant, and equals ``k`` exactly when no
+    frame has a spectator output (2026-11-07; the stored-frame spectator check
+    of `faultcore.spectators` cannot see the others).
+    """
+    T = tensor(k, monomials)
+    return _rank([sum(T[a][b] << (b * k) for b in range(k)) for a in range(k)])
+
+
 def gl_fingerprint(k: int, monomials) -> str:
     """A ``GL(k,2)``-INVARIANT signature: equivalent gates always share it."""
     T = tensor(k, monomials)

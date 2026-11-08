@@ -78,9 +78,14 @@ follow it. Both present only records, under the owner's rule of 7 November
 a record when no other factory, and no direct sum of factories, of its own gate
 class (T, CS, CCZ or mixed) has at most its inputs, at least its outputs and at
 least its distance. A direct sum can be in the catalogue, but it is never shown
-as best. Every other parameter set is still drawn as a grey point. The index
+as best. Outputs are counted by the row's `intrinsic_width`, and a row with a
+hidden spectator (`intrinsic_width < k`) is not shown as best, since its γ
+counts all `k` outputs; the width itself is not published on the site, which is
+the owner's decision. Every other parameter set is still drawn as a grey point. The index
 carries the verdicts (`record_class` and `record_all` on each factory;
-`record_pure`, `record_class` and `record_all` on each parameter set). The
+`record_pure`, `record_class` and `record_all` on each parameter set, and
+`best_pure` and `best_class`, a record without a hidden spectator, which the
+landing page uses). The
 frontier plot switches to a table of its frontier points and exports to SVG
 and PNG.
 

@@ -75,8 +75,10 @@
         /* a record under the owner's rule (master_catalog/records.py): no
          * other factory, and no direct sum of factories, of the same gate class
          * has as few inputs, as many outputs and as high a distance.  The class
-         * is the row's own: k counts wires, so k is not compared across gates */
-        record: metric === "gamma" ? !!p.record_pure : !!p.record_class,
+         * is the row's own: k counts wires, so k is not compared across gates.
+         * Outputs are counted by the intrinsic width, and a row with a hidden
+         * spectator is not presented as best, since its gamma counts all k */
+        record: metric === "gamma" ? !!p.best_pure : !!p.best_class,
         certified: p.d_claim_certified, lower_bound: p.d_claim_certified && p.d_claim_exact === false
       });
     });

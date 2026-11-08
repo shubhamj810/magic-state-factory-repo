@@ -45,6 +45,10 @@ re-derivation, so this list is also the list of things that get checked.
                  it is undefined, and where neither counting method reaches
   ``t_count``     exact minimal level-3 T-count, or ``null`` with a note
   ``poly_degree`` CNOT-frame-reduced phase-polynomial degree, or ``null``
+  ``intrinsic_width``  the outputs the gate really uses in any CNOT frame:
+                 ``k`` less the dimension of the radical of its trilinear form
+                 (`glcanon.intrinsic_width`); below ``k`` the row has a hidden
+                 spectator. Since 2026-11-07
   ``effective_width``  rank of the output rows modulo the check span; ``== k``
   ``clifford_correction``  the diagonal Clifford to apply after the rotations,
                  before the checks are measured, so that the accepted action is
@@ -168,7 +172,7 @@ REQUIRED_FIELDS = (
     "n", "k", "N", "d", "level", "columns", "gate", "gate_human",
     "sk_key", "sk_canonical_frame", "sk_fingerprint",
     "d_is_exact", "d_upper", "d_witness", "A_d",
-    "t_count", "poly_degree", "effective_width",
+    "t_count", "poly_degree", "effective_width", "intrinsic_width",
     "regimes", "discovery", "strongest_claim",
     # ``relabelled_into_canonical_frame`` is PROVENANCE: whether the ingest
     # permuted the output wires on the way in.  A self-contained row cannot
@@ -243,7 +247,7 @@ STORAGE_FIELDS = ("construction", "columns_sha256")
 #: a subtype of ``int`` here, which is the whole point.
 FIELD_TYPES = {
     "n": "int", "k": "int", "N": "int", "d": "int", "level": "int",
-    "effective_width": "int",
+    "effective_width": "int", "intrinsic_width": "int",
     "t_count": "int?", "poly_degree": "int?", "d_upper": "int?",
     "A_d": "int?",
     "gate": "str", "gate_human": "str", "sk_fingerprint": "str",

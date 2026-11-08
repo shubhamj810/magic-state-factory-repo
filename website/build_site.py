@@ -339,6 +339,11 @@ def parameter_groups(factories: list[dict]) -> list[dict]:
             "record_pure": any(m["pure_t"] and m["record_class"] for m in members),
             "record_class": any(m["record_class"] for m in members),
             "record_all": any(m["record_all"] for m in members),
+            # what the landing page may present as best: a record (above) that
+            # also has no hidden spectator, since its gamma counts all k outputs
+            "best_pure": any(m["pure_t"] and m["record_class"] and m["_full_width"]
+                             for m in members),
+            "best_class": any(m["record_class"] and m["_full_width"] for m in members),
             "N_min": min(m["N"] for m in members),
             "ids": [m["id"] for m in members],
         })
@@ -548,6 +553,11 @@ def build(out: Path, catalog_path: Path = CATALOG, large_path: Path | None = Non
         own = RC.gate_class(by_label[s_["id"]]["gate_human"])
         s_["record_class"] = verdicts[s_["id"]][own]["record"]
         s_["record_all"] = verdicts[s_["id"]]["all"]["record"]
+        # whether every output is used in every CNOT frame (no hidden spectator,
+        # intrinsic_width == k); kept out of the published index, since showing
+        # the width is the owner's decision, and used only to choose what the
+        # landing page presents as best
+        s_["_full_width"] = by_label[s_["id"]]["intrinsic_width"] == s_["k"]
     summaries.sort(key=lambda s: (s["n"], s["k"], s["d"], s["gate"]))
     named = {c for row in catalog["factories"] for c in named_references(row, catalog)}
     used = sorted({c for s in summaries for c in s["citations"]} | named)
@@ -567,6 +577,8 @@ def build(out: Path, catalog_path: Path = CATALOG, large_path: Path | None = Non
         "parameters": parameter_groups(summaries),
         "factories": summaries,
     }
+    for s_ in summaries:
+        del s_["_full_width"]
 
     if out.exists():
         shutil.rmtree(out)

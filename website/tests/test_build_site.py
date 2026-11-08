@@ -356,8 +356,16 @@ class TheBuiltSite(unittest.TestCase):
             members = groups[(p["n"], p["k"], p["d"])]
             self.assertEqual(p["record_all"], any(m["record_all"] for m in members))
             self.assertEqual(p["record_class"], any(m["record_class"] for m in members))
+            full = [m for m in members
+                    if by_id[m["id"]]["intrinsic_width"] == by_id[m["id"]]["k"]]
+            self.assertEqual(p["best_class"], any(m["record_class"] for m in full))
+            self.assertEqual(p["best_pure"],
+                             any(m["pure_t"] and m["record_class"] for m in full))
             self.assertEqual(p["record_pure"],
                              any(m["pure_t"] and m["record_class"] for m in members))
+        # the width itself is not published (the owner decides whether to show it)
+        self.assertTrue(all("intrinsic_width" not in f and "_full_width" not in f
+                            for f in self.index["factories"]))
 
     def test_the_references_page_lists_every_paper(self):
         text = (self.out / "references.html").read_text(encoding="utf-8")

@@ -547,6 +547,11 @@ def derive(columns, k, N):
         "sk_perm": perm,
         "sk_fingerprint": SK.sk_fingerprint(k, gate),
         "effective_width": widths["effective_width"],
+        # the outputs the gate really uses, in any CNOT frame: k less the
+        # radical of its trilinear form (glcanon.intrinsic_width).  Below k,
+        # some frame has a spectator output that the stored-frame check above
+        # cannot see; the row is kept, and records.py ranks it by this width
+        "intrinsic_width": GC.intrinsic_width(k, gate) if gate else 0,
         "t_count": t_count, "t_count_note": t_note,
         "poly_degree": degree, "poly_degree_note": degree_note,
         "clifford_correction": corr,
@@ -1030,7 +1035,8 @@ def verify_row(row, budget=None, reference=True, evidence_root=None):
                          "the stored columns are not sorted and duplicate-free "
                          "within each column; the derived fields belong to the "
                          "normalised circuit, so the two could differ"))
-    for name in ("gate", "gate_human", "sk_fingerprint", "effective_width"):
+    for name in ("gate", "gate_human", "sk_fingerprint", "effective_width",
+                 "intrinsic_width"):
         if row[name] != facts[name]:
             problems.append((f"{name}-mismatch",
                              f"row says {name}={row[name]!r}, the columns give "

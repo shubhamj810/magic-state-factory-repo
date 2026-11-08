@@ -515,6 +515,10 @@ class TestBrokenRows(unittest.TestCase):
     def test_wrong_sk_key(self):
         self.assertIn("sk_key-mismatch", kinds(self.broken(sk_key=[[1]])))
 
+    def test_wrong_intrinsic_width(self):
+        self.assertIn("intrinsic_width-mismatch",
+                      kinds(self.broken(intrinsic_width=99)))
+
     def test_wrong_effective_width(self):
         self.assertIn("effective_width-mismatch",
                       kinds(self.broken(effective_width=99)))

@@ -397,6 +397,7 @@ is also the list of what gets checked.
 | `t_count` | exact minimal level-3 T-count, or `null` with `t_count_note` |
 | `poly_degree` | CNOT-frame-reduced phase-polynomial degree, or `null` with a note |
 | `effective_width` | rank of the output rows modulo the check span; must equal `k` |
+| `intrinsic_width` | the outputs the gate really uses in any CNOT frame: `k` less the dimension of the radical of its trilinear form ([`glcanon.intrinsic_width`](glcanon.py)); below `k`, some frame has a spectator output that check 5 cannot see. Recomputed by the verifier; [`records.py`](records.py) counts outputs by it |
 | `clifford_correction` | `{"S": [[wire, p], ...], "CZ": [[wire, wire], ...]}`: the diagonal Clifford to apply after the rotations and before the checks are measured, so that the accepted action is **exactly** `gate`, with `T = diag(1, e^{iπ/4})`, `CS = diag(1,1,1,i)` and `CCZ`. `S^p` for `p` = 1, 2, 3 is `S`, `Z`, `S†`. Unique; derived by the weight expansion of Bravyi and Haah (2012) |
 | `rotation_powers` | `[[column, power], ...]`: run those rotations as `T^power` (3, 5 or 7, and `T⁷ = T†`) and the rest as `T`, and no correction is needed. `[]` when none is needed anyway; `null` when no choice of powers avoids `S` or `CZ` gates. Not unique: a list is checked by evaluating the logical action at those powers, and `null` is re-proved by solving the `Z_4` system |
 | `regimes`, `discovery`, `strongest_claim`, `sources` | provenance |
@@ -458,7 +459,10 @@ For every row, from `columns`, `k` and `N` alone:
    certificate must equal `d`, name its source, and have evidence files that
    exist in the repository, hold a record of the stated method and tool for
    this circuit's SHA-256, and state exactly `d`.
-5. **No spectator output**: the gate touches every one of the `k` outputs.
+5. **No spectator output**: the gate touches every one of the `k` outputs. The
+   **intrinsic width**, the outputs the gate uses in every CNOT frame, is
+   recomputed and compared with `intrinsic_width`; it may be below `k` (see
+   *Hidden spectators* below).
 6. **No pseudo-output**: the `k` output rows are linearly independent *modulo
    the check span*, so an output equal to another one, or to another one plus a
    stabiliser, or lying in the check span itself, is rejected rather than
@@ -722,7 +726,9 @@ only, `CCZ` only, mixed, or any gate) has `n' <= n`, `k' >= k` and `d' >= d`
 with one of the three strict, and no direct sum of two or more rows of that
 class reaches `n' <= n`, `k' >= k` and `d' >= d`. The direct sum of
 `(n1, k1, d1)` and `(n2, k2, d2)` is `(n1 + n2, k1 + k2, min(d1, d2))`, and a sum
-that only equals the row also takes the record away. This is the owner's rule
+that only equals the row also takes the record away. Outputs are counted by
+`intrinsic_width`, in a row and in every part of a sum, so a row with a hidden
+spectator is ranked by the outputs it really uses. This is the owner's rule
 of 7 November 2026: a direct sum can be in the catalogue, but it is not a
 record. [`records.py`](records.py) applies it to the rows as they stand, and
 the website presents as best (its headline figures and the frontier staircase)
@@ -773,14 +779,27 @@ or undocumented fields.
   arbitrary.
 * **Hidden spectators.** The spectator and pseudo-output checks are made in the
   stored frame. A gate that, in some other CNOT frame, leaves an output untouched
-  up to Cliffords (`T0·T1·CS01` is `T` on `x0 + x1` times a `CZ`) passes them;
-  102 of the 1002 classes are of this kind. 80 are at `d ≥ 3`, 70 of them with
-  `n ≤ 54`. The other 22 are at distance 2: three from the symmetry-SAT search,
-  and 19 from the Borrowed Identities import. Those 19 are exactly the rows
-  whose upstream catalogue marks them `essential_dim < k` (padded), apart from
-  its `[[8,4,2]]`, which is refused as a pseudo-output. None is a Pareto point,
-  since those outputs are spectator-free by construction. Each of the 70 is
-  dominated by the Pareto point of its spectator-free output (tested).
+  up to Cliffords (`T0·T1·CS01` is `T` on `x0 + x1` times a `CZ`) passes them.
+  Since 2026-11-07 every row carries `intrinsic_width`, `k` less the dimension
+  of the radical of the gate's trilinear form
+  ([`glcanon.intrinsic_width`](glcanon.py)), and the verifier recomputes it;
+  [`migrations/intrinsic_width_2026_11_07.py`](migrations/intrinsic_width_2026_11_07.py)
+  computed it a second way, from the columns, on every row. 286 of the 2716
+  classes have `intrinsic_width < k`. 151 are at distance 2 (148 two-group
+  circuits of the borrowed-identity searches, up to `n = 147447`, and three from
+  the symmetry-SAT search). 135 are at `d ≥ 3`: 82 with `n ≤ 54` (67 inside the
+  length-54 classification, 12 from the flat-toggle search, 3 from other AI
+  searches) and 53 with `n > 54`, among them `127.37.3.a` (37 outputs, 31
+  used), `90.10.3.c` (10, 9 used), `85.2.5.a` (2, 1 used), `256.11.6.a` and
+  `255.11.5.a` (11, 3 used). The search for them was the research's (s3-mid,
+  confirmed by the lead's `radcheck.py`). None is a Pareto point of the
+  length-54 classification, whose outputs are spectator-free by construction,
+  and each of the 82 with `n ≤ 54` is dominated by the Pareto point of its
+  spectator-free output (tested). Some of the others had been read as record
+  points: `127.37.3.a` was on the research's all-gates `d ≥ 3` frontier.
+  [`records.py`](records.py) therefore counts every row's outputs by
+  `intrinsic_width`, and the website presents no row with a hidden spectator as
+  best. `k`, the gate and the label of each row stay as they were.
 * **Repairs.** A circuit rejected for a spectator, a pseudo-output or a
   redundant check wire is not fixed on the way in. Demoting a redundant output
   to a check, or deleting a check wire the others already decide, gives a valid

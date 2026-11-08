@@ -15,6 +15,11 @@ class C is a **record** when
   n' <= n and k' >= k. A sum that only equals the row's (n, k, d) also takes
   the record away. A row may appear in a sum more than once.
 
+Outputs are counted by ``intrinsic_width``, not ``k``: since 2026-11-07 a
+row whose gate has a hidden spectator (an output combination on which it acts
+as a Clifford, `glcanon.intrinsic_width`) is ranked, and enters sums, by the
+outputs it really uses. ``k`` itself is not changed.
+
 The classes are read off ``gate_human`` in the stored frame: ``T`` (only T
 factors), ``CS``, ``CCZ``, ``mixed``, and ``all`` (any gate, any class in a
 sum). Two rows with the same (n, k, d) in one class are a tie, and both stay
@@ -90,8 +95,8 @@ def status(rows):
     """``{catalog_label: {class: verdict}}`` for every row and every class it
     is in (its own and ``all``). A verdict is ``{"record": bool,
     "dominated_by": label or None, "sum_reaches": k or None}``."""
-    facts = [{"label": r["catalog_label"], "n": r["n"], "k": r["k"], "d": r["d"],
-              "cls": gate_class(r["gate_human"])} for r in rows]
+    facts = [{"label": r["catalog_label"], "n": r["n"], "k": r["intrinsic_width"],
+              "d": r["d"], "cls": gate_class(r["gate_human"])} for r in rows]
     out = {f["label"]: {} for f in facts}
     for C in CLASSES:
         mine = [f for f in facts if C == "all" or f["cls"] == C]
