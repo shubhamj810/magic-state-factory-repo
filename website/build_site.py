@@ -203,7 +203,16 @@ def build_rows(catalog: dict):
         fid = row["catalog_label"]
         old_id = legacy_id(row)
         by_degree = [sum(1 for t in terms if len(t) == w) for w in (1, 2, 3)]
-        v_ex = extractable_t(terms)
+        # the gate's family over all CNOT frames (master_catalog/gatefamily.py),
+        # and the gate in the frame that shows it when the stored frame does not
+        family = row.get("gate_family")
+        family_terms = (monomials(row["gate_family_gate"], k)
+                        if row.get("gate_family_gate") else None)
+        # V_ex belongs to the class, so take the better of the two frames known
+        counts_ex = [v for v in (extractable_t(terms),
+                                 extractable_t(family_terms) if family_terms else None)
+                     if v is not None]
+        v_ex = max(counts_ex) if counts_ex else None
         gamma = exponent(n, k, d)
         gamma_t = exponent(n, row.get("t_count"), d)
         gamma_rho = exponent(n, v_ex, d)
@@ -224,7 +233,13 @@ def build_rows(catalog: dict):
             "gate_truncated": len(gate_human) > HUMAN_LIMIT,
             "terms": len(terms),
             "t_terms": by_degree[0], "cs_terms": by_degree[1], "ccz_terms": by_degree[2],
-            "pure_t": by_degree[0] == k and len(terms) == k,
+            # T on every output in some CNOT frame, the stored one or another
+            "pure_t": family == "T" and row["intrinsic_width"] == k,
+            # "T", "CS", "CCZ", "mixed", or null when the search could not decide
+            "family": family,
+            "family_human": (None if not row.get("gate_family_human") else
+                             row["gate_family_human"] if len(row["gate_family_human"]) <= HUMAN_LIMIT
+                             else row["gate_family_human"][:HUMAN_LIMIT - 3] + "..."),
             "t_count": row.get("t_count"),
             "poly_degree": row.get("poly_degree"),
             "effective_width": row.get("effective_width"),
@@ -265,6 +280,11 @@ def build_rows(catalog: dict):
                 "sk_fingerprint": row.get("sk_fingerprint"),
                 "sk_canonical_frame": row.get("sk_canonical_frame"),
                 "relabelled_into_canonical_frame": row.get("relabelled_into_canonical_frame"),
+                "family": family,
+                "family_frame": row.get("gate_family_frame"),
+                "family_string": row.get("gate_family_gate"),
+                "family_human": row.get("gate_family_human"),
+                "family_monomials": [list(t) for t in family_terms] if family_terms else None,
             },
             "circuit": {"columns": row["columns"]},
             "distance": {"d": d, "is_exact": bool(row.get("d_is_exact")),
@@ -351,7 +371,7 @@ def parameter_groups(factories: list[dict]) -> list[dict]:
 
 
 CSV_FIELDS = ("id", "n", "k", "d", "d_is_exact", "A_d", "d_cert", "d_cert_exact", "N", "r", "gate_human", "terms", "t_terms",
-              "cs_terms", "ccz_terms", "pure_t", "t_count", "poly_degree", "clifford",
+              "cs_terms", "ccz_terms", "pure_t", "family", "t_count", "poly_degree", "clifford",
               "gamma", "gamma_t", "gamma_rho", "v_ex", "rate",
               "discovery", "regimes", "citations", "file", "row")
 
@@ -546,11 +566,12 @@ def build(out: Path, catalog_path: Path = CATALOG, large_path: Path | None = Non
                          f"the main file has {main_count} rows")
 
     # Which factories the site may present as best: a record under the owner's
-    # rule (master_catalog/records.py), in the row's own gate class and over
-    # all gates. A direct sum can be in the catalogue but is never a record.
+    # rule (master_catalog/records.py), in the row's own gate class (its family
+    # over all CNOT frames, not the class the stored frame shows) and over all
+    # gates. A direct sum can be in the catalogue but is never a record.
     verdicts = RC.status(catalog["factories"])
     for s_ in summaries:
-        own = RC.gate_class(by_label[s_["id"]]["gate_human"])
+        own = RC.row_class(by_label[s_["id"]])
         s_["record_class"] = verdicts[s_["id"]][own]["record"]
         s_["record_all"] = verdicts[s_["id"]]["all"]["record"]
         # whether every output is used in every CNOT frame (no hidden spectator,

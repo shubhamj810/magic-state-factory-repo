@@ -29,8 +29,9 @@
         <tr><td><code>n&lt;=100</code> <code>k=2</code> <code>d&gt;=5</code> <code>N&lt;12</code> <code>r=4</code></td><td>compare a parameter with a number (<code>n</code> and <code>N</code> differ)</td></tr>
         <tr><td><code>t&lt;=4</code> <code>deg=2</code> <code>g&lt;1.3</code></td><td>T-count, phase-polynomial degree, <span class="tex">\gamma_\rho</span></td></tr>
         <tr><td><code>T0</code> <code>CS01</code> <code>CCZ012</code> <code>CCZ10,11,12</code></td><td>the gate contains this term (use commas once an index reaches 10)</td></tr>
-        <tr><td><code>T</code> <code>CS</code> <code>CCZ</code></td><td>the gate contains a term of this kind</td></tr>
-        <tr><td><code>pure</code> <code>exact</code></td><td>pure <span class="tex">T^{\otimes k}</span> gates; exact distance only</td></tr>
+        <tr><td><code>T</code> <code>CS</code> <code>CCZ</code></td><td>the gate, as stored, contains a term of this kind</td></tr>
+        <tr><td><code>pure</code> <code>exact</code></td><td>pure <span class="tex">T^{\otimes k}</span> gates in some output basis; exact distance only</td></tr>
+        <tr><td><code>t-only</code> <code>cs-only</code> <code>ccz-only</code> <code>mixed</code></td><td>the gate family: some change of output basis leaves only gates of this kind</td></tr>
         <tr><td>anything else</td><td>matched against the gate, id, discovery method and cited papers</td></tr>
       </table>
       <p>Words combine with AND.</p>
@@ -56,6 +57,13 @@
           <label class="pill"><input type="checkbox" name="has" value="cs"><span class="sym">CS</span> has CS <span class="cnt" data-count="has:cs"></span></label>
           <label class="pill"><input type="checkbox" name="has" value="ccz"><span class="sym">CCZ</span> has CCZ <span class="cnt" data-count="has:ccz"></span></label>
           <label class="pill"><input type="checkbox" id="pure"> pure <span class="tex">T^{\otimes k}</span> <span class="cnt" data-count="pure:1"></span></label>
+        </div>
+        <p class="small muted" style="margin:8px 0 4px">Family, in any output basis</p>
+        <div class="pills" role="group" aria-label="gate family in any output basis">
+          <label class="pill" title="some change of output basis leaves only T gates"><input type="checkbox" name="fam" value="t"> T only <span class="cnt" data-count="fam:t"></span></label>
+          <label class="pill" title="some change of output basis leaves only CS gates"><input type="checkbox" name="fam" value="cs"> CS only <span class="cnt" data-count="fam:cs"></span></label>
+          <label class="pill" title="only CCZ gates, in every output basis"><input type="checkbox" name="fam" value="ccz"> CCZ only <span class="cnt" data-count="fam:ccz"></span></label>
+          <label class="pill" title="no output basis gives a single kind of gate"><input type="checkbox" name="fam" value="mixed"> mixed <span class="cnt" data-count="fam:mixed"></span></label>
         </div>
       </fieldset>
       <fieldset>

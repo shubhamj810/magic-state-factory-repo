@@ -767,7 +767,27 @@ spectator is ranked by the outputs it really uses. This is the owner's rule
 of 7 November 2026: a direct sum can be in the catalogue, but it is not a
 record. [`records.py`](records.py) applies it to the rows as they stand, and
 the website presents as best (its headline figures and the frontier staircase)
-only records. No field of a row says that it is a record, so the verdict is
+only records.
+
+The gate class is the class of the catalogue entry, not of the frame the gate
+is stored in (the owner's rule of 9 November 2026). A row is `T` only, `CS`
+only or `CCZ` only when SOME CNOT frame on the outputs shows its gate with
+gates of that one kind, and mixed when none does. 48.5.3.d, for example, is
+stored as `CS01·CS34·CCZ012·CCZ234`, and in another frame its gate is
+`CS01·CS13·CS24·CS34`, so it is ranked among the CS factories. The row's
+`gate_family` gives the class, and `gate_family_frame`, `gate_family_gate` and
+`gate_family_human` give the frame and the gate in it when the stored frame
+does not show the class. [`gatefamily.py`](gatefamily.py) decides it: `CCZ`
+only is `beta = 0` (the overlap parity of two outputs), which no frame
+changes; `T` only is decided exactly by algebra (the overlaps define a product
+on the outputs, and a T frame exists iff that product is associative); `CS`
+only is decided by an exhaustive search over frames with a work budget. One row,
+30.9.2.a, exceeds the budget; its `gate_family` is null and it is ranked as
+mixed. That is its class: a run of the same search with a budget of 10^9
+nodes (25 minutes, 2026-11-09) found no CS frame. The null only records that
+the routine check cannot repeat so long a search. `verify_catalog` re-derives the four fields on every row, and
+[`migrations/gate_family_2026_11_09.py`](migrations/gate_family_2026_11_09.py)
+checked every frame a second way, from the literal overlaps of the columns. No field of a row says that it is a record, so the verdict is
 never stored where it could go stale; the regime sentences say what each
 source proves, and most of them say "a verified witness, not a maximum". A
 Pareto point of the length-54 classification is a statement about `n` and `N`

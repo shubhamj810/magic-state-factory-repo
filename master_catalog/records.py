@@ -20,10 +20,15 @@ row whose gate has a hidden spectator (an output combination on which it acts
 as a Clifford, `glcanon.intrinsic_width`) is ranked, and enters sums, by the
 outputs it really uses. ``k`` itself is not changed.
 
-The classes are read off ``gate_human`` in the stored frame: ``T`` (only T
-factors), ``CS``, ``CCZ``, ``mixed``, and ``all`` (any gate, any class in a
-sum). Two rows with the same (n, k, d) in one class are a tie, and both stay
-records unless something else takes it away.
+The classes are those of the catalogue entry, not of the stored frame: since
+2026-11-09 a row is in ``T``, ``CS`` or ``CCZ`` when SOME CNOT frame shows its
+gate with only T, only CS or only CCZ gates (``gate_family``, decided by
+`gatefamily`), and ``mixed`` otherwise; ``all`` takes any gate, and any class
+in a sum. So 48.5.3.d, stored as CS01·CS34·CCZ012·CCZ234, is a CS row: in
+another frame its gate is CS01·CS13·CS24·CS34. A row whose family the search
+could not decide (``gate_family`` null) counts as ``mixed``. Two rows with the
+same (n, k, d) in one class are a tie, and both stay records unless something
+else takes it away.
 
 This module only reads rows; nothing in the catalogue files stores a record
 status, so it cannot go stale. The website uses it to decide which factories it
@@ -43,7 +48,8 @@ CLASSES = ("T", "CS", "CCZ", "mixed", "all")
 
 
 def gate_class(gate_human: str) -> str:
-    """``T``, ``CS``, ``CCZ`` or ``mixed``, from the factors of the gate."""
+    """``T``, ``CS``, ``CCZ`` or ``mixed``, from the factors of the gate as
+    stored. Ranking uses `row_class`, which looks at every frame."""
     kinds = set()
     for factor in gate_human.split("·"):
         if factor.startswith("CCZ"):
@@ -57,6 +63,15 @@ def gate_class(gate_human: str) -> str:
     if not kinds:
         raise ValueError("an empty gate")
     return kinds.pop() if len(kinds) == 1 else "mixed"
+
+
+def row_class(row) -> str:
+    """The class a row is ranked in: its ``gate_family``, or ``mixed`` when that
+    is undecided. Rows without the field (older files, tests) fall back to
+    the stored frame, `gate_class`."""
+    if "gate_family" in row:
+        return row["gate_family"] or "mixed"
+    return gate_class(row["gate_human"])
 
 
 def pareto_items(pairs):
@@ -96,7 +111,7 @@ def status(rows):
     is in (its own and ``all``). A verdict is ``{"record": bool,
     "dominated_by": label or None, "sum_reaches": k or None}``."""
     facts = [{"label": r["catalog_label"], "n": r["n"], "k": r["intrinsic_width"],
-              "d": r["d"], "cls": gate_class(r["gate_human"])} for r in rows]
+              "d": r["d"], "cls": row_class(r)} for r in rows]
     out = {f["label"]: {} for f in facts}
     for C in CLASSES:
         mine = [f for f in facts if C == "all" or f["cls"] == C]

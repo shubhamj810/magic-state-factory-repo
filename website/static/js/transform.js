@@ -86,6 +86,14 @@
       if (monos) { input.value = G.human(monos, k); check(); }
     });
     $("tf-form").addEventListener("submit", function (event) { event.preventDefault(); check(); });
+    /* "Show the CNOT circuit" in the gate family note: the same check, aimed
+     * at the gate that shows this factory's family */
+    var family = $("tf-family");
+    if (family) family.addEventListener("click", function () {
+      input.value = family.getAttribute("data-target");
+      check();
+      $("transform").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
 
     /* Every equivalent gate, found in slices so the page stays responsive. */
     var listButton = $("eq-list"), status = $("eq-status");

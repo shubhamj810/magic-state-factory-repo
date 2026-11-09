@@ -90,6 +90,13 @@
         return;
       }
       if (lower === "pure") { tests.push(function (row) { return row.pure_t; }); return; }
+      /* the family over all CNOT frames: t-only, cs-only, ccz-only, mixed */
+      var fam = /^(t|cs|ccz)-only$/.exec(lower);
+      if (fam || lower === "mixed") {
+        var want = fam ? fam[1].toUpperCase() : "mixed";
+        tests.push(function (row) { return (row.family || "mixed") === want; });
+        return;
+      }
       if (lower === "transversal") {
         tests.push(function (row) { return row.clifford !== "required"; });
         return;
@@ -119,7 +126,7 @@
    * the URL, so a bare search.html is the whole catalogue. */
   var KEYS = {
     q: "text", nmin: "int", nmax: "int", kmin: "int", kmax: "int",
-    d: "list", exact: "bool", has: "list", pure: "bool", cliff: "list",
+    d: "list", exact: "bool", has: "list", fam: "list", pure: "bool", cliff: "list",
     tmax: "int", known: "bool", grmax: "float",
     disc: "text", regime: "text", cite: "text", lit: "bool",
     sort: "text", dir: "int", page: "int", size: "int"
@@ -169,6 +176,14 @@
       if (ARITY[kind]) add(function (r) { return r[kind + "_terms"] > 0; });
     });
     if (state.pure) add(function (r) { return r.pure_t; });
+    /* gate family over all CNOT frames; ticked boxes combine with OR, and a
+     * row whose family is undecided counts as mixed, as the records do */
+    if (state.fam && state.fam.length) {
+      var families = state.fam;
+      add(function (r) {
+        return families.indexOf((r.family || "mixed").toLowerCase()) >= 0;
+      });
+    }
     /* Clifford correction: "no" = no S or CZ gate is needed (none at all, or
      * none once some rotations run as T^3, T^5 or T-dagger); "yes" = S or CZ
      * gates are needed whatever the powers.  Both ticked is every factory. */

@@ -168,6 +168,7 @@ import constructions as K                                         # noqa: E402
 import clifford as CL                                             # noqa: E402
 import errorcoeff as EC                                           # noqa: E402
 import faultcore as FC                                            # noqa: E402
+import gatefamily as GF                                           # noqa: E402
 import glcanon as GC                                              # noqa: E402
 import skcanon as SK                                              # noqa: E402
 from factorylib.verification import verify as reference_verify    # noqa: E402
@@ -552,12 +553,26 @@ def derive(columns, k, N):
         # some frame has a spectator output that the stored-frame check above
         # cannot see; the row is kept, and records.py ranks it by this width
         "intrinsic_width": GC.intrinsic_width(k, gate) if gate else 0,
+        # T only, CS only, CCZ only or mixed in SOME CNOT frame (gatefamily),
+        # with the frame that shows it when the stored frame does not
+        **family_facts(k, gate),
         "t_count": t_count, "t_count_note": t_note,
         "poly_degree": degree, "poly_degree_note": degree_note,
         "clifford_correction": corr,
         "columns": [list(c) for c in normalised],
     }
     return facts, problems
+
+
+def family_facts(k, gate):
+    """The four ``gate_family`` fields of a row with this gate."""
+    if not gate:
+        return {"gate_family": None, "gate_family_frame": None,
+                "gate_family_gate": None, "gate_family_human": None}
+    fam = GF.decide(k, gate)
+    return {"gate_family": fam["family"], "gate_family_frame": fam["frame"],
+            "gate_family_gate": SK.gate_string(fam["gate"], k) if fam["gate"] else None,
+            "gate_family_human": SK.gate_human(fam["gate"], k) if fam["gate"] else None}
 
 
 def _pseudo_output_reason(widths, k):
@@ -1036,7 +1051,8 @@ def verify_row(row, budget=None, reference=True, evidence_root=None):
                          "within each column; the derived fields belong to the "
                          "normalised circuit, so the two could differ"))
     for name in ("gate", "gate_human", "sk_fingerprint", "effective_width",
-                 "intrinsic_width"):
+                 "intrinsic_width", "gate_family", "gate_family_frame",
+                 "gate_family_gate", "gate_family_human"):
         if row[name] != facts[name]:
             problems.append((f"{name}-mismatch",
                              f"row says {name}={row[name]!r}, the columns give "

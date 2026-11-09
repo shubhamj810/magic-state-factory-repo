@@ -478,6 +478,51 @@ def clifford_panel(record) -> str:
 
 
 # ------------------------------------------------------------- factory page
+FAMILY_NAMES = {"T": "T only", "CS": "CS only", "CCZ": "CCZ only", "mixed": "mixed"}
+FAMILY_QUERY = {"T": "t", "CS": "cs", "CCZ": "ccz", "mixed": "mixed"}
+
+
+def family_panel(gate, k) -> str:
+    """The gate's family over all CNOT frames, and the frame that shows it."""
+    family = gate.get("family")
+    if family is None:
+        return ('<p id="family"><strong>Gate family:</strong> undecided. The search for a '
+                "change of output basis that leaves only CS gates ran out of its budget, so "
+                "this factory is ranked as mixed, the family its stored gate shows.</p>")
+    link = (f'<a href="search.html?fam={FAMILY_QUERY[family]}">every {FAMILY_NAMES[family]} '
+            "factory</a>")
+    if family == "mixed":
+        return ('<p id="family"><strong>Gate family:</strong> mixed. No change of output basis '
+                "gives a gate made only of T, only of CS or only of CCZ gates. "
+                f'<span class="small muted">See {link}.</span></p>')
+    frame = gate.get("family_frame")
+    if not frame:
+        return (f'<p id="family"><strong>Gate family:</strong> {FAMILY_NAMES[family]}, as '
+                f'shown above. <span class="small muted">See {link}.</span></p>')
+    human = gate.get("family_human") or ""
+    shown = gate_tex(human) if len(human) <= 1500 else f'<code class="wrap">{esc(human)}</code>'
+    sums = "".join(
+        f"<li>new output {i} = "
+        + " ⊕ ".join(f"output {q}" for q in range(k) if b >> q & 1) + "</li>"
+        for i, b in enumerate(frame))
+    button = ('<button type="button" class="btn" id="tf-family" '
+              f'data-target="{esc(human)}">Show the CNOT circuit</button> '
+              '<span class="small muted">It fills in the converter below, which builds the '
+              "circuit and checks it on every basis state.</span>"
+              if k <= 16 else
+              '<span class="small muted">With more than 16 outputs the converter below cannot '
+              "build the circuit in the browser; the sums above give the change of basis.</span>")
+    return (f'<p id="family"><strong>Gate family:</strong> {FAMILY_NAMES[family]}. The stored '
+            "gate shows other terms, but in another output basis the same factory deposits</p>"
+            f'<p class="family-gate">{shown}</p>'
+            '<p class="small muted">This is the same catalogue entry: a CNOT circuit on the '
+            "outputs and diagonal Cliffords turn one gate into the other. The catalogue ranks "
+            f"this factory among the {FAMILY_NAMES[family]} factories. See {link}.</p>"
+            f'<details class="family-frame"><summary>The new outputs as sums of the stored '
+            f"outputs</summary><ul class=\"plain small\">{sums}</ul></details>"
+            f"<p>{button}</p>")
+
+
 def factory_main(record, summary, groups, by_id, stamp) -> str:
     p, gate, m, dist = record["parameters"], record["gate"], record["metrics"], record["distance"]
     n, k, d, N, r = p["n"], p["k"], p["d"], p["N"], p["r"]
@@ -492,7 +537,7 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
     kinds = {1: 0, 2: 0, 3: 0}
     for t in monos:
         kinds[len(t)] += 1
-    pure = len(monos) == k and all(len(t) == 1 for t in monos)
+    pure = summary["pure_t"]
     prov = record.get("provenance") or {}
 
     def at_cert(value):
@@ -575,7 +620,8 @@ def factory_main(record, summary, groups, by_id, stamp) -> str:
         '<p class="small muted">This row stands for every gate that a CNOT circuit and S, Z and CZ '
         "gates on the outputs can reach from this one. They all prepare the same magic state. "
         + (f"The wires are shown in the {tex('S_k')}-canonical frame." if gate.get("sk_canonical_frame")
-           else "The wires are shown in the labelling of the stored circuit.") + "</p>")
+           else "The wires are shown in the labelling of the stored circuit.") + "</p>"
+        + family_panel(gate, k))
     distance_panel = (
         ("<p>" + (f"<strong>{tex(f'd={d}')}, exact.</strong> " if dist["is_exact"] else
                   f"<strong>{tex(distance_bounds(d, False, dist.get('upper')))}.</strong> ")

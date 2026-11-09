@@ -334,6 +334,22 @@ class TheBuiltSite(unittest.TestCase):
         self.assertNotIn(">15.1.3.a<", text)
         self.assertNotIn("<!--#", text)
 
+    def test_a_gate_shown_in_another_frame_is_ranked_and_found_by_its_family(self):
+        """48.5.3.d is stored with CCZ terms and is CS only in another frame:
+        the index and the page say so, and link to the converter and the search
+        (owner, 2026-11-09)."""
+        f = next(x for x in self.index["factories"] if x["id"] == "48.5.3.d")
+        self.assertEqual(f["family"], "CS")
+        self.assertEqual(f["family_human"], "CS01·CS13·CS24·CS34")
+        text = (self.out / "f" / "48.5.3.d" / "index.html").read_text(encoding="utf-8")
+        self.assertIn('<p id="family"><strong>Gate family:</strong> CS only.', text)
+        self.assertIn('id="tf-family" data-target="CS01·CS13·CS24·CS34"', text)
+        self.assertIn('search.html?fam=cs"', text)
+        # a row whose stored frame shows its family needs no second frame
+        text = (self.out / "f" / "15.1.3.a" / "index.html").read_text(encoding="utf-8")
+        self.assertIn("<strong>Gate family:</strong> T only, as shown above.", text)
+        self.assertNotIn('id="tf-family"', text)
+
     def test_nested_pages_link_back_to_the_root(self):
         local = re.compile(r'(?:src|href)="([^"#?:]+\.(?:js|css|svg|html|json|csv))"')
         page = self.out / "f" / "15.1.3.a" / "index.html"
@@ -346,7 +362,7 @@ class TheBuiltSite(unittest.TestCase):
         verdicts = build_site.RC.status(self.catalog["factories"])
         by_id = {row["catalog_label"]: row for row in self.catalog["factories"]}
         for f in self.index["factories"]:
-            own = build_site.RC.gate_class(by_id[f["id"]]["gate_human"])
+            own = build_site.RC.row_class(by_id[f["id"]])
             self.assertEqual(f["record_class"], verdicts[f["id"]][own]["record"])
             self.assertEqual(f["record_all"], verdicts[f["id"]]["all"]["record"])
         groups = {}

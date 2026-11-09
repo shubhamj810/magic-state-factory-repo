@@ -77,7 +77,16 @@ follow it. Both present only records, under the owner's rule of 7 November
 2026 ([`master_catalog/records.py`](../master_catalog/records.py)): a factory is
 a record when no other factory, and no direct sum of factories, of its own gate
 class (T, CS, CCZ or mixed) has at most its inputs, at least its outputs and at
-least its distance. A direct sum can be in the catalogue, but it is never shown
+least its distance. The gate class is the row's `gate_family`, the class of the
+catalogue entry over every change of output basis, not the class the stored
+gate happens to show. A factory page whose stored gate hides its class says so
+under "Output gate", shows the gate in the frame that reveals the class, and
+has a button that builds the CNOT circuit in the converter below it. The search
+page filters by this family ("Family, in any output basis", or the words
+`t-only`, `cs-only`, `ccz-only` and `mixed`), and tags such rows "CS only in
+another frame". `pure_t` (pure T⊗k) means T on every output in some frame, and
+`V_ex` is the better of its values in the stored frame and in the family's
+frame. A direct sum can be in the catalogue, but it is never shown
 as best. Outputs are counted by the row's `intrinsic_width`, and a row with a
 hidden spectator (`intrinsic_width < k`) is not shown as best, since its γ
 counts all `k` outputs; the width itself is not published on the site, which is

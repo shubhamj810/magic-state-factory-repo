@@ -26,6 +26,9 @@
     required: '<span class="tag" title="S or CZ gates after the rotations, whatever powers of T they run at">S, CZ</span>'
   };
 
+  /* Gate families over all CNOT frames (master_catalog/gatefamily.py). */
+  var FAMILY = { t: "T only", cs: "CS only", ccz: "CCZ only", mixed: "mixed" };
+
   function option(value, text) {
     var o = document.createElement("option");
     o.value = value;
@@ -89,6 +92,9 @@
       document.querySelectorAll('input[name="cliff"]').forEach(function (box) {
         box.checked = (state.cliff || []).indexOf(box.value) >= 0;
       });
+      document.querySelectorAll('input[name="fam"]').forEach(function (box) {
+        box.checked = (state.fam || []).indexOf(box.value) >= 0;
+      });
       ["disc", "regime", "cite"].forEach(function (key) { $(key).value = state[key] || ""; });
       $("size").value = String(state.size === undefined ? 50 : state.size);
     }
@@ -108,6 +114,7 @@
       next.d = [].map.call(document.querySelectorAll('input[name="d"]:checked'), function (b) { return b.value; });
       next.has = [].map.call(document.querySelectorAll('input[name="has"]:checked'), function (b) { return b.value; });
       next.cliff = [].map.call(document.querySelectorAll('input[name="cliff"]:checked'), function (b) { return b.value; });
+      next.fam = [].map.call(document.querySelectorAll('input[name="fam"]:checked'), function (b) { return b.value; });
       ["disc", "regime", "cite"].forEach(function (key) { if ($(key).value) next[key] = $(key).value; });
       return next;
     }
@@ -130,7 +137,9 @@
         '<td class="gate" data-col="gate"><a href="' + href + '" aria-label="' + C.escapeHtml(f.gate_human) + '">' + C.gateTex(f.gate_human) + "</a>" +
           (f.gate_truncated ? ' <span class="tag" title="the full gate is on the factory page">' +
                               f.terms + " terms</span>" : "") +
-          (f.pure_t ? ' <span class="tag pure">pure T</span>' : "") + "</td>" +
+          (f.pure_t ? ' <span class="tag pure">pure T</span>' : "") +
+          (f.family_human ? ' <a class="tag" href="' + href + '#family" title="in another output basis: ' +
+                            C.escapeHtml(f.family_human) + '">' + FAMILY[f.family.toLowerCase()] + " in another frame</a>" : "") + "</td>" +
         '<td class="num" data-col="N">' + f.N + "</td>" +
         '<td class="num" data-col="gamma_rho">' + C.num(f.gamma_rho_claim) + C.claimMark(f) + "</td>" +
         '<td class="num" data-col="gamma">' + C.num(f.gamma_claim) + C.claimMark(f) + "</td>" +
@@ -210,6 +219,9 @@
       (state.has || []).forEach(function (v) {
         add("has " + v.toUpperCase(), function (s) { s.has = s.has.filter(function (x) { return x !== v; }); });
       });
+      (state.fam || []).forEach(function (v) {
+        add(FAMILY[v] + " in some frame", function (s) { s.fam = s.fam.filter(function (x) { return x !== v; }); });
+      });
       (state.cliff || []).forEach(function (v) {
         add(v === "yes" ? "S or CZ needed" : "no Clifford correction needed",
             function (s) { s.cliff = s.cliff.filter(function (x) { return x !== v; }); });
@@ -247,6 +259,7 @@
         var key = span.getAttribute("data-count").split(":"), s = copy();
         if (key[0] === "d") s.d = [key[1]];
         else if (key[0] === "cliff") s.cliff = [key[1]];
+        else if (key[0] === "fam") s.fam = [key[1]];
         else if (key[0] === "has") s.has = (s.has || []).filter(function (x) { return x !== key[1]; }).concat([key[1]]);
         else s[key[0]] = true;
         var c = size(s);

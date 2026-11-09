@@ -49,6 +49,19 @@ re-derivation, so this list is also the list of things that get checked.
                  ``k`` less the dimension of the radical of its trilinear form
                  (`glcanon.intrinsic_width`); below ``k`` the row has a hidden
                  spectator. Since 2026-11-07
+  ``gate_family``  ``T``, ``CS``, ``CCZ`` or ``mixed``: whether SOME CNOT frame
+                 shows the gate with only T, only CS or only CCZ gates, so it
+                 is a property of the class, not of the stored frame
+                 (`gatefamily.decide`); ``null`` when the search for a CS
+                 frame ran out of budget, and the row then counts as
+                 ``mixed``. Since 2026-11-09
+  ``gate_family_frame``  ``null`` when the stored frame already shows the
+                 family; otherwise ``k`` bitmasks over the stored outputs, the
+                 frame that shows it (new output ``i`` is the combination
+                 ``gate_family_frame[i]`` of stored outputs)
+  ``gate_family_gate``, ``gate_family_human``  the gate in that frame, in
+                 the formats of ``gate`` and ``gate_human``; ``null`` with the
+                 frame
   ``effective_width``  rank of the output rows modulo the check span; ``== k``
   ``clifford_correction``  the diagonal Clifford to apply after the rotations,
                  before the checks are measured, so that the accepted action is
@@ -173,6 +186,8 @@ REQUIRED_FIELDS = (
     "sk_key", "sk_canonical_frame", "sk_fingerprint",
     "d_is_exact", "d_upper", "d_witness", "A_d",
     "t_count", "poly_degree", "effective_width", "intrinsic_width",
+    # the family over all CNOT frames (`gatefamily`), and the frame showing it
+    "gate_family", "gate_family_frame", "gate_family_gate", "gate_family_human",
     "regimes", "discovery", "strongest_claim",
     # ``relabelled_into_canonical_frame`` is PROVENANCE: whether the ingest
     # permuted the output wires on the way in.  A self-contained row cannot
@@ -248,6 +263,8 @@ STORAGE_FIELDS = ("construction", "columns_sha256")
 FIELD_TYPES = {
     "n": "int", "k": "int", "N": "int", "d": "int", "level": "int",
     "effective_width": "int", "intrinsic_width": "int",
+    "gate_family": "str?", "gate_family_frame": ["int"],
+    "gate_family_gate": "str?", "gate_family_human": "str?",
     "t_count": "int?", "poly_degree": "int?", "d_upper": "int?",
     "A_d": "int?",
     "gate": "str", "gate_human": "str", "sk_fingerprint": "str",
@@ -310,9 +327,10 @@ def next_label(rows, n: int, k: int, d: int) -> str:
     return f"{n}.{k}.{d}.{label_letters(max(used) + 1 if used else 0)}"
 #: Fields whose value may be ``null`` INSTEAD of the shape above: a row with no
 #: proved canonical frame stores no key, a row whose distance search found no
-#: fault at all stores no witness, and a row no rotation powers can spare its
-#: Clifford correction stores no powers.
-NULLABLE_FIELDS = ("sk_key", "d_witness", "rotation_powers")
+#: fault at all stores no witness, a row no rotation powers can spare its
+#: Clifford correction stores no powers, and a row whose stored frame already
+#: shows its gate family stores no family frame.
+NULLABLE_FIELDS = ("sk_key", "d_witness", "rotation_powers", "gate_family_frame")
 
 #: The keys every entry of ``sources`` carries, and their types.  ``sources``
 #: itself is typed only as a list of objects by `FIELD_TYPES`, which admits
