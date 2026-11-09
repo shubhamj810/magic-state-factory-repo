@@ -99,8 +99,19 @@ class _Watcher:
         self.expect_errors = False
         page.on("console", lambda m: m.type == "error" and self._note(f"console error: {m.text}"))
         page.on("pageerror", lambda e: self._note(f"page error: {e}"))
-        page.on("requestfailed", lambda r: self._note(f"request failed: {r.url}"))
+        page.on("requestfailed", self._request_failed)
         page.on("response", lambda r: r.status >= 400 and self._note(f"HTTP {r.status} for {r.url}"))
+
+    def _request_failed(self, request):
+        # A page that redirects (an old link, a former label) navigates away
+        # while its own fetches are still in flight, and the browser aborts
+        # them. That is not a broken link: a missing file is an HTTP error,
+        # reported by the response handler above. Which side of that race a
+        # fetch lands on depends on the machine, so aborts are only logged.
+        if request.failure == "net::ERR_ABORTED":
+            print(f"  (aborted by navigation, ignored: {self.where}: {request.url})", file=sys.stderr)
+            return
+        self._note(f"request failed: {request.url} ({request.failure})")
 
     def _note(self, message):
         if not self.expect_errors:
