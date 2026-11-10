@@ -1,0 +1,2 @@
+{"label": "222.2.8.a", "weight": 8, "columns_sha256": "982f26486832fb30efa2c079f1b5193693dc78e5d7e9c7222ea5a20916f9bee6", "by_flip": {"11": 223}, "total": 223, "single_output_second_program": {"0": 0, "1": 0}, "second": "plan", "agree": true}
+{"label": "222.2.8.a", "weight": 9, "columns_sha256": "982f26486832fb30efa2c079f1b5193693dc78e5d7e9c7222ea5a20916f9bee6", "by_flip": {"10": 5660, "01": 5660}, "total": 11320, "single_output_second_program": {"0": 5660, "1": 5660}, "second": "macw", "agree": true}

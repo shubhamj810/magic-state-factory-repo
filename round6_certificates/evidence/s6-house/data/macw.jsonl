@@ -1,0 +1,1 @@
+{"label": "250.3.7.a", "columns_sha256": "107a0f32dca872d4a55fe1b6d76c2afe9991b2f7c8f8f9cb5e3d670634e2c37d", "weight": 7, "keep_out": [0, 1, 2], "rank_H": 30, "rank_G": 33, "B_kerH": 20582, "B_kerG": 15649, "A_w": 4933, "seconds": [1.5, 11.5], "wdist_sha256": "26237eac4a8c60ca5bf77757656762a9a32389dc668b6dfa591b64fd59f6f79a", "threads": null, "date": "2026-11-09 09:48"}

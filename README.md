@@ -110,16 +110,18 @@ rate of one input `T` state. The 15-to-1 has `A_3 = 35`, the 8-`T` `CCZ`
 factory `A_2 = 28`.
 [`master_catalog/errorcoeff.py`](master_catalog/errorcoeff.py) counts it
 exactly, as the accepted faults less the harmless ones, each counted by the
-MacWilliams identity or by enumeration. Of the 2986 exact rows, 2817 have a
-count. 96 of those counts also cite an evidence file (`A_d_evidence`) from
-another program. The verifier checks that the file's record is bound to the
-row's columns, and wherever `errorcoeff.py` reaches, its count must agree. The
-other 169 rows have `A_d = null`: circuits of 176 to 4284 rotations at
-`d >= 6`, and 19 four-block circuits at `d = 3` with `n >= 1199`, out of reach
-of both methods. On three of them, `348.22.7.a`, `452.66.6.a` and `470.28.7.a`,
-two programs agree on a count, but its list is too large to keep here (see
-[`round1_certificates/`](round1_certificates/README.md)); on `318.2.9.a` and
-`451.3.9.a` the research counted `A_9` with one program only. The count belongs to the stored
+MacWilliams identity or by enumeration. Of the 2986 exact rows, 2854 have a
+count. 133 of those counts also cite evidence files (`A_d_evidence`) from
+other programs. The verifier checks that each file's record is bound to the
+row's columns, and wherever `errorcoeff.py` reaches, its count must agree.
+Since 9 November 2026, 37 rows with `127 <= n < 500` carry counts by two programs
+from the round-6 housekeeping search
+([`round6_certificates/`](round6_certificates/README.md)). The other 132 rows have
+`A_d = null`: circuits of 410 to 4284 rotations at `d >= 6`, and 19 four-block
+circuits at `d = 3` with `n >= 1199`, out of reach of both methods. On
+`410.2.11.a` and `441.1.13.a` a counting theorem for doubled factories gives a
+value and on `462.4.9.a` one program does, which is not enough to store
+([`round6_certificates/`](round6_certificates/README.md)). The count belongs to the stored
 circuit: another circuit of the same class can have a different `A_d`.
 
 ## Where the protocols come from

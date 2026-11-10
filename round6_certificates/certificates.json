@@ -1,0 +1,68 @@
+{
+ "about": "Records of the round-6 housekeeping search s6-house (research branch, research/search2/s6-house at b4f0910) and of three count_weight.py runs of 8 November 2026, copied to evidence/.  Each record is bound to its circuit by columns_sha256 (constructions.digest of the stored columns).  Written by round6_certificates/assemble.py. lower_bound: the distance is at least this.",
+ "records": [
+  {
+   "label": "406.3.8.a",
+   "n": 406,
+   "k": 3,
+   "N": 45,
+   "columns_sha256": "96afeedf42dc0d005b707816d22b530b6d168bb1ab3ddbf8e936d08c347ad4cf",
+   "method": "exhaustive search",
+   "tool": "tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247), run by the round-6 search s6-house on the UMD cluster Zaratan over every anchor",
+   "lower_bound": 8,
+   "witness": [
+    0,
+    15,
+    48,
+    117,
+    252,
+    254,
+    296,
+    383
+   ],
+   "how": "threshold 7 exhausted, 8 found, task depth 2, 64 threads (evidence/s6-house/data/zaratan/tropidist.jsonl)"
+  },
+  {
+   "label": "448.7.8.a",
+   "n": 448,
+   "k": 7,
+   "N": 49,
+   "columns_sha256": "bb71b3e74588deac8d83382f7a7fa7b412abff9a2a5066415f4584bb0cf3dd2b",
+   "method": "exhaustive search",
+   "tool": "tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247), run by the round-6 search s6-house on the UMD cluster Zaratan over every anchor",
+   "lower_bound": 8,
+   "witness": [
+    0,
+    1,
+    13,
+    68,
+    100,
+    121,
+    156,
+    195
+   ],
+   "how": "threshold 7 exhausted, 8 found, task depth 2, 64 threads (evidence/s6-house/data/zaratan/tropidist.jsonl)"
+  },
+  {
+   "label": "490.11.8.a",
+   "n": 490,
+   "k": 11,
+   "N": 53,
+   "columns_sha256": "3d468af983895640e2f2ab0bbc173f8e3bce590b756695a2cc35de8c6b109749",
+   "method": "exhaustive search",
+   "tool": "tropidist (B. Cheng, N. Guo and F. Pan, arXiv:2611.08247), run by the round-6 search s6-house on the UMD cluster Zaratan over every anchor",
+   "lower_bound": 8,
+   "witness": [
+    0,
+    27,
+    45,
+    129,
+    213,
+    221,
+    369,
+    441
+   ],
+   "how": "threshold 7 exhausted, 8 found, task depth 2, 64 threads (evidence/s6-house/data/zaratan/tropidist.jsonl)"
+  }
+ ]
+}

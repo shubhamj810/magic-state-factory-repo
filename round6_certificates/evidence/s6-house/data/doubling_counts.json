@@ -1,0 +1,475 @@
+{
+ "177.1.9.a": {
+  "block": "gong41",
+  "labels": [
+   1
+  ],
+  "inner": "95.1.7.a",
+  "d_t": 7,
+  "inner_counts": [
+   [
+    7,
+    1,
+    48645
+   ]
+  ],
+  "inner_source": "catalogue A_7 of 95.1.7.a = 48,645 (recounted here: mitml + plan kernel)",
+  "block_S_perp": {
+   "min_odd": 9,
+   "min_even_nonzero": 8
+  },
+  "block_odd_words_at_min": 697,
+  "A_by_weight": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 2172877
+  },
+  "A_d": 2172877,
+  "direct_count": 2172877,
+  "direct_source": "catalogue (mitml + trellis)",
+  "agrees_with_direct": true
+ },
+ "189.1.9.a": {
+  "block": "qr47",
+  "labels": [
+   1
+  ],
+  "inner": "95.1.7.a",
+  "d_t": 7,
+  "inner_counts": [
+   [
+    7,
+    1,
+    48645
+   ]
+  ],
+  "inner_source": "as above",
+  "block_S_perp": {
+   "min_odd": 11,
+   "min_even_nonzero": 12
+  },
+  "block_odd_words_at_min": 4324,
+  "A_by_weight": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 2286315
+  },
+  "A_d": 2286315,
+  "direct_count": 2286315,
+  "direct_source": "catalogue (mitml + trellis)",
+  "agrees_with_direct": true
+ },
+ "271.1.11.a": {
+  "block": "qr47",
+  "labels": [
+   1
+  ],
+  "inner": "177.1.9.a",
+  "d_t": 9,
+  "inner_counts": [
+   [
+    9,
+    1,
+    2172877
+   ]
+  ],
+  "inner_source": "catalogue A_9 of 177.1.9.a (mitml + trellis)",
+  "block_S_perp": {
+   "min_odd": 11,
+   "min_even_nonzero": 12
+  },
+  "block_odd_words_at_min": 4324,
+  "A_by_weight": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 0,
+   "10": 0,
+   "11": 106552995
+  },
+  "A_d": 106552995,
+  "direct_count": 106552995,
+  "direct_source": "catalogue (trellis, two orders)",
+  "agrees_with_direct": true
+ },
+ "283.1.11.a": {
+  "block": "qr47",
+  "labels": [
+   1
+  ],
+  "inner": "189.1.9.a",
+  "d_t": 9,
+  "inner_counts": [
+   [
+    9,
+    1,
+    2286315
+   ]
+  ],
+  "inner_source": "catalogue A_9 of 189.1.9.a (mitml + trellis)",
+  "block_S_perp": {
+   "min_odd": 11,
+   "min_even_nonzero": 12
+  },
+  "block_odd_words_at_min": 4324,
+  "A_by_weight": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 0,
+   "10": 0,
+   "11": 111884581
+  },
+  "A_d": 111884581,
+  "direct_count": 111884581,
+  "direct_source": "catalogue (trellis, two orders)",
+  "agrees_with_direct": true
+ },
+ "401.1.13.a": {
+  "block": "gong65",
+  "labels": [
+   1
+  ],
+  "inner": "271.1.11.a",
+  "d_t": 11,
+  "inner_counts": [
+   [
+    11,
+    1,
+    106552995
+   ]
+  ],
+  "inner_source": "catalogue A_11 of 271.1.11.a (trellis; this formula reproduces it)",
+  "block_S_perp": {
+   "min_odd": 13,
+   "min_even_nonzero": 12
+  },
+  "block_odd_words_at_min": 7990,
+  "A_by_weight": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 0,
+   "10": 0,
+   "11": 0,
+   "12": 0,
+   "13": 6958671715
+  },
+  "A_d": 6958671715,
+  "direct_count": 6958671715,
+  "direct_source": "catalogue (trellis, two orders)",
+  "agrees_with_direct": true
+ },
+ "441.1.13.a": {
+  "block": "qr79",
+  "labels": [
+   1
+  ],
+  "inner": "283.1.11.a",
+  "d_t": 11,
+  "inner_counts": [
+   [
+    11,
+    1,
+    111884581
+   ]
+  ],
+  "inner_source": "catalogue A_11 of 283.1.11.a (trellis; this formula reproduces it)",
+  "block_S_perp": {
+   "min_odd": 15,
+   "min_even_nonzero": 16,
+   "note": "no word of weight 1..14: the extended QR [80,40] code has d = 16 (transversal_t_codes/min_distance.py, the catalogue's proof)"
+  },
+  "block_odd_words_at_min": 0,
+  "A_by_weight": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 0,
+   "10": 0,
+   "11": 0,
+   "12": 0,
+   "13": 8838881899
+  },
+  "A_d": 8838881899,
+  "direct_count": null,
+  "direct_source": "none (mitml has w <= 12; trellis cut rank 31)",
+  "agrees_with_direct": null
+ },
+ "270.1.10.a": {
+  "block": "qr47",
+  "labels": [
+   1
+  ],
+  "inner": "176.1.8.a",
+  "d_t": 8,
+  "inner_counts": [
+   [
+    8,
+    1,
+    68229
+   ]
+  ],
+  "inner_source": "A_8 of 176.1.8.a = 68,229 (mitml list + plan kernel, data/counts.jsonl)",
+  "block_S_perp": {
+   "min_odd": 11,
+   "min_even_nonzero": 12
+  },
+  "block_odd_words_at_min": 4324,
+  "A_by_weight": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 0,
+   "10": 3206763
+  },
+  "A_d": 3206763,
+  "direct_count": 3206763,
+  "direct_source": "mitml count (Zaratan) and trellis",
+  "agrees_with_direct": true
+ },
+ "318.2.9.a": {
+  "block": "gong41",
+  "labels": [
+   1,
+   2
+  ],
+  "inner": "154.2.7.a",
+  "d_t": 7,
+  "inner_counts": [
+   [
+    7,
+    1,
+    49624
+   ],
+   [
+    7,
+    2,
+    46264
+   ]
+  ],
+  "inner_source": "A_7 of 154.2.7.a split by flipped outputs (data/flipsplit.jsonl: mitml list + plan kernel)",
+  "block_S_perp": {
+   "min_odd": 9,
+   "min_even_nonzero": 8
+  },
+  "block_odd_words_at_min": 697,
+  "A_by_weight": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 4288272
+  },
+  "A_d": 4288272,
+  "direct_count": 4288272,
+  "direct_source": "mitml count (Zaratan, and s4-d8) and trellis",
+  "agrees_with_direct": true
+ },
+ "451.3.9.a": {
+  "block": "gong41",
+  "labels": [
+   1,
+   2,
+   4
+  ],
+  "inner": "205.3.7.a",
+  "d_t": 7,
+  "inner_counts": [
+   [
+    7,
+    1,
+    23588
+   ],
+   [
+    7,
+    2,
+    8426
+   ],
+   [
+    7,
+    4,
+    12304
+   ],
+   [
+    7,
+    7,
+    320
+   ]
+  ],
+  "inner_source": "as above for 205.3.7.a",
+  "block_S_perp": {
+   "min_odd": 9,
+   "min_even_nonzero": 8
+  },
+  "block_odd_words_at_min": 697,
+  "A_by_weight": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 2352334
+  },
+  "A_d": 2352334,
+  "direct_count": 2352334,
+  "direct_source": "mitml count (Zaratan, and s4-d8) and trellis",
+  "agrees_with_direct": true
+ },
+ "459.2.9.a": {
+  "block": "gong41",
+  "labels": [
+   1,
+   2,
+   3
+  ],
+  "inner": "213.2.7.a",
+  "d_t": 7,
+  "inner_counts": [
+   [
+    7,
+    1,
+    12048
+   ],
+   [
+    7,
+    2,
+    22056
+   ],
+   [
+    7,
+    3,
+    10312
+   ]
+  ],
+  "inner_source": "as above for 213.2.7.a",
+  "block_S_perp": {
+   "min_odd": 9,
+   "min_even_nonzero": 8
+  },
+  "block_odd_words_at_min": 697,
+  "A_by_weight": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 2356352
+  },
+  "A_d": 2356352,
+  "direct_count": 2356352,
+  "direct_source": "mitml count (Zaratan) and trellis",
+  "agrees_with_direct": true
+ },
+ "410.2.11.a": {
+  "block": "qr47",
+  "labels": [
+   1,
+   2
+  ],
+  "inner": "222.2.8.a",
+  "d_t": 8,
+  "inner_counts": [
+   [
+    8,
+    1,
+    0
+   ],
+   [
+    8,
+    2,
+    0
+   ],
+   [
+    8,
+    3,
+    223
+   ],
+   [
+    9,
+    1,
+    5660
+   ],
+   [
+    9,
+    2,
+    5660
+   ],
+   [
+    9,
+    3,
+    0
+   ]
+  ],
+  "inner_source": "222.2.8.a split by flipped outputs at w = 8 (mitml list + plan kernel) and w = 9 (mitml list + MacWilliams), data/zaratan/t2/flipsplit.jsonl",
+  "block_S_perp": {
+   "min_odd": 11,
+   "min_even_nonzero": 12
+  },
+  "block_odd_words_at_min": 4324,
+  "A_by_weight": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 0,
+   "10": 0,
+   "11": 9387592
+  },
+  "A_d": 9387592,
+  "direct_count": null,
+  "direct_source": "none (mitml estimate 81 core-hours; trellis cut rank >= 38)",
+  "agrees_with_direct": null
+ }
+}

@@ -1,0 +1,1056 @@
+[
+ {
+  "label": "176.1.8.a",
+  "n": 176,
+  "k": 1,
+  "N": 46,
+  "d": 8,
+  "columns_sha256": "c2c84c9dd3c6689122a52b3b19beaacdc0e6e02215a5029fc43c709796b03fab",
+  "A_d": 68229,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 68229,
+    "record": "data/counts.jsonl",
+    "accepted": 933446
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 68229,
+    "record": "data/counts.jsonl",
+    "accepted": 933446
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "218.5.7.a",
+  "n": 218,
+  "k": 5,
+  "N": 37,
+  "d": 7,
+  "columns_sha256": "21a281eea9346dd1fb3293e3567f1a54cabfb7dbc9537795f0ebffc5fc05176b",
+  "A_d": 360,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 360,
+    "record": "data/counts.jsonl",
+    "accepted": 360
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 360,
+    "record": "data/counts.jsonl",
+    "accepted": 360
+   },
+   {
+    "program": "MacWilliams (wdist.c)",
+    "A_w": 360,
+    "record": "data/zaratan/macw.jsonl"
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "221.2.8.a",
+  "n": 221,
+  "k": 2,
+  "N": 37,
+  "d": 8,
+  "columns_sha256": "5cea4c981ae039321e3f25735cb16eb98b1e9de0b9a0ed9d798f47f82f18c5c8",
+  "A_d": 642,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 642,
+    "record": "data/counts.jsonl",
+    "accepted": 642
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 642,
+    "record": "data/counts.jsonl",
+    "accepted": 642
+   },
+   {
+    "program": "MacWilliams (wdist.c)",
+    "A_w": 642,
+    "record": "data/zaratan/macw.jsonl"
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "222.2.8.a",
+  "n": 222,
+  "k": 2,
+  "N": 38,
+  "d": 8,
+  "columns_sha256": "982f26486832fb30efa2c079f1b5193693dc78e5d7e9c7222ea5a20916f9bee6",
+  "A_d": 223,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 223,
+    "record": "data/counts.jsonl",
+    "accepted": 223
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 223,
+    "record": "data/counts.jsonl",
+    "accepted": 223
+   },
+   {
+    "program": "MacWilliams (wdist.c)",
+    "A_w": 223,
+    "record": "data/zaratan/macw.jsonl"
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "250.3.7.a",
+  "n": 250,
+  "k": 3,
+  "N": 33,
+  "d": 7,
+  "columns_sha256": "107a0f32dca872d4a55fe1b6d76c2afe9991b2f7c8f8f9cb5e3d670634e2c37d",
+  "A_d": 4933,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 4933,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 20582
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 4933,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 20582
+   },
+   {
+    "program": "MacWilliams (wdist.c)",
+    "A_w": 4933,
+    "record": "data/macw.jsonl"
+   },
+   {
+    "program": "MacWilliams (wdist.c)",
+    "A_w": 4933,
+    "record": "data/zaratan/macw.jsonl"
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "255.21.7.a",
+  "n": 255,
+  "k": 21,
+  "N": 45,
+  "d": 7,
+  "columns_sha256": "cce0e8a0565ff4878da47a6cd9bbb0d059a23a03fb046ba463aa0e3be051458b",
+  "A_d": 856035,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 856035,
+    "record": "data/counts.jsonl",
+    "accepted": 856035
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 856035,
+    "record": "data/counts.jsonl",
+    "accepted": 856035
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "256.20.8.a",
+  "n": 256,
+  "k": 20,
+  "N": 45,
+  "d": 8,
+  "columns_sha256": "89f28b507e7f0284512fe3f4956b684aaee5ac1c16e723c3b01755d863b169ed",
+  "A_d": 27393120,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "plan kernel",
+    "A_w": 27393120,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 27393120
+   },
+   {
+    "program": "mitml (list)",
+    "A_w": 27393120,
+    "record": "data/zaratan/counts_t6_recovered.jsonl",
+    "accepted": 27393120
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "270.1.10.a",
+  "n": 270,
+  "k": 1,
+  "N": 70,
+  "d": 10,
+  "columns_sha256": "5031b0aca5ca27dfd1c47cf5d6b4573763daed051fa8dd7274f05f576945c933",
+  "A_d": 3206763,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (count)",
+    "A_w": 3206763,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 10112107
+   },
+   {
+    "program": "counting trellis",
+    "A_w": 3206763,
+    "record": "data/trellis.jsonl",
+    "order": "data/orders/270.1.10.a.json"
+   },
+   {
+    "program": "doubling count (theorem)",
+    "A_w": 3206763,
+    "record": "data/dblspec/270.1.10.a.json"
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "280.6.7.a",
+  "n": 280,
+  "k": 6,
+  "N": 36,
+  "d": 7,
+  "columns_sha256": "21714052252f6332917f4472a2e1240aa31ab2d4eb4f5232c9332a6c0a547ca5",
+  "A_d": 13334,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 13334,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 32514
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 13334,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 32514
+   },
+   {
+    "program": "MacWilliams (wdist.c)",
+    "A_w": 13334,
+    "record": "data/zaratan/macw.jsonl"
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "318.2.9.a",
+  "n": 318,
+  "k": 2,
+  "N": 78,
+  "d": 9,
+  "columns_sha256": "7a24ec10dc35198a2a939ad841d4f0d34307120efc5ba11c933342cef974a952",
+  "A_d": 4288272,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (count)",
+    "A_w": 4288272,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 4288272
+   },
+   {
+    "program": "counting trellis",
+    "A_w": 4288272,
+    "record": "data/trellis.jsonl",
+    "order": "data/orders/318.2.9.a.json"
+   },
+   {
+    "program": "doubling count (theorem)",
+    "A_w": 4288272,
+    "record": "data/dblspec/318.2.9.a.json"
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "333.9.7.a",
+  "n": 333,
+  "k": 9,
+  "N": 46,
+  "d": 7,
+  "columns_sha256": "d7ed104e8b3a1940257f5fff8d614d8250ce5525c3bfc55be8120a96fcbdeae1",
+  "A_d": 578,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 578,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 578
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 578,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 578
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "341.11.7.a",
+  "n": 341,
+  "k": 11,
+  "N": 46,
+  "d": 7,
+  "columns_sha256": "246e6b1e1311233173e07ada0a00295eb0503aed6d75a38eab7b6549e8144014",
+  "A_d": 1705,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 1705,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 1705
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 1705,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 1705
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "342.45.6.a",
+  "n": 342,
+  "k": 45,
+  "N": 66,
+  "d": 6,
+  "columns_sha256": "f3142b8a115542059f6173b92fe2da5bb5bde23cb2cd632c80a8fe9393a51f81",
+  "A_d": 2638317,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 2638317,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 2638317
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 2638317,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 2638317
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "348.22.7.a",
+  "n": 348,
+  "k": 22,
+  "N": 70,
+  "d": 7,
+  "columns_sha256": "80ade620a8061f49baf2d3c2a890a251a668678c8f9541411edc8eb675fdb41b",
+  "A_d": 877306,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list), 8 Nov",
+    "A_w": 877306,
+    "record": "research/search2/catalogue/stage3/data/lists/listed_counts.jsonl"
+   },
+   {
+    "program": "mydist, 8 Nov",
+    "A_w": 877306,
+    "record": "research/search2/catalogue/stage3/data/lists/listed_counts.jsonl"
+   },
+   {
+    "program": "contraction identity (theorem)",
+    "A_w": 877306,
+    "record": "data/contraction.jsonl"
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "359.13.6.a",
+  "n": 359,
+  "k": 13,
+  "N": 76,
+  "d": 6,
+  "columns_sha256": "3b0d3d3b63fcd783e3fd860320be45cff23ae07bc71fd88bb1616d85ec795455",
+  "A_d": 5077,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 5077,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 5077
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 5077,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 5077
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "364.18.6.a",
+  "n": 364,
+  "k": 18,
+  "N": 50,
+  "d": 6,
+  "columns_sha256": "f4b088904483d89341996b07835100499c5c3c2ad9601a108846ccd2054ec50c",
+  "A_d": 768,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 768,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 768
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 768,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 768
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "371.11.7.a",
+  "n": 371,
+  "k": 11,
+  "N": 50,
+  "d": 7,
+  "columns_sha256": "1630c54356b900a609a06cd4805ac95bf4da0a99b72b2ac62133e9f6040e10f6",
+  "A_d": 416,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 416,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 416
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 416,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 416
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "378.12.6.a",
+  "n": 378,
+  "k": 12,
+  "N": 42,
+  "d": 6,
+  "columns_sha256": "bbfe529288cfdd250f1be3ae97e7e165b412083cdecbead66754ac67be65eb81",
+  "A_d": 2251,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 2251,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 16399
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 2251,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 16399
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "381.24.7.a",
+  "n": 381,
+  "k": 24,
+  "N": 59,
+  "d": 7,
+  "columns_sha256": "6e22dd416d4ac34fc5464a9df6f656a9f9c907155e27b6e8607cda5189ec15dd",
+  "A_d": 195834,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 195834,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 195834
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 195834,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 195834
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "382.21.8.a",
+  "n": 382,
+  "k": 21,
+  "N": 57,
+  "d": 8,
+  "columns_sha256": "ac0c501c15765757ca3aff1bc1a4f09cb3a637e60d5645da6e603e63b42ba325",
+  "A_d": 3554730,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "plan kernel",
+    "A_w": 3554730,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 3554730
+   },
+   {
+    "program": "mitml (list)",
+    "A_w": 3554730,
+    "record": "data/zaratan/counts_t6_recovered.jsonl",
+    "accepted": 3554730
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "382.63.6.a",
+  "n": 382,
+  "k": 63,
+  "N": 85,
+  "d": 6,
+  "columns_sha256": "47a297acc2a361cdd131ef59ca25d9a7397caba2f478bea862f1ef5a2e8c1fca",
+  "A_d": 2456307,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 2456307,
+    "record": "data/counts.jsonl",
+    "accepted": 2456307
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 2456307,
+    "record": "data/counts.jsonl",
+    "accepted": 2456307
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "392.8.7.a",
+  "n": 392,
+  "k": 8,
+  "N": 44,
+  "d": 7,
+  "columns_sha256": "cbaefa5f0249324c767bfabd243960184b0e49725a6f52641bb4c8c3b6582b26",
+  "A_d": 2044,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 2044,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 57932
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 2044,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 57932
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "406.3.8.a",
+  "n": 406,
+  "k": 3,
+  "N": 45,
+  "d": 8,
+  "columns_sha256": "96afeedf42dc0d005b707816d22b530b6d168bb1ab3ddbf8e936d08c347ad4cf",
+  "A_d": 1464,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 1464,
+    "record": "data/counts.jsonl",
+    "accepted": 217198
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 1464,
+    "record": "data/counts.jsonl",
+    "accepted": 217198
+   }
+  ],
+  "tropidist": {
+   "7": "exhausted",
+   "8": "found"
+  }
+ },
+ {
+  "label": "410.2.11.a",
+  "n": 410,
+  "k": 2,
+  "N": 86,
+  "d": 11,
+  "columns_sha256": "e31a92cc8b3fc83915ecca303677ef1a04850362a5a4746b7879299760dc5b36",
+  "A_d": 9387592,
+  "status": "theorem only",
+  "programs": [
+   {
+    "program": "doubling count (theorem)",
+    "A_w": 9387592,
+    "record": "data/dblspec/410.2.11.a.json"
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "416.16.6.a",
+  "n": 416,
+  "k": 16,
+  "N": 77,
+  "d": 6,
+  "columns_sha256": "2ed86fc73967eb6888f777e8b8bebb0809916d3bac01cf5d584ee1c426886f26",
+  "A_d": 1853,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 1853,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 1853
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 1853,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 1853
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "420.16.6.a",
+  "n": 420,
+  "k": 16,
+  "N": 46,
+  "d": 6,
+  "columns_sha256": "c768da79b3168a1a9cc2c51cbdff5183bfa43f6c6e0e404721aa8056b8a070e0",
+  "A_d": 4798,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 4798,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 22138
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 4798,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 22138
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "434.12.7.a",
+  "n": 434,
+  "k": 12,
+  "N": 48,
+  "d": 7,
+  "columns_sha256": "840fa398c5e9b635490ece5fae1ae18c859eb58dbbe525af4ad1188a9fa2421a",
+  "A_d": 4523,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 4523,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 73095
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 4523,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 73095
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "441.1.13.a",
+  "n": 441,
+  "k": 1,
+  "N": 114,
+  "d": 13,
+  "columns_sha256": "56f2a1625d063d9f3c64ec339fb1e7bed414eaa4df3760f078b59fbff2fbb001",
+  "A_d": 8838881899,
+  "status": "theorem only",
+  "programs": [
+   {
+    "program": "doubling count (theorem)",
+    "A_w": 8838881899,
+    "record": "data/dblspec/441.1.13.a.json"
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "448.7.8.a",
+  "n": 448,
+  "k": 7,
+  "N": 49,
+  "d": 8,
+  "columns_sha256": "bb71b3e74588deac8d83382f7a7fa7b412abff9a2a5066415f4584bb0cf3dd2b",
+  "A_d": 4151,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 4151,
+    "record": "data/counts.jsonl",
+    "accepted": 267414
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 4151,
+    "record": "data/counts.jsonl",
+    "accepted": 267414
+   }
+  ],
+  "tropidist": {
+   "7": "exhausted",
+   "8": "found"
+  }
+ },
+ {
+  "label": "451.3.9.a",
+  "n": 451,
+  "k": 3,
+  "N": 104,
+  "d": 9,
+  "columns_sha256": "32433628f8a0668ad56d8b0aa9d81660ad5f4f8e062f827c5564992d1d74b102",
+  "A_d": 2352334,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (count)",
+    "A_w": 2352334,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 2352334
+   },
+   {
+    "program": "counting trellis",
+    "A_w": 2352334,
+    "record": "data/trellis.jsonl",
+    "order": "data/orders/451.3.9.a.json"
+   },
+   {
+    "program": "doubling count (theorem)",
+    "A_w": 2352334,
+    "record": "data/dblspec/451.3.9.a.json"
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "452.66.6.a",
+  "n": 452,
+  "k": 66,
+  "N": 102,
+  "d": 6,
+  "columns_sha256": "635dd6a7cdbe7315ad604c3f3d2a775cf50d85ae8b87cfa3382317ed207e3268",
+  "A_d": 2452268,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list), 8 Nov",
+    "A_w": 2452268,
+    "record": "research/search2/catalogue/stage3/data/lists/listed_counts.jsonl"
+   },
+   {
+    "program": "mydist, 8 Nov",
+    "A_w": 2452268,
+    "record": "research/search2/catalogue/stage3/data/lists/listed_counts.jsonl"
+   },
+   {
+    "program": "contraction identity (theorem)",
+    "A_w": 2452268,
+    "record": "data/contraction.jsonl"
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "459.2.9.a",
+  "n": 459,
+  "k": 2,
+  "N": 105,
+  "d": 9,
+  "columns_sha256": "3a9ab2316e5b40fe5c2b13b15aed7c418afc9576f02666c523ef61c55d7fc43b",
+  "A_d": 2356352,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (count)",
+    "A_w": 2356352,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 11142758
+   },
+   {
+    "program": "counting trellis",
+    "A_w": 2356352,
+    "record": "data/trellis.jsonl",
+    "order": "data/orders/459.2.9.a.json"
+   },
+   {
+    "program": "doubling count (theorem)",
+    "A_w": 2356352,
+    "record": "data/dblspec/459.2.9.a.json"
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "462.20.6.a",
+  "n": 462,
+  "k": 20,
+  "N": 50,
+  "d": 6,
+  "columns_sha256": "ff747158619a6bb0a687a8d1559d4d320181404925ef589947d51a60eb20e3df",
+  "A_d": 8401,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 8401,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 29257
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 8401,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 29257
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "462.4.9.a",
+  "n": 462,
+  "k": 4,
+  "N": 52,
+  "d": 9,
+  "columns_sha256": "de51f35aaaf2be075bd1076e82fad1d56d0439561789a588be6a5d13c1279edf",
+  "A_d": 3140,
+  "status": "one program",
+  "programs": [
+   {
+    "program": "mitml (count)",
+    "A_w": 3140,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 1943167
+   },
+   {
+    "program": "mitml (list-sliced)",
+    "A_w": 3140,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 1943167
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "466.70.6.a",
+  "n": 466,
+  "k": 70,
+  "N": 100,
+  "d": 6,
+  "columns_sha256": "b5c35217e56fc53928692725a293ca77b3c2a4fa3ddd9d1e24d3d9fdf40d2ce7",
+  "A_d": 103540,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 103540,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 103540
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 103540,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 103540
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "470.28.7.a",
+  "n": 470,
+  "k": 28,
+  "N": 82,
+  "d": 7,
+  "columns_sha256": "9c8f7d3120af97d42950944e4be54d7124dbc811e470189f47588d5f5fedbc8e",
+  "A_d": 833477,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list), 8 Nov",
+    "A_w": 833477,
+    "record": "research/search2/catalogue/stage3/data/lists/listed_counts.jsonl"
+   },
+   {
+    "program": "mydist, 8 Nov",
+    "A_w": 833477,
+    "record": "research/search2/catalogue/stage3/data/lists/listed_counts.jsonl"
+   },
+   {
+    "program": "contraction identity (theorem)",
+    "A_w": 833477,
+    "record": "data/contraction.jsonl"
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "476.15.7.a",
+  "n": 476,
+  "k": 15,
+  "N": 51,
+  "d": 7,
+  "columns_sha256": "f468e6628d85c1a3d67ec29f9a388fefb5bbb8ce39c2f4057ba24cce0de75829",
+  "A_d": 8976,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 8976,
+    "record": "data/counts.jsonl",
+    "accepted": 91528
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 8976,
+    "record": "data/counts.jsonl",
+    "accepted": 91528
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "476.16.7.a",
+  "n": 476,
+  "k": 16,
+  "N": 52,
+  "d": 7,
+  "columns_sha256": "feea8f7e82f399922d971d72db2877131871b5aed1a330374e87ebc6babf2df3",
+  "A_d": 8976,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 8976,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 91528
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 8976,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 91528
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "480.32.6.a",
+  "n": 480,
+  "k": 32,
+  "N": 101,
+  "d": 6,
+  "columns_sha256": "5e311f796c1e13e5fba847d0fd459f61c91d19b160fbeb586ae9f7012028b2ca",
+  "A_d": 17360,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 17360,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 17360
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 17360,
+    "record": "data/zaratan/counts.jsonl",
+    "accepted": 17360
+   }
+  ],
+  "tropidist": null
+ },
+ {
+  "label": "490.11.8.a",
+  "n": 490,
+  "k": 11,
+  "N": 53,
+  "d": 8,
+  "columns_sha256": "3d468af983895640e2f2ab0bbc173f8e3bce590b756695a2cc35de8c6b109749",
+  "A_d": 8965,
+  "status": "accepted (two programs)",
+  "programs": [
+   {
+    "program": "mitml (list)",
+    "A_w": 8965,
+    "record": "data/counts.jsonl",
+    "accepted": 324566
+   },
+   {
+    "program": "plan kernel",
+    "A_w": 8965,
+    "record": "data/counts.jsonl",
+    "accepted": 324566
+   }
+  ],
+  "tropidist": {
+   "7": "exhausted",
+   "8": "found"
+  }
+ }
+]

@@ -240,6 +240,12 @@ randomised beams run on the UMD cluster Zaratan, from `119.13.4.a` to
 mixed row `189.15.5.a`.
 [`migrations/contraction_sentence_s6_2026_11_09.py`](migrations/contraction_sentence_s6_2026_11_09.py)
 added s6-beam to the contraction regime's sentence;
+[`migrations/round6_evidence_2026_11_09.py`](migrations/round6_evidence_2026_11_09.py)
+stored `A_d` on 37 rows with `127 <= n < 500` from counts by two programs of the
+round-6 housekeeping search s6-house
+([`../round6_certificates/`](../round6_certificates/README.md)), and added its
+tropidist runs to the distance evidence of `406.3.8.a`, `448.7.8.a` and
+`490.11.8.a`;
 [`migrations/store_217_7_7_2026_11_07.py`](migrations/store_217_7_7_2026_11_07.py)
 stored the `[[217,7,7]]` circuit with the smaller `A_7` (973 against 1,034,
 each counted by two programs in [`../round1_certificates/`](../round1_certificates/README.md));

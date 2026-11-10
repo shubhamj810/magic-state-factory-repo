@@ -1,0 +1,6 @@
+{"label": "348.22.7.a", "weight": 7, "slice": 340, "certificate": 0, "mydist": 0, "agree": true, "seconds": 0.0}
+{"label": "348.22.7.a", "weight": 7, "slice": 300, "certificate": 0, "mydist": 0, "agree": true, "seconds": 0.0}
+{"label": "348.22.7.a", "weight": 7, "slice": 250, "certificate": 81, "mydist": 81, "agree": true, "seconds": 0.0}
+{"label": "348.22.7.a", "weight": 7, "slice": 200, "certificate": 846, "mydist": 846, "agree": true, "seconds": 0.2}
+{"label": "348.22.7.a", "weight": 7, "slice": 0, "certificate": 3539, "mydist": 3539, "agree": true, "seconds": 19.7}
+{"label": "348.22.7.a", "weight": 7, "slice": 100, "certificate": 13564, "mydist": 13564, "agree": true, "seconds": 2.6}
