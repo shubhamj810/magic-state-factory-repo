@@ -11,7 +11,7 @@ columns as the catalogue stores them, and records the bound.
 | `assemble.py` | runs the checks and writes `certificates.json`; `--check` compares |
 | `certificates.json` | one record per circuit, bound to its columns by their SHA-256, with the bound the check proves and the fault where there is one |
 
-**San José's theorem.** R. San-José, "Asymptotically good binary
+**San-José's theorem.** R. San-José, "Asymptotically good binary
 triorthogonal codes and higher-level transversal gates", arXiv:2609.08203
 (2026), builds a factory from an outer code over GF(2^m) that is punctured at
 P coordinates and mapped to binary through an inner map. If the outer
@@ -24,7 +24,7 @@ lies in the outer code and that they span it, and that the outer code's dual
 distance is delta (distinct evaluation points and nonzero multipliers for a
 generalised Reed–Solomon code, the Goppa bound for a curve). The bound it
 proves is the one recorded. The catalogue's rows 742.36.8.a and 756.32.6.a
-are such circuits, as are the San José rows imported on 2026-11-07.
+are such circuits, as are the San-José rows imported on 2026-11-07.
 
 **The CCZ frame theorem.** For m = 3q, the factory on all 2^m points of
 F_2^m with the monomials of degree below q as checks and a family of q-sets

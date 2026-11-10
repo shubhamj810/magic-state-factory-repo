@@ -37,9 +37,9 @@
   "Berardini et al. doubling of Gong's code": "the [[89,1,17]] code of Berardini et al. (arXiv:2412.08586) doubled by their Theorem 12 onto A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/), a doubling the catalogue's second-round AI search of 7 November 2026 made, rebuilt by transversal_t_codes/berardini.py; d = 17 by that theorem, its inputs proved here",
   "AI search: CCZ frame on RM(3,12)": "the CCZ frame on F_2^12 with 55 disjoint CCZ triples (a packing found by the catalogue's parents search of 6 November 2026); distance 16 by the frame theorem; a verified witness, not a maximum",
   "AI search: punctured weighted Reed-Muller parents": "a weighted Reed-Muller code of Wills (arXiv:2608.24000) punctured at a searched set, found by the catalogue's sparse-cells search of 6 November 2026; a verified witness, not a maximum",
-  "AI search (gamma frontier): San Jos\u00e9 GRS construction": "a factory of San Jos\u00e9's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum",
+  "AI search (gamma frontier): San-Jos\u00e9 GRS construction": "a factory of San-Jos\u00e9's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum",
   "AI search: four-block distance-3 factories": "a punctured four-block parent at distance 3 found by the catalogue's second-round strategist and four-block searches of 7 November 2026; a verified witness, not a maximum",
-  "AI search: San Jos\u00e9 construction beyond the release": "a factory of San Jos\u00e9's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum",
+  "AI search: San-Jos\u00e9 construction beyond the release": "a factory of San-Jos\u00e9's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum",
   "AI search: symmetric CP-SAT search n<=127": "found by the catalogue's second-round symmetric CP-SAT search for small factories (7 November 2026); a verified witness, not a maximum",
   "AI search: punctured triply even cyclic codes": "an extended triply even cyclic code punctured at a searched set, found by the catalogue's second-round search for small factories at d = 7 (7 November 2026); a verified witness, not a maximum",
   "AI search: weighted Reed-Muller parent on 11 variables": "Wills's weighted Reed-Muller code on F_2^11 (arXiv:2608.24000; weight 1 on three variables, 2 on eight, cutoff 6) punctured at a searched set, found by the catalogue's weighted search of 7 November 2026 and checked by its adversarial review; a verified witness, not a maximum",
@@ -952458,11 +952458,11 @@
    },
    "rotation_powers": null,
    "regimes": [
-    "AI search (gamma frontier): San Jos\u00e9 GRS construction"
+    "AI search (gamma frontier): San-Jos\u00e9 GRS construction"
    ],
    "discovery": "AI search",
    "relabelled_into_canonical_frame": false,
-   "strongest_claim": "a factory of San Jos\u00e9's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum",
+   "strongest_claim": "a factory of San-Jos\u00e9's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum",
    "columns": [
     [36],
     [38],
@@ -953212,7 +953212,7 @@
    ],
    "sources": [
     {
-     "regime": "AI search (gamma frontier): San Jos\u00e9 GRS construction",
+     "regime": "AI search (gamma frontier): San-Jos\u00e9 GRS construction",
      "file": "gamma_frontier_release/protocols/weighted_sources_742_36_8.json",
      "label": "weighted_sources_742_36_8",
      "N": 78,
@@ -953242,7 +953242,7 @@
     {
      "file": "theorem_certificates/certificates.json",
      "method": "theorem",
-     "tool": "San Jose's distance theorem d >= delta - P, its hypotheses checked from the columns by master_catalog/construction_sanjose.py (hypothesis_check)"
+     "tool": "San-Jos\u00e9's distance theorem d >= delta - P, its hypotheses checked from the columns by master_catalog/construction_sanjose.py (hypothesis_check)"
     }
    ],
    "d_sweep_floor": 6,
@@ -960011,11 +960011,11 @@
    },
    "rotation_powers": null,
    "regimes": [
-    "AI search (gamma frontier): San Jos\u00e9 GRS construction"
+    "AI search (gamma frontier): San-Jos\u00e9 GRS construction"
    ],
    "discovery": "AI search",
    "relabelled_into_canonical_frame": false,
-   "strongest_claim": "a factory of San Jos\u00e9's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum",
+   "strongest_claim": "a factory of San-Jos\u00e9's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum",
    "columns": [
     [32],
     [34],
@@ -960779,7 +960779,7 @@
    ],
    "sources": [
     {
-     "regime": "AI search (gamma frontier): San Jos\u00e9 GRS construction",
+     "regime": "AI search (gamma frontier): San-Jos\u00e9 GRS construction",
      "file": "gamma_frontier_release/protocols/weighted_sources_756_32_9.json",
      "label": "weighted_sources_756_32_9",
      "N": 80,
@@ -960794,13 +960794,13 @@
    "poly_degree_note": "not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32",
    "d_certified": 9,
    "d_certified_is_exact": true,
-   "d_certified_source": "gamma frontier release record weighted_sources_756_32_9 (gamma_frontier_release/frontier.json, distance_kind lower_bound, Z distance); since 2026-11-07 the row's d: the columns are San Jose's GRS construction (arXiv:2609.08203) over GF(64), L = 62, degree 15, P = 8, whose theorem gives d >= 9, its hypotheses checked from the columns (theorem_certificates/), and a fault of weight 9 found by the research's sparse-cells search and re-checked",
+   "d_certified_source": "gamma frontier release record weighted_sources_756_32_9 (gamma_frontier_release/frontier.json, distance_kind lower_bound, Z distance); since 2026-11-07 the row's d: the columns are San-Jos\u00e9's GRS construction (arXiv:2609.08203) over GF(64), L = 62, degree 15, P = 8, whose theorem gives d >= 9, its hypotheses checked from the columns (theorem_certificates/), and a fault of weight 9 found by the research's sparse-cells search and re-checked",
    "d_sweep_floor": 6,
    "d_certified_evidence": [
     {
      "file": "theorem_certificates/certificates.json",
      "method": "theorem",
-     "tool": "San Jose's distance theorem d >= delta - P, its hypotheses checked from the columns by master_catalog/construction_sanjose.py (hypothesis_check)"
+     "tool": "San-Jos\u00e9's distance theorem d >= delta - P, its hypotheses checked from the columns by master_catalog/construction_sanjose.py (hypothesis_check)"
     }
    ],
    "former_labels": [

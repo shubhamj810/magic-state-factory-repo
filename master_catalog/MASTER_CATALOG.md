@@ -57,9 +57,9 @@ witness are different kinds of statement.
 | `Berardini et al. doubling of Gong's code` (1 rows) | the [[89,1,17]] code of Berardini et al. (arXiv:2412.08586) doubled by their Theorem 12 onto A. Gong's [[559,1,15]] (github.com/gongaa/RM127, triply-even/), a doubling the catalogue's second-round AI search of 7 November 2026 made, rebuilt by transversal_t_codes/berardini.py; d = 17 by that theorem, its inputs proved here |
 | `AI search: CCZ frame on RM(3,12)` (1 rows) | the CCZ frame on F_2^12 with 55 disjoint CCZ triples (a packing found by the catalogue's parents search of 6 November 2026); distance 16 by the frame theorem; a verified witness, not a maximum |
 | `AI search: punctured weighted Reed-Muller parents` (2 rows) | a weighted Reed-Muller code of Wills (arXiv:2608.24000) punctured at a searched set, found by the catalogue's sparse-cells search of 6 November 2026; a verified witness, not a maximum |
-| `AI search (gamma frontier): San José GRS construction` (86 rows) | a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum |
+| `AI search (gamma frontier): San-José GRS construction` (86 rows) | a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum |
 | `AI search: four-block distance-3 factories` (32 rows) | a punctured four-block parent at distance 3 found by the catalogue's second-round strategist and four-block searches of 7 November 2026; a verified witness, not a maximum |
-| `AI search: San José construction beyond the release` (54 rows) | a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum |
+| `AI search: San-José construction beyond the release` (54 rows) | a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum |
 | `AI search: symmetric CP-SAT search n<=127` (10 rows) | found by the catalogue's second-round symmetric CP-SAT search for small factories (7 November 2026); a verified witness, not a maximum |
 | `AI search: punctured triply even cyclic codes` (21 rows) | an extended triply even cyclic code punctured at a searched set, found by the catalogue's second-round search for small factories at d = 7 (7 November 2026); a verified witness, not a maximum |
 | `AI search: weighted Reed-Muller parent on 11 variables` (4 rows) | Wills's weighted Reed-Muller code on F_2^11 (arXiv:2608.24000; weight 1 on three variables, 2 on eight, cutoff 6) punctured at a searched set, found by the catalogue's weighted search of 7 November 2026 and checked by its adversarial review; a verified witness, not a maximum |
@@ -2054,12 +2054,12 @@ entries are under [References](#references).
 | 1905 | `728.10.2.a` | `[[728,10,2]]` | sweep | — | 17 | `012+013+014+015+016+017+018+019+023+0…` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1906 | `737.1.17.a` | `[[737,1,17]]` | theorem | 17 | 189 | `0` | 1 | 1 | none | pre-existing | Berardini et al. doubling of Gong's code | [Berardini et al. (2024)](https://arxiv.org/abs/2412.08586); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
 | 1907 | `739.5.2.a` | `[[739,5,2]]` | sweep | — | 13 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1908 | `742.36.8.a` | `[[742,36,8]]` | theorem and exhaustive search | 8 | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1908 | `742.36.8.a` | `[[742,36,8]]` | theorem and exhaustive search | 8 | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1909 | `743.9.2.a` | `[[743,9,2]]` | sweep | — | 13 | `0+1+2+3+4+5+6+7+8` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1910 | `753.1.17.a` | `[[753,1,17]]` | theorem | 17 | 193 | `0` | 1 | 1 | T-powers | pre-existing | Berardini et al. doubling | [Berardini et al. (2024)](https://arxiv.org/abs/2412.08586) |
 | 1911 | `756.10.2.a` | `[[756,10,2]]` | sweep | — | 16 | `01+02+03+04+05+06+07+08+09+12+13+14+1…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1912 | `756.11.2.a` | `[[756,11,2]]` | sweep | — | 17 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 1913 | `756.32.9.a` | `[[756,32,9]]` | theorem | 9 | 80 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 1913 | `756.32.9.a` | `[[756,32,9]]` | theorem | 9 | 80 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 1914 | `757.11.2.a` | `[[757,11,2]]` | sweep | — | 18 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1915 | `758.10.2.a` | `[[758,10,2]]` | sweep | — | 17 | `0+1+2+3+4+5+6+7+8+9` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 1916 | `761.1.17.a` | `[[761,1,17]]` | theorem | 17 | 195 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
@@ -2297,14 +2297,14 @@ entries are under [References](#references).
 | 2148 | `4094.1.2.a` | `[[4094,1,2]]` | sweep | — | 12 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2149 | `4094.2.2.a` | `[[4094,2,2]]` | sweep | — | 13 | `0+1` | 2 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2150 | `4095.1.3.a` | `[[4095,1,3]]` | sweep | — | 13 | `0` | 1 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2151 | `91.3.4.b` | `[[91,3,4]]` | sweep | — | 15 | `0+1+2` | 3 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2151 | `91.3.4.b` | `[[91,3,4]]` | sweep | — | 15 | `0+1+2` | 3 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2152 | `196.47.4.a` | `[[196,47,4]]` | sweep | — | 56 | `0,10,13+0,10,19+0,10,20+0,10,21+0,10,…` | — | — | S, CZ | AI search | AI search: even CCZ construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2153 | `198.48.4.a` | `[[198,48,4]]` | sweep | — | 57 | `0,10,14+0,10,15+0,10,19+0,10,20+0,10,…` | — | — | S, CZ | AI search | AI search: even CCZ construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2154 | `200.6.5.a` | `[[200,6,5]]` | sweep | — | 26 | `0+1+2+3+4+5` | 6 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2154 | `200.6.5.a` | `[[200,6,5]]` | sweep | — | 26 | `0+1+2+3+4+5` | 6 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2155 | `200.50.4.a` | `[[200,50,4]]` | sweep | — | 59 | `0,14,15+0,14,18+0,14,19+0,14,21+0,14,…` | — | — | S, CZ | AI search | AI search: even CCZ construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2156 | `206.51.4.a` | `[[206,51,4]]` | sweep | — | 60 | `0,10,16+0,10,17+0,10,21+0,10,24+0,10,…` | — | — | S, CZ | AI search | AI search: even CCZ construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2157 | `208.54.4.a` | `[[208,54,4]]` | sweep | — | 65 | `0,14,15+0,14,16+0,14,18+0,14,21+0,14,…` | — | — | S, CZ | AI search | AI search: even CCZ construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2158 | `210.3.6.a` | `[[210,3,6]]` | sweep | — | 28 | `0+1+2` | 3 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2158 | `210.3.6.a` | `[[210,3,6]]` | sweep | — | 28 | `0+1+2` | 3 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2159 | `212.57.4.a` | `[[212,57,4]]` | sweep | — | 66 | `0,15,16+0,15,18+0,15,20+0,15,21+0,15,…` | — | — | S, CZ | AI search | AI search: even CCZ construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2160 | `214.42.3.a` | `[[214,42,3]]` | sweep | — | 56 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: four-block distance-3 factories | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2161 | `215.41.3.a` | `[[215,41,3]]` | sweep | — | 56 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: four-block distance-3 factories | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
@@ -2314,104 +2314,104 @@ entries are under [References](#references).
 | 2165 | `222.60.4.a` | `[[222,60,4]]` | sweep | — | 69 | `0,12,16+0,12,18+0,12,20+0,12,23+0,12,…` | — | — | S, CZ | AI search | AI search: even CCZ construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2166 | `224.63.4.a` | `[[224,63,4]]` | sweep | — | 75 | `0,18,23+0,18,26+0,18,30+0,18,31+0,18,…` | — | — | S, CZ | AI search | AI search: even CCZ construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2167 | `228.65.4.a` | `[[228,65,4]]` | sweep | — | 74 | `0,16,17+0,16,19+0,16,20+0,16,21+0,16,…` | — | — | S, CZ | AI search | AI search: even CCZ construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2168 | `230.9.5.a` | `[[230,9,5]]` | sweep | — | 29 | `0+1+2+3+4+5+6+7+8` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2168 | `230.9.5.a` | `[[230,9,5]]` | sweep | — | 29 | `0+1+2+3+4+5+6+7+8` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2169 | `232.68.4.a` | `[[232,68,4]]` | sweep | — | 77 | `0,18,19+0,18,24+0,18,32+0,18,33+0,18,…` | — | — | S, CZ | AI search | AI search: even CCZ construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2170 | `240.6.6.a` | `[[240,6,6]]` | sweep | — | 31 | `0+1+2+3+4+5` | 6 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2170 | `240.6.6.a` | `[[240,6,6]]` | sweep | — | 31 | `0+1+2+3+4+5` | 6 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2171 | `240.74.4.a` | `[[240,74,4]]` | sweep | — | 83 | `0,22,23+0,22,32+0,22,34+0,22,35+0,22,…` | — | — | S, CZ | AI search | AI search: even CCZ construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2172 | `250.3.7.a` | `[[250,3,7]]` | sweep | — | 33 | `0+1+2` | 3 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2173 | `250.15.4.a` | `[[250,15,4]]` | sweep | — | 30 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2174 | `260.12.5.a` | `[[260,12,5]]` | sweep | — | 32 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2175 | `270.9.6.a` | `[[270,9,6]]` | sweep | — | 34 | `0+1+2+3+4+5+6+7+8` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2176 | `280.6.7.a` | `[[280,6,7]]` | sweep | — | 36 | `0+1+2+3+4+5` | 6 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2177 | `290.3.8.a` | `[[290,3,8]]` | theorem | 8 | 38 | `0+1+2` | 3 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2178 | `308.16.4.a` | `[[308,16,4]]` | sweep | — | 34 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2179 | `350.20.4.a` | `[[350,20,4]]` | sweep | — | 38 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2180 | `364.16.5.a` | `[[364,16,5]]` | sweep | — | 40 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2181 | `378.12.6.a` | `[[378,12,6]]` | sweep | — | 42 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2182 | `392.8.7.a` | `[[392,8,7]]` | theorem | 7 | 44 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2183 | `392.24.4.a` | `[[392,24,4]]` | sweep | — | 42 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2184 | `406.4.8.a` | `[[406,4,8]]` | theorem | 8 | 46 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2185 | `406.20.5.a` | `[[406,20,5]]` | sweep | — | 44 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2172 | `250.3.7.a` | `[[250,3,7]]` | sweep | — | 33 | `0+1+2` | 3 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2173 | `250.15.4.a` | `[[250,15,4]]` | sweep | — | 30 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2174 | `260.12.5.a` | `[[260,12,5]]` | sweep | — | 32 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2175 | `270.9.6.a` | `[[270,9,6]]` | sweep | — | 34 | `0+1+2+3+4+5+6+7+8` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2176 | `280.6.7.a` | `[[280,6,7]]` | sweep | — | 36 | `0+1+2+3+4+5` | 6 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2177 | `290.3.8.a` | `[[290,3,8]]` | theorem | 8 | 38 | `0+1+2` | 3 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2178 | `308.16.4.a` | `[[308,16,4]]` | sweep | — | 34 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2179 | `350.20.4.a` | `[[350,20,4]]` | sweep | — | 38 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2180 | `364.16.5.a` | `[[364,16,5]]` | sweep | — | 40 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2181 | `378.12.6.a` | `[[378,12,6]]` | sweep | — | 42 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2182 | `392.8.7.a` | `[[392,8,7]]` | theorem | 7 | 44 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2183 | `392.24.4.a` | `[[392,24,4]]` | sweep | — | 42 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2184 | `406.4.8.a` | `[[406,4,8]]` | theorem | 8 | 46 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2185 | `406.20.5.a` | `[[406,20,5]]` | sweep | — | 44 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2186 | `413.99.3.a` | `[[413,99,3]]` | sweep | — | 115 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: four-block distance-3 factories | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2187 | `414.98.3.a` | `[[414,98,3]]` | sweep | — | 115 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: four-block distance-3 factories | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2188 | `415.97.3.a` | `[[415,97,3]]` | sweep | — | 115 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: four-block distance-3 factories | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2189 | `416.96.3.a` | `[[416,96,3]]` | sweep | — | 115 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: four-block distance-3 factories | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2190 | `420.16.6.a` | `[[420,16,6]]` | sweep | — | 46 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2191 | `434.12.7.a` | `[[434,12,7]]` | theorem | 7 | 48 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2192 | `448.8.8.a` | `[[448,8,8]]` | theorem | 8 | 50 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2193 | `448.24.5.a` | `[[448,24,5]]` | sweep | — | 48 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2194 | `462.4.9.a` | `[[462,4,9]]` | theorem | 9 | 52 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2195 | `462.20.6.a` | `[[462,20,6]]` | sweep | — | 50 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2196 | `476.16.7.a` | `[[476,16,7]]` | theorem | 7 | 52 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2190 | `420.16.6.a` | `[[420,16,6]]` | sweep | — | 46 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2191 | `434.12.7.a` | `[[434,12,7]]` | theorem | 7 | 48 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2192 | `448.8.8.a` | `[[448,8,8]]` | theorem | 8 | 50 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2193 | `448.24.5.a` | `[[448,24,5]]` | sweep | — | 48 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2194 | `462.4.9.a` | `[[462,4,9]]` | theorem | 9 | 52 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2195 | `462.20.6.a` | `[[462,20,6]]` | sweep | — | 50 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2196 | `476.16.7.a` | `[[476,16,7]]` | theorem | 7 | 52 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2197 | `479.33.5.a` | `[[479,33,5]]` | sweep | — | 101 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: punctured weighted Reed-Muller parents | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2198 | `480.32.6.a` | `[[480,32,6]]` | sweep | — | 101 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: punctured weighted Reed-Muller parents | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2199 | `490.12.8.a` | `[[490,12,8]]` | theorem | 8 | 54 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2200 | `490.28.5.a` | `[[490,28,5]]` | sweep | — | 52 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2199 | `490.12.8.a` | `[[490,12,8]]` | theorem | 8 | 54 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2200 | `490.28.5.a` | `[[490,28,5]]` | sweep | — | 52 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2201 | `500.249.2.a` | `[[500,249,2]]` | sweep | — | 250 | `0,1,2+3,4,5+6,7,8+9,10,11+12,13,14+15…` | — | — | T-powers | pre-existing | Campbell-Howard distance-2 families | [Campbell & Howard (2017)](https://doi.org/10.1103/PhysRevA.95.022316) |
-| 2202 | `504.8.9.a` | `[[504,8,9]]` | theorem | 9 | 56 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2203 | `504.24.6.a` | `[[504,24,6]]` | sweep | — | 54 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2204 | `518.4.10.a` | `[[518,4,10]]` | theorem | 10 | 58 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2205 | `518.20.7.a` | `[[518,20,7]]` | theorem | 7 | 56 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2206 | `532.16.8.a` | `[[532,16,8]]` | theorem | 8 | 58 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2207 | `532.32.5.a` | `[[532,32,5]]` | sweep | — | 56 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2208 | `546.12.9.a` | `[[546,12,9]]` | theorem | 9 | 60 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2209 | `546.28.6.a` | `[[546,28,6]]` | sweep | — | 58 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2210 | `560.8.10.a` | `[[560,8,10]]` | theorem | 10 | 62 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2211 | `560.24.7.a` | `[[560,24,7]]` | theorem | 7 | 60 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2212 | `574.4.11.a` | `[[574,4,11]]` | theorem | 11 | 64 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2213 | `574.20.8.a` | `[[574,20,8]]` | theorem | 8 | 62 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2214 | `574.36.5.a` | `[[574,36,5]]` | sweep | — | 60 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2215 | `588.16.9.a` | `[[588,16,9]]` | theorem | 9 | 64 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2216 | `588.32.6.a` | `[[588,32,6]]` | sweep | — | 62 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2217 | `602.12.10.a` | `[[602,12,10]]` | theorem | 10 | 66 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2218 | `602.28.7.a` | `[[602,28,7]]` | theorem | 7 | 64 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2219 | `616.8.11.a` | `[[616,8,11]]` | theorem | 11 | 68 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2220 | `616.24.8.a` | `[[616,24,8]]` | theorem | 8 | 66 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2221 | `616.40.5.a` | `[[616,40,5]]` | sweep | — | 64 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2222 | `630.4.12.a` | `[[630,4,12]]` | theorem | 12 | 70 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2223 | `630.20.9.a` | `[[630,20,9]]` | theorem | 9 | 68 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2224 | `630.36.6.a` | `[[630,36,6]]` | sweep | — | 66 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2225 | `644.16.10.a` | `[[644,16,10]]` | theorem | 10 | 70 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2226 | `644.32.7.a` | `[[644,32,7]]` | theorem | 7 | 68 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2227 | `658.12.11.a` | `[[658,12,11]]` | theorem | 11 | 72 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2228 | `658.28.8.a` | `[[658,28,8]]` | theorem | 8 | 70 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2229 | `658.44.5.a` | `[[658,44,5]]` | sweep | — | 68 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2230 | `672.8.12.a` | `[[672,8,12]]` | theorem | 12 | 74 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2231 | `672.24.9.a` | `[[672,24,9]]` | theorem | 9 | 72 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2232 | `672.40.6.a` | `[[672,40,6]]` | sweep | — | 70 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2233 | `686.4.13.a` | `[[686,4,13]]` | theorem | 13 | 76 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2234 | `686.20.10.a` | `[[686,20,10]]` | theorem | 10 | 74 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2235 | `686.36.7.a` | `[[686,36,7]]` | theorem | 7 | 72 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2236 | `700.16.11.a` | `[[700,16,11]]` | theorem | 11 | 76 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2237 | `700.32.8.a` | `[[700,32,8]]` | theorem | 8 | 74 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2238 | `700.48.5.a` | `[[700,48,5]]` | sweep | — | 72 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2239 | `714.12.12.a` | `[[714,12,12]]` | theorem | 12 | 78 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2240 | `714.28.9.a` | `[[714,28,9]]` | theorem | 9 | 76 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2241 | `714.44.6.a` | `[[714,44,6]]` | sweep | — | 74 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2202 | `504.8.9.a` | `[[504,8,9]]` | theorem | 9 | 56 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2203 | `504.24.6.a` | `[[504,24,6]]` | sweep | — | 54 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2204 | `518.4.10.a` | `[[518,4,10]]` | theorem | 10 | 58 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2205 | `518.20.7.a` | `[[518,20,7]]` | theorem | 7 | 56 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2206 | `532.16.8.a` | `[[532,16,8]]` | theorem | 8 | 58 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2207 | `532.32.5.a` | `[[532,32,5]]` | sweep | — | 56 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2208 | `546.12.9.a` | `[[546,12,9]]` | theorem | 9 | 60 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2209 | `546.28.6.a` | `[[546,28,6]]` | sweep | — | 58 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2210 | `560.8.10.a` | `[[560,8,10]]` | theorem | 10 | 62 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2211 | `560.24.7.a` | `[[560,24,7]]` | theorem | 7 | 60 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2212 | `574.4.11.a` | `[[574,4,11]]` | theorem | 11 | 64 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2213 | `574.20.8.a` | `[[574,20,8]]` | theorem | 8 | 62 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2214 | `574.36.5.a` | `[[574,36,5]]` | sweep | — | 60 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2215 | `588.16.9.a` | `[[588,16,9]]` | theorem | 9 | 64 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2216 | `588.32.6.a` | `[[588,32,6]]` | sweep | — | 62 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2217 | `602.12.10.a` | `[[602,12,10]]` | theorem | 10 | 66 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2218 | `602.28.7.a` | `[[602,28,7]]` | theorem | 7 | 64 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2219 | `616.8.11.a` | `[[616,8,11]]` | theorem | 11 | 68 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2220 | `616.24.8.a` | `[[616,24,8]]` | theorem | 8 | 66 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2221 | `616.40.5.a` | `[[616,40,5]]` | sweep | — | 64 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2222 | `630.4.12.a` | `[[630,4,12]]` | theorem | 12 | 70 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2223 | `630.20.9.a` | `[[630,20,9]]` | theorem | 9 | 68 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2224 | `630.36.6.a` | `[[630,36,6]]` | sweep | — | 66 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2225 | `644.16.10.a` | `[[644,16,10]]` | theorem | 10 | 70 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2226 | `644.32.7.a` | `[[644,32,7]]` | theorem | 7 | 68 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2227 | `658.12.11.a` | `[[658,12,11]]` | theorem | 11 | 72 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2228 | `658.28.8.a` | `[[658,28,8]]` | theorem | 8 | 70 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2229 | `658.44.5.a` | `[[658,44,5]]` | sweep | — | 68 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2230 | `672.8.12.a` | `[[672,8,12]]` | theorem | 12 | 74 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2231 | `672.24.9.a` | `[[672,24,9]]` | theorem | 9 | 72 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2232 | `672.40.6.a` | `[[672,40,6]]` | sweep | — | 70 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2233 | `686.4.13.a` | `[[686,4,13]]` | theorem | 13 | 76 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2234 | `686.20.10.a` | `[[686,20,10]]` | theorem | 10 | 74 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2235 | `686.36.7.a` | `[[686,36,7]]` | theorem | 7 | 72 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2236 | `700.16.11.a` | `[[700,16,11]]` | theorem | 11 | 76 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2237 | `700.32.8.a` | `[[700,32,8]]` | theorem | 8 | 74 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2238 | `700.48.5.a` | `[[700,48,5]]` | sweep | — | 72 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2239 | `714.12.12.a` | `[[714,12,12]]` | theorem | 12 | 78 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2240 | `714.28.9.a` | `[[714,28,9]]` | theorem | 9 | 76 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2241 | `714.44.6.a` | `[[714,44,6]]` | sweep | — | 74 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2242 | `727.201.3.a` | `[[727,201,3]]` | sweep | — | 213 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2243 | `728.8.13.a` | `[[728,8,13]]` | theorem | 13 | 80 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2244 | `728.24.10.a` | `[[728,24,10]]` | theorem | 10 | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2245 | `728.40.7.a` | `[[728,40,7]]` | theorem | 7 | 76 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2246 | `742.4.14.a` | `[[742,4,14]]` | theorem | 14 | 82 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2247 | `742.20.11.a` | `[[742,20,11]]` | theorem | 11 | 80 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2243 | `728.8.13.a` | `[[728,8,13]]` | theorem | 13 | 80 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2244 | `728.24.10.a` | `[[728,24,10]]` | theorem | 10 | 78 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2245 | `728.40.7.a` | `[[728,40,7]]` | theorem | 7 | 76 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2246 | `742.4.14.a` | `[[742,4,14]]` | theorem | 14 | 82 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2247 | `742.20.11.a` | `[[742,20,11]]` | theorem | 11 | 80 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2248 | `750.210.3.a` | `[[750,210,3]]` | sweep | — | 221 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2249 | `756.16.12.a` | `[[756,16,12]]` | theorem | 12 | 82 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2250 | `770.12.13.a` | `[[770,12,13]]` | theorem | 13 | 84 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2251 | `770.28.10.a` | `[[770,28,10]]` | theorem | 10 | 82 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2252 | `784.8.14.a` | `[[784,8,14]]` | theorem | 14 | 86 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2253 | `784.24.11.a` | `[[784,24,11]]` | theorem | 11 | 84 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2254 | `798.4.15.a` | `[[798,4,15]]` | theorem | 15 | 88 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2255 | `798.20.12.a` | `[[798,20,12]]` | theorem | 12 | 86 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2249 | `756.16.12.a` | `[[756,16,12]]` | theorem | 12 | 82 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2250 | `770.12.13.a` | `[[770,12,13]]` | theorem | 13 | 84 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2251 | `770.28.10.a` | `[[770,28,10]]` | theorem | 10 | 82 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2252 | `784.8.14.a` | `[[784,8,14]]` | theorem | 14 | 86 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2253 | `784.24.11.a` | `[[784,24,11]]` | theorem | 11 | 84 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2254 | `798.4.15.a` | `[[798,4,15]]` | theorem | 15 | 88 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2255 | `798.20.12.a` | `[[798,20,12]]` | theorem | 12 | 86 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2256 | `800.224.3.a` | `[[800,224,3]]` | sweep | — | 237 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2257 | `805.219.3.a` | `[[805,219,3]]` | sweep | — | 237 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: four-block distance-3 factories | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2258 | `806.218.3.a` | `[[806,218,3]]` | sweep | — | 237 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: four-block distance-3 factories | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2259 | `807.217.3.a` | `[[807,217,3]]` | sweep | — | 237 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: four-block distance-3 factories | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2260 | `808.216.3.a` | `[[808,216,3]]` | sweep | — | 237 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: four-block distance-3 factories | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2261 | `812.16.13.a` | `[[812,16,13]]` | theorem | 13 | 88 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2261 | `812.16.13.a` | `[[812,16,13]]` | theorem | 13 | 88 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2262 | `813.211.3.a` | `[[813,211,3]]` | sweep | — | 237 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: four-block distance-3 factories | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2263 | `826.12.14.a` | `[[826,12,14]]` | theorem | 14 | 90 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2263 | `826.12.14.a` | `[[826,12,14]]` | theorem | 14 | 90 | `0+1+2+3+4+5+6+7+8+9+10+11` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2264 | `838.122.5.a` | `[[838,122,5]]` | sweep | — | 153 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: descent from catalogue rows | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2265 | `840.8.15.a` | `[[840,8,15]]` | theorem | 15 | 92 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2265 | `840.8.15.a` | `[[840,8,15]]` | theorem | 15 | 92 | `0+1+2+3+4+5+6+7` | — | — | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2266 | `842.123.5.a` | `[[842,123,5]]` | sweep | — | 154 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: descent from catalogue rows | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2267 | `843.126.5.a` | `[[843,126,5]]` | sweep | — | 158 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: descent from catalogue rows | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2268 | `844.128.5.a` | `[[844,128,5]]` | sweep | — | 160 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: descent from catalogue rows | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
@@ -2421,7 +2421,7 @@ entries are under [References](#references).
 | 2272 | `850.128.6.a` | `[[850,128,6]]` | sweep | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2273 | `852.126.6.a` | `[[852,126,6]]` | sweep | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2274 | `852.128.6.a` | `[[852,128,6]]` | sweep | — | 167 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2275 | `854.4.16.a` | `[[854,4,16]]` | theorem | 16 | 94 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2275 | `854.4.16.a` | `[[854,4,16]]` | theorem | 16 | 94 | `0+1+2+3` | 4 | 1 | S, CZ | AI search | AI search (gamma frontier): San-José GRS construction | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2276 | `854.124.6.a` | `[[854,124,6]]` | sweep | — | 166 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2277 | `854.126.6.a` | `[[854,126,6]]` | sweep | — | 167 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2278 | `854.128.6.a` | `[[854,128,6]]` | sweep | — | 168 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search (gamma frontier): from Wills parent codes | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
@@ -2504,18 +2504,18 @@ entries are under [References](#references).
 | 2355 | `1426.9.2.a` | `[[1426,9,2]]` | sweep | — | 14 | `0+1+2+3+4+5+6+7+8+01+02+03+04+05+06+0…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2356 | `1427.9.2.a` | `[[1427,9,2]]` | sweep | — | 15 | `0+1+2+3+4+5+6+7+8+01+02+03+04+05+06+0…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2357 | `1449.11.2.a` | `[[1449,11,2]]` | sweep | — | 17 | `0+1+2+3+4+5+6+7+8+9+10+0,1+0,2+0,3+0,…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2358 | `1458.36.15.a` | `[[1458,36,15]]` | theorem | 15 | 134 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2359 | `1458.52.12.a` | `[[1458,52,12]]` | theorem | 12 | 129 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2360 | `1458.68.9.a` | `[[1458,68,9]]` | theorem | 9 | 124 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2358 | `1458.36.15.a` | `[[1458,36,15]]` | theorem | 15 | 134 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2359 | `1458.52.12.a` | `[[1458,52,12]]` | theorem | 12 | 129 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2360 | `1458.68.9.a` | `[[1458,68,9]]` | theorem | 9 | 124 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2361 | `1461.11.2.a` | `[[1461,11,2]]` | sweep | — | 18 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2362 | `1476.32.16.a` | `[[1476,32,16]]` | theorem | 16 | 137 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2363 | `1476.48.13.a` | `[[1476,48,13]]` | theorem | 13 | 132 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2364 | `1476.64.10.a` | `[[1476,64,10]]` | theorem | 10 | 127 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2362 | `1476.32.16.a` | `[[1476,32,16]]` | theorem | 16 | 137 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2363 | `1476.48.13.a` | `[[1476,48,13]]` | theorem | 13 | 132 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2364 | `1476.64.10.a` | `[[1476,64,10]]` | theorem | 10 | 127 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2365 | `1484.10.2.a` | `[[1484,10,2]]` | sweep | — | 18 | `012+013+014+015+016+017+018+019+023+0…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2366 | `1485.3.2.a` | `[[1485,3,2]]` | sweep | — | 18 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2367 | `1486.9.2.a` | `[[1486,9,2]]` | sweep | — | 18 | `01+02+03+04+05+06+07+08+12+13+14+15+1…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2368 | `1494.44.14.a` | `[[1494,44,14]]` | theorem | 14 | 135 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2369 | `1494.60.11.a` | `[[1494,60,11]]` | theorem | 11 | 130 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2368 | `1494.44.14.a` | `[[1494,44,14]]` | theorem | 14 | 135 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2369 | `1494.60.11.a` | `[[1494,60,11]]` | theorem | 11 | 130 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2370 | `1495.9.2.a` | `[[1495,9,2]]` | sweep | — | 14 | `0+1+2+3+4+5+6+7+8` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2371 | `1524.10.2.a` | `[[1524,10,2]]` | sweep | — | 17 | `01+02+03+04+05+06+07+08+09+12+13+14+1…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2372 | `1524.11.2.a` | `[[1524,11,2]]` | sweep | — | 18 | `0+1+2+3+4+5+6+7+8+9+10` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -2539,35 +2539,35 @@ entries are under [References](#references).
 | 2390 | `1717.3.2.a` | `[[1717,3,2]]` | sweep | — | 15 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2391 | `1736.10.2.a` | `[[1736,10,2]]` | sweep | — | 15 | `0+1+2+3+4+5+6+7+8+9+012+013+014+015+0…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2392 | `1782.10.2.a` | `[[1782,10,2]]` | sweep | — | 16 | `0+1+2+3+4+5+6+7+8+9` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2393 | `1800.104.7.a` | `[[1800,104,7]]` | theorem | 7 | 146 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2394 | `1818.100.8.a` | `[[1818,100,8]]` | theorem | 8 | 149 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2393 | `1800.104.7.a` | `[[1800,104,7]]` | theorem | 7 | 146 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2394 | `1818.100.8.a` | `[[1818,100,8]]` | theorem | 8 | 149 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2395 | `1827.9.2.a` | `[[1827,9,2]]` | sweep | — | 15 | `0+1+2+3+4+5+6+7+8` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2396 | `1836.96.9.a` | `[[1836,96,9]]` | theorem | 9 | 152 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2396 | `1836.96.9.a` | `[[1836,96,9]]` | theorem | 9 | 152 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2397 | `1842.206.7.a` | `[[1842,206,7]]` | exhaustive search | 7 | 324 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: weighted Reed-Muller parent on 11 variables | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2398 | `1845.203.7.a` | `[[1845,203,7]]` | exhaustive search | 7 | 324 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: weighted Reed-Muller parent on 11 variables | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2399 | `1854.92.10.a` | `[[1854,92,10]]` | theorem | 10 | 155 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2400 | `1872.88.11.a` | `[[1872,88,11]]` | theorem | 11 | 158 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2401 | `1890.84.12.a` | `[[1890,84,12]]` | theorem | 12 | 161 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2399 | `1854.92.10.a` | `[[1854,92,10]]` | theorem | 10 | 155 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2400 | `1872.88.11.a` | `[[1872,88,11]]` | theorem | 11 | 158 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2401 | `1890.84.12.a` | `[[1890,84,12]]` | theorem | 12 | 161 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2402 | `1893.155.8.a` | `[[1893,155,8]]` | theorem and exhaustive search | 8 | 324 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: weighted Reed-Muller parent on 11 variables | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2403 | `1894.154.8.a` | `[[1894,154,8]]` | theorem and exhaustive search | 8 | 324 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | T-powers | AI search | AI search: weighted Reed-Muller parent on 11 variables | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2404 | `1908.80.13.a` | `[[1908,80,≥13]]` | theorem | ≥13 | 164 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2405 | `1926.76.14.a` | `[[1926,76,≥14]]` | theorem | ≥14 | 167 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2406 | `1944.72.15.a` | `[[1944,72,≥15]]` | theorem | ≥15 | 170 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2407 | `1962.68.16.a` | `[[1962,68,≥16]]` | theorem | ≥16 | 173 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2404 | `1908.80.13.a` | `[[1908,80,≥13]]` | theorem | ≥13 | 164 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2405 | `1926.76.14.a` | `[[1926,76,≥14]]` | theorem | ≥14 | 167 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2406 | `1944.72.15.a` | `[[1944,72,≥15]]` | theorem | ≥15 | 170 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2407 | `1962.68.16.a` | `[[1962,68,≥16]]` | theorem | ≥16 | 173 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2408 | `1965.10.2.a` | `[[1965,10,2]]` | sweep | — | 14 | `0+1+2+3+4+5+6+7+8+9+012+013+014+015+0…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2409 | `1966.10.2.a` | `[[1966,10,2]]` | sweep | — | 15 | `0+1+2+3+4+5+6+7+8+9+012+013+014+015+0…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2410 | `1980.64.17.a` | `[[1980,64,≥17]]` | theorem | ≥17 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2410 | `1980.64.17.a` | `[[1980,64,≥17]]` | theorem | ≥17 | 176 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2411 | `1996.10.2.a` | `[[1996,10,2]]` | sweep | — | 14 | `012+013+014+015+016+017+018+019+023+0…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2412 | `1998.60.18.a` | `[[1998,60,≥18]]` | theorem | ≥18 | 179 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2412 | `1998.60.18.a` | `[[1998,60,≥18]]` | theorem | ≥18 | 179 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2413 | `2006.9.2.a` | `[[2006,9,2]]` | sweep | — | 14 | `01+02+03+04+05+06+07+08+12+13+14+15+1…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2414 | `2008.8.2.a` | `[[2008,8,2]]` | sweep | — | 14 | `0+1+2+3+4+5+6+7` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2415 | `2009.7.2.a` | `[[2009,7,2]]` | sweep | — | 14 | `0+1+2+3+4+5+6` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2416 | `2010.6.2.a` | `[[2010,6,2]]` | sweep | — | 14 | `0+1+2+3+4+5` | 6 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2417 | `2011.5.2.a` | `[[2011,5,2]]` | sweep | — | 14 | `0+1+2+3+4` | 5 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2418 | `2016.56.19.a` | `[[2016,56,≥19]]` | theorem | ≥19 | 182 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2418 | `2016.56.19.a` | `[[2016,56,≥19]]` | theorem | ≥19 | 182 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2419 | `2017.1.25.a` | `[[2017,1,25]]` | theorem | 25 | 511 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling of Gong's codes | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832); [Gong (2025)](https://github.com/gongaa/RM127/tree/main/triply-even) |
 | 2420 | `2033.1.25.a` | `[[2033,1,25]]` | theorem | 25 | 515 | `0` | 1 | 1 | T-powers | pre-existing | Jain-Albert doubling: triorthogonal family | [Jain & Albert (2025)](https://doi.org/10.1109/JSAIT.2025.3570832) |
-| 2421 | `2034.52.20.a` | `[[2034,52,≥20]]` | theorem | ≥20 | 185 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2421 | `2034.52.20.a` | `[[2034,52,≥20]]` | theorem | ≥20 | 185 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2422 | `2036.6.2.a` | `[[2036,6,2]]` | sweep | — | 14 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2423 | `2044.3.2.b` | `[[2044,3,2]]` | sweep | — | 12 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2424 | `2057.7.2.a` | `[[2057,7,2]]` | sweep | — | 17 | `0+1+2+3+4+5+6` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -2661,56 +2661,56 @@ entries are under [References](#references).
 | 2512 | `4092.3.2.b` | `[[4092,3,2]]` | sweep | — | 13 | `01+02+12+012` | 4 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2513 | `4096.165.16.a` | `[[4096,165,16]]` | theorem | 16 | 464 | `0,1,2+3,4,5+6,7,8+9,10,11+12,13,14+15…` | — | — | none | AI search | AI search: CCZ frame on RM(3,12) | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2514 | `4156.6.2.a` | `[[4156,6,2]]` | sweep | — | 15 | `012+013+014+015+023+024+025+034+035+0…` | 11 | 3 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2515 | `4158.280.9.a` | `[[4158,280,9]]` | theorem | 9 | 344 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2516 | `4179.275.10.a` | `[[4179,275,10]]` | theorem | 10 | 347 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2517 | `4200.270.11.a` | `[[4200,270,11]]` | theorem | 11 | 350 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2518 | `4221.265.12.a` | `[[4221,265,12]]` | theorem | 12 | 353 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2519 | `4242.260.13.a` | `[[4242,260,13]]` | theorem | 13 | 356 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2520 | `4263.255.14.a` | `[[4263,255,14]]` | theorem | 14 | 359 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2521 | `4284.250.15.a` | `[[4284,250,15]]` | theorem | 15 | 362 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2522 | `4305.245.16.a` | `[[4305,245,≥16]]` | theorem | ≥16 | 365 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2523 | `4326.240.17.a` | `[[4326,240,≥17]]` | theorem | ≥17 | 368 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2515 | `4158.280.9.a` | `[[4158,280,9]]` | theorem | 9 | 344 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2516 | `4179.275.10.a` | `[[4179,275,10]]` | theorem | 10 | 347 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2517 | `4200.270.11.a` | `[[4200,270,11]]` | theorem | 11 | 350 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2518 | `4221.265.12.a` | `[[4221,265,12]]` | theorem | 12 | 353 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2519 | `4242.260.13.a` | `[[4242,260,13]]` | theorem | 13 | 356 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2520 | `4263.255.14.a` | `[[4263,255,14]]` | theorem | 14 | 359 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2521 | `4284.250.15.a` | `[[4284,250,15]]` | theorem | 15 | 362 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2522 | `4305.245.16.a` | `[[4305,245,≥16]]` | theorem | ≥16 | 365 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2523 | `4326.240.17.a` | `[[4326,240,≥17]]` | theorem | ≥17 | 368 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2524 | `4335.8.2.a` | `[[4335,8,2]]` | sweep | — | 16 | `012+013+014+015+016+017+023+024+025+0…` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2525 | `4336.8.2.a` | `[[4336,8,2]]` | sweep | — | 17 | `012+013+014+015+016+017+023+024+025+0…` | — | — | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2526 | `4347.235.18.a` | `[[4347,235,≥18]]` | theorem | ≥18 | 371 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2526 | `4347.235.18.a` | `[[4347,235,≥18]]` | theorem | ≥18 | 371 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2527 | `4360.8.2.a` | `[[4360,8,2]]` | sweep | — | 18 | `0+1+2+3+4+5+6+7` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2528 | `4362.5.2.a` | `[[4362,5,2]]` | sweep | — | 15 | `01+02+03+04+12+13+14+23+24+34+012+013…` | 6 | 2 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2529 | `4368.230.19.a` | `[[4368,230,≥19]]` | theorem | ≥19 | 374 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2530 | `4389.225.20.a` | `[[4389,225,≥20]]` | theorem | ≥20 | 377 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2531 | `4410.220.21.a` | `[[4410,220,≥21]]` | theorem | ≥21 | 380 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2532 | `4431.215.22.a` | `[[4431,215,≥22]]` | theorem | ≥22 | 383 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2533 | `4452.210.23.a` | `[[4452,210,≥23]]` | theorem | ≥23 | 386 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2534 | `4473.205.24.a` | `[[4473,205,≥24]]` | theorem | ≥24 | 389 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2535 | `4494.200.25.a` | `[[4494,200,≥25]]` | theorem | ≥25 | 392 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2536 | `4515.195.26.a` | `[[4515,195,≥26]]` | theorem | ≥26 | 395 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2529 | `4368.230.19.a` | `[[4368,230,≥19]]` | theorem | ≥19 | 374 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2530 | `4389.225.20.a` | `[[4389,225,≥20]]` | theorem | ≥20 | 377 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2531 | `4410.220.21.a` | `[[4410,220,≥21]]` | theorem | ≥21 | 380 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2532 | `4431.215.22.a` | `[[4431,215,≥22]]` | theorem | ≥22 | 383 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2533 | `4452.210.23.a` | `[[4452,210,≥23]]` | theorem | ≥23 | 386 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2534 | `4473.205.24.a` | `[[4473,205,≥24]]` | theorem | ≥24 | 389 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2535 | `4494.200.25.a` | `[[4494,200,≥25]]` | theorem | ≥25 | 392 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2536 | `4515.195.26.a` | `[[4515,195,≥26]]` | theorem | ≥26 | 395 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2537 | `4519.7.2.a` | `[[4519,7,2]]` | sweep | — | 16 | `0+1+2+3+4+5+6` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2538 | `4521.7.2.a` | `[[4521,7,2]]` | sweep | — | 18 | `0+1+2+3+4+5+6` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2539 | `4536.190.27.a` | `[[4536,190,≥27]]` | theorem | ≥27 | 398 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2540 | `4557.185.28.a` | `[[4557,185,≥28]]` | theorem | ≥28 | 401 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2539 | `4536.190.27.a` | `[[4536,190,≥27]]` | theorem | ≥27 | 398 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2540 | `4557.185.28.a` | `[[4557,185,≥28]]` | theorem | ≥28 | 401 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2541 | `4576.8.2.a` | `[[4576,8,2]]` | sweep | — | 17 | `0+1+2+3+4+5+6+7` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2542 | `4578.180.29.a` | `[[4578,180,≥29]]` | theorem | ≥29 | 404 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2542 | `4578.180.29.a` | `[[4578,180,≥29]]` | theorem | ≥29 | 404 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2543 | `4589.3.2.a` | `[[4589,3,2]]` | sweep | — | 16 | `0+1+2` | 3 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2544 | `4599.4.2.a` | `[[4599,4,2]]` | sweep | — | 13 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2545 | `4599.7.2.a` | `[[4599,7,2]]` | sweep | — | 16 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2546 | `4599.8.2.a` | `[[4599,8,2]]` | sweep | — | 17 | `0+1+2+3+4+5+6+7` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2547 | `4599.175.30.a` | `[[4599,175,≥30]]` | theorem | ≥30 | 407 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2547 | `4599.175.30.a` | `[[4599,175,≥30]]` | theorem | ≥30 | 407 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2548 | `4600.4.2.a` | `[[4600,4,2]]` | sweep | — | 14 | `012+013+023+123` | 7 | 3 | S, CZ | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2549 | `4600.7.2.a` | `[[4600,7,2]]` | sweep | — | 17 | `01+02+03+04+05+06+12+13+14+15+16+23+2…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2550 | `4600.8.2.a` | `[[4600,8,2]]` | sweep | — | 18 | `0+1+2+3+4+5+6+7` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2551 | `4620.4.2.a` | `[[4620,4,2]]` | sweep | — | 15 | `0+1+2+3` | 4 | 1 | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2552 | `4620.170.31.a` | `[[4620,170,≥31]]` | theorem | ≥31 | 410 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2552 | `4620.170.31.a` | `[[4620,170,≥31]]` | theorem | ≥31 | 410 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2553 | `4622.10.2.a` | `[[4622,10,2]]` | sweep | — | 16 | `0+1+2+3+4+5+6+7+8+9` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2554 | `4641.165.32.a` | `[[4641,165,≥32]]` | theorem | ≥32 | 413 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2555 | `4662.160.33.a` | `[[4662,160,≥33]]` | theorem | ≥33 | 416 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2556 | `4683.155.34.a` | `[[4683,155,≥34]]` | theorem | ≥34 | 419 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2554 | `4641.165.32.a` | `[[4641,165,≥32]]` | theorem | ≥32 | 413 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2555 | `4662.160.33.a` | `[[4662,160,≥33]]` | theorem | ≥33 | 416 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2556 | `4683.155.34.a` | `[[4683,155,≥34]]` | theorem | ≥34 | 419 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2557 | `4699.8.2.a` | `[[4699,8,2]]` | sweep | — | 15 | `01+02+03+04+05+06+07+12+13+14+15+16+1…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2558 | `4704.150.35.a` | `[[4704,150,≥35]]` | theorem | ≥35 | 422 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2559 | `4725.145.36.a` | `[[4725,145,≥36]]` | theorem | ≥36 | 425 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2558 | `4704.150.35.a` | `[[4704,150,≥35]]` | theorem | ≥35 | 422 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2559 | `4725.145.36.a` | `[[4725,145,≥36]]` | theorem | ≥36 | 425 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2560 | `4728.8.2.a` | `[[4728,8,2]]` | sweep | — | 16 | `0+1+2+3+4+5+6+7` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
-| 2561 | `4746.140.37.a` | `[[4746,140,≥37]]` | theorem | ≥37 | 428 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2562 | `4767.135.38.a` | `[[4767,135,≥38]]` | theorem | ≥38 | 431 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2563 | `4788.130.39.a` | `[[4788,130,≥39]]` | theorem | ≥39 | 434 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
-| 2564 | `4809.125.40.a` | `[[4809,125,≥40]]` | theorem | ≥40 | 437 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2561 | `4746.140.37.a` | `[[4746,140,≥37]]` | theorem | ≥37 | 428 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2562 | `4767.135.38.a` | `[[4767,135,≥38]]` | theorem | ≥38 | 431 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2563 | `4788.130.39.a` | `[[4788,130,≥39]]` | theorem | ≥39 | 434 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
+| 2564 | `4809.125.40.a` | `[[4809,125,≥40]]` | theorem | ≥40 | 437 | `0+1+2+3+4+5+6+7+8+9+10+11+12+13+14+15…` | — | — | S, CZ | AI search | AI search: San-José construction beyond the release | [Jain et al. (2026)](https://arxiv.org/abs/2610.06535) |
 | 2565 | `4845.9.2.a` | `[[4845,9,2]]` | sweep | — | 17 | `0+1+2+3+4+5+6+7+8+01+02+03+04+05+06+0…` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2566 | `4855.9.2.a` | `[[4855,9,2]]` | sweep | — | 18 | `0+1+2+3+4+5+6+7+8` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
 | 2567 | `4879.9.2.a` | `[[4879,9,2]]` | sweep | — | 16 | `0+1+2+3+4+5+6+7+8` | — | — | T-powers | pre-existing | borrowed-identity search: two-group | [Singh et al. (2026)](https://arxiv.org/abs/2606.28518) |
@@ -38557,9 +38557,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `S on 13`, `S on 14`, `Z on 15` and 1587 more (42 single-wire, 1557 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · weighted_sources_742_36_8 (`gamma frontier release record weighted_sources_742_36_8 (source catalogue id weighted_sources_742_36_8); construction: Triorthogonal; matrix verified; matrix fa76ff0d4c1757d4...; the release states d=8 (lower_bound), gamma=1.4551167917261638 (certified_upper_bound); the release's recipe (gamma_frontier_release/sources/gamma_frontier/weighted_sources/protocol_742_36_8.json, category san_jose_grs) is San-José's GRS construction (arXiv:2609.08203) over GF(64) with L = 62, degree 15 and P = 9, built by that folder's build.py; until 2026-11-07 the row was filed under Wills parent codes because of the folder's name`)
+- source: `AI search (gamma frontier): San-José GRS construction` · weighted_sources_742_36_8 (`gamma frontier release record weighted_sources_742_36_8 (source catalogue id weighted_sources_742_36_8); construction: Triorthogonal; matrix verified; matrix fa76ff0d4c1757d4...; the release states d=8 (lower_bound), gamma=1.4551167917261638 (certified_upper_bound); the release's recipe (gamma_frontier_release/sources/gamma_frontier/weighted_sources/protocol_742_36_8.json, category san_jose_grs) is San-José's GRS construction (arXiv:2609.08203) over GF(64) with L = 62, degree 15 and P = 9, built by that folder's build.py; until 2026-11-07 the row was filed under Wills parent codes because of the folder's name`)
 - note (T-count): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 - note (reduced degree): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 
@@ -38639,13 +38639,13 @@ SHA-256 of those columns.
 - `N = 80` (32 outputs + 48 checks)
 - distance: exactly 9, witnessed by the fault on columns [90, 115, 177, 226, 316, 466, 487, 564, 672]
 - the lower bound `d >= 9` is certified (theorem); the sweep here proves `d >= 6`; formerly `756.32.6.a`
-- certified distance: `d = 9`, from gamma frontier release record weighted_sources_756_32_9 (gamma_frontier_release/frontier.json, distance_kind lower_bound, Z distance); since 2026-11-07 the row's d: the columns are San Jose's GRS construction (arXiv:2609.08203) over GF(64), L = 62, degree 15, P = 8, whose theorem gives d >= 9, its hypotheses checked from the columns (theorem_certificates/), and a fault of weight 9 found by the research's sparse-cells search and re-checked; the evidence is in `theorem_certificates/certificates.json`
+- certified distance: `d = 9`, from gamma frontier release record weighted_sources_756_32_9 (gamma_frontier_release/frontier.json, distance_kind lower_bound, Z distance); since 2026-11-07 the row's d: the columns are San-José's GRS construction (arXiv:2609.08203) over GF(64), L = 62, degree 15, P = 8, whose theorem gives d >= 9, its hypotheses checked from the columns (theorem_certificates/), and a fault of weight 9 found by the research's sparse-cells search and re-checked; the evidence is in `theorem_certificates/certificates.json`
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `S on 13`, `S on 14`, `Z on 15` and 1677 more (40 single-wire, 1649 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · weighted_sources_756_32_9 (`gamma frontier release record weighted_sources_756_32_9 (source catalogue id weighted_sources_756_32_9); construction: Triorthogonal; matrix verified; matrix 0129c9c47d049a17...; the release states d=9 (lower_bound), gamma=1.4392272442235248 (certified_upper_bound); the release's recipe (gamma_frontier_release/sources/gamma_frontier/weighted_sources/protocol_756_32_9.json, category san_jose_grs) is San-José's GRS construction (arXiv:2609.08203) over GF(64) with L = 62, degree 15 and P = 8, built by that folder's build.py; until 2026-11-07 the row was filed under Wills parent codes because of the folder's name`)
+- source: `AI search (gamma frontier): San-José GRS construction` · weighted_sources_756_32_9 (`gamma frontier release record weighted_sources_756_32_9 (source catalogue id weighted_sources_756_32_9); construction: Triorthogonal; matrix verified; matrix 0129c9c47d049a17...; the release states d=9 (lower_bound), gamma=1.4392272442235248 (certified_upper_bound); the release's recipe (gamma_frontier_release/sources/gamma_frontier/weighted_sources/protocol_756_32_9.json, category san_jose_grs) is San-José's GRS construction (arXiv:2609.08203) over GF(64) with L = 62, degree 15 and P = 8, built by that folder's build.py; until 2026-11-07 the row was filed under Wills parent codes because of the folder's name`)
 - note (T-count): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 - note (reduced degree): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 
@@ -42442,9 +42442,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 2`, `Z on 4`, `Z on 5`, `Z on 6`, `Z on 9`, `Z on 10`, `Z on 13`, `Z on 14`, `CZ on (0,1)`, `CZ on (0,2)` and 50 more (10 single-wire, 52 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m4_L14_deg3_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m4_L14_deg3_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 91 columns, built by the san-jose-grs construction (k=3, N=15, field_degree=4, field_modulus=19, embedding_columns=[1, 3, 5, 6, 8, 14, 15], compatible_elements=[15, 13, 11], outer_length=14, outer_degree=3, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[0]`
 
@@ -42493,9 +42493,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `Z on 3`, `S† on 4`, `S† on 7`, `S† on 9`, `S† on 10`, `S† on 12`, `S† on 14`, `S† on 15`, `Z on 16`, `Z on 18` and 193 more (18 single-wire, 187 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L22_deg5_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m5_L22_deg5_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 200 columns, built by the san-jose-grs construction (k=6, N=26, field_degree=5, field_modulus=37, embedding_columns=[2, 3, 5, 8, 13, 14, 24, 25, 27, 28], compatible_elements=[30, 26, 23], outer_length=22, outer_degree=5, punctures=[0, 1], echelon=reduced); see `master_catalog_large.json`, `factories[3]`
 
@@ -42562,9 +42562,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `S† on 3`, `Z on 5`, `S† on 6`, `S on 7`, `S† on 9`, `S† on 11`, `S† on 12`, `S† on 14`, `S† on 16`, `S† on 17` and 202 more (20 single-wire, 194 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L22_deg5_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m5_L22_deg5_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 210 columns, built by the san-jose-grs construction (k=3, N=28, field_degree=5, field_modulus=37, embedding_columns=[2, 3, 5, 8, 13, 14, 24, 25, 27, 28], compatible_elements=[30, 26, 23], outer_length=22, outer_degree=5, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[7]`
 
@@ -42735,9 +42735,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 2`, `S† on 4`, `S on 5`, `S on 6`, `S† on 7`, `S on 8`, `S on 9`, `S on 10`, `S† on 12`, `S on 13`, `S† on 15`, `S on 16` and 209 more (18 single-wire, 203 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L26_deg6_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m5_L26_deg6_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 - note (reduced degree): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 
@@ -42770,9 +42770,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 2`, `S† on 4`, `S on 5`, `Z on 6`, `Z on 7`, `S on 8`, `S on 11`, `S on 12`, `S† on 14`, `S on 15`, `S† on 17`, `S on 18` and 251 more (18 single-wire, 245 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L26_deg6_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m5_L26_deg6_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 240 columns, built by the san-jose-grs construction (k=6, N=31, field_degree=5, field_modulus=37, embedding_columns=[2, 3, 5, 8, 13, 14, 24, 25, 27, 28], compatible_elements=[30, 26, 23], outer_length=26, outer_degree=6, punctures=[0, 1], echelon=reduced); see `master_catalog_large.json`, `factories[19]`
 
@@ -42803,9 +42803,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 2`, `S on 3`, `S on 4`, `Z on 6`, `S† on 7`, `Z on 8`, `Z on 9`, `S on 10`, `S on 13`, `S on 14`, `S† on 16`, `S on 17` and 286 more (20 single-wire, 278 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L26_deg6_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m5_L26_deg6_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 250 columns, built by the san-jose-grs construction (k=3, N=33, field_degree=5, field_modulus=37, embedding_columns=[2, 3, 5, 8, 13, 14, 24, 25, 27, 28], compatible_elements=[30, 26, 23], outer_length=26, outer_degree=6, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[21]`
 
@@ -42818,9 +42818,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 4`, `S on 7`, `Z on 8`, `S on 10`, `Z on 11`, `Z on 12`, `S on 13`, `Z on 19`, `Z on 20`, `Z on 25`, `CZ on (0,1)` and 205 more (11 single-wire, 206 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m5_L30_deg7_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(15,2) and a punctured RM(15-4,15) coset, neither feasible at k=15
 - note (reduced degree): not computed: exact minimisation is over GL(15,2) and a punctured RM(15-4,15) coset, neither feasible at k=15
 
@@ -42835,9 +42835,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 4`, `S on 7`, `Z on 8`, `S on 10`, `Z on 11`, `Z on 16`, `Z on 21`, `Z on 22`, `Z on 27`, `CZ on (0,1)`, `CZ on (0,2)` and 238 more (10 single-wire, 240 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m5_L30_deg7_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -42852,9 +42852,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 4`, `S on 7`, `Z on 8`, `Z on 10`, `Z on 11`, `Z on 18`, `Z on 23`, `Z on 24`, `Z on 29`, `CZ on (0,1)`, `CZ on (0,2)` and 277 more (10 single-wire, 279 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m5_L30_deg7_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 - note (reduced degree): not computed: exact minimisation is over GL(9,2) and a punctured RM(9-4,9) coset, neither feasible at k=9
 
@@ -42869,9 +42869,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 1`, `S on 4`, `Z on 7`, `Z on 8`, `Z on 12`, `Z on 13`, `Z on 20`, `Z on 25`, `Z on 26`, `Z on 31`, `CZ on (0,1)`, `CZ on (0,2)` and 310 more (10 single-wire, 312 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m5_L30_deg7_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 280 columns, built by the san-jose-grs construction (k=6, N=36, field_degree=5, field_modulus=37, embedding_columns=[2, 3, 5, 8, 13, 14, 24, 25, 27, 28], compatible_elements=[30, 26, 23], outer_length=30, outer_degree=7, punctures=[0, 1], echelon=reduced); see `master_catalog_large.json`, `factories[25]`
 
@@ -42886,9 +42886,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 1`, `Z on 3`, `Z on 4`, `Z on 9`, `Z on 10`, `Z on 14`, `Z on 15`, `Z on 22`, `Z on 27`, `Z on 28`, `Z on 33`, `CZ on (0,1)` and 327 more (11 single-wire, 328 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m5_L30_deg7_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m5_L30_deg7_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 290 columns, built by the san-jose-grs construction (k=3, N=38, field_degree=5, field_modulus=37, embedding_columns=[2, 3, 5, 8, 13, 14, 24, 25, 27, 28], compatible_elements=[30, 26, 23], outer_length=30, outer_degree=7, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[26]`
 
@@ -42901,9 +42901,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `S on 1`, `S† on 2`, `Z on 4`, `S on 5`, `S† on 7`, `S† on 8`, `S on 10`, `S on 11`, `S on 12`, `S on 13`, `S† on 14` and 308 more (27 single-wire, 293 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L26_deg6_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L26_deg6_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -42918,9 +42918,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `S on 3`, `Z on 4`, `S on 5`, `Z on 6`, `S on 7`, `S† on 8`, `S on 9`, `Z on 10`, `Z on 11` and 386 more (31 single-wire, 367 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L30_deg7_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -42935,9 +42935,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `S on 3`, `Z on 4`, `S on 5`, `Z on 6`, `S on 7`, `S† on 8`, `S on 9`, `Z on 10`, `Z on 11` and 422 more (30 single-wire, 404 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L30_deg7_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -42952,9 +42952,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `S on 3`, `Z on 4`, `S on 5`, `Z on 6`, `S on 7`, `S† on 8`, `S on 9`, `Z on 10`, `Z on 11` and 453 more (32 single-wire, 433 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L30_deg7_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -42971,9 +42971,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `S on 3`, `Z on 4`, `S on 5`, `Z on 6`, `S on 7`, `S† on 8`, `S† on 9`, `Z on 10`, `S† on 11` and 489 more (34 single-wire, 467 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L30_deg7_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -42988,9 +42988,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 3`, `S on 4`, `Z on 5`, `S on 6`, `S† on 7`, `S on 8`, `Z on 9`, `S on 10`, `Z on 11`, `S on 12` and 488 more (33 single-wire, 467 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L34_deg8_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -43007,9 +43007,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `S on 3`, `Z on 5`, `Z on 6`, `S on 8`, `S† on 9`, `S† on 10`, `S† on 11`, `Z on 12`, `S† on 13` and 545 more (34 single-wire, 523 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L30_deg7_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L30_deg7_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 406 columns, built by the san-jose-grs construction (k=4, N=46, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=30, outer_degree=7, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[33]`
 
@@ -43022,9 +43022,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 3`, `S on 4`, `Z on 5`, `S on 6`, `S† on 7`, `S on 8`, `Z on 9`, `S on 10`, `Z on 11`, `S on 12` and 511 more (32 single-wire, 491 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L34_deg8_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -43107,9 +43107,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 3`, `S on 4`, `Z on 5`, `S on 6`, `S† on 7`, `S on 8`, `Z on 9`, `S on 10`, `Z on 11`, `S on 12` and 558 more (33 single-wire, 537 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L34_deg8_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -43126,9 +43126,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 3`, `S on 4`, `Z on 5`, `S on 6`, `S† on 7`, `S on 8`, `Z on 9`, `S on 10`, `Z on 11`, `S† on 13` and 594 more (34 single-wire, 572 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L34_deg8_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -43145,9 +43145,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 3`, `S on 4`, `Z on 5`, `S on 6`, `S† on 7`, `Z on 9`, `Z on 11`, `S† on 12`, `S† on 15`, `Z on 16` and 633 more (33 single-wire, 612 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L34_deg8_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -43162,9 +43162,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S† on 2`, `Z on 3`, `Z on 5`, `S† on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S† on 11`, `Z on 13`, `Z on 14`, `S† on 15` and 565 more (38 single-wire, 539 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L38_deg9_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -43180,9 +43180,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `S† on 1`, `S on 3`, `Z on 4`, `Z on 6`, `S on 7`, `S† on 8`, `S† on 9`, `Z on 11`, `Z on 13`, `S† on 14`, `S† on 17` and 692 more (34 single-wire, 670 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L34_deg8_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L34_deg8_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 462 columns, built by the san-jose-grs construction (k=4, N=52, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=34, outer_degree=8, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[43]`
 
@@ -43195,9 +43195,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S† on 2`, `Z on 3`, `Z on 5`, `S† on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S† on 11`, `Z on 13`, `Z on 14`, `S† on 15` and 617 more (39 single-wire, 590 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L38_deg9_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -43214,9 +43214,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S† on 2`, `Z on 3`, `Z on 5`, `S† on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S† on 11`, `Z on 13`, `Z on 14`, `S† on 15` and 685 more (40 single-wire, 657 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L38_deg9_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -43267,9 +43267,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S† on 2`, `Z on 3`, `Z on 5`, `S† on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S† on 11`, `S† on 13`, `S† on 14`, `S† on 15` and 744 more (42 single-wire, 714 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L38_deg9_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -43284,9 +43284,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `Z on 3`, `S on 4`, `S on 5`, `Z on 6`, `S† on 9`, `Z on 10`, `S on 12`, `S† on 13`, `Z on 15`, `S on 18` and 705 more (34 single-wire, 683 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L42_deg10_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 - note (reduced degree): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 
@@ -43319,9 +43319,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S† on 2`, `Z on 3`, `Z on 5`, `S† on 6`, `Z on 7`, `S† on 9`, `S† on 10`, `S† on 11`, `S on 12`, `Z on 13`, `S† on 15` and 819 more (44 single-wire, 787 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L38_deg9_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -43335,9 +43335,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `Z on 3`, `S on 4`, `S on 5`, `Z on 6`, `S† on 9`, `Z on 10`, `S on 12`, `S† on 13`, `Z on 15`, `S on 18` and 754 more (37 single-wire, 729 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L42_deg10_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -43353,9 +43353,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `Z on 6`, `S† on 8`, `S† on 11`, `S† on 12`, `S† on 13`, `S on 14`, `Z on 15`, `S† on 17` and 859 more (44 single-wire, 827 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L38_deg9_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L38_deg9_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 518 columns, built by the san-jose-grs construction (k=4, N=58, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=38, outer_degree=9, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[53]`
 
@@ -43369,9 +43369,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `Z on 3`, `S on 4`, `S on 5`, `Z on 6`, `S† on 9`, `Z on 10`, `S on 12`, `S† on 13`, `Z on 15`, `S on 18` and 829 more (38 single-wire, 803 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L42_deg10_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -43388,9 +43388,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `Z on 3`, `S on 4`, `S on 5`, `Z on 6`, `S† on 9`, `Z on 10`, `S on 12`, `S† on 13`, `Z on 15`, `S on 17` and 898 more (42 single-wire, 868 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L42_deg10_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -43405,9 +43405,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `S† on 3`, `S on 4`, `S on 6`, `S† on 7`, `Z on 10`, `S on 11`, `Z on 14`, `S on 15`, `Z on 16`, `S† on 17` and 764 more (32 single-wire, 744 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L46_deg11_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 - note (reduced degree): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 
@@ -43423,9 +43423,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `Z on 3`, `S on 4`, `S on 5`, `Z on 6`, `S† on 9`, `Z on 10`, `S† on 12`, `S† on 13`, `S on 14`, `Z on 16` and 956 more (44 single-wire, 924 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L42_deg10_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -43439,9 +43439,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `S† on 3`, `S on 4`, `S on 6`, `S† on 7`, `Z on 10`, `S on 11`, `Z on 14`, `S on 15`, `Z on 16`, `S† on 17` and 840 more (36 single-wire, 816 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L46_deg11_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 - note (reduced degree): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 
@@ -43457,9 +43457,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `Z on 3`, `S on 4`, `S on 5`, `Z on 6`, `Z on 8`, `Z on 9`, `S† on 10`, `S† on 13`, `S† on 14`, `S† on 15` and 1012 more (46 single-wire, 978 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L42_deg10_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -43475,9 +43475,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `S† on 3`, `S on 4`, `S on 6`, `S† on 7`, `Z on 10`, `S on 11`, `Z on 14`, `S on 15`, `Z on 16`, `S† on 17` and 915 more (40 single-wire, 887 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L46_deg11_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -43493,9 +43493,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `Z on 2`, `Z on 3`, `S† on 4`, `S† on 5`, `S† on 7`, `S on 8`, `S† on 9`, `Z on 10`, `Z on 11`, `S† on 12`, `S† on 15` and 1061 more (48 single-wire, 1025 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L42_deg10_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L42_deg10_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 574 columns, built by the san-jose-grs construction (k=4, N=64, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=42, outer_degree=10, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[61]`
 
@@ -43510,9 +43510,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `S† on 3`, `S on 4`, `S on 6`, `S† on 7`, `Z on 10`, `S on 11`, `Z on 14`, `S on 15`, `Z on 16`, `S† on 17` and 954 more (42 single-wire, 924 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L46_deg11_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -43527,9 +43527,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 6`, `S on 7`, `Z on 9`, `Z on 10`, `Z on 11`, `Z on 13`, `S on 14`, `S on 15`, `Z on 16` and 912 more (47 single-wire, 877 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P9 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L50_deg12_P9 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 - note (reduced degree): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 
@@ -43545,9 +43545,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `S† on 3`, `S on 4`, `S on 6`, `S† on 7`, `Z on 10`, `S on 11`, `Z on 14`, `S on 15`, `Z on 17`, `S† on 19` and 1003 more (44 single-wire, 971 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L46_deg11_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -43561,9 +43561,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 6`, `S on 7`, `Z on 9`, `Z on 10`, `Z on 11`, `Z on 13`, `S on 14`, `S on 15`, `Z on 16` and 967 more (47 single-wire, 932 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L50_deg12_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 - note (reduced degree): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 
@@ -43579,9 +43579,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `S† on 3`, `S on 4`, `S on 6`, `S† on 7`, `Z on 10`, `S on 11`, `Z on 12`, `S on 13`, `S† on 14`, `S† on 15` and 1069 more (48 single-wire, 1033 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L46_deg11_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -43597,9 +43597,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 6`, `S on 7`, `Z on 9`, `Z on 10`, `Z on 11`, `Z on 13`, `S on 14`, `S on 15`, `Z on 16` and 1025 more (50 single-wire, 987 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L50_deg12_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 - note (reduced degree): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 
@@ -43615,9 +43615,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `S† on 3`, `S on 4`, `S on 6`, `S† on 7`, `Z on 8`, `S on 9`, `S† on 10`, `S† on 11`, `S† on 12`, `Z on 13` and 1134 more (52 single-wire, 1094 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L46_deg11_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -43634,9 +43634,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 6`, `S on 7`, `Z on 9`, `Z on 10`, `Z on 11`, `Z on 13`, `S on 14`, `S on 15`, `Z on 16` and 1089 more (52 single-wire, 1049 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L50_deg12_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -43651,9 +43651,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 12`, `S on 13`, `S on 15` and 1149 more (46 single-wire, 1115 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P10 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L54_deg13_P10 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
 - note (reduced degree): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
 
@@ -43669,9 +43669,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 2`, `S† on 3`, `S† on 4`, `Z on 6`, `S† on 7`, `S† on 8`, `Z on 9`, `Z on 10`, `S on 11`, `S† on 12`, `S† on 13` and 1199 more (54 single-wire, 1157 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L46_deg11_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L46_deg11_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 630 columns, built by the san-jose-grs construction (k=4, N=70, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=46, outer_degree=11, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[71]`
 
@@ -43685,9 +43685,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 6`, `S on 7`, `Z on 9`, `Z on 10`, `Z on 11`, `Z on 13`, `S on 14`, `S on 15`, `Z on 16` and 1178 more (52 single-wire, 1138 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L50_deg12_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -43701,9 +43701,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 12`, `S on 13`, `S on 15` and 1220 more (49 single-wire, 1183 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P9 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L54_deg13_P9 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 - note (reduced degree): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 
@@ -43719,9 +43719,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 6`, `S on 7`, `Z on 9`, `Z on 10`, `Z on 11`, `Z on 13`, `S on 14`, `S on 15`, `S† on 16` and 1244 more (53 single-wire, 1203 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L50_deg12_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -43737,9 +43737,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 12`, `S on 13`, `S on 15` and 1297 more (52 single-wire, 1257 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L54_deg13_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 - note (reduced degree): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 
@@ -43755,9 +43755,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 6`, `S on 7`, `Z on 9`, `Z on 10`, `Z on 11`, `S on 12`, `S on 13`, `S on 14`, `Z on 15` and 1302 more (55 single-wire, 1259 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L50_deg12_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -43774,9 +43774,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 12`, `S on 13`, `S on 15` and 1343 more (51 single-wire, 1304 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L54_deg13_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 - note (reduced degree): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 
@@ -43791,9 +43791,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 13`, `Z on 14`, `Z on 16`, `Z on 17` and 1169 more (50 single-wire, 1131 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P11 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L58_deg14_P11 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(44,2) and a punctured RM(44-4,44) coset, neither feasible at k=44
 - note (reduced degree): not computed: exact minimisation is over GL(44,2) and a punctured RM(44-4,44) coset, neither feasible at k=44
 
@@ -43809,9 +43809,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 5`, `Z on 6`, `S on 7`, `S† on 8`, `S on 9`, `S on 10`, `Z on 11`, `S on 12`, `Z on 13`, `S on 14` and 1363 more (58 single-wire, 1317 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L50_deg12_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -43827,9 +43827,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 12`, `S on 13`, `S on 15` and 1400 more (50 single-wire, 1362 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L54_deg13_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -43843,9 +43843,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 13`, `Z on 14`, `Z on 16`, `Z on 17` and 1269 more (55 single-wire, 1226 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P10 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L58_deg14_P10 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
 - note (reduced degree): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
 
@@ -43861,9 +43861,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 1`, `S on 3`, `S† on 4`, `S on 6`, `S on 7`, `Z on 8`, `S† on 9`, `S† on 10`, `S on 11`, `S on 12`, `Z on 13`, `S on 14` and 1446 more (60 single-wire, 1398 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L50_deg12_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L50_deg12_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 686 columns, built by the san-jose-grs construction (k=4, N=76, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=50, outer_degree=12, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[82]`
 
@@ -43877,9 +43877,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 12`, `S on 13`, `S on 15` and 1467 more (51 single-wire, 1428 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L54_deg13_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -43895,9 +43895,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 13`, `Z on 14`, `Z on 16`, `Z on 17` and 1321 more (55 single-wire, 1278 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P9 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L58_deg14_P9 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 - note (reduced degree): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 
@@ -43913,9 +43913,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 12`, `S on 13`, `S on 15` and 1534 more (52 single-wire, 1494 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L54_deg13_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -43932,9 +43932,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 13`, `Z on 14`, `Z on 16`, `Z on 17` and 1415 more (59 single-wire, 1368 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L58_deg14_P8 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 - note (reduced degree): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 
@@ -43949,9 +43949,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `S on 13`, `S on 14`, `Z on 15` and 1307 more (48 single-wire, 1271 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P12 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L62_deg15_P12 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(48,2) and a punctured RM(48-4,48) coset, neither feasible at k=48
 - note (reduced degree): not computed: exact minimisation is over GL(48,2) and a punctured RM(48-4,48) coset, neither feasible at k=48
 
@@ -43967,9 +43967,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 12`, `S on 13`, `Z on 14` and 1592 more (53 single-wire, 1551 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L54_deg13_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -43985,9 +43985,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 13`, `Z on 14`, `Z on 16`, `Z on 17` and 1484 more (60 single-wire, 1436 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L58_deg14_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 - note (reduced degree): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 
@@ -44001,9 +44001,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `S on 13`, `S on 14`, `Z on 15` and 1403 more (46 single-wire, 1369 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P11 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L62_deg15_P11 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(44,2) and a punctured RM(44-4,44) coset, neither feasible at k=44
 - note (reduced degree): not computed: exact minimisation is over GL(44,2) and a punctured RM(44-4,44) coset, neither feasible at k=44
 
@@ -44036,9 +44036,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 8`, `S on 9`, `Z on 10`, `S on 12`, `S on 14`, `S on 15` and 1647 more (54 single-wire, 1605 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L54_deg13_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -44054,9 +44054,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 13`, `Z on 14`, `Z on 16`, `Z on 17` and 1567 more (62 single-wire, 1517 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L58_deg14_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -44072,9 +44072,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `S on 13`, `S on 14`, `Z on 15` and 1504 more (44 single-wire, 1472 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P10 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L62_deg15_P10 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
 - note (reduced degree): not computed: exact minimisation is over GL(40,2) and a punctured RM(40-4,40) coset, neither feasible at k=40
 
@@ -44090,9 +44090,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `Z on 8`, `S on 10`, `S on 11`, `Z on 12`, `S on 14`, `S on 16`, `S on 17`, `Z on 18`, `S on 20` and 1726 more (52 single-wire, 1686 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L54_deg13_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L54_deg13_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 742 columns, built by the san-jose-grs construction (k=4, N=82, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=54, outer_degree=13, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[95]`
 
@@ -44106,9 +44106,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 13`, `Z on 14`, `Z on 16`, `Z on 17` and 1643 more (61 single-wire, 1594 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L58_deg14_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -44141,9 +44141,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S on 7`, `S on 8`, `S on 9`, `S on 11`, `S on 13`, `Z on 14`, `S† on 17`, `S on 19` and 1726 more (61 single-wire, 1677 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L58_deg14_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -44159,9 +44159,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S on 7`, `S on 8`, `S on 9`, `S on 11`, `S† on 12`, `Z on 13`, `S† on 14`, `Z on 16` and 1820 more (63 single-wire, 1769 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L58_deg14_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -44177,9 +44177,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `S on 13`, `S on 14`, `Z on 15` and 1743 more (42 single-wire, 1713 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L62_deg15_P7 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 - note (reduced degree): not computed: exact minimisation is over GL(28,2) and a punctured RM(28-4,28) coset, neither feasible at k=28
 
@@ -44195,9 +44195,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S on 7`, `Z on 8`, `S on 9`, `S† on 10`, `S† on 11`, `Z on 12`, `S† on 14`, `Z on 15` and 1911 more (65 single-wire, 1858 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L58_deg14_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -44213,9 +44213,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `S on 13`, `S on 14`, `Z on 15` and 1812 more (44 single-wire, 1780 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L62_deg15_P6 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 - note (reduced degree): not computed: exact minimisation is over GL(24,2) and a punctured RM(24-4,24) coset, neither feasible at k=24
 
@@ -44231,9 +44231,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `Z on 4`, `S† on 5`, `Z on 6`, `S† on 9`, `Z on 10`, `S on 11`, `S† on 12`, `S† on 13` and 1992 more (68 single-wire, 1936 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L58_deg14_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L58_deg14_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 798 columns, built by the san-jose-grs construction (k=4, N=88, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=58, outer_degree=14, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[103]`
 
@@ -44247,9 +44247,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `S on 13`, `S on 14`, `Z on 15` and 1900 more (44 single-wire, 1868 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L62_deg15_P5 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 - note (reduced degree): not computed: exact minimisation is over GL(20,2) and a punctured RM(20-4,20) coset, neither feasible at k=20
 
@@ -44350,9 +44350,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `S on 13`, `S on 14`, `Z on 15` and 1990 more (44 single-wire, 1958 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L62_deg15_P4 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 - note (reduced degree): not computed: exact minimisation is over GL(16,2) and a punctured RM(16-4,16) coset, neither feasible at k=16
 
@@ -44385,9 +44385,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `S on 9`, `S on 10`, `Z on 11`, `Z on 12`, `Z on 17`, `Z on 18` and 2090 more (43 single-wire, 2059 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L62_deg15_P3 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 - note (reduced degree): not computed: exact minimisation is over GL(12,2) and a punctured RM(12-4,12) coset, neither feasible at k=12
 
@@ -44420,9 +44420,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `S† on 5`, `S† on 6`, `Z on 7`, `Z on 8`, `Z on 13`, `Z on 14`, `Z on 19`, `Z on 20`, `Z on 21` and 2196 more (42 single-wire, 2166 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L62_deg15_P2 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 - note (T-count): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 - note (reduced degree): not computed: exact minimisation is over GL(8,2) and a punctured RM(8-4,8) coset, neither feasible at k=8
 
@@ -44591,9 +44591,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `S† on 2`, `Z on 3`, `Z on 4`, `Z on 6`, `Z on 7`, `Z on 8`, `Z on 9`, `Z on 10`, `Z on 15`, `Z on 16`, `Z on 21` and 2270 more (44 single-wire, 2238 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search (gamma frontier): San José GRS construction — a factory of San José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
+- regime: AI search (gamma frontier): San-José GRS construction — a factory of San-José's construction (arXiv:2609.08203) built by the gamma frontier release, a GRS outer code over GF(2^m) mapped to binary; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search (gamma frontier): San José GRS construction` · sj_m6_L62_deg15_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
+- source: `AI search (gamma frontier): San-José GRS construction` · sj_m6_L62_deg15_P1 (`rebuilt by master_catalog/construction_sanjose.py; sparse: release record`)
 
 - 854 columns, built by the san-jose-grs construction (k=4, N=94, field_degree=6, field_modulus=67, embedding_columns=[1, 4, 7, 8, 10, 11, 12, 27, 29, 34, 43, 44, 50, 54], compatible_elements=[63, 61, 41, 37], outer_length=62, outer_degree=15, punctures=[0], echelon=reduced); see `master_catalog_large.json`, `factories[124]`
 
@@ -46014,9 +46014,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 1`, `S† on 2`, `Z on 3`, `Z on 5`, `S† on 6`, `Z on 7`, `S† on 9`, `S on 10`, `S† on 11`, `S on 13`, `Z on 14`, `S† on 15` and 4547 more (95 single-wire, 4464 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · 174be196599cb2419199eb7b37d1e73e52523daadf437624c453bb2b11d2ee46 (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
+- source: `AI search: San-José construction beyond the release` · 174be196599cb2419199eb7b37d1e73e52523daadf437624c453bb2b11d2ee46 (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
 - note (T-count): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 - note (reduced degree): not computed: exact minimisation is over GL(36,2) and a punctured RM(36-4,36) coset, neither feasible at k=36
 
@@ -46032,9 +46032,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `Z on 2`, `S† on 3`, `Z on 4`, `S on 5`, `Z on 6`, `S on 7`, `S† on 9`, `S on 11`, `S on 13`, `Z on 14` and 4186 more (81 single-wire, 4117 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · f9463a96336a534defc4d131bc636e5de0c77f959274bf3b08ed71007fe48e97 (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
+- source: `AI search: San-José construction beyond the release` · f9463a96336a534defc4d131bc636e5de0c77f959274bf3b08ed71007fe48e97 (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
 - note (T-count): not computed: exact minimisation is over GL(52,2) and a punctured RM(52-4,52) coset, neither feasible at k=52
 - note (reduced degree): not computed: exact minimisation is over GL(52,2) and a punctured RM(52-4,52) coset, neither feasible at k=52
 
@@ -46050,9 +46050,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 0`, `Z on 1`, `S on 2`, `S† on 3`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 8`, `S on 9`, `Z on 10`, `S on 12` and 3969 more (91 single-wire, 3890 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · 176ab77b5e8fe520d5315bacd9a455bb983deec8f6bc88d0062018bea3bfe332 (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
+- source: `AI search: San-José construction beyond the release` · 176ab77b5e8fe520d5315bacd9a455bb983deec8f6bc88d0062018bea3bfe332 (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
 - note (T-count): not computed: exact minimisation is over GL(68,2) and a punctured RM(68-4,68) coset, neither feasible at k=68
 - note (reduced degree): not computed: exact minimisation is over GL(68,2) and a punctured RM(68-4,68) coset, neither feasible at k=68
 
@@ -46085,9 +46085,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `Z on 1`, `S† on 2`, `S† on 3`, `S† on 4`, `Z on 5`, `S† on 8`, `Z on 10`, `Z on 11`, `S† on 12`, `S† on 13`, `Z on 14` and 4669 more (103 single-wire, 4578 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · 5574ab61359aa75f0e8316bf0516d164d1e5c958f8ac0c6ccd52e871163f23cb (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
+- source: `AI search: San-José construction beyond the release` · 5574ab61359aa75f0e8316bf0516d164d1e5c958f8ac0c6ccd52e871163f23cb (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
 - note (T-count): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 - note (reduced degree): not computed: exact minimisation is over GL(32,2) and a punctured RM(32-4,32) coset, neither feasible at k=32
 
@@ -46103,9 +46103,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S† on 1`, `S† on 3`, `S on 5`, `Z on 6`, `S† on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S† on 11`, `S† on 13`, `Z on 14` and 4467 more (80 single-wire, 4399 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · e8780b3231bf636185f60d0f02f7761bfafaae65007a1d92218780a43c6fea6b (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
+- source: `AI search: San-José construction beyond the release` · e8780b3231bf636185f60d0f02f7761bfafaae65007a1d92218780a43c6fea6b (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
 - note (T-count): not computed: exact minimisation is over GL(48,2) and a punctured RM(48-4,48) coset, neither feasible at k=48
 - note (reduced degree): not computed: exact minimisation is over GL(48,2) and a punctured RM(48-4,48) coset, neither feasible at k=48
 
@@ -46121,9 +46121,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S on 1`, `S on 3`, `S on 4`, `S on 5`, `S on 7`, `S on 8`, `Z on 11`, `S on 13`, `S† on 14`, `S on 15`, `Z on 16` and 4108 more (89 single-wire, 4031 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · f8545b75c0dbe305ad5ee4ffc2187671da928dea6fb44c47972f201411185971 (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
+- source: `AI search: San-José construction beyond the release` · f8545b75c0dbe305ad5ee4ffc2187671da928dea6fb44c47972f201411185971 (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
 - note (T-count): not computed: exact minimisation is over GL(64,2) and a punctured RM(64-4,64) coset, neither feasible at k=64
 - note (reduced degree): not computed: exact minimisation is over GL(64,2) and a punctured RM(64-4,64) coset, neither feasible at k=64
 
@@ -46189,9 +46189,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S† on 1`, `Z on 2`, `S† on 3`, `Z on 4`, `S on 5`, `Z on 6`, `S† on 7`, `S on 9`, `Z on 10`, `S† on 11`, `S† on 13`, `S on 15` and 4650 more (71 single-wire, 4591 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · 1ffffeccc4f21e516f24dc24f091e60e334524108dc99718f790d9e8b2f1e93a (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
+- source: `AI search: San-José construction beyond the release` · 1ffffeccc4f21e516f24dc24f091e60e334524108dc99718f790d9e8b2f1e93a (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
 - note (T-count): not computed: exact minimisation is over GL(44,2) and a punctured RM(44-4,44) coset, neither feasible at k=44
 - note (reduced degree): not computed: exact minimisation is over GL(44,2) and a punctured RM(44-4,44) coset, neither feasible at k=44
 
@@ -46207,9 +46207,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `S on 0`, `S† on 1`, `Z on 3`, `Z on 4`, `Z on 6`, `Z on 8`, `S on 11`, `S on 12`, `S† on 13`, `S† on 14`, `Z on 15`, `S† on 18` and 4246 more (97 single-wire, 4161 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · 90e903a45479075b51b34a0d6938b494aa4a001e236c9bcdb0b7fa84654e90d3 (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
+- source: `AI search: San-José construction beyond the release` · 90e903a45479075b51b34a0d6938b494aa4a001e236c9bcdb0b7fa84654e90d3 (`rebuilt by master_catalog/construction_sanjose.py; sanjose2: GRS chosen R, GF(128)`)
 - note (T-count): not computed: exact minimisation is over GL(60,2) and a punctured RM(60-4,60) coset, neither feasible at k=60
 - note (reduced degree): not computed: exact minimisation is over GL(60,2) and a punctured RM(60-4,60) coset, neither feasible at k=60
 
@@ -46617,9 +46617,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 3`, `Z on 4`, `S on 5`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S on 11`, `Z on 12`, `S† on 13` and 5459 more (104 single-wire, 5367 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m7_L126_deg31_P26 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
+- source: `AI search: San-José construction beyond the release` · sjL_m7_L126_deg31_P26 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
 - note (T-count): not computed: exact minimisation is over GL(104,2) and a punctured RM(104-4,104) coset, neither feasible at k=104
 - note (reduced degree): not computed: exact minimisation is over GL(104,2) and a punctured RM(104-4,104) coset, neither feasible at k=104
 
@@ -46635,9 +46635,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 3`, `Z on 4`, `S on 5`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S on 11`, `Z on 12`, `S† on 13` and 5687 more (105 single-wire, 5594 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m7_L126_deg31_P25 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
+- source: `AI search: San-José construction beyond the release` · sjL_m7_L126_deg31_P25 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
 - note (T-count): not computed: exact minimisation is over GL(100,2) and a punctured RM(100-4,100) coset, neither feasible at k=100
 - note (reduced degree): not computed: exact minimisation is over GL(100,2) and a punctured RM(100-4,100) coset, neither feasible at k=100
 
@@ -46670,9 +46670,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 3`, `Z on 4`, `S on 5`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S on 11`, `Z on 12`, `S† on 13` and 5926 more (106 single-wire, 5832 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m7_L126_deg31_P24 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
+- source: `AI search: San-José construction beyond the release` · sjL_m7_L126_deg31_P24 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
 - note (T-count): not computed: exact minimisation is over GL(96,2) and a punctured RM(96-4,96) coset, neither feasible at k=96
 - note (reduced degree): not computed: exact minimisation is over GL(96,2) and a punctured RM(96-4,96) coset, neither feasible at k=96
 
@@ -46725,9 +46725,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 3`, `Z on 4`, `S on 5`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S on 11`, `Z on 12`, `S† on 13` and 6165 more (104 single-wire, 6073 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m7_L126_deg31_P23 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
+- source: `AI search: San-José construction beyond the release` · sjL_m7_L126_deg31_P23 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
 - note (T-count): not computed: exact minimisation is over GL(92,2) and a punctured RM(92-4,92) coset, neither feasible at k=92
 - note (reduced degree): not computed: exact minimisation is over GL(92,2) and a punctured RM(92-4,92) coset, neither feasible at k=92
 
@@ -46743,9 +46743,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 3`, `Z on 4`, `S on 5`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S on 11`, `Z on 12`, `S† on 13` and 6412 more (102 single-wire, 6322 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m7_L126_deg31_P22 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
+- source: `AI search: San-José construction beyond the release` · sjL_m7_L126_deg31_P22 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
 - note (T-count): not computed: exact minimisation is over GL(88,2) and a punctured RM(88-4,88) coset, neither feasible at k=88
 - note (reduced degree): not computed: exact minimisation is over GL(88,2) and a punctured RM(88-4,88) coset, neither feasible at k=88
 
@@ -46761,9 +46761,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 3`, `Z on 4`, `S on 5`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S on 11`, `Z on 12`, `S† on 13` and 6638 more (102 single-wire, 6548 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m7_L126_deg31_P21 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
+- source: `AI search: San-José construction beyond the release` · sjL_m7_L126_deg31_P21 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
 - note (T-count): not computed: exact minimisation is over GL(84,2) and a punctured RM(84-4,84) coset, neither feasible at k=84
 - note (reduced degree): not computed: exact minimisation is over GL(84,2) and a punctured RM(84-4,84) coset, neither feasible at k=84
 
@@ -46817,9 +46817,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 3`, `Z on 4`, `S on 5`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S on 11`, `Z on 12`, `S† on 13` and 6869 more (102 single-wire, 6779 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m7_L126_deg31_P20 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
+- source: `AI search: San-José construction beyond the release` · sjL_m7_L126_deg31_P20 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
 - note (T-count): not computed: exact minimisation is over GL(80,2) and a punctured RM(80-4,80) coset, neither feasible at k=80
 - note (reduced degree): not computed: exact minimisation is over GL(80,2) and a punctured RM(80-4,80) coset, neither feasible at k=80
 
@@ -46835,9 +46835,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 3`, `Z on 4`, `S on 5`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S on 11`, `Z on 12`, `S† on 13` and 7128 more (103 single-wire, 7037 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m7_L126_deg31_P19 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
+- source: `AI search: San-José construction beyond the release` · sjL_m7_L126_deg31_P19 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
 - note (T-count): not computed: exact minimisation is over GL(76,2) and a punctured RM(76-4,76) coset, neither feasible at k=76
 - note (reduced degree): not computed: exact minimisation is over GL(76,2) and a punctured RM(76-4,76) coset, neither feasible at k=76
 
@@ -46853,9 +46853,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 3`, `Z on 4`, `S on 5`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S on 11`, `Z on 12`, `S† on 13` and 7403 more (104 single-wire, 7311 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m7_L126_deg31_P18 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
+- source: `AI search: San-José construction beyond the release` · sjL_m7_L126_deg31_P18 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
 - note (T-count): not computed: exact minimisation is over GL(72,2) and a punctured RM(72-4,72) coset, neither feasible at k=72
 - note (reduced degree): not computed: exact minimisation is over GL(72,2) and a punctured RM(72-4,72) coset, neither feasible at k=72
 
@@ -46871,9 +46871,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 3`, `Z on 4`, `S on 5`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S on 11`, `Z on 12`, `S† on 13` and 7684 more (105 single-wire, 7591 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m7_L126_deg31_P17 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
+- source: `AI search: San-José construction beyond the release` · sjL_m7_L126_deg31_P17 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
 - note (T-count): not computed: exact minimisation is over GL(68,2) and a punctured RM(68-4,68) coset, neither feasible at k=68
 - note (reduced degree): not computed: exact minimisation is over GL(68,2) and a punctured RM(68-4,68) coset, neither feasible at k=68
 
@@ -46925,9 +46925,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 3`, `Z on 4`, `S on 5`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S on 11`, `Z on 12`, `S† on 13` and 7972 more (106 single-wire, 7878 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m7_L126_deg31_P16 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
+- source: `AI search: San-José construction beyond the release` · sjL_m7_L126_deg31_P16 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
 - note (T-count): not computed: exact minimisation is over GL(64,2) and a punctured RM(64-4,64) coset, neither feasible at k=64
 - note (reduced degree): not computed: exact minimisation is over GL(64,2) and a punctured RM(64-4,64) coset, neither feasible at k=64
 
@@ -46961,9 +46961,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 3`, `Z on 4`, `S on 5`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S on 11`, `Z on 12`, `S† on 13` and 8269 more (108 single-wire, 8173 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m7_L126_deg31_P15 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
+- source: `AI search: San-José construction beyond the release` · sjL_m7_L126_deg31_P15 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
 - note (T-count): not computed: exact minimisation is over GL(60,2) and a punctured RM(60-4,60) coset, neither feasible at k=60
 - note (reduced degree): not computed: exact minimisation is over GL(60,2) and a punctured RM(60-4,60) coset, neither feasible at k=60
 
@@ -47060,9 +47060,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 3`, `Z on 4`, `S on 5`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S on 11`, `Z on 12`, `S† on 13` and 8569 more (110 single-wire, 8471 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m7_L126_deg31_P14 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
+- source: `AI search: San-José construction beyond the release` · sjL_m7_L126_deg31_P14 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
 - note (T-count): not computed: exact minimisation is over GL(56,2) and a punctured RM(56-4,56) coset, neither feasible at k=56
 - note (reduced degree): not computed: exact minimisation is over GL(56,2) and a punctured RM(56-4,56) coset, neither feasible at k=56
 
@@ -47110,9 +47110,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `S on 3`, `Z on 4`, `S on 5`, `S on 7`, `Z on 8`, `S† on 9`, `Z on 10`, `S on 11`, `Z on 12`, `S† on 13` and 8821 more (109 single-wire, 8724 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m7_L126_deg31_P13 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
+- source: `AI search: San-José construction beyond the release` · sjL_m7_L126_deg31_P13 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(128) L=126`)
 - note (T-count): not computed: exact minimisation is over GL(52,2) and a punctured RM(52-4,52) coset, neither feasible at k=52
 - note (reduced degree): not computed: exact minimisation is over GL(52,2) and a punctured RM(52-4,52) coset, neither feasible at k=52
 
@@ -48666,9 +48666,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 29529 more (214 single-wire, 29327 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P56 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P56 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(280,2) and a punctured RM(280-4,280) coset, neither feasible at k=280
 - note (reduced degree): not computed: exact minimisation is over GL(280,2) and a punctured RM(280-4,280) coset, neither feasible at k=280
 
@@ -48684,9 +48684,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 30039 more (215 single-wire, 29836 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P55 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P55 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(275,2) and a punctured RM(275-4,275) coset, neither feasible at k=275
 - note (reduced degree): not computed: exact minimisation is over GL(275,2) and a punctured RM(275-4,275) coset, neither feasible at k=275
 
@@ -48702,9 +48702,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 30561 more (216 single-wire, 30357 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P54 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P54 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(270,2) and a punctured RM(270-4,270) coset, neither feasible at k=270
 - note (reduced degree): not computed: exact minimisation is over GL(270,2) and a punctured RM(270-4,270) coset, neither feasible at k=270
 
@@ -48720,9 +48720,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 31092 more (214 single-wire, 30890 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P53 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P53 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(265,2) and a punctured RM(265-4,265) coset, neither feasible at k=265
 - note (reduced degree): not computed: exact minimisation is over GL(265,2) and a punctured RM(265-4,265) coset, neither feasible at k=265
 
@@ -48738,9 +48738,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 31625 more (212 single-wire, 31425 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P52 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P52 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(260,2) and a punctured RM(260-4,260) coset, neither feasible at k=260
 - note (reduced degree): not computed: exact minimisation is over GL(260,2) and a punctured RM(260-4,260) coset, neither feasible at k=260
 
@@ -48756,9 +48756,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 32134 more (213 single-wire, 31933 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P51 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P51 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(255,2) and a punctured RM(255-4,255) coset, neither feasible at k=255
 - note (reduced degree): not computed: exact minimisation is over GL(255,2) and a punctured RM(255-4,255) coset, neither feasible at k=255
 
@@ -48774,9 +48774,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 32641 more (214 single-wire, 32439 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P50 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P50 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(250,2) and a punctured RM(250-4,250) coset, neither feasible at k=250
 - note (reduced degree): not computed: exact minimisation is over GL(250,2) and a punctured RM(250-4,250) coset, neither feasible at k=250
 
@@ -48792,9 +48792,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 33153 more (217 single-wire, 32948 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P49 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P49 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(245,2) and a punctured RM(245-4,245) coset, neither feasible at k=245
 - note (reduced degree): not computed: exact minimisation is over GL(245,2) and a punctured RM(245-4,245) coset, neither feasible at k=245
 
@@ -48810,9 +48810,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 33678 more (220 single-wire, 33470 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P48 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P48 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(240,2) and a punctured RM(240-4,240) coset, neither feasible at k=240
 - note (reduced degree): not computed: exact minimisation is over GL(240,2) and a punctured RM(240-4,240) coset, neither feasible at k=240
 
@@ -48862,9 +48862,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 34218 more (218 single-wire, 34012 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P47 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P47 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(235,2) and a punctured RM(235-4,235) coset, neither feasible at k=235
 - note (reduced degree): not computed: exact minimisation is over GL(235,2) and a punctured RM(235-4,235) coset, neither feasible at k=235
 
@@ -48913,9 +48913,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 34769 more (216 single-wire, 34565 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P46 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P46 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(230,2) and a punctured RM(230-4,230) coset, neither feasible at k=230
 - note (reduced degree): not computed: exact minimisation is over GL(230,2) and a punctured RM(230-4,230) coset, neither feasible at k=230
 
@@ -48931,9 +48931,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 35344 more (216 single-wire, 35140 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P45 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P45 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(225,2) and a punctured RM(225-4,225) coset, neither feasible at k=225
 - note (reduced degree): not computed: exact minimisation is over GL(225,2) and a punctured RM(225-4,225) coset, neither feasible at k=225
 
@@ -48949,9 +48949,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 35930 more (216 single-wire, 35726 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P44 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P44 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(220,2) and a punctured RM(220-4,220) coset, neither feasible at k=220
 - note (reduced degree): not computed: exact minimisation is over GL(220,2) and a punctured RM(220-4,220) coset, neither feasible at k=220
 
@@ -48967,9 +48967,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 36518 more (219 single-wire, 36311 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P43 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P43 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(215,2) and a punctured RM(215-4,215) coset, neither feasible at k=215
 - note (reduced degree): not computed: exact minimisation is over GL(215,2) and a punctured RM(215-4,215) coset, neither feasible at k=215
 
@@ -48985,9 +48985,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 37101 more (222 single-wire, 36891 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P42 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P42 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(210,2) and a punctured RM(210-4,210) coset, neither feasible at k=210
 - note (reduced degree): not computed: exact minimisation is over GL(210,2) and a punctured RM(210-4,210) coset, neither feasible at k=210
 
@@ -49003,9 +49003,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 37691 more (220 single-wire, 37483 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P41 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P41 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(205,2) and a punctured RM(205-4,205) coset, neither feasible at k=205
 - note (reduced degree): not computed: exact minimisation is over GL(205,2) and a punctured RM(205-4,205) coset, neither feasible at k=205
 
@@ -49021,9 +49021,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 38282 more (218 single-wire, 38076 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P40 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P40 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(200,2) and a punctured RM(200-4,200) coset, neither feasible at k=200
 - note (reduced degree): not computed: exact minimisation is over GL(200,2) and a punctured RM(200-4,200) coset, neither feasible at k=200
 
@@ -49039,9 +49039,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 38880 more (221 single-wire, 38671 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P39 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P39 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(195,2) and a punctured RM(195-4,195) coset, neither feasible at k=195
 - note (reduced degree): not computed: exact minimisation is over GL(195,2) and a punctured RM(195-4,195) coset, neither feasible at k=195
 
@@ -49091,9 +49091,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 39488 more (224 single-wire, 39276 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P38 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P38 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(190,2) and a punctured RM(190-4,190) coset, neither feasible at k=190
 - note (reduced degree): not computed: exact minimisation is over GL(190,2) and a punctured RM(190-4,190) coset, neither feasible at k=190
 
@@ -49109,9 +49109,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 40052 more (224 single-wire, 39840 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P37 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P37 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(185,2) and a punctured RM(185-4,185) coset, neither feasible at k=185
 - note (reduced degree): not computed: exact minimisation is over GL(185,2) and a punctured RM(185-4,185) coset, neither feasible at k=185
 
@@ -49144,9 +49144,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 40627 more (224 single-wire, 40415 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P36 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P36 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(180,2) and a punctured RM(180-4,180) coset, neither feasible at k=180
 - note (reduced degree): not computed: exact minimisation is over GL(180,2) and a punctured RM(180-4,180) coset, neither feasible at k=180
 
@@ -49226,9 +49226,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 41285 more (224 single-wire, 41073 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P35 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P35 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(175,2) and a punctured RM(175-4,175) coset, neither feasible at k=175
 - note (reduced degree): not computed: exact minimisation is over GL(175,2) and a punctured RM(175-4,175) coset, neither feasible at k=175
 
@@ -49308,9 +49308,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 41939 more (224 single-wire, 41727 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P34 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P34 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(170,2) and a punctured RM(170-4,170) coset, neither feasible at k=170
 - note (reduced degree): not computed: exact minimisation is over GL(170,2) and a punctured RM(170-4,170) coset, neither feasible at k=170
 
@@ -49343,9 +49343,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 42582 more (226 single-wire, 42368 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P33 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P33 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(165,2) and a punctured RM(165-4,165) coset, neither feasible at k=165
 - note (reduced degree): not computed: exact minimisation is over GL(165,2) and a punctured RM(165-4,165) coset, neither feasible at k=165
 
@@ -49361,9 +49361,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 43211 more (228 single-wire, 42995 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P32 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P32 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(160,2) and a punctured RM(160-4,160) coset, neither feasible at k=160
 - note (reduced degree): not computed: exact minimisation is over GL(160,2) and a punctured RM(160-4,160) coset, neither feasible at k=160
 
@@ -49379,9 +49379,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 43792 more (225 single-wire, 43579 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P31 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P31 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(155,2) and a punctured RM(155-4,155) coset, neither feasible at k=155
 - note (reduced degree): not computed: exact minimisation is over GL(155,2) and a punctured RM(155-4,155) coset, neither feasible at k=155
 
@@ -49414,9 +49414,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 44395 more (222 single-wire, 44185 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P30 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P30 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(150,2) and a punctured RM(150-4,150) coset, neither feasible at k=150
 - note (reduced degree): not computed: exact minimisation is over GL(150,2) and a punctured RM(150-4,150) coset, neither feasible at k=150
 
@@ -49432,9 +49432,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 45051 more (223 single-wire, 44840 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P29 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P29 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(145,2) and a punctured RM(145-4,145) coset, neither feasible at k=145
 - note (reduced degree): not computed: exact minimisation is over GL(145,2) and a punctured RM(145-4,145) coset, neither feasible at k=145
 
@@ -49467,9 +49467,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 45701 more (224 single-wire, 45489 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P28 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P28 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(140,2) and a punctured RM(140-4,140) coset, neither feasible at k=140
 - note (reduced degree): not computed: exact minimisation is over GL(140,2) and a punctured RM(140-4,140) coset, neither feasible at k=140
 
@@ -49485,9 +49485,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 46434 more (224 single-wire, 46222 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P27 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P27 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(135,2) and a punctured RM(135-4,135) coset, neither feasible at k=135
 - note (reduced degree): not computed: exact minimisation is over GL(135,2) and a punctured RM(135-4,135) coset, neither feasible at k=135
 
@@ -49503,9 +49503,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 47178 more (224 single-wire, 46966 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P26 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P26 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(130,2) and a punctured RM(130-4,130) coset, neither feasible at k=130
 - note (reduced degree): not computed: exact minimisation is over GL(130,2) and a punctured RM(130-4,130) coset, neither feasible at k=130
 
@@ -49521,9 +49521,9 @@ SHA-256 of those columns.
 - Clifford correction, every rotation a `T`: `Z on 0`, `S on 1`, `Z on 2`, `Z on 4`, `Z on 5`, `S on 6`, `Z on 7`, `Z on 9`, `Z on 10`, `S on 11`, `Z on 13`, `Z on 15` and 47805 more (223 single-wire, 47594 CZ in all)
 - no choice of rotation powers avoids it: `S`/`CZ` gates are needed
 - discovery: AI search
-- regime: AI search: San José construction beyond the release — a factory of San José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
+- regime: AI search: San-José construction beyond the release — a factory of San-José's construction (arXiv:2609.08203) that the gamma frontier release did not build, made by the catalogue's own searches of 6 and 7 November 2026; a verified witness, not a maximum
 - citation: [Jain et al. (2026)](https://arxiv.org/abs/2610.06535)
-- source: `AI search: San José construction beyond the release` · sjL_m8_L254_deg63_P25 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
+- source: `AI search: San-José construction beyond the release` · sjL_m8_L254_deg63_P25 (`rebuilt by master_catalog/construction_sanjose.py; sparse: beyond the release, GF(256) L=254`)
 - note (T-count): not computed: exact minimisation is over GL(125,2) and a punctured RM(125-4,125) coset, neither feasible at k=125
 - note (reduced degree): not computed: exact minimisation is over GL(125,2) and a punctured RM(125-4,125) coset, neither feasible at k=125
 

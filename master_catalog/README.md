@@ -186,7 +186,7 @@ faults that make `935.89.7.a`, `936.88.7.a` and `998.26.8.a` exact, more
 evidence on rows such as `599.1.15.a` and `988.36.7.a`, exact `A_d` counts,
 and `d = 6` on the row now labelled `1715.287.6.a`.
 [`migrations/sanjose_theorem_2026_11_07.py`](migrations/sanjose_theorem_2026_11_07.py)
-checked San José's theorem (arXiv:2609.08203) on the columns of two gamma
+checked San-José's theorem (arXiv:2609.08203) on the columns of two gamma
 frontier rows, so `756.32.6.a` became `756.32.9.a`.
 [`migrations/research_faults_2026_11_07.py`](migrations/research_faults_2026_11_07.py)
 made `218.5.7.a` and `708.58.6.a` exact with faults the research found, and
@@ -259,7 +259,7 @@ the AI searches; and
 took "undominated" out of the 84 release San-José rows' provenance (see
 [Records](#records)).
 [`migrations/provenance_742_756_2026_11_07.py`](migrations/provenance_742_756_2026_11_07.py)
-filed `742.36.8.a` and `756.32.9.a` under "AI search (gamma frontier): San José
+filed `742.36.8.a` and `756.32.9.a` under "AI search (gamma frontier): San-José
 GRS construction": the release's recipes for them are San-José GRS codes
 (category `san_jose_grs`), which the 2026-09-16 migration had filed under
 Wills's parent codes by the name of the release folder that holds both kinds.
@@ -710,7 +710,7 @@ The header, in order:
 | `AI search: punctured RM(3,10) lift and regrowth` | RM(3,10) punctured at searched sets (Haah and Hastings's construction), from the catalogue's lift search of 6 to 7 November 2026; `d` = 7 or 8 by mitml sweeps run here (`round1_certificates/`) |
 | `AI search: CCZ frame on RM(3,12)` | the CCZ frame with 55 disjoint CCZ triples, `d = 16` by the frame theorem checked from the columns (`theorem_certificates/`) |
 | `AI search: punctured weighted Reed-Muller parents`, `AI search: weighted Reed-Muller parent on 11 variables` | Wills's weighted Reed–Muller codes (arXiv:2608.24000) punctured at searched sets, from the sparse-cells search of 6 November 2026 (`[[480,32,6]]`, `[[479,33,5]]`) and the weighted search of 7 November 2026 (`[[1842,206,7]]`, `[[1845,203,7]]`, `[[1893,155,8]]`, `[[1894,154,8]]`, `d = 8` by mitml sweeps and the fibre theorem) |
-| `AI search (gamma frontier): San José GRS construction`, `AI search: San José construction beyond the release` | San-José's construction (arXiv:2609.08203): the gamma frontier release's records, and circuits of the same construction the catalogue's own searches built; `d` from his theorem, its hypotheses checked from the columns (`theorem_certificates/`), exact where a fault of that weight is known |
+| `AI search (gamma frontier): San-José GRS construction`, `AI search: San-José construction beyond the release` | San-José's construction (arXiv:2609.08203): the gamma frontier release's records, and circuits of the same construction the catalogue's own searches built; `d` from his theorem, its hypotheses checked from the columns (`theorem_certificates/`), exact where a fault of that weight is known |
 | `AI search: four-block distance-3 factories` | punctured four-block parents at `d = 3` from the catalogue's second-round strategist and four-block searches; low `A_3` rather than new `(n, k)` |
 | `AI search: small distance-5 and 6 factories` | three small factories at `d = 5` and 6 from the catalogue's second-round search, `[[93,3,5]]`, `[[127,9,5]]` and `[[128,7,6]]`; the sweep here proves each distance |
 | `Vuillot-Breuckmann pin codes`, `Bravyi-Haah distance-2 family`, `Campbell-Howard distance-2 families`, `Berardini et al. doubling` | published factories the catalogue lacked, rebuilt by its second-round search from the constructions their papers give (arXiv:1906.11394, arXiv:1209.2426, arXiv:1606.01904, arXiv:2412.08586) and credited to those papers |

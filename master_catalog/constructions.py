@@ -44,7 +44,7 @@ THE FAMILIES
     compares the two on every level-3 row of the upstream large sweep.
 
 ``san-jose-grs``, ``san-jose-curve``
-    San Jose's factories: an outer code over GF(2^m) (a generalised
+    San-José's factories: an outer code over GF(2^m) (a generalised
     Reed-Solomon code, or the one-point code of the curve y^t + y = x^e) is
     punctured at a chosen set of coordinates and mapped to binary through an
     inner map.  Built by `construction_sanjose.py`, which also holds the

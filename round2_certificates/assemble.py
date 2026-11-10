@@ -163,7 +163,7 @@ def native_position(cons):
 def translations():
     """The research's digest of its own column order -> the construction
     object, for every research circuit the catalogue imports as a
-    construction: the San Jose circuits of `theorem_certificates/inputs.json`
+    construction: the San-José circuits of `theorem_certificates/inputs.json`
     (native order = `construction_sanjose.build`) and the Reed-Muller-type
     circuits of `round1_certificates/evidence/research/native_digests.json`
     and `evidence/weighted/circuits.json`, whose recorded research digest is
@@ -361,7 +361,7 @@ def assemble():
                       f"round2_certificates/evidence/own_sweep_1715.json), as the "
                       f"research's run of the same code at dadb221 found "
                       f"(evidence/plan/data/own_sweeps.jsonl)", "1715.287.3.a")
-    # faults at San Jose's bound on the GF(256) rows, found by sjfast on
+    # faults at San-José's bound on the GF(256) rows, found by sjfast on
     # Zaratan and re-checked there; re-checked again here on the stored order
     for rec in jsonl(DIST / "data" / "zaratan" / "sjfast_recheck.jsonl"):
         if not rec.get("ok"):

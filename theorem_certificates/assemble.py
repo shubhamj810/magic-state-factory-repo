@@ -14,7 +14,7 @@ how the large file stores a construction.  On exactly those columns it runs
 the theorem's own check and writes one record, bound to them by the SHA-256
 of the columns (`constructions.digest`), with the bound the check proves:
 
-* **San Jose's theorem** (`construction_sanjose.hypothesis_check`):
+* **San-José's theorem** (`construction_sanjose.hypothesis_check`):
   ``d >= delta - P``, where ``delta`` is the outer code's dual distance and P
   the number of punctured coordinates; the check decodes the binary columns
   back to the outer code and verifies every hypothesis it uses;
@@ -46,7 +46,7 @@ import faultcore as FC                                            # noqa: E402
 
 INPUTS = HERE / "inputs.json"
 OUT = HERE / "certificates.json"
-SANJOSE = ("San Jose's distance theorem d >= delta - P, its hypotheses checked "
+SANJOSE = ("San-José's distance theorem d >= delta - P, its hypotheses checked "
            "from the columns by master_catalog/construction_sanjose.py "
            "(hypothesis_check)")
 FRAME = ("the CCZ frame theorem d = 2^q, its hypotheses checked by "
@@ -135,7 +135,7 @@ def main(argv=None):
     records = assemble()
     text = render({
         "about": ("Distance bounds from theorems whose hypotheses this repository "
-                  "checks from the columns: San Jose's theorem for the GRS and "
+                  "checks from the columns: San-José's theorem for the GRS and "
                   "curve outer codes, and the CCZ frame theorem. Each record is "
                   "bound to the circuit by columns_sha256 (constructions.digest of "
                   "the columns as the catalogue stores them, or in the sorted order "

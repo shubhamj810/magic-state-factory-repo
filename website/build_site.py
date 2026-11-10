@@ -152,7 +152,7 @@ ARXIV = re.compile(r"arXiv:(\d{4}\.\d{4,5})")
 def named_references(row: dict, catalog: dict) -> list[str]:
     """The references a row's regime sentences name by arXiv number that no
     row of the catalogue cites: papers in the references only for a
-    construction the AI searches used (San-Jose's GRS construction and Wills's
+    construction the AI searches used (San-José's GRS construction and Wills's
     parent codes, the owner's decision of 2026-11-07: credit the search, name
     the paper).  They are shown beside the provenance and never as the row's
     source, which is ``citations`` alone.  A paper some row cites is credit

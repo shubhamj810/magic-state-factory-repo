@@ -57,7 +57,7 @@ The catalogue holds **3019 classes**:
   [`master_catalog_large.json`](master_catalog/master_catalog_large.json),
   because their columns would take the main file past GitHub's recommended
   50 MB: 787 as the rule that builds them (604 two-group circuits of 1026 to
-  262142 rotations, 138 San José GRS codes, 32 four-block circuits, 12
+  262142 rotations, 138 San-José GRS codes, 32 four-block circuits, 12
   punctured Reed–Muller codes and one `CCZ`-frame circuit), and 82 as their
   columns, compressed;
 - 229 classes with `n <= 54` and `d >= 3`, including all 74 Pareto points of

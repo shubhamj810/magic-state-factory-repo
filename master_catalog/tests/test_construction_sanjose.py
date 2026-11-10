@@ -1,7 +1,7 @@
-"""`construction_sanjose`: the San José builder and its hypothesis check.
+"""`construction_sanjose`: the San-José builder and its hypothesis check.
 
 * **The catalogue rows.**  742.36.8.a and 756.32.6.a came from the
-  gamma-frontier release's San José records ``sj_m6_L62_deg15_P9`` and
+  gamma-frontier release's San-José records ``sj_m6_L62_deg15_P9`` and
   ``..._P8``.  The builder gives their columns exactly, in the stored order
   too (the catalogue keeps them in build order, with no relabelling of
   outputs), and `hypothesis_check` proves d >= 8 and d >= 9 on the stored
@@ -101,12 +101,12 @@ class CatalogueRows(unittest.TestCase):
         cls.r742, cls.r756 = stored_rows()
 
     def test_filed_under_san_jose(self):
-        """Both rows are San-Jose GRS codes of the gamma frontier release, and
+        """Both rows are San-José GRS codes of the gamma frontier release, and
         are filed under that regime (provenance_742_756_2026_11_07.py), not
         under Wills's parent codes."""
         for row in (self.r742, self.r756):
             self.assertEqual(row["regimes"],
-                             ["AI search (gamma frontier): San José GRS construction"])
+                             ["AI search (gamma frontier): San-José GRS construction"])
             self.assertIn("san_jose_grs", row["sources"][0]["origin"])
 
     def test_parameters(self):

@@ -1,5 +1,5 @@
 {
- "about": "The circuits theorem_certificates/assemble.py certifies: a name, the research file it came from, the construction object (master_catalog/constructions.py) and, where the research found one, a fault at the bound as column indices in the sorted order of the construction. Gathered on 2026-11-07 from the research branch (San Jose: research/search/sparse at 1300c55 and research/search2/sanjose2 at 49eeea4; CCZ frame: research/search/parents at 1300c55).",
+ "about": "The circuits theorem_certificates/assemble.py certifies: a name, the research file it came from, the construction object (master_catalog/constructions.py) and, where the research found one, a fault at the bound as column indices in the sorted order of the construction. Gathered on 2026-11-07 from the research branch (San-José: research/search/sparse at 1300c55 and research/search2/sanjose2 at 49eeea4; CCZ frame: research/search/parents at 1300c55).",
  "circuits": [
   {
    "name": "sj_m4_L14_deg3_P1",

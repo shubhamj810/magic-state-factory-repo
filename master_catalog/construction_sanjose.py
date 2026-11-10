@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""San José's factories as a catalogue construction, and a column-level check
+"""San-José's factories as a catalogue construction, and a column-level check
 of the hypotheses of their distance bound.
 
-San José (arXiv:2609.08203, as the gamma-frontier release cites it; the
+San-José (arXiv:2609.08203, as the gamma-frontier release cites it; the
 release's recipe is ``gamma_frontier_release/sources/pass4/san_jose/
 normalized.json``) builds a triorthogonal binary matrix from a code over
 F = GF(2^m).  This module turns a small object naming the field data, the
@@ -180,14 +180,14 @@ _TAIL = (
 
 DESCRIPTIONS = {
     GRS: (
-        "San José's construction (arXiv:2609.08203) from a generalised "
+        "San-José's construction (arXiv:2609.08203) from a generalised "
         "Reed-Solomon code over F = GF(2^m), m = field_degree, elements as "
         "polynomial-basis bitmasks reduced by field_modulus. Points a = "
         "0..L-1 (L = outer_length); r_a = 1/prod_{b != a}(a + b); v_a = "
         "r_a^(2^m/4). Generator rows (v_a a^e)_a, e = 0..D (D = outer_degree, "
         "0^0 = 1). " + _TAIL + " Distance at least D + 2 - P."),
     CURVE: (
-        "San José's construction (arXiv:2609.08203) with the outer code from "
+        "San-José's construction (arXiv:2609.08203) with the outer code from "
         "a curve over F = GF(2^m), m = field_degree, elements as "
         "polynomial-basis bitmasks reduced by field_modulus. K = "
         "curve_subspace (t elements, an F_2-subspace), e = curve_exponent, "
