@@ -91,7 +91,22 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.second.outputs.page_url || steps.third.outputs.page_url }}
     steps:
+      # deploy-pages stops after at most 10 minutes (it caps its `timeout`
+      # input at that), and GitHub has stalled at "syncing_files" for longer
+      # after a change to most pages. So try three times, 15 minutes apart.
       - id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - if: steps.deployment.outcome == 'failure'
+        run: sleep 900
+      - id: second
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - if: steps.second.outcome == 'failure'
+        run: sleep 900
+      - id: third
+        if: steps.second.outcome == 'failure'
         uses: actions/deploy-pages@v4
