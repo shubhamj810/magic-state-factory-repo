@@ -446,6 +446,7 @@ def _describe_shape(shape):
     if isinstance(shape, list):
         return f"a list of {_describe_shape(shape[0])}"
     return {"int": "a whole number", "int?": "a whole number or null",
+            "str?": "a string or null",
             "str": "a string", "bool": "a boolean",
             "dict": "an object"}[shape]
 
